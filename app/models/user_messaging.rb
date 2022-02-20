@@ -1,6 +1,9 @@
 class UserMessaging < ApplicationRecord
   # Direct associations
 
+  belongs_to :recipient,
+             :class_name => "UserDatum"
+
   # Indirect associations
 
   # Validations
