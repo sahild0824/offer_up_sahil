@@ -3,7 +3,8 @@ class UserMessagingsController < ApplicationController
 
   # GET /user_messagings
   def index
-    @user_messagings = UserMessaging.page(params[:page]).per(10)
+    @q = UserMessaging.ransack(params[:q])
+    @user_messagings = @q.result(:distinct => true).includes(:recipient, :product).page(params[:page]).per(10)
   end
 
   # GET /user_messagings/1

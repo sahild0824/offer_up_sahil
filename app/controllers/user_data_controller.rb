@@ -3,7 +3,8 @@ class UserDataController < ApplicationController
 
   # GET /user_data
   def index
-    @user_data = UserDatum.page(params[:page]).per(10)
+    @q = UserDatum.ransack(params[:q])
+    @user_data = @q.result(:distinct => true).includes(:seller_id, :user_messagings, :items_for_sales).page(params[:page]).per(10)
   end
 
   # GET /user_data/1
