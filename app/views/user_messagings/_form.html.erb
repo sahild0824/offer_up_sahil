@@ -1,0 +1,109 @@
+<% was_validated = user_messaging.errors.any? %>
+
+<%= form_with(model: user_messaging, local: true, novalidate: true, class: "mb-3") do |f| %>
+  <!-- Label and input for recipient_id start -->
+  <div class="form-group">
+    <% recipient_class = "form-control" %>
+    <% recipient_was_invalid = user_messaging.errors.include?(:recipient) %>
+
+    <% if was_validated %>
+      <% if recipient_was_invalid %>
+        <% recipient_class << " is-invalid" %>
+      <% else %>
+        <% recipient_class << " is-valid" %>
+      <% end %>
+    <% end %>
+
+    <%= f.label :recipient_id %>
+    <!-- Input for recipient_id start -->
+    <%= f.number_field :recipient_id, class: recipient_class, placeholder: "Enter recipient" %>
+    <!-- Input for recipient_id end -->
+    <% if recipient_was_invalid %>
+      <% user_messaging.errors.full_messages_for(:recipient).each do |message| %>
+        <div class="invalid-feedback d-flex">
+          <%= message %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  <!-- Label and input for recipient_id end -->
+  <!-- Label and input for sender_id start -->
+  <div class="form-group">
+    <% sender_class = "form-control" %>
+    <% sender_was_invalid = user_messaging.errors.include?(:sender) %>
+
+    <% if was_validated %>
+      <% if sender_was_invalid %>
+        <% sender_class << " is-invalid" %>
+      <% else %>
+        <% sender_class << " is-valid" %>
+      <% end %>
+    <% end %>
+
+    <%= f.label :sender_id %>
+    <!-- Input for sender_id start -->
+    <%= f.number_field :sender_id, class: sender_class, placeholder: "Enter sender" %>
+    <!-- Input for sender_id end -->
+    <% if sender_was_invalid %>
+      <% user_messaging.errors.full_messages_for(:sender).each do |message| %>
+        <div class="invalid-feedback d-flex">
+          <%= message %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  <!-- Label and input for sender_id end -->
+  <!-- Label and input for message_data start -->
+  <div class="form-group">
+    <% message_datum_class = "form-control" %>
+    <% message_datum_was_invalid = user_messaging.errors.include?(:message_datum) %>
+
+    <% if was_validated %>
+      <% if message_datum_was_invalid %>
+        <% message_datum_class << " is-invalid" %>
+      <% else %>
+        <% message_datum_class << " is-valid" %>
+      <% end %>
+    <% end %>
+
+    <%= f.label :message_data %>
+    <!-- Input for message_data start -->
+    <%= f.number_field :message_data, class: message_datum_class, placeholder: "Enter message datum" %>
+    <!-- Input for message_data end -->
+    <% if message_datum_was_invalid %>
+      <% user_messaging.errors.full_messages_for(:message_datum).each do |message| %>
+        <div class="invalid-feedback d-flex">
+          <%= message %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  <!-- Label and input for message_data end -->
+  <!-- Label and input for product_id start -->
+  <div class="form-group">
+    <% product_class = "form-control" %>
+    <% product_was_invalid = user_messaging.errors.include?(:product) %>
+
+    <% if was_validated %>
+      <% if product_was_invalid %>
+        <% product_class << " is-invalid" %>
+      <% else %>
+        <% product_class << " is-valid" %>
+      <% end %>
+    <% end %>
+
+    <%= f.label :product_id %>
+    <!-- Input for product_id start -->
+    <%= f.number_field :product_id, class: product_class, placeholder: "Enter product" %>
+    <!-- Input for product_id end -->
+    <% if product_was_invalid %>
+      <% user_messaging.errors.full_messages_for(:product).each do |message| %>
+        <div class="invalid-feedback d-flex">
+          <%= message %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  <!-- Label and input for product_id end -->
+  <%= f.button class: "btn btn-outline-secondary btn-block" %>
+<% end %>
