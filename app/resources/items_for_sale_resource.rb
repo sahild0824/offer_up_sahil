@@ -10,6 +10,9 @@ class ItemsForSaleResource < ApplicationResource
 
   # Direct associations
 
+  belongs_to :product,
+             resource: ProductDescriptionResource
+
   # Indirect associations
 
 end

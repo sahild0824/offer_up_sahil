@@ -13,6 +13,9 @@ class ProductDescriptionResource < ApplicationResource
 
   # Direct associations
 
+  has_many   :items_for_sales,
+             foreign_key: :product_id
+
   belongs_to :seller,
              resource: UserDatumResource
 
