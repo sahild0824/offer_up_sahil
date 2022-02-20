@@ -1,6 +1,10 @@
 class ProductDescription < ApplicationRecord
   # Direct associations
 
+  has_many   :items_for_sales,
+             :foreign_key => "product_id",
+             :dependent => :destroy
+
   belongs_to :seller,
              :class_name => "UserDatum"
 

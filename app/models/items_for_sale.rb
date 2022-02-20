@@ -1,6 +1,9 @@
 class ItemsForSale < ApplicationRecord
   # Direct associations
 
+  belongs_to :product,
+             :class_name => "ProductDescription"
+
   # Indirect associations
 
   # Validations
