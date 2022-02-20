@@ -1,15 +1,15 @@
 class UserMessagingsController < ApplicationController
-  before_action :set_user_messaging, only: [:show, :edit, :update, :destroy]
+  before_action :set_user_messaging, only: %i[show edit update destroy]
 
   # GET /user_messagings
   def index
     @q = UserMessaging.ransack(params[:q])
-    @user_messagings = @q.result(:distinct => true).includes(:recipient, :product).page(params[:page]).per(10)
+    @user_messagings = @q.result(distinct: true).includes(:recipient,
+                                                          :product).page(params[:page]).per(10)
   end
 
   # GET /user_messagings/1
-  def show
-  end
+  def show; end
 
   # GET /user_messagings/new
   def new
@@ -17,17 +17,16 @@ class UserMessagingsController < ApplicationController
   end
 
   # GET /user_messagings/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /user_messagings
   def create
     @user_messaging = UserMessaging.new(user_messaging_params)
 
     if @user_messaging.save
-      message = 'UserMessaging was successfully created.'
-      if Rails.application.routes.recognize_path(request.referrer)[:controller] != Rails.application.routes.recognize_path(request.path)[:controller]
-        redirect_back fallback_location: request.referrer, notice: message
+      message = "UserMessaging was successfully created."
+      if Rails.application.routes.recognize_path(request.referer)[:controller] != Rails.application.routes.recognize_path(request.path)[:controller]
+        redirect_back fallback_location: request.referer, notice: message
       else
         redirect_to @user_messaging, notice: message
       end
@@ -39,7 +38,8 @@ class UserMessagingsController < ApplicationController
   # PATCH/PUT /user_messagings/1
   def update
     if @user_messaging.update(user_messaging_params)
-      redirect_to @user_messaging, notice: 'User messaging was successfully updated.'
+      redirect_to @user_messaging,
+                  notice: "User messaging was successfully updated."
     else
       render :edit
     end
@@ -49,22 +49,23 @@ class UserMessagingsController < ApplicationController
   def destroy
     @user_messaging.destroy
     message = "UserMessaging was successfully deleted."
-    if Rails.application.routes.recognize_path(request.referrer)[:controller] != Rails.application.routes.recognize_path(request.path)[:controller]
-      redirect_back fallback_location: request.referrer, notice: message
+    if Rails.application.routes.recognize_path(request.referer)[:controller] != Rails.application.routes.recognize_path(request.path)[:controller]
+      redirect_back fallback_location: request.referer, notice: message
     else
       redirect_to user_messagings_url, notice: message
     end
   end
 
-
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_user_messaging
-      @user_messaging = UserMessaging.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def user_messaging_params
-      params.require(:user_messaging).permit(:recipient_id, :sender_id, :message_data, :product_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_user_messaging
+    @user_messaging = UserMessaging.find(params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def user_messaging_params
+    params.require(:user_messaging).permit(:recipient_id, :sender_id,
+                                           :message_data, :product_id)
+  end
 end

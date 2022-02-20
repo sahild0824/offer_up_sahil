@@ -24,5 +24,4 @@ class UserDatumResource < ApplicationResource
       end
     end
   end
-
 end

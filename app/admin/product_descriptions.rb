@@ -1,6 +1,6 @@
 ActiveAdmin.register ProductDescription do
-
- permit_params :name_of_item, :description, :seller_id, :sale_address, :product_category, :product_image, :price, :sale_status
+  permit_params :name_of_item, :description, :seller_id, :sale_address,
+                :product_category, :product_image, :price, :sale_status
 
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
@@ -14,5 +14,4 @@ ActiveAdmin.register ProductDescription do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
-  
 end

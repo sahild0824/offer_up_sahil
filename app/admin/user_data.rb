@@ -1,6 +1,5 @@
 ActiveAdmin.register UserDatum do
-
- permit_params :username, :password, :email_address
+  permit_params :username, :password, :email_address
 
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
@@ -14,5 +13,4 @@ ActiveAdmin.register UserDatum do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
-  
 end

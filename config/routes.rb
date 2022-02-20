@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  scope path: ApplicationResource.endpoint_namespace, defaults: { format: :jsonapi } do
-    scope module: 'api/v1', as: 'api' do
+  scope path: ApplicationResource.endpoint_namespace,
+        defaults: { format: :jsonapi } do
+    scope module: "api/v1", as: "api" do
       resources :items_for_sales
 
       resources :user_messagings
@@ -8,13 +9,12 @@ Rails.application.routes.draw do
       resources :product_descriptions
 
       resources :user_data
-
     end
-    mount VandalUi::Engine, at: '/vandal'
+    mount VandalUi::Engine, at: "/vandal"
     # your routes go here
   end
   ActiveAdmin.routes(self)
-  root :to => "user_data#index"
+  root to: "user_data#index"
   resources :items_for_sales
   resources :user_messagings
   resources :product_descriptions

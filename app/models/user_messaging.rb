@@ -2,10 +2,10 @@ class UserMessaging < ApplicationRecord
   # Direct associations
 
   belongs_to :product,
-             :class_name => "ProductDescription"
+             class_name: "ProductDescription"
 
   belongs_to :recipient,
-             :class_name => "UserDatum"
+             class_name: "UserDatum"
 
   # Indirect associations
 
@@ -16,5 +16,4 @@ class UserMessaging < ApplicationRecord
   def to_s
     recipient.to_s
   end
-
 end

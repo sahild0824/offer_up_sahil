@@ -16,5 +16,4 @@ class UserMessagingResource < ApplicationResource
              resource: UserDatumResource
 
   # Indirect associations
-
 end

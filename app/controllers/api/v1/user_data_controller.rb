@@ -13,7 +13,7 @@ class Api::V1::UserDataController < Api::V1::GraphitiController
     user_datum = UserDatumResource.build(params)
 
     if user_datum.save
-      render jsonapi: user_datum, status: 201
+      render jsonapi: user_datum, status: :created
     else
       render jsonapi_errors: user_datum
     end
@@ -33,7 +33,7 @@ class Api::V1::UserDataController < Api::V1::GraphitiController
     user_datum = UserDatumResource.find(params)
 
     if user_datum.destroy
-      render jsonapi: { meta: {} }, status: 200
+      render jsonapi: { meta: {} }, status: :ok
     else
       render jsonapi_errors: user_datum
     end

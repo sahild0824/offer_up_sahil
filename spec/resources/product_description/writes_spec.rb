@@ -1,13 +1,13 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe ProductDescriptionResource, type: :resource do
-  describe 'creating' do
+  describe "creating" do
     let(:payload) do
       {
         data: {
-          type: 'product_descriptions',
-          attributes: { }
-        }
+          type: "product_descriptions",
+          attributes: {},
+        },
       }
     end
 
@@ -15,23 +15,24 @@ RSpec.describe ProductDescriptionResource, type: :resource do
       ProductDescriptionResource.build(payload)
     end
 
-    it 'works' do
-      expect {
-        expect(instance.save).to eq(true), instance.errors.full_messages.to_sentence
-      }.to change { ProductDescription.count }.by(1)
+    it "works" do
+      expect do
+        expect(instance.save).to eq(true),
+                                 instance.errors.full_messages.to_sentence
+      end.to change { ProductDescription.count }.by(1)
     end
   end
 
-  describe 'updating' do
+  describe "updating" do
     let!(:product_description) { create(:product_description) }
 
     let(:payload) do
       {
         data: {
           id: product_description.id.to_s,
-          type: 'product_descriptions',
-          attributes: { } # Todo!
-        }
+          type: "product_descriptions",
+          attributes: {}, # Todo!
+        },
       }
     end
 
@@ -39,25 +40,25 @@ RSpec.describe ProductDescriptionResource, type: :resource do
       ProductDescriptionResource.find(payload)
     end
 
-    xit 'works (add some attributes and enable this spec)' do
-      expect {
+    xit "works (add some attributes and enable this spec)" do
+      expect do
         expect(instance.update_attributes).to eq(true)
-      }.to change { product_description.reload.updated_at }
+      end.to change { product_description.reload.updated_at }
       # .and change { product_description.foo }.to('bar') <- example
     end
   end
 
-  describe 'destroying' do
+  describe "destroying" do
     let!(:product_description) { create(:product_description) }
 
     let(:instance) do
       ProductDescriptionResource.find(id: product_description.id)
     end
 
-    it 'works' do
-      expect {
+    it "works" do
+      expect do
         expect(instance.destroy).to eq(true)
-      }.to change { ProductDescription.count }.by(-1)
+      end.to change { ProductDescription.count }.by(-1)
     end
   end
 end

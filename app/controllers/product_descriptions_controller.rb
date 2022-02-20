@@ -1,10 +1,12 @@
 class ProductDescriptionsController < ApplicationController
-  before_action :set_product_description, only: [:show, :edit, :update, :destroy]
+  before_action :set_product_description,
+                only: %i[show edit update destroy]
 
   # GET /product_descriptions
   def index
     @q = ProductDescription.ransack(params[:q])
-    @product_descriptions = @q.result(:distinct => true).includes(:seller, :items_for_sales, :user_messagings).page(params[:page]).per(10)
+    @product_descriptions = @q.result(distinct: true).includes(:seller,
+                                                               :items_for_sales, :user_messagings).page(params[:page]).per(10)
   end
 
   # GET /product_descriptions/1
@@ -19,17 +21,16 @@ class ProductDescriptionsController < ApplicationController
   end
 
   # GET /product_descriptions/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /product_descriptions
   def create
     @product_description = ProductDescription.new(product_description_params)
 
     if @product_description.save
-      message = 'ProductDescription was successfully created.'
-      if Rails.application.routes.recognize_path(request.referrer)[:controller] != Rails.application.routes.recognize_path(request.path)[:controller]
-        redirect_back fallback_location: request.referrer, notice: message
+      message = "ProductDescription was successfully created."
+      if Rails.application.routes.recognize_path(request.referer)[:controller] != Rails.application.routes.recognize_path(request.path)[:controller]
+        redirect_back fallback_location: request.referer, notice: message
       else
         redirect_to @product_description, notice: message
       end
@@ -41,7 +42,8 @@ class ProductDescriptionsController < ApplicationController
   # PATCH/PUT /product_descriptions/1
   def update
     if @product_description.update(product_description_params)
-      redirect_to @product_description, notice: 'Product description was successfully updated.'
+      redirect_to @product_description,
+                  notice: "Product description was successfully updated."
     else
       render :edit
     end
@@ -51,22 +53,23 @@ class ProductDescriptionsController < ApplicationController
   def destroy
     @product_description.destroy
     message = "ProductDescription was successfully deleted."
-    if Rails.application.routes.recognize_path(request.referrer)[:controller] != Rails.application.routes.recognize_path(request.path)[:controller]
-      redirect_back fallback_location: request.referrer, notice: message
+    if Rails.application.routes.recognize_path(request.referer)[:controller] != Rails.application.routes.recognize_path(request.path)[:controller]
+      redirect_back fallback_location: request.referer, notice: message
     else
       redirect_to product_descriptions_url, notice: message
     end
   end
 
-
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_product_description
-      @product_description = ProductDescription.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def product_description_params
-      params.require(:product_description).permit(:name_of_item, :description, :seller_id, :sale_address, :product_category, :product_image, :price, :sale_status)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_product_description
+    @product_description = ProductDescription.find(params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def product_description_params
+    params.require(:product_description).permit(:name_of_item, :description,
+                                                :seller_id, :sale_address, :product_category, :product_image, :price, :sale_status)
+  end
 end

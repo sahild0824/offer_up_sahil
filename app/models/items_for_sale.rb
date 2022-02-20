@@ -2,13 +2,13 @@ class ItemsForSale < ApplicationRecord
   # Direct associations
 
   belongs_to :product,
-             :class_name => "ProductDescription"
+             class_name: "ProductDescription"
 
   # Indirect associations
 
   has_one    :seller,
-             :through => :product,
-             :source => :seller
+             through: :product,
+             source: :seller
 
   # Validations
 
@@ -17,5 +17,4 @@ class ItemsForSale < ApplicationRecord
   def to_s
     seller_name
   end
-
 end

@@ -23,5 +23,4 @@ class ProductDescriptionResource < ApplicationResource
              resource: UserDatumResource
 
   # Indirect associations
-
 end

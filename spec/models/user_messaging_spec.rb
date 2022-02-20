@@ -1,20 +1,15 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe UserMessaging, type: :model do
-  
-    describe "Direct Associations" do
-
+  describe "Direct Associations" do
     it { should belong_to(:product) }
 
     it { should belong_to(:recipient) }
+  end
 
-    end
+  describe "InDirect Associations" do
+  end
 
-    describe "InDirect Associations" do
-
-    end
-
-    describe "Validations" do
-
-    end
+  describe "Validations" do
+  end
 end

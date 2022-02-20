@@ -13,7 +13,7 @@ class Api::V1::UserMessagingsController < Api::V1::GraphitiController
     user_messaging = UserMessagingResource.build(params)
 
     if user_messaging.save
-      render jsonapi: user_messaging, status: 201
+      render jsonapi: user_messaging, status: :created
     else
       render jsonapi_errors: user_messaging
     end
@@ -33,7 +33,7 @@ class Api::V1::UserMessagingsController < Api::V1::GraphitiController
     user_messaging = UserMessagingResource.find(params)
 
     if user_messaging.destroy
-      render jsonapi: { meta: {} }, status: 200
+      render jsonapi: { meta: {} }, status: :ok
     else
       render jsonapi_errors: user_messaging
     end

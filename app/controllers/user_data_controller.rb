@@ -1,10 +1,11 @@
 class UserDataController < ApplicationController
-  before_action :set_user_datum, only: [:show, :edit, :update, :destroy]
+  before_action :set_user_datum, only: %i[show edit update destroy]
 
   # GET /user_data
   def index
     @q = UserDatum.ransack(params[:q])
-    @user_data = @q.result(:distinct => true).includes(:seller_id, :user_messagings, :items_for_sales).page(params[:page]).per(10)
+    @user_data = @q.result(distinct: true).includes(:seller_id,
+                                                    :user_messagings, :items_for_sales).page(params[:page]).per(10)
   end
 
   # GET /user_data/1
@@ -19,15 +20,14 @@ class UserDataController < ApplicationController
   end
 
   # GET /user_data/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /user_data
   def create
     @user_datum = UserDatum.new(user_datum_params)
 
     if @user_datum.save
-      redirect_to @user_datum, notice: 'User datum was successfully created.'
+      redirect_to @user_datum, notice: "User datum was successfully created."
     else
       render :new
     end
@@ -36,7 +36,7 @@ class UserDataController < ApplicationController
   # PATCH/PUT /user_data/1
   def update
     if @user_datum.update(user_datum_params)
-      redirect_to @user_datum, notice: 'User datum was successfully updated.'
+      redirect_to @user_datum, notice: "User datum was successfully updated."
     else
       render :edit
     end
@@ -45,17 +45,18 @@ class UserDataController < ApplicationController
   # DELETE /user_data/1
   def destroy
     @user_datum.destroy
-    redirect_to user_data_url, notice: 'User datum was successfully destroyed.'
+    redirect_to user_data_url, notice: "User datum was successfully destroyed."
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_user_datum
-      @user_datum = UserDatum.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def user_datum_params
-      params.require(:user_datum).permit(:username, :password, :email_address)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_user_datum
+    @user_datum = UserDatum.find(params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def user_datum_params
+    params.require(:user_datum).permit(:username, :password, :email_address)
+  end
 end
