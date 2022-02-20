@@ -3,7 +3,7 @@ class UserMessagingsController < ApplicationController
 
   # GET /user_messagings
   def index
-    @user_messagings = UserMessaging.all
+    @user_messagings = UserMessaging.page(params[:page]).per(10)
   end
 
   # GET /user_messagings/1

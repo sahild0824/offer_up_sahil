@@ -3,7 +3,7 @@ class UserDataController < ApplicationController
 
   # GET /user_data
   def index
-    @user_data = UserDatum.all
+    @user_data = UserDatum.page(params[:page]).per(10)
   end
 
   # GET /user_data/1

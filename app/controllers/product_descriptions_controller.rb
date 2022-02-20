@@ -3,7 +3,7 @@ class ProductDescriptionsController < ApplicationController
 
   # GET /product_descriptions
   def index
-    @product_descriptions = ProductDescription.all
+    @product_descriptions = ProductDescription.page(params[:page]).per(10)
   end
 
   # GET /product_descriptions/1
