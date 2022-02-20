@@ -17,4 +17,12 @@ class UserDatumResource < ApplicationResource
 
   # Indirect associations
 
+  has_many :items_for_sales do
+    assign_each do |user_datum, items_for_sales|
+      items_for_sales.select do |i|
+        i.id.in?(user_datum.items_for_sales.map(&:id))
+      end
+    end
+  end
+
 end

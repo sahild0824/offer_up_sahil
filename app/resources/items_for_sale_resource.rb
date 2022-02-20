@@ -15,4 +15,12 @@ class ItemsForSaleResource < ApplicationResource
 
   # Indirect associations
 
+  has_one    :seller,
+             resource: UserDatumResource
+
+  filter :seller_id, :integer do
+    eq do |scope, value|
+      scope.eager_load(:seller).where(:product_descriptions => {:seller_id => value})
+    end
+  end
 end
