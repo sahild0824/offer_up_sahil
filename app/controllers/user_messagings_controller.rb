@@ -24,7 +24,12 @@ class UserMessagingsController < ApplicationController
     @user_messaging = UserMessaging.new(user_messaging_params)
 
     if @user_messaging.save
-      redirect_to @user_messaging, notice: 'User messaging was successfully created.'
+      message = 'UserMessaging was successfully created.'
+      if Rails.application.routes.recognize_path(request.referrer)[:controller] != Rails.application.routes.recognize_path(request.path)[:controller]
+        redirect_back fallback_location: request.referrer, notice: message
+      else
+        redirect_to @user_messaging, notice: message
+      end
     else
       render :new
     end

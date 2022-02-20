@@ -8,6 +8,8 @@ class ProductDescriptionsController < ApplicationController
 
   # GET /product_descriptions/1
   def show
+    @user_messaging = UserMessaging.new
+    @items_for_sale = ItemsForSale.new
   end
 
   # GET /product_descriptions/new
@@ -24,7 +26,12 @@ class ProductDescriptionsController < ApplicationController
     @product_description = ProductDescription.new(product_description_params)
 
     if @product_description.save
-      redirect_to @product_description, notice: 'Product description was successfully created.'
+      message = 'ProductDescription was successfully created.'
+      if Rails.application.routes.recognize_path(request.referrer)[:controller] != Rails.application.routes.recognize_path(request.path)[:controller]
+        redirect_back fallback_location: request.referrer, notice: message
+      else
+        redirect_to @product_description, notice: message
+      end
     else
       render :new
     end

@@ -8,6 +8,8 @@ class UserDataController < ApplicationController
 
   # GET /user_data/1
   def show
+    @user_messaging = UserMessaging.new
+    @product_description = ProductDescription.new
   end
 
   # GET /user_data/new
