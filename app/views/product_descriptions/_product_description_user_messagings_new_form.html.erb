@@ -1,42 +1,24 @@
-<!-- Form user_messaging start -->
 <%= form_with(model: @user_messaging, local: true) do |f| %>
-<!-- Form user_messaging end -->
 
-  <!-- Label and input for recipient_id start -->
   <div class="form-group">
     <%= f.label :recipient_id %>
 
-    <!-- Input for recipient_id start -->
     <%= f.collection_select :recipient_id, UserDatum.all, :id, :to_s, {}, class: "form-control" %>
-    <!-- Input for recipient_id end -->
   </div>
-  <!-- Label and input for recipient_id end -->
 
-  <!-- Label and input for sender_id start -->
   <div class="form-group">
     <%= f.label :sender_id %>
 
-    <!-- Input for sender_id start -->
     <%= f.text_field :sender_id, class: "form-control" %>
-    <!-- Input for sender_id end -->
   </div>
-  <!-- Label and input for sender_id end -->
 
-  <!-- Label and input for message_data start -->
   <div class="form-group">
     <%= f.label :message_data %>
 
-    <!-- Input for message_data start -->
     <%= f.text_field :message_data, class: "form-control" %>
-    <!-- Input for message_data end -->
   </div>
-  <!-- Label and input for message_data end -->
 
-  <!-- Label and input for product_id start -->
-  <!-- Input for product_id start -->
   <%= f.hidden_field :product_id, value: @product_description.id %>
-  <!-- Input for product_id end -->
-  <!-- Label and input for product_id end -->
 
   <%= f.submit "Create user messaging", class: "btn btn-block btn-outline-secondary" %>
 <% end %>

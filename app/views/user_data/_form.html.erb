@@ -1,7 +1,6 @@
 <% was_validated = user_datum.errors.any? %>
 
 <%= form_with(model: user_datum, local: true, novalidate: true, class: "mb-3") do |f| %>
-  <!-- Label and input for username start -->
   <div class="form-group">
     <% username_class = "form-control" %>
     <% username_was_invalid = user_datum.errors.include?(:username) %>
@@ -15,9 +14,7 @@
     <% end %>
 
     <%= f.label :username %>
-    <!-- Input for username start -->
     <%= f.number_field :username, class: username_class, placeholder: "Enter username" %>
-    <!-- Input for username end -->
     <% if username_was_invalid %>
       <% user_datum.errors.full_messages_for(:username).each do |message| %>
         <div class="invalid-feedback d-flex">
@@ -26,8 +23,6 @@
       <% end %>
     <% end %>
   </div>
-  <!-- Label and input for username end -->
-  <!-- Label and input for password start -->
   <div class="form-group">
     <% password_class = "form-control" %>
     <% password_was_invalid = user_datum.errors.include?(:password) %>
@@ -41,9 +36,7 @@
     <% end %>
 
     <%= f.label :password %>
-    <!-- Input for password start -->
     <%= f.number_field :password, class: password_class, placeholder: "Enter password" %>
-    <!-- Input for password end -->
     <% if password_was_invalid %>
       <% user_datum.errors.full_messages_for(:password).each do |message| %>
         <div class="invalid-feedback d-flex">
@@ -52,8 +45,6 @@
       <% end %>
     <% end %>
   </div>
-  <!-- Label and input for password end -->
-  <!-- Label and input for email_address start -->
   <div class="form-group">
     <% email_address_class = "form-control" %>
     <% email_address_was_invalid = user_datum.errors.include?(:email_address) %>
@@ -67,9 +58,7 @@
     <% end %>
 
     <%= f.label :email_address %>
-    <!-- Input for email_address start -->
     <%= f.number_field :email_address, class: email_address_class, placeholder: "Enter email address" %>
-    <!-- Input for email_address end -->
     <% if email_address_was_invalid %>
       <% user_datum.errors.full_messages_for(:email_address).each do |message| %>
         <div class="invalid-feedback d-flex">
@@ -78,6 +67,5 @@
       <% end %>
     <% end %>
   </div>
-  <!-- Label and input for email_address end -->
   <%= f.button class: "btn btn-outline-secondary btn-block" %>
 <% end %>

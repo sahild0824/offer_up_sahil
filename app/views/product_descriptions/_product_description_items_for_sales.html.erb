@@ -10,24 +10,18 @@
   <ul class="list-group list-group-flush">
     <% @product_description.items_for_sales.each do |items_for_sale| %>
       <li class="list-group-item d-flex align-items-center justify-content-between">
-        <!-- Show link start -->
         <%= link_to items_for_sale, items_for_sale %>
-        <!-- Show link end -->
 
-        <!-- Delete link start -->
         <%= link_to items_for_sale, method: :delete, data: { confirm: "Do you really want to delete this items_for_sale" } do %>
           <i class="fas fa-trash-alt"></i>
         <% end %>
-        <!-- Delete link end -->
 
       </li>
     <% end %>
 
     <div class="card-footer">
       <div class="collapse" id="product_description_items_for_sales_new_form">
-        <!-- New associationcollection form start -->
         <%= render partial: "product_descriptions/product_description_items_for_sales_new_form" %>
-        <!-- New associationcollection form end -->
       </div>
     </div>
 

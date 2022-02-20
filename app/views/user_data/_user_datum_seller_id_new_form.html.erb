@@ -1,82 +1,48 @@
-<!-- Form product_description start -->
 <%= form_with(model: @product_description, local: true) do |f| %>
-<!-- Form product_description end -->
 
-  <!-- Label and input for name_of_item start -->
   <div class="form-group">
     <%= f.label :name_of_item %>
 
-    <!-- Input for name_of_item start -->
     <%= f.text_field :name_of_item, class: "form-control" %>
-    <!-- Input for name_of_item end -->
   </div>
-  <!-- Label and input for name_of_item end -->
 
-  <!-- Label and input for description start -->
   <div class="form-group">
     <%= f.label :description %>
 
-    <!-- Input for description start -->
     <%= f.text_field :description, class: "form-control" %>
-    <!-- Input for description end -->
   </div>
-  <!-- Label and input for description end -->
 
-  <!-- Label and input for seller_id start -->
-  <!-- Input for seller_id start -->
   <%= f.hidden_field :seller_id, value: @user_datum.id %>
-  <!-- Input for seller_id end -->
-  <!-- Label and input for seller_id end -->
 
-  <!-- Label and input for sale_address start -->
   <div class="form-group">
     <%= f.label :sale_address %>
 
-    <!-- Input for sale_address start -->
     <%= f.text_field :sale_address, class: "form-control" %>
-    <!-- Input for sale_address end -->
   </div>
-  <!-- Label and input for sale_address end -->
 
-  <!-- Label and input for product_category start -->
   <div class="form-group">
     <%= f.label :product_category %>
 
-    <!-- Input for product_category start -->
     <%= f.text_field :product_category, class: "form-control" %>
-    <!-- Input for product_category end -->
   </div>
-  <!-- Label and input for product_category end -->
 
-  <!-- Label and input for product_image start -->
   <div class="form-group">
     <%= f.label :product_image %>
 
-    <!-- Input for product_image start -->
     <%= f.text_field :product_image, class: "form-control" %>
-    <!-- Input for product_image end -->
   </div>
-  <!-- Label and input for product_image end -->
 
-  <!-- Label and input for price start -->
   <div class="form-group">
     <%= f.label :price %>
 
-    <!-- Input for price start -->
     <%= f.text_field :price, class: "form-control" %>
-    <!-- Input for price end -->
   </div>
-  <!-- Label and input for price end -->
 
-  <!-- Label and input for sale_status start -->
   <div class="form-group">
     <%= f.label :sale_status %>
 
-    <!-- Input for sale_status start -->
     <%= f.text_field :sale_status, class: "form-control" %>
-    <!-- Input for sale_status end -->
   </div>
-  <!-- Label and input for sale_status end -->
 
   <%= f.submit "Create product description", class: "btn btn-block btn-outline-secondary" %>
 <% end %>

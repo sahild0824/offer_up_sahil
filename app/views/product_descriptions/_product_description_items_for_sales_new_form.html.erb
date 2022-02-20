@@ -1,52 +1,30 @@
-<!-- Form items_for_sale start -->
 <%= form_with(model: @items_for_sale, local: true) do |f| %>
-<!-- Form items_for_sale end -->
 
-  <!-- Label and input for seller_name start -->
   <div class="form-group">
     <%= f.label :seller_name %>
 
-    <!-- Input for seller_name start -->
     <%= f.text_field :seller_name, class: "form-control" %>
-    <!-- Input for seller_name end -->
   </div>
-  <!-- Label and input for seller_name end -->
 
-  <!-- Label and input for product_id start -->
-  <!-- Input for product_id start -->
   <%= f.hidden_field :product_id, value: @product_description.id %>
-  <!-- Input for product_id end -->
-  <!-- Label and input for product_id end -->
 
-  <!-- Label and input for product_description start -->
   <div class="form-group">
     <%= f.label :product_description %>
 
-    <!-- Input for product_description start -->
     <%= f.text_field :product_description, class: "form-control" %>
-    <!-- Input for product_description end -->
   </div>
-  <!-- Label and input for product_description end -->
 
-  <!-- Label and input for price start -->
   <div class="form-group">
     <%= f.label :price %>
 
-    <!-- Input for price start -->
     <%= f.text_field :price, class: "form-control" %>
-    <!-- Input for price end -->
   </div>
-  <!-- Label and input for price end -->
 
-  <!-- Label and input for product_category start -->
   <div class="form-group">
     <%= f.label :product_category %>
 
-    <!-- Input for product_category start -->
     <%= f.text_field :product_category, class: "form-control" %>
-    <!-- Input for product_category end -->
   </div>
-  <!-- Label and input for product_category end -->
 
   <%= f.submit "Create items for sale", class: "btn btn-block btn-outline-secondary" %>
 <% end %>

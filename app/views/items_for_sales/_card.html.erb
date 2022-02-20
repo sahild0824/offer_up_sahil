@@ -6,33 +6,23 @@
   <div class="card-body">
     <dl class="mb-1">
       <dt>Seller name</dt>
-      <!-- Display seller_name start -->
       <dd><%= items_for_sale.seller_name %></dd>
-      <!-- Display seller_name end -->
 
       <dt>Product</dt>
-      <!-- Display product_id start -->
       <dd>
         <% if @items_for_sale.product.present? %>
           <%= link_to items_for_sale.product, items_for_sale.product %>
         <% end %>
       </dd>
-      <!-- Display product_id end -->
 
       <dt>Product description</dt>
-      <!-- Display product_description start -->
       <dd><%= items_for_sale.product_description %></dd>
-      <!-- Display product_description end -->
 
       <dt>Price</dt>
-      <!-- Display price start -->
       <dd><%= items_for_sale.price %></dd>
-      <!-- Display price end -->
 
       <dt>Product category</dt>
-      <!-- Display product_category start -->
       <dd><%= items_for_sale.product_category %></dd>
-      <!-- Display product_category end -->
 
     </dl>
 
@@ -41,21 +31,17 @@
         <%= link_to_show_or_back items_for_sale, '<i class="fas fa-search-plus"></i>'.html_safe, '<i class="fas fa-chevron-left"></i>'.html_safe, class: "btn btn-block btn-outline-secondary" %>
       </div>
 
-      <!-- Edit link items_for_sale start -->
       <div class="col">
         <%= link_to edit_items_for_sale_url(items_for_sale), class: "btn btn-block btn-outline-secondary" do %>
           <i class="fas fa-edit"></i>
         <% end %>
       </div>
-      <!-- Edit link items_for_sale end -->
 
-      <!-- Delete link items_for_sale start -->
       <div class="col">
         <%= link_to items_for_sale, method: :delete, data: { confirm: "Do you really want to delete this items_for_sale?" }, class: "btn btn-block btn-outline-secondary" do %>
           <i class="fas fa-trash-alt"></i>
         <% end %>
       </div>
-      <!-- Delete link items_for_sale end -->
     </div>
   </div>
 

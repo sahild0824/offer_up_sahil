@@ -6,32 +6,24 @@
   <div class="card-body">
     <dl class="mb-1">
       <dt>Recipient</dt>
-      <!-- Display recipient_id start -->
       <dd>
         <% if @user_messaging.recipient.present? %>
           <%= link_to user_messaging.recipient, user_messaging.recipient %>
         <% end %>
       </dd>
-      <!-- Display recipient_id end -->
 
       <dt>Sender</dt>
-      <!-- Display sender_id start -->
       <dd><%= user_messaging.sender_id %></dd>
-      <!-- Display sender_id end -->
 
       <dt>Message data</dt>
-      <!-- Display message_data start -->
       <dd><%= user_messaging.message_data %></dd>
-      <!-- Display message_data end -->
 
       <dt>Product</dt>
-      <!-- Display product_id start -->
       <dd>
         <% if @user_messaging.product.present? %>
           <%= link_to user_messaging.product, user_messaging.product %>
         <% end %>
       </dd>
-      <!-- Display product_id end -->
 
     </dl>
 
@@ -40,21 +32,17 @@
         <%= link_to_show_or_back user_messaging, '<i class="fas fa-search-plus"></i>'.html_safe, '<i class="fas fa-chevron-left"></i>'.html_safe, class: "btn btn-block btn-outline-secondary" %>
       </div>
 
-      <!-- Edit link user_messaging start -->
       <div class="col">
         <%= link_to edit_user_messaging_url(user_messaging), class: "btn btn-block btn-outline-secondary" do %>
           <i class="fas fa-edit"></i>
         <% end %>
       </div>
-      <!-- Edit link user_messaging end -->
 
-      <!-- Delete link user_messaging start -->
       <div class="col">
         <%= link_to user_messaging, method: :delete, data: { confirm: "Do you really want to delete this user_messaging?" }, class: "btn btn-block btn-outline-secondary" do %>
           <i class="fas fa-trash-alt"></i>
         <% end %>
       </div>
-      <!-- Delete link user_messaging end -->
     </div>
   </div>
 
