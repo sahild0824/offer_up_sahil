@@ -1,5 +1,7 @@
 ActiveAdmin.register UserMessaging do
 
+ permit_params :recipient_id, :sender_id, :message_data, :product_id
+
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
