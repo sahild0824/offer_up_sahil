@@ -1,0 +1,51 @@
+<div class="card mb-3">
+  <h2 class="card-header h4">
+    User Datum #<%= user_datum.id %>
+  </h2>
+
+  <div class="card-body">
+    <dl class="mb-1">
+      <dt>Username</dt>
+      <!-- Display username start -->
+      <dd><%= user_datum.username %></dd>
+      <!-- Display username end -->
+
+      <dt>Password</dt>
+      <!-- Display password start -->
+      <dd><%= user_datum.password %></dd>
+      <!-- Display password end -->
+
+      <dt>Email address</dt>
+      <!-- Display email_address start -->
+      <dd><%= user_datum.email_address %></dd>
+      <!-- Display email_address end -->
+
+    </dl>
+
+    <div class="row">
+      <div class="col">
+        <%= link_to_show_or_back user_datum, '<i class="fas fa-search-plus"></i>'.html_safe, '<i class="fas fa-chevron-left"></i>'.html_safe, class: "btn btn-block btn-outline-secondary" %>
+      </div>
+
+      <!-- Edit link user_datum start -->
+      <div class="col">
+        <%= link_to edit_user_datum_url(user_datum), class: "btn btn-block btn-outline-secondary" do %>
+          <i class="fas fa-edit"></i>
+        <% end %>
+      </div>
+      <!-- Edit link user_datum end -->
+
+      <!-- Delete link user_datum start -->
+      <div class="col">
+        <%= link_to user_datum, method: :delete, data: { confirm: "Do you really want to delete this user_datum?" }, class: "btn btn-block btn-outline-secondary" do %>
+          <i class="fas fa-trash-alt"></i>
+        <% end %>
+      </div>
+      <!-- Delete link user_datum end -->
+    </div>
+  </div>
+
+  <div class="card-footer text-muted">
+    Last updated <%= time_ago_in_words(user_datum.updated_at) %> ago
+  </div>
+</div>
