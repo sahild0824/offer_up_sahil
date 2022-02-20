@@ -13,6 +13,9 @@ class ProductDescriptionResource < ApplicationResource
 
   # Direct associations
 
+  has_many   :user_messagings,
+             foreign_key: :product_id
+
   has_many   :items_for_sales,
              foreign_key: :product_id
 

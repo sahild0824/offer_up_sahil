@@ -9,6 +9,9 @@ class UserMessagingResource < ApplicationResource
 
   # Direct associations
 
+  belongs_to :product,
+             resource: ProductDescriptionResource
+
   belongs_to :recipient,
              resource: UserDatumResource
 
