@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :items_for_sales
   resources :user_messagings
   resources :product_descriptions
   resources :user_data
