@@ -8,6 +8,9 @@ class UserDatumResource < ApplicationResource
 
   # Direct associations
 
+  has_many   :user_messagings,
+             foreign_key: :recipient_id
+
   has_many   :seller_id,
              resource: ProductDescriptionResource,
              foreign_key: :seller_id
