@@ -68,7 +68,7 @@
 
     <%= f.label :seller_id %>
     <!-- Input for seller_id start -->
-    <%= f.number_field :seller_id, class: seller_class, placeholder: "Enter seller" %>
+    <%= f.collection_select :seller_id, UserDatum.all, :id, :to_s, {}, class: "form-control" %>
     <!-- Input for seller_id end -->
     <% if seller_was_invalid %>
       <% product_description.errors.full_messages_for(:seller).each do |message| %>
