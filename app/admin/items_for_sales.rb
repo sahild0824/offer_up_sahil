@@ -1,5 +1,7 @@
 ActiveAdmin.register ItemsForSale do
 
+ permit_params :seller_name, :product_id, :product_description, :price, :product_category
+
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
