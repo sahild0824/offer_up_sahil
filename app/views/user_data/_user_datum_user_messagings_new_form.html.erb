@@ -33,7 +33,7 @@
     <%= f.label :product_id %>
 
     <!-- Input for product_id start -->
-    <%= f.text_field :product_id, class: "form-control" %>
+    <%= f.collection_select :product_id, ProductDescription.all, :id, :to_s, {}, class: "form-control" %>
     <!-- Input for product_id end -->
   </div>
   <!-- Label and input for product_id end -->
