@@ -1,0 +1,35 @@
+<div class="card">
+  <div class="card-header d-flex align-items-center justify-content-between">
+    Seller
+
+    <a data-toggle="collapse" href="#user_datum_seller_id_new_form">
+      Add product description
+    </a>
+  </div>
+
+  <ul class="list-group list-group-flush">
+    <% @user_datum.seller_id.each do |product_description| %>
+      <li class="list-group-item d-flex align-items-center justify-content-between">
+        <!-- Show link start -->
+        <%= link_to product_description, product_description %>
+        <!-- Show link end -->
+
+        <!-- Delete link start -->
+        <%= link_to product_description, method: :delete, data: { confirm: "Do you really want to delete this product_description" } do %>
+          <i class="fas fa-trash-alt"></i>
+        <% end %>
+        <!-- Delete link end -->
+
+      </li>
+    <% end %>
+
+    <div class="card-footer">
+      <div class="collapse" id="user_datum_seller_id_new_form">
+        <!-- New associationcollection form start -->
+
+        <!-- New associationcollection form end -->
+      </div>
+    </div>
+
+  </ul>
+</div>

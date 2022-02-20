@@ -42,8 +42,14 @@ class UserMessagingsController < ApplicationController
   # DELETE /user_messagings/1
   def destroy
     @user_messaging.destroy
-    redirect_to user_messagings_url, notice: 'User messaging was successfully destroyed.'
+    message = "UserMessaging was successfully deleted."
+    if Rails.application.routes.recognize_path(request.referrer)[:controller] != Rails.application.routes.recognize_path(request.path)[:controller]
+      redirect_back fallback_location: request.referrer, notice: message
+    else
+      redirect_to user_messagings_url, notice: message
+    end
   end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

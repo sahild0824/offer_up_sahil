@@ -42,8 +42,14 @@ class ProductDescriptionsController < ApplicationController
   # DELETE /product_descriptions/1
   def destroy
     @product_description.destroy
-    redirect_to product_descriptions_url, notice: 'Product description was successfully destroyed.'
+    message = "ProductDescription was successfully deleted."
+    if Rails.application.routes.recognize_path(request.referrer)[:controller] != Rails.application.routes.recognize_path(request.path)[:controller]
+      redirect_back fallback_location: request.referrer, notice: message
+    else
+      redirect_to product_descriptions_url, notice: message
+    end
   end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
