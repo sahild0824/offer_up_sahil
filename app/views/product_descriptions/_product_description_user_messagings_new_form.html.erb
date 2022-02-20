@@ -7,7 +7,7 @@
     <%= f.label :recipient_id %>
 
     <!-- Input for recipient_id start -->
-    <%= f.text_field :recipient_id, class: "form-control" %>
+    <%= f.collection_select :recipient_id, UserDatum.all, :id, :to_s, {}, class: "form-control" %>
     <!-- Input for recipient_id end -->
   </div>
   <!-- Label and input for recipient_id end -->
