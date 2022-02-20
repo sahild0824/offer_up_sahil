@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  ActiveAdmin.routes(self)
   root :to => "user_data#index"
   resources :items_for_sales
   resources :user_messagings
