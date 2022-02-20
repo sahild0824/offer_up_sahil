@@ -12,7 +12,11 @@
 
       <dt>Product</dt>
       <!-- Display product_id start -->
-      <dd><%= items_for_sale.product_id %></dd>
+      <dd>
+        <% if @items_for_sale.product.present? %>
+          <%= link_to items_for_sale.product, items_for_sale.product %>
+        <% end %>
+      </dd>
       <!-- Display product_id end -->
 
       <dt>Product description</dt>

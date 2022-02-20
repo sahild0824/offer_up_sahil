@@ -17,7 +17,11 @@
 
       <dt>Seller</dt>
       <!-- Display seller_id start -->
-      <dd><%= product_description.seller_id %></dd>
+      <dd>
+        <% if @product_description.seller.present? %>
+          <%= link_to product_description.seller, product_description.seller %>
+        <% end %>
+      </dd>
       <!-- Display seller_id end -->
 
       <dt>Sale address</dt>
