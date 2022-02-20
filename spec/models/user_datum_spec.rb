@@ -12,6 +12,8 @@ RSpec.describe UserDatum, type: :model do
 
     describe "InDirect Associations" do
 
+    it { should have_many(:items_for_sales) }
+
     end
 
     describe "Validations" do

@@ -6,6 +6,10 @@ class ItemsForSale < ApplicationRecord
 
   # Indirect associations
 
+  has_one    :seller,
+             :through => :product,
+             :source => :seller
+
   # Validations
 
   # Scopes

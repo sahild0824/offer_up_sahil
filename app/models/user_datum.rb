@@ -12,6 +12,10 @@ class UserDatum < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :items_for_sales,
+             :through => :seller_id,
+             :source => :items_for_sales
+
   # Validations
 
   # Scopes
