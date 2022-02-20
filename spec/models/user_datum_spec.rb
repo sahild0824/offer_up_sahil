@@ -4,6 +4,8 @@ RSpec.describe UserDatum, type: :model do
   
     describe "Direct Associations" do
 
+    it { should have_many(:seller_id) }
+
     end
 
     describe "InDirect Associations" do

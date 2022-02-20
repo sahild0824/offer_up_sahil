@@ -1,6 +1,9 @@
 class ProductDescription < ApplicationRecord
   # Direct associations
 
+  belongs_to :seller,
+             :class_name => "UserDatum"
+
   # Indirect associations
 
   # Validations
