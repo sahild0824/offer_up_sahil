@@ -13,6 +13,9 @@ class ProductDescriptionResource < ApplicationResource
 
   # Direct associations
 
+  belongs_to :seller,
+             resource: UserDatumResource
+
   # Indirect associations
 
 end

@@ -8,6 +8,10 @@ class UserDatumResource < ApplicationResource
 
   # Direct associations
 
+  has_many   :seller_id,
+             resource: ProductDescriptionResource,
+             foreign_key: :seller_id
+
   # Indirect associations
 
 end
