@@ -1,0 +1,775 @@
+<title>Fourth Pick War Room</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap">
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #f3f4f0;
+    --surface: #fcfcfb;
+    --surface-2: #ebeee7;
+    --ink: #14181a;
+    --ink-2: #565c58;
+    --muted: #7f857f;
+    --hair: #dfe2dc;
+    --accent: #a4771a;
+    --accent-ink: #6f4f0a;
+    --accent-soft: #f7ecd1;
+    --wr: #2a78d6;
+    --rb: #1baf7a;
+    --te: #eb6834;
+    --qb: #565c58;
+    --good: #0ca30c;
+    --bad: #d03b3b;
+    --warn: #ec835a;
+    --track-good: #d9efd7;
+    --track-bad: #f6d9d9;
+    --track-warn: #fbe3d9;
+    --shadow: 0 -6px 24px rgba(20, 24, 26, 0.16);
+    --display: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", system-ui, sans-serif;
+    --body: "Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --bg: #121513;
+      --surface: #1b1f1c;
+      --surface-2: #252a26;
+      --ink: #f1f3ee;
+      --ink-2: #b7bdb6;
+      --muted: #8a908a;
+      --hair: #2d332f;
+      --accent: #e0b14a;
+      --accent-ink: #f0cd7a;
+      --accent-soft: #3a3120;
+      --wr: #3987e5;
+      --rb: #199e70;
+      --te: #d95926;
+      --qb: #b7bdb6;
+      --good: #2eb82e;
+      --bad: #e05252;
+      --warn: #ec835a;
+      --track-good: #203622;
+      --track-bad: #3c2424;
+      --track-warn: #3b2b22;
+      --shadow: 0 -6px 24px rgba(0, 0, 0, 0.5);
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #121513;
+    --surface: #1b1f1c;
+    --surface-2: #252a26;
+    --ink: #f1f3ee;
+    --ink-2: #b7bdb6;
+    --muted: #8a908a;
+    --hair: #2d332f;
+    --accent: #e0b14a;
+    --accent-ink: #f0cd7a;
+    --accent-soft: #3a3120;
+    --wr: #3987e5;
+    --rb: #199e70;
+    --te: #d95926;
+    --qb: #b7bdb6;
+    --good: #2eb82e;
+    --bad: #e05252;
+    --warn: #ec835a;
+    --track-good: #203622;
+    --track-bad: #3c2424;
+    --track-warn: #3b2b22;
+    --shadow: 0 -6px 24px rgba(0, 0, 0, 0.5);
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 15px;
+    line-height: 1.4;
+    padding-bottom: calc(64px + env(safe-area-inset-bottom));
+  }
+  button, input, select { font: inherit; color: inherit; }
+  button { cursor: pointer; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  h1, h2, h3 { font-family: var(--display); margin: 0; text-wrap: balance; line-height: 1.05; }
+  h2 { font-size: 24px; font-weight: 700; letter-spacing: 0.01em; text-transform: uppercase; }
+  h3 { font-size: 19px; font-weight: 600; }
+  p { margin: 0; }
+  .num { font-variant-numeric: tabular-nums; }
+  .eyebrow {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
+  }
+
+  /* Top bar */
+  .top {
+    position: sticky; top: 0; z-index: 20;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    padding: 10px 16px; padding-top: calc(10px + env(safe-area-inset-top));
+    background: var(--surface); border-bottom: 1px solid var(--hair);
+  }
+  .brand { font-family: var(--display); font-size: 22px; font-weight: 700; letter-spacing: 0.02em; text-transform: uppercase; line-height: 1; }
+  .brand small { display: block; font-family: var(--body); font-size: 11px; font-weight: 500; letter-spacing: 0.08em; color: var(--muted); margin-top: 3px; text-transform: uppercase; }
+  .clock {
+    font-family: var(--display); font-size: 15px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;
+    padding: 6px 10px; border-radius: 6px; background: var(--accent-soft); color: var(--accent-ink); white-space: nowrap;
+  }
+
+  main { max-width: 640px; margin: 0 auto; padding: 12px 12px 24px; }
+  .tab[hidden] { display: none; }
+  .stack { display: grid; gap: 14px; }
+
+  /* Bottom tabs */
+  .tabs {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 20;
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    background: var(--surface); border-top: 1px solid var(--hair);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .tabs button {
+    background: none; border: 0; padding: 10px 4px 8px;
+    font-family: var(--display); font-size: 15px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--muted); border-top: 3px solid transparent; margin-top: -1px;
+  }
+  .tabs button[aria-selected="true"] { color: var(--ink); border-top-color: var(--accent); }
+
+  /* Cards & lists */
+  .card { background: var(--surface); border: 1px solid var(--hair); border-radius: 10px; padding: 14px; }
+  .card h2 { margin-bottom: 8px; }
+  .card p + p { margin-top: 8px; }
+  .lede { font-size: 16px; color: var(--ink); }
+  .note { color: var(--ink-2); font-size: 14px; }
+  .list { margin: 8px 0 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+  .list li { display: grid; grid-template-columns: 22px 1fr; gap: 8px; align-items: baseline; }
+  .list li .n { font-family: var(--display); font-weight: 700; color: var(--accent-ink); font-size: 18px; text-align: right; }
+  .kv { display: grid; grid-template-columns: auto 1fr; gap: 6px 12px; font-size: 14px; }
+  .kv dt { color: var(--muted); }
+  .kv dd { margin: 0; }
+  .divider { border: 0; border-top: 1px solid var(--hair); margin: 12px 0; }
+
+  /* Round plan */
+  .round { display: grid; grid-template-columns: 56px 1fr; gap: 12px; padding: 12px 0; border-top: 1px solid var(--hair); }
+  .round:first-of-type { border-top: 0; padding-top: 4px; }
+  .round .pick { font-family: var(--display); line-height: 1; }
+  .round .pick b { display: block; font-size: 30px; font-weight: 700; }
+  .round .pick span { display: block; font-size: 12px; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; margin-top: 2px; font-family: var(--body); }
+  .round .pri { font-weight: 600; margin-bottom: 4px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+  .chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    border: 1px solid var(--hair); background: var(--surface-2); border-radius: 999px;
+    padding: 4px 10px; font-size: 13px; font-weight: 500; line-height: 1.2;
+  }
+  button.chip { color: var(--ink); }
+  button.chip.taken { text-decoration: line-through; color: var(--muted); }
+  .chip .dot { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+
+  /* Position chips */
+  .pos {
+    font-family: var(--display); font-weight: 700; font-size: 13px; letter-spacing: 0.06em;
+    color: #fff; border-radius: 4px; padding: 2px 6px; line-height: 1.2; flex: none;
+  }
+  .pos.WR { background: var(--wr); }
+  .pos.RB { background: var(--rb); }
+  .pos.TE { background: var(--te); }
+  .pos.QB { background: var(--qb); color: var(--bg); }
+  .dot.WR { background: var(--wr); } .dot.RB { background: var(--rb); } .dot.TE { background: var(--te); } .dot.QB { background: var(--qb); }
+
+  /* Filter row */
+  .filters { display: grid; gap: 8px; position: sticky; top: 58px; z-index: 10; background: var(--bg); padding: 4px 0 8px; }
+  .seg { display: flex; gap: 4px; background: var(--surface-2); border-radius: 8px; padding: 3px; }
+  .seg button {
+    flex: 1; border: 0; background: none; border-radius: 6px; padding: 6px 0;
+    font-family: var(--display); font-size: 15px; font-weight: 600; letter-spacing: 0.05em; color: var(--muted);
+  }
+  .seg button[aria-pressed="true"] { background: var(--surface); color: var(--ink); box-shadow: 0 1px 2px rgba(0,0,0,0.12); }
+  .row2 { display: grid; grid-template-columns: 1fr auto; gap: 8px; }
+  .row2 input, .row2 select {
+    width: 100%; border: 1px solid var(--hair); background: var(--surface); border-radius: 8px; padding: 8px 10px; font-size: 15px;
+  }
+  .row2 select { min-width: 132px; }
+
+  /* Player rows */
+  .players { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+  .prow {
+    width: 100%; text-align: left; border: 1px solid var(--hair); background: var(--surface); border-radius: 10px;
+    padding: 10px 12px; display: grid; grid-template-columns: 34px 1fr auto; gap: 4px 10px; align-items: center;
+  }
+  .prow.taken { opacity: 0.45; }
+  .prow.taken .name { text-decoration: line-through; }
+  .prow.mine { border-color: var(--accent); background: var(--accent-soft); }
+  .prow .rank { font-family: var(--display); font-size: 24px; font-weight: 700; line-height: 1; color: var(--ink-2); text-align: right; grid-row: span 2; }
+  .prow .name { font-family: var(--display); font-size: 19px; font-weight: 600; line-height: 1.1; display: flex; align-items: center; gap: 8px; min-width: 0; }
+  .prow .name span.t { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .prow .comp { font-family: var(--display); font-size: 20px; font-weight: 700; text-align: right; line-height: 1; }
+  .prow .comp small { display: block; font-family: var(--body); font-size: 10px; font-weight: 600; letter-spacing: 0.08em; color: var(--muted); text-transform: uppercase; margin-top: 2px; }
+  .prow .meta { grid-column: 2 / 4; font-size: 12px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 10px; }
+  .prow .meta b { color: var(--ink-2); font-weight: 600; }
+  .prow .meters { grid-column: 2 / 4; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 4px; }
+  .prow .flag { font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-ink); }
+
+  /* Meters */
+  .meter { display: grid; gap: 3px; }
+  .meter .lab { display: flex; justify-content: space-between; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+  .meter .lab b { color: var(--ink-2); font-weight: 600; font-variant-numeric: tabular-nums; }
+  .meter .track { height: 6px; border-radius: 3px; overflow: hidden; }
+  .meter .fill { height: 100%; border-radius: 0 3px 3px 0; }
+  .meter.boom .track { background: var(--track-good); } .meter.boom .fill { background: var(--good); }
+  .meter.bust .track { background: var(--track-bad); } .meter.bust .fill { background: var(--bad); }
+  .meter.risk .track { background: var(--track-warn); } .meter.risk .fill { background: var(--warn); }
+  .meter.big .track { height: 10px; border-radius: 5px; }
+  .meter.big .lab { font-size: 12px; } .meter.big .lab b { font-size: 16px; font-family: var(--display); }
+
+  /* Sheet */
+  .sheet {
+    position: fixed; inset: 0; z-index: 30; display: flex; flex-direction: column; justify-content: flex-end;
+    background: rgba(10, 12, 11, 0.45);
+  }
+  .sheet .panel {
+    background: var(--surface); border-radius: 16px 16px 0 0; box-shadow: var(--shadow);
+    max-height: 92vh; overflow-y: auto; padding: 8px 16px calc(24px + env(safe-area-inset-bottom));
+    max-width: 640px; width: 100%; margin: 0 auto;
+  }
+  .sheet .grab { width: 40px; height: 4px; border-radius: 2px; background: var(--hair); margin: 4px auto 12px; }
+  .sheet-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+  .sheet-head h2 { font-size: 30px; text-transform: none; letter-spacing: 0; }
+  .sheet-head .sub { color: var(--ink-2); font-size: 14px; margin-top: 4px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .close { border: 0; background: var(--surface-2); border-radius: 50%; width: 36px; height: 36px; font-size: 18px; line-height: 1; flex: none; }
+  .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 14px 0; }
+  .tile { background: var(--surface-2); border-radius: 8px; padding: 10px; }
+  .tile .lab { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+  .tile .val { font-family: var(--display); font-size: 28px; font-weight: 700; line-height: 1.1; margin-top: 2px; }
+  .tile .val small { font-size: 14px; font-weight: 600; color: var(--ink-2); margin-left: 2px; }
+  .tile .val.up { color: var(--good); } .tile .val.down { color: var(--bad); }
+  .sec { margin-top: 18px; }
+  .sec h3 { margin-bottom: 8px; }
+  .why { margin: 0; padding: 0 0 0 18px; color: var(--ink-2); font-size: 14px; display: grid; gap: 3px; }
+  .why.empty { list-style: none; padding: 0; }
+  .srcs { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; font-size: 14px; margin-top: 8px; }
+  .srcs .k { color: var(--ink-2); }
+  .srcs .v { font-variant-numeric: tabular-nums; font-weight: 600; text-align: right; }
+  .strip { width: 100%; height: auto; display: block; margin-top: 6px; }
+  .avail { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .avail .a { border-radius: 6px; padding: 5px 8px; font-size: 13px; background: var(--surface-2); display: grid; line-height: 1.15; min-width: 64px; }
+  .avail .a small { color: var(--muted); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; }
+  .avail .a b { font-family: var(--display); font-size: 17px; }
+  .avail .a.hi b { color: var(--good); } .avail .a.lo b { color: var(--muted); }
+  .actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 16px; }
+  .btn {
+    border: 1px solid var(--hair); background: var(--surface-2); border-radius: 8px; padding: 10px;
+    font-family: var(--display); font-size: 16px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;
+  }
+  .btn.primary { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .btn.on { background: var(--accent-soft); color: var(--accent-ink); border-color: var(--accent); }
+  .btn.small { padding: 6px 10px; font-size: 14px; }
+
+  /* Draft tab */
+  .settings { display: grid; grid-template-columns: 1fr 1fr auto; gap: 8px; align-items: end; }
+  .settings label { display: grid; gap: 4px; font-size: 12px; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; }
+  .settings input { border: 1px solid var(--hair); background: var(--surface); border-radius: 8px; padding: 8px 10px; font-size: 16px; width: 100%; }
+  .pickline { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+  .pickline span { font-family: var(--display); font-weight: 600; font-size: 15px; padding: 3px 8px; border-radius: 6px; background: var(--surface-2); color: var(--ink-2); }
+  .pickline span.done { text-decoration: line-through; color: var(--muted); }
+  .pickline span.next { background: var(--accent-soft); color: var(--accent-ink); }
+  .onclock { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px; }
+  .onclock .tile .val { font-size: 32px; }
+  .roster { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .best h3 { display: flex; justify-content: space-between; align-items: baseline; }
+  .best h3 small { font-family: var(--body); font-size: 12px; color: var(--muted); font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; }
+  .mini { list-style: none; margin: 6px 0 0; padding: 0; display: grid; gap: 4px; }
+  .mini button {
+    width: 100%; text-align: left; border: 0; background: var(--surface-2); border-radius: 8px; padding: 8px 10px;
+    display: grid; grid-template-columns: 1fr auto; gap: 2px 8px; align-items: center;
+  }
+  .mini .nm { font-family: var(--display); font-size: 17px; font-weight: 600; display: flex; gap: 8px; align-items: center; }
+  .mini .cm { font-family: var(--display); font-size: 17px; font-weight: 700; }
+  .mini .sub { grid-column: 1 / 3; font-size: 12px; color: var(--muted); }
+  .mini .sub b { color: var(--accent-ink); font-weight: 600; }
+  .empty { color: var(--muted); font-size: 14px; padding: 12px 0; text-align: center; }
+
+  /* Model tab */
+  .formula { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12.5px; background: var(--surface-2); border-radius: 8px; padding: 10px 12px; overflow-x: auto; white-space: pre; color: var(--ink-2); margin-top: 8px; }
+  .srclist { margin: 8px 0 0; padding: 0; list-style: none; display: grid; gap: 6px; font-size: 14px; }
+  .srclist li { display: grid; grid-template-columns: 1fr auto; gap: 8px; border-top: 1px solid var(--hair); padding-top: 6px; }
+  .srclist li:first-child { border-top: 0; padding-top: 0; }
+  .srclist small { color: var(--muted); display: block; }
+  a { color: var(--accent-ink); }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .sheet .panel { animation: up 180ms ease-out; }
+    @keyframes up { from { transform: translateY(24px); opacity: 0.6; } to { transform: none; opacity: 1; } }
+  }
+</style>
+
+<header class="top">
+  <div class="brand">Fourth Pick<small>10-team · full PPR · snake</small></div>
+  <div class="clock" id="clock">Pick 4</div>
+</header>
+
+<main>
+  <section class="tab stack" id="tab-plan"></section>
+  <section class="tab stack" id="tab-board" hidden>
+    <div class="filters">
+      <div class="seg" id="posSeg" role="group" aria-label="Position filter"></div>
+      <div class="row2">
+        <input type="search" id="q" placeholder="Search player or team" autocomplete="off" aria-label="Search players">
+        <select id="sort" aria-label="Sort by">
+          <option value="comp">Composite</option>
+          <option value="boom">Boom ↓</option>
+          <option value="bust">Bust ↓</option>
+          <option value="risk">Risk ↓</option>
+          <option value="value">Value vs ADP</option>
+          <option value="adp">ADP</option>
+        </select>
+      </div>
+    </div>
+    <ul class="players" id="board"></ul>
+  </section>
+  <section class="tab stack" id="tab-draft" hidden></section>
+  <section class="tab stack" id="tab-model" hidden></section>
+</main>
+
+<nav class="tabs" role="tablist" aria-label="Sections">
+  <button role="tab" data-tab="plan" aria-selected="true">Plan</button>
+  <button role="tab" data-tab="board" aria-selected="false">Board</button>
+  <button role="tab" data-tab="draft" aria-selected="false">Draft</button>
+  <button role="tab" data-tab="model" aria-selected="false">Model</button>
+</nav>
+
+<div class="sheet" id="sheet" hidden></div>
+
+<script id="data" type="application/json">
+/*__DATA__*/
+</script>
+<script>
+(function () {
+  'use strict';
+  const DATA = JSON.parse(document.getElementById('data').textContent);
+  const PLAYERS = DATA.players;
+  const STRATEGY = DATA.strategy;
+  const META = DATA.meta;
+  const byId = new Map(PLAYERS.map(p => [p.id, p]));
+  const normName = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/['.]/g, '').replace(/-/g, ' ').replace(/\b(jr|sr|ii|iii|iv)\b/g, '').replace(/\s+/g, ' ').trim();
+  const byName = new Map(PLAYERS.map(p => [normName(p.name), p]));
+  const findPlayer = name => byName.get(normName(name));
+  const POS = ['ALL', 'QB', 'RB', 'WR', 'TE'];
+
+  // ---------- state ----------
+  const state = { tab: 'plan', pos: 'ALL', sort: 'comp', q: '', taken: new Set(), mine: [], teams: 10, slot: 4 };
+  const KEY = 'fourth-pick-war-room';
+  function load() {
+    try {
+      const s = JSON.parse(localStorage.getItem(KEY) || 'null');
+      if (s) {
+        state.taken = new Set(s.taken || []);
+        state.mine = s.mine || [];
+        state.teams = s.teams || 10;
+        state.slot = s.slot || 4;
+        state.tab = s.tab || 'plan';
+      }
+    } catch (e) { /* storage unavailable: run in memory */ }
+  }
+  function save() {
+    try {
+      localStorage.setItem(KEY, JSON.stringify({ taken: [...state.taken], mine: state.mine, teams: state.teams, slot: state.slot, tab: state.tab }));
+    } catch (e) { /* ignore */ }
+  }
+
+  // ---------- helpers ----------
+  const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
+  const fmt1 = v => (v == null ? '–' : (Math.round(v * 10) / 10).toFixed(1));
+  const fmt0 = v => (v == null ? '–' : String(Math.round(v)));
+  const signed = v => (v == null ? '–' : (v > 0 ? '+' : '') + fmt1(v));
+  function myPicks(teams, slot, rounds) {
+    const out = [];
+    for (let r = 1; r <= rounds; r++) out.push(r % 2 ? (r - 1) * teams + slot : r * teams - slot + 1);
+    return out;
+  }
+  // Probability a player is still on the board at overall pick p, from ADP.
+  // Logistic around ADP; the spread widens as ADP grows (later picks are noisier).
+  function pAvail(adp, p) {
+    if (adp == null) return null;
+    const s = Math.max(1.6, 0.16 * adp);
+    return 1 / (1 + Math.exp((p - adp) / s));
+  }
+  function nextPickInfo() {
+    const picks = myPicks(state.teams, state.slot, 16);
+    const made = state.mine.length;
+    const cur = state.taken.size + 1;
+    const next = picks[made] != null ? picks[made] : null;
+    return { picks, made, cur, next, until: next != null ? next - cur : null };
+  }
+
+  // ---------- meters ----------
+  function meter(kind, label, val, big) {
+    const m = el('div', 'meter ' + kind + (big ? ' big' : ''));
+    const lab = el('div', 'lab'); lab.append(el('span', null, label), el('b', null, fmt0(val)));
+    const track = el('div', 'track'); const fill = el('div', 'fill'); fill.style.width = Math.max(0, Math.min(100, val || 0)) + '%';
+    track.append(fill); m.append(lab, track);
+    m.setAttribute('role', 'img'); m.setAttribute('aria-label', label + ' ' + fmt0(val) + ' out of 100');
+    return m;
+  }
+  function posChip(pos) { return el('span', 'pos ' + pos, pos); }
+
+  // ---------- tabs ----------
+  const tabsNav = document.querySelector('.tabs');
+  tabsNav.addEventListener('click', e => {
+    const b = e.target.closest('button[data-tab]'); if (!b) return;
+    showTab(b.dataset.tab);
+  });
+  function showTab(name) {
+    state.tab = name; save();
+    tabsNav.querySelectorAll('button').forEach(b => b.setAttribute('aria-selected', String(b.dataset.tab === name)));
+    ['plan', 'board', 'draft', 'model'].forEach(t => { document.getElementById('tab-' + t).hidden = t !== name; });
+    if (name === 'draft') renderDraft();
+    if (name === 'board') renderBoard();
+    window.scrollTo(0, 0);
+  }
+
+  // ---------- Plan ----------
+  function renderPlan() {
+    const root = document.getElementById('tab-plan'); root.replaceChildren();
+    const s = STRATEGY;
+
+    const hero = el('section', 'card');
+    hero.append(el('p', 'eyebrow', 'The read'), el('h2', null, s.headline));
+    hero.append(el('p', 'lede', s.summary));
+    if (s.approach) { hero.append(el('hr', 'divider')); const a = el('p', 'note'); a.append(el('b', null, 'Roster build: '), document.createTextNode(s.approach)); hero.append(a); }
+    root.append(hero);
+
+    const at4 = el('section', 'card');
+    at4.append(el('p', 'eyebrow', 'Who will be there at 4'), el('h2', null, 'The pick-4 decision'));
+    at4.append(el('p', 'note', s.pick4.text));
+    const order = el('ol', 'list');
+    s.pick4.order.forEach((o, i) => {
+      const li = el('li'); li.append(el('span', 'n', String(i + 1)));
+      const body = el('div'); const nm = playerLink(o.player); body.append(nm);
+      body.append(el('div', 'note', o.why)); li.append(body); order.append(li);
+    });
+    at4.append(order);
+    root.append(at4);
+
+    const rounds = el('section', 'card');
+    rounds.append(el('p', 'eyebrow', 'Round by round · picks ' + myPicks(10, 4, 16).slice(0, 8).join(' · ') + ' …'), el('h2', null, 'The plan'));
+    s.rounds.forEach(r => {
+      const row = el('div', 'round');
+      const pk = el('div', 'pick'); pk.append(el('b', null, '#' + r.pick), el('span', null, 'Rd ' + r.round)); row.append(pk);
+      const body = el('div');
+      body.append(el('div', 'pri', r.priority));
+      const chips = el('div', 'chips');
+      r.targets.forEach(n => chips.append(playerChip(n)));
+      body.append(chips);
+      if (r.fallback) { const f = el('p', 'note'); f.append(el('b', null, 'If gone: '), document.createTextNode(r.fallback)); f.style.marginTop = '6px'; body.append(f); }
+      row.append(body); rounds.append(row);
+    });
+    root.append(rounds);
+
+    const qbte = el('section', 'card');
+    qbte.append(el('p', 'eyebrow', 'Onesies'), el('h2', null, 'QB and TE timing'));
+    qbte.append(el('p', 'note', s.qbte));
+    root.append(qbte);
+
+    const rules = el('section', 'card');
+    rules.append(el('p', 'eyebrow', 'Cheat sheet'), el('h2', null, 'Ten rules for this draft'));
+    const rl = el('ol', 'list');
+    s.rules.forEach((r, i) => { const li = el('li'); li.append(el('span', 'n', String(i + 1)), el('span', null, r)); rl.append(li); });
+    rules.append(rl); root.append(rules);
+
+    const targets = el('section', 'card');
+    targets.append(el('p', 'eyebrow', 'Late rounds'), el('h2', null, 'Targets and avoids'));
+    const t1 = el('p', 'note'); t1.append(el('b', null, 'Target at ADP: ')); targets.append(t1);
+    const c1 = el('div', 'chips'); s.sleepers.forEach(n => c1.append(playerChip(n))); targets.append(c1);
+    const t2 = el('p', 'note'); t2.append(el('b', null, 'Avoid at ADP: ')); t2.style.marginTop = '12px'; targets.append(t2);
+    const c2 = el('div', 'chips'); s.avoids.forEach(n => c2.append(playerChip(n))); targets.append(c2);
+    root.append(targets);
+
+    const reddit = el('section', 'card');
+    reddit.append(el('p', 'eyebrow', 'Where the crowd and the experts split'), el('h2', null, 'Reddit vs. the sites'));
+    const ul = el('ul', 'list');
+    s.reddit.forEach(r => { const li = el('li'); li.append(el('span', 'n', '•'), el('span', 'note', r)); ul.append(li); });
+    reddit.append(ul); root.append(reddit);
+  }
+  function playerLink(name) {
+    const p = findPlayer(name);
+    const b = el('button', 'chip'); b.type = 'button';
+    if (p) { b.append(el('span', 'dot ' + p.pos), el('b', null, p.name), el('span', null, '#' + fmt1(p.comp))); b.addEventListener('click', () => openSheet(p.id)); }
+    else b.append(el('b', null, name));
+    return b;
+  }
+  function playerChip(name) {
+    const p = findPlayer(name);
+    const b = el('button', 'chip' + (p && state.taken.has(p.id) ? ' taken' : '')); b.type = 'button';
+    if (p) { b.append(el('span', 'dot ' + p.pos), document.createTextNode(p.name), el('span', 'num', fmt1(p.comp))); b.addEventListener('click', () => openSheet(p.id)); }
+    else b.append(document.createTextNode(name));
+    return b;
+  }
+
+  // ---------- Board ----------
+  const seg = document.getElementById('posSeg');
+  POS.forEach(p => { const b = el('button', null, p); b.type = 'button'; b.setAttribute('aria-pressed', String(p === state.pos)); b.addEventListener('click', () => { state.pos = p; seg.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', String(x.textContent === p))); renderBoard(); }); seg.append(b); });
+  document.getElementById('q').addEventListener('input', e => { state.q = e.target.value.trim().toLowerCase(); renderBoard(); });
+  document.getElementById('sort').addEventListener('change', e => { state.sort = e.target.value; renderBoard(); });
+
+  function sorted(list) {
+    const k = state.sort;
+    const cmp = {
+      comp: (a, b) => a.comp - b.comp,
+      boom: (a, b) => b.boom - a.boom || a.comp - b.comp,
+      bust: (a, b) => b.bust - a.bust || a.comp - b.comp,
+      risk: (a, b) => b.risk - a.risk || a.comp - b.comp,
+      value: (a, b) => (b.value ?? -99) - (a.value ?? -99) || a.comp - b.comp,
+      adp: (a, b) => (a.adp ?? 999) - (b.adp ?? 999),
+    }[k];
+    return list.slice().sort(cmp);
+  }
+  function filtered() {
+    return PLAYERS.filter(p => (state.pos === 'ALL' || p.pos === state.pos) && (!state.q || p.name.toLowerCase().includes(state.q) || p.team.toLowerCase() === state.q));
+  }
+  function renderBoard() {
+    const ul = document.getElementById('board'); ul.replaceChildren();
+    const list = sorted(filtered());
+    if (!list.length) { ul.append(el('li', 'empty', 'No players match.')); return; }
+    const frag = document.createDocumentFragment();
+    list.forEach(p => frag.append(playerRow(p, false)));
+    ul.append(frag);
+  }
+  function playerRow(p, draftMode) {
+    const li = el('li');
+    const b = el('button', 'prow' + (state.taken.has(p.id) ? ' taken' : '') + (state.mine.includes(p.id) ? ' mine' : '')); b.type = 'button';
+    b.append(el('span', 'rank num', String(p.posRank)));
+    const name = el('span', 'name'); name.append(el('span', 't', p.name), posChip(p.pos)); b.append(name);
+    const comp = el('span', 'comp num', fmt1(p.comp)); comp.append(el('small', null, 'Comp')); b.append(comp);
+    const meta = el('span', 'meta');
+    meta.append(metaBit('', p.team + ' · bye ' + p.bye));
+    meta.append(metaBit('ADP', fmt1(p.adp)));
+    meta.append(metaBit('Val', signed(p.value)));
+    meta.append(metaBit('Tier', String(p.tier)));
+    if (p.flag) meta.append(el('span', 'flag', p.flag));
+    b.append(meta);
+    const ms = el('span', 'meters'); ms.append(meter('boom', 'Boom', p.boom), meter('bust', 'Bust', p.bust), meter('risk', 'Risk', p.risk)); b.append(ms);
+    b.addEventListener('click', () => openSheet(p.id));
+    li.append(b);
+    return li;
+  }
+  function metaBit(k, v) { const s = el('span'); if (k) { s.append(document.createTextNode(k + ' ')); } s.append(el('b', 'num', v)); return s; }
+
+  // ---------- Sheet ----------
+  const sheet = document.getElementById('sheet');
+  sheet.addEventListener('click', e => { if (e.target === sheet) closeSheet(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !sheet.hidden) closeSheet(); });
+  function closeSheet() { sheet.hidden = true; sheet.replaceChildren(); document.body.style.overflow = ''; }
+  function openSheet(id) {
+    const p = byId.get(id); if (!p) return;
+    sheet.replaceChildren();
+    const panel = el('div', 'panel'); panel.setAttribute('role', 'dialog'); panel.setAttribute('aria-label', p.name);
+    panel.append(el('div', 'grab'));
+    const head = el('div', 'sheet-head');
+    const hl = el('div'); hl.append(el('h2', null, p.name));
+    const sub = el('div', 'sub'); sub.append(posChip(p.pos), el('span', null, p.pos + String(p.posRank) + ' · ' + p.team + ' · bye ' + p.bye + (p.age ? ' · age ' + p.age : '')));
+    hl.append(sub); head.append(hl);
+    const x = el('button', 'close', '×'); x.type = 'button'; x.setAttribute('aria-label', 'Close'); x.addEventListener('click', closeSheet); head.append(x);
+    panel.append(head);
+
+    const tiles = el('div', 'tiles');
+    tiles.append(tile('Composite', fmt1(p.comp), 'of ' + p.n + ' sources'), tile('ADP', fmt1(p.adp), p.adpN ? p.adpN + ' platforms' : 'no data'), tile('Value', signed(p.value), p.value == null ? '' : (p.value >= 0 ? 'goes later than rank' : 'market reaches'), p.value == null ? '' : (p.value >= 1.5 ? 'up' : p.value <= -1.5 ? 'down' : '')));
+    panel.append(tiles);
+
+    const big = el('div', 'stack');
+    big.append(meter('boom', 'Boom', p.boom, true), meter('bust', 'Bust', p.bust, true), meter('risk', 'Risk / volatility', p.risk, true));
+    panel.append(big);
+
+    if (p.note) { const n = el('p', 'note'); n.style.marginTop = '14px'; n.textContent = p.note; panel.append(n); }
+
+    const why = el('div', 'sec'); why.append(el('h3', null, 'Why those numbers'));
+    why.append(whyList('Boom', p.boomWhy, 'good'), whyList('Bust', p.bustWhy, 'bad'), whyList('Risk', p.riskWhy, 'warn'));
+    panel.append(why);
+
+    const spread = el('div', 'sec'); spread.append(el('h3', null, 'Where each source has him'));
+    spread.append(el('p', 'note', 'Best ' + fmt0(p.best) + ' · worst ' + fmt0(p.worst) + ' · spread ±' + fmt1(p.sd) + ' places'));
+    spread.append(rankStrip(p));
+    const srcs = el('div', 'srcs');
+    Object.entries(p.sources).sort((a, b) => a[1] - b[1]).forEach(([k, v]) => { srcs.append(el('span', 'k', META.sourceNames[k] || k), el('span', 'v', String(v))); });
+    if (p.adpSources) Object.entries(p.adpSources).forEach(([k, v]) => { srcs.append(el('span', 'k', (META.sourceNames[k] || k) + ' ADP'), el('span', 'v', fmt1(v))); });
+    spread.append(srcs); panel.append(spread);
+
+    const av = el('div', 'sec'); av.append(el('h3', null, 'Chance he is there at your picks'));
+    const row = el('div', 'avail');
+    const picks = myPicks(state.teams, state.slot, 16).filter(pk => pk >= 1);
+    const shown = picks.filter(pk => { const pr = pAvail(p.adp, pk); return pr != null && pr > 0.02 && pr < 0.995; }).slice(0, 5);
+    if (!shown.length) row.append(el('p', 'note', p.adp == null ? 'No ADP on record.' : (pAvail(p.adp, picks[0]) >= 0.995 ? 'Safely available whenever you want him.' : 'Gone before any of your picks.')));
+    shown.forEach(pk => { const pr = pAvail(p.adp, pk); const a = el('div', 'a' + (pr >= 0.6 ? ' hi' : pr < 0.25 ? ' lo' : '')); a.append(el('small', null, 'Pick ' + pk), el('b', null, Math.round(pr * 100) + '%')); row.append(a); });
+    av.append(row); panel.append(av);
+
+    const acts = el('div', 'actions');
+    const taken = state.taken.has(p.id), mine = state.mine.includes(p.id);
+    const bt = el('button', 'btn' + (taken && !mine ? ' on' : ''), taken && !mine ? 'Taken ✓' : 'Mark taken'); bt.type = 'button';
+    bt.addEventListener('click', () => { toggleTaken(p.id, false); openSheet(p.id); });
+    const bm = el('button', 'btn primary' + (mine ? ' on' : ''), mine ? 'On my team ✓' : 'Draft to my team'); bm.type = 'button';
+    bm.addEventListener('click', () => { toggleTaken(p.id, true); openSheet(p.id); });
+    acts.append(bt, bm); panel.append(acts);
+
+    sheet.append(panel); sheet.hidden = false; document.body.style.overflow = 'hidden';
+    panel.scrollTop = 0;
+  }
+  function tile(lab, val, sub, tone) {
+    const t = el('div', 'tile'); t.append(el('div', 'lab', lab));
+    const v = el('div', 'val num' + (tone ? ' ' + tone : ''), val); t.append(v);
+    if (sub) t.append(el('div', 'lab', sub));
+    return t;
+  }
+  function whyList(lab, items, tone) {
+    const wrap = el('div'); wrap.style.marginTop = '8px';
+    const h = el('p', 'eyebrow', lab); wrap.append(h);
+    const ul = el('ul', 'why' + (items && items.length ? '' : ' empty'));
+    if (items && items.length) items.forEach(t => ul.append(el('li', null, t))); else ul.append(el('li', null, 'Nothing notable.'));
+    wrap.append(ul); return wrap;
+  }
+  // Rank strip: one horizontal scale from 1 to the max rank in view; a dot per source, a bar for the composite, a hollow marker for ADP.
+  function rankStrip(p) {
+    const ranks = Object.values(p.sources);
+    const all = ranks.concat([p.comp]).concat(p.adp != null ? [p.adp] : []);
+    const lo = Math.max(1, Math.floor(Math.min.apply(null, all)) - 2), hi = Math.ceil(Math.max.apply(null, all)) + 2;
+    const W = 320, H = 46, padL = 10, padR = 10, y = 22;
+    const x = v => padL + (W - padL - padR) * (v - lo) / Math.max(1, hi - lo);
+    const svgNS = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(svgNS, 'svg'); svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H); svg.setAttribute('class', 'strip'); svg.setAttribute('role', 'img');
+    svg.setAttribute('aria-label', 'Source ranks from ' + fmt0(p.best) + ' to ' + fmt0(p.worst) + ', composite ' + fmt1(p.comp));
+    const line = document.createElementNS(svgNS, 'line'); line.setAttribute('x1', padL); line.setAttribute('x2', W - padR); line.setAttribute('y1', y); line.setAttribute('y2', y); line.setAttribute('stroke', 'var(--hair)'); line.setAttribute('stroke-width', '1'); svg.append(line);
+    const cs = getComputedStyle(document.documentElement);
+    const posColor = cs.getPropertyValue('--' + p.pos.toLowerCase()).trim() || '#888';
+    ranks.forEach(r => { const c = document.createElementNS(svgNS, 'circle'); c.setAttribute('cx', x(r)); c.setAttribute('cy', y); c.setAttribute('r', 5); c.setAttribute('fill', posColor); c.setAttribute('stroke', 'var(--surface)'); c.setAttribute('stroke-width', '2'); svg.append(c); });
+    const cm = document.createElementNS(svgNS, 'rect'); cm.setAttribute('x', x(p.comp) - 2); cm.setAttribute('y', y - 12); cm.setAttribute('width', 4); cm.setAttribute('height', 24); cm.setAttribute('rx', 1); cm.setAttribute('fill', 'var(--ink)'); svg.append(cm);
+    if (p.adp != null) { const a = document.createElementNS(svgNS, 'circle'); a.setAttribute('cx', x(p.adp)); a.setAttribute('cy', y); a.setAttribute('r', 6); a.setAttribute('fill', 'none'); a.setAttribute('stroke', 'var(--accent)'); a.setAttribute('stroke-width', '2'); svg.append(a); }
+    [[lo, 'start'], [hi, 'end']].forEach(([v, anchor]) => { const t = document.createElementNS(svgNS, 'text'); t.setAttribute('x', anchor === 'start' ? padL : W - padR); t.setAttribute('y', H - 2); t.setAttribute('text-anchor', anchor); t.setAttribute('font-size', '10'); t.setAttribute('fill', 'var(--muted)'); t.setAttribute('font-family', 'inherit'); t.textContent = '#' + v; svg.append(t); });
+    const leg = document.createElementNS(svgNS, 'text'); leg.setAttribute('x', W / 2); leg.setAttribute('y', H - 2); leg.setAttribute('text-anchor', 'middle'); leg.setAttribute('font-size', '10'); leg.setAttribute('fill', 'var(--muted)'); leg.textContent = '● source   ▌ composite   ○ ADP'; svg.append(leg);
+    return svg;
+  }
+
+  // ---------- Draft ----------
+  function toggleTaken(id, mine) {
+    const isMine = state.mine.includes(id);
+    const isTaken = state.taken.has(id);
+    if (mine) {
+      if (isMine) { state.mine = state.mine.filter(x => x !== id); state.taken.delete(id); }
+      else { state.mine.push(id); state.taken.add(id); }
+    } else {
+      if (isMine) { state.mine = state.mine.filter(x => x !== id); state.taken.delete(id); }
+      else if (isTaken) state.taken.delete(id); else state.taken.add(id);
+    }
+    save(); updateClock();
+    if (state.tab === 'board') renderBoard(); if (state.tab === 'draft') renderDraft(); if (state.tab === 'plan') renderPlan();
+  }
+  function updateClock() {
+    const i = nextPickInfo();
+    const c = document.getElementById('clock');
+    if (i.next == null) c.textContent = 'Draft done';
+    else if (i.until <= 0) c.textContent = 'On the clock · #' + i.next;
+    else c.textContent = 'Pick ' + i.cur + ' · yours in ' + i.until;
+  }
+  function renderDraft() {
+    const root = document.getElementById('tab-draft'); root.replaceChildren();
+    const info = nextPickInfo();
+
+    const set = el('section', 'card');
+    set.append(el('p', 'eyebrow', 'Your draft'), el('h2', null, 'Live board'));
+    const sg = el('div', 'settings');
+    sg.append(numField('Teams', state.teams, v => { state.teams = v; save(); renderDraft(); updateClock(); }), numField('Your slot', state.slot, v => { state.slot = v; save(); renderDraft(); updateClock(); }));
+    const reset = el('button', 'btn small', 'Reset'); reset.type = 'button'; reset.addEventListener('click', () => { if (confirm('Clear every taken and drafted mark?')) { state.taken = new Set(); state.mine = []; save(); renderDraft(); updateClock(); } });
+    sg.append(reset); set.append(sg);
+    const pl = el('div', 'pickline');
+    info.picks.forEach((pk, i) => { const s = el('span', i < info.made ? 'done' : i === info.made ? 'next' : '', '#' + pk); pl.append(s); });
+    set.append(pl);
+    const oc = el('div', 'onclock');
+    oc.append(tile('Current pick', String(info.cur), state.taken.size + ' players off the board'), tile('Your next', info.next == null ? '–' : '#' + info.next, info.until == null ? '' : info.until <= 0 ? 'you are up' : info.until + ' picks away'));
+    set.append(oc);
+    const rosterH = el('p', 'eyebrow', 'My roster'); rosterH.style.marginTop = '12px'; set.append(rosterH);
+    const roster = el('div', 'roster');
+    if (!state.mine.length) roster.append(el('span', 'note', 'Nobody yet. Tap a player, then “Draft to my team”.'));
+    state.mine.forEach(id => { const p = byId.get(id); if (p) roster.append(playerChip(p.name)); });
+    set.append(roster);
+    root.append(set);
+
+    const avail = PLAYERS.filter(p => !state.taken.has(p.id));
+    const nextPk = info.next;
+    const best = el('section', 'card best');
+    const h = el('h3', null, 'Best available'); h.append(el('small', null, 'composite')); best.append(h);
+    best.append(miniList(avail.slice().sort((a, b) => a.comp - b.comp).slice(0, 8), nextPk));
+    root.append(best);
+
+    ['RB', 'WR', 'TE', 'QB'].forEach(pos => {
+      const c = el('section', 'card best');
+      const hh = el('h3', null, 'Best ' + pos); hh.append(el('small', null, 'top 5')); c.append(hh);
+      c.append(miniList(avail.filter(p => p.pos === pos).sort((a, b) => a.comp - b.comp).slice(0, 5), nextPk));
+      root.append(c);
+    });
+
+    const vals = el('section', 'card best');
+    const vh = el('h3', null, 'Falling to you'); vh.append(el('small', null, 'ADP later than composite')); vals.append(vh);
+    vals.append(miniList(avail.filter(p => p.value != null && p.value >= 3 && p.comp <= 120).sort((a, b) => a.comp - b.comp).slice(0, 8), nextPk));
+    root.append(vals);
+  }
+  function numField(lab, val, onChange) {
+    const l = el('label'); l.append(document.createTextNode(lab));
+    const i = el('input'); i.type = 'number'; i.min = '2'; i.max = '20'; i.value = String(val); i.inputMode = 'numeric';
+    i.addEventListener('change', () => { const v = parseInt(i.value, 10); if (v >= 2 && v <= 20) onChange(v); });
+    l.append(i); return l;
+  }
+  function miniList(list, nextPk) {
+    const ul = el('ul', 'mini');
+    if (!list.length) { ul.append(el('li', 'empty', 'None left.')); return ul; }
+    list.forEach(p => {
+      const li = el('li'); const b = el('button'); b.type = 'button';
+      const nm = el('span', 'nm'); nm.append(el('span', null, p.name), posChip(p.pos)); b.append(nm);
+      b.append(el('span', 'cm num', fmt1(p.comp)));
+      const sub = el('span', 'sub');
+      const pr = nextPk != null ? pAvail(p.adp, nextPk) : null;
+      let txt = p.team + ' · ADP ' + fmt1(p.adp) + ' · boom ' + fmt0(p.boom) + ' / bust ' + fmt0(p.bust);
+      sub.append(document.createTextNode(txt));
+      if (pr != null && nextPk != null) { sub.append(document.createTextNode(' · ')); sub.append(el('b', null, Math.round(pr * 100) + '% there at #' + nextPk)); }
+      b.append(sub);
+      b.addEventListener('click', () => openSheet(p.id));
+      li.append(b); ul.append(li);
+    });
+    return ul;
+  }
+
+  // ---------- Model ----------
+  function renderModel() {
+    const root = document.getElementById('tab-model'); root.replaceChildren();
+    const m = META.model;
+    const intro = el('section', 'card');
+    intro.append(el('p', 'eyebrow', 'How the numbers are made'), el('h2', null, 'The scoring model'));
+    intro.append(el('p', 'lede', m.intro));
+    intro.append(el('p', 'note', 'Data compiled ' + META.updated + '. ' + PLAYERS.length + ' players scored.'));
+    root.append(intro);
+    m.sections.forEach(s => {
+      const c = el('section', 'card');
+      c.append(el('h3', null, s.title));
+      s.paras.forEach(t => c.append(el('p', 'note', t)));
+      if (s.formula) c.append(el('div', 'formula', s.formula));
+      root.append(c);
+    });
+    const src = el('section', 'card');
+    src.append(el('p', 'eyebrow', 'Inputs'), el('h2', null, 'Sources'));
+    const ul = el('ul', 'srclist');
+    META.sources.forEach(s => {
+      const li = el('li'); const l = el('span'); l.append(el('b', null, s.name)); if (s.note) l.append(el('small', null, s.note)); li.append(l); li.append(el('span', 'num', s.count != null ? s.count + ' players' : '')); ul.append(li);
+    });
+    src.append(ul); root.append(src);
+    if (META.unavailable && META.unavailable.length) {
+      const u = el('section', 'card');
+      u.append(el('p', 'eyebrow', 'Could not reach'), el('h2', null, 'Missing inputs'));
+      const ul2 = el('ul', 'list');
+      META.unavailable.forEach(t => { const li = el('li'); li.append(el('span', 'n', '•'), el('span', 'note', t)); ul2.append(li); });
+      u.append(ul2); root.append(u);
+    }
+  }
+
+  // ---------- boot ----------
+  load();
+  seg.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', String(x.textContent === state.pos)));
+  renderPlan(); renderBoard(); renderDraft(); renderModel(); updateClock();
+  showTab(state.tab);
+})();
+</script>

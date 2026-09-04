@@ -1,0 +1,57 @@
+{
+  "headline": "Anchor WR at 4, hero RB at 17, then hammer the WR value pocket",
+  "summary": "Every 2026 source agrees on the shape of pick 4: at least one of Gibbs and Bijan is gone, Chase is usually gone, and Puka Nacua is the modal pick. In a 10-team full-PPR room only 20 RBs and 20 WRs start, so the waiver wire is deep and your edge comes from nailing the first two picks and concentrating upside on the bench, not from safe mid-round veterans.",
+  "approach": "Anchor WR + Hero RB, flexible. Take the best of Gibbs / Bijan / Chase / Nacua at 4. At 17 take a bell-cow RB from the Achane, Chase Brown, Cook, Kenneth Walker, Hampton, Henry group if one is there; if that whole tier is gone, do not reach: pivot to Bowers / McBride or London / Collins and take RBs at 24 and 37. Then hammer WR in rounds 3-6, take one TE from the Loveland / Warren tier or a round 7-8 TE, and draft QB in the Daniels / Maye / Burrow window at 57-64 only if one falls, otherwise wait for Stafford / Kyler / Baker at 97-124. Draft Sharks' 10-team optimizer prefers full Zero RB from this slot (Nacua, London, Collins, Flowers), while PFF and Fantasy Life say RB is the hardest position to wait on in 2026, so anchoring one back is the compromise most sources land on.",
+  "pick4": {
+    "text": "Decision rule at 4: Gibbs, then Bijan, then Chase, then Nacua, then Smith-Njigba. Do not take McCaffrey or Jonathan Taylor here in full PPR: Yahoo calls McCaffrey the worst round-1 pick of 2026 (age 30, 400-plus touches, degraded 49ers weapons). Nacua's noise is real but priced in: he is back at practice, expected for Week 1 in Melbourne, still under NFL review from a civil suit, and in a contract year.",
+    "order": [
+      {"player": "Jahmyr Gibbs", "why": "Near-unanimous 1.01. Montgomery traded and Pacheco on IR, so the workload only grows."},
+      {"player": "Bijan Robinson", "why": "Extension done, Stefanski's run-leaning wide zone. First overall on Yahoo and Sleeper ADP."},
+      {"player": "Ja'Marr Chase", "why": "175 and 185 targets the last two years. If he falls to 4 he is an easy pick."},
+      {"player": "Puka Nacua", "why": "2025 overall WR1 with 310.5 PPR points, 45 more than St. Brown. The modal pick at 4 across PFF, Draft Sharks, Fantasy Life and 4for4."},
+      {"player": "Jaxon Smith-Njigba", "why": "The safe WR alternative if the NFL-review risk on Nacua spooks you."}
+    ]
+  },
+  "rounds": [
+    {"pick": 4, "round": 1, "priority": "WR anchor, or a top-3 back if one falls", "targets": ["Puka Nacua", "Ja'Marr Chase", "Bijan Robinson", "Jahmyr Gibbs"], "fallback": "Jaxon Smith-Njigba. Never McCaffrey or Taylor in full PPR."},
+    {"pick": 17, "round": 2, "priority": "Bell-cow RB anchor", "targets": ["De'Von Achane", "Chase Brown", "James Cook", "Kenneth Walker III", "Omarion Hampton", "Derrick Henry"], "fallback": "Brock Bowers or Trey McBride (ADP 21-23), or Drake London / Nico Collins, then RBs at 24 and 37. Avoid Jeanty (ankle, biggest coin flip of round 2) and Love at this price."},
+    {"pick": 24, "round": 3, "priority": "WR1 if you took a back at 17; RB if you pivoted", "targets": ["Malik Nabers", "A.J. Brown", "Drake London", "Nico Collins", "Saquon Barkley", "Breece Hall"], "fallback": "Josh Allen only if both the RB and WR tiers are gone; in a 10-teamer, pass. Avoid Kyren Williams (Corum splits drives) and Etienne at round-3 cost."},
+    {"pick": 37, "round": 4, "priority": "WR value pocket, or second RB", "targets": ["Zay Flowers", "Garrett Wilson", "Brian Thomas Jr.", "DK Metcalf", "Emeka Egbuka", "Tetairoa McMillan", "Colston Loveland"], "fallback": "Breece Hall (small reach), TreVeyon Henderson, RJ Harvey. Judkins only if you accept the fibula risk."},
+    {"pick": 44, "round": 5, "priority": "Fill RB2 / WR3, or tier-2 TE", "targets": ["Colston Loveland", "Tyler Warren", "Quinshon Judkins", "David Montgomery", "Emeka Egbuka", "Travis Hunter", "Rome Odunze"], "fallback": "Lamar Jackson (ADP 45) is fine here only if RB and WR are already set. Skattebo is overpriced at ADP."},
+    {"pick": 57, "round": 6, "priority": "QB value window opens", "targets": ["Jayden Daniels", "Drake Maye", "Joe Burrow", "MarShawn Lloyd", "Bucky Irving", "Chris Godwin"], "fallback": "If the QBs are gone, take the best RB with a path to volume (Lloyd is the Jacobs-exempt-list beneficiary) and get QB at 64 or 97."},
+    {"pick": 64, "round": 7, "priority": "QB or TE, whichever is the better value", "targets": ["Jayden Daniels", "Jalen Hurts", "Caleb Williams", "Tucker Kraft", "Sam LaPorta", "Harold Fannin Jr."], "fallback": "Chris Godwin, Josh Downs, Stefon Diggs if he is climbing."},
+    {"pick": 77, "round": 8, "priority": "Second TE tier or RB upside", "targets": ["Tucker Kraft", "Sam LaPorta", "Harold Fannin Jr.", "Caleb Williams", "Bhayshul Tuten", "Carnell Tate"], "fallback": "Whichever of TE or QB you still lack."},
+    {"pick": 84, "round": 9, "priority": "Handcuffs with standalone value", "targets": ["Blake Corum", "Tyler Allgeier", "George Kittle", "Stefon Diggs"], "fallback": "Corum out-efficiencies Kyren; Allgeier starts if Love misses Week 1 and keeps a role after."},
+    {"pick": 97, "round": 10, "priority": "QB if you waited; sleeper WR", "targets": ["Matthew Stafford", "Stefon Diggs", "George Kittle"], "fallback": "Yahoo: you can wait until round 9 or 10 for a viable starter."},
+    {"pick": 104, "round": 11, "priority": "Upside QB2 or RB lottery ticket", "targets": ["Kyler Murray", "Rachaad White", "Keaton Mitchell"], "fallback": "Kyler has a rushing floor and Jefferson / Addison; Mitchell is the explosive change-of-pace behind Hampton under McDaniel."},
+    {"pick": 117, "round": 12, "priority": "Second QB or another RB dart", "targets": ["Baker Mayfield", "Bo Nix", "Jaxson Dart", "Mike Washington Jr.", "Kaelon Black"], "fallback": "Dart only as a QB2 at his price."},
+    {"pick": 124, "round": 13, "priority": "Rookie WR / TE2 darts", "targets": ["Caleb Douglas", "Ja'Kobi Lane", "Chris Rodriguez Jr."], "fallback": "Douglas is already in Miami's first-team offense; Lane is a 6-4 red-zone target for Lamar."},
+    {"pick": 137, "round": 14, "priority": "Last skill dart", "targets": ["De'Zhaun Stribling", "Greg Dulcich", "Gunnar Helm", "Jordan Mason", "Isaiah Likely"], "fallback": "Stribling: 11 catches for 109 yards in two preseason games in a thin 49ers room."},
+    {"pick": 144, "round": 15, "priority": "Defense with a soft early schedule", "targets": [], "fallback": "Stream it after week 3."},
+    {"pick": 157, "round": 16, "priority": "Kicker, last", "targets": [], "fallback": "No 2026 source argues otherwise for a 10-team league."}
+  ],
+  "qbte": "QB: late-round QB is still the consensus in one-QB leagues. Only 10 QBs start, so the replacement level (Nix, Dart, Stafford, Kyler) sits close to the QB5-8 tier. Josh Allen is the clear QB1 at ADP 26-35 but Mike Clay questions the round-3 opportunity cost; Jayden Daniels goes three rounds later and could out-score him. The cheap way to buy a QB edge in a 10-teamer is Daniels / Maye / Burrow at 57-64, never Allen at 24. TE: Bowers (ADP 21) and McBride (22.5) are the elite tier; ESPN says round 1-2 is too early for a TE in 10-team leagues but warns neither lasts to round 3. Loveland (41) and Warren (52.5) are tier 2; Kraft, LaPorta and Fannin at 74-81 are the 10-team sweet spot; Kittle at 98 carries Achilles risk. Take an elite TE at 17 only if the RB anchor tier is gone.",
+  "rules": [
+    "At 4, take Nacua unless Gibbs, Bijan or Chase falls. Never McCaffrey in full PPR.",
+    "Anchor one bell-cow RB at 17: Achane, Chase Brown, Cook, Kenneth Walker, Hampton or Henry. RB is the hardest position to wait on in 2026.",
+    "If that RB tier is gone at 17, do not reach. Pivot to Bowers / McBride or London / Collins and take RBs at 24 and 37.",
+    "Hammer WR in rounds 3-6. That is the value pocket: Nabers, A.J. Brown, Flowers, Thomas Jr., Metcalf, Egbuka, McMillan.",
+    "Pay for an elite TE only as a pivot, never as the plan. Loveland in round 4 or Kraft / LaPorta / Fannin in rounds 7-8 is the 10-team sweet spot.",
+    "QB in the 57-64 window (Daniels, Maye, Burrow, Hurts) or wait until 97-124 (Stafford, Kyler, Baker). Do not pay the Allen tax at 24.",
+    "Fade the 2026 landmines at ADP: McCaffrey, Jeanty, Love, Kyren Williams, Etienne, Judkins, Skattebo, Tate, Davante Adams.",
+    "Buy this week's news: MarShawn Lloyd (Jacobs on the exempt list), Allgeier (Love's ankle), Corum (Kyren's drive split).",
+    "Bench equals upside only. In a 10-teamer the waiver wire replaces safe veterans, so spend picks 104-137 on rookies and handcuffs with a path to volume.",
+    "Kicker and defense in the last two rounds, and mock from picks 2, 7 and 12 before draft night so you know the turns."
+  ],
+  "sleepers": ["MarShawn Lloyd", "Tyler Allgeier", "Blake Corum", "Stefon Diggs", "Keaton Mitchell", "Rachaad White", "Caleb Douglas", "Ja'Kobi Lane", "Chris Rodriguez Jr.", "De'Zhaun Stribling", "Kyler Murray", "Baker Mayfield", "Cam Ward", "Tyler Shough", "Josh Downs", "Jordan Mason", "Isaiah Likely"],
+  "avoids": ["Christian McCaffrey", "Ashton Jeanty", "Jeremiyah Love", "Kyren Williams", "Travis Etienne", "Quinshon Judkins", "Bucky Irving", "Cam Skattebo", "Carnell Tate", "Davante Adams", "Mike Evans", "Jaxson Dart"],
+  "reddit": [
+    "Reddit's 2026 consensus build (via Fantasy Squawk's roundup of r/fantasyfootball drafters) is robust RB: two backs in the first three rounds, WRs in rounds 4-7, QB punted to round 8 or later. That is more RB-heavy than the PPR expert plans for this slot, which open WR at 4.",
+    "Jeremiyah Love: crowd ADP has him RB13 while expert consensus is RB16. The community is buying the No. 3 overall pick's talent; most experts except Mike Clay see an ADP trap in Arizona.",
+    "Ashton Jeanty: the crowd keeps him around pick 20 while Yahoo calls him the worst round-2 pick.",
+    "Bowers vs McBride: the crowd flipped to Bowers on the Cousins upgrade; FantasySP and ESPN's Matt Bowen still prefer McBride's record 169-target volume.",
+    "Josh Allen: crowd ADP pushes him to about 26 in some rooms versus 35 in others, a tax the experts say not to pay in a one-QB league.",
+    "Where they agree: Gibbs 1.01, Nacua at 4 in PPR, punt K and DST, and treat 10-team waivers as a resource.",
+    "Caveat: reddit.com could not be fetched from this environment, so Reddit sentiment is secondhand and no quotes are reproduced. Search r/fantasyfootball for the Sept 1-4 draft-help threads before your draft."
+  ]
+}
