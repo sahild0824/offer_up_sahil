@@ -1,0 +1,2665 @@
+[
+ {
+  "name": "Christian McCaffrey",
+  "pos": "RB",
+  "team": "SF",
+  "age": 30,
+  "injury_risk_pct": 78.0,
+  "injury_risk_label": "Highest among RBs (Draft Sharks: 78% injury chance, 2.1 proj. games missed)",
+  "games_missed_last3": 14,
+  "bust_mentions": [
+   "FantasyPros (6 boom-or-bust)",
+   "FantasyPros (18 busts experts avoid)",
+   "Bleacher Report (biggest boom/bust)",
+   "Bleacher Report (bust candidates)",
+   "CBS/Dave Richard (11 to avoid)",
+   "RotoWire (overrated RBs)",
+   "Yahoo (4 busts)",
+   "SI (4 high injury-risk RBs)",
+   "SI (regression candidates)",
+   "Fantasy Six Pack Hour"
+  ],
+  "boom_mentions": [
+   "FantasyPros (boom side: top-2 PPR RB in 3 of 4 SF seasons / every healthy year since 2017)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "age 30",
+   "career-high 413 touches in 2025 (led NFL)",
+   "370+ touch cohort avg ~48% PPR decline next year",
+   "declining rushing efficiency",
+   "played 7 combined games in the two prior seasons that followed a league-leading usage year",
+   "camp muscle tightness / managed preseason workload"
+  ],
+  "boom_factors": [
+   "overall RB1 2025 (416.6 PPR pts)",
+   "elite pass-game role"
+  ],
+  "camp_status": "minor injury (missed camp time with muscle tightness; workload managed in preseason; back at practice per Draft Sharks)",
+  "notes": "Most-cited bust/boom-or-bust player in 2026. Draft Sharks (via SI) lists him as the highest injury risk among all RBs: 78% chance of injury, 2.1 projected games missed. games_missed_last3 = 1 (2023 rest) + 13 (2024) + 0 (2025)."
+ },
+ {
+  "name": "Bucky Irving",
+  "pos": "RB",
+  "team": "TB",
+  "age": 23,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Moderate-High (offseason shoulder surgery; missed 7 games in 2025)",
+  "games_missed_last3": 7,
+  "bust_mentions": [
+   "Yahoo (5 RB busts)",
+   "Yahoo (10 busts)",
+   "RotoBaller (Craig: RBs to fall short of ADP)",
+   "CBS/Dave Richard (11 to avoid)",
+   "CBS SportsLine model"
+  ],
+  "boom_mentions": [
+   "SI (All-Breakout Team: added ~10 lbs of muscle)",
+   "CBS SportsLine (ranked above Kenneth Walker)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "missed 7 games 2025 + offseason shoulder surgery",
+   "3.4 YPC, last of 33 qualifying RBs in YPC and YAC/carry",
+   "Bucs re-signed Sean Tucker and added Kenneth Gainwell",
+   "RB20 ADP ~44"
+  ],
+  "boom_factors": [
+   "prior league-winner under Coen offense (2024)",
+   "bulked up in offseason"
+  ],
+  "camp_status": "returning from shoulder surgery (reported recovered)",
+  "notes": "Five separate bust citations (Yahoo x2, RotoBaller, CBS Richard, SportsLine); SI is the lone breakout counter-take."
+ },
+ {
+  "name": "Cam Skattebo",
+  "pos": "RB",
+  "team": "NYG",
+  "age": 24,
+  "injury_risk_pct": null,
+  "injury_risk_label": "High (ankle dislocation + fibula fracture in 2025)",
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "Rotoworld/NBC (top fades)",
+   "Yahoo (10 busts)",
+   "ESPN/Karabell (Do Not Draft - Giants trio)",
+   "SI (overvalued ADPs)",
+   "CBS SportsLine model"
+  ],
+  "boom_mentions": [
+   "ESPN/Michael Florio (conditional target if he falls outside top-20 RB / Rd 5)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "return from ankle dislocation/fibula fracture",
+   "-0.13 EPA per rush; outside top-25 in YPC, success rate, explosive rate",
+   "contact-seeking running style",
+   "mid-RB2 ADP"
+  ],
+  "boom_factors": [
+   "high-volume role when healthy"
+  ],
+  "camp_status": "returning from serious ankle/fibula injury (practicing)",
+  "notes": "Rotoworld's headline fade; Karabell flags the Dart/Skattebo/Nabers trio as availability question marks (only 18 snaps together in 2025)."
+ },
+ {
+  "name": "Jeremiyah Love",
+  "pos": "RB",
+  "team": "ARI",
+  "age": 21,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Moderate (high ankle sprain; 50/50 for Week 1)",
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "Yahoo (not worth the reach)",
+   "Yahoo (ADP trap in RB tiers)",
+   "SI (avoid at ADP - opportunity cost)",
+   "RotoBaller (backfields to avoid)",
+   "NBC (Fateful Eight boom/bust)"
+  ],
+  "boom_mentions": [
+   "ESPN/Mike Clay (past 9 top-12 drafted RBs all finished top-12 as rookies; avg 289 touches, 17.3 PPG)",
+   "SI (polarizing: Rookie Super Model - 100% of comps top-6 RB by Year 3)",
+   "CBS SportsLine model (ranked above Walker)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "rookie volatility",
+   "committee with James Conner and Tyler Allgeier",
+   "rebuilding Cardinals offense that fired its HC",
+   "first-time play-caller Mike LaFleur (no record of featuring a rookie RB)",
+   "RB13 / ADP ~23-25 price",
+   "high ankle sprain in camp"
+  ],
+  "boom_factors": [
+   "first RB drafted in 2026 NFL Draft",
+   "elite explosiveness; workhorse ceiling"
+  ],
+  "camp_status": "high ankle sprain - reported 50/50 for Week 1 vs LAC",
+  "notes": "Most polarizing rookie; ESPN's Clay is bullish on draft-capital history while Yahoo/SI/RotoBaller call the ADP a trap given the committee and the ankle."
+ },
+ {
+  "name": "Omarion Hampton",
+  "pos": "RB",
+  "team": "LAC",
+  "age": 23,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "Rotoworld/NBC (top fades)",
+   "Yahoo (10 busts: poor fit for the Chargers' scheme)"
+  ],
+  "boom_mentions": [
+   "SI (must-draft breakout of the year)",
+   "Yahoo (RB breakout candidates in Mike McDaniel offense)",
+   "NBC (Fateful Eight boom/bust)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "65th of 70 RBs in success rate on zone rushes; 68th of 70 in YPC on 125 zone rushes",
+   "new Shanahan-style zone scheme (McDaniel) is a poor stylistic fit per Rotoworld",
+   "Keaton Mitchell added to backfield"
+  ],
+  "boom_factors": [
+   "lead-back volume in a new pass-friendly McDaniel offense (SI/Yahoo breakout case)"
+  ],
+  "camp_status": "healthy",
+  "notes": "Team attribution per Yahoo ('Chargers' offensive scheme'); sources conflict on scheme fit - Rotoworld/Yahoo bust vs SI/Yahoo-roundtable breakout."
+ },
+ {
+  "name": "Quinshon Judkins",
+  "pos": "RB",
+  "team": "CLE",
+  "age": 22,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Moderate-High (returning from season-ending fibula injury)",
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "FantasyPros (24 players experts avoid at ADP)",
+   "Yahoo (4 busts)",
+   "RotoBaller (Thunder Dan overvalued)"
+  ],
+  "boom_mentions": [
+   "PFF (RB breakouts: top-20 season projected)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "season-ending fibula injury in 2025",
+   "Browns offensive environment",
+   "little pass-game usage (RB21 despite 279-carry pace)"
+  ],
+  "boom_factors": [
+   "Cleveland overhauled the offensive line (worst run-blocking in two decades in 2025)",
+   "larger workload expected"
+  ],
+  "camp_status": "returning from fibula injury (status not confirmed in sources)",
+  "notes": "Split verdict: three bust lists vs PFF breakout call."
+ },
+ {
+  "name": "Derrick Henry",
+  "pos": "RB",
+  "team": "BAL",
+  "age": 32,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Low-Moderate (age/mileage)",
+  "games_missed_last3": 0,
+  "bust_mentions": [
+   "Yahoo (5 RB busts)",
+   "Fantasy Six Pack (TD regression: JT, Henry, Barkley)",
+   "RotoBaller (aging workhorse outlooks)"
+  ],
+  "boom_mentions": [
+   "ESPN/Karabell (Do Draft - undervalued)",
+   "SI (elite until proven otherwise)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "age 32, 11th season",
+   "3,000+ career touches; three straight 300+ carry seasons",
+   "new Ravens coaching staff (OC Declan Doyle)",
+   "TD regression after 1,745 total-yard season",
+   "RB12 ADP ~21"
+  ],
+  "boom_factors": [
+   "Ravens rushing offense with Lamar Jackson",
+   "historically age-proof"
+  ],
+  "camp_status": "healthy",
+  "notes": "Yahoo cites the age-32/mileage cliff (fewer than 8% of peak RB seasons since 2010 came at 29+); Karabell counters that he is undervalued."
+ },
+ {
+  "name": "Saquon Barkley",
+  "pos": "RB",
+  "team": "PHI",
+  "age": 29,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Moderate (workload + injury history)",
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "RotoBaller (Craig: top RBs to fall short of ADP)",
+   "Fantasy Six Pack (TD regression)"
+  ],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "age 29, 9th season",
+   "828 touches across the past two seasons incl. playoffs",
+   "extensive injury history",
+   "only 6.2% of peak RB seasons since 2016 came at age 29+"
+  ],
+  "boom_factors": [
+   "Eagles offense and workhorse role"
+  ],
+  "camp_status": "healthy",
+  "notes": "Age/mileage bust cases from RotoBaller and PhillyVoice/RotoBaller aging-workhorse articles."
+ },
+ {
+  "name": "De'Von Achane",
+  "pos": "RB",
+  "team": "MIA",
+  "age": 24,
+  "injury_risk_pct": null,
+  "injury_risk_label": "High (SI: 7+ injuries over 4 seasons)",
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "Yahoo (5 RB busts)",
+   "RotoBaller (Thunder Dan overvalued)",
+   "SI (4 high injury-risk RBs)",
+   "Fantasy Six Pack Hour (red flags)"
+  ],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "7+ injuries in 4 seasons",
+   "305 touches in 2025",
+   "completely new offensive scheme in Miami (McDaniel gone)",
+   "weak offensive line",
+   "defensive focal point after Hill/Waddle departures"
+  ],
+  "boom_factors": [
+   "elite explosiveness; pass-game usage"
+  ],
+  "camp_status": "healthy",
+  "notes": "Four bust/injury citations; SI stresses the injury count."
+ },
+ {
+  "name": "Travis Etienne Jr.",
+  "pos": "RB",
+  "team": null,
+  "age": 27,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "Yahoo (5 RB busts)",
+   "RotoBaller (Matt Donnelly overvalued)"
+  ],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "new team after 300-touch league-winning 2025 in Jacksonville under Coen",
+   "unlikely to replicate Jaguars usage"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "Sources say he 'may not replicate the success he had in Jacksonville last year' - new team in 2026 (team not confirmed in excerpts)."
+ },
+ {
+  "name": "Kenneth Walker III",
+  "pos": "RB",
+  "team": "SEA",
+  "age": 25,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Moderate (injury history)",
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "RotoWire (overrated RBs: 25th-percentile success rate)",
+   "CBS SportsLine model (avoid)"
+  ],
+  "boom_mentions": [
+   "PFF (early-round league winner)",
+   "Fantasy Points (league-winners headliner)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "boom-or-bust rushing profile (25th pct success rate)",
+   "new OC Brian Fleury (scheme continuity expected)",
+   "injury history"
+  ],
+  "boom_factors": [
+   "explosive-play ceiling; lead role in Seattle"
+  ],
+  "camp_status": "healthy",
+  "notes": "Genuinely polarizing: PFF/Fantasy Points league winner vs RotoWire/SportsLine fade."
+ },
+ {
+  "name": "Bhayshul Tuten",
+  "pos": "RB",
+  "team": "JAX",
+  "age": 24,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "RotoWire (overrated RBs)"
+  ],
+  "boom_mentions": [
+   "PFF (RB league winners)",
+   "Bleacher Report (5 league winners: 'slam-dunk' at RB23/ADP 56)",
+   "ESPN/Michael Florio (league winner)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "price already RB23 (ADP 56) on 93 career touches",
+   "unproven full-season volume"
+  ],
+  "boom_factors": [
+   "7 TDs on 93 touches as rookie",
+   "31% missed-tackle-forced rate (2nd among RBs)",
+   "top-2 in yards-after-contact %, 7th-best rush success rate",
+   "Liam Coen system produced 300-touch Etienne (2025) and Bucky Irving (2024)"
+  ],
+  "camp_status": "healthy",
+  "notes": "Three league-winner calls vs one RotoWire fade."
+ },
+ {
+  "name": "Breece Hall",
+  "pos": "RB",
+  "team": "NYJ",
+  "age": 25,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "Yahoo (4 busts)",
+   "RotoWire (overrated RBs)"
+  ],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "Jets projected last in NFL by Vegas",
+   "RB15 price",
+   "crowded/committee usage history"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "Yahoo and RotoWire both fade at RB15 due to team environment."
+ },
+ {
+  "name": "Kyren Williams",
+  "pos": "RB",
+  "team": "LAR",
+  "age": 26,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "FantasyPros (24 players experts avoid at ADP)"
+  ],
+  "boom_mentions": [
+   "PFF (early-round RB league winner)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "PPR PPG has declined three straight years: 21.4 -> 17.4 -> 15.7",
+   "Stafford age-38 offense regression"
+  ],
+  "boom_factors": [
+   "workhorse role in high-scoring Rams offense"
+  ],
+  "camp_status": "healthy",
+  "notes": "Efficiency decline vs volume security."
+ },
+ {
+  "name": "TreVeyon Henderson",
+  "pos": "RB",
+  "team": "NE",
+  "age": 23,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "RotoWire (overrated RBs)"
+  ],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "crowded snap count / coaching philosophy per RotoWire"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "RotoWire says his price ignores a crowded backfield."
+ },
+ {
+  "name": "Jonathon Brooks",
+  "pos": "RB",
+  "team": "CAR",
+  "age": 23,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Moderate (ACL history; 'finally healthy')",
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "ESPN/Karabell (Do Not Draft - volume doubt)"
+  ],
+  "boom_mentions": [
+   "PFF (RB breakouts)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "committee with Chuba Hubbard",
+   "doubt Panthers give him major volume",
+   "injury history (multiple ACL)"
+  ],
+  "boom_factors": [
+   "clear path to Carolina lead role if healthy"
+  ],
+  "camp_status": "healthy",
+  "notes": "PFF breakout vs Karabell do-not-draft."
+ },
+ {
+  "name": "Chuba Hubbard",
+  "pos": "RB",
+  "team": "CAR",
+  "age": 27,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "nebulous committee with Jonathon Brooks (SI/RotoBaller backfields to avoid)"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "Committee flagged by SI and RotoBaller."
+ },
+ {
+  "name": "RJ Harvey",
+  "pos": "RB",
+  "team": "DEN",
+  "age": 25,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "CBS/Dave Richard (11 to avoid: Dobbins + rookie Jonah Coleman; Payton committee)",
+   "SI/RotoBaller (committee backfields to avoid)"
+  ],
+  "boom_mentions": [],
+  "sleeper_mentions": [
+   "FTN (undervalued: RB20 finish in 2025 but early-30s RB ADP, Rd 5-6)"
+  ],
+  "risk_factors": [
+   "Sean Payton three-way committee (Dobbins, Harvey, Coleman)"
+  ],
+  "boom_factors": [
+   "finished RB20 in 2025 with strong late-season production",
+   "Waddle trade upgrades offense"
+  ],
+  "camp_status": "healthy",
+  "notes": "CBS excerpt name garbled as 'Jaylen Harvey'; context (Broncos, Dobbins, Coleman) identifies RJ Harvey."
+ },
+ {
+  "name": "J.K. Dobbins",
+  "pos": "RB",
+  "team": "DEN",
+  "age": 27,
+  "injury_risk_pct": null,
+  "injury_risk_label": "High (extensive injury history)",
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "Broncos three-way committee",
+   "long injury history"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "Committee flagged by SI/RotoBaller."
+ },
+ {
+  "name": "Jonah Coleman",
+  "pos": "RB",
+  "team": "DEN",
+  "age": null,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "rookie in a Payton committee"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "Rookie piece of Denver committee (CBS/SI)."
+ },
+ {
+  "name": "James Conner",
+  "pos": "RB",
+  "team": "ARI",
+  "age": 31,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Moderate-High (age/injury history)",
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "age 31",
+   "committee with rookie Jeremiyah Love and Tyler Allgeier",
+   "Cardinals rebuilding / HC fired"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "Part of Arizona committee flagged by SI/RotoBaller."
+ },
+ {
+  "name": "Tyler Allgeier",
+  "pos": "RB",
+  "team": "ARI",
+  "age": 26,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "Arizona committee with Love/Conner"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "Free-agent signing in the Cardinals committee."
+ },
+ {
+  "name": "David Montgomery",
+  "pos": "RB",
+  "team": "HOU",
+  "age": 29,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "CBS SportsLine model (bust)"
+  ],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "age 29",
+   "new team; less explosive offense than Detroit",
+   "expected snap split with Woody Marks (900+ scrimmage yds as rookie)",
+   "model tiers him with Rd 8-10 backs"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "SportsLine model puts him in the same tier as Jaylen Warren/Kenneth Gainwell despite Rd 4-5 ADP."
+ },
+ {
+  "name": "Woody Marks",
+  "pos": "RB",
+  "team": "HOU",
+  "age": null,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "committee with David Montgomery"
+  ],
+  "boom_factors": [
+   "900+ scrimmage yards as a rookie"
+  ],
+  "camp_status": "healthy",
+  "notes": "Committee partner cited by CBS SportsLine."
+ },
+ {
+  "name": "James Cook",
+  "pos": "RB",
+  "team": "BUF",
+  "age": 26,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "CBS SportsLine model (bust)"
+  ],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "new OC Joe Brady shifting to a more aggressive passing attack (ESPN/Florio)"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "SportsLine model bust; Florio predicts a pass-heavier Bills offense."
+ },
+ {
+  "name": "Josh Jacobs",
+  "pos": "RB",
+  "team": "GB",
+  "age": 28,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Suspension risk (Commissioner's Exempt List)",
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "RotoBaller (aging workhorse outlooks)"
+  ],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "placed on Commissioner's Exempt List after battery/criminal damage charges; suspension likely",
+   "age 28 with heavy workload"
+  ],
+  "boom_factors": [],
+  "camp_status": "Commissioner's Exempt List - Week 1 availability in doubt",
+  "notes": "RotoBaller: 'very likely to face a suspension' once legal process concludes."
+ },
+ {
+  "name": "Jonathan Taylor",
+  "pos": "RB",
+  "team": "IND",
+  "age": 27,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "4for4 (regression candidates)",
+   "Fantasy Six Pack (TD regression)",
+   "Yahoo (regression candidates)"
+  ],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "18 TDs / 1,585 rush yds / 20.0 half-PPR PPG - regression expected",
+   "QB Daniel Jones 8 months removed from Achilles tear"
+  ],
+  "boom_factors": [
+   "workhorse volume"
+  ],
+  "camp_status": "healthy",
+  "notes": "Consensus negative-TD-regression candidate."
+ },
+ {
+  "name": "Chase Brown",
+  "pos": "RB",
+  "team": "CIN",
+  "age": 26,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "PFF (early-round RB league winner)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [],
+  "boom_factors": [
+   "three-down role in Bengals offense"
+  ],
+  "camp_status": "healthy",
+  "notes": "PFF league-winner headliner."
+ },
+ {
+  "name": "Zach Charbonnet",
+  "pos": "RB",
+  "team": "SEA",
+  "age": 25,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Out (unavailable for opening four games)",
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "unavailable for the first four games of 2026"
+  ],
+  "boom_factors": [],
+  "camp_status": "out first 4 games",
+  "notes": "Listed with Parsons/Branch/Joseph/Ekwonu/Moton as unavailable for the opening four games (Yahoo injury tracker)."
+ },
+ {
+  "name": "Ashton Jeanty",
+  "pos": "RB",
+  "team": "LV",
+  "age": 22,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Injured (ADP falling)",
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "dealing with an injury that has caused his ADP to plummet (SI)"
+  ],
+  "boom_factors": [],
+  "camp_status": "injured - status unclear",
+  "notes": "SI: 'dealing with an injury that has led to a plummet in ADP projections.'"
+ },
+ {
+  "name": "Alvin Kamara",
+  "pos": "RB",
+  "team": "NO",
+  "age": 31,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "age 31; SI says he 'fell victim to Father Time' in 2025"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "Aging-RB cohort (SI)."
+ },
+ {
+  "name": "Jahmyr Gibbs",
+  "pos": "RB",
+  "team": "DET",
+  "age": 24,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Low",
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [],
+  "boom_factors": [
+   "consensus No. 1 overall PPR pick",
+   "new contract - no holdout"
+  ],
+  "camp_status": "healthy",
+  "notes": "Consensus 1.01; contract resolved."
+ },
+ {
+  "name": "Bijan Robinson",
+  "pos": "RB",
+  "team": "ATL",
+  "age": 24,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Low",
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [],
+  "boom_factors": [
+   "consensus top-2 pick",
+   "new contract - no holdout"
+  ],
+  "camp_status": "healthy",
+  "notes": "Contract resolved; consensus top tier."
+ },
+ {
+  "name": "Kyle Monangai",
+  "pos": "RB",
+  "team": "CHI",
+  "age": null,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "SI (breakout candidate list co-headliner)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "SI lists Dart and Monangai atop its 2026 breakout list."
+ },
+ {
+  "name": "D'Andre Swift",
+  "pos": "RB",
+  "team": "CHI",
+  "age": 27,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "CBS SportsLine (ranked above Kenneth Walker)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "Model favors him over Walker."
+ },
+ {
+  "name": "Keaton Mitchell",
+  "pos": "RB",
+  "team": "LAC",
+  "age": 24,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "PFF (later-round RB target)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "backup to Omarion Hampton"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "Rotoworld: 'addition of Keaton Mitchell' to Hampton's backfield; team inferred from that context."
+ },
+ {
+  "name": "Jordan Mason",
+  "pos": "RB",
+  "team": null,
+  "age": 27,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "PFF (later-round RB target)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "PFF late-round RB value; 2026 team not confirmed in excerpt."
+ },
+ {
+  "name": "Tyjae Spears",
+  "pos": "RB",
+  "team": "TEN",
+  "age": 25,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "PFF (later-round RB target)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "PFF late-round RB value."
+ },
+ {
+  "name": "Chris Rodriguez Jr.",
+  "pos": "RB",
+  "team": "WAS",
+  "age": null,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [],
+  "sleeper_mentions": [
+   "FTN (RB sleeper)"
+  ],
+  "risk_factors": [],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "FTN sleeper ADP piece."
+ },
+ {
+  "name": "Malik Davis",
+  "pos": "RB",
+  "team": null,
+  "age": null,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [],
+  "sleeper_mentions": [
+   "FTN (RB sleeper)"
+  ],
+  "risk_factors": [],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "FTN sleeper ADP piece."
+ },
+ {
+  "name": "Rico Dowdle",
+  "pos": "RB",
+  "team": "PIT",
+  "age": 28,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "new team (left Carolina for Pittsburgh); shares with Jaylen Warren"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "Move noted in SI committee article."
+ },
+ {
+  "name": "Jaylen Warren",
+  "pos": "RB",
+  "team": "PIT",
+  "age": 27,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "Dowdle added to backfield"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "Named as a later-round tier comp by SportsLine."
+ },
+ {
+  "name": "Kenneth Gainwell",
+  "pos": "RB",
+  "team": "TB",
+  "age": 27,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "committee/handcuff role"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "Signed by TB; threat to Irving (CBS Richard)."
+ },
+ {
+  "name": "Sean Tucker",
+  "pos": "RB",
+  "team": "TB",
+  "age": null,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "committee"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "Retained by TB; cited as threat to Irving's role."
+ },
+ {
+  "name": "Malik Nabers",
+  "pos": "WR",
+  "team": "NYG",
+  "age": 23,
+  "injury_risk_pct": null,
+  "injury_risk_label": "High (returning from torn ACL + spring follow-up procedure)",
+  "games_missed_last3": 15,
+  "bust_mentions": [
+   "FantasyPros (18 busts: ADP 29 / WR12 too rich off injury)",
+   "ESPN/Karabell (Do Not Draft - Giants trio)"
+  ],
+  "boom_mentions": [
+   "NFL.com (top-10 league winners)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "torn right ACL Week 4 2025 plus spring follow-up procedure",
+   "only 18 snaps with Dart/Skattebo together in 2025",
+   "possible slow start"
+  ],
+  "boom_factors": [
+   "205 targets in first 19 games (NFL record pace)",
+   "WR6 as a rookie",
+   "elite target share with ascending QB Dart"
+  ],
+  "camp_status": "returning from ACL; participated in full-speed team drills; on track for Week 1 vs DAL (avoided PUP)",
+  "notes": "games_missed_last3 covers 2024-25 (2 + 13). Price WR12-WR15 depending on source."
+ },
+ {
+  "name": "Rashee Rice",
+  "pos": "WR",
+  "team": "KC",
+  "age": 26,
+  "injury_risk_pct": null,
+  "injury_risk_label": "High (12 games played over past two seasons)",
+  "games_missed_last3": 23,
+  "bust_mentions": [
+   "FantasyPros (18 busts)",
+   "RotoWire (6 busts)"
+  ],
+  "boom_mentions": [
+   "Yahoo/BR note: could surge as KC's top receiver"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "played only 12 games across 2024-25 (knee, 6-game suspension, other injuries)",
+   "off-field history",
+   "separation concerns",
+   "Chiefs offense decline; fewer red-zone chances"
+  ],
+  "boom_factors": [
+   "target-hog role when healthy"
+  ],
+  "camp_status": "healthy (no reported camp injury)",
+  "notes": "games_missed_last3 estimated from 'played just 12 games over the past two seasons' (22) + 1 in 2023."
+ },
+ {
+  "name": "Garrett Wilson",
+  "pos": "WR",
+  "team": "NYJ",
+  "age": 26,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "Yahoo (4 busts)",
+   "Yahoo (10 busts)",
+   "Bleacher Report (busts to avoid)",
+   "SI (All-Bust Team - excerpt name garbled)"
+  ],
+  "boom_mentions": [
+   "Fantasy Points (value later in drafts)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "lackluster Jets QB play",
+   "more target competition in 2026",
+   "new coaching staff",
+   "WR13 price; SI projects ~WR38"
+  ],
+  "boom_factors": [
+   "target-share monster talent"
+  ],
+  "camp_status": "healthy",
+  "notes": "SI excerpt listed 'Gabriel Wilson ... new coaching staff ... projected WR38' - almost certainly Garrett Wilson."
+ },
+ {
+  "name": "Davante Adams",
+  "pos": "WR",
+  "team": "LAR",
+  "age": 33,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Moderate (age; 2025 injuries)",
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "FantasyPros (8 busts: TD regression 9 -> 8.4, WR25 vs WR23 ADP)",
+   "CBS/Dave Richard (initial bust list; later dropped after ADP fell)",
+   "SI (may struggle to repeat)"
+  ],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "age-34 season per CBS",
+   "injuries last year",
+   "TD regression",
+   "Stafford age 38"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "Multiple regression citations; CBS ADP 60.8."
+ },
+ {
+  "name": "Christian Watson",
+  "pos": "WR",
+  "team": "GB",
+  "age": 27,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Moderate (injury history)",
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "FantasyPros (boom-or-bust: single-digit points in half his games)"
+  ],
+  "boom_mentions": [
+   "FantasyPros (boom-or-bust upside)",
+   "ESPN/Michael Florio (league winner; top-10 WR ceiling)",
+   "Fantasy Points (league winner)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "extreme weekly volatility: single digits in ~50% of games",
+   "injury history"
+  ],
+  "boom_factors": [
+   "131 targets vacated by Doubs and Wicks",
+   "2.41 fantasy pts/target (2nd), 2.65 YPRR (4th), 0.121 first downs/route (10th)",
+   "18.3+ points in 40% of games despite limited targets",
+   "faster-paced, more pass-happy Packers offense"
+  ],
+  "camp_status": "healthy",
+  "notes": "Source excerpts garbled the name ('Allen Lazard'/'Ben Watson'/'Allen Lazard Watson'); Packers context + 'Watson' identify Christian Watson."
+ },
+ {
+  "name": "Zay Flowers",
+  "pos": "WR",
+  "team": "BAL",
+  "age": 26,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "CBS/Dave Richard (initial busts list; removed after ADP fell)"
+  ],
+  "boom_mentions": [
+   "4for4 (positive TD regression: 5 TDs on 1,200+ yds vs cohort avg 9.6)"
+  ],
+  "sleeper_mentions": [
+   "FTN (beat WR20 Sleeper ADP; 2.7 YPRR; high-end WR1 if TDs normalize)"
+  ],
+  "risk_factors": [
+   "new Ravens coaching staff (OC Declan Doyle)",
+   "TD-light profile"
+  ],
+  "boom_factors": [
+   "2.7 yards per route run",
+   "positive TD regression"
+  ],
+  "camp_status": "healthy",
+  "notes": "Excerpt names ('Quentin Flowers','Stefon Flowers') map to Zay Flowers via 1,200-yd/5-TD context."
+ },
+ {
+  "name": "Jaxon Smith-Njigba",
+  "pos": "WR",
+  "team": "SEA",
+  "age": 23,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Low",
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "4for4 (regression candidates)",
+   "PFN (regression candidates)"
+  ],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "119/163 for league-high 1,793 yds and 10 TD - regression expected",
+   "new OC Brian Fleury (similar scheme)"
+  ],
+  "boom_factors": [
+   "consensus top-5 overall pick; elite target share"
+  ],
+  "camp_status": "healthy",
+  "notes": "Regression flag only; still consensus first-round pick."
+ },
+ {
+  "name": "Luther Burden III",
+  "pos": "WR",
+  "team": "CHI",
+  "age": 22,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Low-Moderate (groin)",
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "PlayerProfiler (10 league winners)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [],
+  "boom_factors": [
+   "overall WR1 in fantasy championship week (8-138-1, 27.8 pts)",
+   "year-2 breakout profile"
+  ],
+  "camp_status": "groin injury healing well; Week 1 status intact",
+  "notes": "Camp groin issue appears minor."
+ },
+ {
+  "name": "Mike Evans",
+  "pos": "WR",
+  "team": "SF",
+  "age": 33,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Moderate (age; being managed)",
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "SI (age-33 concerns)",
+   "SI/Yahoo (busts to avoid on Yahoo platform)"
+  ],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "age 33",
+   "new team (49ers) and QB",
+   "managed carefully in camp"
+  ],
+  "boom_factors": [],
+  "camp_status": "expected back for start of season; 49ers being 'smart' with him",
+  "notes": "Moved from TB to SF; Shanahan managing his workload."
+ },
+ {
+  "name": "Emeka Egbuka",
+  "pos": "WR",
+  "team": "TB",
+  "age": 23,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "Yahoo roundtable (league-winner potential as Mayfield's top target)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [],
+  "boom_factors": [
+   "Mike Evans departed to SF - heavy target share available"
+  ],
+  "camp_status": "healthy",
+  "notes": "Year-2 target-share riser."
+ },
+ {
+  "name": "Jaylen Waddle",
+  "pos": "WR",
+  "team": "DEN",
+  "age": 27,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "Yahoo roundtable (most exciting new-team players)",
+   "CBS/Eisenberg (Round 4 value; ADP 51.6)"
+  ],
+  "sleeper_mentions": [
+   "FTN (later WR2 ADP; expected to outproduce Sutton)"
+  ],
+  "risk_factors": [
+   "new team/QB (Bo Nix) and Payton scheme"
+  ],
+  "boom_factors": [
+   "Broncos paid a first-round pick to acquire him"
+  ],
+  "camp_status": "healthy",
+  "notes": "Trade to Denver widely viewed as positive."
+ },
+ {
+  "name": "Courtland Sutton",
+  "pos": "WR",
+  "team": "DEN",
+  "age": 30,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "age 30",
+   "Waddle expected to out-target him (FTN)"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "Target-share loser from the Waddle trade."
+ },
+ {
+  "name": "Josh Downs",
+  "pos": "WR",
+  "team": "IND",
+  "age": 25,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [],
+  "sleeper_mentions": [
+   "FTN (volume WR1 in PPR after Pittman left for PIT)"
+  ],
+  "risk_factors": [
+   "QB Daniel Jones coming off Achilles"
+  ],
+  "boom_factors": [
+   "highly targeted; weekly PPR floor"
+  ],
+  "camp_status": "healthy",
+  "notes": "Excerpt garbled as 'Parris Campbell (Downs)'; context is Josh Downs."
+ },
+ {
+  "name": "Michael Pittman Jr.",
+  "pos": "WR",
+  "team": "PIT",
+  "age": 28,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "new team / new QB"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "Departed IND for PIT."
+ },
+ {
+  "name": "Nico Collins",
+  "pos": "WR",
+  "team": "HOU",
+  "age": 27,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Moderate (injury history)",
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "Bleacher Report (polarizing: buy - career-year expectation after Jayden Higgins ACL)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "some analysts project outside top-12 (BR)",
+   "prior soft-tissue injuries"
+  ],
+  "boom_factors": [
+   "Jayden Higgins out for season with torn ACL - target consolidation"
+  ],
+  "camp_status": "healthy",
+  "notes": "BR buy/sell polarizing player."
+ },
+ {
+  "name": "Jayden Higgins",
+  "pos": "WR",
+  "team": "HOU",
+  "age": null,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Out for season (torn ACL)",
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "torn ACL - ruled out for 2026"
+  ],
+  "boom_factors": [],
+  "camp_status": "out for season",
+  "notes": "Do not draft."
+ },
+ {
+  "name": "Brian Thomas Jr.",
+  "pos": "WR",
+  "team": "JAX",
+  "age": 24,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "RotoWire (overrated WR/TE)"
+  ],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "Jaguars staff uses him as outside deep threat rather than full route tree - capped target floor"
+  ],
+  "boom_factors": [
+   "big-play ceiling"
+  ],
+  "camp_status": "healthy",
+  "notes": "RotoWire says usage design caps his weekly target count."
+ },
+ {
+  "name": "Carnell Tate",
+  "pos": "WR",
+  "team": "TEN",
+  "age": null,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "RotoWire/Yahoo (overvalued: ADP with Godwin/BTJ/Metcalf who have established QBs)"
+  ],
+  "boom_mentions": [],
+  "sleeper_mentions": [
+   "SI (sleeper: pro-ready route runner, Titans go-to target)"
+  ],
+  "risk_factors": [
+   "rookie; year-1 consistency",
+   "Titans QB/offense context"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "Rookie WR with split opinions."
+ },
+ {
+  "name": "Puka Nacua",
+  "pos": "WR",
+  "team": "LAR",
+  "age": 25,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Suspension risk (offseason off-field incidents)",
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "possible NFL suspension after offseason incidents and rehab stay (RotoBaller/Yahoo)",
+   "contract-year but explicitly no holdout",
+   "Stafford age 38"
+  ],
+  "boom_factors": [
+   "consensus top-3 overall pick"
+  ],
+  "camp_status": "healthy; no holdout",
+  "notes": "Only notable off-field/suspension cloud among consensus first-rounders."
+ },
+ {
+  "name": "Rashod Bateman",
+  "pos": "WR",
+  "team": "BAL",
+  "age": 26,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Suspension risk",
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "arrested in Georgia; accused of family violence; could face suspension"
+  ],
+  "boom_factors": [],
+  "camp_status": "legal situation pending",
+  "notes": "RotoBaller suspension watch."
+ },
+ {
+  "name": "Marvin Harrison Jr.",
+  "pos": "WR",
+  "team": "ARI",
+  "age": 24,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "Bleacher Report (biggest boom-or-bust)"
+  ],
+  "boom_mentions": [
+   "Bleacher Report (boom side)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "only 1,493 yds and 12 TD across two seasons",
+   "Cardinals fired HC; QB situation in flux"
+  ],
+  "boom_factors": [
+   "elite draft pedigree"
+  ],
+  "camp_status": "healthy",
+  "notes": "BR boom/bust list."
+ },
+ {
+  "name": "George Pickens",
+  "pos": "WR",
+  "team": "DAL",
+  "age": 25,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "RotoBaller (Matt Donnelly overvalued)"
+  ],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "RotoBaller overvalued list."
+ },
+ {
+  "name": "Justin Jefferson",
+  "pos": "WR",
+  "team": "MIN",
+  "age": 27,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Low",
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "SI (positive regression candidates)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [],
+  "boom_factors": [
+   "TD/efficiency rebound expected"
+  ],
+  "camp_status": "healthy",
+  "notes": "SI positive-regression piece."
+ },
+ {
+  "name": "Josh Palmer",
+  "pos": "WR",
+  "team": "BUF",
+  "age": 27,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "SI (All-Bust Team: 30% target share unsustainable)"
+  ],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "one-dimensional; cannot sustain 30% target share"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "SI All-Bust."
+ },
+ {
+  "name": "Jalen Coker",
+  "pos": "WR",
+  "team": "CAR",
+  "age": null,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "FantasyPros (8 busts to avoid)"
+  ],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "WR12 finish on only 12.9 PPR PPG",
+   "6.6 or fewer points in 41.2% of games",
+   "6th-round ADP"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "TD-driven 2025; FantasyPros bust."
+ },
+ {
+  "name": "Amon-Ra St. Brown",
+  "pos": "WR",
+  "team": "DET",
+  "age": 26,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Low",
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "FantasyPros (league winners)",
+   "PlayerProfiler (10 league winners)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [],
+  "boom_factors": [
+   "WR4 in PPG each of past three seasons; WR3 in total points 2023-25",
+   "elite consistency"
+  ],
+  "camp_status": "healthy",
+  "notes": "Safest league-winner profile cited."
+ },
+ {
+  "name": "Tee Higgins",
+  "pos": "WR",
+  "team": "CIN",
+  "age": 27,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Moderate (annual soft-tissue history)",
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "Fantasy Points (league winners: WR4 / 15 PPG when Burrow-Chase-Higgins all play)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "injury history",
+   "Chase target dominance"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "Draft Sharks' 13-player injury-risk article excerpt mentions a 'Higgins' (could be Tee or Jayden)."
+ },
+ {
+  "name": "Chris Godwin",
+  "pos": "WR",
+  "team": "TB",
+  "age": 30,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Moderate (2024 ankle; age 30)",
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "PlayerProfiler (woefully mispriced WR1)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "age 30",
+   "injury history"
+  ],
+  "boom_factors": [
+   "strong late-2025 metrics; Evans gone"
+  ],
+  "camp_status": "healthy",
+  "notes": "PlayerProfiler league-winner value."
+ },
+ {
+  "name": "DeVonta Smith",
+  "pos": "WR",
+  "team": "PHI",
+  "age": 27,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "PFF (WR league winners)",
+   "Fantasy Points (league winners headliner)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [],
+  "boom_factors": [
+   "expanded opportunity in Philadelphia in 2026"
+  ],
+  "camp_status": "healthy",
+  "notes": "Two league-winner citations."
+ },
+ {
+  "name": "Parker Washington",
+  "pos": "WR",
+  "team": "JAX",
+  "age": 24,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "PFF (WR breakouts: 85.1 receiving grade in 2025)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "PFF breakout."
+ },
+ {
+  "name": "Xavier Worthy",
+  "pos": "WR",
+  "team": "KC",
+  "age": 23,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "PFF (late-round WR with path to production)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "Rice health/role"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "PFF late-round option."
+ },
+ {
+  "name": "Rashid Shaheed",
+  "pos": "WR",
+  "team": "NO",
+  "age": 28,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "PFF (late-round WR)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "PFF late-round option."
+ },
+ {
+  "name": "KC Concepcion",
+  "pos": "WR",
+  "team": null,
+  "age": null,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "PFF (late-round WR)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "rookie"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "PFF late-round rookie option; team not in excerpt."
+ },
+ {
+  "name": "Malik Washington",
+  "pos": "WR",
+  "team": "MIA",
+  "age": 25,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "PFF (late-round WR)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [],
+  "boom_factors": [
+   "Hill and Waddle departed Miami"
+  ],
+  "camp_status": "healthy",
+  "notes": "PFF late-round option."
+ },
+ {
+  "name": "Quentin Johnston",
+  "pos": "WR",
+  "team": "LAC",
+  "age": 25,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "DynastyNerds (OC-change beneficiary: top target, more targets, lower aDOT)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "New-OC beneficiary."
+ },
+ {
+  "name": "Ryan Flournoy",
+  "pos": "WR",
+  "team": "DAL",
+  "age": null,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [],
+  "sleeper_mentions": [
+   "FTN (WR sleeper)"
+  ],
+  "risk_factors": [],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "FTN sleeper."
+ },
+ {
+  "name": "Tre' Harris",
+  "pos": "WR",
+  "team": "LAC",
+  "age": null,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [],
+  "sleeper_mentions": [
+   "FTN (WR sleeper)"
+  ],
+  "risk_factors": [],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "FTN sleeper."
+ },
+ {
+  "name": "Chris Olave",
+  "pos": "WR",
+  "team": "NO",
+  "age": 26,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Moderate-High (concussion history)",
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "Fantasy Six Pack Hour (red flags)"
+  ],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "concussion history",
+   "Saints offense"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "Fantasy Six Pack bust pod."
+ },
+ {
+  "name": "Ja'Marr Chase",
+  "pos": "WR",
+  "team": "CIN",
+  "age": 26,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Low",
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [],
+  "boom_factors": [
+   "consensus top-4 pick"
+  ],
+  "camp_status": "healthy",
+  "notes": "No bust signals found."
+ },
+ {
+  "name": "Deebo Samuel",
+  "pos": "WR",
+  "team": "WAS",
+  "age": 30,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Flagged (Draft Sharks 13 injury-risk list - excerpt only)",
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "age 30",
+   "Draft Sharks injury-risk article mentions 'Samuel'"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "Identification from a partial excerpt; treat as low-confidence."
+ },
+ {
+  "name": "Terry McLaurin",
+  "pos": "WR",
+  "team": "WAS",
+  "age": 30,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "age 30",
+   "disappointing 2025 (SportsLine model called it)"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "Post-hype/age profile; no 2026 list placement found."
+ },
+ {
+  "name": "Travis Kelce",
+  "pos": "TE",
+  "team": "KC",
+  "age": 36,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Low-Moderate (age)",
+  "games_missed_last3": 0,
+  "bust_mentions": [
+   "Yahoo (TE busts)",
+   "Yahoo (10 busts)",
+   "SI/Yahoo (busts on Yahoo platform)",
+   "Bleacher Report (polarizing - sell side)"
+  ],
+  "boom_mentions": [
+   "Bleacher Report (still 3rd in PPR among TEs in 2025)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "age-37 season; fourth straight year of declining weekly averages",
+   "76-851-5; lowest yds/game since 2015",
+   "lumpy: 34% of points in 3 games, 9.0 PPR in other 14",
+   "PFN ranks him TE11"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "Most-cited TE bust."
+ },
+ {
+  "name": "Mark Andrews",
+  "pos": "TE",
+  "team": "BAL",
+  "age": 31,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "Yahoo (TE busts)"
+  ],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "48-422-5 with career lows in YPC (8.8) and yds/target (6.0)",
+   "4.1 targets/game over two seasons",
+   "new coaching staff (Declan Doyle)"
+  ],
+  "boom_factors": [
+   "Isaiah Likely left for NYG - target room"
+  ],
+  "camp_status": "healthy",
+  "notes": "Yahoo TE bust."
+ },
+ {
+  "name": "Dalton Schultz",
+  "pos": "TE",
+  "team": "HOU",
+  "age": 30,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "Yahoo (10 busts)"
+  ],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "Yahoo bust list."
+ },
+ {
+  "name": "Dallas Goedert",
+  "pos": "TE",
+  "team": "PHI",
+  "age": 31,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Moderate (injury history)",
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "SI (All-Bust Team: regression)"
+  ],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "SI All-Bust."
+ },
+ {
+  "name": "Kyle Pitts",
+  "pos": "TE",
+  "team": "ATL",
+  "age": 25,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "RotoWire (overrated WR/TE: fade at a cost assuming the London target vacuum returns)"
+  ],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "RotoWire fade."
+ },
+ {
+  "name": "Harold Fannin Jr.",
+  "pos": "TE",
+  "team": "CLE",
+  "age": 22,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "Yahoo (4 busts)",
+   "Yahoo (10 busts)"
+  ],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "TE6 ADP (67) in a poor Browns offense"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "Two Yahoo bust citations."
+ },
+ {
+  "name": "Tyler Warren",
+  "pos": "TE",
+  "team": "IND",
+  "age": 24,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Low-Moderate (adductor strain)",
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "Fantasy Points (league winners: TE4, 188.5 pts as rookie; still undervalued)",
+   "Bleacher Report (boom-or-bust)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "adductor strain in camp",
+   "QB Daniel Jones 8 months off Achilles tear"
+  ],
+  "boom_factors": [],
+  "camp_status": "adductor strain; could return within a week; Week 1 not in serious jeopardy",
+  "notes": "BR excerpt garbled as 'Josh Warren'."
+ },
+ {
+  "name": "Tucker Kraft",
+  "pos": "TE",
+  "team": "GB",
+  "age": 25,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "PFF (TE league winners: top-3 upside)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [],
+  "boom_factors": [
+   "10.8 YAC/reception - highest by any TE in PFF's 20 years"
+  ],
+  "camp_status": "healthy",
+  "notes": "PFF top-3 upside."
+ },
+ {
+  "name": "Dalton Kincaid",
+  "pos": "TE",
+  "team": "BUF",
+  "age": 26,
+  "injury_risk_pct": null,
+  "injury_risk_label": "High (lingering PCL injury)",
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "PFF (TE breakouts)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "PCL injury management"
+  ],
+  "boom_factors": [
+   "2.12 YPRR over two seasons, 2nd only to Kittle",
+   "Joe Brady pass-heavier offense"
+  ],
+  "camp_status": "managing PCL",
+  "notes": "PFF breakout contingent on health."
+ },
+ {
+  "name": "Colston Loveland",
+  "pos": "TE",
+  "team": "CHI",
+  "age": 22,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "PFF (TE breakouts)",
+   "PFN (TE top-3 in rankings)",
+   "PlayerProfiler (massive-number potential)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "Three boom citations."
+ },
+ {
+  "name": "Greg Dulcich",
+  "pos": "TE",
+  "team": "MIA",
+  "age": 26,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "FantasyPros (league winners)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [],
+  "boom_factors": [
+   "5th in targets/route, 2nd in YPRR and YAC/rec among TEs",
+   "Hill and Waddle departed Miami - massive opportunity"
+  ],
+  "camp_status": "healthy",
+  "notes": "FantasyPros league-winner TE."
+ },
+ {
+  "name": "Brock Bowers",
+  "pos": "TE",
+  "team": "LV",
+  "age": 23,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Moderate ('if he stays healthy')",
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "FantasyPros (league winners: high-end WR1 numbers if healthy)",
+   "PlayerProfiler (massive numbers)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "health"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "Health caveat in FantasyPros piece."
+ },
+ {
+  "name": "George Kittle",
+  "pos": "TE",
+  "team": "SF",
+  "age": 32,
+  "injury_risk_pct": null,
+  "injury_risk_label": "High (torn Achilles Jan 2026; multiple 2025 injuries)",
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "Fantasy Points (value)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "age 32",
+   "torn Achilles in January; abbreviated 2025"
+  ],
+  "boom_factors": [],
+  "camp_status": "returning from Achilles",
+  "notes": "Risky TE per ESPN/BR cheat sheet."
+ },
+ {
+  "name": "Trey McBride",
+  "pos": "TE",
+  "team": "ARI",
+  "age": 26,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Low",
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "4for4/FantasyPros/SI (regression candidates)"
+  ],
+  "boom_mentions": [
+   "PlayerProfiler (massive numbers)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "record 126 catches, 1,239 yds, 11 TD - regression",
+   "Cardinals fired HC; QB flux"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "Regression flag on a record season."
+ },
+ {
+  "name": "Chig Okonkwo",
+  "pos": "TE",
+  "team": null,
+  "age": 27,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "PFF (late-round TE value)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "Team not confirmed in excerpt."
+ },
+ {
+  "name": "Brenton Strange",
+  "pos": "TE",
+  "team": "JAX",
+  "age": 25,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "PFF (late-round TE value)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "PFF late TE."
+ },
+ {
+  "name": "Terrance Ferguson",
+  "pos": "TE",
+  "team": "LAR",
+  "age": null,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "PFF (late-round TE value)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "PFF late TE."
+ },
+ {
+  "name": "Charlie Kolar",
+  "pos": "TE",
+  "team": "BAL",
+  "age": 27,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "PFF (late-round TE value)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "PFF late TE."
+ },
+ {
+  "name": "Isaiah Likely",
+  "pos": "TE",
+  "team": "NYG",
+  "age": 26,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "new team"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "Left BAL for NYG."
+ },
+ {
+  "name": "Josh Allen",
+  "pos": "QB",
+  "team": "BUF",
+  "age": 30,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Low",
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "Bleacher Report (busts: six-year low 215.8 pass yds/g, 25 TD passes)"
+  ],
+  "boom_mentions": [
+   "NFL.com (league winner #3)",
+   "ESPN/Michael Florio (bold: career highs in passing yds/TD under Joe Brady)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "rushing-dependent 2025 production",
+   "first QB off board (CBS ADP 25.4) - reach risk"
+  ],
+  "boom_factors": [
+   "new OC Joe Brady more aggressive passing attack"
+  ],
+  "camp_status": "healthy",
+  "notes": "Bust case is price/passing decline; boom case is scheme."
+ },
+ {
+  "name": "Lamar Jackson",
+  "pos": "QB",
+  "team": "BAL",
+  "age": 29,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Moderate (missed time 2025)",
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "Yahoo (10 busts)"
+  ],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "new coaching staff / OC Declan Doyle",
+   "CBS ADP 41.6"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "Yahoo bust list."
+ },
+ {
+  "name": "Jayden Daniels",
+  "pos": "QB",
+  "team": "WAS",
+  "age": 25,
+  "injury_risk_pct": null,
+  "injury_risk_label": "High (three injuries, 10 games missed in 2025)",
+  "games_missed_last3": 10,
+  "bust_mentions": [
+   "Yahoo (10 busts)",
+   "RotoWire",
+   "Rotoworld/Yahoo (busts framework)"
+  ],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "missed 10 games in 2025: elbow dislocation, hamstring strain, knee strain",
+   "YPC fell 6.0 -> 4.8; 19.3 PPG trending down",
+   "slight frame absorbing hits"
+  ],
+  "boom_factors": [
+   "top-5 QB ceiling"
+  ],
+  "camp_status": "healthy",
+  "notes": "Three bust citations; Yahoo prefers Hurts/Nix/Williams later."
+ },
+ {
+  "name": "Matthew Stafford",
+  "pos": "QB",
+  "team": "LAR",
+  "age": 38,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Moderate (age)",
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "SI (All-Bust Team)",
+   "4for4 (regression)",
+   "FantasyPros (TD regression QBs)",
+   "SI (regression candidates)"
+  ],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "age 38",
+   "league-high 7.71% TD rate expected to normalize (~6.82%)",
+   "46 TD MVP season"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "Consensus negative regression."
+ },
+ {
+  "name": "Patrick Mahomes",
+  "pos": "QB",
+  "team": "KC",
+  "age": 30,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Moderate (returning from injury)",
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "PFN (regression candidates)"
+  ],
+  "boom_mentions": [
+   "ESPN/Karabell (Do Draft - undervalued)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "injury recovery",
+   "Rice availability"
+  ],
+  "boom_factors": [],
+  "camp_status": "on track for Week 1 barring setbacks",
+  "notes": "Karabell value pick."
+ },
+ {
+  "name": "Drake Maye",
+  "pos": "QB",
+  "team": "NE",
+  "age": 24,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "CBS (potential league winner)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "CBS ADP 51.8 - QB reach risk (Richard)"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "Second QB off board."
+ },
+ {
+  "name": "Caleb Williams",
+  "pos": "QB",
+  "team": "CHI",
+  "age": 24,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "Bleacher Report (boom-or-bust: 8 weeks as QB15 or worse)"
+  ],
+  "boom_mentions": [
+   "Yahoo (value vs Daniels)",
+   "Bleacher Report (2 weeks as overall QB1)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "weekly volatility"
+  ],
+  "boom_factors": [
+   "Loveland/Burden/Moore weapons"
+  ],
+  "camp_status": "healthy",
+  "notes": "BR boom-or-bust."
+ },
+ {
+  "name": "Jalen Hurts",
+  "pos": "QB",
+  "team": "PHI",
+  "age": 28,
+  "injury_risk_pct": null,
+  "injury_risk_label": "Low",
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "PFF (early-round QB league winner)",
+   "Yahoo (better value than Daniels)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "PFF headliner."
+ },
+ {
+  "name": "Jordan Love",
+  "pos": "QB",
+  "team": "GB",
+  "age": 27,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "PFF (later-round QB upside)",
+   "SI (All-Breakout Team: NFL's 4th-rated offense, 25+ ppg)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [],
+  "boom_factors": [
+   "faster, pass-happier Packers offense"
+  ],
+  "camp_status": "healthy",
+  "notes": "Two boom citations."
+ },
+ {
+  "name": "Kyler Murray",
+  "pos": "QB",
+  "team": null,
+  "age": 29,
+  "injury_risk_pct": null,
+  "injury_risk_label": "High (played 5 games in 2025)",
+  "games_missed_last3": 20,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "PFF (later-round QB upside)"
+  ],
+  "sleeper_mentions": [
+   "FTN (QB18 ADP below his floor; never worse than QB12 PPG before 2025)"
+  ],
+  "risk_factors": [
+   "played only 5 games in 2025",
+   "Cardinals situation changed (HC fired); 2026 team not confirmed in excerpts"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "games_missed_last3 = 8 (2023) + 0 (2024) + 12 (2025)."
+ },
+ {
+  "name": "Malik Willis",
+  "pos": "QB",
+  "team": "MIA",
+  "age": 27,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "PFF (QB sleepers)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "first full-time starting job"
+  ],
+  "boom_factors": [
+   "led all QBs in scrambles per dropback past two seasons; rushing floor"
+  ],
+  "camp_status": "healthy",
+  "notes": "PFF sleeper."
+ },
+ {
+  "name": "Cam Ward",
+  "pos": "QB",
+  "team": "TEN",
+  "age": 24,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "SI (breakout: year-2 growth, improved offense)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "SI breakout."
+ },
+ {
+  "name": "Jaxson Dart",
+  "pos": "QB",
+  "team": "NYG",
+  "age": 23,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [
+   "ESPN/Karabell (Do Not Draft - Giants trio)",
+   "Roto Street Journal (overpriced)"
+  ],
+  "boom_mentions": [
+   "SI (breakout list headliner)",
+   "CBS SportsLine model (breakout, ADP ~110)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "bottom-5 WR corps and bottom-7 OL in 2025",
+   "availability of Nabers/Skattebo"
+  ],
+  "boom_factors": [
+   "QB8 in PPG (20.5) as starter; 9 rush TD (2nd to Allen); 20+ pts in 8 of 14 starts"
+  ],
+  "camp_status": "healthy",
+  "notes": "Split 2 bust / 2 boom."
+ },
+ {
+  "name": "Daniel Jones",
+  "pos": "QB",
+  "team": "IND",
+  "age": 29,
+  "injury_risk_pct": null,
+  "injury_risk_label": "High (torn Achilles ~8 months ago)",
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "8 months removed from Achilles tear",
+   "must repeat a career year"
+  ],
+  "boom_factors": [],
+  "camp_status": "cleared for training camp",
+  "notes": "Cited as the risk on Tyler Warren/Taylor/Downs."
+ },
+ {
+  "name": "Michael Penix Jr.",
+  "pos": "QB",
+  "team": "ATL",
+  "age": 26,
+  "injury_risk_pct": null,
+  "injury_risk_label": "High (knee)",
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "knee; HC Stefanski says he may not be ready right away"
+  ],
+  "boom_factors": [],
+  "camp_status": "uncertain for Week 1",
+  "notes": "Yahoo injury tracker."
+ },
+ {
+  "name": "Bo Nix",
+  "pos": "QB",
+  "team": "DEN",
+  "age": 26,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "Yahoo (value vs Daniels)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [],
+  "boom_factors": [
+   "Waddle acquired"
+  ],
+  "camp_status": "healthy",
+  "notes": "Named as a cheaper alternative to Daniels."
+ },
+ {
+  "name": "Trevor Lawrence",
+  "pos": "QB",
+  "team": "JAX",
+  "age": 26,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [
+   "Fantasy Points (value)"
+  ],
+  "sleeper_mentions": [],
+  "risk_factors": [],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "Fantasy Points value QB."
+ },
+ {
+  "name": "Baker Mayfield",
+  "pos": "QB",
+  "team": "TB",
+  "age": 31,
+  "injury_risk_pct": null,
+  "injury_risk_label": null,
+  "games_missed_last3": null,
+  "bust_mentions": [],
+  "boom_mentions": [],
+  "sleeper_mentions": [],
+  "risk_factors": [
+   "contract year (no holdout)",
+   "Evans departed"
+  ],
+  "boom_factors": [],
+  "camp_status": "healthy",
+  "notes": "Playing out deal."
+ }
+]

@@ -57,8 +57,13 @@ YOUTH = {  # position -> [(max age, bonus)]
     "TE": [(24, 1.0), (25, 0.8), (26, 0.5), (27, 0.25)],
     "QB": [(25, 0.8), (27, 0.5), (29, 0.2)],
 }
-INJ_LABEL = {"very high": 1.0, "high": 0.8, "elevated": 0.65, "medium": 0.5, "moderate": 0.5, "average": 0.4, "low": 0.2, "very low": 0.1}
-CAMP = {"healthy": 0.0, "minor": 0.5, "questionable": 0.6, "holdout": 0.8, "injured": 1.0, "pup": 1.0, "suspended": 1.0}
+# Free-text labels from the research are matched by keyword, first hit wins.
+INJ_LABEL = [("out for season", 1.0), ("out for year", 1.0), ("highest", 1.0), ("very high", 1.0), ("moderate-high", 0.7),
+             ("high", 0.8), ("low-moderate", 0.35), ("moderate", 0.5), ("elevated", 0.65), ("medium", 0.5), ("average", 0.4),
+             ("out", 0.9), ("suspension", 0.6), ("injured", 0.6), ("flagged", 0.55), ("very low", 0.1), ("low", 0.2)]
+CAMP = [("healthy", 0.0), ("no reported", 0.0), ("out for season", 1.0), ("out for year", 1.0), ("exempt", 1.0), ("suspended", 1.0),
+        ("pup", 1.0), ("ir,", 1.0), ("ir ", 1.0), ("out ", 1.0), ("holdout", 0.8), ("uncertain", 0.7), ("50/50", 0.6), ("questionable", 0.6),
+        ("sprain", 0.6), ("injured", 0.6), ("minor", 0.5), ("healing", 0.4), ("returning from", 0.4), ("rehab", 0.4), ("managed", 0.3)]
 SITUATION_WORDS = ["rookie", "new team", "new qb", "new oc", "new coach", "new offense", "committee", "timeshare", "contract", "holdout", "suspend", "trade"]
 
 
@@ -104,10 +109,23 @@ def camp_score(status):
     if not status:
         return 0.0
     s = status.lower()
-    for k, v in CAMP.items():
+    for k, v in CAMP:
         if k in s:
             return v
     return 0.3
+
+
+def label_score(label):
+    s = (label or "").lower()
+    for k, v in INJ_LABEL:
+        if k in s:
+            return v
+    return None
+
+
+def saturate(n, k=3.0):
+    """0..1, rising with n but never saturating outright: 1 -> .28, 3 -> .63, 5 -> .81, 10 -> .96"""
+    return 1.0 - math.exp(-n / k)
 
 
 def injury_norm(r):
@@ -117,8 +135,8 @@ def injury_norm(r):
     parts = []
     if pct is not None:
         parts.append(clamp(pct / 60.0))
-    elif lab:
-        parts.append(INJ_LABEL.get(lab, 0.4))
+    elif lab and label_score(lab) is not None:
+        parts.append(label_score(lab))
     if gm is not None:
         parts.append(clamp(gm / 18.0))
     return sum(parts) / len(parts) if parts else None
@@ -170,8 +188,8 @@ def main():
         bw = W["boom"]
         boom_parts = {
             "upside": bw["upside"] * clamp((comp - best) / scale),
-            "mentions": bw["mentions"] * clamp(boom_mentions / 3.0),
-            "factors": bw["factors"] * clamp(len(boom_factors) / 3.0),
+            "mentions": bw["mentions"] * saturate(boom_mentions),
+            "factors": bw["factors"] * saturate(len(boom_factors)),
             "youth": bw["youth"] * youth_bonus(pos, age),
             "value": bw["value"] * clamp((value or 0) / 10.0),
         }
@@ -184,8 +202,8 @@ def main():
         uw = W["bust"]
         bust_parts = {
             "downside": uw["downside"] * clamp((worst - comp) / scale),
-            "mentions": uw["mentions"] * clamp(bust_mentions / 3.0),
-            "factors": uw["factors"] * clamp(len(risk_factors) / 3.0),
+            "mentions": uw["mentions"] * saturate(bust_mentions),
+            "factors": uw["factors"] * saturate(len(risk_factors)),
             "age": uw["age"] * age_penalty(pos, age),
             "reach": uw["reach"] * clamp(-(value or 0) / 10.0),
             "injury": uw["injury"] * (inj or 0),
