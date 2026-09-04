@@ -1,0 +1,265 @@
+{
+  "intro": "Every number in this app is built from public rankings, ADP feeds and projections compiled on September 4, 2026, scored with methods borrowed from FantasyPros, ffanalytics, Boris Chen's tiers and Draft Sharks. Nothing is a gut call: the same inputs always produce the same scores, and each player's sheet lists the signals behind his numbers.",
+  "sections": [
+    {
+      "title": "Composite rank",
+      "paras": [
+        "Nineteen outlets contribute an overall PPR rank. Where an outlet published more than one list (three ESPN boards, two RotoWire, two Yahoo analysts) those are averaged first so no publisher counts twice. The FantasyPros Expert Consensus counts double because it already aggregates 100-plus experts. Platform default orders (Sleeper), value-model boards and July snapshots count half.",
+        "Best and worst are the most bullish and most bearish placements across every outlet plus the FantasyPros best/worst expert. Spread is the weighted standard deviation of outlet ranks: the size of the argument about a player."
+      ],
+      "formula": "composite = Σ(w_outlet · rank_outlet) / Σ w_outlet\nw = 2.0 FantasyPros ECR · 1.0 ESPN, Yahoo, RotoWire, RotoBaller, Draft Sharks, Flock, NBC\n    0.75 LineupExperts, FFToday, PrizePicks, Bleacher Report, ETR · 0.5 Sleeper, Subvertadown, BDGE, July lists"
+    },
+    {
+      "title": "Tiers",
+      "paras": [
+        "Within each position, a new tier starts when the composite has dropped, since the tier began, by more than the local cross-source spread (the median spread of the ten neighbouring players), or when a single gap exceeds three quarters of that. This is the ffanalytics tier rule applied to ranks; tiers widen deeper in the draft because experts disagree more there."
+      ],
+      "formula": "new tier if (comp_i − comp_tierStart) > T_i  or  (comp_i − comp_i−1) > 0.75·T_i\nT_i = max(3, median spread of players i−5 … i+5 at the position)"
+    },
+    {
+      "title": "ADP and value",
+      "paras": [
+        "ADP is a weighted mean of 22 feeds. Full-PPR redraft platforms (Sleeper, ESPN, Yahoo, Fantasy Football Calculator, the FantasyPros consensus) count fully; half-PPR best-ball (Underdog), TE-premium (FFPC) and older snapshots count half or less. ADP spread is the standard deviation across the ten platform-level feeds.",
+        "Value is ADP minus composite in picks: positive means the market lets him fall past where the experts rank him. The log-space score (jeisey's form) treats a rank-20 player with ADP 40 the same as a rank-80 player with ADP 160."
+      ],
+      "formula": "value = ADP − composite\nvalueScore = 50 + 50 · tanh( ln(ADP / composite) / ln 2 )"
+    },
+    {
+      "title": "Boom (0-100)",
+      "paras": [
+        "Boom is a within-position percentile, so 80 means more upside signal than 80 percent of players at his position. Inputs: how far the most bullish source sits above the composite (FantasyPros' upside disagreement), the ffanalytics ceiling-to-projection ratio, breakout and sleeper citations across 2026 articles (saturating so ten mentions beat three), situational boom factors from the context research, youth relative to the positional age curve, and positive ADP value."
+      ],
+      "formula": "raw = .25·pct(upside) + .15·pct(ceiling gap) + .25·sat(boom mentions) + .15·sat(boom factors)\n      + .10·youth + .10·clamp(value/10) + context adjustment\nboom = percentile of raw within position        sat(n) = 1 − e^(−n/3)"
+    },
+    {
+      "title": "Bust (0-100)",
+      "paras": [
+        "Bust is the directional downside, also as a within-position percentile. Inputs: how far the most bearish source sits below the composite, the ffanalytics floor gap, bust and avoid-at-ADP citations, structural risk factors (committee, new QB, workload), an age flag at the historical cliff (RB 27 and 29, WR 29 and 31, TE 30 and 32, QB 34 and 36), a reach penalty when ADP runs ahead of the composite, and injury history. Players on IR, PUP or the exempt list get a large hand adjustment."
+      ],
+      "formula": "raw = .15·pct(downside) + .10·pct(floor gap) + .25·sat(bust mentions) + .15·sat(risk factors)\n      + .10·ageFlag + .10·clamp(−value/10) + .15·injury + context adjustment\nbust = percentile of raw within position"
+    },
+    {
+      "title": "Risk / volatility (0-100)",
+      "paras": [
+        "Risk is symmetric uncertainty, following Isaac Petersen's ffanalytics measure: spread of expert ranks, spread of ADP across platforms and the ffanalytics projection uncertainty, plus injury signal (position base rate when nothing is known: RB 40, WR 35, TE 35, QB 25), camp status and situation changes. High risk with high boom and low bust is a target; high risk with high bust is a fade."
+      ],
+      "formula": "raw = .25·pct(rank spread) + .15·pct(ADP spread) + .15·uncertainty + .25·injury\n      + .10·camp + .10·sat(situation changes, 2) + context adjustment\nrisk = percentile of raw within position"
+    },
+    {
+      "title": "Projection and VBD",
+      "paras": [
+        "ESPN and CBS stat-line projections are converted to full-PPR points (1 per reception, 6 per TD, 0.1 per yard, 4 per passing TD, −2 per INT and fumble) and averaged. VBD is points over the 10-team replacement baseline: the 10th QB, 22nd RB, 28th WR and 10th TE by projection, the VOLS-plus-flex baseline from the methodology research. Use it to compare across positions at a pick; use composite to compare within one."
+      ],
+      "formula": "proj = mean(ESPN PPR, CBS PPR)\nVBD = proj − proj(baseline player at position)   baselines QB10 · RB22 · WR28 · TE10"
+    },
+    {
+      "title": "Chance he is there at your pick",
+      "paras": [
+        "A logistic curve around ADP whose width grows with ADP spread and with pick number, since later picks are noisier. The Draft tab uses your league size and slot; the defaults are 10 teams and slot 4 (picks 4, 17, 24, 37, 44, 57, 64, 77, 84, 97, 104, 117, 124, 137, 144, 157)."
+      ],
+      "formula": "P(available at pick N) = 1 / (1 + e^((N − ADP) / s))\ns = max(1.6, 0.55 · max(ADP spread, 0.15 · ADP))"
+    }
+  ],
+  "sourceNames": {
+    "fantasypros_ecr": "FantasyPros ECR",
+    "espn": "ESPN (3 boards)",
+    "yahoo": "Yahoo (Winks, Boone)",
+    "rotowire": "RotoWire",
+    "rotoballer": "RotoBaller",
+    "draftsharks": "Draft Sharks",
+    "flock": "Flock consensus",
+    "nbc_rotoworld": "NBC / Rotoworld",
+    "lineupexperts": "LineupExperts",
+    "fftoday": "FFToday (Krueger)",
+    "prizepicks": "PrizePicks (Hardy)",
+    "bleacher_report": "Bleacher Report",
+    "etr": "Establish The Run ($)",
+    "bdge": "BDGE top 50",
+    "subvertadown": "Subvertadown board",
+    "sleeper_rank": "Sleeper default",
+    "fantasylife_jul": "Fantasy Life (Jul 28)",
+    "fourfor4_jul": "4for4 (Jul 27)",
+    "cbs_aug3": "CBS (Aug 3)"
+  },
+  "sources": [
+    {
+      "key": "fantasypros_ecr",
+      "name": "FantasyPros Expert Consensus (PPR overall)",
+      "note": "Sept 4 · weight 2 · via DynastyProcess mirror"
+    },
+    {
+      "key": "espn",
+      "name": "ESPN PPR-300 sheet, default draft rank, Aug 24 snapshot",
+      "note": "Sept 4 · averaged into one ESPN number"
+    },
+    {
+      "key": "yahoo",
+      "name": "Yahoo: Hayden Winks and Justin Boone",
+      "note": "Sept 4 · averaged"
+    },
+    {
+      "key": "rotoballer",
+      "name": "RotoBaller PPR rankings",
+      "note": "Sept 2"
+    },
+    {
+      "key": "flock",
+      "name": "Flock Fantasy expert consensus",
+      "note": "Aug 31"
+    },
+    {
+      "key": "fftoday",
+      "name": "FFToday, Mike Krueger",
+      "note": "Aug 30 · weight 0.75"
+    },
+    {
+      "key": "prizepicks",
+      "name": "PrizePicks, Christian Hardy top 200",
+      "note": "Aug 29 · weight 0.75"
+    },
+    {
+      "key": "rotowire",
+      "name": "RotoWire expert consensus and value rank",
+      "note": "Aug 26 · averaged"
+    },
+    {
+      "key": "draftsharks",
+      "name": "Draft Sharks rankings",
+      "note": "Aug 26"
+    },
+    {
+      "key": "lineupexperts",
+      "name": "LineupExperts",
+      "note": "Aug 26 · weight 0.75"
+    },
+    {
+      "key": "nbc_rotoworld",
+      "name": "NBC Sports / Rotoworld top 200",
+      "note": "Aug 15"
+    },
+    {
+      "key": "bleacher_report",
+      "name": "Bleacher Report top 100 PPR",
+      "note": "Aug 14 · weight 0.75"
+    },
+    {
+      "key": "bdge",
+      "name": "BDGE top 50",
+      "note": "Aug 12 · weight 0.5"
+    },
+    {
+      "key": "etr",
+      "name": "Establish The Run auction values (ordered)",
+      "note": "Sept 1 · weight 0.75"
+    },
+    {
+      "key": "subvertadown",
+      "name": "Subvertadown value board",
+      "note": "Aug 31 · weight 0.5"
+    },
+    {
+      "key": "sleeper_rank",
+      "name": "Sleeper default rank",
+      "note": "Sept 4 · weight 0.5, ADP-driven"
+    },
+    {
+      "key": "fantasylife_jul",
+      "name": "Fantasy Life consensus and Matthew Berry",
+      "note": "Jul 28 · weight 0.5, stale"
+    },
+    {
+      "key": "fourfor4_jul",
+      "name": "4for4 PPR rankings",
+      "note": "Jul 27 · weight 0.5, stale"
+    },
+    {
+      "key": "cbs_aug3",
+      "name": "CBS Sports PPR",
+      "note": "Aug 3 · weight 0.5, stale"
+    },
+    {
+      "key": "adp_sleeper_ppr",
+      "name": "ADP: Sleeper PPR",
+      "note": "Sept 4"
+    },
+    {
+      "key": "adp_nfc_ppr",
+      "name": "ADP: Fantasy Football Calculator PPR",
+      "note": "Sept 4"
+    },
+    {
+      "key": "adp_espn",
+      "name": "ADP: ESPN",
+      "note": "Aug 29"
+    },
+    {
+      "key": "adp_yahoo",
+      "name": "ADP: Yahoo",
+      "note": "Aug 29"
+    },
+    {
+      "key": "adp_underdog",
+      "name": "ADP: Underdog (half-PPR best ball)",
+      "note": "Sept 2 · weight 0.5"
+    },
+    {
+      "key": "adp_ffpc",
+      "name": "ADP: FFPC (TE premium)",
+      "note": "Aug 29 · weight 0.5"
+    },
+    {
+      "key": "adp_fantasypros_cbs",
+      "name": "ADP: CBS, RTSports, Fantrax via FantasyPros",
+      "note": "Aug 28"
+    },
+    {
+      "key": "adp_draftsharks_half_consensus",
+      "name": "ADP: Draft Sharks consensus (half-PPR)",
+      "note": "Aug 26 · weight 0.5"
+    },
+    {
+      "key": "proj_espn",
+      "name": "Projections: ESPN stat lines to PPR",
+      "note": "2026 season"
+    },
+    {
+      "key": "proj_cbs",
+      "name": "Projections: CBS stat lines to PPR",
+      "note": "2026 season"
+    },
+    {
+      "key": "ffa",
+      "name": "Projections: ffanalytics floor, ceiling, uncertainty, age",
+      "note": "standard scoring, used as ratios"
+    },
+    {
+      "key": "risk",
+      "name": "Boom / bust / injury citations: ~70 articles (FantasyPros, Yahoo, ESPN, CBS, PFF, SI, RotoBaller, RotoWire, NBC, Bleacher Report, Fantasy Points, 4for4, FTN)",
+      "note": "from search summaries · research/risk_sources.md"
+    },
+    {
+      "key": "context",
+      "name": "2026 context: trades, coaching changes, injuries, depth charts",
+      "note": "research/context.md"
+    }
+  ],
+  "unavailable": [
+    "Direct page fetches were blocked for every fantasy site in this environment (FantasyPros, ESPN, Yahoo, CBS, NFL.com, PFF, Draft Sharks, Fantasy Football Calculator, Sleeper API) and for reddit.com. Rankings and ADP come from public GitHub mirrors of those sites with verified dates; article findings come from search-result summaries.",
+    "Not obtained at all: PFF rankings, NFL.com (Fabiano / Grant), ESPN individual analysts (Clay, Karabell, Yates), current CBS (Eisenberg / Richard), The Athletic, FTN / numberFire, Fantasy Points, Footballguys.",
+    "Reddit threads could not be read. Community sentiment is secondhand (Fantasy Squawk's roundup) and from ADP-versus-expert gaps.",
+    "Draft Sharks injury percentages exist only for McCaffrey (78%); everyone else carries a label from articles or the position base rate.",
+    "No weekly boom/bust rates (FantasyPros' game-level thresholds) because game logs were not reachable."
+  ],
+  "adpNames": {
+    "sleeper_ppr": "Sleeper",
+    "nfc_ppr": "FF Calculator",
+    "espn": "ESPN",
+    "yahoo": "Yahoo",
+    "underdog": "Underdog (½ PPR)",
+    "ffpc": "FFPC (TE prem.)",
+    "fantasypros_cbs": "CBS",
+    "fantasypros_rtsports": "RTSports",
+    "fantasypros_fantrax": "Fantrax",
+    "draftsharks_half_consensus": "Draft Sharks (½ PPR)"
+  }
+}

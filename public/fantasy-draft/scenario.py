@@ -10,12 +10,13 @@ Examples
 
 Outputs scenarios/<name>.md and scenarios/<name>.csv and prints the table.
 
-The pick score is measured in "rank spots" so every knob reads the same way:
-  score = -composite
-          + k_boom * (boom - 50) / 10  - k_bust * (bust - 50) / 10  - k_risk * (risk - 50) / 10
-          + strategy adjustment for (round, position)
+The pick score lives in log-rank space so every knob is proportional: a 4-spot gap at pick 4
+matters as much as a 40-spot gap at pick 40.
+  score = -ln(composite)
+          + k_boom * (boom - 50)/100  - k_bust * (bust - 50)/100  - k_risk * (risk - 50)/100
+          + strategy adjustment for (round, position)     (e.g. +0.25 = "treat as 25% better")
           + roster-need adjustment
-          - (1 - P(available at this pick)) * 6
+          - (1 - P(available at this pick)) * 0.5
 Players are only candidates for a pick when P(available) >= --min-avail (default 0.30).
 The #1 target of each round is assumed drafted, so later rounds reflect roster build-up.
 """
@@ -32,19 +33,19 @@ HERE = Path(__file__).resolve().parent
 DATA = HERE / "data" / "players.json"
 OUT = HERE / "scenarios"
 
-PROFILES = {  # rank spots per 10 points of score
-    "safe": {"boom": 0.5, "bust": 2.5, "risk": 1.5},
-    "balanced": {"boom": 1.0, "bust": 1.5, "risk": 0.5},
-    "upside": {"boom": 2.5, "bust": 0.8, "risk": 0.2},
+PROFILES = {  # log-rank units per 100 points of score
+    "safe": {"boom": 0.15, "bust": 0.50, "risk": 0.30},
+    "balanced": {"boom": 0.30, "bust": 0.35, "risk": 0.15},
+    "upside": {"boom": 0.60, "bust": 0.20, "risk": 0.05},
 }
 
-# strategy -> list of (round range, {pos: adjustment in rank spots}); positive = prefer
+# strategy -> list of (round range, {pos: log-rank adjustment}); +0.25 ~ "25% better", -2 ~ "never"
 STRATEGIES = {
     "balanced": [],
-    "hero-rb": [((1, 1), {"RB": 6}), ((2, 4), {"RB": -8, "WR": 3}), ((5, 9), {"RB": 3})],
-    "zero-rb": [((1, 5), {"RB": -30, "WR": 4, "TE": 2}), ((6, 12), {"RB": 6})],
-    "robust-rb": [((1, 3), {"RB": 7}), ((4, 6), {"WR": 4})],
-    "wr-heavy": [((1, 4), {"WR": 6, "RB": -3}), ((5, 8), {"RB": 4})],
+    "hero-rb": [((1, 1), {"WR": 0.15}), ((2, 2), {"RB": 0.35}), ((3, 5), {"WR": 0.10}), ((6, 9), {"RB": 0.15})],   # anchor WR at 4, bell-cow at 17
+    "zero-rb": [((1, 5), {"RB": -2.0, "WR": 0.15, "TE": 0.10}), ((6, 12), {"RB": 0.35})],
+    "robust-rb": [((1, 3), {"RB": 0.30}), ((4, 6), {"WR": 0.15})],
+    "wr-heavy": [((1, 4), {"WR": 0.25, "RB": -0.15}), ((5, 8), {"RB": 0.20})],
 }
 
 STARTERS = {"QB": 1, "RB": 2, "WR": 2, "TE": 1}  # + 1 flex
@@ -63,10 +64,10 @@ def my_picks(teams, slot, rounds):
     return [((r - 1) * teams + slot) if r % 2 else (r * teams - slot + 1) for r in range(1, rounds + 1)]
 
 
-def p_avail(adp, pick):
+def p_avail(adp, pick, adp_sd=None):
     if adp is None:
         return 0.5
-    s = max(1.6, 0.16 * adp)
+    s = max(1.6, 0.55 * max(adp_sd or 0.0, 0.15 * adp))
     return 1 / (1 + math.exp((pick - adp) / s))
 
 
@@ -79,48 +80,46 @@ def strategy_adj(strategy, rnd, pos):
 
 
 def need_adj(roster, rnd, pos, teams):
-    """Roster-construction nudges in rank spots for a 1-QB league."""
+    """Roster-construction nudges (log-rank units) for a 1-QB league."""
     count = {p: sum(1 for x in roster if x["pos"] == p) for p in STARTERS}
-    adj = 0
+    adj = 0.0
     if count[pos] >= CAPS[pos]:
-        return -40
+        return -3.0
     if pos == "QB":
         if count["QB"] >= 1:
-            adj -= 25 if rnd < 12 else 4
-        elif rnd <= 4:
-            adj -= 10  # onesie early only when elite; composite already rewards elite QBs
+            adj -= 1.5 if rnd < 12 else 0.2
+        elif rnd <= 3:
+            adj -= 0.4  # the research: do not pay the Allen tax in a 10-team one-QB league
     if pos == "TE":
         if count["TE"] >= 1:
-            adj -= 22 if rnd < 11 else 3
+            adj -= 1.2 if rnd < 11 else 0.2
         elif rnd <= 2:
-            adj -= 4
+            adj -= 0.15  # elite TE is a pivot, not the plan
     if pos in ("RB", "WR"):
         starters_short = STARTERS[pos] - count[pos]
         if starters_short > 0 and rnd >= 4:
-            adj += 3 * starters_short  # fill starting slots
-        flex_total = count["RB"] + count["WR"]
-        if flex_total < 5 and rnd >= FLEX_FILL_ROUND:
-            adj += 2
+            adj += 0.10 * starters_short
+        if count["RB"] + count["WR"] < 5 and rnd >= FLEX_FILL_ROUND:
+            adj += 0.05
         if count[pos] >= 5:
-            adj -= 6
-    # need a QB and TE eventually
+            adj -= 0.30
     if pos == "QB" and count["QB"] == 0 and rnd >= 9:
-        adj += 4 + 2 * (rnd - 9)
+        adj += 0.15 + 0.10 * (rnd - 9)
     if pos == "TE" and count["TE"] == 0 and rnd >= 8:
-        adj += 3 + 2 * (rnd - 8)
+        adj += 0.12 + 0.10 * (rnd - 8)
     return adj
 
 
 def pick_score(p, rnd, pick, profile, strategy, roster, teams):
     k = PROFILES[profile]
-    s = -p["comp"]
-    s += k["boom"] * (p["boom"] - 50) / 10
-    s -= k["bust"] * (p["bust"] - 50) / 10
-    s -= k["risk"] * (p["risk"] - 50) / 10
+    s = -math.log(p["comp"])
+    s += k["boom"] * (p["boom"] - 50) / 100
+    s -= k["bust"] * (p["bust"] - 50) / 100
+    s -= k["risk"] * (p["risk"] - 50) / 100
     s += strategy_adj(strategy, rnd, p["pos"])
     s += need_adj(roster, rnd, p["pos"], teams)
-    pa = p_avail(p["adp"], pick)
-    s -= (1 - pa) * 6
+    pa = p_avail(p["adp"], pick, p.get("adpSd"))
+    s -= (1 - pa) * 0.5
     return s, pa
 
 
@@ -206,17 +205,17 @@ def main():
     final = [p for p in roster]
     md += "\n## Resulting roster if you take the #1 target every round\n\n"
     for i, p in enumerate(final, 1):
-        md += f"{i}. {p['name']} — {p['pos']}{p['posRank']} {p['team']} (bye {p['bye']}) · comp {p['comp']} · boom {p['boom']} / bust {p['bust']} / risk {p['risk']}\n"
+        md += f"{i}. {p['name']} — {p['pos']}{p['posRank']} {p['team']} (bye {p['bye']}) · comp {p['comp']} · proj {p.get('proj') or '–'} · VBD {p.get('vbd') if p.get('vbd') is not None else '–'} · boom {p['boom']} / bust {p['bust']} / risk {p['risk']}\n"
     counts = {pos: sum(1 for p in final if p["pos"] == pos) for pos in ("QB", "RB", "WR", "TE")}
     md += "\nPosition mix: " + ", ".join(f"{k} {v}" for k, v in counts.items()) + "\n"
 
     (OUT / f"{name}.md").write_text(md)
     with (OUT / f"{name}.csv").open("w", newline="") as f:
         w = csv.writer(f)
-        w.writerow(["round", "pick", "slot", "player", "pos", "pos_rank", "team", "bye", "composite", "adp", "p_available", "boom", "bust", "risk", "score"])
+        w.writerow(["round", "pick", "slot", "player", "pos", "pos_rank", "team", "bye", "composite", "adp", "p_available", "proj", "vbd", "boom", "bust", "risk", "score"])
         for rnd, pick, top in rows:
             for i, (s, pa, p) in enumerate(top, 1):
-                w.writerow([rnd, pick, i, p["name"], p["pos"], p["posRank"], p["team"], p["bye"], p["comp"], p["adp"], round(pa, 2), p["boom"], p["bust"], p["risk"], round(s, 1)])
+                w.writerow([rnd, pick, i, p["name"], p["pos"], p["posRank"], p["team"], p["bye"], p["comp"], p["adp"], round(pa, 2), p.get("proj"), p.get("vbd"), p["boom"], p["bust"], p["risk"], round(s, 3)])
 
     print(md)
     print(f"saved scenarios/{name}.md and .csv")
