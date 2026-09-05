@@ -3,225 +3,58 @@
  "maxRank": 160,
  "feeds": {
   "draftsharks_half_consensus": {
-   "overall": 0.0124,
-   "byPos": {
-    "QB": 0.0324,
-    "RB": -0.0472,
-    "WR": -0.0124,
-    "TE": 0.0389
-   },
-   "n": 160,
-   "nByPos": {
-    "QB": 28,
-    "RB": 49,
-    "WR": 60,
-    "TE": 23
-   },
-   "note": "half PPR"
-  },
-  "espn": {
    "overall": 0.0,
    "byPos": {
-    "QB": 0.0071,
-    "RB": 0.016,
-    "WR": -0.0073,
-    "TE": -0.0328
-   },
-   "n": 160,
-   "nByPos": {
-    "QB": 27,
-    "RB": 49,
-    "WR": 61,
-    "TE": 23
-   },
-   "note": "format-agnostic"
-  },
-  "fantasypros_avg": {
-   "overall": 0.0,
-   "byPos": {
-    "QB": 0.078,
-    "RB": -0.0377,
+    "QB": 0.0448,
+    "RB": -0.0666,
     "WR": 0.0,
-    "TE": 0.0299
+    "TE": 0.0524
    },
    "n": 160,
    "nByPos": {
     "QB": 27,
-    "RB": 49,
-    "WR": 61,
-    "TE": 23
-   },
-   "note": ""
-  },
-  "fantasypros_cbs": {
-   "overall": 0.0,
-   "byPos": {
-    "QB": 0.0,
-    "RB": -0.0564,
-    "WR": 0.0321,
-    "TE": 0.0334
-   },
-   "n": 156,
-   "nByPos": {
-    "QB": 23,
-    "RB": 51,
-    "WR": 59,
-    "TE": 23
-   },
-   "note": ""
-  },
-  "fantasypros_espn": {
-   "overall": 0.0,
-   "byPos": {
-    "QB": 0.0,
-    "RB": 0.0308,
-    "WR": 0.0,
-    "TE": -0.0198
-   },
-   "n": 160,
-   "nByPos": {
-    "QB": 27,
-    "RB": 47,
-    "WR": 62,
+    "RB": 46,
+    "WR": 63,
     "TE": 24
    },
-   "note": ""
-  },
-  "fantasypros_fantrax": {
-   "overall": 0.0,
-   "byPos": {
-    "QB": 0.0926,
-    "RB": -0.0403,
-    "WR": -0.045,
-    "TE": 0.088
-   },
-   "n": 160,
-   "nByPos": {
-    "QB": 28,
-    "RB": 49,
-    "WR": 60,
-    "TE": 23
-   },
-   "note": ""
-  },
-  "fantasypros_rtsports": {
-   "overall": 0.0,
-   "byPos": {
-    "QB": 0.1884,
-    "RB": -0.1335,
-    "WR": 0.0,
-    "TE": 0.1141
-   },
-   "n": 160,
-   "nByPos": {
-    "QB": 25,
-    "RB": 54,
-    "WR": 59,
-    "TE": 22
-   },
-   "note": ""
-  },
-  "fantasypros_sleeper": {
-   "overall": 0.0,
-   "byPos": {
-    "QB": 0.092,
-    "RB": -0.0066,
-    "WR": -0.0141,
-    "TE": -0.0215
-   },
-   "n": 160,
-   "nByPos": {
-    "QB": 28,
-    "RB": 48,
-    "WR": 61,
-    "TE": 23
-   },
-   "note": ""
+   "note": "half PPR",
+   "daysOld": 9
   },
   "ffpc": {
-   "overall": 0.0,
+   "overall": -0.0039,
    "byPos": {
-    "QB": 0.2461,
-    "RB": -0.0445,
-    "WR": 0.0,
-    "TE": -0.1436
+    "QB": 0.2115,
+    "RB": -0.0634,
+    "WR": 0.0039,
+    "TE": -0.1225
    },
    "n": 160,
    "nByPos": {
     "QB": 27,
-    "RB": 49,
-    "WR": 61,
-    "TE": 23
+    "RB": 46,
+    "WR": 63,
+    "TE": 24
    },
-   "note": "TE premium"
-  },
-  "flock_cbs_rank": {
-   "overall": 0.0,
-   "byPos": {
-    "QB": 0.0,
-    "RB": -0.0455,
-    "WR": 0.0092,
-    "TE": 0.0386
-   },
-   "n": 157,
-   "nByPos": {
-    "QB": 23,
-    "RB": 52,
-    "WR": 60,
-    "TE": 22
-   },
-   "note": ""
-  },
-  "flock_espn_rank": {
-   "overall": -0.011,
-   "byPos": {
-    "QB": 0.1178,
-    "RB": -0.0378,
-    "WR": -0.0445,
-    "TE": 0.088
-   },
-   "n": 160,
-   "nByPos": {
-    "QB": 27,
-    "RB": 49,
-    "WR": 61,
-    "TE": 23
-   },
-   "note": ""
+   "note": "TE premium",
+   "daysOld": 6
   },
   "flock_ffpc_rank": {
-   "overall": -0.0118,
+   "overall": -0.0119,
    "byPos": {
-    "QB": 0.28,
-    "RB": -0.0327,
-    "WR": -0.0048,
-    "TE": -0.1078
+    "QB": 0.2896,
+    "RB": -0.0683,
+    "WR": 0.0053,
+    "TE": -0.0906
    },
    "n": 160,
    "nByPos": {
     "QB": 27,
-    "RB": 49,
-    "WR": 61,
-    "TE": 23
-   },
-   "note": "TE premium"
-  },
-  "flock_sleeper_rank": {
-   "overall": 0.0,
-   "byPos": {
-    "QB": 0.0859,
-    "RB": 0.0,
-    "WR": -0.0153,
-    "TE": 0.0
-   },
-   "n": 160,
-   "nByPos": {
-    "QB": 28,
     "RB": 48,
-    "WR": 61,
+    "WR": 62,
     "TE": 23
    },
-   "note": ""
+   "note": "TE premium",
+   "daysOld": 4
   },
   "flock_underdog_rank": {
    "overall": -0.0147,
@@ -238,24 +71,8 @@
     "WR": 61,
     "TE": 23
    },
-   "note": ""
-  },
-  "flock_yahoo_rank": {
-   "overall": 0.0,
-   "byPos": {
-    "QB": 0.0397,
-    "RB": -0.0194,
-    "WR": -0.042,
-    "TE": 0.0192
-   },
-   "n": 160,
-   "nByPos": {
-    "QB": 27,
-    "RB": 49,
-    "WR": 61,
-    "TE": 23
-   },
-   "note": ""
+   "note": "",
+   "daysOld": 0
   },
   "nfc_ppr": {
    "overall": -0.0107,
@@ -272,134 +89,52 @@
     "WR": 61,
     "TE": 22
    },
-   "note": "full PPR, 12-team"
+   "note": "full PPR, 12-team",
+   "daysOld": 0
   },
   "nfc_ppr_aug28": {
-   "overall": -0.0095,
+   "overall": -0.0308,
    "byPos": {
-    "QB": 0.1073,
-    "RB": 0.0095,
-    "WR": -0.1355,
-    "TE": 0.1849
+    "QB": 0.1236,
+    "RB": 0.0009,
+    "WR": -0.1193,
+    "TE": 0.2279
    },
    "n": 160,
    "nByPos": {
     "QB": 27,
-    "RB": 49,
-    "WR": 61,
-    "TE": 23
+    "RB": 47,
+    "WR": 62,
+    "TE": 24
    },
-   "note": "full PPR, 12-team"
+   "note": "full PPR, 12-team",
+   "daysOld": 7
   },
   "rotowire_underdog": {
-   "overall": -0.0097,
+   "overall": -0.0072,
    "byPos": {
-    "QB": 0.0288,
-    "RB": -0.0064,
-    "WR": -0.0833,
-    "TE": 0.0874
+    "QB": 0.0199,
+    "RB": -0.013,
+    "WR": -0.0704,
+    "TE": 0.0749
    },
    "n": 160,
    "nByPos": {
     "QB": 28,
-    "RB": 48,
-    "WR": 58,
+    "RB": 45,
+    "WR": 61,
     "TE": 26
    },
-   "note": "half PPR, best ball"
-  },
-  "sleeper_aug29": {
-   "overall": 0.0,
-   "byPos": {
-    "QB": 0.0976,
-    "RB": -0.0484,
-    "WR": -0.0126,
-    "TE": 0.0211
-   },
-   "n": 160,
-   "nByPos": {
-    "QB": 27,
-    "RB": 49,
-    "WR": 61,
-    "TE": 23
-   },
-   "note": "scoring not labelled"
-  },
-  "sleeper_live": {
-   "overall": 0.0,
-   "byPos": {
-    "QB": 0.0976,
-    "RB": 0.0,
-    "WR": 0.0,
-    "TE": 0.023
-   },
-   "n": 160,
-   "nByPos": {
-    "QB": 28,
-    "RB": 48,
-    "WR": 61,
-    "TE": 23
-   },
-   "note": ""
-  },
-  "sleeper_ppr": {
-   "overall": 0.0,
-   "byPos": {
-    "QB": 0.0976,
-    "RB": 0.0,
-    "WR": 0.0,
-    "TE": 0.0192
-   },
-   "n": 160,
-   "nByPos": {
-    "QB": 27,
-    "RB": 49,
-    "WR": 61,
-    "TE": 23
-   },
-   "note": ""
+   "note": "half PPR, best ball",
+   "daysOld": 9
   },
   "udk_avg_pick": {
-   "overall": 0.0031,
-   "byPos": {
-    "QB": 0.0688,
-    "RB": -0.0285,
-    "WR": -0.0031,
-    "TE": 0.0199
-   },
-   "n": 160,
-   "nByPos": {
-    "QB": 27,
-    "RB": 49,
-    "WR": 61,
-    "TE": 23
-   },
-   "note": "12-team"
-  },
-  "udk_espn_pick": {
    "overall": 0.0,
    "byPos": {
-    "QB": 0.0,
-    "RB": 0.0,
+    "QB": 0.0596,
+    "RB": -0.0403,
     "WR": 0.0,
-    "TE": 0.0
-   },
-   "n": 160,
-   "nByPos": {
-    "QB": 27,
-    "RB": 49,
-    "WR": 61,
-    "TE": 23
-   },
-   "note": "12-team"
-  },
-  "udk_sleeper_pick": {
-   "overall": 0.0,
-   "byPos": {
-    "QB": 0.1008,
-    "RB": -0.0638,
-    "WR": 0.0,
-    "TE": 0.0351
+    "TE": 0.0537
    },
    "n": 160,
    "nByPos": {
@@ -408,15 +143,16 @@
     "WR": 62,
     "TE": 23
    },
-   "note": "12-team"
+   "note": "12-team",
+   "daysOld": 4
   },
-  "udk_underdog_pick": {
-   "overall": -0.016,
+  "udk_espn_pick": {
+   "overall": 0.0,
    "byPos": {
-    "QB": 0.0399,
-    "RB": -0.007,
-    "WR": -0.0613,
-    "TE": 0.1304
+    "QB": 0.0,
+    "RB": 0.0,
+    "WR": 0.0,
+    "TE": 0.0129
    },
    "n": 160,
    "nByPos": {
@@ -425,15 +161,52 @@
     "WR": 61,
     "TE": 23
    },
-   "note": "half PPR, best ball"
+   "note": "12-team",
+   "daysOld": 4
+  },
+  "udk_sleeper_pick": {
+   "overall": 0.0,
+   "byPos": {
+    "QB": 0.08,
+    "RB": -0.0962,
+    "WR": -0.0076,
+    "TE": 0.0469
+   },
+   "n": 160,
+   "nByPos": {
+    "QB": 27,
+    "RB": 48,
+    "WR": 62,
+    "TE": 23
+   },
+   "note": "12-team",
+   "daysOld": 4
+  },
+  "udk_underdog_pick": {
+   "overall": -0.0213,
+   "byPos": {
+    "QB": 0.0345,
+    "RB": -0.0239,
+    "WR": -0.0664,
+    "TE": 0.1679
+   },
+   "n": 160,
+   "nByPos": {
+    "QB": 27,
+    "RB": 48,
+    "WR": 62,
+    "TE": 23
+   },
+   "note": "half PPR, best ball",
+   "daysOld": 4
   },
   "udk_yahoo_pick": {
    "overall": 0.0,
    "byPos": {
-    "QB": -0.0599,
-    "RB": -0.0033,
+    "QB": -0.0785,
+    "RB": -0.0252,
     "WR": 0.0,
-    "TE": -0.0102
+    "TE": 0.0
    },
    "n": 158,
    "nByPos": {
@@ -442,15 +215,16 @@
     "WR": 57,
     "TE": 24
    },
-   "note": "12-team"
+   "note": "12-team",
+   "daysOld": 4
   },
   "underdog": {
-   "overall": -0.0135,
+   "overall": -0.0166,
    "byPos": {
-    "QB": 0.0374,
-    "RB": -0.0076,
-    "WR": -0.0735,
-    "TE": 0.1279
+    "QB": 0.0325,
+    "RB": -0.0259,
+    "WR": -0.0606,
+    "TE": 0.1597
    },
    "n": 160,
    "nByPos": {
@@ -459,75 +233,44 @@
     "WR": 61,
     "TE": 23
    },
-   "note": "half PPR, best ball"
+   "note": "half PPR, best ball",
+   "daysOld": 2
   },
   "underdog_rank_aug24": {
-   "overall": -0.0033,
+   "overall": -0.0178,
    "byPos": {
-    "QB": 0.0114,
-    "RB": 0.0,
-    "WR": -0.0644,
-    "TE": 0.1287
+    "QB": 0.0506,
+    "RB": -0.0144,
+    "WR": -0.0386,
+    "TE": 0.1738
    },
    "n": 160,
-   "nByPos": {
-    "QB": 27,
-    "RB": 50,
-    "WR": 61,
-    "TE": 22
-   },
-   "note": "half PPR"
-  },
-  "yahoo": {
-   "overall": 0.0,
-   "byPos": {
-    "QB": -0.0599,
-    "RB": 0.0,
-    "WR": 0.0263,
-    "TE": -0.0107
-   },
-   "n": 159,
-   "nByPos": {
-    "QB": 27,
-    "RB": 49,
-    "WR": 58,
-    "TE": 25
-   },
-   "note": "format-agnostic"
-  },
-  "yahoo_aug25": {
-   "overall": 0.0,
-   "byPos": {
-    "QB": -0.0616,
-    "RB": 0.0,
-    "WR": 0.0237,
-    "TE": -0.0215
-   },
-   "n": 157,
    "nByPos": {
     "QB": 27,
     "RB": 47,
-    "WR": 58,
-    "TE": 25
+    "WR": 64,
+    "TE": 22
    },
-   "note": "format-agnostic"
+   "note": "half PPR",
+   "daysOld": 11
   },
   "yahoo_rank_aug24": {
-   "overall": 0.0,
+   "overall": -0.0171,
    "byPos": {
-    "QB": 0.0462,
-    "RB": 0.0,
-    "WR": -0.0392,
-    "TE": 0.0686
+    "QB": 0.0891,
+    "RB": -0.0234,
+    "WR": -0.0513,
+    "TE": 0.0867
    },
    "n": 160,
    "nByPos": {
     "QB": 27,
-    "RB": 50,
-    "WR": 61,
+    "RB": 47,
+    "WR": 64,
     "TE": 22
    },
-   "note": "half PPR"
+   "note": "half PPR",
+   "daysOld": 11
   }
  }
 }

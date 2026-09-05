@@ -1,10 +1,10 @@
 # Scenario: branch_D_nacua_out
 
 - League: 10 teams, slot 4, full PPR snake, picks #4, #17, #24, #37, #44, #57, #64, #77, #84, #97, #104, #117
-- Strategy: **robust-rb** · risk profile: **balanced** · min availability 35% · 2026 situation weight 0.1 · playoff-schedule weight 0.04
+- Strategy: **balanced** · risk profile: **safe** · min availability 35% · 2026 situation weight 0.1 · playoff-schedule weight 0.04
 - Already gone: Puka Nacua, Ja'Marr Chase, Jahmyr Gibbs, Bijan Robinson
 - Kept off the board: Christian McCaffrey, Ashton Jeanty, Jeremiyah Love, Kyren Williams, Travis Etienne Jr., Cam Skattebo, Carnell Tate, Davante Adams
-- Generated 2026-09-05 15:01
+- Generated 2026-09-05 17:08
 
 - Availability from 1500 simulated ESPN drafts
 
@@ -12,36 +12,36 @@ Cell = player (position rank, composite rank, chance still on the board at that 
 
 | Rd | Pick | #1 | #2 | #3 | #4 |
 |---|---|---|---|---|---|
-| 1 | 4 | Amon-Ra St. Brown (WR4, comp 7, 100%, 2026 64) | Jaxon Smith-Njigba (WR3, comp 5, 95%, 2026 51) | Jonathan Taylor (RB4, comp 8, 87%, 2026 58) | James Cook III (RB5, comp 10, 98%, 2026 85) |
-| 2 | 17 | Chase Brown (RB8, comp 16, 38%, 2026 61) | Omarion Hampton (RB9, comp 18, 54%, 2026 85) | Kenneth Walker III (RB10, comp 18, 97%, 2026 70) | Nico Collins (WR9, comp 20, 99%, 2026 74) |
-| 3 | 24 | Kenneth Walker III (RB10, comp 18, 46%, 2026 70) | Nico Collins (WR9, comp 20, 56%, 2026 74) | Javonte Williams (RB16, comp 34, 94%, 2026 62) | Brock Bowers (TE1, comp 21, 40%, 2026 48) |
-| 4 | 37 | Tee Higgins (WR17, comp 36, 99%, 2026 85) | Ladd McConkey (WR18, comp 39, 92%, 2026 85) | Emeka Egbuka (WR20, comp 41, 90%, 2026 78) | Luther Burden III (WR23, comp 51, 100%, 2026 85) |
-| 5 | 44 | Luther Burden III (WR23, comp 51, 100%, 2026 85) | Ladd McConkey (WR18, comp 39, 50%, 2026 85) | Jaylen Waddle (WR21, comp 41, 90%, 2026 85) | Colston Loveland (TE3, comp 39, 40%, 2026 75) |
-| 6 | 57 | Jameson Williams (WR25, comp 52, 74%, 2026 64) | Christian Watson (WR28, comp 58, 100%, 2026 68) | Parker Washington (WR30, comp 68, 100%, 2026 62) | Justin Herbert (QB9, comp 80, 98%, 2026 77) |
-| 7 | 64 | Justin Herbert (QB9, comp 80, 93%, 2026 77) | Christian Watson (WR28, comp 58, 100%, 2026 68) | Tucker Kraft (TE5, comp 75, 90%, 2026 68) | Parker Washington (WR30, comp 68, 100%, 2026 62) |
-| 8 | 77 | Tucker Kraft (TE5, comp 75, 72%, 2026 68) | Sam LaPorta (TE6, comp 76, 38%, 2026 62) | Parker Washington (WR30, comp 68, 70%, 2026 62) | DK Metcalf (WR33, comp 76, 47%, 2026 44) |
-| 9 | 84 | RJ Harvey (RB34, comp 96, 100%, 2026 85) | Kyle Monangai (RB37, comp 110, 99%, 2026 80) | Jordan Addison (WR42, comp 98, 100%, 2026 46) | Blake Corum (RB35, comp 102, 98%, 2026 85) |
-| 10 | 97 | Kyle Monangai (RB37, comp 110, 91%, 2026 80) | Blake Corum (RB35, comp 102, 90%, 2026 85) | Jayden Reed (WR40, comp 95, 100%, 2026 68) | Jordan Addison (WR42, comp 98, 93%, 2026 46) |
-| 11 | 104 | Blake Corum (RB35, comp 102, 84%, 2026 85) | Jordan Mason (RB40, comp 112, 96%, 2026 69) | Jayden Reed (WR40, comp 95, 100%, 2026 68) | Jordan Addison (WR42, comp 98, 85%, 2026 46) |
-| 12 | 117 | KC Concepcion (WR49, comp 114, 99%, 2026 68) | Jayden Reed (WR40, comp 95, 98%, 2026 68) | Quentin Johnston (WR43, comp 99, 83%, 2026 81) | Josh Downs (WR39, comp 95, 94%, 2026 40) |
+| 1 | 4 | Amon-Ra St. Brown (WR4, comp 7, 100%, 2026 64) | Jaxon Smith-Njigba (WR3, comp 5, 95%, 2026 51) | Justin Jefferson (WR6, comp 11, 100%, 2026 65) | CeeDee Lamb (WR5, comp 11, 100%, 2026 53) |
+| 2 | 17 | Nico Collins (WR9, comp 20, 100%, 2026 74) | George Pickens (WR10, comp 23, 100%, 2026 53) | Omarion Hampton (RB9, comp 18, 46%, 2026 85) | Drake London (WR7, comp 16, 93%, 2026 37) |
+| 3 | 24 | George Pickens (WR10, comp 23, 75%, 2026 53) | DeVonta Smith (WR14, comp 30, 100%, 2026 85) | Brock Bowers (TE1, comp 21, 51%, 2026 48) | Javonte Williams (RB16, comp 34, 92%, 2026 62) |
+| 4 | 37 | Tee Higgins (WR17, comp 36, 99%, 2026 85) | D'Andre Swift (RB19, comp 47, 99%, 2026 51) | Ladd McConkey (WR18, comp 39, 88%, 2026 85) | Colston Loveland (TE3, comp 39, 74%, 2026 75) |
+| 5 | 44 | D'Andre Swift (RB19, comp 47, 92%, 2026 51) | Colston Loveland (TE3, comp 39, 54%, 2026 75) | Luther Burden III (WR23, comp 51, 100%, 2026 85) | Tyler Warren (TE4, comp 54, 90%, 2026 63) |
+| 6 | 57 | Luther Burden III (WR23, comp 51, 84%, 2026 85) | Justin Herbert (QB9, comp 80, 98%, 2026 77) | Jaylen Warren (RB26, comp 72, 100%, 2026 45) | DK Metcalf (WR33, comp 76, 100%, 2026 44) |
+| 7 | 64 | Justin Herbert (QB9, comp 80, 94%, 2026 77) | Jaylen Warren (RB26, comp 72, 100%, 2026 45) | TreVeyon Henderson (RB25, comp 64, 89%, 2026 46) | Kyle Pitts Sr. (TE8, comp 82, 68%, 2026 66) |
+| 8 | 77 | Jaylen Warren (RB26, comp 72, 56%, 2026 45) | J.K. Dobbins (RB33, comp 95, 99%, 2026 54) | Kyle Monangai (RB37, comp 110, 100%, 2026 80) | Tucker Kraft (TE5, comp 75, 76%, 2026 68) |
+| 9 | 84 | Jake Ferguson (TE13, comp 124, 95%, 2026 51) | Tucker Kraft (TE5, comp 75, 61%, 2026 68) | Juwan Johnson (TE16, comp 144, 100%, 2026 22) | J.K. Dobbins (RB33, comp 95, 94%, 2026 54) |
+| 10 | 97 | Kyle Monangai (RB37, comp 110, 90%, 2026 80) | J.K. Dobbins (RB33, comp 95, 68%, 2026 54) | Blake Corum (RB35, comp 102, 89%, 2026 85) | Jacory Croskey-Merritt (RB38, comp 110, 99%, 2026 43) |
+| 11 | 104 | Blake Corum (RB35, comp 102, 81%, 2026 85) | Jacory Croskey-Merritt (RB38, comp 110, 96%, 2026 43) | Jordan Mason (RB40, comp 112, 94%, 2026 69) | J.K. Dobbins (RB33, comp 95, 48%, 2026 54) |
+| 12 | 117 | Jordan Mason (RB40, comp 112, 83%, 2026 69) | Jacory Croskey-Merritt (RB38, comp 110, 86%, 2026 43) | Dylan Sampson (RB50, comp 163, 100%, 2026 44) | Woody Marks (RB44, comp 139, 96%, 2026 30) |
 
 ## Resulting roster if you take the #1 target every round
 
 1. Amon-Ra St. Brown — WR4 DET (bye 6) · comp 7.2 · proj 301 · VBD 110 · boom 77 / bust 1 / risk 19
-2. Chase Brown — RB8 CIN (bye 6) · comp 16.0 · proj 261 · VBD 77 · boom 73 / bust 4 / risk 29
-3. Kenneth Walker III — RB10 KC (bye 5) · comp 18.5 · proj 236 · VBD 52 · boom 93 / bust 83 / risk 85
-4. Tee Higgins — WR17 CIN (bye 6) · comp 36.5 · proj 221 · VBD 30 · boom 84 / bust 23 / risk 25
-5. Luther Burden III — WR23 CHI (bye 10) · comp 50.7 · proj 200 · VBD 9 · boom 98 / bust 14 / risk 35
-6. Jameson Williams — WR25 DET (bye 6) · comp 52.2 · proj 207 · VBD 16 · boom 70 / bust 46 / risk 31
+2. Nico Collins — WR9 HOU (bye 8) · comp 20.0 · proj 248 · VBD 57 · boom 75 / bust 13 / risk 51
+3. George Pickens — WR10 DAL (bye 14) · comp 22.6 · proj 252 · VBD 61 · boom 59 / bust 21 / risk 36
+4. Tee Higgins — WR17 CIN (bye 6) · comp 36.5 · proj 221 · VBD 30 · boom 84 / bust 23 / risk 26
+5. D'Andre Swift — RB19 CHI (bye 10) · comp 46.7 · proj 207 · VBD 23 · boom 22 / bust 1 / risk 10
+6. Luther Burden III — WR23 CHI (bye 10) · comp 50.7 · proj 200 · VBD 9 · boom 98 / bust 14 / risk 35
 7. Justin Herbert — QB9 LAC (bye 7) · comp 80.1 · proj 281 · VBD -2 · boom 92 / bust 2 / risk 8
-8. Tucker Kraft — TE5 GB (bye 11) · comp 75.2 · proj 171 · VBD 0 · boom 99 / bust 61 / risk 96
-9. RJ Harvey — RB34 DEN (bye 10) · comp 95.9 · proj 155 · VBD -29 · boom 99 / bust 64 / risk 55
+8. Jaylen Warren — RB26 PIT (bye 9) · comp 71.6 · proj 183 · VBD -1 · boom 18 / bust 17 / risk 35
+9. Jake Ferguson — TE13 DAL (bye 14) · comp 123.8 · proj 161 · VBD -10 · boom 16 / bust 1 / risk 21
 10. Kyle Monangai — RB37 CHI (bye 10) · comp 109.5 · proj 148 · VBD -36 · boom 88 / bust 23 / risk 18
-11. Blake Corum — RB35 LAR (bye 11) · comp 102.2 · proj 128 · VBD -56 · boom 97 / bust 41 / risk 47
-12. KC Concepcion — WR49 CLE (bye 11) · comp 113.9 · proj 138 · VBD -53 · boom 100 / bust 58 / risk 78
+11. Blake Corum — RB35 LAR (bye 11) · comp 102.2 · proj 128 · VBD -56 · boom 97 / bust 41 / risk 48
+12. Jordan Mason — RB40 MIN (bye 6) · comp 111.7 · proj 141 · VBD -43 · boom 89 / bust 34 / risk 60
 
 Position mix: QB 1, RB 5, WR 5, TE 1
 
-Projected: **1870** (starters 1471 + flex 207 + a quarter of the five bench 192)
-Floor (p10): **710** (starters 595 + flex 77 + a quarter of the five bench 38)
-Ceiling (p90): **2459** (starters 1908 + flex 273 + a quarter of the five bench 278)
+Projected: **1842** (starters 1385 + flex 248 + a quarter of the five bench 210)
+Floor (p10): **741** (starters 588 + flex 103 + a quarter of the five bench 50)
+Ceiling (p90): **2446** (starters 1839 + flex 322 + a quarter of the five bench 284)

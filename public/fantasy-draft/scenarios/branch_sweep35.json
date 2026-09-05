@@ -3,36 +3,36 @@
   "branch": "A",
   "strategy": "balanced",
   "profile": "safe",
-  "proj": 1904.0,
-  "floor": 714.0,
-  "ceil": 2449.0,
+  "proj": 1874.0,
+  "floor": 743.0,
+  "ceil": 2466.0,
   "roster": [
    "Puka Nacua",
-   "Chase Brown",
    "Nico Collins",
+   "George Pickens",
    "Tee Higgins",
-   "Colston Loveland",
+   "D'Andre Swift",
    "Luther Burden III",
    "Justin Herbert",
-   "DK Metcalf",
-   "J.K. Dobbins",
+   "Jaylen Warren",
+   "Jake Ferguson",
    "Kyle Monangai",
    "Blake Corum",
-   "Jacory Croskey-Merritt"
+   "Jordan Mason"
   ],
   "mix": [
    "WR",
-   "RB",
    "WR",
    "WR1",
-   "TE",
+   "WR1",
+   "RB1",
    "WR2",
    "QB",
-   "WR3",
+   "RB2",
+   "TE1",
    "RB3",
    "RB3",
-   "RB3",
-   "RB3"
+   "RB4"
   ],
   "file": "_swp35_A_balanced_safe"
  },
@@ -114,12 +114,12 @@
   "branch": "A",
   "strategy": "hero-rb",
   "profile": "safe",
-  "proj": 1890.0,
-  "floor": 731.0,
-  "ceil": 2490.0,
+  "proj": 1861.0,
+  "floor": 690.0,
+  "ceil": 2432.0,
   "roster": [
    "Puka Nacua",
-   "Chase Brown",
+   "Omarion Hampton",
    "Nico Collins",
    "Tee Higgins",
    "Luther Burden III",
@@ -129,7 +129,7 @@
    "Jake Ferguson",
    "Kyle Monangai",
    "Xavier Worthy",
-   "Jacory Croskey-Merritt"
+   "Jordan Mason"
   ],
   "mix": [
    "WR",
@@ -143,7 +143,7 @@
    "TE1",
    "RB3",
    "WR5",
-   "RB3"
+   "RB4"
   ],
   "file": "_swp35_A_herorb_safe"
  },
@@ -151,22 +151,22 @@
   "branch": "A",
   "strategy": "hero-rb",
   "profile": "balanced",
-  "proj": 1882.0,
-  "floor": 690.0,
-  "ceil": 2455.0,
+  "proj": 1848.0,
+  "floor": 650.0,
+  "ceil": 2406.0,
   "roster": [
    "Puka Nacua",
-   "Chase Brown",
+   "Omarion Hampton",
    "Nico Collins",
    "Tee Higgins",
    "Luther Burden III",
    "Jadarian Price",
    "Justin Herbert",
    "Tucker Kraft",
+   "RJ Harvey",
    "Kyle Monangai",
    "Blake Corum",
-   "Jayden Reed",
-   "Jordan Mason"
+   "KC Concepcion"
   ],
   "mix": [
    "WR",
@@ -179,8 +179,8 @@
    "TE",
    "RB3",
    "RB3",
-   "WR4",
-   "RB4"
+   "RB3",
+   "WR4"
   ],
   "file": "_swp35_A_herorb_balanced"
  },
@@ -225,36 +225,36 @@
   "branch": "A",
   "strategy": "zero-rb",
   "profile": "safe",
-  "proj": 1872.0,
-  "floor": 716.0,
-  "ceil": 2424.0,
+  "proj": 1852.0,
+  "floor": 717.0,
+  "ceil": 2431.0,
   "roster": [
    "Puka Nacua",
    "Nico Collins",
    "George Pickens",
    "Tee Higgins",
-   "Colston Loveland",
+   "Luther Burden III",
    "Jaylen Warren",
    "TreVeyon Henderson",
    "Justin Herbert",
    "J.K. Dobbins",
    "Kyle Monangai",
-   "Blake Corum",
-   "Jacory Croskey-Merritt"
+   "Jake Ferguson",
+   "Jordan Mason"
   ],
   "mix": [
    "WR",
    "WR",
    "WR1",
    "WR1",
-   "TE",
+   "WR2",
    "RB2",
    "RB2",
    "QB",
    "RB3",
    "RB3",
-   "RB3",
-   "RB3"
+   "TE1",
+   "RB4"
   ],
   "file": "_swp35_A_zerorb_safe"
  },
@@ -262,9 +262,9 @@
   "branch": "A",
   "strategy": "zero-rb",
   "profile": "balanced",
-  "proj": 1856.0,
-  "floor": 682.0,
-  "ceil": 2440.0,
+  "proj": 1860.0,
+  "floor": 686.0,
+  "ceil": 2442.0,
   "roster": [
    "Puka Nacua",
    "Nico Collins",
@@ -274,10 +274,10 @@
    "Jadarian Price",
    "Jaylen Warren",
    "Justin Herbert",
+   "RJ Harvey",
    "Kyle Monangai",
    "Blake Corum",
-   "Jordan Mason",
-   "Jacory Croskey-Merritt"
+   "Jordan Mason"
   ],
   "mix": [
    "WR",
@@ -290,8 +290,8 @@
    "QB",
    "RB3",
    "RB3",
-   "RB4",
-   "RB3"
+   "RB3",
+   "RB4"
   ],
   "file": "_swp35_A_zerorb_balanced"
  },
@@ -336,12 +336,12 @@
   "branch": "A",
   "strategy": "robust-rb",
   "profile": "safe",
-  "proj": 1882.0,
-  "floor": 724.0,
-  "ceil": 2472.0,
+  "proj": 1854.0,
+  "floor": 682.0,
+  "ceil": 2414.0,
   "roster": [
    "Puka Nacua",
-   "Chase Brown",
+   "Omarion Hampton",
    "Javonte Williams",
    "Tee Higgins",
    "Luther Burden III",
@@ -351,7 +351,7 @@
    "J.K. Dobbins",
    "Kyle Monangai",
    "Xavier Worthy",
-   "Jacory Croskey-Merritt"
+   "Jordan Mason"
   ],
   "mix": [
    "WR",
@@ -365,7 +365,7 @@
    "RB3",
    "RB3",
    "WR5",
-   "RB3"
+   "RB4"
   ],
   "file": "_swp35_A_robustrb_safe"
  },
@@ -373,22 +373,22 @@
   "branch": "A",
   "strategy": "robust-rb",
   "profile": "balanced",
-  "proj": 1907.0,
-  "floor": 715.0,
-  "ceil": 2474.0,
+  "proj": 1873.0,
+  "floor": 672.0,
+  "ceil": 2425.0,
   "roster": [
    "Puka Nacua",
-   "Chase Brown",
+   "Omarion Hampton",
    "Kenneth Walker III",
    "Tee Higgins",
    "Luther Burden III",
    "Jameson Williams",
    "Justin Herbert",
    "Tucker Kraft",
+   "RJ Harvey",
    "Kyle Monangai",
    "Blake Corum",
-   "Jayden Reed",
-   "Jordan Mason"
+   "KC Concepcion"
   ],
   "mix": [
    "WR",
@@ -401,8 +401,8 @@
    "TE",
    "RB3",
    "RB3",
-   "WR4",
-   "RB4"
+   "RB3",
+   "WR4"
   ],
   "file": "_swp35_A_robustrb_balanced"
  },
@@ -448,8 +448,8 @@
   "strategy": "wr-heavy",
   "profile": "safe",
   "proj": 1874.0,
-  "floor": 744.0,
-  "ceil": 2470.0,
+  "floor": 743.0,
+  "ceil": 2466.0,
   "roster": [
    "Puka Nacua",
    "Nico Collins",
@@ -462,7 +462,7 @@
    "Jake Ferguson",
    "Kyle Monangai",
    "Blake Corum",
-   "Jacory Croskey-Merritt"
+   "Jordan Mason"
   ],
   "mix": [
    "WR",
@@ -476,7 +476,7 @@
    "TE1",
    "RB3",
    "RB3",
-   "RB3"
+   "RB4"
   ],
   "file": "_swp35_A_wrheavy_safe"
  },
@@ -558,36 +558,36 @@
   "branch": "B",
   "strategy": "balanced",
   "profile": "safe",
-  "proj": 1894.0,
-  "floor": 733.0,
-  "ceil": 2461.0,
+  "proj": 1864.0,
+  "floor": 762.0,
+  "ceil": 2478.0,
   "roster": [
    "Ja'Marr Chase",
-   "Chase Brown",
    "Nico Collins",
+   "George Pickens",
    "Tee Higgins",
-   "Colston Loveland",
+   "D'Andre Swift",
    "Luther Burden III",
    "Justin Herbert",
-   "DK Metcalf",
-   "J.K. Dobbins",
+   "Jaylen Warren",
+   "Jake Ferguson",
    "Kyle Monangai",
    "Blake Corum",
-   "Jacory Croskey-Merritt"
+   "Jordan Mason"
   ],
   "mix": [
    "WR",
-   "RB",
    "WR",
    "WR1",
-   "TE",
+   "WR1",
+   "RB1",
    "WR2",
    "QB",
-   "WR3",
+   "RB2",
+   "TE1",
    "RB3",
    "RB3",
-   "RB3",
-   "RB3"
+   "RB4"
   ],
   "file": "_swp35_B_balanced_safe"
  },
@@ -669,12 +669,12 @@
   "branch": "B",
   "strategy": "hero-rb",
   "profile": "safe",
-  "proj": 1880.0,
-  "floor": 750.0,
-  "ceil": 2502.0,
+  "proj": 1851.0,
+  "floor": 708.0,
+  "ceil": 2444.0,
   "roster": [
    "Ja'Marr Chase",
-   "Chase Brown",
+   "Omarion Hampton",
    "Nico Collins",
    "Tee Higgins",
    "Luther Burden III",
@@ -684,7 +684,7 @@
    "Jake Ferguson",
    "Kyle Monangai",
    "Xavier Worthy",
-   "Jacory Croskey-Merritt"
+   "Jordan Mason"
   ],
   "mix": [
    "WR",
@@ -698,7 +698,7 @@
    "TE1",
    "RB3",
    "WR5",
-   "RB3"
+   "RB4"
   ],
   "file": "_swp35_B_herorb_safe"
  },
@@ -706,22 +706,22 @@
   "branch": "B",
   "strategy": "hero-rb",
   "profile": "balanced",
-  "proj": 1872.0,
-  "floor": 708.0,
-  "ceil": 2467.0,
+  "proj": 1838.0,
+  "floor": 669.0,
+  "ceil": 2418.0,
   "roster": [
    "Ja'Marr Chase",
-   "Chase Brown",
+   "Omarion Hampton",
    "Nico Collins",
    "Tee Higgins",
    "Luther Burden III",
    "Jadarian Price",
    "Justin Herbert",
    "Tucker Kraft",
+   "RJ Harvey",
    "Kyle Monangai",
    "Blake Corum",
-   "Jayden Reed",
-   "Jordan Mason"
+   "KC Concepcion"
   ],
   "mix": [
    "WR",
@@ -734,8 +734,8 @@
    "TE",
    "RB3",
    "RB3",
-   "WR4",
-   "RB4"
+   "RB3",
+   "WR4"
   ],
   "file": "_swp35_B_herorb_balanced"
  },
@@ -780,36 +780,36 @@
   "branch": "B",
   "strategy": "zero-rb",
   "profile": "safe",
-  "proj": 1862.0,
-  "floor": 734.0,
-  "ceil": 2436.0,
+  "proj": 1842.0,
+  "floor": 736.0,
+  "ceil": 2443.0,
   "roster": [
    "Ja'Marr Chase",
    "Nico Collins",
    "George Pickens",
    "Tee Higgins",
-   "Colston Loveland",
+   "Luther Burden III",
    "Jaylen Warren",
    "TreVeyon Henderson",
    "Justin Herbert",
    "J.K. Dobbins",
    "Kyle Monangai",
-   "Blake Corum",
-   "Jacory Croskey-Merritt"
+   "Jake Ferguson",
+   "Jordan Mason"
   ],
   "mix": [
    "WR",
    "WR",
    "WR1",
    "WR1",
-   "TE",
+   "WR2",
    "RB2",
    "RB2",
    "QB",
    "RB3",
    "RB3",
-   "RB3",
-   "RB3"
+   "TE1",
+   "RB4"
   ],
   "file": "_swp35_B_zerorb_safe"
  },
@@ -817,9 +817,9 @@
   "branch": "B",
   "strategy": "zero-rb",
   "profile": "balanced",
-  "proj": 1846.0,
-  "floor": 702.0,
-  "ceil": 2452.0,
+  "proj": 1850.0,
+  "floor": 704.0,
+  "ceil": 2454.0,
   "roster": [
    "Ja'Marr Chase",
    "Nico Collins",
@@ -829,10 +829,10 @@
    "Jadarian Price",
    "Jaylen Warren",
    "Justin Herbert",
+   "RJ Harvey",
    "Kyle Monangai",
    "Blake Corum",
-   "Jordan Mason",
-   "Jacory Croskey-Merritt"
+   "Jordan Mason"
   ],
   "mix": [
    "WR",
@@ -845,8 +845,8 @@
    "QB",
    "RB3",
    "RB3",
-   "RB4",
-   "RB3"
+   "RB3",
+   "RB4"
   ],
   "file": "_swp35_B_zerorb_balanced"
  },
@@ -891,12 +891,12 @@
   "branch": "B",
   "strategy": "robust-rb",
   "profile": "safe",
-  "proj": 1872.0,
-  "floor": 743.0,
-  "ceil": 2484.0,
+  "proj": 1844.0,
+  "floor": 702.0,
+  "ceil": 2426.0,
   "roster": [
    "Ja'Marr Chase",
-   "Chase Brown",
+   "Omarion Hampton",
    "Javonte Williams",
    "Tee Higgins",
    "Luther Burden III",
@@ -906,7 +906,7 @@
    "J.K. Dobbins",
    "Kyle Monangai",
    "Xavier Worthy",
-   "Jacory Croskey-Merritt"
+   "Jordan Mason"
   ],
   "mix": [
    "WR",
@@ -920,7 +920,7 @@
    "RB3",
    "RB3",
    "WR5",
-   "RB3"
+   "RB4"
   ],
   "file": "_swp35_B_robustrb_safe"
  },
@@ -928,22 +928,22 @@
   "branch": "B",
   "strategy": "robust-rb",
   "profile": "balanced",
-  "proj": 1897.0,
-  "floor": 734.0,
-  "ceil": 2486.0,
+  "proj": 1863.0,
+  "floor": 691.0,
+  "ceil": 2437.0,
   "roster": [
    "Ja'Marr Chase",
-   "Chase Brown",
+   "Omarion Hampton",
    "Kenneth Walker III",
    "Tee Higgins",
    "Luther Burden III",
    "Jameson Williams",
    "Justin Herbert",
    "Tucker Kraft",
+   "RJ Harvey",
    "Kyle Monangai",
    "Blake Corum",
-   "Jayden Reed",
-   "Jordan Mason"
+   "KC Concepcion"
   ],
   "mix": [
    "WR",
@@ -956,8 +956,8 @@
    "TE",
    "RB3",
    "RB3",
-   "WR4",
-   "RB4"
+   "RB3",
+   "WR4"
   ],
   "file": "_swp35_B_robustrb_balanced"
  },
@@ -1003,8 +1003,8 @@
   "strategy": "wr-heavy",
   "profile": "safe",
   "proj": 1864.0,
-  "floor": 764.0,
-  "ceil": 2482.0,
+  "floor": 762.0,
+  "ceil": 2478.0,
   "roster": [
    "Ja'Marr Chase",
    "Nico Collins",
@@ -1017,7 +1017,7 @@
    "Jake Ferguson",
    "Kyle Monangai",
    "Blake Corum",
-   "Jacory Croskey-Merritt"
+   "Jordan Mason"
   ],
   "mix": [
    "WR",
@@ -1031,7 +1031,7 @@
    "TE1",
    "RB3",
    "RB3",
-   "RB3"
+   "RB4"
   ],
   "file": "_swp35_B_wrheavy_safe"
  },
@@ -1113,36 +1113,36 @@
   "branch": "C",
   "strategy": "balanced",
   "profile": "safe",
-  "proj": 1956.0,
-  "floor": 761.0,
-  "ceil": 2530.0,
+  "proj": 1918.0,
+  "floor": 770.0,
+  "ceil": 2509.0,
   "roster": [
    "Bijan Robinson",
-   "Chase Brown",
    "Nico Collins",
+   "George Pickens",
    "Tee Higgins",
-   "Colston Loveland",
+   "D'Andre Swift",
    "Luther Burden III",
    "Justin Herbert",
    "DK Metcalf",
-   "J.K. Dobbins",
+   "Jake Ferguson",
    "Kyle Monangai",
-   "Xavier Worthy",
-   "Jacory Croskey-Merritt"
+   "Blake Corum",
+   "Jordan Mason"
   ],
   "mix": [
    "RB",
-   "RB",
    "WR",
    "WR1",
-   "TE",
+   "WR1",
+   "RB1",
    "WR2",
    "QB",
    "WR3",
+   "TE1",
    "RB3",
    "RB3",
-   "WR5",
-   "RB3"
+   "RB4"
   ],
   "file": "_swp35_C_balanced_safe"
  },
@@ -1150,9 +1150,9 @@
   "branch": "C",
   "strategy": "balanced",
   "profile": "balanced",
-  "proj": 1892.0,
-  "floor": 698.0,
-  "ceil": 2471.0,
+  "proj": 1888.0,
+  "floor": 699.0,
+  "ceil": 2476.0,
   "roster": [
    "Bijan Robinson",
    "Nico Collins",
@@ -1162,10 +1162,10 @@
    "Jadarian Price",
    "Justin Herbert",
    "Parker Washington",
+   "RJ Harvey",
    "Kyle Monangai",
    "Blake Corum",
-   "Jayden Reed",
-   "Jordan Mason"
+   "KC Concepcion"
   ],
   "mix": [
    "RB",
@@ -1178,8 +1178,8 @@
    "WR3",
    "RB3",
    "RB3",
-   "WR4",
-   "RB4"
+   "RB3",
+   "WR4"
   ],
   "file": "_swp35_C_balanced_balanced"
  },
@@ -1224,12 +1224,12 @@
   "branch": "C",
   "strategy": "hero-rb",
   "profile": "safe",
-  "proj": 1922.0,
-  "floor": 745.0,
-  "ceil": 2533.0,
+  "proj": 1893.0,
+  "floor": 714.0,
+  "ceil": 2479.0,
   "roster": [
    "Bijan Robinson",
-   "Chase Brown",
+   "Omarion Hampton",
    "Nico Collins",
    "Tee Higgins",
    "Luther Burden III",
@@ -1261,20 +1261,20 @@
   "branch": "C",
   "strategy": "hero-rb",
   "profile": "balanced",
-  "proj": 1918.0,
-  "floor": 721.0,
-  "ceil": 2526.0,
+  "proj": 1895.0,
+  "floor": 683.0,
+  "ceil": 2478.0,
   "roster": [
    "Bijan Robinson",
-   "Chase Brown",
+   "Omarion Hampton",
    "Nico Collins",
    "Tee Higgins",
    "Luther Burden III",
    "Jadarian Price",
    "Justin Herbert",
    "Tucker Kraft",
+   "RJ Harvey",
    "Kyle Monangai",
-   "Blake Corum",
    "Jayden Reed",
    "KC Concepcion"
   ],
@@ -1335,36 +1335,36 @@
   "branch": "C",
   "strategy": "zero-rb",
   "profile": "safe",
-  "proj": 1925.0,
-  "floor": 758.0,
+  "proj": 1899.0,
+  "floor": 751.0,
   "ceil": 2508.0,
   "roster": [
    "Bijan Robinson",
    "Nico Collins",
    "George Pickens",
    "Tee Higgins",
-   "Colston Loveland",
+   "Luther Burden III",
    "Jaylen Warren",
    "TreVeyon Henderson",
    "Justin Herbert",
    "J.K. Dobbins",
    "Kyle Monangai",
-   "Blake Corum",
-   "Xavier Worthy"
+   "Jake Ferguson",
+   "Jordan Mason"
   ],
   "mix": [
    "RB",
    "WR",
    "WR1",
    "WR1",
-   "TE",
+   "WR2",
    "RB2",
    "RB2",
    "QB",
    "RB3",
    "RB3",
-   "RB3",
-   "WR5"
+   "TE1",
+   "RB4"
   ],
   "file": "_swp35_C_zerorb_safe"
  },
@@ -1372,9 +1372,9 @@
   "branch": "C",
   "strategy": "zero-rb",
   "profile": "balanced",
-  "proj": 1892.0,
-  "floor": 711.0,
-  "ceil": 2507.0,
+  "proj": 1896.0,
+  "floor": 714.0,
+  "ceil": 2513.0,
   "roster": [
    "Bijan Robinson",
    "Nico Collins",
@@ -1384,9 +1384,9 @@
    "Jadarian Price",
    "Jaylen Warren",
    "Justin Herbert",
+   "RJ Harvey",
    "Kyle Monangai",
    "Blake Corum",
-   "Jordan Mason",
    "KC Concepcion"
   ],
   "mix": [
@@ -1400,7 +1400,7 @@
    "QB",
    "RB3",
    "RB3",
-   "RB4",
+   "RB3",
    "WR4"
   ],
   "file": "_swp35_C_zerorb_balanced"
@@ -1446,12 +1446,12 @@
   "branch": "C",
   "strategy": "robust-rb",
   "profile": "safe",
-  "proj": 1902.0,
-  "floor": 737.0,
-  "ceil": 2515.0,
+  "proj": 1873.0,
+  "floor": 707.0,
+  "ceil": 2461.0,
   "roster": [
    "Bijan Robinson",
-   "Chase Brown",
+   "Omarion Hampton",
    "Javonte Williams",
    "Tee Higgins",
    "Luther Burden III",
@@ -1483,20 +1483,20 @@
   "branch": "C",
   "strategy": "robust-rb",
   "profile": "balanced",
-  "proj": 1920.0,
-  "floor": 722.0,
-  "ceil": 2523.0,
+  "proj": 1898.0,
+  "floor": 692.0,
+  "ceil": 2476.0,
   "roster": [
    "Bijan Robinson",
-   "Chase Brown",
+   "Omarion Hampton",
    "Kenneth Walker III",
    "Tee Higgins",
    "Luther Burden III",
    "Jameson Williams",
    "Justin Herbert",
    "Tucker Kraft",
+   "RJ Harvey",
    "Kyle Monangai",
-   "Blake Corum",
    "Jayden Reed",
    "KC Concepcion"
   ],
@@ -1557,9 +1557,9 @@
   "branch": "C",
   "strategy": "wr-heavy",
   "profile": "safe",
-  "proj": 1924.0,
-  "floor": 777.0,
-  "ceil": 2526.0,
+  "proj": 1925.0,
+  "floor": 776.0,
+  "ceil": 2522.0,
   "roster": [
    "Bijan Robinson",
    "Nico Collins",
@@ -1572,7 +1572,7 @@
    "Jake Ferguson",
    "Kyle Monangai",
    "Xavier Worthy",
-   "Jacory Croskey-Merritt"
+   "Jordan Mason"
   ],
   "mix": [
    "RB",
@@ -1586,7 +1586,7 @@
    "TE1",
    "RB3",
    "WR5",
-   "RB3"
+   "RB4"
   ],
   "file": "_swp35_C_wrheavy_safe"
  },
@@ -1594,9 +1594,9 @@
   "branch": "C",
   "strategy": "wr-heavy",
   "profile": "balanced",
-  "proj": 1924.0,
-  "floor": 765.0,
-  "ceil": 2522.0,
+  "proj": 1919.0,
+  "floor": 762.0,
+  "ceil": 2527.0,
   "roster": [
    "Bijan Robinson",
    "Nico Collins",
@@ -1606,10 +1606,10 @@
    "Luther Burden III",
    "Justin Herbert",
    "Tucker Kraft",
+   "RJ Harvey",
    "Kyle Monangai",
    "Blake Corum",
-   "Jayden Reed",
-   "Jordan Mason"
+   "KC Concepcion"
   ],
   "mix": [
    "RB",
@@ -1622,8 +1622,8 @@
    "TE",
    "RB3",
    "RB3",
-   "WR4",
-   "RB4"
+   "RB3",
+   "WR4"
   ],
   "file": "_swp35_C_wrheavy_balanced"
  },
@@ -1631,9 +1631,9 @@
   "branch": "C",
   "strategy": "wr-heavy",
   "profile": "upside",
-  "proj": 1856.0,
-  "floor": 684.0,
-  "ceil": 2453.0,
+  "proj": 1874.0,
+  "floor": 674.0,
+  "ceil": 2480.0,
   "roster": [
    "Bijan Robinson",
    "Nico Collins",
@@ -1641,12 +1641,12 @@
    "Tee Higgins",
    "Luther Burden III",
    "Jadarian Price",
+   "TreVeyon Henderson",
    "Tucker Kraft",
-   "Justin Herbert",
+   "Trevor Lawrence",
    "RJ Harvey",
    "Blake Corum",
-   "KC Concepcion",
-   "Jordan Mason"
+   "KC Concepcion"
   ],
   "mix": [
    "RB",
@@ -1655,12 +1655,12 @@
    "WR1",
    "WR2",
    "RB2",
+   "RB2",
    "TE",
-   "QB",
+   "QB1",
    "RB3",
    "RB3",
-   "WR4",
-   "RB4"
+   "WR4"
   ],
   "file": "_swp35_C_wrheavy_upside"
  },
@@ -1668,36 +1668,36 @@
   "branch": "D",
   "strategy": "balanced",
   "profile": "safe",
-  "proj": 1872.0,
-  "floor": 712.0,
-  "ceil": 2429.0,
+  "proj": 1842.0,
+  "floor": 741.0,
+  "ceil": 2446.0,
   "roster": [
    "Amon-Ra St. Brown",
-   "Chase Brown",
    "Nico Collins",
+   "George Pickens",
    "Tee Higgins",
-   "Colston Loveland",
+   "D'Andre Swift",
    "Luther Burden III",
    "Justin Herbert",
-   "DK Metcalf",
-   "J.K. Dobbins",
+   "Jaylen Warren",
+   "Jake Ferguson",
    "Kyle Monangai",
    "Blake Corum",
-   "Jacory Croskey-Merritt"
+   "Jordan Mason"
   ],
   "mix": [
    "WR",
-   "RB",
    "WR",
    "WR1",
-   "TE",
+   "WR1",
+   "RB1",
    "WR2",
    "QB",
-   "WR3",
+   "RB2",
+   "TE1",
    "RB3",
    "RB3",
-   "RB3",
-   "RB3"
+   "RB4"
   ],
   "file": "_swp35_D_balanced_safe"
  },
@@ -1779,12 +1779,12 @@
   "branch": "D",
   "strategy": "hero-rb",
   "profile": "safe",
-  "proj": 1858.0,
-  "floor": 729.0,
-  "ceil": 2470.0,
+  "proj": 1829.0,
+  "floor": 688.0,
+  "ceil": 2412.0,
   "roster": [
    "Amon-Ra St. Brown",
-   "Chase Brown",
+   "Omarion Hampton",
    "Nico Collins",
    "Tee Higgins",
    "Luther Burden III",
@@ -1794,7 +1794,7 @@
    "Jake Ferguson",
    "Kyle Monangai",
    "Xavier Worthy",
-   "Jacory Croskey-Merritt"
+   "Jordan Mason"
   ],
   "mix": [
    "WR",
@@ -1808,7 +1808,7 @@
    "TE1",
    "RB3",
    "WR5",
-   "RB3"
+   "RB4"
   ],
   "file": "_swp35_D_herorb_safe"
  },
@@ -1816,22 +1816,22 @@
   "branch": "D",
   "strategy": "hero-rb",
   "profile": "balanced",
-  "proj": 1850.0,
-  "floor": 688.0,
-  "ceil": 2435.0,
+  "proj": 1816.0,
+  "floor": 648.0,
+  "ceil": 2386.0,
   "roster": [
    "Amon-Ra St. Brown",
-   "Chase Brown",
+   "Omarion Hampton",
    "Nico Collins",
    "Tee Higgins",
    "Luther Burden III",
    "Jadarian Price",
    "Justin Herbert",
    "Tucker Kraft",
+   "RJ Harvey",
    "Kyle Monangai",
    "Blake Corum",
-   "Jayden Reed",
-   "Jordan Mason"
+   "KC Concepcion"
   ],
   "mix": [
    "WR",
@@ -1844,8 +1844,8 @@
    "TE",
    "RB3",
    "RB3",
-   "WR4",
-   "RB4"
+   "RB3",
+   "WR4"
   ],
   "file": "_swp35_D_herorb_balanced"
  },
@@ -1890,36 +1890,36 @@
   "branch": "D",
   "strategy": "zero-rb",
   "profile": "safe",
-  "proj": 1840.0,
-  "floor": 714.0,
-  "ceil": 2404.0,
+  "proj": 1820.0,
+  "floor": 715.0,
+  "ceil": 2411.0,
   "roster": [
    "Amon-Ra St. Brown",
    "Nico Collins",
    "George Pickens",
    "Tee Higgins",
-   "Colston Loveland",
+   "Luther Burden III",
    "Jaylen Warren",
    "TreVeyon Henderson",
    "Justin Herbert",
    "J.K. Dobbins",
    "Kyle Monangai",
-   "Blake Corum",
-   "Jacory Croskey-Merritt"
+   "Jake Ferguson",
+   "Jordan Mason"
   ],
   "mix": [
    "WR",
    "WR",
    "WR1",
    "WR1",
-   "TE",
+   "WR2",
    "RB2",
    "RB2",
    "QB",
    "RB3",
    "RB3",
-   "RB3",
-   "RB3"
+   "TE1",
+   "RB4"
   ],
   "file": "_swp35_D_zerorb_safe"
  },
@@ -1927,9 +1927,9 @@
   "branch": "D",
   "strategy": "zero-rb",
   "profile": "balanced",
-  "proj": 1824.0,
-  "floor": 680.0,
-  "ceil": 2420.0,
+  "proj": 1828.0,
+  "floor": 684.0,
+  "ceil": 2422.0,
   "roster": [
    "Amon-Ra St. Brown",
    "Nico Collins",
@@ -1939,10 +1939,10 @@
    "Jadarian Price",
    "Jaylen Warren",
    "Justin Herbert",
+   "RJ Harvey",
    "Kyle Monangai",
    "Blake Corum",
-   "Jordan Mason",
-   "Jacory Croskey-Merritt"
+   "Jordan Mason"
   ],
   "mix": [
    "WR",
@@ -1955,8 +1955,8 @@
    "QB",
    "RB3",
    "RB3",
-   "RB4",
-   "RB3"
+   "RB3",
+   "RB4"
   ],
   "file": "_swp35_D_zerorb_balanced"
  },
@@ -2001,12 +2001,12 @@
   "branch": "D",
   "strategy": "robust-rb",
   "profile": "safe",
-  "proj": 1850.0,
-  "floor": 722.0,
-  "ceil": 2452.0,
+  "proj": 1822.0,
+  "floor": 680.0,
+  "ceil": 2394.0,
   "roster": [
    "Amon-Ra St. Brown",
-   "Chase Brown",
+   "Omarion Hampton",
    "Javonte Williams",
    "Tee Higgins",
    "Luther Burden III",
@@ -2016,7 +2016,7 @@
    "J.K. Dobbins",
    "Kyle Monangai",
    "Xavier Worthy",
-   "Jacory Croskey-Merritt"
+   "Jordan Mason"
   ],
   "mix": [
    "WR",
@@ -2030,7 +2030,7 @@
    "RB3",
    "RB3",
    "WR5",
-   "RB3"
+   "RB4"
   ],
   "file": "_swp35_D_robustrb_safe"
  },
@@ -2038,22 +2038,22 @@
   "branch": "D",
   "strategy": "robust-rb",
   "profile": "balanced",
-  "proj": 1875.0,
-  "floor": 713.0,
-  "ceil": 2454.0,
+  "proj": 1841.0,
+  "floor": 670.0,
+  "ceil": 2405.0,
   "roster": [
    "Amon-Ra St. Brown",
-   "Chase Brown",
+   "Omarion Hampton",
    "Kenneth Walker III",
    "Tee Higgins",
    "Luther Burden III",
    "Jameson Williams",
    "Justin Herbert",
    "Tucker Kraft",
+   "RJ Harvey",
    "Kyle Monangai",
    "Blake Corum",
-   "Jayden Reed",
-   "Jordan Mason"
+   "KC Concepcion"
   ],
   "mix": [
    "WR",
@@ -2066,8 +2066,8 @@
    "TE",
    "RB3",
    "RB3",
-   "WR4",
-   "RB4"
+   "RB3",
+   "WR4"
   ],
   "file": "_swp35_D_robustrb_balanced"
  },
@@ -2113,8 +2113,8 @@
   "strategy": "wr-heavy",
   "profile": "safe",
   "proj": 1842.0,
-  "floor": 742.0,
-  "ceil": 2450.0,
+  "floor": 741.0,
+  "ceil": 2446.0,
   "roster": [
    "Amon-Ra St. Brown",
    "Nico Collins",
@@ -2127,7 +2127,7 @@
    "Jake Ferguson",
    "Kyle Monangai",
    "Blake Corum",
-   "Jacory Croskey-Merritt"
+   "Jordan Mason"
   ],
   "mix": [
    "WR",
@@ -2141,7 +2141,7 @@
    "TE1",
    "RB3",
    "RB3",
-   "RB3"
+   "RB4"
   ],
   "file": "_swp35_D_wrheavy_safe"
  },

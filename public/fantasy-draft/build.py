@@ -633,6 +633,28 @@ def build(scoring="ppr", mc_tag=""):
             p["tier"] = tier
             prev = p["comp"]
 
+    # --- a value signal the market did not write --------------------------------------------
+    # Finding 6 of research/red_team_2.md: the composite correlates with blended ADP at r = 0.976,
+    # because 19 of its inputs are consensus rankings that are themselves anchored to ADP. So
+    # "value = ADP - composite" mostly measures noise. This ranks players by VBD alone -- points
+    # over the 10-team replacement baseline, from projections and game logs, with no ranking or
+    # ADP input anywhere -- and scores value against that instead. It disagrees with the market
+    # far more often, which is the point: it is a second opinion rather than an echo.
+    # Compared WITHIN position. Raw VBD across positions just re-measures the replacement
+    # baselines -- in a 10-team league that makes every quarterback and tight end look like a
+    # bargain and every committee back look like a fade, which is a property of the baseline,
+    # not of the player. Ranking our points against the market inside each position cancels it.
+    for pos in ("QB", "RB", "WR", "TE"):
+        grp = [p for p in players if p["pos"] == pos and p.get("vbd") is not None and p.get("adp")]
+        byPts = {p["id"]: i for i, p in enumerate(sorted(grp, key=lambda q: -q["vbd"]), 1)}
+        byMkt = {p["id"]: i for i, p in enumerate(sorted(grp, key=lambda q: q["adp"]), 1)}
+        for p in grp:
+            p["indepRank"] = byPts[p["id"]]
+            p["indepValue"] = byMkt[p["id"]] - byPts[p["id"]]   # + = market drafts him later than our points do
+    for p in players:
+        p.setdefault("indepRank", None)
+        p.setdefault("indepValue", None)
+
     # --- within-position percentiles for the skewed signals --------------------------------
     for pos in ("QB", "RB", "WR", "TE"):
         pct_up = percentile_within(players, lambda p: p["_sig"]["upside"], pos)
@@ -836,7 +858,7 @@ def build(scoring="ppr", mc_tag=""):
 
 
 OVERLAY_FIELDS = ("comp", "adp", "adpSd", "adpSources", "value", "valueScore", "proj", "projSources", "vbd", "floorPts", "ceilPts",
-                  "boom", "bust", "risk", "sit", "tier", "posRank", "flag", "mcAvail", "boomWhy", "bustWhy", "riskWhy")
+                  "boom", "bust", "risk", "sit", "tier", "posRank", "indepRank", "indepValue", "flag", "mcAvail", "boomWhy", "bustWhy", "riskWhy")
 
 
 def main():

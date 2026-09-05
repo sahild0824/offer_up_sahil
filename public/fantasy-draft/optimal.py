@@ -8,10 +8,10 @@ from pathlib import Path
 
 OUT = Path("scenarios")
 BR = [
-    ("A", "branch_A_nacua", "Nacua is the best man left and is cleared to play", "robust RB", "58% of boards"),
-    ("B", "branch_B_chase", "Chase falls to 4", "robust RB", "39% of boards"),
-    ("C", "branch_C_rb_falls", "Gibbs or Bijan falls to 4", "balanced, safe", "3% of boards"),
-    ("D", "branch_D_nacua_out", "Nacua is out or suspended and Chase is gone", "robust RB", "only if Nacua is scratched"),
+    ("A", "branch_A_nacua", "Nacua is the best man left and is cleared to play", "balanced, safe", "53% of boards"),
+    ("B", "branch_B_chase", "Chase falls to 4", "balanced, safe", "44% of boards"),
+    ("C", "branch_C_rb_falls", "Gibbs or Bijan falls to 4", "WR heavy, safe", "2% of boards"),
+    ("D", "branch_D_nacua_out", "Nacua is out or suspended and Chase is gone", "balanced, safe", "only if Nacua is scratched"),
 ]
 FIRST = {"A": "Puka Nacua", "B": "Ja'Marr Chase", "C": "Bijan Robinson", "D": None}
 LATE = [(13, 124, "D/ST — Chargers", "host ARI and LV in weeks 1-2, the consensus best opener; Chiefs, Packers, Bears next"),

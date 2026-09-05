@@ -117,11 +117,31 @@ def main():
                      "proj": p.get("proj")})
     if missing:
         raise SystemExit(f"unmatched players: {missing}")
+    # Finding 8 of research/red_team_2.md: a search for reasons to draft someone returns bullish
+    # copy, so raw counts are a coverage measure, not a verdict. The corpus runs about two thirds
+    # positive; scoring each player against that base rate is what makes "well liked" mean
+    # anything, and a player nobody argued against is marked uncontested rather than unanimous.
+    BF, BA = sum(r["for"] for r in rows), sum(r["against"] for r in rows)
+    base = BF / (BF + BA) if (BF + BA) else 0.5
+    for r in rows:
+        tot = r["for"] + r["against"]
+        share = r["for"] / tot if tot else base
+        r["baseRate"] = round(base, 3)
+        r["lean"] = round(share - base, 2)          # + = better liked than the corpus average
+        r["uncontested"] = r["against"] == 0 and r["for"] >= 2
     rows.sort(key=lambda r: (r["round"], -r["lean"]))
     (HERE / "data" / "market_verdicts.json").write_text(json.dumps(rows, indent=1))
     print(f"{len(rows)} players across rounds {min(r['round'] for r in rows)}-{max(r['round'] for r in rows)}")
     from collections import Counter
     print("verdicts:", dict(Counter(r["verdict"] for r in rows)))
+    print(f"corpus base rate: {rows[0]['baseRate']:.0%} of citations are positive; lean is measured against that")
+    print(f"uncontested (no counter-argument found): {sum(1 for r in rows if r['uncontested'])} players")
+    print("\nBest liked relative to the base rate:")
+    for r in sorted(rows, key=lambda r: -r["lean"])[:5]:
+        print(f"  R{r['round']:2d} {r['name']:24s} {r['for']}-{r['against']}  lean {r['lean']:+.2f}")
+    print("Most contested:")
+    for r in sorted(rows, key=lambda r: r["lean"])[:5]:
+        print(f"  R{r['round']:2d} {r['name']:24s} {r['for']}-{r['against']}  lean {r['lean']:+.2f}")
     print("\nBiggest model-vs-market gaps (+ = market lets him fall past our composite):")
     for r in sorted(rows, key=lambda r: -abs(r["gap"] or 0))[:10]:
         print(f"  R{r['round']:2d} {r['name']:24s} {r['verdict']:9s} comp {r['comp']:6.1f} adp {r['adp']:6.1f} gap {r['gap']:+6.1f}")

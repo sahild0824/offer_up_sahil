@@ -10,9 +10,9 @@ Following the decision order Gibbs > Bijan > Chase > Nacua, over 3,000 simulated
 
 | Branch | Frequency |
 |---|---|
-| C (Gibbs or Bijan) | 3% |
-| B (Chase) | 39% |
-| A (Nacua) | 58% |
+| C (Gibbs or Bijan) | 2% |
+| B (Chase) | 44% |
+| A (Nacua) | 53% |
 | D (none of them) | 0% |
 
 One of the four is on the board at pick 4 in every single simulated draft, so branch D is not a board
@@ -22,97 +22,97 @@ outcome at all: it only fires if Nacua is scratched or suspended and Chase is al
 
 | Group at your pick | at least 1 | at least 2 | mean left |
 |---|---|---|---|
-| elite4 @4 | 100% | 28% | 1.28 |
-| anchorRB @17 | 100% | 87% | 2.27 |
-| anchorRB @24 | 44% | 0% | 0.44 |
-| eliteTE @24 | 66% | 12% | 0.78 |
-| WRt1 @24 | 100% | 100% | 3.35 |
-| QBtier @57 | 70% | 23% | 0.97 |
-| QBtier @64 | 36% | 5% | 0.41 |
-| QBnext @97 | 100% | 41% | 1.47 |
-| midTE @77 | 88% | 36% | 1.26 |
+| elite4 @4 | 100% | 32% | 1.32 |
+| anchorRB @17 | 100% | 75% | 2.01 |
+| anchorRB @24 | 42% | 0% | 0.42 |
+| eliteTE @24 | 71% | 21% | 0.92 |
+| WRt1 @24 | 100% | 98% | 3.24 |
+| QBtier @57 | 75% | 36% | 1.19 |
+| QBtier @64 | 47% | 10% | 0.59 |
+| QBnext @97 | 98% | 36% | 1.53 |
+| midTE @77 | 91% | 44% | 1.41 |
 
 ## Scenario A: Nacua is the best man left and is cleared to play
 
-**robust RB** · 58% of boards · projected lineup **1902** (floor 712, ceiling 2479)
+**balanced, safe** · 53% of boards · projected lineup **1874** (floor 743, ceiling 2466)
 
 | Rd | Pick | Take | Pos | There | Fallback |
 |---|---|---|---|---|---|
 | 1 | 4 | **Puka Nacua** | — | this branch | see the other branches |
-| 2 | 17 | **Chase Brown** | RB8 CIN | 38% | Omarion Hampton (54%) |
-| 3 | 24 | **Kenneth Walker III** | RB10 KC | 47% | Nico Collins (56%) |
-| 4 | 37 | **Tee Higgins** | WR17 CIN | 99% | Ladd McConkey (92%) |
-| 5 | 44 | **Luther Burden III** | WR23 CHI | 100% | Ladd McConkey (50%) |
-| 6 | 57 | **Jameson Williams** | WR25 DET | 74% | Christian Watson (100%) |
-| 7 | 64 | **Justin Herbert** | QB9 LAC | 93% | Christian Watson (100%) |
-| 8 | 77 | **Tucker Kraft** | TE5 GB | 72% | Sam LaPorta (38%) |
-| 9 | 84 | **RJ Harvey** | RB34 DEN | 100% | Kyle Monangai (99%) |
-| 10 | 97 | **Kyle Monangai** | RB37 CHI | 91% | Blake Corum (91%) |
-| 11 | 104 | **Blake Corum** | RB35 LAR | 84% | Jordan Mason (96%) |
-| 12 | 117 | **KC Concepcion** | WR49 CLE | 99% | Jayden Reed (98%) |
+| 2 | 17 | **Nico Collins** | WR9 HOU | 100% | George Pickens (100%) |
+| 3 | 24 | **George Pickens** | WR10 DAL | 75% | DeVonta Smith (100%) |
+| 4 | 37 | **Tee Higgins** | WR17 CIN | 99% | D'Andre Swift (99%) |
+| 5 | 44 | **D'Andre Swift** | RB19 CHI | 93% | Colston Loveland (54%) |
+| 6 | 57 | **Luther Burden III** | WR23 CHI | 84% | Justin Herbert (98%) |
+| 7 | 64 | **Justin Herbert** | QB9 LAC | 94% | Jaylen Warren (100%) |
+| 8 | 77 | **Jaylen Warren** | RB26 PIT | 56% | J.K. Dobbins (99%) |
+| 9 | 84 | **Jake Ferguson** | TE13 DAL | 95% | Tucker Kraft (61%) |
+| 10 | 97 | **Kyle Monangai** | RB37 CHI | 90% | J.K. Dobbins (68%) |
+| 11 | 104 | **Blake Corum** | RB35 LAR | 81% | Jacory Croskey-Merritt (96%) |
+| 12 | 117 | **Jordan Mason** | RB40 MIN | 83% | Jacory Croskey-Merritt (86%) |
 | 13 | 124 | **D/ST — Chargers** | — | — | host ARI and LV in weeks 1-2, the consensus best opener; Chiefs, Packers, Bears next |
 | 14 | 137 | **K — Brandon Aubrey** | — | — | the one kicker experts take early; our 3/4/5-point distance tiers reward his range |
 
 ## Scenario B: Chase falls to 4
 
-**robust RB** · 39% of boards · projected lineup **1892** (floor 731, ceiling 2491)
+**balanced, safe** · 44% of boards · projected lineup **1864** (floor 762, ceiling 2478)
 
 | Rd | Pick | Take | Pos | There | Fallback |
 |---|---|---|---|---|---|
 | 1 | 4 | **Ja'Marr Chase** | — | this branch | see the other branches |
-| 2 | 17 | **Chase Brown** | RB8 CIN | 38% | Omarion Hampton (54%) |
-| 3 | 24 | **Kenneth Walker III** | RB10 KC | 47% | Nico Collins (56%) |
-| 4 | 37 | **Tee Higgins** | WR17 CIN | 99% | Ladd McConkey (92%) |
-| 5 | 44 | **Luther Burden III** | WR23 CHI | 100% | Ladd McConkey (50%) |
-| 6 | 57 | **Jameson Williams** | WR25 DET | 74% | Christian Watson (100%) |
-| 7 | 64 | **Justin Herbert** | QB9 LAC | 93% | Christian Watson (100%) |
-| 8 | 77 | **Tucker Kraft** | TE5 GB | 72% | Sam LaPorta (38%) |
-| 9 | 84 | **RJ Harvey** | RB34 DEN | 100% | Kyle Monangai (99%) |
-| 10 | 97 | **Kyle Monangai** | RB37 CHI | 91% | Blake Corum (91%) |
-| 11 | 104 | **Blake Corum** | RB35 LAR | 84% | Jordan Mason (96%) |
-| 12 | 117 | **KC Concepcion** | WR49 CLE | 99% | Jayden Reed (98%) |
+| 2 | 17 | **Nico Collins** | WR9 HOU | 100% | George Pickens (100%) |
+| 3 | 24 | **George Pickens** | WR10 DAL | 75% | DeVonta Smith (100%) |
+| 4 | 37 | **Tee Higgins** | WR17 CIN | 99% | D'Andre Swift (99%) |
+| 5 | 44 | **D'Andre Swift** | RB19 CHI | 93% | Colston Loveland (54%) |
+| 6 | 57 | **Luther Burden III** | WR23 CHI | 84% | Justin Herbert (98%) |
+| 7 | 64 | **Justin Herbert** | QB9 LAC | 94% | Jaylen Warren (100%) |
+| 8 | 77 | **Jaylen Warren** | RB26 PIT | 56% | J.K. Dobbins (99%) |
+| 9 | 84 | **Jake Ferguson** | TE13 DAL | 95% | Tucker Kraft (61%) |
+| 10 | 97 | **Kyle Monangai** | RB37 CHI | 90% | J.K. Dobbins (68%) |
+| 11 | 104 | **Blake Corum** | RB35 LAR | 81% | Jacory Croskey-Merritt (96%) |
+| 12 | 117 | **Jordan Mason** | RB40 MIN | 83% | Jacory Croskey-Merritt (86%) |
 | 13 | 124 | **D/ST — Chargers** | — | — | host ARI and LV in weeks 1-2, the consensus best opener; Chiefs, Packers, Bears next |
 | 14 | 137 | **K — Brandon Aubrey** | — | — | the one kicker experts take early; our 3/4/5-point distance tiers reward his range |
 
 ## Scenario C: Gibbs or Bijan falls to 4
 
-**balanced, safe** · 3% of boards · projected lineup **1957** (floor 760, ceiling 2526)
+**WR heavy, safe** · 2% of boards · projected lineup **1925** (floor 776, ceiling 2522)
 
 | Rd | Pick | Take | Pos | There | Fallback |
 |---|---|---|---|---|---|
 | 1 | 4 | **Bijan Robinson** | — | this branch | see the other branches |
-| 2 | 17 | **Chase Brown** | RB8 CIN | 38% | Nico Collins (99%) |
-| 3 | 24 | **Nico Collins** | WR9 HOU | 56% | George Pickens (81%) |
-| 4 | 37 | **Tee Higgins** | WR17 CIN | 99% | Ladd McConkey (92%) |
-| 5 | 44 | **Colston Loveland** | TE3 CHI | 40% | Luther Burden III (100%) |
-| 6 | 57 | **Luther Burden III** | WR23 CHI | 94% | Justin Herbert (98%) |
-| 7 | 64 | **Justin Herbert** | QB9 LAC | 93% | DK Metcalf (98%) |
-| 8 | 77 | **DK Metcalf** | WR33 PIT | 47% | Jaylen Warren (53%) |
-| 9 | 84 | **J.K. Dobbins** | RB33 DEN | 96% | Kyle Monangai (99%) |
-| 10 | 97 | **Kyle Monangai** | RB37 CHI | 91% | Jayden Reed (100%) |
+| 2 | 17 | **Nico Collins** | WR9 HOU | 100% | George Pickens (100%) |
+| 3 | 24 | **George Pickens** | WR10 DAL | 75% | DeVonta Smith (100%) |
+| 4 | 37 | **Tee Higgins** | WR17 CIN | 99% | Ladd McConkey (88%) |
+| 5 | 44 | **D'Andre Swift** | RB19 CHI | 93% | Colston Loveland (54%) |
+| 6 | 57 | **Luther Burden III** | WR23 CHI | 84% | Jaylen Warren (100%) |
+| 7 | 64 | **Jaylen Warren** | RB26 PIT | 100% | Justin Herbert (94%) |
+| 8 | 77 | **Justin Herbert** | QB9 LAC | 75% | Trevor Lawrence (99%) |
+| 9 | 84 | **Jake Ferguson** | TE13 DAL | 95% | Tucker Kraft (61%) |
+| 10 | 97 | **Kyle Monangai** | RB37 CHI | 90% | Xavier Worthy (99%) |
 | 11 | 104 | **Xavier Worthy** | WR50 KC | 99% | Jayden Reed (100%) |
-| 12 | 117 | **Jordan Mason** | RB40 MIN | 87% | Jacory Croskey-Merritt (89%) |
+| 12 | 117 | **Jordan Mason** | RB40 MIN | 83% | Jacory Croskey-Merritt (86%) |
 | 13 | 124 | **D/ST — Chargers** | — | — | host ARI and LV in weeks 1-2, the consensus best opener; Chiefs, Packers, Bears next |
 | 14 | 137 | **K — Brandon Aubrey** | — | — | the one kicker experts take early; our 3/4/5-point distance tiers reward his range |
 
 ## Scenario D: Nacua is out or suspended and Chase is gone
 
-**robust RB** · only if Nacua is scratched · projected lineup **1870** (floor 710, ceiling 2459)
+**balanced, safe** · only if Nacua is scratched · projected lineup **1842** (floor 741, ceiling 2446)
 
 | Rd | Pick | Take | Pos | There | Fallback |
 |---|---|---|---|---|---|
 | 1 | 4 | **Amon-Ra St. Brown** | WR4 DET | 100% | Jaxon Smith-Njigba (95%) |
-| 2 | 17 | **Chase Brown** | RB8 CIN | 38% | Omarion Hampton (54%) |
-| 3 | 24 | **Kenneth Walker III** | RB10 KC | 47% | Nico Collins (56%) |
-| 4 | 37 | **Tee Higgins** | WR17 CIN | 99% | Ladd McConkey (92%) |
-| 5 | 44 | **Luther Burden III** | WR23 CHI | 100% | Ladd McConkey (50%) |
-| 6 | 57 | **Jameson Williams** | WR25 DET | 74% | Christian Watson (100%) |
-| 7 | 64 | **Justin Herbert** | QB9 LAC | 93% | Christian Watson (100%) |
-| 8 | 77 | **Tucker Kraft** | TE5 GB | 72% | Sam LaPorta (38%) |
-| 9 | 84 | **RJ Harvey** | RB34 DEN | 100% | Kyle Monangai (99%) |
-| 10 | 97 | **Kyle Monangai** | RB37 CHI | 91% | Blake Corum (91%) |
-| 11 | 104 | **Blake Corum** | RB35 LAR | 84% | Jordan Mason (96%) |
-| 12 | 117 | **KC Concepcion** | WR49 CLE | 99% | Jayden Reed (98%) |
+| 2 | 17 | **Nico Collins** | WR9 HOU | 100% | George Pickens (100%) |
+| 3 | 24 | **George Pickens** | WR10 DAL | 75% | DeVonta Smith (100%) |
+| 4 | 37 | **Tee Higgins** | WR17 CIN | 99% | D'Andre Swift (99%) |
+| 5 | 44 | **D'Andre Swift** | RB19 CHI | 93% | Colston Loveland (54%) |
+| 6 | 57 | **Luther Burden III** | WR23 CHI | 84% | Justin Herbert (98%) |
+| 7 | 64 | **Justin Herbert** | QB9 LAC | 94% | Jaylen Warren (100%) |
+| 8 | 77 | **Jaylen Warren** | RB26 PIT | 56% | J.K. Dobbins (99%) |
+| 9 | 84 | **Jake Ferguson** | TE13 DAL | 95% | Tucker Kraft (61%) |
+| 10 | 97 | **Kyle Monangai** | RB37 CHI | 90% | J.K. Dobbins (68%) |
+| 11 | 104 | **Blake Corum** | RB35 LAR | 81% | Jacory Croskey-Merritt (96%) |
+| 12 | 117 | **Jordan Mason** | RB40 MIN | 83% | Jacory Croskey-Merritt (86%) |
 | 13 | 124 | **D/ST — Chargers** | — | — | host ARI and LV in weeks 1-2, the consensus best opener; Chiefs, Packers, Bears next |
 | 14 | 137 | **K — Brandon Aubrey** | — | — | the one kicker experts take early; our 3/4/5-point distance tiers reward his range |
 
@@ -120,7 +120,7 @@ outcome at all: it only fires if Nacua is scratched or suspended and Chase is al
 
 | Branch | Situation | Build | Projected | Floor | Ceiling |
 |---|---|---|---|---|---|
-| C | Gibbs or Bijan falls to 4 | balanced, safe | 1957 | 760 | 2526 |
-| A | Nacua is the best man left and is cleared to play | robust RB | 1902 | 712 | 2479 |
-| B | Chase falls to 4 | robust RB | 1892 | 731 | 2491 |
-| D | Nacua is out or suspended and Chase is gone | robust RB | 1870 | 710 | 2459 |
+| C | Gibbs or Bijan falls to 4 | WR heavy, safe | 1925 | 776 | 2522 |
+| A | Nacua is the best man left and is cleared to play | balanced, safe | 1874 | 743 | 2466 |
+| B | Chase falls to 4 | balanced, safe | 1864 | 762 | 2478 |
+| D | Nacua is out or suspended and Chase is gone | balanced, safe | 1842 | 741 | 2446 |

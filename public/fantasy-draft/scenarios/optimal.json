@@ -1,352 +1,130 @@
 {
  "freq": {
-  "C (Gibbs or Bijan)": 0.03,
-  "B (Chase)": 0.394,
-  "A (Nacua)": 0.576,
+  "C (Gibbs or Bijan)": 0.025,
+  "B (Chase)": 0.445,
+  "A (Nacua)": 0.53,
   "D (none of them)": 0.0
  },
  "survives": {
   "elite4 @4": {
    "p1": 1.0,
-   "p2": 0.276,
-   "p3": 0.003,
-   "mean": 1.28
+   "p2": 0.319,
+   "p3": 0.004,
+   "mean": 1.32
   },
   "anchorRB @17": {
-   "p1": 1.0,
-   "p2": 0.869,
-   "p3": 0.351,
-   "mean": 2.27
+   "p1": 0.999,
+   "p2": 0.746,
+   "p3": 0.239,
+   "mean": 2.01
   },
   "anchorRB @24": {
-   "p1": 0.438,
+   "p1": 0.417,
    "p2": 0.005,
    "p3": 0.0,
-   "mean": 0.44
+   "mean": 0.42
   },
   "eliteTE @17": {
-   "p1": 0.98,
-   "p2": 0.68,
+   "p1": 0.985,
+   "p2": 0.776,
    "p3": 0.0,
-   "mean": 1.66
+   "mean": 1.76
   },
   "eliteTE @24": {
-   "p1": 0.658,
-   "p2": 0.117,
+   "p1": 0.71,
+   "p2": 0.213,
    "p3": 0.0,
-   "mean": 0.78
+   "mean": 0.92
   },
   "WRt1 @24": {
-   "p1": 1.0,
-   "p2": 0.999,
-   "p3": 0.904,
-   "mean": 3.35
+   "p1": 0.999,
+   "p2": 0.985,
+   "p3": 0.818,
+   "mean": 3.24
   },
   "QBtier @44": {
-   "p1": 1.0,
-   "p2": 0.967,
-   "p3": 0.752,
-   "mean": 2.98
+   "p1": 0.999,
+   "p2": 0.98,
+   "p3": 0.853,
+   "mean": 3.3
   },
   "QBtier @57": {
-   "p1": 0.705,
-   "p2": 0.234,
-   "p3": 0.029,
-   "mean": 0.97
+   "p1": 0.751,
+   "p2": 0.358,
+   "p3": 0.078,
+   "mean": 1.19
   },
   "QBtier @64": {
-   "p1": 0.359,
-   "p2": 0.046,
-   "p3": 0.002,
-   "mean": 0.41
+   "p1": 0.472,
+   "p2": 0.104,
+   "p3": 0.009,
+   "mean": 0.59
   },
   "QBnext @77": {
    "p1": 1.0,
    "p2": 1.0,
    "p3": 1.0,
-   "mean": 5.0
+   "mean": 5.23
   },
   "QBnext @97": {
-   "p1": 0.999,
-   "p2": 0.407,
-   "p3": 0.064,
-   "mean": 1.47
+   "p1": 0.982,
+   "p2": 0.362,
+   "p3": 0.146,
+   "mean": 1.53
   },
   "midTE @44": {
    "p1": 1.0,
    "p2": 1.0,
-   "p3": 0.994,
-   "mean": 4.1
+   "p3": 0.996,
+   "mean": 4.37
   },
   "midTE @57": {
-   "p1": 0.998,
-   "p2": 0.972,
-   "p3": 0.702,
-   "mean": 2.79
+   "p1": 1.0,
+   "p2": 0.979,
+   "p3": 0.763,
+   "mean": 2.96
   },
   "midTE @64": {
-   "p1": 0.993,
-   "p2": 0.873,
-   "p3": 0.401,
-   "mean": 2.28
+   "p1": 0.994,
+   "p2": 0.916,
+   "p3": 0.515,
+   "mean": 2.47
   },
   "midTE @77": {
-   "p1": 0.881,
-   "p2": 0.357,
-   "p3": 0.021,
-   "mean": 1.26
+   "p1": 0.913,
+   "p2": 0.436,
+   "p3": 0.06,
+   "mean": 1.41
   }
  },
  "branches": [
   {
    "key": "A",
    "label": "Nacua is the best man left and is cleared to play",
-   "strategy": "robust RB",
-   "freq": "58% of boards",
-   "proj": 1902,
-   "floor": 712,
-   "ceil": 2479,
+   "strategy": "balanced, safe",
+   "freq": "53% of boards",
+   "proj": 1874,
+   "floor": 743,
+   "ceil": 2466,
    "first": "Puka Nacua",
    "picks": [
     {
      "round": 2,
      "pick": 17,
-     "player": "Chase Brown",
-     "pos": "RB",
-     "avail": 0.38,
-     "alt": "Omarion Hampton",
-     "altAvail": 0.54
-    },
-    {
-     "round": 3,
-     "pick": 24,
-     "player": "Kenneth Walker III",
-     "pos": "RB",
-     "avail": 0.47,
-     "alt": "Nico Collins",
-     "altAvail": 0.56
-    },
-    {
-     "round": 4,
-     "pick": 37,
-     "player": "Tee Higgins",
-     "pos": "WR",
-     "avail": 0.99,
-     "alt": "Ladd McConkey",
-     "altAvail": 0.92
-    },
-    {
-     "round": 5,
-     "pick": 44,
-     "player": "Luther Burden III",
-     "pos": "WR",
-     "avail": 1.0,
-     "alt": "Ladd McConkey",
-     "altAvail": 0.5
-    },
-    {
-     "round": 6,
-     "pick": 57,
-     "player": "Jameson Williams",
-     "pos": "WR",
-     "avail": 0.74,
-     "alt": "Christian Watson",
-     "altAvail": 1.0
-    },
-    {
-     "round": 7,
-     "pick": 64,
-     "player": "Justin Herbert",
-     "pos": "QB",
-     "avail": 0.93,
-     "alt": "Christian Watson",
-     "altAvail": 1.0
-    },
-    {
-     "round": 8,
-     "pick": 77,
-     "player": "Tucker Kraft",
-     "pos": "TE",
-     "avail": 0.72,
-     "alt": "Sam LaPorta",
-     "altAvail": 0.38
-    },
-    {
-     "round": 9,
-     "pick": 84,
-     "player": "RJ Harvey",
-     "pos": "RB",
-     "avail": 1.0,
-     "alt": "Kyle Monangai",
-     "altAvail": 0.99
-    },
-    {
-     "round": 10,
-     "pick": 97,
-     "player": "Kyle Monangai",
-     "pos": "RB",
-     "avail": 0.91,
-     "alt": "Blake Corum",
-     "altAvail": 0.91
-    },
-    {
-     "round": 11,
-     "pick": 104,
-     "player": "Blake Corum",
-     "pos": "RB",
-     "avail": 0.84,
-     "alt": "Jordan Mason",
-     "altAvail": 0.96
-    },
-    {
-     "round": 12,
-     "pick": 117,
-     "player": "KC Concepcion",
-     "pos": "WR",
-     "avail": 0.99,
-     "alt": "Jayden Reed",
-     "altAvail": 0.98
-    }
-   ]
-  },
-  {
-   "key": "B",
-   "label": "Chase falls to 4",
-   "strategy": "robust RB",
-   "freq": "39% of boards",
-   "proj": 1892,
-   "floor": 731,
-   "ceil": 2491,
-   "first": "Ja'Marr Chase",
-   "picks": [
-    {
-     "round": 2,
-     "pick": 17,
-     "player": "Chase Brown",
-     "pos": "RB",
-     "avail": 0.38,
-     "alt": "Omarion Hampton",
-     "altAvail": 0.54
-    },
-    {
-     "round": 3,
-     "pick": 24,
-     "player": "Kenneth Walker III",
-     "pos": "RB",
-     "avail": 0.47,
-     "alt": "Nico Collins",
-     "altAvail": 0.56
-    },
-    {
-     "round": 4,
-     "pick": 37,
-     "player": "Tee Higgins",
-     "pos": "WR",
-     "avail": 0.99,
-     "alt": "Ladd McConkey",
-     "altAvail": 0.92
-    },
-    {
-     "round": 5,
-     "pick": 44,
-     "player": "Luther Burden III",
-     "pos": "WR",
-     "avail": 1.0,
-     "alt": "Ladd McConkey",
-     "altAvail": 0.5
-    },
-    {
-     "round": 6,
-     "pick": 57,
-     "player": "Jameson Williams",
-     "pos": "WR",
-     "avail": 0.74,
-     "alt": "Christian Watson",
-     "altAvail": 1.0
-    },
-    {
-     "round": 7,
-     "pick": 64,
-     "player": "Justin Herbert",
-     "pos": "QB",
-     "avail": 0.93,
-     "alt": "Christian Watson",
-     "altAvail": 1.0
-    },
-    {
-     "round": 8,
-     "pick": 77,
-     "player": "Tucker Kraft",
-     "pos": "TE",
-     "avail": 0.72,
-     "alt": "Sam LaPorta",
-     "altAvail": 0.38
-    },
-    {
-     "round": 9,
-     "pick": 84,
-     "player": "RJ Harvey",
-     "pos": "RB",
-     "avail": 1.0,
-     "alt": "Kyle Monangai",
-     "altAvail": 0.99
-    },
-    {
-     "round": 10,
-     "pick": 97,
-     "player": "Kyle Monangai",
-     "pos": "RB",
-     "avail": 0.91,
-     "alt": "Blake Corum",
-     "altAvail": 0.91
-    },
-    {
-     "round": 11,
-     "pick": 104,
-     "player": "Blake Corum",
-     "pos": "RB",
-     "avail": 0.84,
-     "alt": "Jordan Mason",
-     "altAvail": 0.96
-    },
-    {
-     "round": 12,
-     "pick": 117,
-     "player": "KC Concepcion",
-     "pos": "WR",
-     "avail": 0.99,
-     "alt": "Jayden Reed",
-     "altAvail": 0.98
-    }
-   ]
-  },
-  {
-   "key": "C",
-   "label": "Gibbs or Bijan falls to 4",
-   "strategy": "balanced, safe",
-   "freq": "3% of boards",
-   "proj": 1957,
-   "floor": 760,
-   "ceil": 2526,
-   "first": "Bijan Robinson",
-   "picks": [
-    {
-     "round": 2,
-     "pick": 17,
-     "player": "Chase Brown",
-     "pos": "RB",
-     "avail": 0.38,
-     "alt": "Nico Collins",
-     "altAvail": 0.99
-    },
-    {
-     "round": 3,
-     "pick": 24,
      "player": "Nico Collins",
      "pos": "WR",
-     "avail": 0.56,
+     "avail": 1.0,
      "alt": "George Pickens",
-     "altAvail": 0.81
+     "altAvail": 1.0
+    },
+    {
+     "round": 3,
+     "pick": 24,
+     "player": "George Pickens",
+     "pos": "WR",
+     "avail": 0.75,
+     "alt": "DeVonta Smith",
+     "altAvail": 1.0
     },
     {
      "round": 4,
@@ -354,24 +132,24 @@
      "player": "Tee Higgins",
      "pos": "WR",
      "avail": 0.99,
-     "alt": "Ladd McConkey",
-     "altAvail": 0.92
+     "alt": "D'Andre Swift",
+     "altAvail": 0.99
     },
     {
      "round": 5,
      "pick": 44,
-     "player": "Colston Loveland",
-     "pos": "TE",
-     "avail": 0.4,
-     "alt": "Luther Burden III",
-     "altAvail": 1.0
+     "player": "D'Andre Swift",
+     "pos": "RB",
+     "avail": 0.93,
+     "alt": "Colston Loveland",
+     "altAvail": 0.54
     },
     {
      "round": 6,
      "pick": 57,
      "player": "Luther Burden III",
      "pos": "WR",
-     "avail": 0.94,
+     "avail": 0.84,
      "alt": "Justin Herbert",
      "altAvail": 0.98
     },
@@ -380,36 +158,258 @@
      "pick": 64,
      "player": "Justin Herbert",
      "pos": "QB",
-     "avail": 0.93,
-     "alt": "DK Metcalf",
-     "altAvail": 0.98
+     "avail": 0.94,
+     "alt": "Jaylen Warren",
+     "altAvail": 1.0
     },
     {
      "round": 8,
      "pick": 77,
-     "player": "DK Metcalf",
-     "pos": "WR",
-     "avail": 0.47,
-     "alt": "Jaylen Warren",
-     "altAvail": 0.53
+     "player": "Jaylen Warren",
+     "pos": "RB",
+     "avail": 0.56,
+     "alt": "J.K. Dobbins",
+     "altAvail": 0.99
     },
     {
      "round": 9,
      "pick": 84,
-     "player": "J.K. Dobbins",
-     "pos": "RB",
-     "avail": 0.96,
-     "alt": "Kyle Monangai",
-     "altAvail": 0.99
+     "player": "Jake Ferguson",
+     "pos": "TE",
+     "avail": 0.95,
+     "alt": "Tucker Kraft",
+     "altAvail": 0.61
     },
     {
      "round": 10,
      "pick": 97,
      "player": "Kyle Monangai",
      "pos": "RB",
-     "avail": 0.91,
-     "alt": "Jayden Reed",
+     "avail": 0.9,
+     "alt": "J.K. Dobbins",
+     "altAvail": 0.68
+    },
+    {
+     "round": 11,
+     "pick": 104,
+     "player": "Blake Corum",
+     "pos": "RB",
+     "avail": 0.81,
+     "alt": "Jacory Croskey-Merritt",
+     "altAvail": 0.96
+    },
+    {
+     "round": 12,
+     "pick": 117,
+     "player": "Jordan Mason",
+     "pos": "RB",
+     "avail": 0.83,
+     "alt": "Jacory Croskey-Merritt",
+     "altAvail": 0.86
+    }
+   ]
+  },
+  {
+   "key": "B",
+   "label": "Chase falls to 4",
+   "strategy": "balanced, safe",
+   "freq": "44% of boards",
+   "proj": 1864,
+   "floor": 762,
+   "ceil": 2478,
+   "first": "Ja'Marr Chase",
+   "picks": [
+    {
+     "round": 2,
+     "pick": 17,
+     "player": "Nico Collins",
+     "pos": "WR",
+     "avail": 1.0,
+     "alt": "George Pickens",
      "altAvail": 1.0
+    },
+    {
+     "round": 3,
+     "pick": 24,
+     "player": "George Pickens",
+     "pos": "WR",
+     "avail": 0.75,
+     "alt": "DeVonta Smith",
+     "altAvail": 1.0
+    },
+    {
+     "round": 4,
+     "pick": 37,
+     "player": "Tee Higgins",
+     "pos": "WR",
+     "avail": 0.99,
+     "alt": "D'Andre Swift",
+     "altAvail": 0.99
+    },
+    {
+     "round": 5,
+     "pick": 44,
+     "player": "D'Andre Swift",
+     "pos": "RB",
+     "avail": 0.93,
+     "alt": "Colston Loveland",
+     "altAvail": 0.54
+    },
+    {
+     "round": 6,
+     "pick": 57,
+     "player": "Luther Burden III",
+     "pos": "WR",
+     "avail": 0.84,
+     "alt": "Justin Herbert",
+     "altAvail": 0.98
+    },
+    {
+     "round": 7,
+     "pick": 64,
+     "player": "Justin Herbert",
+     "pos": "QB",
+     "avail": 0.94,
+     "alt": "Jaylen Warren",
+     "altAvail": 1.0
+    },
+    {
+     "round": 8,
+     "pick": 77,
+     "player": "Jaylen Warren",
+     "pos": "RB",
+     "avail": 0.56,
+     "alt": "J.K. Dobbins",
+     "altAvail": 0.99
+    },
+    {
+     "round": 9,
+     "pick": 84,
+     "player": "Jake Ferguson",
+     "pos": "TE",
+     "avail": 0.95,
+     "alt": "Tucker Kraft",
+     "altAvail": 0.61
+    },
+    {
+     "round": 10,
+     "pick": 97,
+     "player": "Kyle Monangai",
+     "pos": "RB",
+     "avail": 0.9,
+     "alt": "J.K. Dobbins",
+     "altAvail": 0.68
+    },
+    {
+     "round": 11,
+     "pick": 104,
+     "player": "Blake Corum",
+     "pos": "RB",
+     "avail": 0.81,
+     "alt": "Jacory Croskey-Merritt",
+     "altAvail": 0.96
+    },
+    {
+     "round": 12,
+     "pick": 117,
+     "player": "Jordan Mason",
+     "pos": "RB",
+     "avail": 0.83,
+     "alt": "Jacory Croskey-Merritt",
+     "altAvail": 0.86
+    }
+   ]
+  },
+  {
+   "key": "C",
+   "label": "Gibbs or Bijan falls to 4",
+   "strategy": "WR heavy, safe",
+   "freq": "2% of boards",
+   "proj": 1925,
+   "floor": 776,
+   "ceil": 2522,
+   "first": "Bijan Robinson",
+   "picks": [
+    {
+     "round": 2,
+     "pick": 17,
+     "player": "Nico Collins",
+     "pos": "WR",
+     "avail": 1.0,
+     "alt": "George Pickens",
+     "altAvail": 1.0
+    },
+    {
+     "round": 3,
+     "pick": 24,
+     "player": "George Pickens",
+     "pos": "WR",
+     "avail": 0.75,
+     "alt": "DeVonta Smith",
+     "altAvail": 1.0
+    },
+    {
+     "round": 4,
+     "pick": 37,
+     "player": "Tee Higgins",
+     "pos": "WR",
+     "avail": 0.99,
+     "alt": "Ladd McConkey",
+     "altAvail": 0.88
+    },
+    {
+     "round": 5,
+     "pick": 44,
+     "player": "D'Andre Swift",
+     "pos": "RB",
+     "avail": 0.93,
+     "alt": "Colston Loveland",
+     "altAvail": 0.54
+    },
+    {
+     "round": 6,
+     "pick": 57,
+     "player": "Luther Burden III",
+     "pos": "WR",
+     "avail": 0.84,
+     "alt": "Jaylen Warren",
+     "altAvail": 1.0
+    },
+    {
+     "round": 7,
+     "pick": 64,
+     "player": "Jaylen Warren",
+     "pos": "RB",
+     "avail": 1.0,
+     "alt": "Justin Herbert",
+     "altAvail": 0.94
+    },
+    {
+     "round": 8,
+     "pick": 77,
+     "player": "Justin Herbert",
+     "pos": "QB",
+     "avail": 0.75,
+     "alt": "Trevor Lawrence",
+     "altAvail": 0.99
+    },
+    {
+     "round": 9,
+     "pick": 84,
+     "player": "Jake Ferguson",
+     "pos": "TE",
+     "avail": 0.95,
+     "alt": "Tucker Kraft",
+     "altAvail": 0.61
+    },
+    {
+     "round": 10,
+     "pick": 97,
+     "player": "Kyle Monangai",
+     "pos": "RB",
+     "avail": 0.9,
+     "alt": "Xavier Worthy",
+     "altAvail": 0.99
     },
     {
      "round": 11,
@@ -425,20 +425,20 @@
      "pick": 117,
      "player": "Jordan Mason",
      "pos": "RB",
-     "avail": 0.87,
+     "avail": 0.83,
      "alt": "Jacory Croskey-Merritt",
-     "altAvail": 0.89
+     "altAvail": 0.86
     }
    ]
   },
   {
    "key": "D",
    "label": "Nacua is out or suspended and Chase is gone",
-   "strategy": "robust RB",
+   "strategy": "balanced, safe",
    "freq": "only if Nacua is scratched",
-   "proj": 1870,
-   "floor": 710,
-   "ceil": 2459,
+   "proj": 1842,
+   "floor": 741,
+   "ceil": 2446,
    "first": null,
    "picks": [
     {
@@ -453,20 +453,20 @@
     {
      "round": 2,
      "pick": 17,
-     "player": "Chase Brown",
-     "pos": "RB",
-     "avail": 0.38,
-     "alt": "Omarion Hampton",
-     "altAvail": 0.54
+     "player": "Nico Collins",
+     "pos": "WR",
+     "avail": 1.0,
+     "alt": "George Pickens",
+     "altAvail": 1.0
     },
     {
      "round": 3,
      "pick": 24,
-     "player": "Kenneth Walker III",
-     "pos": "RB",
-     "avail": 0.47,
-     "alt": "Nico Collins",
-     "altAvail": 0.56
+     "player": "George Pickens",
+     "pos": "WR",
+     "avail": 0.75,
+     "alt": "DeVonta Smith",
+     "altAvail": 1.0
     },
     {
      "round": 4,
@@ -474,80 +474,80 @@
      "player": "Tee Higgins",
      "pos": "WR",
      "avail": 0.99,
-     "alt": "Ladd McConkey",
-     "altAvail": 0.92
+     "alt": "D'Andre Swift",
+     "altAvail": 0.99
     },
     {
      "round": 5,
      "pick": 44,
-     "player": "Luther Burden III",
-     "pos": "WR",
-     "avail": 1.0,
-     "alt": "Ladd McConkey",
-     "altAvail": 0.5
+     "player": "D'Andre Swift",
+     "pos": "RB",
+     "avail": 0.93,
+     "alt": "Colston Loveland",
+     "altAvail": 0.54
     },
     {
      "round": 6,
      "pick": 57,
-     "player": "Jameson Williams",
+     "player": "Luther Burden III",
      "pos": "WR",
-     "avail": 0.74,
-     "alt": "Christian Watson",
-     "altAvail": 1.0
+     "avail": 0.84,
+     "alt": "Justin Herbert",
+     "altAvail": 0.98
     },
     {
      "round": 7,
      "pick": 64,
      "player": "Justin Herbert",
      "pos": "QB",
-     "avail": 0.93,
-     "alt": "Christian Watson",
+     "avail": 0.94,
+     "alt": "Jaylen Warren",
      "altAvail": 1.0
     },
     {
      "round": 8,
      "pick": 77,
-     "player": "Tucker Kraft",
-     "pos": "TE",
-     "avail": 0.72,
-     "alt": "Sam LaPorta",
-     "altAvail": 0.38
+     "player": "Jaylen Warren",
+     "pos": "RB",
+     "avail": 0.56,
+     "alt": "J.K. Dobbins",
+     "altAvail": 0.99
     },
     {
      "round": 9,
      "pick": 84,
-     "player": "RJ Harvey",
-     "pos": "RB",
-     "avail": 1.0,
-     "alt": "Kyle Monangai",
-     "altAvail": 0.99
+     "player": "Jake Ferguson",
+     "pos": "TE",
+     "avail": 0.95,
+     "alt": "Tucker Kraft",
+     "altAvail": 0.61
     },
     {
      "round": 10,
      "pick": 97,
      "player": "Kyle Monangai",
      "pos": "RB",
-     "avail": 0.91,
-     "alt": "Blake Corum",
-     "altAvail": 0.91
+     "avail": 0.9,
+     "alt": "J.K. Dobbins",
+     "altAvail": 0.68
     },
     {
      "round": 11,
      "pick": 104,
      "player": "Blake Corum",
      "pos": "RB",
-     "avail": 0.84,
-     "alt": "Jordan Mason",
+     "avail": 0.81,
+     "alt": "Jacory Croskey-Merritt",
      "altAvail": 0.96
     },
     {
      "round": 12,
      "pick": 117,
-     "player": "KC Concepcion",
-     "pos": "WR",
-     "avail": 0.99,
-     "alt": "Jayden Reed",
-     "altAvail": 0.98
+     "player": "Jordan Mason",
+     "pos": "RB",
+     "avail": 0.83,
+     "alt": "Jacory Croskey-Merritt",
+     "altAvail": 0.86
     }
    ]
   }

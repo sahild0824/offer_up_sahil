@@ -36,7 +36,17 @@ SKILL_ROUNDS = 12    # 7 skill starters + 5 bench; D/ST and K fill rounds 13-14
 OPP_RULES = {"QB": (1, 10), "TE": (1, 11)}   # position -> (max before round, round from which a second is allowed)
 OPP_CAPS = {"RB": 6, "WR": 6, "QB": 2, "TE": 2}
 BENCH = 5
-KDST_PROB = {11: 0.10, 12: 0.25, 13: 0.85, 14: 0.95}   # chance an opponent spends the pick on K / D/ST (outside our pool)
+KDST_PROB = {11: 0.10, 12: 0.25, 13: 0.85, 14: 0.95}
+# Finding 9 of research/red_team_2.md: opponents that only take the smallest draw can never start a
+# run, so the simulation understated how fast a position can empty. Each pick heats its position;
+# heat decays every pick and pulls an opponent's valuation of that position earlier, which is what
+# a run actually is -- managers reacting to the last few picks rather than only to their own board.
+# The pull is a FRACTION of the current pick, not a fixed number of picks: nobody passes an elite
+# player at 1.03 because a position just went, and everybody reaches in round 8. At pick 50 with a
+# position freshly taken this is worth ~3 picks; at pick 5 it is worth a third of a pick.
+RUN_FRAC = 0.06     # share of the current pick number pulled per unit of heat
+RUN_DECAY = 0.72    # heat left after one pick
+CONSIDER = 14       # how deep past the best available an opponent will look   # chance an opponent spends the pick on K / D/ST (outside our pool)
 PRESETS = [("hero-rb", "balanced"), ("robust-rb", "balanced"), ("balanced", "balanced"), ("zero-rb", "balanced"),
            ("wr-heavy", "balanced"), ("hero-rb", "upside"), ("hero-rb", "safe")]
 KEY_PLAYERS = ["Jahmyr Gibbs", "Bijan Robinson", "Ja'Marr Chase", "Puka Nacua", "Jaxon Smith-Njigba", "Amon-Ra St. Brown", "Christian McCaffrey", "Jonathan Taylor",
@@ -105,6 +115,7 @@ def simulate(players, teams, slot, strategy, profile, sims, seed=7, forced_first
         X = rng.normal(adp, sd)
         order = np.argsort(X)
         taken = np.zeros(n, dtype=bool)
+        heat = {"QB": 0.0, "RB": 0.0, "WR": 0.0, "TE": 0.0}
         rosters = [[] for _ in range(teams)]
         my_roster = []
         ptr = 0
@@ -127,6 +138,9 @@ def simulate(players, teams, slot, strategy, profile, sims, seed=7, forced_first
                 else:
                     choice = max(cands, key=lambda p: my_score(p, rnd, profile, strategy, my_roster))
                 taken[idx_by_id[choice["id"]]] = True
+                for k in heat:
+                    heat[k] *= RUN_DECAY
+                heat[choice["pos"]] += 1.0
                 my_roster.append(choice)
                 pick_counter[r_ix][choice["name"]] += 1
                 continue
@@ -134,7 +148,7 @@ def simulate(players, teams, slot, strategy, profile, sims, seed=7, forced_first
                 continue
             ros = rosters[team_ix]
             cnt = Counter(p["pos"] for p in ros)
-            chosen = None
+            shortlist = []
             for i in order:
                 if taken[i]:
                     continue
@@ -143,11 +157,17 @@ def simulate(players, teams, slot, strategy, profile, sims, seed=7, forced_first
                     continue
                 if cnt[pos] >= OPP_CAPS[pos]:
                     continue
-                chosen = i
-                break
-            if chosen is None:
+                shortlist.append(i)
+                if len(shortlist) >= CONSIDER:
+                    break
+            if not shortlist:
                 continue
+            # best available, unless a run on another position pulls one of them ahead of him
+            chosen = min(shortlist, key=lambda i: X[i] - RUN_FRAC * pick * heat[players[i]["pos"]])
             taken[chosen] = True
+            for k in heat:
+                heat[k] *= RUN_DECAY
+            heat[players[chosen]["pos"]] += 1.0
             ros.append(players[chosen])
         values.append((lineup_value(my_roster, "proj"), lineup_value(my_roster, "floor"), lineup_value(my_roster, "ceil"),
                        Counter(p["pos"] for p in my_roster)))

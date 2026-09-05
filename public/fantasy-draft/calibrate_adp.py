@@ -25,6 +25,33 @@ REF = "espn_live"
 MAX_RANK = 160      # the drafted range in a 10-team, 14-round league is 140 picks
 MIN_SHARED = 12     # per position, below this fall back to the feed's overall offset
 
+# Findings 7 and 10 of research/red_team_2.md.
+#
+# 7. The reference (ESPN) is also half the blend's weight, so correcting every feed onto ESPN's
+#    positional structure manufactures consensus: it erases the cross-platform disagreement the
+#    blend exists to capture. Only feeds measured in a DIFFERENT game are translated now -- half
+#    PPR, TE premium, 12-team. A feed already in our format keeps its own opinion.
+#
+# 10. A feed dated Aug 26 compared against today's ESPN board attributes ten days of ADP drift to
+#     "format bias". For stale feeds the reference is rolled back to the feed's date using ESPN's
+#     own per-player 7-day movement, so only the format difference is left.
+OFF_FORMAT = {
+    "underdog", "rotowire_underdog", "udk_underdog_pick", "underdog_rank_aug24",
+    "draftsharks_half_consensus", "yahoo_rank_aug24", "flock_underdog_rank",   # half PPR
+    "ffpc", "flock_ffpc_rank",                                 # TE premium
+    "nfc_ppr", "nfc_ppr_aug28", "ffc_sep4", "subvertadown",    # 12-team
+    "udk_avg_pick", "udk_sleeper_pick", "udk_espn_pick", "udk_yahoo_pick",
+}
+FEED_DATE = {
+    "draftsharks_half_consensus": "2026-08-26", "rotowire_underdog": "2026-08-26",
+    "underdog": "2026-09-02", "udk_underdog_pick": "2026-08-31", "udk_avg_pick": "2026-08-31",
+    "udk_sleeper_pick": "2026-08-31", "udk_espn_pick": "2026-08-31", "udk_yahoo_pick": "2026-08-31",
+    "ffpc": "2026-08-29", "underdog_rank_aug24": "2026-08-24", "yahoo_rank_aug24": "2026-08-24",
+    "nfc_ppr_aug28": "2026-08-28", "subvertadown": "2026-08-31", "flock_ffpc_rank": "2026-08-31",
+    "nfc_ppr": "2026-09-04", "ffc_sep4": "2026-09-04",
+}
+TODAY = "2026-09-04"
+
 FORMAT_NOTE = {
     "underdog": "half PPR, best ball", "rotowire_underdog": "half PPR, best ball",
     "udk_underdog_pick": "half PPR, best ball", "underdog_rank_aug24": "half PPR",
@@ -73,23 +100,59 @@ def to_rank(vals):
     return {nm: i + 1 for i, (nm, _) in enumerate(sorted(vals.items(), key=lambda kv: kv[1]))}
 
 
+def days_old(feed):
+    d = FEED_DATE.get(feed)
+    if not d:
+        return 0
+    from datetime import date
+    a = date(*map(int, d.split("-")))
+    b = date(*map(int, TODAY.split("-")))
+    return (b - a).days
+
+
+def rolled_back_reference(ref_vals, days):
+    """ESPN's board as it stood `days` ago, using its own per-player 7-day movement.
+
+    market_features carries d7 = (adp now) - (adp a week ago) per platform, so subtracting a
+    pro-rated share of d7 undoes the drift between the feed's date and today.
+    """
+    if days <= 0:
+        return dict(ref_vals)
+    out = {}
+    for key, m in MARKET["players"].items():
+        nm = MKT_NAME.get(key)
+        if nm is None or nm not in ref_vals:
+            continue
+        d7 = ((m.get("adpLatest") or {}).get("espn") or {}).get("d7")
+        out[nm] = max(1.0, ref_vals[nm] - (d7 or 0.0) * min(days, 14) / 7.0)
+    for nm, v in ref_vals.items():
+        out.setdefault(nm, v)
+    return out
+
+
 def main():
     feeds = feed_values()
     pos = {r["name"]: r["pos"] for r in RANKINGS}
     if REF not in feeds:
         raise SystemExit(f"no {REF} feed to calibrate against")
 
-    out, report = {}, []
+    out, report, skipped = {}, [], []
     for feed, vals in sorted(feeds.items()):
-        if feed == REF or len(vals) < 40:
+        if feed == REF or feed.endswith("_asof") or len(vals) < 40:
             continue
+        if feed not in OFF_FORMAT:
+            skipped.append(feed)          # same format as ours: its disagreement is signal
+            continue
+        aged = days_old(feed)
+        feeds[REF + "_asof"] = rolled_back_reference(feeds[REF], aged)
         # rank both feeds over the players they share, so coverage differences do not masquerade as bias
-        common = [nm for nm in vals if nm in feeds[REF]]
-        pool = [nm for nm in common if to_rank({k: feeds[REF][k] for k in common})[nm] <= MAX_RANK]
+        REFV = feeds[REF + "_asof"]
+        common = [nm for nm in vals if nm in REFV]
+        pool = [nm for nm in common if to_rank({k: REFV[k] for k in common})[nm] <= MAX_RANK]
         if len(pool) < 30:
             continue
         rank = to_rank({nm: vals[nm] for nm in pool})
-        ref_rank = to_rank({nm: feeds[REF][nm] for nm in pool})
+        ref_rank = to_rank({nm: REFV[nm] for nm in pool})
         shared = pool
         d_all = [math.log(rank[nm]) - math.log(ref_rank[nm]) for nm in shared]
         overall = median(d_all)
@@ -99,7 +162,7 @@ def main():
             n_by_pos[p] = len(d)
             by_pos[p] = median(d) if len(d) >= MIN_SHARED else overall
         out[feed] = {"overall": round(overall, 4), "byPos": {k: round(v - overall, 4) for k, v in by_pos.items()},
-                     "n": len(shared), "nByPos": n_by_pos, "note": FORMAT_NOTE.get(feed, "")}
+                     "n": len(shared), "nByPos": n_by_pos, "note": FORMAT_NOTE.get(feed, ""), "daysOld": aged}
         report.append((feed, overall, by_pos, n_by_pos, FORMAT_NOTE.get(feed, "")))
 
     (HERE / "data" / "adp_calibration.json").write_text(json.dumps(
@@ -110,11 +173,13 @@ def main():
     ANCHOR = 40
     print(f"Calibrated against {REF} (our draft platform: ESPN, 10 teams, full PPR).")
     print(f"Numbers are where each feed puts a player ESPN has at pick {ANCHOR}. Negative = the feed drafts him earlier.\n")
-    print(f"{'feed':28s} {'n':>4s} {'QB':>7s} {'RB':>7s} {'WR':>7s} {'TE':>7s}   note")
+    print(f"{'feed':28s} {'age':>4s} {'QB':>7s} {'RB':>7s} {'WR':>7s} {'TE':>7s}   note")
     for feed, overall, by_pos, n_by_pos, note in sorted(report, key=lambda r: -abs(r[1])):
         cells = "".join(f"{ANCHOR * math.exp(by_pos[p] - overall) - ANCHOR:+7.1f}" for p in ("QB", "RB", "WR", "TE"))
-        print(f"{feed:28s} {sum(n_by_pos.values()):4d} {cells}   {note}")
-    print(f"\nwrote data/adp_calibration.json ({len(out)} feeds)")
+        print(f"{feed:28s} {days_old(feed):3d}d {cells}   {note}")
+    print(f"\nleft uncorrected ({len(skipped)} feeds already in our format; their disagreement is signal):")
+    print("  " + ", ".join(sorted(skipped)))
+    print(f"\nwrote data/adp_calibration.json ({len(out)} off-format feeds translated)")
 
 
 if __name__ == "__main__":
