@@ -76,6 +76,21 @@ python3 montecarlo.py --teams 12 --slot 7 --room blend
 
 The header toggle switches the app between full PPR (GDL Fantasy's setting: 1 point per reception), half PPR and standard. `build.py` builds all three: stat-line projections are re-scored, the Bayesian floor / ceiling shift by projected receptions, boom / bust week rates are recomputed from the game logs at the format's thresholds, format-specific ADP feeds are used (FFC, Sleeper, ESPN, Yahoo, Underdog, Draft Sharks) and the composite is shifted by half the change in value over the positional baseline. Overlays are embedded in `index.html` as `alt.half` and `alt.std`.
 
+## The optimal team
+
+```
+python3 branch_probs.py     # joint availability at each branch point (2,000 sims)
+python3 branch_freq.py      # which pick-4 branch fires, following the decision order
+python3 branch_sweep.py     # every strategy x profile against every branch
+python3 optimal.py          # consolidates the winners into scenarios/OPTIMAL.md
+```
+
+`scenarios/OPTIMAL.md` is the round-by-round answer: four draft-day branches (Nacua, Chase, a top-3
+back falling, and Nacua scratched), each running the strategy that won its branch on projected lineup
+value, with the simulated chance each target survives to that pick and the best fallback. The
+per-player availability table gives marginals; `branch_probs.py` adds the joint numbers that actually
+decide a pick — whether *any* member of a tier survives to pick 17, 24, 57 or 77.
+
 ## Caveats
 
 This environment could not open fantasy sites, Reddit or the Sleeper API directly; rankings and ADP come from dated GitHub mirrors and article findings from search-result summaries. See the Model tab and `research/*.md` for what is stale or missing. Verify ADP on your own platform before draft night.
