@@ -16,9 +16,9 @@ play-caller tendency and unresolved situations.
 import statistics
 
 SW = {
-    "env": 0.35,        # team offensive environment (Vegas, QB tier, O-line, play-caller tendency)
-    "change": 0.35,     # 2026 opportunity / competition / QB / coaching change for the player
-    "vacated": 0.15,    # share of 2025 volume the team vacated (data, nflverse)
+    "env": 0.40,        # team offensive environment (Vegas, QB tier, O-line, play-caller tendency); Vegas mattered for RB boom in the backtest
+    "change": 0.45,     # 2026 opportunity / competition / QB / coaching change for the player
+    "vacated": 0.0,     # displayed only: the 2016-25 backtest found vacated share predicts nothing for incumbents or arrivals
     "schedule": 0.15,   # 0.4 full-season + 0.6 fantasy playoffs (weeks 15-17), both small by design
 }
 QB_TIER = {1: 0.6, 2: 0.25, 3: -0.1, 4: -0.5}
@@ -117,16 +117,17 @@ def compute(pos, team, env_row, opp_row, sos_row, team_ctx, league, arrival=Fals
             why.append(f"Arrives into a room that vacated {share:.0%} of its 2025 {'targets' if pos != 'RB' else 'carries'}")
 
     # --- evidence-based priors (research/methods_2026.md) --------------------------------------
+    # Backtest 2016-25 (research/BACKTEST.md), within position and ADP band:
+    #   rookie WR boom +16 / bust -17 points; year-2 RB boom +10; year-2 WR no lift; changed teams: RB bust +8, WR bust +7, boom -4 to -6
     prior = 0.0
-    if pos in ("WR", "TE") and years_exp is not None:
-        if years_exp == 1:
-            prior += 0.15; why.append("Year-2 receiver: ~15% breakout base rate (RotoViz)")
-        elif years_exp == 2:
-            prior += 0.10; why.append("Year-3 receiver: ~10% breakout base rate")
-    if rookie and draft_no and draft_no <= 32:
-        prior += 0.12; why.append("First-round rookie: 71% of first-round RBs finish top-24; first-round WRs average ~100 targets")
-    if arrival and pos == "WR":
-        prior -= 0.10; why.append("Receivers who change teams decline ~2 PPG on average (77% decline)")
+    if pos == "RB" and years_exp == 1:
+        prior += 0.10; why.append("Year-2 RB: boomed 10 points more often than peers at the same ADP, 2016-25")
+    if rookie and pos == "WR" and draft_no and draft_no <= 64:
+        prior += 0.15; why.append("Drafted rookie WR: boomed 16 points more and busted 17 points less than peers at the same ADP, 2016-25")
+    elif rookie and draft_no and draft_no <= 32:
+        prior += 0.05; why.append("First-round rookie")
+    if arrival and pos in ("WR", "RB"):
+        prior -= 0.10; why.append(f"Changed teams: {'receivers' if pos == 'WR' else 'backs'} who moved busted {7 if pos == 'WR' else 8} points more often, 2016-25")
     parts["priors"] = round(prior, 2)
 
     # --- schedule ----------------------------------------------------------------------------

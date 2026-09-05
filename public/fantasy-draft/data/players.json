@@ -173,10 +173,10 @@
   "posRank": 1,
   "vbd": 167,
   "tier": 1,
-  "sit": 92,
-  "boom": 88,
-  "bust": 4,
-  "risk": 28,
+  "sit": 96,
+  "boom": 86,
+  "bust": 29,
+  "risk": 40,
   "boomWhy": [
    "Ceiling 450 pts vs 351 projected (Bayesian p90)",
    "Boom weeks (top-6 scoring) in 35% of games, 2024-25 weighted",
@@ -188,7 +188,8 @@
    "Most bearish source has him #5, 4 spots below the composite",
    "Floor 146 pts vs 351 projected (Bayesian p10)",
    "Bust weeks (below the startable line) in 4% of games, 2024-25 weighted",
-   "Scored 20% above expected fantasy points in 2025 (touchdown / efficiency regression risk)"
+   "Scored 20% above expected fantasy points in 2025 (touchdown / efficiency regression risk)",
+   "Coming off an elite RB season: prior-year top-3 RBs repeated a top-3 finish 23% of the time and lost 4.5 PPG on average, 2016-25"
   ],
   "riskWhy": [
    "Calibrated injury model: 59% chance of missing time (AUC 0.75)",
@@ -375,10 +376,10 @@
   "posRank": 2,
   "vbd": 163,
   "tier": 1,
-  "sit": 70,
-  "boom": 95,
-  "bust": 7,
-  "risk": 79,
+  "sit": 76,
+  "boom": 92,
+  "bust": 36,
+  "risk": 90,
   "boomWhy": [
    "Ceiling 449 pts vs 347 projected (Bayesian p90)",
    "Boom weeks (top-6 scoring) in 47% of games, 2024-25 weighted",
@@ -390,6 +391,7 @@
    "Floor 160 pts vs 347 projected (Bayesian p10)",
    "Bust weeks (below the startable line) in 4% of games, 2024-25 weighted",
    "Falcons QB situation unsettled",
+   "Coming off an elite RB season: prior-year top-3 RBs repeated a top-3 finish 23% of the time and lost 4.5 PPG on average, 2016-25",
    "2026 role unresolved: Bellcow already; run-leaning staff and Allgeier's departure push his share up. QB situation is the only drag."
   ],
   "riskWhy": [
@@ -574,10 +576,10 @@
   "posRank": 1,
   "vbd": 132,
   "tier": 1,
-  "sit": 97,
-  "boom": 81,
+  "sit": 96,
+  "boom": 75,
   "bust": 0,
-  "risk": 46,
+  "risk": 68,
   "boomWhy": [
    "Ceiling 422 pts vs 323 projected (Bayesian p90)",
    "Boom weeks (top-6 scoring) in 37% of games, 2024-25 weighted",
@@ -765,9 +767,9 @@
   "posRank": 2,
   "vbd": 142,
   "tier": 1,
-  "sit": 75,
-  "boom": 84,
-  "bust": 46,
+  "sit": 81,
+  "boom": 78,
+  "bust": 72,
   "risk": 97,
   "boomWhy": [
    "Ceiling 410 pts vs 333 projected (Bayesian p90)",
@@ -965,10 +967,10 @@
   "posRank": 3,
   "vbd": 125,
   "tier": 1,
-  "sit": 20,
-  "boom": 79,
-  "bust": 68,
-  "risk": 48,
+  "sit": 30,
+  "boom": 70,
+  "bust": 76,
+  "risk": 63,
   "boomWhy": [
    "Most bullish source has him #1, 4 spots above the composite",
    "Ceiling 390 pts vs 316 projected (Bayesian p90)",
@@ -1164,9 +1166,9 @@
   "posRank": 4,
   "vbd": 110,
   "tier": 2,
-  "sit": 47,
-  "boom": 85,
-  "bust": 2,
+  "sit": 60,
+  "boom": 80,
+  "bust": 1,
   "risk": 28,
   "boomWhy": [
    "Most bullish source has him #3, 4 spots above the composite",
@@ -1373,10 +1375,10 @@
   "posRank": 3,
   "vbd": 114,
   "tier": 2,
-  "sit": 17,
-  "boom": 83,
-  "bust": 93,
-  "risk": 61,
+  "sit": 22,
+  "boom": 67,
+  "bust": 95,
+  "risk": 77,
   "boomWhy": [
    "Most bullish source has him #3, 4 spots above the composite",
    "Ceiling 378 pts vs 298 projected (Bayesian p90)",
@@ -1573,9 +1575,9 @@
   "vbd": 107,
   "tier": 2,
   "sit": 63,
-  "boom": 28,
-  "bust": 77,
-  "risk": 14,
+  "boom": 22,
+  "bust": 73,
+  "risk": 20,
   "boomWhy": [
    "Ceiling 350 pts vs 291 projected (Bayesian p90)",
    "Boom weeks (top-6 scoring) in 37% of games, 2024-25 weighted",
@@ -1765,10 +1767,10 @@
   "posRank": 5,
   "vbd": 83,
   "tier": 3,
-  "sit": 35,
-  "boom": 35,
-  "bust": 3,
-  "risk": 21,
+  "sit": 45,
+  "boom": 31,
+  "bust": 6,
+  "risk": 48,
   "boomWhy": [
    "Most bullish source has him #6, 4 spots above the composite",
    "Ceiling 356 pts vs 274 projected (Bayesian p90)",
@@ -1963,10 +1965,10 @@
   "posRank": 5,
   "vbd": 73,
   "tier": 2,
-  "sit": 89,
-  "boom": 54,
-  "bust": 15,
-  "risk": 38,
+  "sit": 91,
+  "boom": 51,
+  "bust": 42,
+  "risk": 55,
   "boomWhy": [
    "Most bullish source has him #7, 4 spots above the composite",
    "Ceiling 336 pts vs 257 projected (Bayesian p90)",
@@ -2161,10 +2163,10 @@
   "posRank": 6,
   "vbd": 71,
   "tier": 3,
-  "sit": 62,
-  "boom": 77,
-  "bust": 6,
-  "risk": 26,
+  "sit": 73,
+  "boom": 75,
+  "bust": 10,
+  "risk": 50,
   "boomWhy": [
    "Most bullish source has him #4, 7 spots above the composite",
    "Ceiling 347 pts vs 262 projected (Bayesian p90)",
@@ -2362,10 +2364,10 @@
   "posRank": 6,
   "vbd": 94,
   "tier": 3,
-  "sit": 26,
-  "boom": 79,
-  "bust": 90,
-  "risk": 45,
+  "sit": 28,
+  "boom": 68,
+  "bust": 88,
+  "risk": 71,
   "boomWhy": [
    "Most bullish source has him #9, 6 spots above the composite",
    "Ceiling 362 pts vs 278 projected (Bayesian p90)",
@@ -2561,10 +2563,10 @@
   "posRank": 7,
   "vbd": 64,
   "tier": 3,
-  "sit": 85,
-  "boom": 49,
-  "bust": 86,
-  "risk": 73,
+  "sit": 89,
+  "boom": 45,
+  "bust": 91,
+  "risk": 79,
   "boomWhy": [
    "Most bullish source has him #10, 5 spots above the composite",
    "Ceiling 313 pts vs 248 projected (Bayesian p90)",
@@ -2763,10 +2765,10 @@
   "posRank": 8,
   "vbd": 77,
   "tier": 3,
-  "sit": 58,
-  "boom": 84,
-  "bust": 2,
-  "risk": 11,
+  "sit": 65,
+  "boom": 74,
+  "bust": 4,
+  "risk": 27,
   "boomWhy": [
    "Most bullish source has him #7, 9 spots above the composite",
    "Ceiling 339 pts vs 261 projected (Bayesian p90)",
@@ -2963,9 +2965,9 @@
   "posRank": 7,
   "vbd": 82,
   "tier": 4,
-  "sit": 11,
-  "boom": 69,
-  "bust": 34,
+  "sit": 17,
+  "boom": 63,
+  "bust": 57,
   "risk": 99,
   "boomWhy": [
    "Most bullish source has him #8, 8 spots above the composite",
@@ -3180,10 +3182,10 @@
   "posRank": 8,
   "vbd": 55,
   "tier": 4,
-  "sit": 83,
-  "boom": 89,
-  "bust": 40,
-  "risk": 83,
+  "sit": 79,
+  "boom": 84,
+  "bust": 75,
+  "risk": 86,
   "boomWhy": [
    "Most bullish source has him #6, 12 spots above the composite",
    "Ceiling 315 pts vs 246 projected (Bayesian p90)",
@@ -3195,7 +3197,7 @@
    "Most bearish source has him #40, 22 spots below the composite",
    "Floor 85 pts vs 246 projected (Bayesian p10)",
    "Bust weeks (below the startable line) in 16% of games, 2024-25 weighted",
-   "New team in 2026 (PHI to NE)",
+   "New team in 2026 (PHI to NE): backs and receivers who changed teams busted 7-8 points more often, 2016-25",
    "Age 29: at or past the historical WR decline point"
   ],
   "riskWhy": [
@@ -3203,7 +3205,7 @@
    "Drafted anywhere from pick 9 to 26 across 1518 FFC drafts (\u00b12.6)",
    "Missed 6 regular-season games in 2024-25",
    "Week-to-week swing: 2025 scores varied \u00b164% of his average",
-   "Situation: New team in 2026 (PHI to NE); coaching change"
+   "Situation: New team in 2026 (PHI to NE): backs and receivers who changed teams busted 7-8 points more often, 2016-25; coaching change"
   ],
   "flag": null,
   "note": null
@@ -3269,7 +3271,7 @@
   "sitParts": {
    "env": 0.36,
    "change": 0.5,
-   "priors": 0.0,
+   "priors": 0.1,
    "schedule": 0.03,
    "variance": 0.25
   },
@@ -3382,10 +3384,10 @@
   "posRank": 9,
   "vbd": 48,
   "tier": 3,
-  "sit": 93,
+  "sit": 96,
   "boom": 98,
-  "bust": 72,
-  "risk": 55,
+  "bust": 77,
+  "risk": 67,
   "boomWhy": [
    "Most bullish source has him #7, 12 spots above the composite",
    "Ceiling 285 pts vs 232 projected (Bayesian p90)",
@@ -3472,7 +3474,7 @@
    "env": 0.17,
    "change": 0.5,
    "vacated": 1.0,
-   "priors": 0.0,
+   "priors": -0.1,
    "schedule": -0.22,
    "variance": 0.25
   },
@@ -3587,10 +3589,10 @@
   "posRank": 10,
   "vbd": 52,
   "tier": 3,
-  "sit": 98,
-  "boom": 97,
-  "bust": 76,
-  "risk": 77,
+  "sit": 73,
+  "boom": 95,
+  "bust": 83,
+  "risk": 83,
   "boomWhy": [
    "Most bullish source has him #11, 8 spots above the composite",
    "Ceiling 302 pts vs 236 projected (Bayesian p90)",
@@ -3790,10 +3792,10 @@
   "posRank": 9,
   "vbd": 57,
   "tier": 4,
-  "sit": 69,
-  "boom": 78,
-  "bust": 8,
-  "risk": 29,
+  "sit": 80,
+  "boom": 76,
+  "bust": 15,
+  "risk": 56,
   "boomWhy": [
    "Most bullish source has him #9, 11 spots above the composite",
    "Ceiling 322 pts vs 248 projected (Bayesian p90)",
@@ -3878,7 +3880,7 @@
   "sitParts": {
    "env": -0.21,
    "change": 0.38,
-   "priors": 0.0,
+   "priors": 0.1,
    "schedule": -0.04,
    "variance": 0.44
   },
@@ -3993,9 +3995,9 @@
   "posRank": 11,
   "vbd": 69,
   "tier": 3,
-  "sit": 49,
-  "boom": 93,
-  "bust": 23,
+  "sit": 77,
+  "boom": 91,
+  "bust": 46,
   "risk": 99,
   "boomWhy": [
    "Most bullish source has him #7, 13 spots above the composite",
@@ -4081,7 +4083,7 @@
   "sitParts": {
    "env": -0.64,
    "change": 0.5,
-   "priors": 0.1,
+   "priors": 0.0,
    "schedule": -0.03,
    "variance": 0.25
   },
@@ -4196,10 +4198,10 @@
   "posRank": 1,
   "vbd": 60,
   "tier": 1,
-  "sit": 39,
+  "sit": 19,
   "boom": 96,
-  "bust": 19,
-  "risk": 67,
+  "bust": 47,
+  "risk": 84,
   "boomWhy": [
    "Most bullish source has him #9, 11 spots above the composite",
    "Ceiling 302 pts vs 231 projected (Bayesian p90)",
@@ -4398,10 +4400,10 @@
   "posRank": 12,
   "vbd": 73,
   "tier": 4,
-  "sit": 83,
-  "boom": 89,
-  "bust": 88,
-  "risk": 47,
+  "sit": 86,
+  "boom": 88,
+  "bust": 89,
+  "risk": 64,
   "boomWhy": [
    "Most bullish source has him #11, 11 spots above the composite",
    "Ceiling 328 pts vs 257 projected (Bayesian p90)",
@@ -4594,10 +4596,10 @@
   "posRank": 10,
   "vbd": 61,
   "tier": 5,
-  "sit": 35,
-  "boom": 53,
-  "bust": 9,
-  "risk": 24,
+  "sit": 45,
+  "boom": 46,
+  "bust": 20,
+  "risk": 38,
   "boomWhy": [
    "Most bullish source has him #9, 13 spots above the composite",
    "Ceiling 323 pts vs 252 projected (Bayesian p90)",
@@ -4792,10 +4794,10 @@
   "posRank": 11,
   "vbd": 58,
   "tier": 5,
-  "sit": 31,
-  "boom": 50,
-  "bust": 44,
-  "risk": 44,
+  "sit": 43,
+  "boom": 47,
+  "bust": 61,
+  "risk": 69,
   "boomWhy": [
    "Most bullish source has him #9, 15 spots above the composite",
    "Ceiling 336 pts vs 249 projected (Bayesian p90)",
@@ -4992,10 +4994,10 @@
   "posRank": 2,
   "vbd": 65,
   "tier": 1,
-  "sit": 1,
-  "boom": 87,
-  "bust": 67,
-  "risk": 47,
+  "sit": 3,
+  "boom": 84,
+  "bust": 79,
+  "risk": 67,
   "boomWhy": [
    "Most bullish source has him #11, 13 spots above the composite",
    "Ceiling 314 pts vs 236 projected (Bayesian p90)",
@@ -5195,10 +5197,10 @@
   "posRank": 12,
   "vbd": 66,
   "tier": 6,
-  "sit": 89,
-  "boom": 87,
-  "bust": 87,
-  "risk": 76,
+  "sit": 96,
+  "boom": 82,
+  "bust": 91,
+  "risk": 93,
   "boomWhy": [
    "Most bullish source has him #11, 17 spots above the composite",
    "Ceiling 348 pts vs 257 projected (Bayesian p90)",
@@ -5285,7 +5287,7 @@
   "sitParts": {
    "env": -0.17,
    "change": 0.0,
-   "priors": 0.1,
+   "priors": 0.0,
    "schedule": 0.81,
    "variance": 0.25
   },
@@ -5398,9 +5400,9 @@
   "posRank": 13,
   "vbd": 39,
   "tier": 6,
-  "sit": 63,
-  "boom": 92,
-  "bust": 96,
+  "sit": 52,
+  "boom": 86,
+  "bust": 94,
   "risk": 100,
   "boomWhy": [
    "Most bullish source has him #11, 18 spots above the composite",
@@ -5602,8 +5604,8 @@
   "tier": 1,
   "sit": 72,
   "boom": 42,
-  "bust": 28,
-  "risk": 55,
+  "bust": 38,
+  "risk": 68,
   "boomWhy": [
    "Most bullish source has him #21, 8 spots above the composite",
    "Ceiling 381 pts vs 342 projected (Bayesian p90)",
@@ -5802,10 +5804,10 @@
   "posRank": 14,
   "vbd": 36,
   "tier": 6,
-  "sit": 97,
-  "boom": 100,
-  "bust": 11,
-  "risk": 33,
+  "sit": 96,
+  "boom": 97,
+  "bust": 19,
+  "risk": 42,
   "boomWhy": [
    "Most bullish source has him #8, 22 spots above the composite",
    "Ceiling 294 pts vs 227 projected (Bayesian p90)",
@@ -5891,7 +5893,7 @@
    "env": -0.52,
    "change": 0.62,
    "vacated": 1.0,
-   "priors": 0.12,
+   "priors": 0.05,
    "schedule": 0.29,
    "variance": 0.56
   },
@@ -6005,7 +6007,7 @@
   "posRank": 13,
   "vbd": 41,
   "tier": 5,
-  "sit": 98,
+  "sit": 74,
   "boom": 99,
   "bust": 92,
   "risk": 98,
@@ -6208,10 +6210,10 @@
   "posRank": 14,
   "vbd": 44,
   "tier": 5,
-  "sit": 36,
-  "boom": 23,
-  "bust": 62,
-  "risk": 52,
+  "sit": 48,
+  "boom": 24,
+  "bust": 66,
+  "risk": 48,
   "boomWhy": [
    "Most bullish source has him #24, 9 spots above the composite",
    "Ceiling 283 pts vs 228 projected (Bayesian p90)",
@@ -6405,10 +6407,10 @@
   "posRank": 15,
   "vbd": 34,
   "tier": 5,
-  "sit": 59,
-  "boom": 59,
-  "bust": 54,
-  "risk": 1,
+  "sit": 58,
+  "boom": 52,
+  "bust": 65,
+  "risk": 3,
   "boomWhy": [
    "Most bullish source has him #22, 11 spots above the composite",
    "Ceiling 291 pts vs 218 projected (Bayesian p90)",
@@ -6606,10 +6608,10 @@
   "posRank": 15,
   "vbd": 48,
   "tier": 6,
-  "sit": 93,
-  "boom": 96,
-  "bust": 64,
-  "risk": 85,
+  "sit": 96,
+  "boom": 92,
+  "bust": 67,
+  "risk": 87,
   "boomWhy": [
    "Most bullish source has him #12, 22 spots above the composite",
    "Ceiling 332 pts vs 239 projected (Bayesian p90)",
@@ -6803,10 +6805,10 @@
   "posRank": 16,
   "vbd": 33,
   "tier": 5,
-  "sit": 68,
-  "boom": 20,
-  "bust": 1,
-  "risk": 5,
+  "sit": 66,
+  "boom": 16,
+  "bust": 3,
+  "risk": 10,
   "boomWhy": [
    "Most bullish source has him #24, 11 spots above the composite",
    "Ceiling 289 pts vs 217 projected (Bayesian p90)",
@@ -7000,10 +7002,10 @@
   "posRank": 16,
   "vbd": 36,
   "tier": 7,
-  "sit": 25,
-  "boom": 91,
-  "bust": 95,
-  "risk": 73,
+  "sit": 39,
+  "boom": 83,
+  "bust": 92,
+  "risk": 75,
   "boomWhy": [
    "Most bullish source has him #12, 24 spots above the composite",
    "Ceiling 299 pts vs 227 projected (Bayesian p90)",
@@ -7201,9 +7203,9 @@
   "posRank": 17,
   "vbd": 30,
   "tier": 7,
-  "sit": 97,
-  "boom": 76,
-  "bust": 14,
+  "sit": 96,
+  "boom": 73,
+  "bust": 25,
   "risk": 25,
   "boomWhy": [
    "Most bullish source has him #19, 18 spots above the composite",
@@ -7288,7 +7290,7 @@
   "sitParts": {
    "env": 0.25,
    "change": 0.38,
-   "priors": 0.15,
+   "priors": 0.0,
    "schedule": -0.49,
    "variance": 0.19
   },
@@ -7401,10 +7403,10 @@
   "posRank": 3,
   "vbd": 29,
   "tier": 2,
-  "sit": 90,
+  "sit": 79,
   "boom": 93,
-  "bust": 10,
-  "risk": 33,
+  "bust": 16,
+  "risk": 16,
   "boomWhy": [
    "Most bullish source has him #22, 16 spots above the composite",
    "Ceiling 234 pts vs 200 projected (Bayesian p90)",
@@ -7487,7 +7489,7 @@
   "sitParts": {
    "env": 0.37,
    "change": 0.5,
-   "priors": 0.1,
+   "priors": 0.0,
    "schedule": -0.45,
    "variance": 0.25
   },
@@ -7600,10 +7602,10 @@
   "posRank": 18,
   "vbd": 23,
   "tier": 7,
-  "sit": 91,
-  "boom": 75,
-  "bust": 5,
-  "risk": 25,
+  "sit": 89,
+  "boom": 74,
+  "bust": 3,
+  "risk": 26,
   "boomWhy": [
    "Most bullish source has him #15, 24 spots above the composite",
    "Ceiling 282 pts vs 214 projected (Bayesian p90)",
@@ -7678,13 +7680,12 @@
    "Offensive line ranked 26 of 32",
    "Competition -1",
    "OROY with 122 targets/25.4% share",
-   "Jalen Coker healthy and productive late 2025; Legette/Metchie depth",
-   "Year-2 receiver: ~15% breakout base rate (RotoViz)"
+   "Jalen Coker healthy and productive late 2025; Legette/Metchie depth"
   ],
   "sitParts": {
    "env": -0.34,
    "change": -0.12,
-   "priors": 0.15,
+   "priors": 0.0,
    "schedule": -0.06,
    "variance": 0.06
   },
@@ -7797,10 +7798,10 @@
   "posRank": 19,
   "vbd": 31,
   "tier": 7,
-  "sit": 25,
-  "boom": 44,
-  "bust": 1,
-  "risk": 3,
+  "sit": 12,
+  "boom": 40,
+  "bust": 4,
+  "risk": 2,
   "boomWhy": [
    "Most bullish source has him #15, 25 spots above the composite",
    "Ceiling 294 pts vs 222 projected (Bayesian p90)",
@@ -7875,13 +7876,14 @@
    "Opportunity +1",
    "Signed 4y/$48M ($28M gtd, 6th among RBs) - team plans to feature him",
    "ESPN: 'expect heavy running back usage'; Kamara restructured to a reduced role",
-   "Was 11th in snap share / 5th in RZ touches at JAX"
+   "Was 11th in snap share / 5th in RZ touches at JAX",
+   "Changed teams: backs who moved busted 8 points more often, 2016-25"
   ],
   "sitParts": {
    "env": -0.2,
    "change": 0.25,
    "vacated": 0.0,
-   "priors": 0.0,
+   "priors": -0.1,
    "schedule": 0.39,
    "variance": 0.12
   },
@@ -7996,10 +7998,10 @@
   "posRank": 17,
   "vbd": 31,
   "tier": 6,
-  "sit": 57,
-  "boom": 7,
-  "bust": 61,
-  "risk": 18,
+  "sit": 41,
+  "boom": 3,
+  "bust": 52,
+  "risk": 30,
   "boomWhy": [
    "Most bullish source has him #27, 13 spots above the composite",
    "Ceiling 263 pts vs 215 projected (Bayesian p90)",
@@ -8016,7 +8018,7 @@
    "Calibrated injury model: 59% chance of missing time (AUC 0.75)",
    "Drafted anywhere from pick 24 to 51 across 930 FFC drafts (\u00b14.7)",
    "Missed 2 regular-season games in 2024-25",
-   "Situation: Before the move: new team after 300-touch league-winning 2025 in Jacksonville under Coen; New team in 2026 (JAX to NO)"
+   "Situation: Before the move: new team after 300-touch league-winning 2025 in Jacksonville under Coen; New team in 2026 (JAX to NO): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "flag": null,
   "note": "Sources say he 'may not replicate the success he had in Jacksonville last year' - new team in 2026 (team not confirmed in excerpts)."
@@ -8193,10 +8195,10 @@
   "posRank": 20,
   "vbd": 17,
   "tier": 7,
-  "sit": 82,
-  "boom": 80,
-  "bust": 33,
-  "risk": 57,
+  "sit": 90,
+  "boom": 88,
+  "bust": 50,
+  "risk": 70,
   "boomWhy": [
    "Most bullish source has him #18, 22 spots above the composite",
    "Ceiling 274 pts vs 208 projected (Bayesian p90)",
@@ -8209,13 +8211,13 @@
    "Floor 62 pts vs 208 projected (Bayesian p10)",
    "Bust weeks (below the startable line) in 22% of games, 2024-25 weighted",
    "Before the move: new team/QB (Bo Nix) and Payton scheme",
-   "New team in 2026 (MIA to DEN)"
+   "New team in 2026 (MIA to DEN): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "riskWhy": [
    "Calibrated injury model: 48% chance of missing time (AUC 0.75)",
    "Drafted anywhere from pick 31 to 68 across 2148 FFC drafts (\u00b14.9)",
    "Missed 3 regular-season games in 2024-25",
-   "Situation: Before the move: new team/QB (Bo Nix) and Payton scheme; New team in 2026 (MIA to DEN); coaching change"
+   "Situation: Before the move: new team/QB (Bo Nix) and Payton scheme; New team in 2026 (MIA to DEN): backs and receivers who changed teams busted 7-8 points more often, 2016-25; coaching change"
   ],
   "flag": null,
   "note": "Trade to Denver widely viewed as positive."
@@ -8281,7 +8283,7 @@
   "sitParts": {
    "env": 0.16,
    "change": 0.38,
-   "priors": 0.15,
+   "priors": 0.0,
    "schedule": 0.35,
    "variance": 0.19
   },
@@ -8395,10 +8397,10 @@
   "posRank": 21,
   "vbd": 33,
   "tier": 7,
-  "sit": 97,
-  "boom": 95,
-  "bust": 12,
-  "risk": 50,
+  "sit": 87,
+  "boom": 90,
+  "bust": 17,
+  "risk": 45,
   "boomWhy": [
    "Most bullish source has him #14, 27 spots above the composite",
    "Ceiling 310 pts vs 224 projected (Bayesian p90)",
@@ -8601,10 +8603,10 @@
   "posRank": 2,
   "vbd": 21,
   "tier": 2,
-  "sit": 68,
-  "boom": 72,
-  "bust": 65,
-  "risk": 95,
+  "sit": 65,
+  "boom": 68,
+  "bust": 72,
+  "risk": 98,
   "boomWhy": [
    "Most bullish source has him #25, 18 spots above the composite",
    "Ceiling 366 pts vs 304 projected (Bayesian p90)",
@@ -8799,10 +8801,10 @@
   "posRank": 18,
   "vbd": 23,
   "tier": 7,
-  "sit": 40,
-  "boom": 22,
-  "bust": 3,
-  "risk": 4,
+  "sit": 43,
+  "boom": 17,
+  "bust": 1,
+  "risk": 8,
   "boomWhy": [
    "Most bullish source has him #32, 15 spots above the composite",
    "Ceiling 278 pts vs 207 projected (Bayesian p90)",
@@ -8812,8 +8814,7 @@
   "bustWhy": [
    "Most bearish source has him #77, 30 spots below the composite",
    "Floor 71 pts vs 207 projected (Bayesian p10)",
-   "Bust weeks (below the startable line) in 12% of games, 2024-25 weighted",
-   "Age 27: at or past the historical RB decline point"
+   "Bust weeks (below the startable line) in 12% of games, 2024-25 weighted"
   ],
   "riskWhy": [
    "Calibrated injury model: 52% chance of missing time (AUC 0.75)",
@@ -8885,7 +8886,7 @@
   "sitParts": {
    "env": -0.25,
    "change": 0.0,
-   "priors": 0.0,
+   "priors": 0.1,
    "schedule": -0.01,
    "variance": 0.25
   },
@@ -8998,10 +8999,10 @@
   "posRank": 19,
   "vbd": 27,
   "tier": 7,
-  "sit": 20,
-  "boom": 74,
-  "bust": 95,
-  "risk": 83,
+  "sit": 42,
+  "boom": 72,
+  "bust": 93,
+  "risk": 84,
   "boomWhy": [
    "Most bullish source has him #32, 15 spots above the composite",
    "Ceiling 270 pts vs 211 projected (Bayesian p90)",
@@ -9202,10 +9203,10 @@
   "posRank": 22,
   "vbd": 16,
   "tier": 8,
-  "sit": 51,
+  "sit": 62,
   "boom": 13,
-  "bust": 92,
-  "risk": 1,
+  "bust": 95,
+  "risk": 5,
   "boomWhy": [
    "Most bullish source has him #35, 13 spots above the composite",
    "Ceiling 280 pts vs 207 projected (Bayesian p90)",
@@ -9289,7 +9290,7 @@
   "sitParts": {
    "env": 0.25,
    "change": 0.62,
-   "priors": 0.15,
+   "priors": 0.0,
    "schedule": 0.02,
    "variance": 0.31
   },
@@ -9402,10 +9403,10 @@
   "posRank": 23,
   "vbd": 9,
   "tier": 8,
-  "sit": 97,
-  "boom": 94,
-  "bust": 13,
-  "risk": 56,
+  "sit": 96,
+  "boom": 96,
+  "bust": 12,
+  "risk": 36,
   "boomWhy": [
    "Most bullish source has him #26, 24 spots above the composite",
    "Ceiling 263 pts vs 200 projected (Bayesian p90)",
@@ -9603,8 +9604,8 @@
   "vbd": 20,
   "tier": 7,
   "sit": 5,
-  "boom": 85,
-  "bust": 91,
+  "boom": 84,
+  "bust": 90,
   "risk": 76,
   "boomWhy": [
    "Ceiling 284 pts vs 204 projected (Bayesian p90)",
@@ -9812,9 +9813,9 @@
   "posRank": 24,
   "vbd": 24,
   "tier": 8,
-  "sit": 30,
-  "boom": 25,
-  "bust": 20,
+  "sit": 47,
+  "boom": 26,
+  "bust": 38,
   "risk": 0,
   "boomWhy": [
    "Most bullish source has him #28, 23 spots above the composite",
@@ -10008,10 +10009,10 @@
   "posRank": 25,
   "vbd": 16,
   "tier": 8,
-  "sit": 47,
-  "boom": 42,
-  "bust": 26,
-  "risk": 43,
+  "sit": 60,
+  "boom": 52,
+  "bust": 45,
+  "risk": 31,
   "boomWhy": [
    "Most bullish source has him #35, 17 spots above the composite",
    "Ceiling 273 pts vs 207 projected (Bayesian p90)",
@@ -10087,13 +10088,12 @@
    "Offensive line ranked 4 of 32",
    "Opportunity +1",
    "Pittman traded (111 targets vacated)",
-   "Keenan Allen signed and works the same area of the field; Pierce may miss the start",
-   "Year-2 receiver: ~15% breakout base rate (RotoViz)"
+   "Keenan Allen signed and works the same area of the field; Pierce may miss the start"
   ],
   "sitParts": {
    "env": -0.07,
    "change": 0.25,
-   "priors": 0.15,
+   "priors": 0.0,
    "schedule": 0.38,
    "variance": 0.38
   },
@@ -10205,10 +10205,10 @@
   "posRank": 4,
   "vbd": 23,
   "tier": 3,
-  "sit": 81,
+  "sit": 61,
   "boom": 90,
-  "bust": 7,
-  "risk": 16,
+  "bust": 10,
+  "risk": 21,
   "boomWhy": [
    "Most bullish source has him #22, 31 spots above the composite",
    "Ceiling 269 pts vs 194 projected (Bayesian p90)",
@@ -10293,7 +10293,7 @@
   "sitParts": {
    "env": -0.5,
    "change": 0.38,
-   "priors": 0.0,
+   "priors": 0.1,
    "schedule": 0.57,
    "variance": 0.19
   },
@@ -10407,9 +10407,9 @@
   "posRank": 21,
   "vbd": 17,
   "tier": 7,
-  "sit": 46,
-  "boom": 48,
-  "bust": 73,
+  "sit": 72,
+  "boom": 61,
+  "bust": 70,
   "risk": 22,
   "boomWhy": [
    "Ceiling 278 pts vs 201 projected (Bayesian p90)",
@@ -10605,10 +10605,10 @@
   "posRank": 3,
   "vbd": 22,
   "tier": 3,
-  "sit": 42,
-  "boom": 82,
-  "bust": 12,
-  "risk": 28,
+  "sit": 52,
+  "boom": 75,
+  "bust": 15,
+  "risk": 75,
   "boomWhy": [
    "Most bullish source has him #27, 27 spots above the composite",
    "Ceiling 377 pts vs 305 projected (Bayesian p90)",
@@ -10806,10 +10806,10 @@
   "posRank": 26,
   "vbd": -1,
   "tier": 8,
-  "sit": 88,
-  "boom": 64,
-  "bust": 67,
-  "risk": 38,
+  "sit": 96,
+  "boom": 61,
+  "bust": 77,
+  "risk": 23,
   "boomWhy": [
    "Most bullish source has him #19, 35 spots above the composite",
    "Ceiling 257 pts vs 190 projected (Bayesian p90)",
@@ -10819,14 +10819,14 @@
    "Most bearish source has him #107, 53 spots below the composite",
    "Floor 59 pts vs 190 projected (Bayesian p10)",
    "Bust weeks (below the startable line) in 29% of games, 2024-25 weighted",
-   "New team in 2026 (CHI to BUF)",
+   "New team in 2026 (CHI to BUF): backs and receivers who changed teams busted 7-8 points more often, 2016-25",
    "Age 29: at or past the historical WR decline point"
   ],
   "riskWhy": [
    "Calibrated injury model: 47% chance of missing time (AUC 0.75)",
    "Drafted anywhere from pick 31 to 70 across 2210 FFC drafts (\u00b16.2)",
    "Week-to-week swing: 2025 scores varied \u00b178% of his average",
-   "Situation: New team in 2026 (CHI to BUF)"
+   "Situation: New team in 2026 (CHI to BUF): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "flag": null,
   "note": null
@@ -10893,7 +10893,7 @@
    "env": -0.11,
    "change": 0.25,
    "vacated": 0.34,
-   "priors": 0.0,
+   "priors": -0.1,
    "schedule": -0.04,
    "variance": 0.12
   },
@@ -11015,10 +11015,10 @@
   "posRank": 22,
   "vbd": 0,
   "tier": 8,
-  "sit": 61,
-  "boom": 4,
-  "bust": 71,
-  "risk": 41,
+  "sit": 32,
+  "boom": 2,
+  "bust": 84,
+  "risk": 32,
   "boomWhy": [
    "Most bullish source has him #41, 14 spots above the composite",
    "Ceiling 240 pts vs 184 projected (Bayesian p90)",
@@ -11211,9 +11211,9 @@
   "vbd": 4,
   "tier": 3,
   "sit": 92,
-  "boom": 58,
-  "bust": 22,
-  "risk": 68,
+  "boom": 55,
+  "bust": 18,
+  "risk": 65,
   "boomWhy": [
    "Most bullish source has him #27, 30 spots above the composite",
    "Ceiling 360 pts vs 287 projected (Bayesian p90)",
@@ -11409,10 +11409,10 @@
   "posRank": 27,
   "vbd": -4,
   "tier": 9,
-  "sit": 56,
-  "boom": 86,
-  "bust": 97,
-  "risk": 66,
+  "sit": 70,
+  "boom": 93,
+  "bust": 98,
+  "risk": 73,
   "boomWhy": [
    "Most bullish source has him #38, 20 spots above the composite",
    "Ceiling 266 pts vs 187 projected (Bayesian p90)",
@@ -11627,10 +11627,10 @@
   "posRank": 28,
   "vbd": 1,
   "tier": 9,
-  "sit": 41,
-  "boom": 75,
-  "bust": 99,
-  "risk": 88,
+  "sit": 48,
+  "boom": 81,
+  "bust": 100,
+  "risk": 92,
   "boomWhy": [
    "Most bullish source has him #35, 23 spots above the composite",
    "Ceiling 266 pts vs 192 projected (Bayesian p90)",
@@ -11716,7 +11716,7 @@
   "sitParts": {
    "env": -0.18,
    "change": 0.62,
-   "priors": 0.0,
+   "priors": 0.1,
    "schedule": 0.47,
    "variance": 0.56
   },
@@ -11829,10 +11829,10 @@
   "posRank": 23,
   "vbd": -3,
   "tier": 8,
-  "sit": 86,
-  "boom": 86,
-  "bust": 67,
-  "risk": 59,
+  "sit": 96,
+  "boom": 89,
+  "bust": 62,
+  "risk": 45,
   "boomWhy": [
    "Most bullish source has him #43, 16 spots above the composite",
    "Ceiling 240 pts vs 181 projected (Bayesian p90)",
@@ -12032,9 +12032,9 @@
   "vbd": 15,
   "tier": 3,
   "sit": 15,
-  "boom": 75,
+  "boom": 72,
   "bust": 82,
-  "risk": 22,
+  "risk": 25,
   "boomWhy": [
    "Most bullish source has him #27, 33 spots above the composite",
    "Ceiling 355 pts vs 298 projected (Bayesian p90)",
@@ -12119,7 +12119,7 @@
   "sitParts": {
    "env": 0.25,
    "change": 0.38,
-   "priors": 0.1,
+   "priors": 0.0,
    "schedule": 0.02,
    "variance": 0.44
   },
@@ -12231,10 +12231,10 @@
   "posRank": 29,
   "vbd": 14,
   "tier": 9,
-  "sit": 90,
-  "boom": 57,
-  "bust": 55,
-  "risk": 58,
+  "sit": 83,
+  "boom": 60,
+  "bust": 59,
+  "risk": 34,
   "boomWhy": [
    "Most bullish source has him #40, 21 spots above the composite",
    "Ceiling 268 pts vs 205 projected (Bayesian p90)",
@@ -12429,10 +12429,10 @@
   "posRank": 6,
   "vbd": 15,
   "tier": 3,
-  "sit": 88,
-  "boom": 92,
-  "bust": 42,
-  "risk": 85,
+  "sit": 85,
+  "boom": 88,
+  "bust": 48,
+  "risk": 88,
   "boomWhy": [
    "Most bullish source has him #30, 32 spots above the composite",
    "Ceiling 348 pts vs 298 projected (Bayesian p90)",
@@ -12518,7 +12518,7 @@
    "env": 0.36,
    "change": 0.62,
    "vacated": 0.96,
-   "priors": 0.12,
+   "priors": 0.05,
    "schedule": 0.36,
    "variance": 0.56
   },
@@ -12631,9 +12631,9 @@
   "posRank": 24,
   "vbd": -14,
   "tier": 8,
-  "sit": 98,
+  "sit": 96,
   "boom": 96,
-  "bust": 47,
+  "bust": 53,
   "risk": 97,
   "boomWhy": [
    "Most bullish source has him #43, 20 spots above the composite",
@@ -12712,12 +12712,13 @@
    "Opportunity -1",
    "Competition -1",
    "Ankle injury Aug 24; may be ready Week 1",
-   "Projected to share evenly; Stevenson favored for early downs; ADP falling"
+   "Projected to share evenly; Stevenson favored for early downs; ADP falling",
+   "Year-2 RB: boomed 10 points more often than peers at the same ADP, 2016-25"
   ],
   "sitParts": {
    "env": 0.18,
    "change": -0.38,
-   "priors": 0.0,
+   "priors": 0.1,
    "schedule": -0.39,
    "variance": 0.44
   },
@@ -12830,10 +12831,10 @@
   "posRank": 25,
   "vbd": -8,
   "tier": 9,
-  "sit": 15,
-  "boom": 52,
-  "bust": 80,
-  "risk": 30,
+  "sit": 30,
+  "boom": 60,
+  "bust": 76,
+  "risk": 18,
   "boomWhy": [
    "Most bullish source has him #47, 17 spots above the composite",
    "Ceiling 234 pts vs 176 projected (Bayesian p90)",
@@ -13025,10 +13026,10 @@
   "posRank": 30,
   "vbd": -2,
   "tier": 10,
-  "sit": 54,
-  "boom": 83,
-  "bust": 52,
-  "risk": 75,
+  "sit": 67,
+  "boom": 87,
+  "bust": 64,
+  "risk": 84,
   "boomWhy": [
    "Most bullish source has him #36, 31 spots above the composite",
    "Ceiling 259 pts vs 189 projected (Bayesian p90)",
@@ -13112,7 +13113,7 @@
   "sitParts": {
    "env": -0.6,
    "change": 0.38,
-   "priors": 0.1,
+   "priors": 0.0,
    "schedule": -0.2,
    "variance": 0.44
   },
@@ -13225,10 +13226,10 @@
   "posRank": 31,
   "vbd": -3,
   "tier": 10,
-  "sit": 27,
-  "boom": 56,
-  "bust": 86,
-  "risk": 69,
+  "sit": 18,
+  "boom": 65,
+  "bust": 89,
+  "risk": 52,
   "boomWhy": [
    "Most bullish source has him #40, 29 spots above the composite",
    "Ceiling 264 pts vs 188 projected (Bayesian p90)",
@@ -13314,7 +13315,7 @@
    "env": -0.3,
    "change": 0.5,
    "vacated": 0.36,
-   "priors": 0.12,
+   "priors": 0.15,
    "schedule": 0.81,
    "variance": 0.5
   },
@@ -13426,10 +13427,10 @@
   "posRank": 32,
   "vbd": -21,
   "tier": 10,
-  "sit": 97,
-  "boom": 98,
-  "bust": 83,
-  "risk": 90,
+  "sit": 96,
+  "boom": 99,
+  "bust": 87,
+  "risk": 88,
   "boomWhy": [
    "Most bullish source has him #45, 26 spots above the composite",
    "Ceiling 278 pts vs 170 projected (Bayesian p90)",
@@ -13627,10 +13628,10 @@
   "posRank": 26,
   "vbd": -1,
   "tier": 10,
-  "sit": 38,
-  "boom": 2,
-  "bust": 16,
-  "risk": 35,
+  "sit": 36,
+  "boom": 4,
+  "bust": 14,
+  "risk": 41,
   "boomWhy": [
    "Ceiling 277 pts vs 183 projected (Bayesian p90)",
    "Boom weeks (top-6 scoring) in 4% of games, 2024-25 weighted",
@@ -13824,10 +13825,10 @@
   "posRank": 27,
   "vbd": -4,
   "tier": 10,
-  "sit": 74,
-  "boom": 32,
-  "bust": 49,
-  "risk": 62,
+  "sit": 78,
+  "boom": 39,
+  "bust": 61,
+  "risk": 51,
   "boomWhy": [
    "Ceiling 242 pts vs 180 projected (Bayesian p90)",
    "Boom weeks (top-6 scoring) in 14% of games, 2024-25 weighted",
@@ -14027,9 +14028,9 @@
   "posRank": 5,
   "vbd": 0,
   "tier": 4,
-  "sit": 56,
+  "sit": 70,
   "boom": 99,
-  "bust": 30,
+  "bust": 53,
   "risk": 93,
   "boomWhy": [
    "Most bullish source has him #32, 42 spots above the composite",
@@ -14225,9 +14226,9 @@
   "posRank": 6,
   "vbd": 10,
   "tier": 4,
-  "sit": 41,
-  "boom": 53,
-  "bust": 39,
+  "sit": 53,
+  "boom": 81,
+  "bust": 59,
   "risk": 87,
   "boomWhy": [
    "Most bullish source has him #51, 24 spots above the composite",
@@ -14314,7 +14315,7 @@
   "sitParts": {
    "env": -0.56,
    "change": 0.38,
-   "priors": 0.15,
+   "priors": 0.0,
    "schedule": 0.16,
    "variance": 0.44
   },
@@ -14427,10 +14428,10 @@
   "posRank": 7,
   "vbd": 8,
   "tier": 4,
-  "sit": 50,
-  "boom": 64,
-  "bust": 59,
-  "risk": 59,
+  "sit": 21,
+  "boom": 50,
+  "bust": 64,
+  "risk": 73,
   "boomWhy": [
    "Most bullish source has him #45, 31 spots above the composite",
    "Ceiling 262 pts vs 179 projected (Bayesian p90)",
@@ -14636,10 +14637,10 @@
   "posRank": 33,
   "vbd": -4,
   "tier": 11,
-  "sit": 22,
-  "boom": 14,
-  "bust": 4,
-  "risk": 5,
+  "sit": 24,
+  "boom": 11,
+  "bust": 5,
+  "risk": 6,
   "boomWhy": [
    "Most bullish source has him #49, 27 spots above the composite",
    "Ceiling 271 pts vs 187 projected (Bayesian p90)",
@@ -14833,9 +14834,9 @@
   "vbd": -4,
   "tier": 4,
   "sit": 58,
-  "boom": 85,
+  "boom": 78,
   "bust": 55,
-  "risk": 32,
+  "risk": 52,
   "boomWhy": [
    "Most bullish source has him #31, 47 spots above the composite",
    "Ceiling 336 pts vs 279 projected (Bayesian p90)",
@@ -14918,7 +14919,7 @@
   "sitParts": {
    "env": -0.1,
    "change": -0.38,
-   "priors": 0.1,
+   "priors": 0.0,
    "schedule": 0.51,
    "variance": 0.44
   },
@@ -15031,10 +15032,10 @@
   "posRank": 34,
   "vbd": -11,
   "tier": 11,
-  "sit": 29,
-  "boom": 60,
-  "bust": 80,
-  "risk": 32,
+  "sit": 16,
+  "boom": 72,
+  "bust": 88,
+  "risk": 35,
   "boomWhy": [
    "Most bullish source has him #51, 27 spots above the composite",
    "Ceiling 266 pts vs 180 projected (Bayesian p90)",
@@ -15230,10 +15231,10 @@
   "posRank": 8,
   "vbd": 4,
   "tier": 4,
-  "sit": 32,
-  "boom": 35,
-  "bust": 32,
-  "risk": 2,
+  "sit": 35,
+  "boom": 22,
+  "bust": 28,
+  "risk": 5,
   "boomWhy": [
    "Most bullish source has him #37, 42 spots above the composite",
    "Ceiling 355 pts vs 287 projected (Bayesian p90)",
@@ -15425,9 +15426,9 @@
   "posRank": 9,
   "vbd": -2,
   "tier": 4,
-  "sit": 85,
-  "boom": 78,
-  "bust": 8,
+  "sit": 88,
+  "boom": 85,
+  "bust": 2,
   "risk": 8,
   "boomWhy": [
    "Most bullish source has him #37, 42 spots above the composite",
@@ -15622,10 +15623,10 @@
   "posRank": 8,
   "vbd": 9,
   "tier": 4,
-  "sit": 61,
-  "boom": 79,
-  "bust": 27,
-  "risk": 76,
+  "sit": 76,
+  "boom": 76,
+  "bust": 21,
+  "risk": 61,
   "boomWhy": [
    "Most bullish source has him #43, 37 spots above the composite",
    "Ceiling 269 pts vs 180 projected (Bayesian p90)",
@@ -15823,8 +15824,8 @@
   "tier": 11,
   "sit": 2,
   "boom": 1,
-  "bust": 58,
-  "risk": 2,
+  "bust": 72,
+  "risk": 1,
   "boomWhy": [
    "Ceiling 240 pts vs 172 projected (Bayesian p90)",
    "Boom weeks (top-6 scoring) in 4% of games, 2024-25 weighted"
@@ -16022,9 +16023,9 @@
   "vbd": -18,
   "tier": 11,
   "sit": 4,
-  "boom": 80,
+  "boom": 65,
   "bust": 99,
-  "risk": 92,
+  "risk": 96,
   "boomWhy": [
    "Most bullish source has him #26, 54 spots above the composite",
    "Ceiling 262 pts vs 166 projected (Bayesian p90)",
@@ -16109,7 +16110,7 @@
    "env": -0.03,
    "change": -0.25,
    "vacated": 0.74,
-   "priors": 0.0,
+   "priors": -0.1,
    "schedule": 0.36,
    "variance": 0.38
   },
@@ -16224,10 +16225,10 @@
   "posRank": 30,
   "vbd": -9,
   "tier": 11,
-  "sit": 53,
-  "boom": 33,
-  "bust": 46,
-  "risk": 42,
+  "sit": 16,
+  "boom": 30,
+  "bust": 68,
+  "risk": 29,
   "boomWhy": [
    "Ceiling 225 pts vs 175 projected (Bayesian p90)",
    "Boom weeks (top-6 scoring) in 11% of games, 2024-25 weighted",
@@ -16239,14 +16240,14 @@
    "Floor 32 pts vs 175 projected (Bayesian p10)",
    "Bust weeks (below the startable line) in 24% of games, 2024-25 weighted",
    "Before the move: new team (left Carolina for Pittsburgh); shares with Jaylen Warren",
-   "New team in 2026 (CAR to PIT)"
+   "New team in 2026 (CAR to PIT): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "riskWhy": [
    "Calibrated injury model: 56% chance of missing time (AUC 0.75)",
    "Drafted anywhere from pick 53 to 104 across 426 FFC drafts (\u00b17.9)",
    "Missed 1 regular-season games in 2024-25",
    "Week-to-week swing: 2025 scores varied \u00b175% of his average",
-   "Situation: Before the move: new team (left Carolina for Pittsburgh); shares with Jaylen Warren; New team in 2026 (CAR to PIT); 2026 role unresolved: Fewer touches than 2025 but a clear role after K. Johnson's trade."
+   "Situation: Before the move: new team (left Carolina for Pittsburgh); shares with Jaylen Warren; New team in 2026 (CAR to PIT): backs and receivers who changed teams busted 7-8 points more often, 2016-25; 2026 role unresolved: Fewer touches than 2025 but a clear role after K. Johnson's trade."
   ],
   "flag": null,
   "note": "Move noted in SI committee article."
@@ -16420,9 +16421,9 @@
   "posRank": 35,
   "vbd": 0,
   "tier": 12,
-  "sit": 26,
-  "boom": 23,
-  "bust": 38,
+  "sit": 34,
+  "boom": 15,
+  "bust": 44,
   "risk": 4,
   "boomWhy": [
    "Most bullish source has him #55, 31 spots above the composite",
@@ -16630,10 +16631,10 @@
   "posRank": 36,
   "vbd": -21,
   "tier": 12,
-  "sit": 81,
-  "boom": 88,
-  "bust": 76,
-  "risk": 81,
+  "sit": 87,
+  "boom": 91,
+  "bust": 83,
+  "risk": 72,
   "boomWhy": [
    "Most bullish source has him #45, 41 spots above the composite",
    "Ceiling 250 pts vs 170 projected (Bayesian p90)",
@@ -16828,10 +16829,10 @@
   "posRank": 10,
   "vbd": 3,
   "tier": 5,
-  "sit": 45,
-  "boom": 62,
+  "sit": 38,
+  "boom": 65,
   "bust": 5,
-  "risk": 42,
+  "risk": 55,
   "boomWhy": [
    "Most bullish source has him #37, 53 spots above the composite",
    "Ceiling 362 pts vs 286 projected (Bayesian p90)",
@@ -17028,9 +17029,9 @@
   "posRank": 37,
   "vbd": -13,
   "tier": 12,
-  "sit": 49,
-  "boom": 61,
-  "bust": 29,
+  "sit": 27,
+  "boom": 55,
+  "bust": 40,
   "risk": 94,
   "boomWhy": [
    "Most bullish source has him #52, 39 spots above the composite",
@@ -17044,7 +17045,7 @@
    "Floor 66 pts vs 178 projected (Bayesian p10)",
    "Bust weeks (below the startable line) in 32% of games, 2024-25 weighted",
    "Before the move: new team / new QB",
-   "New team in 2026 (IND to PIT)"
+   "New team in 2026 (IND to PIT): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "riskWhy": [
    "Calibrated injury model: 49% chance of missing time (AUC 0.75)",
@@ -17229,10 +17230,10 @@
   "posRank": 31,
   "vbd": -18,
   "tier": 12,
-  "sit": 29,
-  "boom": 12,
-  "bust": 51,
-  "risk": 58,
+  "sit": 39,
+  "boom": 11,
+  "bust": 40,
+  "risk": 39,
   "boomWhy": [
    "Most bullish source has him #67, 24 spots above the composite",
    "Ceiling 265 pts vs 166 projected (Bayesian p90)",
@@ -17425,10 +17426,10 @@
   "posRank": 32,
   "vbd": -47,
   "tier": 12,
-  "sit": 41,
-  "boom": 78,
-  "bust": 89,
-  "risk": 95,
+  "sit": 52,
+  "boom": 80,
+  "bust": 85,
+  "risk": 92,
   "boomWhy": [
    "Most bullish source has him #56, 37 spots above the composite",
    "Ceiling 202 pts vs 137 projected (Bayesian p90)",
@@ -17625,10 +17626,10 @@
   "posRank": 38,
   "vbd": -19,
   "tier": 12,
-  "sit": 2,
+  "sit": 4,
   "boom": 28,
-  "bust": 21,
-  "risk": 10,
+  "bust": 18,
+  "risk": 7,
   "boomWhy": [
    "Most bullish source has him #55, 39 spots above the composite",
    "Ceiling 266 pts vs 172 projected (Bayesian p90)",
@@ -17818,10 +17819,10 @@
   "posRank": 39,
   "vbd": -24,
   "tier": 12,
-  "sit": 12,
-  "boom": 72,
-  "bust": 41,
-  "risk": 47,
+  "sit": 20,
+  "boom": 85,
+  "bust": 51,
+  "risk": 49,
   "boomWhy": [
    "Most bullish source has him #52, 42 spots above the composite",
    "Ceiling 250 pts vs 167 projected (Bayesian p90)",
@@ -18015,10 +18016,10 @@
   "posRank": 11,
   "vbd": 1,
   "tier": 5,
-  "sit": 55,
-  "boom": 88,
-  "bust": 62,
-  "risk": 75,
+  "sit": 45,
+  "boom": 92,
+  "bust": 58,
+  "risk": 32,
   "boomWhy": [
    "Most bullish source has him #59, 36 spots above the composite",
    "Ceiling 337 pts vs 284 projected (Bayesian p90)",
@@ -18212,10 +18213,10 @@
   "posRank": 33,
   "vbd": -24,
   "tier": 12,
-  "sit": 52,
-  "boom": 3,
-  "bust": 32,
-  "risk": 12,
+  "sit": 54,
+  "boom": 5,
+  "bust": 24,
+  "risk": 16,
   "boomWhy": [
    "Ceiling 230 pts vs 160 projected (Bayesian p90)",
    "Boom weeks (top-6 scoring) in 5% of games, 2024-25 weighted"
@@ -18411,10 +18412,10 @@
   "posRank": 40,
   "vbd": -21,
   "tier": 12,
-  "sit": 56,
-  "boom": 55,
-  "bust": 23,
-  "risk": 64,
+  "sit": 70,
+  "boom": 79,
+  "bust": 41,
+  "risk": 55,
   "boomWhy": [
    "Most bullish source has him #64, 31 spots above the composite",
    "Ceiling 239 pts vs 170 projected (Bayesian p90)",
@@ -18498,7 +18499,7 @@
   "sitParts": {
    "env": 0.18,
    "change": 0.38,
-   "priors": 0.0,
+   "priors": 0.1,
    "schedule": 0.31,
    "variance": 0.44
   },
@@ -18607,10 +18608,10 @@
   "posRank": 34,
   "vbd": -29,
   "tier": 12,
-  "sit": 88,
-  "boom": 90,
-  "bust": 55,
-  "risk": 68,
+  "sit": 96,
+  "boom": 93,
+  "bust": 59,
+  "risk": 58,
   "boomWhy": [
    "Most bullish source has him #61, 35 spots above the composite",
    "Ceiling 221 pts vs 155 projected (Bayesian p90)",
@@ -18808,8 +18809,8 @@
   "posRank": 9,
   "vbd": 9,
   "tier": 5,
-  "sit": 13,
-  "boom": 33,
+  "sit": 39,
+  "boom": 30,
   "bust": 99,
   "risk": 99,
   "boomWhy": [
@@ -19005,10 +19006,10 @@
   "posRank": 41,
   "vbd": -2,
   "tier": 12,
-  "sit": 40,
-  "boom": 59,
-  "bust": 91,
-  "risk": 65,
+  "sit": 55,
+  "boom": 56,
+  "bust": 84,
+  "risk": 54,
   "boomWhy": [
    "Most bullish source has him #52, 45 spots above the composite",
    "Ceiling 269 pts vs 189 projected (Bayesian p90)",
@@ -19204,10 +19205,10 @@
   "posRank": 12,
   "vbd": 0,
   "tier": 5,
-  "sit": 35,
+  "sit": 62,
   "boom": 45,
   "bust": 35,
-  "risk": 65,
+  "risk": 35,
   "boomWhy": [
    "Most bullish source has him #63, 34 spots above the composite",
    "Ceiling 338 pts vs 283 projected (Bayesian p90)",
@@ -19398,10 +19399,10 @@
   "posRank": 42,
   "vbd": -25,
   "tier": 12,
-  "sit": 73,
-  "boom": 82,
-  "bust": 32,
-  "risk": 51,
+  "sit": 82,
+  "boom": 89,
+  "bust": 47,
+  "risk": 50,
   "boomWhy": [
    "Most bullish source has him #68, 30 spots above the composite",
    "Ceiling 240 pts vs 166 projected (Bayesian p90)",
@@ -19594,10 +19595,10 @@
   "posRank": 43,
   "vbd": -26,
   "tier": 12,
-  "sit": 37,
-  "boom": 63,
-  "bust": 15,
-  "risk": 68,
+  "sit": 40,
+  "boom": 77,
+  "bust": 25,
+  "risk": 66,
   "boomWhy": [
    "Most bullish source has him #68, 31 spots above the composite",
    "Ceiling 238 pts vs 165 projected (Bayesian p90)",
@@ -19793,10 +19794,10 @@
   "posRank": 44,
   "vbd": -35,
   "tier": 13,
-  "sit": 14,
-  "boom": 25,
-  "bust": 88,
-  "risk": 72,
+  "sit": 9,
+  "boom": 24,
+  "bust": 97,
+  "risk": 79,
   "boomWhy": [
    "Most bullish source has him #55, 46 spots above the composite",
    "Ceiling 240 pts vs 156 projected (Bayesian p90)",
@@ -19809,13 +19810,13 @@
    "Floor 50 pts vs 156 projected (Bayesian p10)",
    "Bust weeks (below the startable line) in 19% of games, 2024-25 weighted",
    "Scored 17% above expected fantasy points in 2025 (touchdown / efficiency regression risk)",
-   "New team in 2026 (NE to WAS)"
+   "New team in 2026 (NE to WAS): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "riskWhy": [
    "ffanalytics projection uncertainty 72/99",
    "Drafted anywhere from pick 69 to 119 across 882 FFC drafts (\u00b19.4)",
    "Missed 9 regular-season games in 2024-25",
-   "Situation: New team in 2026 (NE to WAS)"
+   "Situation: New team in 2026 (NE to WAS): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "flag": null,
   "note": null
@@ -19993,10 +19994,10 @@
   "posRank": 45,
   "vbd": -17,
   "tier": 13,
-  "sit": 7,
-  "boom": 74,
-  "bust": 10,
-  "risk": 84,
+  "sit": 11,
+  "boom": 71,
+  "bust": 22,
+  "risk": 80,
   "boomWhy": [
    "Most bullish source has him #49, 52 spots above the composite",
    "Ceiling 245 pts vs 174 projected (Bayesian p90)",
@@ -20008,7 +20009,7 @@
    "Most bearish source has him #141, 40 spots below the composite",
    "Floor 51 pts vs 174 projected (Bayesian p10)",
    "Bust weeks (below the startable line) in 16% of games, 2024-25 weighted",
-   "New team in 2026 (NYG to TEN)"
+   "New team in 2026 (NYG to TEN): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "riskWhy": [
    "ffanalytics projection uncertainty 82/99",
@@ -20185,10 +20186,10 @@
   "posRank": 35,
   "vbd": -56,
   "tier": 12,
-  "sit": 95,
-  "boom": 92,
-  "bust": 38,
-  "risk": 54,
+  "sit": 96,
+  "boom": 97,
+  "bust": 41,
+  "risk": 47,
   "boomWhy": [
    "Most bullish source has him #68, 35 spots above the composite",
    "Ceiling 193 pts vs 128 projected (Bayesian p90)",
@@ -20272,7 +20273,7 @@
    "env": 0.27,
    "change": -0.38,
    "vacated": 0.4,
-   "priors": 0.0,
+   "priors": -0.1,
    "schedule": -0.58,
    "variance": 0.44
   },
@@ -20383,10 +20384,10 @@
   "posRank": 36,
   "vbd": -32,
   "tier": 12,
-  "sit": 27,
-  "boom": 42,
-  "bust": 27,
-  "risk": 20,
+  "sit": 7,
+  "boom": 34,
+  "bust": 28,
+  "risk": 21,
   "boomWhy": [
    "Most bullish source has him #67, 36 spots above the composite",
    "Ceiling 229 pts vs 152 projected (Bayesian p90)",
@@ -20397,14 +20398,14 @@
    "Most bearish source has him #144, 41 spots below the composite",
    "Floor 31 pts vs 152 projected (Bayesian p10)",
    "Bust weeks (below the startable line) in 44% of games, 2024-25 weighted",
-   "New team in 2026 (PIT to TB)",
+   "New team in 2026 (PIT to TB): backs and receivers who changed teams busted 7-8 points more often, 2016-25",
    "2026 role unresolved: Fewer touches than his PIT season if Irving stays healthy."
   ],
   "riskWhy": [
    "Drafted anywhere from pick 62 to 123 across 557 FFC drafts (\u00b110.7)",
    "Missed 1 regular-season games in 2024-25",
    "Week-to-week swing: 2025 scores varied \u00b170% of his average",
-   "Situation: New team in 2026 (PIT to TB)"
+   "Situation: New team in 2026 (PIT to TB): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "flag": null,
   "note": null
@@ -20583,10 +20584,10 @@
   "posRank": 10,
   "vbd": 2,
   "tier": 5,
-  "sit": 36,
-  "boom": 70,
+  "sit": 47,
+  "boom": 59,
   "bust": 96,
-  "risk": 27,
+  "risk": 33,
   "boomWhy": [
    "Most bullish source has him #56, 50 spots above the composite",
    "Ceiling 249 pts vs 173 projected (Bayesian p90)",
@@ -20672,7 +20673,7 @@
    "env": 0.37,
    "change": 0.5,
    "vacated": 0.69,
-   "priors": 0.12,
+   "priors": 0.15,
    "schedule": -0.19,
    "variance": 0.5
   },
@@ -20784,10 +20785,10 @@
   "posRank": 46,
   "vbd": -46,
   "tier": 13,
-  "sit": 97,
-  "boom": 97,
-  "bust": 61,
-  "risk": 74,
+  "sit": 96,
+  "boom": 98,
+  "bust": 71,
+  "risk": 65,
   "boomWhy": [
    "Most bullish source has him #68, 38 spots above the composite",
    "Ceiling 235 pts vs 145 projected (Bayesian p90)",
@@ -20986,7 +20987,7 @@
   "vbd": -3,
   "tier": 6,
   "sit": 82,
-  "boom": 68,
+  "boom": 62,
   "bust": 78,
   "risk": 92,
   "boomWhy": [
@@ -21182,8 +21183,8 @@
   "vbd": -8,
   "tier": 6,
   "sit": 78,
-  "boom": 55,
-  "bust": 2,
+  "boom": 52,
+  "bust": 8,
   "risk": 12,
   "boomWhy": [
    "Most bullish source has him #70, 38 spots above the composite",
@@ -21264,7 +21265,7 @@
   "sitParts": {
    "env": -0.34,
    "change": 0.0,
-   "priors": 0.0,
+   "priors": 0.1,
    "schedule": -0.29,
    "variance": 0.25
   },
@@ -21379,10 +21380,10 @@
   "posRank": 37,
   "vbd": -46,
   "tier": 13,
-  "sit": 12,
-  "boom": 82,
-  "bust": 18,
-  "risk": 39,
+  "sit": 27,
+  "boom": 85,
+  "bust": 21,
+  "risk": 28,
   "boomWhy": [
    "Most bullish source has him #67, 43 spots above the composite",
    "Ceiling 212 pts vs 138 projected (Bayesian p90)",
@@ -21459,12 +21460,13 @@
    "Offensive line ranked 6 of 32",
    "Opportunity +1",
    "Hyperextended knee in camp; expected for Week 1",
-   "Efficiency matched Swift; RB1 upside if Swift misses time"
+   "Efficiency matched Swift; RB1 upside if Swift misses time",
+   "Year-2 RB: boomed 10 points more often than peers at the same ADP, 2016-25"
   ],
   "sitParts": {
    "env": 0.22,
    "change": 0.25,
-   "priors": 0.0,
+   "priors": 0.1,
    "schedule": -0.2,
    "variance": 0.38
   },
@@ -21575,10 +21577,10 @@
   "posRank": 38,
   "vbd": -36,
   "tier": 13,
-  "sit": 72,
-  "boom": 70,
-  "bust": 10,
-  "risk": 27,
+  "sit": 90,
+  "boom": 79,
+  "bust": 22,
+  "risk": 17,
   "boomWhy": [
    "Most bullish source has him #74, 36 spots above the composite",
    "Ceiling 201 pts vs 148 projected (Bayesian p90)",
@@ -21655,13 +21657,14 @@
    "Offensive line ranked 32 of 32",
    "New team; expected 'best of the bunch' by some, RB2 on the depth chart",
    "Committee with Croskey-Merritt",
-   "Arrives into a room that vacated 32% of its 2025 carries"
+   "Arrives into a room that vacated 32% of its 2025 carries",
+   "Changed teams: backs who moved busted 8 points more often, 2016-25"
   ],
   "sitParts": {
    "env": -0.34,
    "change": 0.0,
    "vacated": 0.49,
-   "priors": 0.0,
+   "priors": -0.1,
    "schedule": -0.29,
    "variance": 0.25
   },
@@ -21776,10 +21779,10 @@
   "posRank": 39,
   "vbd": -47,
   "tier": 13,
-  "sit": 22,
-  "boom": 55,
-  "bust": 30,
-  "risk": 49,
+  "sit": 3,
+  "boom": 82,
+  "bust": 38,
+  "risk": 38,
   "boomWhy": [
    "Most bullish source has him #75, 36 spots above the composite",
    "Ceiling 195 pts vs 137 projected (Bayesian p90)",
@@ -21791,7 +21794,7 @@
    "Most bearish source has him #148, 37 spots below the composite",
    "Floor 20 pts vs 137 projected (Bayesian p10)",
    "Bust weeks (below the startable line) in 31% of games, 2024-25 weighted",
-   "New team in 2026 (TB to WAS)",
+   "New team in 2026 (TB to WAS): backs and receivers who changed teams busted 7-8 points more often, 2016-25",
    "2026 role unresolved: Similar 1B role to his 2025 TB usage."
   ],
   "riskWhy": [
@@ -21974,8 +21977,8 @@
   "tier": 6,
   "sit": 95,
   "boom": 48,
-  "bust": 98,
-  "risk": 48,
+  "bust": 95,
+  "risk": 42,
   "boomWhy": [
    "Most bullish source has him #74, 37 spots above the composite",
    "Ceiling 346 pts vs 271 projected (Bayesian p90)",
@@ -22169,10 +22172,10 @@
   "posRank": 47,
   "vbd": -17,
   "tier": 13,
-  "sit": 28,
+  "sit": 35,
   "boom": 21,
-  "bust": 24,
-  "risk": 40,
+  "bust": 39,
+  "risk": 53,
   "boomWhy": [
    "Most bullish source has him #71, 40 spots above the composite",
    "Ceiling 243 pts vs 174 projected (Bayesian p90)",
@@ -22365,10 +22368,10 @@
   "posRank": 40,
   "vbd": -43,
   "tier": 13,
-  "sit": 80,
-  "boom": 72,
-  "bust": 40,
-  "risk": 66,
+  "sit": 83,
+  "boom": 83,
+  "bust": 33,
+  "risk": 60,
   "boomWhy": [
    "Most bullish source has him #75, 37 spots above the composite",
    "Ceiling 196 pts vs 141 projected (Bayesian p90)",
@@ -22380,8 +22383,7 @@
    "Most bearish source has him #175, 63 spots below the composite",
    "Floor 18 pts vs 141 projected (Bayesian p10)",
    "Bust weeks (below the startable line) in 44% of games, 2024-25 weighted",
-   "2026 role unresolved: Share up in a better offense; exact split unresolved.",
-   "Age 27: at or past the historical RB decline point"
+   "2026 role unresolved: Share up in a better offense; exact split unresolved."
   ],
   "riskWhy": [
    "Calibrated injury model: 38% chance of missing time (AUC 0.75)",
@@ -22565,10 +22567,10 @@
   "posRank": 11,
   "vbd": -17,
   "tier": 5,
-  "sit": 70,
-  "boom": 84,
-  "bust": 64,
-  "risk": 84,
+  "sit": 87,
+  "boom": 87,
+  "bust": 61,
+  "risk": 76,
   "boomWhy": [
    "Most bullish source has him #71, 42 spots above the composite",
    "Ceiling 217 pts vs 154 projected (Bayesian p90)",
@@ -22647,13 +22649,12 @@
    "Opportunity +1",
    "Competition +1",
    "Year 2; 131 vacated targets",
-   "Analysts caution on rookie-year comps",
-   "Year-2 receiver: ~15% breakout base rate (RotoViz)"
+   "Analysts caution on rookie-year comps"
   ],
   "sitParts": {
    "env": -0.02,
    "change": 0.38,
-   "priors": 0.15,
+   "priors": 0.0,
    "schedule": 0.04,
    "variance": 0.44
   },
@@ -22768,10 +22769,10 @@
   "posRank": 48,
   "vbd": -40,
   "tier": 13,
-  "sit": 87,
-  "boom": 48,
-  "bust": 77,
-  "risk": 59,
+  "sit": 70,
+  "boom": 49,
+  "bust": 78,
+  "risk": 41,
   "boomWhy": [
    "Most bullish source has him #72, 41 spots above the composite",
    "Ceiling 220 pts vs 151 projected (Bayesian p90)",
@@ -22856,7 +22857,7 @@
    "env": -0.56,
    "change": 0.5,
    "vacated": 0.25,
-   "priors": 0.12,
+   "priors": 0.15,
    "schedule": 0.87,
    "variance": 0.5
   },
@@ -22969,9 +22970,9 @@
   "vbd": -53,
   "tier": 13,
   "sit": 85,
-  "boom": 99,
-  "bust": 45,
-  "risk": 82,
+  "boom": 100,
+  "bust": 56,
+  "risk": 76,
   "boomWhy": [
    "Most bullish source has him #71, 42 spots above the composite",
    "Ceiling 235 pts vs 138 projected (Bayesian p90)",
@@ -23165,10 +23166,10 @@
   "posRank": 16,
   "vbd": -15,
   "tier": 6,
-  "sit": 65,
-  "boom": 25,
-  "bust": 18,
-  "risk": 18,
+  "sit": 68,
+  "boom": 18,
+  "bust": 12,
+  "risk": 15,
   "boomWhy": [
    "Most bullish source has him #63, 54 spots above the composite",
    "Ceiling 328 pts vs 268 projected (Bayesian p90)",
@@ -23366,10 +23367,10 @@
   "posRank": 41,
   "vbd": -35,
   "tier": 13,
-  "sit": 28,
-  "boom": 5,
-  "bust": 39,
-  "risk": 3,
+  "sit": 29,
+  "boom": 7,
+  "bust": 55,
+  "risk": 5,
   "boomWhy": [
    "Most bullish source has him #86, 32 spots above the composite",
    "Ceiling 244 pts vs 149 projected (Bayesian p90)",
@@ -23586,9 +23587,9 @@
   "posRank": 12,
   "vbd": -8,
   "tier": 6,
-  "sit": 87,
-  "boom": 67,
-  "bust": 50,
+  "sit": 96,
+  "boom": 56,
+  "bust": 56,
   "risk": 36,
   "boomWhy": [
    "Most bullish source has him #55, 63 spots above the composite",
@@ -23667,13 +23668,12 @@
    "Offensive line ranked 21 of 32",
    "Competition -1",
    "16.1% target share, WR60 PPG in 2025",
-   "Rice full season + Walker receiving work",
-   "Year-3 receiver: ~10% breakout base rate"
+   "Rice full season + Walker receiving work"
   ],
   "sitParts": {
    "env": 0.54,
    "change": -0.12,
-   "priors": 0.1,
+   "priors": 0.0,
    "schedule": -0.21,
    "variance": 0.06
   },
@@ -23786,10 +23786,10 @@
   "posRank": 50,
   "vbd": -31,
   "tier": 14,
-  "sit": 78,
-  "boom": 33,
-  "bust": 16,
-  "risk": 6,
+  "sit": 63,
+  "boom": 34,
+  "bust": 21,
+  "risk": 3,
   "boomWhy": [
    "Ceiling 240 pts vs 160 projected (Bayesian p90)",
    "Boom weeks (top-6 scoring) in 0% of games, 2024-25 weighted",
@@ -23986,8 +23986,8 @@
   "tier": 6,
   "sit": 98,
   "boom": 98,
-  "bust": 68,
-  "risk": 98,
+  "bust": 65,
+  "risk": 95,
   "boomWhy": [
    "Most bullish source has him #71, 48 spots above the composite",
    "Ceiling 304 pts vs 257 projected (Bayesian p90)",
@@ -24176,10 +24176,10 @@
   "posRank": 13,
   "vbd": -10,
   "tier": 6,
-  "sit": 16,
-  "boom": 36,
+  "sit": 33,
+  "boom": 33,
   "bust": 1,
-  "risk": 19,
+  "risk": 24,
   "boomWhy": [
    "Most bullish source has him #65, 56 spots above the composite",
    "Ceiling 227 pts vs 161 projected (Bayesian p90)",
@@ -24373,10 +24373,10 @@
   "posRank": 14,
   "vbd": -15,
   "tier": 6,
-  "sit": 67,
-  "boom": 39,
-  "bust": 76,
-  "risk": 56,
+  "sit": 50,
+  "boom": 36,
+  "bust": 84,
+  "risk": 50,
   "boomWhy": [
    "Most bullish source has him #68, 55 spots above the composite",
    "Ceiling 184 pts vs 156 projected (Bayesian p90)",
@@ -24388,7 +24388,7 @@
    "Floor 31 pts vs 156 projected (Bayesian p10)",
    "Bust weeks (below the startable line) in 68% of games, 2024-25 weighted",
    "Before the move: new team",
-   "New team in 2026 (BAL to NYG)"
+   "New team in 2026 (BAL to NYG): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "riskWhy": [
    "ffanalytics projection uncertainty 80/99",
@@ -24454,13 +24454,13 @@
    "Opportunity +1",
    "Rookie #8 pick placed on IR to start the season (out at least 4 games)",
    "Presumed WR2 behind Olave on return",
-   "First-round rookie: 71% of first-round RBs finish top-24; first-round WRs average ~100 targets"
+   "Drafted rookie WR: boomed 16 points more and busted 17 points less than peers at the same ADP, 2016-25"
   ],
   "sitParts": {
    "env": -0.27,
    "change": 0.25,
    "vacated": 0.0,
-   "priors": 0.12,
+   "priors": 0.15,
    "schedule": 0.14,
    "variance": 0.38
   },
@@ -24574,9 +24574,9 @@
   "posRank": 51,
   "vbd": -76,
   "tier": 14,
-  "sit": 57,
-  "boom": 90,
-  "bust": 100,
+  "sit": 72,
+  "boom": 95,
+  "bust": 99,
   "risk": 96,
   "boomWhy": [
    "Most bullish source has him #58, 65 spots above the composite",
@@ -24775,10 +24775,10 @@
   "posRank": 52,
   "vbd": -44,
   "tier": 14,
-  "sit": 16,
-  "boom": 8,
-  "bust": 81,
-  "risk": 17,
+  "sit": 13,
+  "boom": 10,
+  "bust": 86,
+  "risk": 12,
   "boomWhy": [
    "Most bullish source has him #90, 34 spots above the composite",
    "Ceiling 220 pts vs 147 projected (Bayesian p90)",
@@ -24790,14 +24790,14 @@
    "Floor 48 pts vs 147 projected (Bayesian p10)",
    "Bust weeks (below the startable line) in 31% of games, 2024-25 weighted",
    "A.J. Brown's arrival cuts his targets",
-   "New team in 2026 (GB to NE)"
+   "New team in 2026 (GB to NE): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "riskWhy": [
    "Calibrated injury model: 47% chance of missing time (AUC 0.75)",
    "Drafted anywhere from pick 85 to 130 across 513 FFC drafts (\u00b19.0)",
    "Missed 5 regular-season games in 2024-25",
    "Week-to-week swing: 2025 scores varied \u00b168% of his average",
-   "Situation: New team in 2026 (GB to NE)"
+   "Situation: New team in 2026 (GB to NE): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "flag": null,
   "note": null
@@ -24975,9 +24975,9 @@
   "vbd": -15,
   "tier": 6,
   "sit": 99,
-  "boom": 41,
-  "bust": 73,
-  "risk": 30,
+  "boom": 47,
+  "bust": 93,
+  "risk": 10,
   "boomWhy": [
    "Most bullish source has him #70, 56 spots above the composite",
    "Ceiling 208 pts vs 156 projected (Bayesian p90)",
@@ -25174,10 +25174,10 @@
   "posRank": 18,
   "vbd": -31,
   "tier": 7,
-  "sit": 22,
-  "boom": 65,
-  "bust": 48,
-  "risk": 62,
+  "sit": 25,
+  "boom": 82,
+  "bust": 52,
+  "risk": 45,
   "boomWhy": [
    "Ceiling 327 pts vs 252 projected (Bayesian p90)",
    "Boom weeks (top-3 scoring) in 7% of games, 2024-25 weighted",
@@ -25370,10 +25370,10 @@
   "posRank": 42,
   "vbd": -68,
   "tier": 13,
-  "sit": 79,
-  "boom": 91,
-  "bust": 85,
-  "risk": 93,
+  "sit": 88,
+  "boom": 90,
+  "bust": 80,
+  "risk": 95,
   "boomWhy": [
    "Most bullish source has him #58, 70 spots above the composite",
    "Ceiling 179 pts vs 116 projected (Bayesian p90)",
@@ -25570,10 +25570,10 @@
   "posRank": 53,
   "vbd": -29,
   "tier": 14,
-  "sit": 38,
-  "boom": 22,
-  "bust": 7,
-  "risk": 2,
+  "sit": 41,
+  "boom": 18,
+  "bust": 2,
+  "risk": 1,
   "boomWhy": [
    "Most bullish source has him #69, 61 spots above the composite",
    "Ceiling 227 pts vs 162 projected (Bayesian p90)",
@@ -25647,13 +25647,14 @@
    "Offensive line ranked 30 of 32",
    "New team (WAS->JAX); Clay projects 100 carries",
    "Goal-line role possible; foot surgery this offseason",
-   "Arrives into a room that vacated 56% of its 2025 carries"
+   "Arrives into a room that vacated 56% of its 2025 carries",
+   "Changed teams: backs who moved busted 8 points more often, 2016-25"
   ],
   "sitParts": {
    "env": -0.18,
    "change": 0.0,
    "vacated": 1.0,
-   "priors": 0.0,
+   "priors": -0.1,
    "schedule": 0.47,
    "variance": 0.25
   },
@@ -25765,10 +25766,10 @@
   "posRank": 43,
   "vbd": -85,
   "tier": 14,
-  "sit": 76,
-  "boom": 41,
-  "bust": 53,
-  "risk": 82,
+  "sit": 23,
+  "boom": 76,
+  "bust": 67,
+  "risk": 80,
   "boomWhy": [
    "Ceiling 169 pts vs 99 projected (Bayesian p90)",
    "Boom weeks (top-6 scoring) in 0% of games, 2024-25 weighted",
@@ -25780,7 +25781,7 @@
    "Most bearish source has him #234, 102 spots below the composite",
    "Floor 9 pts vs 99 projected (Bayesian p10)",
    "Bust weeks (below the startable line) in 50% of games, 2024-25 weighted",
-   "New team in 2026 (WAS to JAX)",
+   "New team in 2026 (WAS to JAX): backs and receivers who changed teams busted 7-8 points more often, 2016-25",
    "2026 role unresolved: Similar volume to his 112-carry 2025 with a defined short-yardage role."
   ],
   "riskWhy": [
@@ -25963,10 +25964,10 @@
   "posRank": 19,
   "vbd": -17,
   "tier": 7,
-  "sit": 52,
+  "sit": 55,
   "boom": 5,
-  "bust": 25,
-  "risk": 52,
+  "bust": 32,
+  "risk": 72,
   "boomWhy": [
    "Most bullish source has him #92, 40 spots above the composite",
    "Ceiling 329 pts vs 266 projected (Bayesian p90)",
@@ -26040,13 +26041,12 @@
    "Offensive line ranked 26 of 32",
    "Opportunity +1",
    "Fully healthy after an injury-marred 2025",
-   "~1,000-yard pace over final 5 games of 2025 with Young",
-   "Year-3 receiver: ~10% breakout base rate"
+   "~1,000-yard pace over final 5 games of 2025 with Young"
   ],
   "sitParts": {
    "env": -0.34,
    "change": 0.25,
-   "priors": 0.1,
+   "priors": 0.0,
    "schedule": -0.06,
    "variance": 0.38
   },
@@ -26157,10 +26157,10 @@
   "posRank": 54,
   "vbd": -47,
   "tier": 14,
-  "sit": 42,
-  "boom": 17,
-  "bust": 85,
-  "risk": 37,
+  "sit": 33,
+  "boom": 20,
+  "bust": 81,
+  "risk": 22,
   "boomWhy": [
    "Most bullish source has him #91, 43 spots above the composite",
    "Ceiling 215 pts vs 144 projected (Bayesian p90)",
@@ -26355,9 +26355,9 @@
   "vbd": -28,
   "tier": 7,
   "sit": 75,
-  "boom": 15,
-  "bust": 15,
-  "risk": 5,
+  "boom": 35,
+  "bust": 22,
+  "risk": 2,
   "boomWhy": [
    "Most bullish source has him #98, 37 spots above the composite",
    "Ceiling 302 pts vs 255 projected (Bayesian p90)",
@@ -26431,13 +26431,14 @@
    "Opportunity +2",
    "Rookie #33 pick; preseason 11 rec/109 yds, 84.6% catch rate",
    "Aiyuk/Pearsall out -> WR3 with a real Week 1 role",
-   "Arrives into a room that vacated 32% of its 2025 targets"
+   "Arrives into a room that vacated 32% of its 2025 targets",
+   "Drafted rookie WR: boomed 16 points more and busted 17 points less than peers at the same ADP, 2016-25"
   ],
   "sitParts": {
    "env": 0.23,
    "change": 0.5,
    "vacated": 0.47,
-   "priors": 0.0,
+   "priors": 0.15,
    "schedule": -0.83,
    "variance": 0.5
   },
@@ -26550,9 +26551,9 @@
   "posRank": 55,
   "vbd": -65,
   "tier": 15,
-  "sit": 75,
-  "boom": 93,
-  "bust": 82,
+  "sit": 91,
+  "boom": 94,
+  "bust": 79,
   "risk": 98,
   "boomWhy": [
    "Most bullish source has him #62, 73 spots above the composite",
@@ -26632,12 +26633,13 @@
    "Opportunity -1",
    "Competition -2",
    "Montgomery acquired; Marks 'slated to work in more of a pass-catching role'",
-   "Poor advanced metrics as a rookie"
+   "Poor advanced metrics as a rookie",
+   "Year-2 RB: boomed 10 points more often than peers at the same ADP, 2016-25"
   ],
   "sitParts": {
    "env": -0.11,
    "change": -0.5,
-   "priors": 0.0,
+   "priors": 0.1,
    "schedule": -0.04,
    "variance": 0.25
   },
@@ -26751,10 +26753,10 @@
   "posRank": 44,
   "vbd": -73,
   "tier": 14,
-  "sit": 3,
-  "boom": 30,
-  "bust": 20,
-  "risk": 9,
+  "sit": 15,
+  "boom": 41,
+  "bust": 27,
+  "risk": 7,
   "boomWhy": [
    "Most bullish source has him #102, 37 spots above the composite",
    "Ceiling 228 pts vs 111 projected (Bayesian p90)",
@@ -26950,7 +26952,7 @@
   "vbd": -25,
   "tier": 7,
   "sit": 7,
-  "boom": 7,
+  "boom": 39,
   "bust": 13,
   "risk": 4,
   "boomWhy": [
@@ -27165,8 +27167,8 @@
   "posRank": 56,
   "vbd": -46,
   "tier": 15,
-  "sit": 5,
-  "boom": 27,
+  "sit": 8,
+  "boom": 25,
   "bust": 90,
   "risk": 19,
   "boomWhy": [
@@ -27187,7 +27189,7 @@
    "Drafted anywhere from pick 91 to 136 across 531 FFC drafts (\u00b18.1)",
    "Injury risk: Flagged (Draft Sharks 13 injury-risk list - excerpt only)",
    "Missed 4 regular-season games in 2024-25",
-   "Situation: New team in 2026 (WAS to SF); coaching change"
+   "Situation: New team in 2026 (WAS to SF): backs and receivers who changed teams busted 7-8 points more often, 2016-25; coaching change"
   ],
   "flag": null,
   "note": "Identification from a partial excerpt; treat as low-confidence."
@@ -27368,7 +27370,7 @@
   "posRank": 21,
   "vbd": -46,
   "tier": 7,
-  "sit": 62,
+  "sit": 22,
   "boom": 95,
   "bust": 92,
   "risk": 82,
@@ -27391,7 +27393,7 @@
    "Calibrated injury model: 23% chance of missing time (AUC 0.75)",
    "Drafted anywhere from pick 123 to 185 across 216 FFC drafts (\u00b114.4)",
    "Missed 24 regular-season games in 2024-25",
-   "Situation: New team in 2026 (GB to MIA)"
+   "Situation: New team in 2026 (GB to MIA): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "flag": null,
   "note": "PFF sleeper."
@@ -27564,9 +27566,9 @@
   "posRank": 57,
   "vbd": -58,
   "tier": 15,
-  "sit": 20,
+  "sit": 30,
   "boom": 1,
-  "bust": 19,
+  "bust": 14,
   "risk": 9,
   "boomWhy": [
    "Ceiling 216 pts vs 133 projected (Bayesian p90)",
@@ -27757,10 +27759,10 @@
   "posRank": 45,
   "vbd": -58,
   "tier": 14,
-  "sit": 30,
-  "boom": 58,
-  "bust": 26,
-  "risk": 26,
+  "sit": 35,
+  "boom": 55,
+  "bust": 18,
+  "risk": 23,
   "boomWhy": [
    "Most bullish source has him #89, 59 spots above the composite",
    "Ceiling 194 pts vs 126 projected (Bayesian p90)",
@@ -27846,7 +27848,7 @@
    "env": -0.52,
    "change": 0.25,
    "vacated": 1.0,
-   "priors": 0.0,
+   "priors": -0.1,
    "schedule": 0.29,
    "variance": 0.38
   },
@@ -27958,10 +27960,10 @@
   "posRank": 46,
   "vbd": -97,
   "tier": 14,
-  "sit": 65,
-  "boom": 60,
-  "bust": 29,
-  "risk": 65,
+  "sit": 18,
+  "boom": 57,
+  "bust": 47,
+  "risk": 52,
   "boomWhy": [
    "Most bullish source has him #99, 49 spots above the composite",
    "Ceiling 166 pts vs 87 projected (Bayesian p90)",
@@ -27974,13 +27976,13 @@
    "Floor 12 pts vs 87 projected (Bayesian p10)",
    "Bust weeks (below the startable line) in 53% of games, 2024-25 weighted",
    "Before the move: Arizona committee with Love/Conner",
-   "New team in 2026 (ATL to ARI)"
+   "New team in 2026 (ATL to ARI): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "riskWhy": [
    "Calibrated injury model: 38% chance of missing time (AUC 0.75)",
    "Drafted anywhere from pick 101 to 201 across 233 FFC drafts (\u00b120.1)",
    "Week-to-week swing: 2025 scores varied \u00b172% of his average",
-   "Situation: Before the move: Arizona committee with Love/Conner; New team in 2026 (ATL to ARI); 2026 role unresolved: Moves from Bijan's backup to a rookie's backup with a wider path; touches likely similar-to-up vs 143 carries."
+   "Situation: Before the move: Arizona committee with Love/Conner; New team in 2026 (ATL to ARI): backs and receivers who changed teams busted 7-8 points more often, 2016-25; 2026 role unresolved: Moves from Bijan's backup to a rookie's backup with a wider path; touches likely similar-to-up vs 143 carries."
   ],
   "flag": null,
   "note": "Free-agent signing in the Cardinals committee."
@@ -28155,9 +28157,9 @@
   "posRank": 17,
   "vbd": -27,
   "tier": 7,
-  "sit": 19,
-  "boom": 13,
-  "bust": 21,
+  "sit": 24,
+  "boom": 7,
+  "bust": 41,
   "risk": 1,
   "boomWhy": [
    "Most bullish source has him #92, 60 spots above the composite",
@@ -28345,10 +28347,10 @@
   "posRank": 18,
   "vbd": -27,
   "tier": 7,
-  "sit": 10,
-  "boom": 59,
-  "bust": 16,
-  "risk": 13,
+  "sit": 16,
+  "boom": 79,
+  "bust": 24,
+  "risk": 27,
   "boomWhy": [
    "Most bullish source has him #84, 68 spots above the composite",
    "Ceiling 194 pts vs 144 projected (Bayesian p90)",
@@ -28430,7 +28432,7 @@
    "env": 0.36,
    "change": 0.38,
    "vacated": 0.0,
-   "priors": 0.0,
+   "priors": -0.1,
    "schedule": 0.03,
    "variance": 0.44
   },
@@ -28541,10 +28543,10 @@
   "posRank": 47,
   "vbd": -98,
   "tier": 14,
-  "sit": 90,
-  "boom": 68,
-  "bust": 78,
-  "risk": 96,
+  "sit": 84,
+  "boom": 71,
+  "bust": 74,
+  "risk": 93,
   "boomWhy": [
    "Most bullish source has him #102, 52 spots above the composite",
    "Ceiling 173 pts vs 86 projected (Bayesian p90)",
@@ -28557,7 +28559,7 @@
    "Floor 10 pts vs 86 projected (Bayesian p10)",
    "Bust weeks (below the startable line) in 78% of games, 2024-25 weighted",
    "Before the move: backup to Omarion Hampton",
-   "New team in 2026 (BAL to LAC)"
+   "New team in 2026 (BAL to LAC): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "riskWhy": [
    "ffanalytics projection uncertainty 69/99",
@@ -28738,10 +28740,10 @@
   "posRank": 48,
   "vbd": -83,
   "tier": 14,
-  "sit": 24,
-  "boom": 36,
+  "sit": 20,
+  "boom": 42,
   "bust": 97,
-  "risk": 86,
+  "risk": 78,
   "boomWhy": [
    "Ceiling 186 pts vs 101 projected (Bayesian p90)",
    "Boom weeks (top-6 scoring) in 8% of games, 2024-25 weighted",
@@ -28826,7 +28828,7 @@
    "env": -0.56,
    "change": 0.5,
    "vacated": 0.25,
-   "priors": 0.0,
+   "priors": 0.15,
    "schedule": 0.87,
    "variance": 0.5
   },
@@ -28938,10 +28940,10 @@
   "posRank": 58,
   "vbd": -66,
   "tier": 16,
-  "sit": 58,
-  "boom": 49,
-  "bust": 74,
-  "risk": 31,
+  "sit": 85,
+  "boom": 66,
+  "bust": 73,
+  "risk": 25,
   "boomWhy": [
    "Most bullish source has him #107, 48 spots above the composite",
    "Ceiling 214 pts vs 125 projected (Bayesian p90)",
@@ -29133,8 +29135,8 @@
   "tier": 8,
   "sit": 48,
   "boom": 2,
-  "bust": 58,
-  "risk": 35,
+  "bust": 62,
+  "risk": 48,
   "boomWhy": [
    "Ceiling 299 pts vs 242 projected (Bayesian p90)",
    "Boom weeks (top-3 scoring) in 5% of games, 2024-25 weighted"
@@ -29327,8 +29329,8 @@
   "tier": 8,
   "sit": 18,
   "boom": 12,
-  "bust": 45,
-  "risk": 72,
+  "bust": 42,
+  "risk": 38,
   "boomWhy": [
    "Most bullish source has him #113, 44 spots above the composite",
    "Ceiling 297 pts vs 243 projected (Bayesian p90)",
@@ -29520,10 +29522,10 @@
   "posRank": 59,
   "vbd": -56,
   "tier": 16,
-  "sit": 1,
+  "sit": 2,
   "boom": 4,
-  "bust": 65,
-  "risk": 11,
+  "bust": 46,
+  "risk": 8,
   "boomWhy": [
    "Most bullish source has him #115, 45 spots above the composite",
    "Ceiling 221 pts vs 135 projected (Bayesian p90)",
@@ -29713,10 +29715,10 @@
   "posRank": 49,
   "vbd": -104,
   "tier": 15,
-  "sit": 60,
+  "sit": 70,
   "boom": 73,
-  "bust": 48,
-  "risk": 72,
+  "bust": 39,
+  "risk": 68,
   "boomWhy": [
    "Most bullish source has him #103, 58 spots above the composite",
    "Ceiling 167 pts vs 80 projected (Bayesian p90)",
@@ -29798,7 +29800,7 @@
   "sitParts": {
    "env": 0.16,
    "change": 0.38,
-   "priors": 0.1,
+   "priors": 0.0,
    "schedule": 0.35,
    "variance": 0.44
   },
@@ -29907,10 +29909,10 @@
   "posRank": 60,
   "vbd": -64,
   "tier": 16,
-  "sit": 92,
-  "boom": 31,
-  "bust": 93,
-  "risk": 42,
+  "sit": 87,
+  "boom": 36,
+  "bust": 85,
+  "risk": 29,
   "boomWhy": [
    "Ceiling 205 pts vs 127 projected (Bayesian p90)",
    "Boom weeks (top-6 scoring) in 0% of games, 2024-25 weighted",
@@ -29986,12 +29988,13 @@
    "new HC Todd Monken, new OC Travis Switzer (see team card)",
    "Offensive line ranked 32 of 32",
    "Judkins clear lead; Monken run-heavy",
-   "26.5% snap share in 2025"
+   "26.5% snap share in 2025",
+   "Year-2 RB: boomed 10 points more often than peers at the same ADP, 2016-25"
   ],
   "sitParts": {
    "env": -0.5,
    "change": 0.0,
-   "priors": 0.0,
+   "priors": 0.1,
    "schedule": 0.57,
    "variance": 0.0
   },
@@ -30101,10 +30104,10 @@
   "posRank": 50,
   "vbd": -88,
   "tier": 15,
-  "sit": 23,
-  "boom": 39,
-  "bust": 5,
-  "risk": 10,
+  "sit": 38,
+  "boom": 46,
+  "bust": 7,
+  "risk": 4,
   "boomWhy": [
    "Most bullish source has him #89, 72 spots above the composite",
    "Ceiling 195 pts vs 96 projected (Bayesian p90)",
@@ -30296,10 +30299,10 @@
   "posRank": 24,
   "vbd": -48,
   "tier": 8,
-  "sit": 25,
+  "sit": 28,
   "boom": 32,
-  "bust": 38,
-  "risk": 15,
+  "bust": 25,
+  "risk": 22,
   "boomWhy": [
    "Most bullish source has him #108, 56 spots above the composite",
    "Ceiling 297 pts vs 235 projected (Bayesian p90)",
@@ -30489,10 +30492,10 @@
   "posRank": 19,
   "vbd": -32,
   "tier": 7,
-  "sit": 59,
-  "boom": 10,
-  "bust": 41,
-  "risk": 7,
+  "sit": 73,
+  "boom": 13,
+  "bust": 39,
+  "risk": 19,
   "boomWhy": [
    "Most bullish source has him #98, 66 spots above the composite",
    "Ceiling 237 pts vs 139 projected (Bayesian p90)",
@@ -30677,10 +30680,10 @@
   "posRank": 51,
   "vbd": -129,
   "tier": 15,
-  "sit": 91,
-  "boom": 71,
-  "bust": 66,
-  "risk": 84,
+  "sit": 92,
+  "boom": 78,
+  "bust": 60,
+  "risk": 88,
   "boomWhy": [
    "Most bullish source has him #116, 52 spots above the composite",
    "Ceiling 169 pts vs 55 projected (Bayesian p90)",
@@ -30875,10 +30878,10 @@
   "posRank": 20,
   "vbd": -56,
   "tier": 8,
-  "sit": 96,
-  "boom": 56,
-  "bust": 47,
-  "risk": 39,
+  "sit": 90,
+  "boom": 61,
+  "bust": 27,
+  "risk": 41,
   "boomWhy": [
    "Most bullish source has him #107, 61 spots above the composite",
    "Ceiling 176 pts vs 115 projected (Bayesian p90)",
@@ -30890,14 +30893,14 @@
    "Most bearish source has him #242, 74 spots below the composite",
    "Floor 30 pts vs 115 projected (Bayesian p10)",
    "Bust weeks (below the startable line) in 64% of games, 2024-25 weighted",
-   "New team in 2026 (TEN to WAS)",
+   "New team in 2026 (TEN to WAS): backs and receivers who changed teams busted 7-8 points more often, 2016-25",
    "Market drafts him 5 picks earlier than his composite rank"
   ],
   "riskWhy": [
    "Calibrated injury model: 43% chance of missing time (AUC 0.75)",
    "Drafted anywhere from pick 124 to 208 across 24 FFC drafts (\u00b120.6)",
    "Missed 1 regular-season games in 2024-25",
-   "Situation: New team in 2026 (TEN to WAS); coaching change"
+   "Situation: New team in 2026 (TEN to WAS): backs and receivers who changed teams busted 7-8 points more often, 2016-25; coaching change"
   ],
   "flag": null,
   "note": "Team not confirmed in excerpt."
@@ -30963,7 +30966,7 @@
    "env": -0.05,
    "change": 0.25,
    "vacated": 0.62,
-   "priors": 0.0,
+   "priors": -0.1,
    "schedule": -0.19,
    "variance": 0.38
   },
@@ -31072,10 +31075,10 @@
   "posRank": 52,
   "vbd": -105,
   "tier": 15,
-  "sit": 73,
+  "sit": 33,
   "boom": 8,
-  "bust": 74,
-  "risk": 24,
+  "bust": 45,
+  "risk": 14,
   "boomWhy": [
    "Ceiling 167 pts vs 79 projected (Bayesian p90)",
    "Boom weeks (top-6 scoring) in 0% of games, 2024-25 weighted",
@@ -31086,7 +31089,7 @@
    "Most bearish source has him #263, 95 spots below the composite",
    "Floor 8 pts vs 79 projected (Bayesian p10)",
    "Bust weeks (below the startable line) in 64% of games, 2024-25 weighted",
-   "New team in 2026 (SF to ATL)",
+   "New team in 2026 (SF to ATL): backs and receivers who changed teams busted 7-8 points more often, 2016-25",
    "2026 role unresolved: Handcuff with standalone touches only if Bijan misses time; more than his 92-carry SF role."
   ],
   "riskWhy": [
@@ -31094,7 +31097,7 @@
    "Drafted anywhere from pick 116 to 209 across 52 FFC drafts (\u00b117.8)",
    "Missed 4 regular-season games in 2024-25",
    "Week-to-week swing: 2025 scores varied \u00b178% of his average",
-   "Situation: New team in 2026 (SF to ATL)"
+   "Situation: New team in 2026 (SF to ATL): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "flag": null,
   "note": null
@@ -31279,10 +31282,10 @@
   "posRank": 21,
   "vbd": -39,
   "tier": 8,
-  "sit": 21,
-  "boom": 4,
-  "bust": 36,
-  "risk": 10,
+  "sit": 27,
+  "boom": 1,
+  "bust": 30,
+  "risk": 13,
   "boomWhy": [
    "Most bullish source has him #87, 83 spots above the composite",
    "Ceiling 176 pts vs 132 projected (Bayesian p90)",
@@ -31486,8 +31489,8 @@
   "vbd": -99,
   "tier": 15,
   "sit": 1,
-  "boom": 43,
-  "bust": 83,
+  "boom": 38,
+  "bust": 86,
   "risk": 15,
   "boomWhy": [
    "Most bullish source has him #102, 69 spots above the composite",
@@ -31686,10 +31689,10 @@
   "posRank": 61,
   "vbd": -75,
   "tier": 16,
-  "sit": 3,
-  "boom": 38,
-  "bust": 94,
-  "risk": 92,
+  "sit": 2,
+  "boom": 35,
+  "bust": 93,
+  "risk": 95,
   "boomWhy": [
    "Most bullish source has him #110, 62 spots above the composite",
    "Ceiling 215 pts vs 116 projected (Bayesian p90)",
@@ -31700,7 +31703,7 @@
    "Most bearish source has him #293, 122 spots below the composite",
    "Floor 47 pts vs 116 projected (Bayesian p10)",
    "Bust weeks (below the startable line) in 27% of games, 2024-25 weighted",
-   "New team in 2026 (LAC to IND)",
+   "New team in 2026 (LAC to IND): backs and receivers who changed teams busted 7-8 points more often, 2016-25",
    "2026 role unresolved: Volume likely down from his Chargers role; QB downgrade from Herbert."
   ],
   "riskWhy": [
@@ -31708,7 +31711,7 @@
    "Drafted anywhere from pick 104 to 152 across 140 FFC drafts (\u00b111.4)",
    "Missed 2 regular-season games in 2024-25",
    "Week-to-week swing: 2025 scores varied \u00b161% of his average",
-   "Situation: New team in 2026 (LAC to IND)"
+   "Situation: New team in 2026 (LAC to IND): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "flag": null,
   "note": null
@@ -31875,9 +31878,9 @@
   "posRank": 25,
   "vbd": -77,
   "tier": 8,
-  "sit": 28,
-  "boom": 52,
-  "bust": 52,
+  "sit": 32,
+  "boom": 58,
+  "bust": 45,
   "risk": 78,
   "boomWhy": [
    "Most bullish source has him #119, 54 spots above the composite",
@@ -32060,9 +32063,9 @@
   "vbd": -65,
   "tier": 8,
   "sit": 12,
-  "boom": 22,
+  "boom": 25,
   "bust": 75,
-  "risk": 45,
+  "risk": 28,
   "boomWhy": [
    "Most bullish source has him #123, 50 spots above the composite",
    "Ceiling 299 pts vs 218 projected (Bayesian p90)",
@@ -32250,10 +32253,10 @@
   "posRank": 54,
   "vbd": -116,
   "tier": 15,
-  "sit": 77,
-  "boom": 24,
-  "bust": 22,
-  "risk": 40,
+  "sit": 80,
+  "boom": 28,
+  "bust": 12,
+  "risk": 33,
   "boomWhy": [
    "Ceiling 170 pts vs 68 projected (Bayesian p90)",
    "Boom weeks (top-6 scoring) in 5% of games, 2024-25 weighted",
@@ -32426,10 +32429,10 @@
   "posRank": 55,
   "vbd": -91,
   "tier": 15,
-  "sit": 20,
-  "boom": 57,
-  "bust": 21,
-  "risk": 51,
+  "sit": 24,
+  "boom": 54,
+  "bust": 23,
+  "risk": 53,
   "boomWhy": [
    "Most bullish source has him #119, 57 spots above the composite",
    "Ceiling 168 pts vs 93 projected (Bayesian p90)",
@@ -32603,10 +32606,10 @@
   "posRank": 62,
   "vbd": -56,
   "tier": 16,
-  "sit": 15,
-  "boom": 18,
-  "bust": 22,
-  "risk": 14,
+  "sit": 19,
+  "boom": 16,
+  "bust": 13,
+  "risk": 13,
   "boomWhy": [
    "Most bullish source has him #115, 62 spots above the composite",
    "Ceiling 223 pts vs 135 projected (Bayesian p90)",
@@ -32690,7 +32693,7 @@
    "env": 0.23,
    "change": -0.5,
    "vacated": 0.7,
-   "priors": 0.0,
+   "priors": -0.1,
    "schedule": 0.28,
    "variance": 0.5
   },
@@ -32800,9 +32803,9 @@
   "posRank": 56,
   "vbd": -103,
   "tier": 15,
-  "sit": 51,
+  "sit": 11,
   "boom": 9,
-  "bust": 98,
+  "bust": 96,
   "risk": 91,
   "boomWhy": [
    "Ceiling 165 pts vs 81 projected (Bayesian p90)",
@@ -32815,7 +32818,7 @@
    "Floor 10 pts vs 81 projected (Bayesian p10)",
    "Bust weeks (below the startable line) in 65% of games, 2024-25 weighted",
    "On IR (MCL), out at least four games",
-   "New team in 2026 (KC to DET)"
+   "New team in 2026 (KC to DET): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "riskWhy": [
    "ffanalytics projection uncertainty 65/99",
@@ -32878,13 +32881,12 @@
    "QB: Matthew Stafford (tier 1) \u2014 Elite production in 2025; age 38 is the only risk; Rams are Super Bowl favorite with the NFL's highest implied PPG.",
    "new OC Nathan Scheelhaase (see team card)",
    "Offensive line ranked 9 of 32",
-   "Listed TE3 behind Parkinson and Higbee on the Sept 4 depth chart",
-   "Year-2 receiver: ~15% breakout base rate (RotoViz)"
+   "Listed TE3 behind Parkinson and Higbee on the Sept 4 depth chart"
   ],
   "sitParts": {
    "env": 0.56,
    "change": 0.0,
-   "priors": 0.15,
+   "priors": 0.0,
    "schedule": -0.19,
    "variance": 0.25
   },
@@ -32987,10 +32989,10 @@
   "posRank": 22,
   "vbd": -72,
   "tier": 8,
-  "sit": 93,
+  "sit": 83,
   "boom": 73,
-  "bust": 87,
-  "risk": 79,
+  "bust": 76,
+  "risk": 47,
   "boomWhy": [
    "Most bullish source has him #112, 66 spots above the composite",
    "Ceiling 140 pts vs 99 projected (Bayesian p90)",
@@ -33054,7 +33056,7 @@
    "QB: Kirk Cousins (tier 4) \u2014 38-year-old bridge starter listed ahead of No. 1 overall pick Fernando Mendoza; unsettled and likely to change midseason.",
    "new HC Klint Kubiak, new OC Andrew Janocko (see team card)",
    "Offensive line ranked 18 of 32",
-   "Receivers who change teams decline ~2 PPG on average (77% decline)"
+   "Changed teams: receivers who moved busted 7 points more often, 2016-25"
   ],
   "sitParts": {
    "env": -0.64,
@@ -33171,10 +33173,10 @@
   "posRank": 63,
   "vbd": -71,
   "tier": 16,
-  "sit": 0,
+  "sit": 2,
   "boom": 2,
-  "bust": 89,
-  "risk": 27,
+  "bust": 80,
+  "risk": 11,
   "boomWhy": [
    "Most bullish source has him #128, 50 spots above the composite",
    "Ceiling 179 pts vs 120 projected (Bayesian p90)",
@@ -33184,7 +33186,7 @@
    "Most bearish source has him #302, 124 spots below the composite",
    "Floor 19 pts vs 120 projected (Bayesian p10)",
    "Bust weeks (below the startable line) in 58% of games, 2024-25 weighted",
-   "New team in 2026 (MIN to LV)",
+   "New team in 2026 (MIN to LV): backs and receivers who changed teams busted 7-8 points more often, 2016-25",
    "Market drafts him 23 picks earlier than his composite rank"
   ],
   "riskWhy": [
@@ -33235,12 +33237,11 @@
    "Vegas win total 5.5",
    "QB: Geno Smith (tier 3) \u2014 35-year-old veteran after a rough 2025 in LV; average with a competent floor.",
    "new OC Frank Reich (see team card)",
-   "Offensive line ranked 21 of 32",
-   "Year-3 receiver: ~10% breakout base rate"
+   "Offensive line ranked 21 of 32"
   ],
   "sitParts": {
    "env": -0.36,
-   "priors": 0.1,
+   "priors": 0.0,
    "schedule": -0.47,
    "variance": 0.0
   },
@@ -33349,9 +33350,9 @@
   "vbd": -85,
   "tier": 16,
   "sit": 10,
-  "boom": 24,
-  "bust": 48,
-  "risk": 45,
+  "boom": 27,
+  "bust": 42,
+  "risk": 30,
   "boomWhy": [
    "Most bullish source has him #126, 52 spots above the composite",
    "Ceiling 197 pts vs 106 projected (Bayesian p90)",
@@ -33526,10 +33527,10 @@
   "posRank": 57,
   "vbd": -113,
   "tier": 15,
-  "sit": 7,
-  "boom": 10,
-  "bust": 36,
-  "risk": 7,
+  "sit": 10,
+  "boom": 15,
+  "bust": 30,
+  "risk": 2,
   "boomWhy": [
    "Most bullish source has him #132, 49 spots above the composite",
    "Ceiling 156 pts vs 71 projected (Bayesian p90)",
@@ -33591,12 +33592,12 @@
    "new OC Frank Reich (see team card)",
    "Offensive line ranked 21 of 32",
    "Arrives into a room that vacated 25% of its 2025 targets",
-   "First-round rookie: 71% of first-round RBs finish top-24; first-round WRs average ~100 targets"
+   "Drafted rookie WR: boomed 16 points more and busted 17 points less than peers at the same ADP, 2016-25"
   ],
   "sitParts": {
    "env": -0.36,
    "vacated": 0.2,
-   "priors": 0.12,
+   "priors": 0.15,
    "schedule": -0.47,
    "variance": 0.0
   },
@@ -33705,10 +33706,10 @@
   "posRank": 65,
   "vbd": -84,
   "tier": 16,
-  "sit": 18,
-  "boom": 34,
-  "bust": 39,
-  "risk": 23,
+  "sit": 23,
+  "boom": 39,
+  "bust": 34,
+  "risk": 32,
   "boomWhy": [
    "Most bullish source has him #123, 58 spots above the composite",
    "Ceiling 196 pts vs 107 projected (Bayesian p90)",
@@ -33767,7 +33768,7 @@
    "Vegas win total 8.5",
    "QB: Kyler Murray (tier 3) \u2014 Traded from ARI; rushing upside in O'Connell's system but inconsistent recent play - average with upside.",
    "Offensive line ranked 20 of 32",
-   "Receivers who change teams decline ~2 PPG on average (77% decline)"
+   "Changed teams: receivers who moved busted 7 points more often, 2016-25"
   ],
   "sitParts": {
    "env": -0.05,
@@ -33880,10 +33881,10 @@
   "posRank": 66,
   "vbd": -72,
   "tier": 16,
-  "sit": 23,
-  "boom": 20,
-  "bust": 63,
-  "risk": 35,
+  "sit": 32,
+  "boom": 14,
+  "bust": 68,
+  "risk": 47,
   "boomWhy": [
    "Most bullish source has him #115, 67 spots above the composite",
    "Ceiling 198 pts vs 119 projected (Bayesian p90)",
@@ -33893,7 +33894,7 @@
    "Most bearish source has him #307, 125 spots below the composite",
    "Floor 32 pts vs 119 projected (Bayesian p10)",
    "Bust weeks (below the startable line) in 18% of games, 2024-25 weighted",
-   "New team in 2026 (SF to MIN)",
+   "New team in 2026 (SF to MIN): backs and receivers who changed teams busted 7-8 points more often, 2016-25",
    "Age 29: at or past the historical WR decline point"
   ],
   "riskWhy": [
@@ -33901,7 +33902,7 @@
    "Calibrated injury model: 46% chance of missing time (AUC 0.75)",
    "Drafted anywhere from pick 119 to 172 across 69 FFC drafts (\u00b113.4)",
    "Missed 4 regular-season games in 2024-25",
-   "Situation: New team in 2026 (SF to MIN)"
+   "Situation: New team in 2026 (SF to MIN): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "flag": null,
   "note": null
@@ -33944,7 +33945,7 @@
    "Vegas win total 9.5",
    "QB: C.J. Stroud (tier 2) \u2014 Good QB hampered by an OL FantasyPros called arguably the worst in 2025.",
    "Offensive line ranked 30 of 32",
-   "Receivers who change teams decline ~2 PPG on average (77% decline)"
+   "Changed teams: receivers who moved busted 7 points more often, 2016-25"
   ],
   "sitParts": {
    "env": 0.12,
@@ -34061,10 +34062,10 @@
   "posRank": 67,
   "vbd": -71,
   "tier": 17,
-  "sit": 17,
-  "boom": 36,
-  "bust": 75,
-  "risk": 75,
+  "sit": 25,
+  "boom": 38,
+  "bust": 62,
+  "risk": 57,
   "boomWhy": [
    "Most bullish source has him #121, 63 spots above the composite",
    "Ceiling 176 pts vs 120 projected (Bayesian p90)",
@@ -34077,7 +34078,7 @@
    "Floor 16 pts vs 120 projected (Bayesian p10)",
    "Bust weeks (below the startable line) in 51% of games, 2024-25 weighted",
    "Scored 27% above expected fantasy points in 2025 (touchdown / efficiency regression risk)",
-   "New team in 2026 (NE to HOU)"
+   "New team in 2026 (NE to HOU): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "riskWhy": [
    "ffanalytics projection uncertainty 92/99",
@@ -34143,13 +34144,13 @@
    "Opportunity +2",
    "Rookie #16 pick; listed TE2 behind Mason Taylor on the Sept 4 depth chart",
    "Arrives into a room that vacated 25% of its 2025 targets",
-   "First-round rookie: 71% of first-round RBs finish top-24; first-round WRs average ~100 targets"
+   "First-round rookie"
   ],
   "sitParts": {
    "env": -0.36,
    "change": 0.5,
    "vacated": 0.2,
-   "priors": 0.12,
+   "priors": 0.05,
    "schedule": 0.03,
    "variance": 0.5
   },
@@ -34259,10 +34260,10 @@
   "posRank": 23,
   "vbd": -52,
   "tier": 8,
-  "sit": 76,
-  "boom": 61,
-  "bust": 81,
-  "risk": 70,
+  "sit": 59,
+  "boom": 64,
+  "bust": 70,
+  "risk": 56,
   "boomWhy": [
    "Most bullish source has him #120, 64 spots above the composite",
    "Ceiling 201 pts vs 119 projected (Bayesian p90)",
@@ -34323,12 +34324,11 @@
   "sitWhy": [
    "Vegas win total 8.5",
    "QB: Trevor Lawrence (tier 3) \u2014 Average-plus in Coen's scheme; 8.5-win team.",
-   "Offensive line ranked 30 of 32",
-   "Year-2 receiver: ~15% breakout base rate (RotoViz)"
+   "Offensive line ranked 30 of 32"
   ],
   "sitParts": {
    "env": -0.1,
-   "priors": 0.15,
+   "priors": 0.0,
    "schedule": 0.51,
    "variance": 0.0
   },
@@ -34434,10 +34434,10 @@
   "posRank": 68,
   "vbd": -108,
   "tier": 17,
-  "sit": 71,
-  "boom": 51,
-  "bust": 71,
-  "risk": 80,
+  "sit": 49,
+  "boom": 45,
+  "bust": 70,
+  "risk": 83,
   "boomWhy": [
    "Most bullish source has him #122, 62 spots above the composite",
    "Ceiling 160 pts vs 83 projected (Bayesian p90)",
@@ -34494,12 +34494,11 @@
    "Vegas win total 9.5",
    "QB: Justin Herbert (tier 1) \u2014 Elite arm; 9.5-win team.",
    "new OC Mike McDaniel (see team card)",
-   "Offensive line ranked 7 of 32",
-   "Year-2 receiver: ~15% breakout base rate (RotoViz)"
+   "Offensive line ranked 7 of 32"
   ],
   "sitParts": {
    "env": 0.37,
-   "priors": 0.15,
+   "priors": 0.0,
    "schedule": -0.45,
    "variance": 0.0
   },
@@ -34605,10 +34604,10 @@
   "posRank": 69,
   "vbd": -98,
   "tier": 17,
-  "sit": 76,
+  "sit": 56,
   "boom": 43,
-  "bust": 59,
-  "risk": 22,
+  "bust": 37,
+  "risk": 24,
   "boomWhy": [
    "Most bullish source has him #123, 67 spots above the composite",
    "Ceiling 181 pts vs 93 projected (Bayesian p90)",
@@ -34789,10 +34788,10 @@
   "posRank": 70,
   "vbd": -78,
   "tier": 17,
-  "sit": 32,
-  "boom": 5,
-  "bust": 78,
-  "risk": 71,
+  "sit": 37,
+  "boom": 3,
+  "bust": 82,
+  "risk": 61,
   "boomWhy": [
    "Most bullish source has him #136, 55 spots above the composite",
    "Ceiling 184 pts vs 113 projected (Bayesian p90)",
@@ -34967,10 +34966,10 @@
   "posRank": 58,
   "vbd": -135,
   "tier": 15,
-  "sit": 45,
-  "boom": 38,
+  "sit": 49,
+  "boom": 40,
   "bust": 9,
-  "risk": 23,
+  "risk": 34,
   "boomWhy": [
    "Most bullish source has him #132, 59 spots above the composite",
    "Ceiling 155 pts vs 49 projected (Bayesian p90)",
@@ -35030,12 +35029,11 @@
    "Vegas win total 10.5",
    "QB: Sam Darnold (tier 2) \u2014 Super Bowl LX champion QB in a run-first scheme; good, not elite.",
    "new OC Brian Fleury (see team card)",
-   "Offensive line ranked 15 of 32",
-   "Year-3 receiver: ~10% breakout base rate"
+   "Offensive line ranked 15 of 32"
   ],
   "sitParts": {
    "env": 0.15,
-   "priors": 0.1,
+   "priors": 0.0,
    "schedule": -0.41,
    "variance": 0.0
   },
@@ -35143,10 +35141,10 @@
   "posRank": 24,
   "vbd": -53,
   "tier": 8,
-  "sit": 44,
-  "boom": 19,
-  "bust": 33,
-  "risk": 21,
+  "sit": 36,
+  "boom": 10,
+  "bust": 7,
+  "risk": 7,
   "boomWhy": [
    "Most bullish source has him #127, 64 spots above the composite",
    "Ceiling 173 pts vs 118 projected (Bayesian p90)",
@@ -35206,12 +35204,11 @@
   "sitWhy": [
    "Vegas implies 25.8 points per game (9.5 wins)",
    "QB: Dak Prescott (tier 2) \u2014 Good veteran with elite weapons; 25.75 implied PPG (4th).",
-   "Offensive line ranked 17 of 32",
-   "Year-3 receiver: ~10% breakout base rate"
+   "Offensive line ranked 17 of 32"
   ],
   "sitParts": {
    "env": 0.09,
-   "priors": 0.1,
+   "priors": 0.0,
    "schedule": -0.04,
    "variance": 0.0
   },
@@ -35314,10 +35311,10 @@
   "posRank": 71,
   "vbd": -96,
   "tier": 17,
-  "sit": 53,
-  "boom": 40,
-  "bust": 72,
-  "risk": 70,
+  "sit": 45,
+  "boom": 37,
+  "bust": 65,
+  "risk": 67,
   "boomWhy": [
    "Most bullish source has him #126, 67 spots above the composite",
    "Ceiling 184 pts vs 95 projected (Bayesian p90)",
@@ -35488,10 +35485,10 @@
   "posRank": 59,
   "vbd": -131,
   "tier": 16,
-  "sit": 67,
-  "boom": 21,
-  "bust": 43,
-  "risk": 67,
+  "sit": 68,
+  "boom": 23,
+  "bust": 34,
+  "risk": 54,
   "boomWhy": [
    "Most bullish source has him #134, 63 spots above the composite",
    "Ceiling 150 pts vs 53 projected (Bayesian p90)",
@@ -35551,12 +35548,11 @@
    "Vegas win total 4.5",
    "QB: Malik Willis (tier 4) \u2014 First-year starter signed to 3y/$67.5M after backing up in GB; dual-threat but unproven passer.",
    "new HC Jeff Hafley, new OC Bobby Slowik (see team card)",
-   "Offensive line ranked 25 of 32",
-   "Year-3 receiver: ~10% breakout base rate"
+   "Offensive line ranked 25 of 32"
   ],
   "sitParts": {
    "env": -0.62,
-   "priors": 0.1,
+   "priors": 0.0,
    "schedule": -0.26,
    "variance": 0.0
   },
@@ -35666,9 +35662,9 @@
   "vbd": -74,
   "tier": 17,
   "sit": 6,
-  "boom": 46,
-  "bust": 53,
-  "risk": 15,
+  "boom": 50,
+  "bust": 50,
+  "risk": 33,
   "boomWhy": [
    "Most bullish source has him #83, 118 spots above the composite",
    "Ceiling 208 pts vs 117 projected (Bayesian p90)",
@@ -35843,10 +35839,10 @@
   "posRank": 73,
   "vbd": -98,
   "tier": 17,
-  "sit": 9,
-  "boom": 47,
-  "bust": 47,
-  "risk": 13,
+  "sit": 6,
+  "boom": 50,
+  "bust": 60,
+  "risk": 16,
   "boomWhy": [
    "Most bullish source has him #126, 75 spots above the composite",
    "Ceiling 182 pts vs 93 projected (Bayesian p90)",
@@ -36014,10 +36010,10 @@
   "posRank": 27,
   "vbd": -93,
   "tier": 9,
-  "sit": 38,
+  "sit": 42,
   "boom": 28,
   "bust": 85,
-  "risk": 38,
+  "risk": 62,
   "boomWhy": [
    "Most bullish source has him #131, 71 spots above the composite",
    "Ceiling 255 pts vs 190 projected (Bayesian p90)",
@@ -36077,12 +36073,11 @@
    "Vegas win total 9.5",
    "QB: Justin Herbert (tier 1) \u2014 Elite arm; 9.5-win team.",
    "new OC Mike McDaniel (see team card)",
-   "Offensive line ranked 7 of 32",
-   "Year-2 receiver: ~15% breakout base rate (RotoViz)"
+   "Offensive line ranked 7 of 32"
   ],
   "sitParts": {
    "env": 0.37,
-   "priors": 0.15,
+   "priors": 0.0,
    "schedule": 0.07,
    "variance": 0.0
   },
@@ -36183,10 +36178,10 @@
   "posRank": 25,
   "vbd": -55,
   "tier": 8,
-  "sit": 84,
-  "boom": 81,
-  "bust": 44,
-  "risk": 81,
+  "sit": 66,
+  "boom": 70,
+  "bust": 33,
+  "risk": 79,
   "boomWhy": [
    "Most bullish source has him #116, 87 spots above the composite",
    "Ceiling 231 pts vs 116 projected (Bayesian p90)",
@@ -36362,10 +36357,10 @@
   "posRank": 74,
   "vbd": -90,
   "tier": 17,
-  "sit": 79,
-  "boom": 58,
-  "bust": 35,
-  "risk": 30,
+  "sit": 77,
+  "boom": 59,
+  "bust": 27,
+  "risk": 37,
   "boomWhy": [
    "Most bullish source has him #128, 75 spots above the composite",
    "Ceiling 181 pts vs 101 projected (Bayesian p90)",
@@ -36540,10 +36535,10 @@
   "posRank": 26,
   "vbd": -54,
   "tier": 8,
-  "sit": 4,
-  "boom": 44,
-  "bust": 90,
-  "risk": 50,
+  "sit": 3,
+  "boom": 53,
+  "bust": 73,
+  "risk": 59,
   "boomWhy": [
    "Most bullish source has him #117, 86 spots above the composite",
    "Ceiling 210 pts vs 117 projected (Bayesian p90)",
@@ -36716,10 +36711,10 @@
   "posRank": 27,
   "vbd": -54,
   "tier": 8,
-  "sit": 27,
-  "boom": 47,
-  "bust": 61,
-  "risk": 53,
+  "sit": 41,
+  "boom": 44,
+  "bust": 50,
+  "risk": 44,
   "boomWhy": [
    "Most bullish source has him #108, 96 spots above the composite",
    "Ceiling 167 pts vs 117 projected (Bayesian p90)",
@@ -36780,12 +36775,11 @@
    "Vegas win total 9.5",
    "QB: Bo Nix (tier 2) \u2014 Year 3 starter on a team priced at 9.5 wins and PFF No. 1 OL.",
    "new OC Davis Webb (see team card)",
-   "Offensive line ranked 1 of 32",
-   "Year-2 receiver: ~15% breakout base rate (RotoViz)"
+   "Offensive line ranked 1 of 32"
   ],
   "sitParts": {
    "env": 0.43,
-   "priors": 0.15,
+   "priors": 0.0,
    "schedule": -0.18,
    "variance": 0.0
   },
@@ -36881,10 +36875,10 @@
   "posRank": 75,
   "vbd": -125,
   "tier": 17,
-  "sit": 86,
-  "boom": 45,
-  "bust": 27,
-  "risk": 53,
+  "sit": 65,
+  "boom": 42,
+  "bust": 30,
+  "risk": 62,
   "boomWhy": [
    "Most bullish source has him #115, 90 spots above the composite",
    "Ceiling 94 pts vs 66 projected (Bayesian p90)",
@@ -37052,8 +37046,8 @@
   "tier": 9,
   "sit": 8,
   "boom": 8,
-  "bust": 72,
-  "risk": 25,
+  "bust": 68,
+  "risk": 18,
   "boomWhy": [
    "Most bullish source has him #139, 67 spots above the composite",
    "Ceiling 290 pts vs 196 projected (Bayesian p90)",
@@ -37220,10 +37214,10 @@
   "posRank": 76,
   "vbd": -75,
   "tier": 17,
-  "sit": 66,
-  "boom": 16,
-  "bust": 75,
-  "risk": 95,
+  "sit": 77,
+  "boom": 22,
+  "bust": 63,
+  "risk": 91,
   "boomWhy": [
    "Most bullish source has him #139, 69 spots above the composite",
    "Ceiling 182 pts vs 116 projected (Bayesian p90)",
@@ -37398,10 +37392,10 @@
   "posRank": 60,
   "vbd": -112,
   "tier": 16,
-  "sit": 32,
-  "boom": 51,
-  "bust": 12,
-  "risk": 8,
+  "sit": 40,
+  "boom": 48,
+  "bust": 10,
+  "risk": 9,
   "boomWhy": [
    "Most bullish source has him #132, 76 spots above the composite",
    "Ceiling 169 pts vs 72 projected (Bayesian p90)",
@@ -37461,12 +37455,13 @@
    "QB: Aaron Rodgers (tier 3) \u2014 Age 42, reunited with McCarthy; competent but declining; Mason Rudolph QB2, R3 rookie Drew Allar drafted.",
    "new HC Mike McCarthy, new OC Brian Angelichio (see team card)",
    "Offensive line ranked 14 of 32",
-   "Arrives into a room that vacated 50% of its 2025 targets"
+   "Arrives into a room that vacated 50% of its 2025 targets",
+   "Drafted rookie WR: boomed 16 points more and busted 17 points less than peers at the same ADP, 2016-25"
   ],
   "sitParts": {
    "env": -0.02,
    "vacated": 1.0,
-   "priors": 0.0,
+   "priors": 0.15,
    "schedule": 0.07,
    "variance": 0.0
   },
@@ -37573,10 +37568,10 @@
   "posRank": 77,
   "vbd": -105,
   "tier": 17,
-  "sit": 59,
-  "boom": 41,
-  "bust": 31,
-  "risk": 20,
+  "sit": 68,
+  "boom": 48,
+  "bust": 24,
+  "risk": 27,
   "boomWhy": [
    "Most bullish source has him #149, 59 spots above the composite",
    "Ceiling 224 pts vs 86 projected (Bayesian p90)",
@@ -37635,12 +37630,11 @@
    "Vegas win total 6.5",
    "QB: Cam Ward (tier 3) \u2014 2025 No. 1 overall pick entering year 2 in a new system; average with growth upside.",
    "new HC Robert Saleh, new OC Brian Daboll (see team card)",
-   "Offensive line ranked 29 of 32",
-   "Year-2 receiver: ~15% breakout base rate (RotoViz)"
+   "Offensive line ranked 29 of 32"
   ],
   "sitParts": {
    "env": -0.3,
-   "priors": 0.15,
+   "priors": 0.0,
    "schedule": 0.54,
    "variance": 0.0
   },
@@ -37738,10 +37732,10 @@
   "posRank": 28,
   "vbd": -63,
   "tier": 9,
-  "sit": 53,
-  "boom": 16,
-  "bust": 24,
-  "risk": 24,
+  "sit": 13,
+  "boom": 21,
+  "bust": 19,
+  "risk": 30,
   "boomWhy": [
    "Most bullish source has him #140, 70 spots above the composite",
    "Ceiling 170 pts vs 108 projected (Bayesian p90)",
@@ -37799,12 +37793,11 @@
   "sitWhy": [
    "Vegas win total 9.5",
    "QB: C.J. Stroud (tier 2) \u2014 Good QB hampered by an OL FantasyPros called arguably the worst in 2025.",
-   "Offensive line ranked 30 of 32",
-   "Year-2 receiver: ~15% breakout base rate (RotoViz)"
+   "Offensive line ranked 30 of 32"
   ],
   "sitParts": {
    "env": 0.12,
-   "priors": 0.15,
+   "priors": 0.0,
    "schedule": -0.0,
    "variance": 0.0
   },
@@ -37908,10 +37901,10 @@
   "posRank": 78,
   "vbd": -93,
   "tier": 17,
-  "sit": 72,
-  "boom": 26,
-  "bust": 66,
-  "risk": 91,
+  "sit": 50,
+  "boom": 23,
+  "bust": 52,
+  "risk": 89,
   "boomWhy": [
    "Most bullish source has him #141, 71 spots above the composite",
    "Ceiling 180 pts vs 98 projected (Bayesian p90)",
@@ -38077,9 +38070,9 @@
   "vbd": -118,
   "tier": 16,
   "sit": 71,
-  "boom": 27,
-  "bust": 11,
-  "risk": 17,
+  "boom": 29,
+  "bust": 8,
+  "risk": 12,
   "boomWhy": [
    "Most bullish source has him #152, 62 spots above the composite",
    "Ceiling 177 pts vs 66 projected (Bayesian p90)",
@@ -38244,10 +38237,10 @@
   "posRank": 29,
   "vbd": -40,
   "tier": 9,
-  "sit": 30,
-  "boom": 50,
+  "sit": 44,
+  "boom": 41,
   "bust": 4,
-  "risk": 41,
+  "risk": 39,
   "boomWhy": [
    "Most bullish source has him #110, 106 spots above the composite",
    "Ceiling 256 pts vs 131 projected (Bayesian p90)",
@@ -38417,10 +38410,10 @@
   "posRank": 79,
   "vbd": -98,
   "tier": 17,
-  "sit": 39,
-  "boom": 3,
-  "bust": 98,
-  "risk": 63,
+  "sit": 50,
+  "boom": 7,
+  "bust": 96,
+  "risk": 74,
   "boomWhy": [
    "Most bullish source has him #152, 64 spots above the composite",
    "Ceiling 162 pts vs 93 projected (Bayesian p90)"
@@ -38478,12 +38471,11 @@
    "Vegas win total 9.5",
    "QB: Jared Goff (tier 2) \u2014 Good pocket passer, top-5 implied PPG team per RotoWire.",
    "new OC Drew Petzing (see team card)",
-   "Offensive line ranked 14 of 32",
-   "Year-2 receiver: ~15% breakout base rate (RotoViz)"
+   "Offensive line ranked 14 of 32"
   ],
   "sitParts": {
    "env": 0.21,
-   "priors": 0.15,
+   "priors": 0.0,
    "schedule": -0.16,
    "variance": 0.0
   },
@@ -38589,10 +38581,10 @@
   "posRank": 80,
   "vbd": -118,
   "tier": 17,
-  "sit": 74,
+  "sit": 54,
   "boom": 12,
-  "bust": 58,
-  "risk": 67,
+  "bust": 29,
+  "risk": 51,
   "boomWhy": [
    "Ceiling 92 pts vs 73 projected (Bayesian p90)",
    "Boom weeks (top-6 scoring) in 0% of games, 2024-25 weighted",
@@ -38758,10 +38750,10 @@
   "posRank": 62,
   "vbd": -142,
   "tier": 16,
-  "sit": 43,
-  "boom": 53,
-  "bust": 41,
-  "risk": 78,
+  "sit": 47,
+  "boom": 62,
+  "bust": 51,
+  "risk": 66,
   "boomWhy": [
    "Most bullish source has him #154, 65 spots above the composite",
    "Ceiling 175 pts vs 42 projected (Bayesian p90)",
@@ -38941,10 +38933,10 @@
   "posRank": 81,
   "vbd": -84,
   "tier": 18,
-  "sit": 20,
-  "boom": 7,
-  "bust": 70,
-  "risk": 7,
+  "sit": 30,
+  "boom": 6,
+  "bust": 66,
+  "risk": 14,
   "boomWhy": [
    "Most bullish source has him #149, 73 spots above the composite",
    "Ceiling 179 pts vs 107 projected (Bayesian p90)",
@@ -39109,10 +39101,10 @@
   "posRank": 82,
   "vbd": -125,
   "tier": 18,
-  "sit": 33,
-  "boom": 52,
-  "bust": 37,
-  "risk": 36,
+  "sit": 25,
+  "boom": 54,
+  "bust": 36,
+  "risk": 43,
   "boomWhy": [
    "Most bullish source has him #140, 82 spots above the composite",
    "Ceiling 142 pts vs 66 projected (Bayesian p90)",
@@ -39169,12 +39161,11 @@
   "sitWhy": [
    "Vegas win total 7.5",
    "QB: Tyler Shough (tier 4) \u2014 Second-year starter with limited track record; Spencer Rattler QB2.",
-   "Offensive line ranked 16 of 32",
-   "Year-3 receiver: ~10% breakout base rate"
+   "Offensive line ranked 16 of 32"
   ],
   "sitParts": {
    "env": -0.27,
-   "priors": 0.1,
+   "priors": 0.0,
    "schedule": 0.14,
    "variance": 0.0
   },
@@ -39279,10 +39270,10 @@
   "posRank": 83,
   "vbd": -83,
   "tier": 18,
-  "sit": 36,
-  "boom": 9,
-  "bust": 42,
-  "risk": 79,
+  "sit": 21,
+  "boom": 8,
+  "bust": 32,
+  "risk": 58,
   "boomWhy": [
    "Most bullish source has him #163, 63 spots above the composite",
    "Ceiling 172 pts vs 108 projected (Bayesian p90)",
@@ -39446,8 +39437,8 @@
   "tier": 16,
   "sit": 55,
   "boom": 26,
-  "bust": 33,
-  "risk": 53,
+  "bust": 5,
+  "risk": 42,
   "boomWhy": [
    "Most bullish source has him #146, 80 spots above the composite",
    "Ceiling 136 pts vs 66 projected (Bayesian p90)",
@@ -39458,7 +39449,6 @@
    "Most bearish source has him #315, 89 spots below the composite",
    "Floor 4 pts vs 66 projected (Bayesian p10)",
    "Bust weeks (below the startable line) in 67% of games, 2024-25 weighted",
-   "Age 27: at or past the historical RB decline point",
    "Market drafts him 53 picks earlier than his composite rank"
   ],
   "riskWhy": [
@@ -39620,10 +39610,10 @@
   "posRank": 84,
   "vbd": -117,
   "tier": 18,
-  "sit": 9,
-  "boom": 39,
-  "bust": 25,
-  "risk": 16,
+  "sit": 6,
+  "boom": 41,
+  "bust": 23,
+  "risk": 17,
   "boomWhy": [
    "Most bullish source has him #150, 77 spots above the composite",
    "Ceiling 176 pts vs 74 projected (Bayesian p90)",
@@ -39683,12 +39673,13 @@
    "Vegas win total 7.5",
    "QB: Jaxson Dart (tier 3) \u2014 Second-year starter with promising rookie flashes; Jameis Winston QB2.",
    "new HC John Harbaugh, new OC Matt Nagy (see team card)",
-   "Offensive line ranked 23 of 32"
+   "Offensive line ranked 23 of 32",
+   "Changed teams: backs who moved busted 8 points more often, 2016-25"
   ],
   "sitParts": {
    "env": -0.25,
    "vacated": 0.0,
-   "priors": 0.0,
+   "priors": -0.1,
    "schedule": -0.01,
    "variance": 0.0
   },
@@ -39791,10 +39782,10 @@
   "posRank": 64,
   "vbd": -137,
   "tier": 16,
-  "sit": 20,
-  "boom": 14,
-  "bust": 79,
-  "risk": 88,
+  "sit": 8,
+  "boom": 10,
+  "bust": 82,
+  "risk": 86,
   "boomWhy": [
    "Most bullish source has him #141, 86 spots above the composite",
    "Ceiling 155 pts vs 47 projected (Bayesian p90)",
@@ -39804,14 +39795,14 @@
    "Most bearish source has him #370, 143 spots below the composite",
    "Floor 10 pts vs 47 projected (Bayesian p10)",
    "Bust weeks (below the startable line) in 48% of games, 2024-25 weighted",
-   "New team in 2026 (LAC to NYG)",
+   "New team in 2026 (LAC to NYG): backs and receivers who changed teams busted 7-8 points more often, 2016-25",
    "Age 28: at or past the historical RB decline point"
   ],
   "riskWhy": [
    "Platforms disagree on ADP: \u00b155.9 picks",
    "Drafted anywhere from pick 121 to 208 across 21 FFC drafts (\u00b122.8)",
    "Missed 14 regular-season games in 2024-25",
-   "Situation: New team in 2026 (LAC to NYG)"
+   "Situation: New team in 2026 (LAC to NYG): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "flag": null,
   "note": null
@@ -39855,12 +39846,12 @@
    "QB: Kirk Cousins (tier 4) \u2014 38-year-old bridge starter listed ahead of No. 1 overall pick Fernando Mendoza; unsettled and likely to change midseason.",
    "new HC Klint Kubiak, new OC Andrew Janocko (see team card)",
    "Offensive line ranked 18 of 32",
-   "First-round rookie: 71% of first-round RBs finish top-24; first-round WRs average ~100 targets"
+   "First-round rookie"
   ],
   "sitParts": {
    "env": -0.71,
    "vacated": 0.0,
-   "priors": 0.12,
+   "priors": 0.05,
    "schedule": -0.45,
    "variance": 0.0
   },
@@ -39964,9 +39955,9 @@
   "posRank": 29,
   "vbd": -100,
   "tier": 10,
-  "sit": 5,
+  "sit": 2,
   "boom": 38,
-  "bust": 95,
+  "bust": 98,
   "risk": 58,
   "boomWhy": [
    "Most bullish source has him #159, 70 spots above the composite",
@@ -40135,10 +40126,10 @@
   "posRank": 65,
   "vbd": -139,
   "tier": 16,
-  "sit": 16,
+  "sit": 21,
   "boom": 47,
-  "bust": 82,
-  "risk": 32,
+  "bust": 79,
+  "risk": 46,
   "boomWhy": [
    "Most bullish source has him #148, 82 spots above the composite",
    "Ceiling 154 pts vs 45 projected (Bayesian p90)",
@@ -40305,10 +40296,10 @@
   "posRank": 66,
   "vbd": -160,
   "tier": 16,
-  "sit": 12,
-  "boom": 62,
-  "bust": 35,
-  "risk": 16,
+  "sit": 14,
+  "boom": 58,
+  "bust": 32,
+  "risk": 24,
   "boomWhy": [
    "Most bullish source has him #152, 78 spots above the composite",
    "Ceiling 75 pts vs 24 projected (Bayesian p90)",
@@ -40476,10 +40467,10 @@
   "posRank": 67,
   "vbd": -111,
   "tier": 16,
-  "sit": 14,
-  "boom": 40,
-  "bust": 96,
-  "risk": 90,
+  "sit": 17,
+  "boom": 32,
+  "bust": 98,
+  "risk": 89,
   "boomWhy": [
    "Most bullish source has him #144, 90 spots above the composite",
    "Ceiling 152 pts vs 73 projected (Bayesian p90)",
@@ -40651,10 +40642,10 @@
   "posRank": 85,
   "vbd": -98,
   "tier": 18,
-  "sit": 70,
-  "boom": 62,
-  "bust": 36,
-  "risk": 50,
+  "sit": 52,
+  "boom": 53,
+  "bust": 33,
+  "risk": 64,
   "boomWhy": [
    "Most bullish source has him #133, 102 spots above the composite",
    "Ceiling 191 pts vs 93 projected (Bayesian p90)",
@@ -40820,10 +40811,10 @@
   "posRank": 68,
   "vbd": -130,
   "tier": 16,
-  "sit": 10,
-  "boom": 15,
-  "bust": 45,
-  "risk": 21,
+  "sit": 12,
+  "boom": 20,
+  "bust": 26,
+  "risk": 11,
   "boomWhy": [
    "Most bullish source has him #164, 75 spots above the composite",
    "Ceiling 193 pts vs 54 projected (Bayesian p90)",
@@ -41014,9 +41005,9 @@
   "posRank": 30,
   "vbd": -79,
   "tier": 9,
-  "sit": 73,
-  "boom": 30,
-  "bust": 93,
+  "sit": 66,
+  "boom": 27,
+  "bust": 90,
   "risk": 96,
   "boomWhy": [
    "Most bullish source has him #147, 94 spots above the composite",
@@ -41029,7 +41020,7 @@
    "Floor 20 pts vs 92 projected (Bayesian p10)",
    "Bust weeks (below the startable line) in 54% of games, 2024-25 weighted",
    "Scored 16% above expected fantasy points in 2025 (touchdown / efficiency regression risk)",
-   "New team in 2026 (CLE to LAC)"
+   "New team in 2026 (CLE to LAC): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "riskWhy": [
    "Platforms disagree on ADP: \u00b141.7 picks",
@@ -41081,7 +41072,7 @@
    "new HC John Harbaugh, new OC Matt Nagy (see team card)",
    "Offensive line ranked 23 of 32",
    "Arrives into a room that vacated 41% of its 2025 targets",
-   "Receivers who change teams decline ~2 PPG on average (77% decline)"
+   "Changed teams: receivers who moved busted 7 points more often, 2016-25"
   ],
   "sitParts": {
    "env": -0.17,
@@ -41185,10 +41176,10 @@
   "posRank": 86,
   "vbd": -109,
   "tier": 18,
-  "sit": 46,
-  "boom": 10,
-  "bust": 56,
-  "risk": 62,
+  "sit": 26,
+  "boom": 9,
+  "bust": 35,
+  "risk": 60,
   "boomWhy": [
    "Most bullish source has him #165, 79 spots above the composite",
    "Ceiling 165 pts vs 82 projected (Bayesian p90)",
@@ -41200,14 +41191,14 @@
    "Most bearish source has him #344, 100 spots below the composite",
    "Floor 14 pts vs 82 projected (Bayesian p10)",
    "Bust weeks (below the startable line) in 56% of games, 2024-25 weighted",
-   "New team in 2026 (ATL to NYG)",
+   "New team in 2026 (ATL to NYG): backs and receivers who changed teams busted 7-8 points more often, 2016-25",
    "Market drafts him 14 picks earlier than his composite rank"
   ],
   "riskWhy": [
    "Calibrated injury model: 41% chance of missing time (AUC 0.75)",
    "Missed 3 regular-season games in 2024-25",
    "Week-to-week swing: 2025 scores varied \u00b167% of his average",
-   "Situation: New team in 2026 (ATL to NYG)"
+   "Situation: New team in 2026 (ATL to NYG): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "flag": null,
   "note": null
@@ -41357,10 +41348,10 @@
   "posRank": 87,
   "vbd": -116,
   "tier": 18,
-  "sit": 61,
-  "boom": 15,
-  "bust": 60,
-  "risk": 34,
+  "sit": 74,
+  "boom": 25,
+  "bust": 31,
+  "risk": 20,
   "boomWhy": [
    "Most bullish source has him #166, 78 spots above the composite",
    "Ceiling 150 pts vs 75 projected (Bayesian p90)",
@@ -41422,12 +41413,13 @@
    "QB: Sam Darnold (tier 2) \u2014 Super Bowl LX champion QB in a run-first scheme; good, not elite.",
    "new OC Brian Fleury (see team card)",
    "Offensive line ranked 15 of 32",
-   "Arrives into a room that vacated 44% of its 2025 carries"
+   "Arrives into a room that vacated 44% of its 2025 carries",
+   "Changed teams: backs who moved busted 8 points more often, 2016-25"
   ],
   "sitParts": {
    "env": 0.36,
    "vacated": 0.96,
-   "priors": 0.0,
+   "priors": -0.1,
    "schedule": 0.36,
    "variance": 0.0
   },
@@ -41526,10 +41518,10 @@
   "posRank": 69,
   "vbd": -142,
   "tier": 17,
-  "sit": 96,
-  "boom": 64,
-  "bust": 28,
-  "risk": 57,
+  "sit": 60,
+  "boom": 36,
+  "bust": 11,
+  "risk": 35,
   "boomWhy": [
    "Most bullish source has him #146, 102 spots above the composite",
    "Ceiling 79 pts vs 42 projected (Bayesian p90)",
@@ -41540,15 +41532,14 @@
    "Most bearish source has him #326, 78 spots below the composite",
    "Floor 0 pts vs 42 projected (Bayesian p10)",
    "Bust weeks (below the startable line) in 65% of games, 2024-25 weighted",
-   "New team in 2026 (GB to SEA)",
-   "Age 27: at or past the historical RB decline point"
+   "New team in 2026 (GB to SEA): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "riskWhy": [
    "Calibrated injury model: 39% chance of missing time (AUC 0.75)",
    "Missed 1 regular-season games in 2024-25",
    "Week-to-week swing: 2025 scores varied \u00b1115% of his average",
    "Status: ESPN status: QUESTIONABLE",
-   "Situation: New team in 2026 (GB to SEA)"
+   "Situation: New team in 2026 (GB to SEA): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "flag": null,
   "note": null
@@ -41591,7 +41582,9 @@
    "Vegas win total 9.5",
    "QB: Jordan Love (tier 2) \u2014 Good starter in a run-leaning scheme.",
    "Offensive line ranked 28 of 32",
-   "Arrives into a room that vacated 31% of its 2025 carries"
+   "Arrives into a room that vacated 31% of its 2025 carries",
+   "Year-2 RB: boomed 10 points more often than peers at the same ADP, 2016-25",
+   "Changed teams: backs who moved busted 8 points more often, 2016-25"
   ],
   "sitParts": {
    "env": 0.08,
@@ -41691,10 +41684,10 @@
   "posRank": 70,
   "vbd": -157,
   "tier": 17,
-  "sit": 54,
+  "sit": 45,
   "boom": 77,
-  "bust": 52,
-  "risk": 33,
+  "bust": 35,
+  "risk": 26,
   "boomWhy": [
    "Most bullish source has him #145, 104 spots above the composite",
    "Ceiling 185 pts vs 27 projected (Bayesian p90)",
@@ -41706,14 +41699,14 @@
    "Most bearish source has him #381, 132 spots below the composite",
    "Floor 1 pts vs 27 projected (Bayesian p10)",
    "Bust weeks (below the startable line) in 100% of games, 2024-25 weighted",
-   "New team in 2026 (PIT to GB)",
+   "New team in 2026 (PIT to GB): backs and receivers who changed teams busted 7-8 points more often, 2016-25",
    "Market drafts him 64 picks earlier than his composite rank"
   ],
   "riskWhy": [
    "Calibrated injury model: 30% chance of missing time (AUC 0.75)",
    "Missed 7 regular-season games in 2024-25",
    "Week-to-week swing: 2025 scores varied \u00b198% of his average",
-   "Situation: New team in 2026 (PIT to GB)"
+   "Situation: New team in 2026 (PIT to GB): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "flag": null,
   "note": null
@@ -41862,10 +41855,10 @@
   "posRank": 88,
   "vbd": -121,
   "tier": 18,
-  "sit": 68,
-  "boom": 67,
-  "bust": 18,
-  "risk": 41,
+  "sit": 61,
+  "boom": 62,
+  "bust": 7,
+  "risk": 46,
   "boomWhy": [
    "Most bullish source has him #150, 99 spots above the composite",
    "Ceiling 145 pts vs 70 projected (Bayesian p90)",
@@ -42022,10 +42015,10 @@
   "posRank": 71,
   "vbd": -166,
   "tier": 17,
-  "sit": 48,
-  "boom": 65,
-  "bust": 17,
-  "risk": 29,
+  "sit": 51,
+  "boom": 59,
+  "bust": 15,
+  "risk": 36,
   "boomWhy": [
    "Most bullish source has him #156, 95 spots above the composite",
    "Ceiling 73 pts vs 18 projected (Bayesian p90)",
@@ -42082,7 +42075,9 @@
    "Vegas win total 10.5",
    "QB: Jalen Hurts (tier 2) \u2014 Good dual-threat with elite rushing TD equity; 10.5-win team.",
    "new OC Sean Mannion (see team card)",
-   "Offensive line ranked 2 of 32"
+   "Offensive line ranked 2 of 32",
+   "Year-2 RB: boomed 10 points more often than peers at the same ADP, 2016-25",
+   "Changed teams: backs who moved busted 8 points more often, 2016-25"
   ],
   "sitParts": {
    "env": 0.49,
@@ -42189,10 +42184,10 @@
   "posRank": 72,
   "vbd": -140,
   "tier": 17,
-  "sit": 77,
-  "boom": 11,
-  "bust": 24,
-  "risk": 34,
+  "sit": 80,
+  "boom": 14,
+  "bust": 17,
+  "risk": 49,
   "boomWhy": [
    "Most bullish source has him #172, 82 spots above the composite",
    "Boom weeks (top-6 scoring) in 0% of games, 2024-25 weighted",
@@ -42201,7 +42196,7 @@
   "bustWhy": [
    "Most bearish source has him #412, 158 spots below the composite",
    "Bust weeks (below the startable line) in 80% of games, 2024-25 weighted",
-   "New team in 2026 (DAL to PHI)",
+   "New team in 2026 (DAL to PHI): backs and receivers who changed teams busted 7-8 points more often, 2016-25",
    "Market drafts him 75 picks earlier than his composite rank"
   ],
   "riskWhy": [
@@ -42209,7 +42204,7 @@
    "Calibrated injury model: 28% chance of missing time (AUC 0.75)",
    "Drafted anywhere from pick 136 to 178 across 6 FFC drafts (\u00b120.1)",
    "Missed 12 regular-season games in 2024-25",
-   "Situation: New team in 2026 (DAL to PHI)"
+   "Situation: New team in 2026 (DAL to PHI): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "flag": null,
   "note": null
@@ -42357,9 +42352,9 @@
   "posRank": 31,
   "vbd": -85,
   "tier": 9,
-  "sit": 24,
-  "boom": 24,
-  "bust": 70,
+  "sit": 30,
+  "boom": 16,
+  "bust": 67,
   "risk": 90,
   "boomWhy": [
    "Most bullish source has him #159, 98 spots above the composite",
@@ -42370,7 +42365,7 @@
    "Most bearish source has him #345, 87 spots below the composite",
    "Floor 13 pts vs 86 projected (Bayesian p10)",
    "Bust weeks (below the startable line) in 50% of games, 2024-25 weighted",
-   "New team in 2026 (MIA to CAR)",
+   "New team in 2026 (MIA to CAR): backs and receivers who changed teams busted 7-8 points more often, 2016-25",
    "Age 33: at or past the historical TE decline point"
   ],
   "riskWhy": [
@@ -42378,7 +42373,7 @@
    "ffanalytics projection uncertainty 97/99",
    "Missed 9 regular-season games in 2024-25",
    "Week-to-week swing: 2025 scores varied \u00b173% of his average",
-   "Situation: New team in 2026 (MIA to CAR)"
+   "Situation: New team in 2026 (MIA to CAR): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "flag": null,
   "note": null
@@ -42543,10 +42538,10 @@
   "posRank": 89,
   "vbd": -102,
   "tier": 18,
-  "sit": 43,
-  "boom": 6,
-  "bust": 50,
-  "risk": 8,
+  "sit": 52,
+  "boom": 5,
+  "bust": 43,
+  "risk": 15,
   "boomWhy": [
    "Most bullish source has him #178, 81 spots above the composite",
    "Ceiling 189 pts vs 89 projected (Bayesian p90)",
@@ -42606,12 +42601,11 @@
    "Vegas win total 5.5",
    "QB: Kirk Cousins (tier 4) \u2014 38-year-old bridge starter listed ahead of No. 1 overall pick Fernando Mendoza; unsettled and likely to change midseason.",
    "new HC Klint Kubiak, new OC Andrew Janocko (see team card)",
-   "Offensive line ranked 18 of 32",
-   "Year-2 receiver: ~15% breakout base rate (RotoViz)"
+   "Offensive line ranked 18 of 32"
   ],
   "sitParts": {
    "env": -0.64,
-   "priors": 0.15,
+   "priors": 0.0,
    "schedule": -0.7,
    "variance": 0.0
   },
@@ -42708,10 +42702,10 @@
   "posRank": 90,
   "vbd": -131,
   "tier": 18,
-  "sit": 4,
-  "boom": 11,
-  "bust": 73,
-  "risk": 54,
+  "sit": 2,
+  "boom": 19,
+  "bust": 69,
+  "risk": 40,
   "boomWhy": [
    "Most bullish source has him #180, 83 spots above the composite",
    "Ceiling 102 pts vs 60 projected (Bayesian p90)",
@@ -42868,10 +42862,10 @@
   "posRank": 32,
   "vbd": -77,
   "tier": 10,
-  "sit": 64,
-  "boom": 1,
-  "bust": 53,
-  "risk": 61,
+  "sit": 83,
+  "boom": 4,
+  "bust": 36,
+  "risk": 64,
   "boomWhy": [
    "Most bullish source has him #169, 97 spots above the composite",
    "Ceiling 195 pts vs 94 projected (Bayesian p90)",
@@ -42930,12 +42924,11 @@
   "sitWhy": [
    "Vegas win total 7.5",
    "QB: Bryce Young (tier 3) \u2014 Year 4; steady but low-ceiling; Kenny Pickett QB2.",
-   "Offensive line ranked 26 of 32",
-   "Year-3 receiver: ~10% breakout base rate"
+   "Offensive line ranked 26 of 32"
   ],
   "sitParts": {
    "env": -0.34,
-   "priors": 0.1,
+   "priors": 0.0,
    "schedule": -0.06,
    "variance": 0.0
   },
@@ -43033,10 +43026,10 @@
   "posRank": 91,
   "vbd": -110,
   "tier": 19,
-  "sit": 24,
-  "boom": 32,
-  "bust": 30,
-  "risk": 52,
+  "sit": 14,
+  "boom": 30,
+  "bust": 16,
+  "risk": 39,
   "boomWhy": [
    "Most bullish source has him #174, 94 spots above the composite",
    "Ceiling 183 pts vs 81 projected (Bayesian p90)",
@@ -43098,12 +43091,11 @@
    "Vegas win total 10.5",
    "QB: Josh Allen (tier 1) \u2014 2024 MVP, elite rushing floor.",
    "new HC Joe Brady, new OC Pete Carmichael (see team card)",
-   "Offensive line ranked 6 of 32",
-   "Year-3 receiver: ~10% breakout base rate"
+   "Offensive line ranked 6 of 32"
   ],
   "sitParts": {
    "env": 0.47,
-   "priors": 0.1,
+   "priors": 0.0,
    "schedule": -0.01,
    "variance": 0.0
   },
@@ -43204,10 +43196,10 @@
   "posRank": 92,
   "vbd": -109,
   "tier": 19,
-  "sit": 84,
-  "boom": 65,
-  "bust": 25,
-  "risk": 61,
+  "sit": 75,
+  "boom": 57,
+  "bust": 9,
+  "risk": 44,
   "boomWhy": [
    "Most bullish source has him #149, 123 spots above the composite",
    "Ceiling 188 pts vs 82 projected (Bayesian p90)",
@@ -43365,10 +43357,10 @@
   "posRank": 73,
   "vbd": -143,
   "tier": 17,
-  "sit": 35,
-  "boom": 16,
-  "bust": 34,
-  "risk": 48,
+  "sit": 34,
+  "boom": 18,
+  "bust": 16,
+  "risk": 43,
   "boomWhy": [
    "Most bullish source has him #189, 86 spots above the composite",
    "Ceiling 126 pts vs 41 projected (Bayesian p90)",
@@ -43523,10 +43515,10 @@
   "posRank": 93,
   "vbd": -112,
   "tier": 19,
-  "sit": 45,
-  "boom": 70,
-  "bust": 17,
-  "risk": 18,
+  "sit": 22,
+  "boom": 64,
+  "bust": 11,
+  "risk": 21,
   "boomWhy": [
    "Most bullish source has him #137, 139 spots above the composite",
    "Ceiling 194 pts vs 79 projected (Bayesian p90)",
@@ -43694,10 +43686,10 @@
   "posRank": 94,
   "vbd": -115,
   "tier": 19,
-  "sit": 61,
-  "boom": 71,
+  "sit": 74,
+  "boom": 69,
   "bust": 49,
-  "risk": 55,
+  "risk": 71,
   "boomWhy": [
    "Most bullish source has him #133, 145 spots above the composite",
    "Ceiling 183 pts vs 76 projected (Bayesian p90)",
@@ -43759,7 +43751,7 @@
    "new OC Sean Mannion (see team card)",
    "Offensive line ranked 2 of 32",
    "Arrives into a room that vacated 37% of its 2025 targets",
-   "Receivers who change teams decline ~2 PPG on average (77% decline)"
+   "Changed teams: receivers who moved busted 7 points more often, 2016-25"
   ],
   "sitParts": {
    "env": 0.37,
@@ -43871,10 +43863,10 @@
   "posRank": 95,
   "vbd": -101,
   "tier": 19,
-  "sit": 50,
-  "boom": 68,
-  "bust": 84,
-  "risk": 86,
+  "sit": 42,
+  "boom": 58,
+  "bust": 75,
+  "risk": 85,
   "boomWhy": [
    "Most bullish source has him #109, 171 spots above the composite",
    "Ceiling 187 pts vs 90 projected (Bayesian p90)",
@@ -43886,7 +43878,7 @@
    "Most bearish source has him #2323, 2043 spots below the composite",
    "Floor 16 pts vs 90 projected (Bayesian p10)",
    "Bust weeks (below the startable line) in 68% of games, 2024-25 weighted",
-   "New team in 2026 (GB to PHI)",
+   "New team in 2026 (GB to PHI): backs and receivers who changed teams busted 7-8 points more often, 2016-25",
    "Market drafts him 113 picks earlier than his composite rank"
   ],
   "riskWhy": [
@@ -43937,12 +43929,11 @@
    "Vegas win total 10.5",
    "QB: Sam Darnold (tier 2) \u2014 Super Bowl LX champion QB in a run-first scheme; good, not elite.",
    "new OC Brian Fleury (see team card)",
-   "Offensive line ranked 15 of 32",
-   "Year-2 receiver: ~15% breakout base rate (RotoViz)"
+   "Offensive line ranked 15 of 32"
   ],
   "sitParts": {
    "env": 0.15,
-   "priors": 0.15,
+   "priors": 0.0,
    "schedule": -0.68,
    "variance": 0.0
   },
@@ -44038,10 +44029,10 @@
   "posRank": 96,
   "vbd": -113,
   "tier": 19,
-  "sit": 50,
-  "boom": 19,
-  "bust": 43,
-  "risk": 89,
+  "sit": 30,
+  "boom": 17,
+  "bust": 28,
+  "risk": 81,
   "boomWhy": [
    "Most bullish source has him #197, 85 spots above the composite",
    "Ceiling 107 pts vs 78 projected (Bayesian p90)",
@@ -44102,7 +44093,7 @@
    "QB: Brock Purdy (tier 2) \u2014 Good, efficient in Shanahan's system; 9.5-win team.",
    "Offensive line ranked 10 of 32",
    "Arrives into a room that vacated 32% of its 2025 targets",
-   "Receivers who change teams decline ~2 PPG on average (77% decline)"
+   "Changed teams: receivers who moved busted 7 points more often, 2016-25"
   ],
   "sitParts": {
    "env": 0.23,
@@ -44216,10 +44207,10 @@
   "posRank": 97,
   "vbd": -97,
   "tier": 19,
-  "sit": 13,
+  "sit": 15,
   "boom": 0,
-  "bust": 69,
-  "risk": 93,
+  "bust": 58,
+  "risk": 90,
   "boomWhy": [
    "Most bullish source has him #198, 87 spots above the composite",
    "Boom weeks (top-6 scoring) in 0% of games, 2024-25 weighted",
@@ -44230,14 +44221,14 @@
    "Floor 0 pts vs 94 projected (Bayesian p10)",
    "Bust weeks (below the startable line) in 55% of games, 2024-25 weighted",
    "Bayesian model projects only 2.0 games",
-   "New team in 2026 (HOU to SF)"
+   "New team in 2026 (HOU to SF): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "riskWhy": [
    "Calibrated injury model: 34% chance of missing time (AUC 0.75)",
    "Missed 15 regular-season games in 2024-25",
    "Week-to-week swing: 2025 scores varied \u00b186% of his average",
    "Status: Week 1 roster: injured reserve, designated to return",
-   "Situation: New team in 2026 (HOU to SF)"
+   "Situation: New team in 2026 (HOU to SF): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "flag": "IR",
   "note": null
@@ -44280,12 +44271,11 @@
    "Vegas win total 5.5",
    "QB: Geno Smith (tier 3) \u2014 35-year-old veteran after a rough 2025 in LV; average with a competent floor.",
    "new OC Frank Reich (see team card)",
-   "Offensive line ranked 21 of 32",
-   "Year-2 receiver: ~15% breakout base rate (RotoViz)"
+   "Offensive line ranked 21 of 32"
   ],
   "sitParts": {
    "env": -0.36,
-   "priors": 0.15,
+   "priors": 0.0,
    "schedule": 0.03,
    "variance": 0.0
   },
@@ -44381,10 +44371,10 @@
   "posRank": 33,
   "vbd": -75,
   "tier": 10,
-  "sit": 33,
-  "boom": 21,
-  "bust": 56,
-  "risk": 73,
+  "sit": 10,
+  "boom": 19,
+  "bust": 44,
+  "risk": 81,
   "boomWhy": [
    "Most bullish source has him #159, 127 spots above the composite",
    "Ceiling 183 pts vs 96 projected (Bayesian p90)",
@@ -44540,10 +44530,10 @@
   "posRank": 98,
   "vbd": -112,
   "tier": 19,
-  "sit": 44,
-  "boom": 29,
-  "bust": 51,
-  "risk": 12,
+  "sit": 58,
+  "boom": 32,
+  "bust": 26,
+  "risk": 10,
   "boomWhy": [
    "Most bullish source has him #166, 123 spots above the composite",
    "Ceiling 184 pts vs 79 projected (Bayesian p90)",
@@ -44698,10 +44688,10 @@
   "posRank": 99,
   "vbd": -129,
   "tier": 19,
-  "sit": 52,
-  "boom": 30,
-  "bust": 28,
-  "risk": 39,
+  "sit": 65,
+  "boom": 33,
+  "bust": 8,
+  "risk": 18,
   "boomWhy": [
    "Most bullish source has him #190, 102 spots above the composite",
    "Ceiling 130 pts vs 62 projected (Bayesian p90)",
@@ -44759,11 +44749,12 @@
   "sitWhy": [
    "Vegas win total 7.5",
    "QB: Tyler Shough (tier 4) \u2014 Second-year starter with limited track record; Spencer Rattler QB2.",
-   "Offensive line ranked 16 of 32"
+   "Offensive line ranked 16 of 32",
+   "Year-2 RB: boomed 10 points more often than peers at the same ADP, 2016-25"
   ],
   "sitParts": {
    "env": -0.2,
-   "priors": 0.0,
+   "priors": 0.1,
    "schedule": 0.39,
    "variance": 0.0
   },
@@ -44852,10 +44843,10 @@
   "posRank": 74,
   "vbd": -149,
   "tier": 17,
-  "sit": 35,
-  "boom": 18,
-  "bust": 8,
-  "risk": 70,
+  "sit": 57,
+  "boom": 21,
+  "bust": 2,
+  "risk": 59,
   "boomWhy": [
    "Most bullish source has him #183, 124 spots above the composite",
    "Boom weeks (top-6 scoring) in 0% of games, 2024-25 weighted",
@@ -44915,12 +44906,11 @@
    "Vegas win total 6.5",
    "QB: Cam Ward (tier 3) \u2014 2025 No. 1 overall pick entering year 2 in a new system; average with growth upside.",
    "new HC Robert Saleh, new OC Brian Daboll (see team card)",
-   "Offensive line ranked 29 of 32",
-   "Year-2 receiver: ~15% breakout base rate (RotoViz)"
+   "Offensive line ranked 29 of 32"
   ],
   "sitParts": {
    "env": -0.3,
-   "priors": 0.15,
+   "priors": 0.0,
    "schedule": 0.81,
    "variance": 0.0
   },
@@ -45015,10 +45005,10 @@
   "posRank": 100,
   "vbd": -107,
   "tier": 19,
-  "sit": 64,
-  "boom": 37,
-  "bust": 57,
-  "risk": 78,
+  "sit": 37,
+  "boom": 29,
+  "bust": 48,
+  "risk": 77,
   "boomWhy": [
    "Most bullish source has him #174, 136 spots above the composite",
    "Ceiling 199 pts vs 84 projected (Bayesian p90)",
@@ -45208,10 +45198,10 @@
   "posRank": 75,
   "vbd": -92,
   "tier": 17,
-  "sit": 83,
-  "boom": 61,
-  "bust": 60,
-  "risk": 80,
+  "sit": 86,
+  "boom": 53,
+  "bust": 64,
+  "risk": 74,
   "boomWhy": [
    "Most bullish source has him #132, 180 spots above the composite",
    "Ceiling 162 pts vs 92 projected (Bayesian p90)",
@@ -45370,10 +45360,10 @@
   "posRank": 101,
   "vbd": -161,
   "tier": 19,
-  "sit": 66,
-  "boom": 66,
-  "bust": 50,
-  "risk": 49,
+  "sit": 77,
+  "boom": 68,
+  "bust": 54,
+  "risk": 59,
   "boomWhy": [
    "Most bullish source has him #197, 116 spots above the composite",
    "Ceiling 60 pts vs 30 projected (Bayesian p90)",
@@ -45432,12 +45422,11 @@
    "Vegas win total 9.5",
    "QB: Bo Nix (tier 2) \u2014 Year 3 starter on a team priced at 9.5 wins and PFF No. 1 OL.",
    "new OC Davis Webb (see team card)",
-   "Offensive line ranked 1 of 32",
-   "Year-3 receiver: ~10% breakout base rate"
+   "Offensive line ranked 1 of 32"
   ],
   "sitParts": {
    "env": 0.43,
-   "priors": 0.1,
+   "priors": 0.0,
    "schedule": -0.18,
    "variance": 0.0
   },
@@ -45535,10 +45524,10 @@
   "posRank": 102,
   "vbd": -104,
   "tier": 19,
-  "sit": 80,
-  "boom": 73,
-  "bust": 62,
-  "risk": 77,
+  "sit": 65,
+  "boom": 67,
+  "bust": 55,
+  "risk": 78,
   "boomWhy": [
    "Most bullish source has him #163, 159 spots above the composite",
    "Ceiling 190 pts vs 87 projected (Bayesian p90)",
@@ -45704,9 +45693,9 @@
   "vbd": -158,
   "tier": 17,
   "sit": 82,
-  "boom": 46,
-  "bust": 68,
-  "risk": 43,
+  "boom": 49,
+  "bust": 57,
+  "risk": 61,
   "boomWhy": [
    "Most bullish source has him #154, 172 spots above the composite",
    "Ceiling 103 pts vs 26 projected (Bayesian p90)",
@@ -45881,10 +45870,10 @@
   "posRank": 30,
   "vbd": -78,
   "tier": 11,
-  "sit": 2,
-  "boom": 18,
+  "sit": 5,
+  "boom": 15,
   "bust": 88,
-  "risk": 88,
+  "risk": 85,
   "boomWhy": [
    "Most bullish source has him #147, 179 spots above the composite",
    "Ceiling 259 pts vs 205 projected (Bayesian p90)",
@@ -45895,14 +45884,14 @@
    "Floor 43 pts vs 205 projected (Bayesian p10)",
    "Bust weeks (below the startable line) in 60% of games, 2024-25 weighted",
    "New team (Jets), new OC Frank Reich",
-   "New team in 2026 (LV to NYJ)"
+   "New team in 2026 (LV to NYJ): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "riskWhy": [
    "Sources disagree: \u00b1470.7 places (#147 to #2399)",
    "Calibrated injury model: 30% chance of missing time (AUC 0.75)",
    "Missed 2 regular-season games in 2024-25",
    "Week-to-week swing: 2025 scores varied \u00b161% of his average",
-   "Situation: New team (Jets), new OC Frank Reich; New team in 2026 (LV to NYJ)"
+   "Situation: New team (Jets), new OC Frank Reich; New team in 2026 (LV to NYJ): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "flag": null,
   "note": "Expected to feed Garrett Wilson heavily."
@@ -45945,12 +45934,11 @@
    "Vegas win total 6.5",
    "QB: Cam Ward (tier 3) \u2014 2025 No. 1 overall pick entering year 2 in a new system; average with growth upside.",
    "new HC Robert Saleh, new OC Brian Daboll (see team card)",
-   "Offensive line ranked 29 of 32",
-   "Year-2 receiver: ~15% breakout base rate (RotoViz)"
+   "Offensive line ranked 29 of 32"
   ],
   "sitParts": {
    "env": -0.3,
-   "priors": 0.15,
+   "priors": 0.0,
    "schedule": 0.81,
    "variance": 0.0
   },
@@ -46044,10 +46032,10 @@
   "posRank": 103,
   "vbd": -127,
   "tier": 19,
-  "sit": 64,
-  "boom": 50,
-  "bust": 54,
-  "risk": 60,
+  "sit": 37,
+  "boom": 44,
+  "bust": 53,
+  "risk": 75,
   "boomWhy": [
    "Most bullish source has him #184, 145 spots above the composite",
    "Ceiling 140 pts vs 64 projected (Bayesian p90)",
@@ -46207,10 +46195,10 @@
   "posRank": 77,
   "vbd": -135,
   "tier": 17,
-  "sit": 39,
-  "boom": 34,
-  "bust": 65,
-  "risk": 71,
+  "sit": 45,
+  "boom": 33,
+  "bust": 54,
+  "risk": 70,
   "boomWhy": [
    "Most bullish source has him #145, 190 spots above the composite",
    "Ceiling 89 pts vs 49 projected (Bayesian p90)",
@@ -46386,10 +46374,10 @@
   "posRank": 78,
   "vbd": -99,
   "tier": 17,
-  "sit": 47,
-  "boom": 17,
-  "bust": 70,
-  "risk": 74,
+  "sit": 53,
+  "boom": 12,
+  "bust": 71,
+  "risk": 73,
   "boomWhy": [
    "Most bullish source has him #157, 186 spots above the composite",
    "Ceiling 178 pts vs 85 projected (Bayesian p90)",
@@ -46449,11 +46437,12 @@
   "sitWhy": [
    "Vegas win total 9.5",
    "QB: Brock Purdy (tier 2) \u2014 Good, efficient in Shanahan's system; 9.5-win team.",
-   "Offensive line ranked 10 of 32"
+   "Offensive line ranked 10 of 32",
+   "Year-2 RB: boomed 10 points more often than peers at the same ADP, 2016-25"
   ],
   "sitParts": {
    "env": 0.28,
-   "priors": 0.0,
+   "priors": 0.1,
    "schedule": -0.81,
    "variance": 0.0
   },
@@ -46560,10 +46549,10 @@
   "posRank": 79,
   "vbd": -118,
   "tier": 17,
-  "sit": 32,
-  "boom": 67,
-  "bust": 14,
-  "risk": 36,
+  "sit": 59,
+  "boom": 64,
+  "bust": 20,
+  "risk": 57,
   "boomWhy": [
    "Most bullish source has him #164, 188 spots above the composite",
    "Ceiling 161 pts vs 66 projected (Bayesian p90)",
@@ -46620,12 +46609,11 @@
   "sitWhy": [
    "Vegas win total 10.5",
    "QB: Drake Maye (tier 1) \u2014 2025 MVP runner-up; Patriots at 10.5 wins.",
-   "Offensive line ranked 19 of 32",
-   "Year-2 receiver: ~15% breakout base rate (RotoViz)"
+   "Offensive line ranked 19 of 32"
   ],
   "sitParts": {
    "env": 0.4,
-   "priors": 0.15,
+   "priors": 0.0,
    "schedule": -0.51,
    "variance": 0.0
   },
@@ -46719,10 +46707,10 @@
   "posRank": 104,
   "vbd": -159,
   "tier": 19,
-  "sit": 77,
-  "boom": 54,
-  "bust": 79,
-  "risk": 87,
+  "sit": 58,
+  "boom": 51,
+  "bust": 74,
+  "risk": 82,
   "boomWhy": [
    "Most bullish source has him #192, 164 spots above the composite",
    "Ceiling 58 pts vs 32 projected (Bayesian p90)",
@@ -46893,10 +46881,10 @@
   "posRank": 34,
   "vbd": -69,
   "tier": 11,
-  "sit": 47,
-  "boom": 27,
-  "bust": 79,
-  "risk": 44,
+  "sit": 56,
+  "boom": 24,
+  "bust": 81,
+  "risk": 53,
   "boomWhy": [
    "Most bullish source has him #139, 218 spots above the composite",
    "Ceiling 220 pts vs 102 projected (Bayesian p90)",
@@ -47054,10 +47042,10 @@
   "posRank": 80,
   "vbd": -141,
   "tier": 17,
-  "sit": 7,
+  "sit": 10,
   "boom": 35,
-  "bust": 84,
-  "risk": 89,
+  "bust": 78,
+  "risk": 85,
   "boomWhy": [
    "Most bullish source has him #192, 168 spots above the composite",
    "Ceiling 93 pts vs 43 projected (Bayesian p90)",
@@ -47218,9 +47206,9 @@
   "vbd": -157,
   "tier": 17,
   "sit": 63,
-  "boom": 76,
-  "bust": 42,
-  "risk": 46,
+  "boom": 70,
+  "bust": 43,
+  "risk": 65,
   "boomWhy": [
    "Most bullish source has him #169, 205 spots above the composite",
    "Ceiling 46 pts vs 27 projected (Bayesian p90)",
@@ -47382,10 +47370,10 @@
   "posRank": 82,
   "vbd": -110,
   "tier": 17,
-  "sit": 67,
-  "boom": 29,
-  "bust": 57,
-  "risk": 64,
+  "sit": 68,
+  "boom": 27,
+  "bust": 58,
+  "risk": 62,
   "boomWhy": [
    "Most bullish source has him #160, 219 spots above the composite",
    "Ceiling 145 pts vs 74 projected (Bayesian p90)",
@@ -47553,10 +47541,10 @@
   "posRank": 35,
   "vbd": -63,
   "tier": 11,
-  "sit": 79,
-  "boom": 76,
-  "bust": 84,
-  "risk": 64,
+  "sit": 93,
+  "boom": 67,
+  "bust": 87,
+  "risk": 70,
   "boomWhy": [
    "Most bullish source has him #141, 241 spots above the composite",
    "Ceiling 238 pts vs 108 projected (Bayesian p90)",
@@ -47616,11 +47604,12 @@
    "Vegas win total 4.5",
    "QB: Malik Willis (tier 4) \u2014 First-year starter signed to 3y/$67.5M after backing up in GB; dual-threat but unproven passer.",
    "new HC Jeff Hafley, new OC Bobby Slowik (see team card)",
-   "Offensive line ranked 25 of 32"
+   "Offensive line ranked 25 of 32",
+   "Year-2 RB: boomed 10 points more often than peers at the same ADP, 2016-25"
   ],
   "sitParts": {
    "env": -0.5,
-   "priors": 0.0,
+   "priors": 0.1,
    "schedule": 0.05,
    "variance": 0.0
   },
@@ -47716,10 +47705,10 @@
   "posRank": 83,
   "vbd": -157,
   "tier": 17,
-  "sit": 10,
-  "boom": 45,
-  "bust": 64,
-  "risk": 85,
+  "sit": 26,
+  "boom": 43,
+  "bust": 49,
+  "risk": 82,
   "boomWhy": [
    "Most bullish source has him #177, 213 spots above the composite",
    "Ceiling 97 pts vs 27 projected (Bayesian p90)",
@@ -47779,11 +47768,12 @@
   "sitWhy": [
    "Vegas win total 8.5",
    "QB: Trevor Lawrence (tier 3) \u2014 Average-plus in Coen's scheme; 8.5-win team.",
-   "Offensive line ranked 30 of 32"
+   "Offensive line ranked 30 of 32",
+   "Year-2 RB: boomed 10 points more often than peers at the same ADP, 2016-25"
   ],
   "sitParts": {
    "env": -0.18,
-   "priors": 0.0,
+   "priors": 0.1,
    "schedule": 0.47,
    "variance": 0.0
   },
@@ -47877,10 +47867,10 @@
   "posRank": 84,
   "vbd": -145,
   "tier": 17,
-  "sit": 42,
+  "sit": 61,
   "boom": 66,
-  "bust": 59,
-  "risk": 60,
+  "bust": 48,
+  "risk": 72,
   "boomWhy": [
    "Most bullish source has him #145, 250 spots above the composite",
    "Ceiling 66 pts vs 39 projected (Bayesian p90)",

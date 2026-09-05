@@ -88,13 +88,16 @@ ADP_WEIGHT = {
 }
 ADP_PLATFORMS = ["ffc_sep4", "espn_live", "sleeper_live", "fantasypros_live", "yahoo_live", "underdog", "ffpc", "fantasypros_cbs", "fantasypros_rtsports", "fantasypros_fantrax", "draftsharks_half_consensus"]
 
+# Re-weighted after the 2016-2025 backtest (research/BACKTEST.md): expert spread and age are the strongest bust
+# predictors, ADP-vs-ECR value helps boom for receivers, prior-year weekly volatility does not predict busts,
+# and prior-year boom/bust-week rates are weak.
 W = {
-    "boom": {"upside": 0.20, "ceiling": 0.10, "hist_boom": 0.20, "mentions": 0.20, "factors": 0.10, "youth": 0.10, "value": 0.10},
-    "bust": {"downside": 0.10, "floor": 0.10, "hist_bust": 0.15, "mentions": 0.20, "factors": 0.15, "age": 0.10, "reach": 0.05, "injury": 0.15},
-    "risk": {"spread": 0.20, "adp_spread": 0.10, "uncertainty": 0.10, "consistency": 0.15, "injury": 0.20, "camp": 0.10, "situation": 0.15},
+    "boom": {"upside": 0.15, "ceiling": 0.10, "hist_boom": 0.15, "mentions": 0.20, "factors": 0.10, "youth": 0.10, "value": 0.20},
+    "bust": {"downside": 0.15, "floor": 0.10, "hist_bust": 0.10, "mentions": 0.20, "factors": 0.15, "age": 0.15, "reach": 0.0, "injury": 0.15},
+    "risk": {"spread": 0.30, "adp_spread": 0.10, "uncertainty": 0.10, "consistency": 0.05, "injury": 0.20, "camp": 0.10, "situation": 0.15},
 }
 BASELINE = {"QB": 10, "RB": 22, "WR": 28, "TE": 10}          # 10-team VOLS + flex split
-AGE_CLIFF = {"RB": (27, 29), "WR": (29, 31), "TE": (30, 32), "QB": (34, 36)}  # (at, past)
+AGE_CLIFF = {"RB": (28, 29), "WR": (29, 31), "TE": (30, 32), "QB": (34, 36)}  # (at, past); RB moved 27 -> 28 per the backtest (age-28 RBs: hit 38%, bust 54%, PPG -3.3)
 YOUTH = {"RB": [(23, 1.0), (24, 0.85), (25, 0.6), (26, 0.3)], "WR": [(23, 1.0), (24, 0.85), (25, 0.65), (26, 0.4), (27, 0.2)],
          "TE": [(24, 1.0), (25, 0.8), (26, 0.5), (27, 0.25)], "QB": [(25, 0.8), (27, 0.5), (29, 0.2)]}
 INJURY_PRIOR = {"RB": 0.40, "WR": 0.35, "TE": 0.35, "QB": 0.25}   # position base rates when nothing is known
@@ -451,7 +454,11 @@ def main():
             if nv.get("draft_number") and nv["draft_number"] <= 32:
                 boom_factors.append(f"First-round draft capital (pick {nv['draft_number']})")
         if nv.get("moved"):
-            risk_factors.append(f"New team in 2026 ({nv.get('team_2025')} to {team_code})")
+            risk_factors.append(f"New team in 2026 ({nv.get('team_2025')} to {team_code}): backs and receivers who changed teams busted 7-8 points more often, 2016-25")
+        if pos == "RB" and s25 and s25.get("games", 0) >= 12 and s25.get("total") and s25.get("total") >= 0:
+            pass
+        if pos == "RB" and nv.get("s2025") and (nv["s2025"].get("ppg") or 0) >= 18 and (nv["s2025"].get("games") or 0) >= 12:
+            risk_factors.append("Coming off an elite RB season: prior-year top-3 RBs repeated a top-3 finish 23% of the time and lost 4.5 PPG on average, 2016-25")
         sit = [f for f in risk_factors if any(w in f.lower() for w in SITUATION_WORDS)]
 
         opp_row = opp_by.get(key + "|" + pos)

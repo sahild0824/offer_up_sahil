@@ -2,3 +2,4 @@
 data/raw/nflverse/
 # pulled market datasets; regenerate with: python3 market_features.py --fetch
 data/raw/pull/
+data/raw/bt/

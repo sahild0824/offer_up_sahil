@@ -66,6 +66,15 @@
         "A logistic curve around ADP whose width grows with ADP spread and with pick number, since later picks are noisier. The Draft tab uses your league size and slot; the defaults are 10 teams and slot 4 (picks 4, 17, 24, 37, 44, 57, 64, 77, 84, 97, 104, 117, 124, 137, 144, 157)."
       ],
       "formula": "P(available at pick N) = 1 / (1 + e^((N − ADP) / s))\ns = max(1.6, 0.55 · max(ADP spread, 0.15 · ADP))"
+    },
+    {
+      "title": "What the backtest says",
+      "paras": [
+        "1,599 drafted player-seasons from 2016-2025 (FantasyPros preseason ADP, expert consensus with spread for 2020-2025, nflverse game logs for outcomes). Expert consensus and ADP predict finishes about equally (rank correlation 0.40 vs 0.42). Preseason signals add little beyond ADP for boom: the fitted model's holdout AUC is 0.54 vs 0.54 for ADP alone, and this app's own weights score 0.60. Bust is more predictable (0.59 to 0.65): age and expert disagreement are the strongest predictors, and players who changed teams bust 7-8 points more often.",
+        "Measured hit rate / bust rate by ADP round (12-team rounds), as percentages: R1: RB 78/23 · WR 80/22 · QB – · TE –; R2: RB 77/25 · WR 56/43 · QB 83/16 · TE 77/22; R3: RB 68/31 · WR 64/35 · QB 69/30 · TE 83/16; R4: RB 57/42 · WR 49/49 · QB 50/50 · TE 63/36; R5: RB 39/48 · WR 46/51 · QB 68/31 · TE 52/47; R6: RB 38/43 · WR 34/55 · QB 68/31 · TE 46/53; R7: RB 28/51 · WR 13/59 · QB 26/73 · TE 45/55; R8: RB 26/47 · WR 19/52 · QB 50/43 · TE 25/66. Round-2 backs have hit 77 percent against 57 percent for round-2 receivers, which is the evidence behind taking a bell-cow at 17; from round 5 on, receivers hold up better than backs, and quarterbacks taken in rounds 5-6 hit about 68 percent.",
+        "Changes made from the backtest: the RB age cliff moved from 27 to 28 (age-28 backs hit 38 percent, bust 54 percent, and lose 3.3 points per game on average); vacated volume is shown but no longer scored (it predicted nothing for incumbents or arrivals); the team-change penalty now covers backs as well as receivers; the rookie prior applies to drafted receivers (boom +16, bust −17 points) and year-2 backs (boom +10) rather than year-2 receivers (no lift); weekly volatility was cut from the risk score (volatile players busted slightly less, not more); expert spread was raised in risk and bust; ADP-versus-consensus value was raised in boom (receivers the market lets fall 8-plus picks boomed 12 points more). Full tables in research/BACKTEST.md."
+      ],
+      "formula": "holdout 2024-25, ADP top 120:  boom AUC  ADP 0.54 · fitted 0.54 · this app 0.60\n                                bust AUC  ADP 0.58 · fitted 0.59 · this app 0.60"
     }
   ],
   "sourceNames": {

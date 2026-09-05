@@ -1,0 +1,1441 @@
+{
+ "round_pos": {
+  "1|RB": {
+   "n": 69,
+   "hit": 0.783,
+   "boom": 0.377,
+   "bust": 0.232
+  },
+  "1|WR": {
+   "n": 50,
+   "hit": 0.8,
+   "boom": 0.42,
+   "bust": 0.22
+  },
+  "2|QB": {
+   "n": 12,
+   "hit": 0.833,
+   "boom": 0.417,
+   "bust": 0.167
+  },
+  "2|RB": {
+   "n": 48,
+   "hit": 0.771,
+   "boom": 0.188,
+   "bust": 0.25
+  },
+  "2|WR": {
+   "n": 46,
+   "hit": 0.565,
+   "boom": 0.239,
+   "bust": 0.435
+  },
+  "2|TE": {
+   "n": 9,
+   "hit": 0.778,
+   "boom": 0.444,
+   "bust": 0.222
+  },
+  "3|QB": {
+   "n": 13,
+   "hit": 0.692,
+   "boom": 0.231,
+   "bust": 0.308
+  },
+  "3|RB": {
+   "n": 41,
+   "hit": 0.683,
+   "boom": 0.22,
+   "bust": 0.317
+  },
+  "3|WR": {
+   "n": 56,
+   "hit": 0.643,
+   "boom": 0.143,
+   "bust": 0.357
+  },
+  "3|TE": {
+   "n": 12,
+   "hit": 0.833,
+   "boom": 0.417,
+   "bust": 0.167
+  },
+  "4|QB": {
+   "n": 12,
+   "hit": 0.5,
+   "boom": 0.167,
+   "bust": 0.5
+  },
+  "4|RB": {
+   "n": 40,
+   "hit": 0.575,
+   "boom": 0.225,
+   "bust": 0.425
+  },
+  "4|WR": {
+   "n": 55,
+   "hit": 0.491,
+   "boom": 0.255,
+   "bust": 0.491
+  },
+  "4|TE": {
+   "n": 11,
+   "hit": 0.636,
+   "boom": 0.273,
+   "bust": 0.364
+  },
+  "5|QB": {
+   "n": 19,
+   "hit": 0.684,
+   "boom": 0.158,
+   "bust": 0.316
+  },
+  "5|RB": {
+   "n": 33,
+   "hit": 0.394,
+   "boom": 0.242,
+   "bust": 0.485
+  },
+  "5|WR": {
+   "n": 43,
+   "hit": 0.465,
+   "boom": 0.326,
+   "bust": 0.512
+  },
+  "5|TE": {
+   "n": 17,
+   "hit": 0.529,
+   "boom": 0.235,
+   "bust": 0.471
+  },
+  "6|QB": {
+   "n": 16,
+   "hit": 0.688,
+   "boom": 0.312,
+   "bust": 0.312
+  },
+  "6|RB": {
+   "n": 39,
+   "hit": 0.385,
+   "boom": 0.282,
+   "bust": 0.436
+  },
+  "6|WR": {
+   "n": 52,
+   "hit": 0.346,
+   "boom": 0.288,
+   "bust": 0.558
+  },
+  "6|TE": {
+   "n": 13,
+   "hit": 0.462,
+   "boom": 0.154,
+   "bust": 0.538
+  },
+  "7|QB": {
+   "n": 15,
+   "hit": 0.267,
+   "boom": 0.067,
+   "bust": 0.733
+  },
+  "7|RB": {
+   "n": 31,
+   "hit": 0.29,
+   "boom": 0.258,
+   "bust": 0.516
+  },
+  "7|WR": {
+   "n": 44,
+   "hit": 0.136,
+   "boom": 0.136,
+   "bust": 0.591
+  },
+  "7|TE": {
+   "n": 20,
+   "hit": 0.45,
+   "boom": 0.15,
+   "bust": 0.55
+  },
+  "8|QB": {
+   "n": 16,
+   "hit": 0.5,
+   "boom": 0.312,
+   "bust": 0.438
+  },
+  "8|RB": {
+   "n": 34,
+   "hit": 0.265,
+   "boom": 0.265,
+   "bust": 0.471
+  },
+  "8|WR": {
+   "n": 46,
+   "hit": 0.196,
+   "boom": 0.196,
+   "bust": 0.522
+  },
+  "8|TE": {
+   "n": 12,
+   "hit": 0.25,
+   "boom": 0.167,
+   "bust": 0.667
+  },
+  "9|QB": {
+   "n": 17,
+   "hit": 0.471,
+   "boom": 0.412,
+   "bust": 0.529
+  },
+  "9|RB": {
+   "n": 37,
+   "hit": 0.189,
+   "boom": 0.189,
+   "bust": 0.622
+  },
+  "9|WR": {
+   "n": 40,
+   "hit": 0.225,
+   "boom": 0.225,
+   "bust": 0.375
+  },
+  "9|TE": {
+   "n": 8,
+   "hit": 0.5,
+   "boom": 0.25,
+   "bust": 0.5
+  },
+  "10|QB": {
+   "n": 21,
+   "hit": 0.571,
+   "boom": 0.429,
+   "bust": 0.429
+  },
+  "10|RB": {
+   "n": 33,
+   "hit": 0.364,
+   "boom": 0.364,
+   "bust": 0.333
+  },
+  "10|WR": {
+   "n": 38,
+   "hit": 0.184,
+   "boom": 0.184,
+   "bust": 0.684
+  },
+  "10|TE": {
+   "n": 14,
+   "hit": 0.5,
+   "boom": 0.071,
+   "bust": 0.429
+  },
+  "11|QB": {
+   "n": 16,
+   "hit": 0.562,
+   "boom": 0.562,
+   "bust": 0.312
+  },
+  "11|RB": {
+   "n": 26,
+   "hit": 0.192,
+   "boom": 0.192,
+   "bust": 0.538
+  },
+  "11|WR": {
+   "n": 28,
+   "hit": 0.179,
+   "boom": 0.179,
+   "bust": 0.571
+  },
+  "11|TE": {
+   "n": 14,
+   "hit": 0.429,
+   "boom": 0.357,
+   "bust": 0.5
+  },
+  "12|QB": {
+   "n": 16,
+   "hit": 0.125,
+   "boom": 0.125,
+   "bust": 0.438
+  },
+  "12|RB": {
+   "n": 32,
+   "hit": 0.094,
+   "boom": 0.094,
+   "bust": 0.562
+  },
+  "12|WR": {
+   "n": 33,
+   "hit": 0.242,
+   "boom": 0.242,
+   "bust": 0.515
+  },
+  "12|TE": {
+   "n": 17,
+   "hit": 0.529,
+   "boom": 0.529,
+   "bust": 0.353
+  },
+  "13|QB": {
+   "n": 15,
+   "hit": 0.333,
+   "boom": 0.333,
+   "bust": 0.4
+  },
+  "13|RB": {
+   "n": 31,
+   "hit": 0.065,
+   "boom": 0.065,
+   "bust": 0.419
+  },
+  "13|WR": {
+   "n": 35,
+   "hit": 0.057,
+   "boom": 0.057,
+   "bust": 0.543
+  },
+  "13|TE": {
+   "n": 16,
+   "hit": 0.188,
+   "boom": 0.188,
+   "bust": 0.5
+  },
+  "14|QB": {
+   "n": 19,
+   "hit": 0.316,
+   "boom": 0.316,
+   "bust": 0.368
+  },
+  "14|RB": {
+   "n": 23,
+   "hit": 0.13,
+   "boom": 0.13,
+   "bust": 0.609
+  },
+  "14|WR": {
+   "n": 36,
+   "hit": 0.083,
+   "boom": 0.083,
+   "bust": 0.5
+  },
+  "14|TE": {
+   "n": 19,
+   "hit": 0.263,
+   "boom": 0.263,
+   "bust": 0.474
+  },
+  "15|QB": {
+   "n": 11,
+   "hit": 0.091,
+   "boom": 0.091,
+   "bust": 0.273
+  },
+  "15|RB": {
+   "n": 35,
+   "hit": 0.057,
+   "boom": 0.057,
+   "bust": 0.514
+  },
+  "15|WR": {
+   "n": 26,
+   "hit": 0.077,
+   "boom": 0.077,
+   "bust": 0.577
+  },
+  "15|TE": {
+   "n": 16,
+   "hit": 0.188,
+   "boom": 0.188,
+   "bust": 0.625
+  }
+ },
+ "signal_lifts": {
+  "age \u2265 29": {
+   "QB": {
+    "n": 56,
+    "boom_lift": 0.008,
+    "bust_lift": -0.012
+   },
+   "RB": {
+    "n": 44,
+    "boom_lift": -0.082,
+    "bust_lift": 0.078
+   },
+   "WR": {
+    "n": 101,
+    "boom_lift": -0.027,
+    "bust_lift": 0.053
+   },
+   "TE": {
+    "n": 37,
+    "boom_lift": 0.005,
+    "bust_lift": 0.041
+   }
+  },
+  "age 27-28": {
+   "RB": {
+    "n": 61,
+    "boom_lift": -0.019,
+    "bust_lift": 0.043
+   },
+   "WR": {
+    "n": 86,
+    "boom_lift": -0.0,
+    "bust_lift": -0.066
+   },
+   "TE": {
+    "n": 29,
+    "boom_lift": 0.009,
+    "bust_lift": -0.002
+   }
+  },
+  "age \u2264 24": {
+   "QB": {
+    "n": 32,
+    "boom_lift": 0.008,
+    "bust_lift": -0.066
+   },
+   "RB": {
+    "n": 188,
+    "boom_lift": 0.037,
+    "bust_lift": -0.031
+   },
+   "WR": {
+    "n": 165,
+    "boom_lift": 0.017,
+    "bust_lift": -0.005
+   },
+   "TE": {
+    "n": 27,
+    "boom_lift": -0.032,
+    "bust_lift": 0.013
+   }
+  },
+  "year 2 (second season)": {
+   "RB": {
+    "n": 65,
+    "boom_lift": 0.102,
+    "bust_lift": -0.048
+   },
+   "WR": {
+    "n": 60,
+    "boom_lift": -0.016,
+    "bust_lift": 0.036
+   }
+  },
+  "year 3": {
+   "RB": {
+    "n": 74,
+    "boom_lift": -0.024,
+    "bust_lift": -0.02
+   },
+   "WR": {
+    "n": 63,
+    "boom_lift": 0.036,
+    "bust_lift": 0.029
+   }
+  },
+  "rookie": {
+   "RB": {
+    "n": 44,
+    "boom_lift": -0.016,
+    "bust_lift": -0.029
+   },
+   "WR": {
+    "n": 25,
+    "boom_lift": 0.164,
+    "bust_lift": -0.174
+   }
+  },
+  "changed teams": {
+   "RB": {
+    "n": 59,
+    "boom_lift": -0.043,
+    "bust_lift": 0.081
+   },
+   "WR": {
+    "n": 68,
+    "boom_lift": -0.056,
+    "bust_lift": 0.069
+   }
+  },
+  "prior-year boom-week rate \u2265 35%": {
+   "RB": {
+    "n": 42,
+    "boom_lift": 0.104,
+    "bust_lift": 0.006
+   }
+  },
+  "prior-year boom-week rate \u2264 10%": {
+   "QB": {
+    "n": 44,
+    "boom_lift": 0.026,
+    "bust_lift": -0.017
+   },
+   "RB": {
+    "n": 143,
+    "boom_lift": 0.017,
+    "bust_lift": -0.006
+   },
+   "WR": {
+    "n": 196,
+    "boom_lift": -0.026,
+    "bust_lift": 0.003
+   },
+   "TE": {
+    "n": 37,
+    "boom_lift": -0.067,
+    "bust_lift": 0.162
+   }
+  },
+  "prior-year bust-week rate \u2265 30%": {
+   "QB": {
+    "n": 42,
+    "boom_lift": 0.094,
+    "bust_lift": 0.007
+   },
+   "RB": {
+    "n": 91,
+    "boom_lift": 0.034,
+    "bust_lift": -0.003
+   },
+   "WR": {
+    "n": 119,
+    "boom_lift": -0.048,
+    "bust_lift": 0.048
+   },
+   "TE": {
+    "n": 67,
+    "boom_lift": 0.026,
+    "bust_lift": 0.003
+   }
+  },
+  "missed \u2265 4 games prior year": {
+   "RB": {
+    "n": 119,
+    "boom_lift": 0.037,
+    "bust_lift": 0.009
+   },
+   "WR": {
+    "n": 112,
+    "boom_lift": -0.04,
+    "bust_lift": 0.034
+   },
+   "TE": {
+    "n": 29,
+    "boom_lift": -0.141,
+    "bust_lift": 0.214
+   }
+  },
+  "played all 17 prior year": {
+   "QB": {
+    "n": 25,
+    "boom_lift": -0.047,
+    "bust_lift": 0.107
+   },
+   "RB": {
+    "n": 46,
+    "boom_lift": -0.008,
+    "bust_lift": 0.07
+   },
+   "WR": {
+    "n": 62,
+    "boom_lift": 0.04,
+    "bust_lift": -0.056
+   }
+  },
+  "prior-year weekly CV \u2265 0.65 (volatile)": {
+   "RB": {
+    "n": 80,
+    "boom_lift": 0.023,
+    "bust_lift": -0.031
+   },
+   "WR": {
+    "n": 94,
+    "boom_lift": 0.017,
+    "bust_lift": -0.042
+   },
+   "TE": {
+    "n": 27,
+    "boom_lift": -0.022,
+    "bust_lift": -0.035
+   }
+  },
+  "prior-year top-6 finish": {
+   "QB": {
+    "n": 53,
+    "boom_lift": -0.064,
+    "bust_lift": 0.046
+   },
+   "RB": {
+    "n": 60,
+    "boom_lift": -0.043,
+    "bust_lift": 0.04
+   },
+   "WR": {
+    "n": 60,
+    "boom_lift": 0.102,
+    "bust_lift": 0.002
+   },
+   "TE": {
+    "n": 55,
+    "boom_lift": 0.063,
+    "bust_lift": -0.069
+   }
+  },
+  "Vegas win total \u2265 10": {
+   "QB": {
+    "n": 61,
+    "boom_lift": 0.024,
+    "bust_lift": 0.008
+   },
+   "RB": {
+    "n": 100,
+    "boom_lift": 0.063,
+    "bust_lift": 0.012
+   },
+   "WR": {
+    "n": 127,
+    "boom_lift": 0.014,
+    "bust_lift": -0.037
+   },
+   "TE": {
+    "n": 45,
+    "boom_lift": -0.022,
+    "bust_lift": -0.058
+   }
+  },
+  "Vegas win total \u2264 6.5": {
+   "RB": {
+    "n": 75,
+    "boom_lift": -0.079,
+    "bust_lift": -0.02
+   },
+   "WR": {
+    "n": 69,
+    "boom_lift": 0.017,
+    "bust_lift": -0.045
+   }
+  },
+  "incumbent on team that vacated \u2265 35%": {
+   "RB": {
+    "n": 66,
+    "boom_lift": 0.038,
+    "bust_lift": -0.018
+   },
+   "WR": {
+    "n": 67,
+    "boom_lift": 0.018,
+    "bust_lift": 0.027
+   }
+  },
+  "arrival/rookie on team that vacated \u2265 35%": {
+   "RB": {
+    "n": 59,
+    "boom_lift": 0.007,
+    "bust_lift": -0.01
+   },
+   "WR": {
+    "n": 44,
+    "boom_lift": -0.051,
+    "bust_lift": 0.08
+   }
+  },
+  "expert spread in top quartile (2020+)": {
+   "RB": {
+    "n": 50,
+    "boom_lift": -0.027,
+    "bust_lift": 0.055
+   },
+   "WR": {
+    "n": 59,
+    "boom_lift": -0.003,
+    "bust_lift": 0.074
+   }
+  },
+  "expert spread in bottom quartile (2020+)": {
+   "RB": {
+    "n": 49,
+    "boom_lift": 0.019,
+    "bust_lift": -0.161
+   },
+   "WR": {
+    "n": 58,
+    "boom_lift": 0.053,
+    "bust_lift": -0.175
+   }
+  },
+  "most bullish expert \u2265 30% above consensus (2020+)": {
+   "QB": {
+    "n": 47,
+    "boom_lift": 0.05,
+    "bust_lift": 0.01
+   },
+   "RB": {
+    "n": 186,
+    "boom_lift": 0.018,
+    "bust_lift": -0.039
+   },
+   "WR": {
+    "n": 219,
+    "boom_lift": 0.007,
+    "bust_lift": -0.024
+   },
+   "TE": {
+    "n": 50,
+    "boom_lift": -0.011,
+    "bust_lift": 0.007
+   }
+  },
+  "most bearish expert \u2265 30% below consensus (2020+)": {
+   "QB": {
+    "n": 61,
+    "boom_lift": 0.016,
+    "bust_lift": 0.043
+   },
+   "RB": {
+    "n": 193,
+    "boom_lift": 0.008,
+    "bust_lift": -0.038
+   },
+   "WR": {
+    "n": 230,
+    "boom_lift": 0.017,
+    "bust_lift": -0.031
+   },
+   "TE": {
+    "n": 51,
+    "boom_lift": -0.031,
+    "bust_lift": 0.034
+   }
+  },
+  "ADP \u2265 8 picks later than ECR (2020+)": {
+   "WR": {
+    "n": 65,
+    "boom_lift": 0.117,
+    "bust_lift": -0.114
+   }
+  },
+  "ADP \u2265 8 picks earlier than ECR (2020+)": {
+   "QB": {
+    "n": 33,
+    "boom_lift": 0.037,
+    "bust_lift": 0.028
+   },
+   "RB": {
+    "n": 49,
+    "boom_lift": 0.001,
+    "bust_lift": 0.006
+   },
+   "TE": {
+    "n": 26,
+    "boom_lift": 0.063,
+    "bust_lift": -0.057
+   }
+  }
+ },
+ "age": {
+  "QB": {
+   "24.0": {
+    "n": 15,
+    "bust": 0.333,
+    "boom": 0.2
+   }
+  },
+  "RB": {
+   "21.0": {
+    "n": 20,
+    "bust": 0.3,
+    "boom": 0.35
+   },
+   "22.0": {
+    "n": 42,
+    "bust": 0.429,
+    "boom": 0.238
+   },
+   "23.0": {
+    "n": 58,
+    "bust": 0.328,
+    "boom": 0.379
+   },
+   "24.0": {
+    "n": 68,
+    "bust": 0.353,
+    "boom": 0.265
+   },
+   "25.0": {
+    "n": 59,
+    "bust": 0.39,
+    "boom": 0.254
+   },
+   "26.0": {
+    "n": 52,
+    "bust": 0.346,
+    "boom": 0.25
+   },
+   "27.0": {
+    "n": 34,
+    "bust": 0.324,
+    "boom": 0.265
+   },
+   "28.0": {
+    "n": 27,
+    "bust": 0.556,
+    "boom": 0.222
+   },
+   "29.0": {
+    "n": 18,
+    "bust": 0.389,
+    "boom": 0.278
+   }
+  },
+  "WR": {
+   "22.0": {
+    "n": 38,
+    "bust": 0.447,
+    "boom": 0.263
+   },
+   "23.0": {
+    "n": 53,
+    "bust": 0.453,
+    "boom": 0.264
+   },
+   "24.0": {
+    "n": 62,
+    "bust": 0.532,
+    "boom": 0.194
+   },
+   "25.0": {
+    "n": 53,
+    "bust": 0.377,
+    "boom": 0.283
+   },
+   "26.0": {
+    "n": 51,
+    "bust": 0.49,
+    "boom": 0.255
+   },
+   "27.0": {
+    "n": 43,
+    "bust": 0.395,
+    "boom": 0.209
+   },
+   "28.0": {
+    "n": 43,
+    "bust": 0.395,
+    "boom": 0.279
+   },
+   "29.0": {
+    "n": 34,
+    "bust": 0.441,
+    "boom": 0.235
+   },
+   "30.0": {
+    "n": 28,
+    "bust": 0.679,
+    "boom": 0.179
+   },
+   "31.0": {
+    "n": 15,
+    "bust": 0.467,
+    "boom": 0.267
+   }
+  },
+  "TE": {
+   "28.0": {
+    "n": 15,
+    "bust": 0.4,
+    "boom": 0.267
+   }
+  }
+ },
+ "years_exp": {
+  "QB": {
+   "2": {
+    "n": 16,
+    "boom": 0.188,
+    "bust": 0.25
+   }
+  },
+  "RB": {
+   "0": {
+    "n": 44,
+    "boom": 0.25,
+    "bust": 0.386
+   },
+   "1": {
+    "n": 65,
+    "boom": 0.369,
+    "bust": 0.338
+   },
+   "2": {
+    "n": 74,
+    "boom": 0.243,
+    "bust": 0.351
+   },
+   "3": {
+    "n": 61,
+    "boom": 0.279,
+    "bust": 0.41
+   },
+   "4": {
+    "n": 47,
+    "boom": 0.234,
+    "bust": 0.383
+   },
+   "5": {
+    "n": 37,
+    "boom": 0.27,
+    "bust": 0.378
+   },
+   "6": {
+    "n": 30,
+    "boom": 0.3,
+    "bust": 0.367
+   },
+   "7": {
+    "n": 15,
+    "boom": 0.2,
+    "bust": 0.4
+   }
+  },
+  "WR": {
+   "0": {
+    "n": 25,
+    "boom": 0.36,
+    "bust": 0.36
+   },
+   "1": {
+    "n": 60,
+    "boom": 0.217,
+    "bust": 0.533
+   },
+   "2": {
+    "n": 63,
+    "boom": 0.286,
+    "bust": 0.476
+   },
+   "3": {
+    "n": 57,
+    "boom": 0.175,
+    "bust": 0.526
+   },
+   "4": {
+    "n": 48,
+    "boom": 0.312,
+    "bust": 0.375
+   },
+   "5": {
+    "n": 49,
+    "boom": 0.245,
+    "bust": 0.367
+   },
+   "6": {
+    "n": 45,
+    "boom": 0.178,
+    "bust": 0.378
+   },
+   "7": {
+    "n": 38,
+    "boom": 0.368,
+    "bust": 0.474
+   },
+   "8": {
+    "n": 28,
+    "boom": 0.214,
+    "bust": 0.5
+   },
+   "9": {
+    "n": 20,
+    "boom": 0.1,
+    "bust": 0.7
+   }
+  },
+  "TE": {
+   "3": {
+    "n": 15,
+    "boom": 0.333,
+    "bust": 0.333
+   },
+   "4": {
+    "n": 15,
+    "boom": 0.133,
+    "bust": 0.467
+   }
+  }
+ },
+ "fitted": {
+  "boom|RB|ADP + history": {
+   "features": [
+    "adp_pos",
+    "age",
+    "years_exp",
+    "rookie",
+    "moved",
+    "prior_ppg",
+    "prior_missed",
+    "prior_boom",
+    "prior_bust",
+    "prior_cv",
+    "vegas",
+    "vac_share"
+   ],
+   "coef_std": [
+    0.104,
+    -0.344,
+    0.14,
+    -0.039,
+    -0.144,
+    -0.133,
+    0.016,
+    0.166,
+    -0.061,
+    0.019,
+    0.127,
+    -0.027
+   ],
+   "intercept": -1.04,
+   "auc_model": 0.561,
+   "auc_adp": 0.646,
+   "test_n": 77
+  },
+  "boom|RB|+ expert spread (2020+)": {
+   "features": [
+    "adp_pos",
+    "age",
+    "years_exp",
+    "rookie",
+    "moved",
+    "prior_ppg",
+    "prior_missed",
+    "prior_boom",
+    "prior_bust",
+    "prior_cv",
+    "vegas",
+    "vac_share",
+    "ecr_sd",
+    "ecr_gap",
+    "value"
+   ],
+   "coef_std": [
+    0.172,
+    -0.088,
+    -0.14,
+    0.094,
+    -0.013,
+    -0.165,
+    0.21,
+    0.101,
+    -0.197,
+    0.168,
+    0.225,
+    -0.035,
+    -0.161,
+    -0.083,
+    -0.264
+   ],
+   "intercept": -0.991,
+   "auc_model": 0.479,
+   "auc_adp": 0.646,
+   "test_n": 77
+  },
+  "boom|WR|ADP + history": {
+   "features": [
+    "adp_pos",
+    "age",
+    "years_exp",
+    "rookie",
+    "moved",
+    "prior_ppg",
+    "prior_missed",
+    "prior_boom",
+    "prior_bust",
+    "prior_cv",
+    "vegas",
+    "vac_share"
+   ],
+   "coef_std": [
+    -0.156,
+    -0.153,
+    0.159,
+    0.118,
+    -0.072,
+    -0.013,
+    -0.232,
+    0.141,
+    -0.18,
+    0.124,
+    0.154,
+    0.033
+   ],
+   "intercept": -1.287,
+   "auc_model": 0.52,
+   "auc_adp": 0.471,
+   "test_n": 96
+  },
+  "boom|WR|+ expert spread (2020+)": {
+   "features": [
+    "adp_pos",
+    "age",
+    "years_exp",
+    "rookie",
+    "moved",
+    "prior_ppg",
+    "prior_missed",
+    "prior_boom",
+    "prior_bust",
+    "prior_cv",
+    "vegas",
+    "vac_share",
+    "ecr_sd",
+    "ecr_gap",
+    "value"
+   ],
+   "coef_std": [
+    -0.097,
+    -0.227,
+    0.059,
+    0.203,
+    0.361,
+    0.335,
+    -0.432,
+    -0.099,
+    0.074,
+    0.187,
+    -0.002,
+    -0.04,
+    0.181,
+    -0.296,
+    -0.056
+   ],
+   "intercept": -1.316,
+   "auc_model": 0.522,
+   "auc_adp": 0.471,
+   "test_n": 96
+  },
+  "boom|ALL|ADP + history": {
+   "features": [
+    "adp_pos",
+    "age",
+    "years_exp",
+    "rookie",
+    "moved",
+    "prior_ppg",
+    "prior_missed",
+    "prior_boom",
+    "prior_bust",
+    "prior_cv",
+    "vegas",
+    "vac_share"
+   ],
+   "coef_std": [
+    -0.077,
+    -0.152,
+    0.087,
+    0.076,
+    -0.119,
+    -0.147,
+    -0.169,
+    0.202,
+    -0.045,
+    0.009,
+    0.183,
+    0.014
+   ],
+   "intercept": -1.143,
+   "auc_model": 0.541,
+   "auc_adp": 0.536,
+   "test_n": 226
+  },
+  "boom|ALL|+ expert spread (2020+)": {
+   "features": [
+    "adp_pos",
+    "age",
+    "years_exp",
+    "rookie",
+    "moved",
+    "prior_ppg",
+    "prior_missed",
+    "prior_boom",
+    "prior_bust",
+    "prior_cv",
+    "vegas",
+    "vac_share",
+    "ecr_sd",
+    "ecr_gap",
+    "value"
+   ],
+   "coef_std": [
+    0.118,
+    -0.124,
+    -0.076,
+    0.144,
+    0.145,
+    0.094,
+    -0.123,
+    0.065,
+    0.075,
+    0.109,
+    0.145,
+    -0.013,
+    -0.009,
+    -0.335,
+    -0.339
+   ],
+   "intercept": -1.11,
+   "auc_model": 0.503,
+   "auc_adp": 0.536,
+   "test_n": 226
+  },
+  "bust|RB|ADP + history": {
+   "features": [
+    "adp_pos",
+    "age",
+    "years_exp",
+    "rookie",
+    "moved",
+    "prior_ppg",
+    "prior_missed",
+    "prior_boom",
+    "prior_bust",
+    "prior_cv",
+    "vegas",
+    "vac_share"
+   ],
+   "coef_std": [
+    0.3,
+    0.32,
+    -0.246,
+    -0.006,
+    0.205,
+    0.173,
+    0.139,
+    -0.054,
+    0.139,
+    -0.077,
+    0.035,
+    -0.071
+   ],
+   "intercept": -0.422,
+   "auc_model": 0.641,
+   "auc_adp": 0.698,
+   "test_n": 77
+  },
+  "bust|RB|+ expert spread (2020+)": {
+   "features": [
+    "adp_pos",
+    "age",
+    "years_exp",
+    "rookie",
+    "moved",
+    "prior_ppg",
+    "prior_missed",
+    "prior_boom",
+    "prior_bust",
+    "prior_cv",
+    "vegas",
+    "vac_share",
+    "ecr_sd",
+    "ecr_gap",
+    "value"
+   ],
+   "coef_std": [
+    0.524,
+    -0.18,
+    0.327,
+    -0.17,
+    0.157,
+    0.334,
+    0.016,
+    -0.071,
+    0.425,
+    -0.341,
+    -0.043,
+    0.038,
+    -0.218,
+    0.13,
+    -0.198
+   ],
+   "intercept": -0.441,
+   "auc_model": 0.656,
+   "auc_adp": 0.698,
+   "test_n": 77
+  },
+  "bust|WR|ADP + history": {
+   "features": [
+    "adp_pos",
+    "age",
+    "years_exp",
+    "rookie",
+    "moved",
+    "prior_ppg",
+    "prior_missed",
+    "prior_boom",
+    "prior_bust",
+    "prior_cv",
+    "vegas",
+    "vac_share"
+   ],
+   "coef_std": [
+    0.505,
+    0.615,
+    -0.66,
+    -0.29,
+    0.2,
+    0.013,
+    0.165,
+    0.218,
+    0.343,
+    -0.41,
+    -0.086,
+    -0.045
+   ],
+   "intercept": -0.085,
+   "auc_model": 0.563,
+   "auc_adp": 0.539,
+   "test_n": 96
+  },
+  "bust|WR|+ expert spread (2020+)": {
+   "features": [
+    "adp_pos",
+    "age",
+    "years_exp",
+    "rookie",
+    "moved",
+    "prior_ppg",
+    "prior_missed",
+    "prior_boom",
+    "prior_bust",
+    "prior_cv",
+    "vegas",
+    "vac_share",
+    "ecr_sd",
+    "ecr_gap",
+    "value"
+   ],
+   "coef_std": [
+    0.318,
+    0.458,
+    -0.577,
+    -0.574,
+    -0.06,
+    0.071,
+    0.269,
+    0.341,
+    0.349,
+    -0.658,
+    -0.163,
+    -0.109,
+    -0.094,
+    0.66,
+    0.054
+   ],
+   "intercept": -0.187,
+   "auc_model": 0.549,
+   "auc_adp": 0.539,
+   "test_n": 96
+  },
+  "bust|ALL|ADP + history": {
+   "features": [
+    "adp_pos",
+    "age",
+    "years_exp",
+    "rookie",
+    "moved",
+    "prior_ppg",
+    "prior_missed",
+    "prior_boom",
+    "prior_bust",
+    "prior_cv",
+    "vegas",
+    "vac_share"
+   ],
+   "coef_std": [
+    0.33,
+    0.582,
+    -0.5,
+    -0.139,
+    0.117,
+    0.051,
+    0.179,
+    -0.051,
+    0.186,
+    -0.193,
+    -0.081,
+    -0.022
+   ],
+   "intercept": -0.266,
+   "auc_model": 0.589,
+   "auc_adp": 0.585,
+   "test_n": 226
+  },
+  "bust|ALL|+ expert spread (2020+)": {
+   "features": [
+    "adp_pos",
+    "age",
+    "years_exp",
+    "rookie",
+    "moved",
+    "prior_ppg",
+    "prior_missed",
+    "prior_boom",
+    "prior_bust",
+    "prior_cv",
+    "vegas",
+    "vac_share",
+    "ecr_sd",
+    "ecr_gap",
+    "value"
+   ],
+   "coef_std": [
+    0.324,
+    0.307,
+    -0.19,
+    -0.33,
+    -0.037,
+    -0.147,
+    0.159,
+    0.012,
+    0.103,
+    -0.424,
+    -0.133,
+    0.072,
+    -0.255,
+    0.463,
+    -0.062
+   ],
+   "intercept": -0.338,
+   "auc_model": 0.594,
+   "auc_adp": 0.585,
+   "test_n": 226
+  }
+ },
+ "definitions": {
+  "hit": {
+   "QB": 12,
+   "RB": 24,
+   "WR": 24,
+   "TE": 12
+  },
+  "boom_gap": {
+   "QB": 3,
+   "RB": 6,
+   "WR": 6,
+   "TE": 3
+  },
+  "bust": "fin >= 2*adp_pos or games <= 10"
+ },
+ "generated": "2026-09-05",
+ "seasons": [
+  2016,
+  2017,
+  2018,
+  2019,
+  2020,
+  2021,
+  2022,
+  2023,
+  2024,
+  2025
+ ]
+}
