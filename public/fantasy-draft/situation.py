@@ -16,10 +16,10 @@ play-caller tendency and unresolved situations.
 import statistics
 
 SW = {
-    "env": 0.40,        # team offensive environment (Vegas, QB tier, O-line, play-caller tendency); Vegas mattered for RB boom in the backtest
-    "change": 0.45,     # 2026 opportunity / competition / QB / coaching change for the player
+    "env": 0.42,        # team offensive environment (Vegas, QB tier, O-line, play-caller tendency); Vegas mattered for RB boom in the backtest
+    "change": 0.50,     # 2026 opportunity / competition / QB / coaching change for the player
     "vacated": 0.0,     # displayed only: the 2016-25 backtest found vacated share predicts nothing for incumbents or arrivals
-    "schedule": 0.15,   # 0.4 full-season + 0.6 fantasy playoffs (weeks 15-17), both small by design
+    "schedule": 0.08,   # 0.4 full-season + 0.6 fantasy playoffs; cut after the red team: publishers of SOS say it is a tiebreaker at most
 }
 QB_TIER = {1: 0.6, 2: 0.25, 3: -0.1, 4: -0.5}
 PASS_RATE = {"high": 1.0, "mid": 0.0, "low": -1.0}

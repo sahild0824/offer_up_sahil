@@ -1,80 +1,587 @@
 {
-  "_readme": "Hand-curated 2026 context nudges from research/context.md. *_adj values are added to the 0-1 score before scaling to 100 (0.10 = +10 points). Factors are appended to the player's why-lists. Sources are cited in research/context.md.",
-
-  "Patrick Mahomes": {"risk_factors": ["Returning from Dec 2025 ACL/LCL tear with no preseason snaps", "New OC Eric Bieniemy"], "boom_factors": ["Kenneth Walker signing gives KC a real run game and play-action"], "risk_adj": 0.10, "camp_status": "questionable: ACL return, on track for Week 1", "note": "Cleared in July, practicing fully, no preseason reps. Track for MNF Week 1."},
-  "Kirk Cousins": {"risk_factors": ["Short leash with No. 1 pick Fernando Mendoza behind him", "Kubiak scheme leans on heavy personnel and the run"], "bust_adj": 0.12, "note": "Named Raiders Week 1 starter over Mendoza."},
-  "Fernando Mendoza": {"risk_factors": ["Named Week 1 backup to Kirk Cousins"], "bust_adj": 0.25, "flag": "Backup", "note": "No. 1 overall pick but opens as the backup. Redraft stash only."},
-  "Kyler Murray": {"boom_factors": ["Named Vikings starter over J.J. McCarthy with Jefferson and Addison to throw to"], "risk_factors": ["Injury history; new team"], "boom_adj": 0.10, "risk_adj": 0.05, "note": "Signed with Minnesota and named the starter. Early rankings have him around QB16."},
-  "Malik Willis": {"boom_factors": ["First-year starter with a rushing floor in Bobby Slowik's wide-zone scheme"], "risk_factors": ["Unproven passing volume"], "boom_adj": 0.08, "bust_adj": 0.08},
-  "Tua Tagovailoa": {"risk_factors": ["Falcons QB competition with Michael Penix Jr. described as unsettled"], "bust_adj": 0.10, "risk_adj": 0.10},
-  "Michael Penix Jr.": {"risk_factors": ["QB job in Atlanta unsettled vs Tua Tagovailoa"], "risk_adj": 0.12},
-  "J.J. McCarthy": {"risk_factors": ["Demoted behind Kyler Murray, possibly QB3"], "bust_adj": 0.30, "flag": "Backup"},
-  "Geno Smith": {"risk_factors": ["New team (Jets), new OC Frank Reich"], "note": "Expected to feed Garrett Wilson heavily."},
-  "Aaron Rodgers": {"boom_factors": ["Mike McCarthy reunion; Pittman and Germie Bernard added"], "risk_factors": ["Age 42"], "boom_adj": 0.04},
-  "Deshaun Watson": {"risk_factors": ["Named starter but form and leash are questions under Todd Monken"], "risk_adj": 0.10},
-  "Drake Maye": {"boom_factors": ["Gains A.J. Brown; led the NFL in completion % and yards per attempt in 2025"], "boom_adj": 0.10},
-  "Jalen Hurts": {"risk_factors": ["Loses A.J. Brown; rookie Makai Lemon steps into WR2"], "boom_factors": ["Rushing and goal-line floor intact"], "bust_adj": 0.06},
-  "Matthew Stafford": {"risk_factors": ["Age 38 with a back history; Ty Simpson drafted behind him"], "risk_adj": 0.12},
-  "Cam Ward": {"boom_factors": ["Brian Daboll takes over the offense; Carnell Tate and Wan'Dale Robinson added"], "boom_adj": 0.08},
-
-  "Jeremiyah Love": {"boom_factors": ["Lead back with a record rookie RB guarantee; James Conner on IR"], "risk_factors": ["Preseason ankle sprain, Week 1 uncertain", "Tyler Allgeier split camp reps", "Rookie"], "boom_adj": 0.08, "risk_adj": 0.12, "camp_status": "questionable: ankle sprain, hoping for Week 1"},
-  "Tyler Allgeier": {"boom_factors": ["Conner on IR; splitting early work with Love"], "boom_adj": 0.08},
-  "James Conner": {"risk_factors": ["On IR, out at least four games"], "bust_adj": 0.30, "camp_status": "injured: IR, minimum 4 games", "flag": "IR"},
-  "Jadarian Price": {"boom_factors": ["Expected to lead Seattle's backfield with Zach Charbonnet on IR"], "risk_factors": ["Held out of preseason; committee with Wilson and Holani unclear", "Rookie"], "boom_adj": 0.08, "risk_adj": 0.12},
-  "Zach Charbonnet": {"risk_factors": ["On IR, out at least four games"], "bust_adj": 0.30, "camp_status": "injured: IR, minimum 4 games", "flag": "IR"},
-  "Kenneth Walker III": {"boom_factors": ["Signed 3y/$43M with Kansas City; projected 15-18 carries plus goal-line work in Mahomes' offense"], "boom_adj": 0.10},
-  "Jahmyr Gibbs": {"boom_factors": ["Extension done; Montgomery traded and Pacheco on IR, so the workload grows"], "boom_adj": 0.08},
-  "Isiah Pacheco": {"risk_factors": ["On IR (MCL), out at least four games"], "bust_adj": 0.30, "camp_status": "injured: IR, minimum 4 games", "flag": "IR"},
-  "David Montgomery": {"risk_factors": ["Traded to Houston; role vs incumbents unclear"], "risk_adj": 0.08},
-  "Ashton Jeanty": {"boom_factors": ["Klint Kubiak's heavy-personnel run scheme fits a bell-cow"], "risk_factors": ["Low-ankle sprain; Week 1 status unresolved"], "boom_adj": 0.06, "risk_adj": 0.12, "camp_status": "questionable: low-ankle sprain", "note": "Called the biggest coin flip of the early rounds by FantasyPros; Kubiak says he is optimistic for Week 1."},
-  "Josh Jacobs": {"risk_factors": ["On the commissioner's exempt list after an arrest; six-plus game suspension likely"], "bust_adj": 0.35, "camp_status": "suspended: exempt list", "flag": "Exempt"},
-  "MarShawn Lloyd": {"boom_factors": ["Presumed lead back while Jacobs is out; biggest ADP riser of late August"], "risk_factors": ["Injury history", "Kaleb Johnson and Chris Brooks behind him"], "boom_adj": 0.10, "risk_adj": 0.10},
-  "Kaleb Johnson": {"boom_factors": ["Traded to Green Bay to fill in for Jacobs"], "boom_adj": 0.05},
-  "Cam Skattebo": {"risk_factors": ["Listed as co-starter with Tyrone Tracy; returning from a serious leg injury", "New coaching staff under John Harbaugh"], "bust_adj": 0.08},
-  "Tyrone Tracy Jr.": {"boom_factors": ["Co-starter with the pass-game role in New York"], "boom_adj": 0.06},
-  "Rico Dowdle": {"boom_factors": ["Cleaner path in Pittsburgh after the Kaleb Johnson trade; even preseason snaps with Warren"], "boom_adj": 0.06},
-  "Jaylen Warren": {"risk_factors": ["True committee with Rico Dowdle"], "risk_adj": 0.08},
-  "Kyren Williams": {"risk_factors": ["Alternating drives with Blake Corum"], "bust_adj": 0.10},
-  "Blake Corum": {"boom_factors": ["Alternating drives with Kyren Williams"], "boom_adj": 0.08},
-  "Rhamondre Stevenson": {"boom_factors": ["Favored over TreVeyon Henderson after better 2025 efficiency"], "boom_adj": 0.05},
-  "TreVeyon Henderson": {"risk_factors": ["Falling ADP; backup role behind Stevenson"], "bust_adj": 0.10},
-  "Breece Hall": {"risk_factors": ["August groin strain, expected back for Week 1"], "risk_adj": 0.04},
-  "Bijan Robinson": {"boom_factors": ["Extension done; Kevin Stefanski's run-leaning, wide-zone scheme"], "risk_factors": ["Falcons QB situation unsettled"], "boom_adj": 0.06},
-  "Nicholas Singleton": {"risk_factors": ["Third on the Titans depth chart"], "bust_adj": 0.15},
-  "Kaelon Black": {"boom_factors": ["Shanahan rated him the No. 2 RB in the class"], "note": "Stash only."},
-
-  "A.J. Brown": {"boom_factors": ["Traded to New England; projected ~25% target share with Drake Maye"], "boom_adj": 0.10},
-  "Romeo Doubs": {"risk_factors": ["A.J. Brown's arrival cuts his targets"], "bust_adj": 0.12},
-  "DeVonta Smith": {"boom_factors": ["Alpha in Philadelphia after the A.J. Brown trade"], "boom_adj": 0.10},
-  "Makai Lemon": {"boom_factors": ["Likely WR2 in Philadelphia with A.J. Brown gone"], "risk_factors": ["Rookie"], "boom_adj": 0.06, "risk_adj": 0.06},
-  "Mike Evans": {"boom_factors": ["Target concentration in San Francisco with Aiyuk on PUP, Pearsall out, Kittle uncertain"], "risk_factors": ["Age 33, new team"], "boom_adj": 0.08},
-  "De'Zhaun Stribling": {"boom_factors": ["Preseason standout in a thin 49ers receiver room"], "risk_factors": ["Rookie"], "boom_adj": 0.10},
-  "Brandon Aiyuk": {"risk_factors": ["On reserve/PUP, out at least four games"], "bust_adj": 0.30, "camp_status": "injured: PUP, minimum 4 games", "flag": "PUP"},
-  "Michael Pittman Jr.": {"boom_factors": ["Traded to Pittsburgh and extended; volume with Rodgers"], "boom_adj": 0.08},
-  "Carnell Tate": {"boom_factors": ["No. 4 overall pick; rookie WR1 under Daboll with Cam Ward"], "risk_factors": ["Rookie"], "boom_adj": 0.08, "risk_adj": 0.06},
-  "Wan'Dale Robinson": {"boom_factors": ["Reunites with Brian Daboll; PPR slot volume"], "boom_adj": 0.04},
-  "Jordyn Tyson": {"risk_factors": ["On IR to start the season, out at least four games"], "bust_adj": 0.30, "camp_status": "injured: IR, minimum 4 games", "flag": "IR"},
-  "Puka Nacua": {"risk_factors": ["Possible league discipline still unresolved from an offseason incident"], "boom_factors": ["Psoas issue resolved; expected for the Week 1 opener"], "risk_adj": 0.10, "note": "Expected to play the Melbourne opener. A suspension ruling has not been reported either way."},
-  "Rashod Bateman": {"risk_factors": ["Arrest in Georgia; suspension possible"], "risk_adj": 0.12},
-  "Zay Flowers": {"risk_factors": ["Being monitored for Week 1, no designation; new OC Declan Doyle"], "risk_adj": 0.06},
-  "Garrett Wilson": {"boom_factors": ["Geno Smith and Frank Reich expected to funnel targets to him"], "boom_adj": 0.08},
-  "Justin Jefferson": {"boom_factors": ["Kyler Murray is a clear upgrade at QB over J.J. McCarthy"], "boom_adj": 0.06},
-  "Jordan Addison": {"boom_factors": ["Kyler Murray is a clear upgrade at QB"], "boom_adj": 0.06},
-  "Drake London": {"risk_factors": ["Falcons QB carousel (Tua vs Penix)"], "risk_adj": 0.08},
-  "Brian Thomas Jr.": {"risk_factors": ["Three-way WR1 battle with Jakobi Meyers and Parker Washington"], "bust_adj": 0.06, "risk_adj": 0.06},
-  "KC Concepcion": {"boom_factors": ["Starting slot receiver in Todd Monken's pass-friendly offense"], "risk_factors": ["Rookie"], "boom_adj": 0.08},
-  "Cedric Tillman": {"risk_factors": ["Perimeter battle with rookie Denzel Boston"], "risk_adj": 0.08},
-  "Christian Watson": {"risk_factors": ["On reserve/PUP (ACL), out at least four games"], "bust_adj": 0.30, "camp_status": "injured: PUP, minimum 4 games", "flag": "PUP"},
-  "Jayden Higgins": {"risk_factors": ["Torn ACL, out for the season"], "bust_adj": 0.60, "camp_status": "injured: out for season", "flag": "Out"},
-  "Tank Dell": {"risk_factors": ["On IR with a return designation"], "bust_adj": 0.25, "camp_status": "injured: IR, return designation", "flag": "IR"},
-  "Alec Pierce": {"risk_factors": ["On reserve/PUP, out at least four games"], "bust_adj": 0.30, "camp_status": "injured: PUP, minimum 4 games", "flag": "PUP"},
-  "Ricky Pearsall": {"risk_factors": ["Out for the season after PCL surgery"], "bust_adj": 0.60, "camp_status": "injured: out for season", "flag": "Out"},
-  "CeeDee Lamb": {"boom_factors": ["In camp, no holdout; contract restructured in March"], "boom_adj": 0.03},
-
-  "George Kittle": {"risk_factors": ["January Achilles tear; conflicting reports on whether he plays early in the season"], "risk_adj": 0.20, "bust_adj": 0.10, "camp_status": "questionable: Achilles return, conflicting reports"},
-  "Tucker Kraft": {"boom_factors": ["Off PUP and full-go; Watson on PUP and Jacobs out free up targets"], "boom_adj": 0.08},
-  "Kenyon Sadiq": {"risk_factors": ["Rookie; role vs incumbent TE not confirmed"], "risk_adj": 0.06},
-  "Eli Stowers": {"boom_factors": ["Big-slot TE with A.J. Brown's targets vacated"], "boom_adj": 0.04},
-  "Trey McBride": {"risk_factors": ["Jacoby Brissett at QB is a downgrade"], "boom_factors": ["Mike LaFleur scheme features the TE"], "note": "TE1 by ADP around pick 29."},
-  "Brock Bowers": {"boom_factors": ["Kubiak's heavy personnel keeps TEs on the field; Cousins at QB"], "boom_adj": 0.04}
+ "_readme": "Hand-curated 2026 context nudges from research/context.md. *_adj values are added to the 0-1 score before scaling to 100 (0.10 = +10 points). Factors are appended to the player's why-lists. Sources are cited in research/context.md.",
+ "Patrick Mahomes": {
+  "risk_factors": [
+   "Returning from Dec 2025 ACL/LCL tear with no preseason snaps",
+   "New OC Eric Bieniemy"
+  ],
+  "boom_factors": [
+   "Kenneth Walker signing gives KC a real run game and play-action"
+  ],
+  "risk_adj": 0.1,
+  "camp_status": "questionable: ACL return, on track for Week 1",
+  "note": "Cleared in July, practicing fully, no preseason reps. Track for MNF Week 1."
+ },
+ "Kirk Cousins": {
+  "risk_factors": [
+   "Short leash with No. 1 pick Fernando Mendoza behind him",
+   "Kubiak scheme leans on heavy personnel and the run"
+  ],
+  "bust_adj": 0.12,
+  "note": "Named Raiders Week 1 starter over Mendoza."
+ },
+ "Fernando Mendoza": {
+  "risk_factors": [
+   "Named Week 1 backup to Kirk Cousins"
+  ],
+  "bust_adj": 0.25,
+  "flag": "Backup",
+  "note": "No. 1 overall pick but opens as the backup. Redraft stash only."
+ },
+ "Kyler Murray": {
+  "boom_factors": [
+   "Named Vikings starter over J.J. McCarthy with Jefferson and Addison to throw to"
+  ],
+  "risk_factors": [
+   "Injury history; new team"
+  ],
+  "boom_adj": 0.1,
+  "risk_adj": 0.05,
+  "note": "Signed with Minnesota and named the starter. Early rankings have him around QB16."
+ },
+ "Malik Willis": {
+  "boom_factors": [
+   "First-year starter with a rushing floor in Bobby Slowik's wide-zone scheme"
+  ],
+  "risk_factors": [
+   "Unproven passing volume"
+  ],
+  "boom_adj": 0.08,
+  "bust_adj": 0.08
+ },
+ "Tua Tagovailoa": {
+  "risk_factors": [
+   "Falcons QB competition with Michael Penix Jr. described as unsettled"
+  ],
+  "bust_adj": 0.1,
+  "risk_adj": 0.1
+ },
+ "Michael Penix Jr.": {
+  "risk_factors": [
+   "QB job in Atlanta unsettled vs Tua Tagovailoa"
+  ],
+  "risk_adj": 0.12
+ },
+ "J.J. McCarthy": {
+  "risk_factors": [
+   "Demoted behind Kyler Murray, possibly QB3"
+  ],
+  "bust_adj": 0.3,
+  "flag": "Backup"
+ },
+ "Geno Smith": {
+  "risk_factors": [
+   "New team (Jets), new OC Frank Reich"
+  ],
+  "note": "Expected to feed Garrett Wilson heavily."
+ },
+ "Aaron Rodgers": {
+  "boom_factors": [
+   "Mike McCarthy reunion; Pittman and Germie Bernard added"
+  ],
+  "risk_factors": [
+   "Age 42"
+  ],
+  "boom_adj": 0.04
+ },
+ "Deshaun Watson": {
+  "risk_factors": [
+   "Named starter but form and leash are questions under Todd Monken"
+  ],
+  "risk_adj": 0.1
+ },
+ "Drake Maye": {
+  "boom_factors": [
+   "Gains A.J. Brown; led the NFL in completion % and yards per attempt in 2025"
+  ],
+  "boom_adj": 0.1
+ },
+ "Jalen Hurts": {
+  "risk_factors": [
+   "Loses A.J. Brown; rookie Makai Lemon steps into WR2"
+  ],
+  "boom_factors": [
+   "Rushing and goal-line floor intact"
+  ],
+  "bust_adj": 0.06
+ },
+ "Matthew Stafford": {
+  "risk_factors": [
+   "Age 38 with a back history; Ty Simpson drafted behind him"
+  ],
+  "risk_adj": 0.12
+ },
+ "Cam Ward": {
+  "boom_factors": [
+   "Brian Daboll takes over the offense; Carnell Tate and Wan'Dale Robinson added"
+  ],
+  "boom_adj": 0.08
+ },
+ "Jeremiyah Love": {
+  "boom_factors": [
+   "Lead back with a record rookie RB guarantee; James Conner on IR"
+  ],
+  "risk_factors": [
+   "Preseason ankle sprain, Week 1 uncertain",
+   "Tyler Allgeier split camp reps",
+   "Rookie"
+  ],
+  "boom_adj": 0.08,
+  "risk_adj": 0.12,
+  "camp_status": "questionable: high-ankle sprain; Garafolo says 50-50 for Week 1 (Sept 1-3)"
+ },
+ "Tyler Allgeier": {
+  "boom_factors": [
+   "Conner on IR; splitting early work with Love"
+  ],
+  "boom_adj": 0.08
+ },
+ "James Conner": {
+  "risk_factors": [
+   "On IR, out at least four games"
+  ],
+  "bust_adj": 0.3,
+  "camp_status": "injured: IR, minimum 4 games",
+  "flag": "IR"
+ },
+ "Jadarian Price": {
+  "boom_factors": [
+   "Expected to lead Seattle's backfield with Zach Charbonnet on IR"
+  ],
+  "risk_factors": [
+   "Held out of preseason; committee with Wilson and Holani unclear",
+   "Rookie"
+  ],
+  "boom_adj": 0.08,
+  "risk_adj": 0.12
+ },
+ "Zach Charbonnet": {
+  "risk_factors": [
+   "On IR, out at least four games"
+  ],
+  "bust_adj": 0.3,
+  "camp_status": "injured: IR, minimum 4 games",
+  "flag": "IR"
+ },
+ "Kenneth Walker III": {
+  "boom_factors": [
+   "Signed 3y/$43M with Kansas City; projected 15-18 carries plus goal-line work in Mahomes' offense"
+  ],
+  "boom_adj": 0.1
+ },
+ "Jahmyr Gibbs": {
+  "boom_factors": [
+   "Extension done; Montgomery traded and Pacheco on IR, so the workload grows"
+  ],
+  "boom_adj": 0.08
+ },
+ "Isiah Pacheco": {
+  "risk_factors": [
+   "On IR (MCL), out at least four games"
+  ],
+  "bust_adj": 0.3,
+  "camp_status": "injured: IR (MCL, then back), minimum 4 games",
+  "flag": "IR"
+ },
+ "David Montgomery": {
+  "risk_factors": [
+   "Traded to Houston; role vs incumbents unclear"
+  ],
+  "risk_adj": 0.08
+ },
+ "Ashton Jeanty": {
+  "boom_factors": [
+   "Klint Kubiak's heavy-personnel run scheme fits a bell-cow"
+  ],
+  "risk_factors": [
+   "Low-ankle sprain; Week 1 status unresolved"
+  ],
+  "boom_adj": 0.06,
+  "risk_adj": 0.06,
+  "camp_status": "questionable: low-ankle sprain; Kubiak said yes, optimistic for Week 1 (Sept 2)",
+  "note": "Called the biggest coin flip of the early rounds by FantasyPros; Kubiak says he is optimistic for Week 1."
+ },
+ "Josh Jacobs": {
+  "risk_factors": [
+   "On the commissioner's exempt list after an arrest; six-plus game suspension likely"
+  ],
+  "bust_adj": 0.35,
+  "camp_status": "suspended: exempt list",
+  "flag": "Exempt",
+  "note": "On the commissioner's exempt list since Aug 30; Packers traded for Kaleb Johnson and MarShawn Lloyd is the expected starter. Court date around Week 11; treat as a stash only."
+ },
+ "MarShawn Lloyd": {
+  "boom_factors": [
+   "Presumed lead back while Jacobs is out; biggest ADP riser of late August"
+  ],
+  "risk_factors": [
+   "Injury history",
+   "Kaleb Johnson and Chris Brooks behind him"
+  ],
+  "boom_adj": 0.1,
+  "risk_adj": 0.1
+ },
+ "Kaleb Johnson": {
+  "boom_factors": [
+   "Traded to Green Bay to fill in for Jacobs"
+  ],
+  "boom_adj": 0.05
+ },
+ "Cam Skattebo": {
+  "risk_factors": [
+   "Listed as co-starter with Tyrone Tracy; returning from a serious leg injury",
+   "New coaching staff under John Harbaugh"
+  ],
+  "bust_adj": 0.08,
+  "camp_status": "healthy: on track for Week 1 after the leg injury"
+ },
+ "Tyrone Tracy Jr.": {
+  "boom_factors": [
+   "Co-starter with the pass-game role in New York"
+  ],
+  "boom_adj": 0.06
+ },
+ "Rico Dowdle": {
+  "boom_factors": [
+   "Cleaner path in Pittsburgh after the Kaleb Johnson trade; even preseason snaps with Warren"
+  ],
+  "boom_adj": 0.06
+ },
+ "Jaylen Warren": {
+  "risk_factors": [
+   "True committee with Rico Dowdle"
+  ],
+  "risk_adj": 0.08
+ },
+ "Kyren Williams": {
+  "risk_factors": [
+   "Alternating drives with Blake Corum"
+  ],
+  "bust_adj": 0.1
+ },
+ "Blake Corum": {
+  "boom_factors": [
+   "Alternating drives with Kyren Williams"
+  ],
+  "boom_adj": 0.08
+ },
+ "Rhamondre Stevenson": {
+  "boom_factors": [
+   "Favored over TreVeyon Henderson after better 2025 efficiency"
+  ],
+  "boom_adj": 0.05
+ },
+ "TreVeyon Henderson": {
+  "risk_factors": [
+   "Falling ADP; backup role behind Stevenson"
+  ],
+  "bust_adj": 0.1
+ },
+ "Breece Hall": {
+  "risk_factors": [
+   "August groin strain, expected back for Week 1"
+  ],
+  "risk_adj": 0.04
+ },
+ "Bijan Robinson": {
+  "boom_factors": [
+   "Extension done; Kevin Stefanski's run-leaning, wide-zone scheme"
+  ],
+  "risk_factors": [
+   "Falcons QB situation unsettled"
+  ],
+  "boom_adj": 0.06,
+  "clear_uncertain": true,
+  "note": "Hold-in ended with a $75M extension in early August; has never missed a game. Falcons QB competition (Tua vs Penix) is the only open question.",
+  "risk_adj": -0.03
+ },
+ "Nicholas Singleton": {
+  "risk_factors": [
+   "Third on the Titans depth chart"
+  ],
+  "bust_adj": 0.15
+ },
+ "Kaelon Black": {
+  "boom_factors": [
+   "Shanahan rated him the No. 2 RB in the class"
+  ],
+  "note": "Stash only."
+ },
+ "A.J. Brown": {
+  "boom_factors": [
+   "Traded to New England; projected ~25% target share with Drake Maye"
+  ],
+  "boom_adj": 0.1
+ },
+ "Romeo Doubs": {
+  "risk_factors": [
+   "A.J. Brown's arrival cuts his targets"
+  ],
+  "bust_adj": 0.12
+ },
+ "DeVonta Smith": {
+  "boom_factors": [
+   "Alpha in Philadelphia after the A.J. Brown trade"
+  ],
+  "boom_adj": 0.1
+ },
+ "Makai Lemon": {
+  "boom_factors": [
+   "Likely WR2 in Philadelphia with A.J. Brown gone"
+  ],
+  "risk_factors": [
+   "Rookie"
+  ],
+  "boom_adj": 0.06,
+  "risk_adj": 0.06
+ },
+ "Mike Evans": {
+  "boom_factors": [
+   "Target concentration in San Francisco with Aiyuk on PUP, Pearsall out, Kittle uncertain",
+   "Pearsall out for the season and Kittle uncertain concentrate early targets"
+  ],
+  "risk_factors": [
+   "Age 33, new team",
+   "Deebo Samuel signed by the 49ers late August"
+  ],
+  "boom_adj": 0.08
+ },
+ "De'Zhaun Stribling": {
+  "boom_factors": [
+   "Preseason standout in a thin 49ers receiver room"
+  ],
+  "risk_factors": [
+   "Rookie"
+  ],
+  "boom_adj": 0.1
+ },
+ "Brandon Aiyuk": {
+  "risk_factors": [
+   "On reserve/PUP, out at least four games"
+  ],
+  "bust_adj": 0.3,
+  "camp_status": "injured: PUP, minimum 4 games",
+  "flag": "PUP"
+ },
+ "Michael Pittman Jr.": {
+  "boom_factors": [
+   "Traded to Pittsburgh and extended; volume with Rodgers"
+  ],
+  "boom_adj": 0.08
+ },
+ "Carnell Tate": {
+  "boom_factors": [
+   "No. 4 overall pick; rookie WR1 under Daboll with Cam Ward"
+  ],
+  "risk_factors": [
+   "Rookie"
+  ],
+  "boom_adj": 0.08,
+  "risk_adj": 0.06
+ },
+ "Wan'Dale Robinson": {
+  "boom_factors": [
+   "Reunites with Brian Daboll; PPR slot volume"
+  ],
+  "boom_adj": 0.04
+ },
+ "Jordyn Tyson": {
+  "risk_factors": [
+   "On IR to start the season, out at least four games"
+  ],
+  "bust_adj": 0.3,
+  "camp_status": "injured: IR, minimum 4 games",
+  "flag": "IR"
+ },
+ "Puka Nacua": {
+  "risk_factors": [
+   "Possible league discipline still unresolved from an offseason incident"
+  ],
+  "boom_factors": [
+   "Psoas issue resolved; expected for the Week 1 opener"
+  ],
+  "risk_adj": 0.1,
+  "note": "Rams open Thursday Sept 10 in Melbourne, so his status will be known before a weekend draft. Take him at 4 only if he is cleared and not suspended.",
+  "camp_status": "questionable: psoas since mid-August, back at practice Aug 30, McVay says good progress (Sept 4); Week 1 suspension not ruled out (Schefter)",
+  "flag": "Watch"
+ },
+ "Rashod Bateman": {
+  "risk_factors": [
+   "Arrest in Georgia; suspension possible"
+  ],
+  "risk_adj": 0.12
+ },
+ "Zay Flowers": {
+  "risk_factors": [
+   "Being monitored for Week 1, no designation; new OC Declan Doyle"
+  ],
+  "risk_adj": 0.06
+ },
+ "Garrett Wilson": {
+  "boom_factors": [
+   "Geno Smith and Frank Reich expected to funnel targets to him"
+  ],
+  "boom_adj": 0.08
+ },
+ "Justin Jefferson": {
+  "boom_factors": [
+   "Kyler Murray is a clear upgrade at QB over J.J. McCarthy"
+  ],
+  "boom_adj": 0.06
+ },
+ "Jordan Addison": {
+  "boom_factors": [
+   "Kyler Murray is a clear upgrade at QB"
+  ],
+  "boom_adj": 0.06
+ },
+ "Drake London": {
+  "risk_factors": [
+   "Falcons QB carousel (Tua vs Penix)"
+  ],
+  "risk_adj": 0.04,
+  "camp_status": "minor: small injury, team cautious; QB competition unsettled"
+ },
+ "Brian Thomas Jr.": {
+  "risk_factors": [
+   "Three-way WR1 battle with Jakobi Meyers and Parker Washington"
+  ],
+  "bust_adj": 0.06,
+  "risk_adj": 0.06
+ },
+ "KC Concepcion": {
+  "boom_factors": [
+   "Starting slot receiver in Todd Monken's pass-friendly offense"
+  ],
+  "risk_factors": [
+   "Rookie"
+  ],
+  "boom_adj": 0.08
+ },
+ "Cedric Tillman": {
+  "risk_factors": [
+   "Perimeter battle with rookie Denzel Boston"
+  ],
+  "risk_adj": 0.08
+ },
+ "Christian Watson": {
+  "risk_factors": [
+   "On reserve/PUP (ACL), out at least four games"
+  ],
+  "bust_adj": 0.0,
+  "camp_status": "healthy: on the initial 53, active on the Week 1 roster",
+  "flag": null,
+  "risk_adj": 0.05,
+  "note": "August reports had him starting on PUP; the Week 1 roster and cutdown coverage say healthy and active. Verify Thursday."
+ },
+ "Jayden Higgins": {
+  "risk_factors": [
+   "Torn ACL, out for the season"
+  ],
+  "bust_adj": 0.6,
+  "camp_status": "injured: out for season",
+  "flag": "Out"
+ },
+ "Tank Dell": {
+  "risk_factors": [
+   "On IR with a return designation"
+  ],
+  "bust_adj": 0.25,
+  "camp_status": "injured: IR, return designation",
+  "flag": "IR"
+ },
+ "Alec Pierce": {
+  "risk_factors": [
+   "On reserve/PUP, out at least four games"
+  ],
+  "bust_adj": 0.3,
+  "camp_status": "injured: PUP, minimum 4 games",
+  "flag": "PUP"
+ },
+ "Ricky Pearsall": {
+  "risk_factors": [
+   "Out for the season after PCL surgery"
+  ],
+  "bust_adj": 0.6,
+  "camp_status": "injured: out for season",
+  "flag": "Out"
+ },
+ "CeeDee Lamb": {
+  "boom_factors": [
+   "In camp, no holdout; contract restructured in March"
+  ],
+  "boom_adj": 0.03
+ },
+ "George Kittle": {
+  "risk_factors": [
+   "January Achilles tear; conflicting reports on whether he plays early in the season"
+  ],
+  "risk_adj": 0.15,
+  "bust_adj": 0.05,
+  "camp_status": "questionable: Achilles; legitimate chance for the Thursday opener, decision in the next couple of days (Sept 1-3)"
+ },
+ "Tucker Kraft": {
+  "boom_factors": [
+   "Off PUP and full-go; Watson on PUP and Jacobs out free up targets"
+  ],
+  "boom_adj": 0.04,
+  "camp_status": "healthy: will play Week 1 on a likely snap count",
+  "risk_factors": [
+   "Snap count likely in the first weeks back from the ACL"
+  ]
+ },
+ "Kenyon Sadiq": {
+  "risk_factors": [
+   "Rookie; role vs incumbent TE not confirmed"
+  ],
+  "risk_adj": 0.06
+ },
+ "Eli Stowers": {
+  "boom_factors": [
+   "Big-slot TE with A.J. Brown's targets vacated"
+  ],
+  "boom_adj": 0.04
+ },
+ "Trey McBride": {
+  "risk_factors": [
+   "Jacoby Brissett at QB is a downgrade"
+  ],
+  "boom_factors": [
+   "Mike LaFleur scheme features the TE"
+  ],
+  "note": "TE1 by ADP around pick 29."
+ },
+ "Brock Bowers": {
+  "boom_factors": [
+   "Kubiak's heavy personnel keeps TEs on the field; Cousins at QB"
+  ],
+  "boom_adj": 0.04
+ },
+ "Ja'Marr Chase": {
+  "camp_status": "minor: hyperextended knee Sept 1-2, limited practice; Zac Taylor not concerned for Sept 13",
+  "risk_adj": 0.03
+ },
+ "Malik Nabers": {
+  "camp_status": "questionable: non-committal on Week 1, Harbaugh says reasonable to assume he plays; ACL Oct 2025",
+  "risk_adj": 0.08
+ },
+ "Patrick Mahomes II": {
+  "camp_status": "healthy: on track for Week 1, full participant since July",
+  "risk_adj": 0.04
+ },
+ "Rashee Rice": {
+  "camp_status": "healthy: full practices; no additional suspension expected",
+  "risk_adj": -0.03
+ },
+ "Dillon Gabriel": {
+  "camp_status": "injured: IR (back)",
+  "bust_adj": 0.3,
+  "flag": "IR"
+ },
+ "Jonathan Taylor": {
+  "boom_factors": [
+   "2025 top-6 RB week rate 37%, second only to McCaffrey and Bijan among backs"
+  ],
+  "note": "Boom here means upside beyond his draft price; his week-to-week ceiling last season was among the best at the position."
+ }
 }

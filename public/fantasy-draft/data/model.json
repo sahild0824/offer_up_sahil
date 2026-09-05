@@ -4,10 +4,10 @@
     {
       "title": "Composite rank",
       "paras": [
-        "Nineteen outlets contribute an overall PPR rank. Where an outlet published more than one list (three ESPN boards, two RotoWire, two Yahoo analysts) those are averaged first so no publisher counts twice. The FantasyPros Expert Consensus counts double because it already aggregates 100-plus experts. Platform default orders (Sleeper), value-model boards and July snapshots count half.",
+        "Nineteen outlets contribute an overall PPR rank. Where an outlet published more than one list (three ESPN boards, two RotoWire, two Yahoo analysts) those are averaged first so no publisher counts twice. The FantasyPros Expert Consensus counts once: the 2016-25 backtest found it no more predictive than ADP, and many of the other outlets feed it, so double weight would only amplify herding. Platform default orders (Sleeper), value-model boards and July snapshots count half.",
         "Best and worst are the most bullish and most bearish placements across every outlet plus the FantasyPros best/worst expert. Spread is the weighted standard deviation of outlet ranks: the size of the argument about a player."
       ],
-      "formula": "composite = Σ(w_outlet · rank_outlet) / Σ w_outlet\nw = 2.0 FantasyPros ECR · 1.0 ESPN, Yahoo, RotoWire, RotoBaller, Draft Sharks, Flock, NBC\n    0.75 LineupExperts, FFToday, PrizePicks, Bleacher Report, ETR · 0.5 Sleeper, Subvertadown, BDGE, July lists"
+      "formula": "composite = Σ(w_outlet · rank_outlet) / Σ w_outlet\nw = 1.0 FantasyPros ECR, ESPN, Yahoo, RotoWire, RotoBaller, Draft Sharks, Flock, NBC\n    0.75 LineupExperts, FFToday, PrizePicks, Bleacher Report, ETR · 0.5 Sleeper, Subvertadown, BDGE, July lists"
     },
     {
       "title": "Tiers",
@@ -27,9 +27,10 @@
     {
       "title": "Boom (0-100)",
       "paras": [
-        "Boom is a within-position percentile, so 80 means more upside signal than 80 percent of players at his position. Inputs: the player's own 2024-25 boom-week rate (weeks at or above the weekly RB6 / WR6 / QB3 / TE3 score, from nflverse game logs, 2025 weighted 0.65), how far the most bullish source sits above the composite (FantasyPros' upside disagreement), the ffanalytics ceiling-to-projection ratio, breakout and sleeper citations across 2026 articles (saturating so ten mentions beat three), situational boom factors from the context research, youth relative to the positional age curve, and positive ADP value."
+        "Boom is a within-position percentile, so 80 means more upside signal than 80 percent of players at his position. Inputs: the player's own 2024-25 boom-week rate (weeks at or above the weekly RB6 / WR6 / QB3 / TE3 score, from nflverse game logs, 2025 weighted 0.65), how far the most bullish source sits above the composite (FantasyPros' upside disagreement), the ffanalytics ceiling-to-projection ratio, breakout and sleeper citations across 2026 articles (saturating so ten mentions beat three), situational boom factors from the context research, youth relative to the positional age curve, and positive ADP value.",
+        "Read boom as upside beyond his price. A consensus top-5 pick rarely scores high because the market already pays for his ceiling; his own 2025 top-6 week rate is printed on his sheet for the absolute view."
       ],
-      "formula": "raw = .20·pct(upside) + .10·pct(ceiling gap) + .20·pct(2024-25 boom-week rate) + .20·sat(boom mentions)\n      + .10·sat(boom factors) + .10·youth + .10·clamp(value/10) + .12·situation⁺ + context adjustment\nboom = percentile of raw within position        sat(n) = 1 − e^(−n/3)"
+      "formula": "raw = .15·pct(upside) + .10·pct(ceiling gap) + .20·pct(2024-25 boom-week rate) + .15·sat(boom mentions)\n      + .10·sat(boom factors) + .10·youth + .20·clamp(value/10) + .12·situation⁺ + context adjustment\nboom = percentile of raw within position        sat(n) = 1 − e^(−n/3)"
     },
     {
       "title": "Bust (0-100)",
@@ -41,7 +42,8 @@
     {
       "title": "Risk / volatility (0-100)",
       "paras": [
-        "Risk is symmetric uncertainty, following Isaac Petersen's ffanalytics measure: spread of expert ranks, spread of ADP across platforms and drafts, the ffanalytics projection uncertainty, plus the player's own 2025 week-to-week variation (coefficient of variation from game logs), an injury signal that blends a calibrated missed-time probability (lhallee model, AUC 0.75, counted double), games missed in 2024-25 from nflverse and a 2024-25 injury log by body part, camp status from the Week 1 roster codes and ESPN's live status, and situation changes including an unresolved 2026 role. High risk with high boom and low bust is a target; high risk with high bust is a fade."
+        "Risk is symmetric uncertainty, following Isaac Petersen's ffanalytics measure: spread of expert ranks, spread of ADP across platforms and drafts, the ffanalytics projection uncertainty, plus the player's own 2025 week-to-week variation (coefficient of variation from game logs), an injury signal that blends a calibrated missed-time probability (lhallee model, AUC 0.75, counted double), games missed in 2024-25 from nflverse and a 2024-25 injury log by body part, camp status from the Week 1 roster codes and ESPN's live status, and situation changes including an unresolved 2026 role. High risk with high boom and low bust is a target; high risk with high bust is a fade.",
+        "The calibrated injury model was frozen on August 9, so a hand status layer dated September 5 (practice reports, PUP / IR / exempt designations, the Nacua review, Chase's knee, Kittle's Achilles) overrides it for Week 1 to 4 risk. Anything after September 5 is not in the model."
       ],
       "formula": "raw = .20·pct(rank spread) + .10·pct(ADP spread) + .10·uncertainty + .15·pct(2025 weekly CV) + .20·injury\n      + .10·camp + .15·sat(situation changes, 2) + .10·unresolved + context adjustment\nrisk = percentile of raw within position"
     },
@@ -335,7 +337,8 @@
     "Not obtained at all: PFF rankings, NFL.com (Fabiano / Grant), ESPN individual analysts (Clay, Karabell, Yates), current CBS (Eisenberg / Richard), The Athletic, FTN / numberFire, Fantasy Points, Footballguys.",
     "Reddit threads could not be read. Community sentiment is secondhand (Fantasy Squawk's roundup) and from ADP-versus-expert gaps.",
     "Draft Sharks injury percentages exist only for McCaffrey (78%); everyone else uses games missed in 2024-25 from nflverse plus reported labels.",
-    "Weekly boom/bust rates now come from nflverse game logs; they still cannot capture 2026 role changes for players who moved."
+    "Weekly boom/bust rates now come from nflverse game logs; they still cannot capture 2026 role changes for players who moved.",
+    "Fantasy Football Calculator's 10-team PPR ADP is blocked; ESPN's ADP (from leagues that default to 10 teams) is the closest proxy and is what this league's room uses, so it carries triple weight and drives the ESPN-room availability mode."
   ],
   "adpNames": {
     "sleeper_ppr": "Sleeper",

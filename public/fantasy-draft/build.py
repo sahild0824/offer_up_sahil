@@ -67,7 +67,7 @@ OUTLETS = {
     "cbs_aug3": ["cbs_aug3"],
 }
 OUTLET_WEIGHT = {
-    "fantasypros_ecr": 2.0,   # already a consensus of 100+ experts
+    "fantasypros_ecr": 1.0,   # was 2.0; the backtest found ECR no more predictive than ADP and many outlets feed it (herding)
     "sleeper_rank": 0.5,      # platform default order, largely ADP-driven
     "subvertadown": 0.5,      # value-model board, not an analyst list
     "bdge": 0.5,              # top-50 only
@@ -92,7 +92,7 @@ ADP_PLATFORMS = ["ffc_sep4", "espn_live", "sleeper_live", "fantasypros_live", "y
 # predictors, ADP-vs-ECR value helps boom for receivers, prior-year weekly volatility does not predict busts,
 # and prior-year boom/bust-week rates are weak.
 W = {
-    "boom": {"upside": 0.15, "ceiling": 0.10, "hist_boom": 0.15, "mentions": 0.20, "factors": 0.10, "youth": 0.10, "value": 0.20},
+    "boom": {"upside": 0.15, "ceiling": 0.10, "hist_boom": 0.20, "mentions": 0.15, "factors": 0.10, "youth": 0.10, "value": 0.20},
     "bust": {"downside": 0.15, "floor": 0.10, "hist_bust": 0.10, "mentions": 0.20, "factors": 0.15, "age": 0.15, "reach": 0.0, "injury": 0.15},
     "risk": {"spread": 0.30, "adp_spread": 0.10, "uncertainty": 0.10, "consistency": 0.05, "injury": 0.20, "camp": 0.10, "situation": 0.15},
 }
@@ -470,6 +470,8 @@ def main():
         sit_raw, sit_parts, sit_why, env_block, chg_block, sos_block, sit_uncertain = situation.compute(
             pos, team_code, team_env.get(team_code), opp_row, sos.get(team_code), tctx, league_env,
             arrival=bool(nv.get("moved")), rookie=bool(nv.get("rookie")), draft_no=nv.get("draft_number"), years_exp=nv.get("years_exp"))
+        if ad.get("clear_uncertain"):
+            sit_uncertain = False
         if sit_uncertain:
             risk_factors.append("2026 role unresolved: " + (opp_row.get("note") or "competition or scheme still unsettled"))
             sit = [f for f in risk_factors if any(w in f.lower() for w in SITUATION_WORDS)]
@@ -575,7 +577,7 @@ def main():
         pr = percentile_within([p for p in players if p["pos"] == pos], lambda p: p["_raw"]["risk"], pos)
         for p in players:
             if p["pos"] == pos:
-                p["sit"] = round(max(1, min(99, 50 + 140 * p["_sig"]["sitRaw"])))   # linear, 50 = neutral; raw is capped at +-0.35
+                p["sit"] = round(max(1, min(99, 50 + 100 * p["_sig"]["sitRaw"])))   # linear, 50 = neutral; raw is capped at +-0.35 so the score spans 15-85
                 p["boom"] = round(pb(p["_raw"]["boom"]))
                 p["bust"] = round(pu(p["_raw"]["bust"]))
                 p["risk"] = round(pr(p["_raw"]["risk"]))
