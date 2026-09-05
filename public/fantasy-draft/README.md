@@ -39,7 +39,7 @@ Inputs live in `data/`:
 | `risk.json` | boom / bust / sleeper citations, injury labels, risk and boom factors for 122 players from ~70 articles (`research/risk_sources.md`) |
 | `adjustments.json` | hand-curated 2026 context nudges: trades, coaching changes, IR / PUP / exempt list, depth-chart battles (`research/context.md`) |
 | `raw/*.csv` | ESPN and CBS stat-line projections (converted to PPR points) and the ffanalytics export (floor, ceiling, uncertainty, age) |
-| `strategy.json` | the Plan tab content (`research/strategy.md` is the long form with links) |
+| `strategy.json` | the Plan tab content, including the per-round forum / expert debate blocks (`research/strategy.md` is the long form with links; `research/round_debates.md` summarises the Sept 5 round-by-round sweep and `research/rounds_*.md` are the raw reports) |
 | `model.json` | Model tab text, source list, unreachable-sources list |
 | `byes.json` | 2026 bye weeks |
 | `nflverse_features.json` | per-player 2024-25 boom/bust-week rates, usage shares, consistency, games missed, ages, Week 1 roster status; per-team vacated targets and carries; 2025 points allowed by defense (built by `nflverse_features.py`) |

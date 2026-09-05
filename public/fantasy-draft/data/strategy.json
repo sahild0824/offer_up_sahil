@@ -3,7 +3,7 @@
  "summary": "Every 2026 source agrees on the shape of pick 4: at least one of Gibbs and Bijan is gone, Chase is usually gone, and Puka Nacua is the modal pick. In a 10-team full-PPR room only 20 RBs and 20 WRs start, so the waiver wire is deep and your edge comes from nailing the first two picks and concentrating upside on the bench, not from safe mid-round veterans.",
  "approach": "Anchor WR + Hero RB, flexible. Take the best of Gibbs / Bijan / Chase / Nacua at 4. At 17 take a bell-cow RB from the Achane, Chase Brown, Cook, Kenneth Walker, Hampton, Henry group if one is there; if that whole tier is gone, do not reach: pivot to Bowers / McBride or London / Collins and take RBs at 24 and 37. Then hammer WR in rounds 3-6, take one TE from the Loveland / Warren tier or a round 7-8 TE, and draft QB in the Daniels / Maye / Burrow window at 57-64 only if one falls, otherwise wait for Stafford / Kyler / Baker at 97-124. Draft Sharks' 10-team optimizer prefers full Zero RB from this slot (Nacua, London, Collins, Flowers), while PFF and Fantasy Life say RB is the hardest position to wait on in 2026, so anchoring one back is the compromise most sources land on.",
  "pick4": {
-  "text": "Decision rule at 4: Gibbs, then Bijan, then Chase, then Nacua, then Smith-Njigba, with Jonathan Taylor as the RB alternative. Do not take McCaffrey here in full PPR: Yahoo calls him the worst round-1 pick of 2026 (age 30, 400-plus touches, degraded 49ers weapons). Nacua is conditional: the Rams open Thursday, September 10, so before a weekend draft you will know whether his psoas injury cleared and whether the league acted on his review. If he is cleared and playing, take him. If he is out or suspended, take Chase, Bijan or Gibbs if one fell, otherwise Smith-Njigba, with Taylor as the back-first option.",
+  "text": "Decision rule at 4: Gibbs, then Bijan, then Chase, then Nacua, then Smith-Njigba, with Jonathan Taylor as the RB alternative. Do not take McCaffrey here in full PPR: Yahoo calls him the worst round-1 pick of 2026 (age 30, 400-plus touches, degraded 49ers weapons). Nacua is conditional: the Rams open Thursday, September 10, so before a weekend draft you will know whether his psoas injury cleared and whether the league acted on his review. If he is cleared and playing, take him. If he is out or suspended, take Chase, Bijan or Gibbs if one fell, otherwise Smith-Njigba, with Taylor as the back-first option. Research update (Sept 5): Establish The Run calls Gibbs, Bijan, Chase and Nacua \"the first four picks that should not be deviated from\", so at 4 you take whoever is left. Nacua returned to practice Aug 30 but was side-working Aug 31 and the NFL review has no Week 1 deadline, so keep the gate. Amon-Ra St. Brown is the third WR fallback behind Smith-Njigba.",
   "order": [
    {
     "player": "Jahmyr Gibbs",
@@ -24,6 +24,10 @@
    {
     "player": "Jaxon Smith-Njigba",
     "why": "The safe WR alternative if the NFL-review risk on Nacua spooks you."
+   },
+   {
+    "player": "Amon-Ra St. Brown",
+    "why": "The name 4for4 and the Footballguys picks 4-6 thread add at this slot: \"one of the safest picks in fantasy football\", a perennial top-five finisher. Third WR fallback if Nacua is out."
    }
   ]
  },
@@ -38,65 +42,290 @@
     "Bijan Robinson",
     "Jahmyr Gibbs"
    ],
-   "fallback": "Jaxon Smith-Njigba, or Jonathan Taylor as the back-first alternative if Nacua is out. Never McCaffrey in full PPR."
+   "fallback": "Jaxon Smith-Njigba, or Jonathan Taylor as the back-first alternative if Nacua is out. Never McCaffrey in full PPR.",
+   "debate": {
+    "verdict": "plan holds",
+    "text": "Sept 5 read. The top tier is unanimous: Establish The Run calls Gibbs, Bijan, Chase and Nacua \"the first four picks that should not be deviated from\", and CBS, FTN and Yahoo lean Gibbs at 1.01 with Field Yates taking Bijan. At 4 you get whichever is left. 4for4, PFF's 10-team pick-4 guide and Fantasy Life all make Nacua the default 1.04 in PPR (129 catches, 107 yards a game, 29.4 PPR points in the three games Adams missed).\nWhy the Nacua gate is right: he returned to practice Aug 30, was working off to the side Aug 31, SI calls his status \"shaky\", and Deseret (Sept 1) confirms the NFL review has no Week 1 deadline even though he avoided the exempt list. Footballguys posters add Stafford's age, neck and back and a concussion history. Chase has the touchdown edge (\"much more TD upside than Nacua\") and only a \"little hyperextension\" of the knee; the Bengals expect him Sept 13.\nSmith-Njigba is the accepted fallback (FantasyPros No. 7); the only pushback is FTN's \"slight fade\" over losing coordinator Klint Kubiak. Nobody found puts McCaffrey at 4 in PPR: PFN wants him at 7-8, SI lists him among three early-round busts, 4for4 endorses him at 4 only in standard. Taylor sits at ADP 1.07 everywhere.\nName we were missing: Amon-Ra St. Brown. 4for4 and the Footballguys \"Picks 4-6\" thread list him with JSN and Lamb as legitimate options at 4-6, and PFN calls him \"one of the safest picks in fantasy football\". He is now the third WR fallback.",
+    "sources": [
+     {
+      "name": "ETR / Yahoo: the four picks not to deviate from",
+      "url": "https://sports.yahoo.com/articles/fantasy-football-draft-strategy-2026-132427751.html"
+     },
+     {
+      "name": "4for4: who to draft 4th",
+      "url": "https://www.4for4.com/2026/preseason/who-should-i-draft-4th-pick-fantasy-football"
+     },
+     {
+      "name": "PFF: 10-team pick 4 plan",
+      "url": "https://www.pff.com/news/fantasy-football-2026-perfect-draft-strategy-round-by-round-10-team-leagues-pick-4"
+     },
+     {
+      "name": "Fantasy Life: is Nacua the answer at 1.04",
+      "url": "https://www.fantasylife.com/articles/fantasy/draft-strategy-from-the-104-in-2026-fantasy-football-puka-nacua"
+     },
+     {
+      "name": "Deseret: Nacua Week 1 status and NFL review",
+      "url": "https://www.deseret.com/sports/2026/09/01/puka-nacua-week-one-status-los-angeles-rams/"
+     },
+     {
+      "name": "SI: Nacua back at practice, status shaky",
+      "url": "https://www.si.com/onsi/fantasy/news/puka-nacua-injury-update-fantasy-football-star-returns-to-practice-but-status-is-shaky"
+     },
+     {
+      "name": "Footballguys forum: picks 4-6 discussion",
+      "url": "https://forums.footballguys.com/threads/picks-4-6-discussion.821188/"
+     },
+     {
+      "name": "FOX19: Chase limited after knee hyperextension",
+      "url": "https://www.fox19.com/2026/09/01/jamarr-chase-will-be-limited-practice-after-injury/"
+     },
+     {
+      "name": "SI: McCaffrey headlines early-round busts",
+      "url": "https://www.si.com/onsi/fantasy/nfl/christian-mccaffrey-headlines-3-early-round-busts-for-2026-fantasy-football"
+     },
+     {
+      "name": "CBS: Gibbs vs Bijan at 1.01",
+      "url": "https://www.cbssports.com/fantasy/football/news/jahymr-gibbs-number-1-pick-fantasy-football-drafts-bijan-robinson/"
+     }
+    ]
+   }
   },
   {
    "pick": 17,
    "round": 2,
    "priority": "Bell-cow RB anchor",
    "targets": [
-    "De'Von Achane",
     "Chase Brown",
-    "James Cook",
-    "Kenneth Walker III",
     "Omarion Hampton",
+    "Kenneth Walker III",
+    "De'Von Achane",
+    "James Cook III",
+    "Saquon Barkley",
     "Derrick Henry"
    ],
-   "fallback": "Brock Bowers or Trey McBride (ADP 21-23), or Drake London / Nico Collins, then RBs at 24 and 37. Avoid Jeanty (ankle, biggest coin flip of round 2) and Love at this price."
+   "fallback": "Order changed by the research: Chase Brown is the most-endorsed name here, Hampton next, then Walker; Achane drops behind them on the Miami offense and Henry is last in full PPR (age 32, no receiving floor). Barkley added ahead of Henry. Pivots: Bowers or McBride, or Drake London / Nico Collins, then backs at 24 and 37. Avoid Jeanty until he practices.",
+   "debate": {
+    "verdict": "reordered: Brown, Hampton first; Henry last",
+    "text": "Chase Brown is the most-endorsed name at 17: CBS calls him \"a perfect second-round pick\", PFN says he \"belongs at the 1/2 turn\" after finishing RB5 over the last ten weeks, Fantasy Life, PFF's pick-4 guide and SI all list him, and he has no injuries. Four sources (CBS, ETR, PFF, SI) say the winning shape from pick 4 is a back in round 2. The simulation agrees: Brown and Hampton are the modal picks here.\nHampton is the rising alternative (Underdog No. 15, named the Week 1 starter over Najee Harris, ESPN gives him a top-five range under McDaniel) with two workload warnings: Yahoo's \"RB16 on RB16 usage\" and FTN's \"Chargers throw cold water on Hampton's workload\".\nAchane is the polarizing one. Yates has him RB5 and SI calls him \"the clear upside option\", but Yahoo's case against him is the offense: Tua and Hill cut, Waddle traded, Malik Willis starting, \"could have the worst offense in football\". He drops below Brown and Hampton in our order. Cook rarely reaches 17 (1-2 turn). Walker's Chiefs price is \"steamed up\" after the Super Bowl MVP run but PFF still names him a pick-4 target. Henry is last for full PPR: age 32, no receiving floor, and no back since 2000 has averaged 16 a game at 32 or older.\nJeanty avoid confirmed as of Sept 5: ankle sprain Aug 23, side work Sept 1, did not practice Sept 2. Yahoo: \"Everything points to Jeanty playing in Week 1, except practice.\" If he slides to 24 the calculus changes. Bowers pivot is defensible (CBS and Yahoo say as early as mid round 2, Yates has him 17th); McBride now carries a pass-rate downgrade after Arizona drafted Jeremiyah Love third overall. Added Saquon Barkley (ADP 14.6, ETR prefers him to Jefferson and Lamb) ahead of Henry.",
+    "sources": [
+     {
+      "name": "CBS: rounds 1-2 running backs win leagues",
+      "url": "https://www.cbssports.com/fantasy/football/news/drafting-the-rounds-1-2-running-backs-is-the-secret-recipe-to-winning-2026-fantasy-football-leagues/"
+     },
+     {
+      "name": "PFN: Chase Brown belongs at the 1/2 turn",
+      "url": "https://www.profootballnetwork.com/fantasy-football/chase-brown-fantasy-projection-2026/"
+     },
+     {
+      "name": "Fantasy Life: Chase Brown, the round-2 RB to target",
+      "url": "https://www.fantasylife.com/articles/fantasy/chase-brown-the-round-2-rb-to-target-in-fantasy-football-drafts"
+     },
+     {
+      "name": "SI: Achane vs Chase Brown",
+      "url": "https://www.si.com/onsi/fantasy/nfl/fantasy-football-adp-draft-debate-de-von-achane-vs-chase-brown"
+     },
+     {
+      "name": "Yahoo: the case against Achane",
+      "url": "https://sports.yahoo.com/articles/case-against-drafting-devon-achane-205833694.html"
+     },
+     {
+      "name": "FTN: Chargers cool Hampton's workload",
+      "url": "https://ftnfantasy.com/nfl/chargers-throw-cold-water-on-omarion-hamptons-workload"
+     },
+     {
+      "name": "ESPN: Hampton top-five range under McDaniel",
+      "url": "https://www.espn.com/fantasy/football/story/_/id/49155570/2026-fantasy-football-sleepers-breakouts-coaching-changes"
+     },
+     {
+      "name": "Yahoo: everything points to Jeanty playing, except practice",
+      "url": "https://sports.yahoo.com/articles/everything-points-ashton-jeanty-playing-130000026.html"
+     },
+     {
+      "name": "PFN: Henry age-32 risk",
+      "url": "https://www.profootballnetwork.com/fantasy-football/derrick-henry-fantasy-outlook-2026/"
+     },
+     {
+      "name": "CBS: Bowers as early as mid round 2",
+      "url": "https://www.cbssports.com/fantasy/football/news/2026-outlook-brock-bowers/"
+     },
+     {
+      "name": "Yahoo: Barkley an early-second-round target",
+      "url": "https://sports.yahoo.com/articles/saquon-barkley-fantasy-outlook-2026-120824939.html"
+     }
+    ]
+   }
   },
   {
    "pick": 24,
    "round": 3,
    "priority": "WR1 if you took a back at 17; RB if you pivoted",
    "targets": [
-    "Malik Nabers",
-    "A.J. Brown",
     "Drake London",
     "Nico Collins",
-    "Saquon Barkley",
+    "A.J. Brown",
+    "Chris Olave",
+    "George Pickens",
+    "Malik Nabers",
     "Breece Hall"
    ],
-   "fallback": "If two anchor backs were there at 17, take the second one here (RB-RB branch). Josh Allen only if both the RB and WR tiers are gone; in a 10-teamer, pass. Avoid Kyren Williams (Corum splits drives) and Etienne at round-3 cost."
+   "fallback": "Barkley is gone by here (ADP 12.7), so he is off this list; Olave is in as Karabell tier 2. If two anchor backs were there at 17, take the second one here (RB-RB branch). Nabers only as a ceiling bet: this is his market price, not a discount, and he would not commit to Week 1. Josh Allen only if both tiers are gone; in a 10-teamer, pass. Bowers here is a positional edge, not a value.",
+   "debate": {
+    "verdict": "Barkley dropped, Olave added, Nabers moved behind London and Collins",
+    "text": "London and Collins are Karabell's tier 1 and the two best outcomes if either slides; Collins' target tree just thinned with Jayden Higgins' torn ACL and Tank Dell out at least four games, and CBS says he is \"showing no rust\". London's risk is the quarterback: Tua struggled so badly in camp that Penix may start, and Karabell warns \"London might have difficulty with quarterback play this year\".\nNabers moves behind them. Pick 24 is his market price, not a discount (FootballNationUSA calls it a mid-round-3 ADP, USA TODAY has him 54th overall), the ACL needed a second procedure, and as of Sept 2-4 he would not commit to Week 1: \"there are still some things that you're going to have to check off the box.\" DraftKings Network calls him \"the biggest unknown in football\". Our own model agrees, scoring him bust 95 and risk 100.\nDropped: Saquon Barkley, whose ADP is 12.7 and who FTN names the worst pick of round 1; he will not reach 24. Added: Chris Olave, Karabell tier 2 alongside A.J. Brown and one of FTN's \"best pick of the round\" names, with a composite of 24 against a 26 ADP.\nWhere we disagree with the market: Pickens is the single most-cited regression call in this range (FantasySP, DraftKings Network), but our model has him at bust 21 with a composite of 23, so he stays on the list. A.J. Brown is a Patriot now and the reunion with Vrabel plus Maye's accuracy on deep throws is the bull case; PFN sees top-five upside if the touchdowns bounce back. Bowers at 24 is about ten picks ahead of the Fantasy Football Calculator and Underdog boards, so he is a positional-edge pick, not a value one.",
+    "sources": [
+     {
+      "name": "ESPN Karabell: WR tiers",
+      "url": "https://www.espn.com/fantasy/football/story/_/id/49649506/fantasy-football-rankings-wide-receivers-tiers-draft"
+     },
+     {
+      "name": "CBS: Giants' Nabers unwilling to commit to Week 1",
+      "url": "https://www.cbssports.com/fantasy/football/news/giants-malik-nabers-unwilling-to-commit-to-playing-week-1/"
+     },
+     {
+      "name": "USA TODAY: Nabers 54th overall",
+      "url": "https://www.marconews.com/story/sports/fantasy/football/2026/09/03/malik-nabers-fantasy-draft-outlook-injury-update-giants/91594377007/"
+     },
+     {
+      "name": "DK Network: biggest early-round busts",
+      "url": "https://dknetwork.draftkings.com/2026/08/26/who-are-the-biggest-early-round-fantasy-football-busts-for-2026/"
+     },
+     {
+      "name": "FTN: Barkley and the worst picks of every round",
+      "url": "https://ftnfantasy.com/nfl/barkley-tuten-and-the-worst-picks-in-every-round-of-2026-fantasy-drafts"
+     },
+     {
+      "name": "PFN: A.J. Brown outlook",
+      "url": "https://www.profootballnetwork.com/fantasy-football/aj-brown-fantasy-outlook-2026/"
+     },
+     {
+      "name": "Fantasy Life: Texans cheat sheet (Higgins ACL, Dell)",
+      "url": "https://www.fantasylife.com/articles/fantasy/houston-texans-fantasy-football-cheat-sheet-cj-stroud-nico-collins-and-more"
+     },
+     {
+      "name": "FantasySP: WR bust list (Pickens)",
+      "url": "https://www.fantasysp.com/news/nfl/3057243/6-fantasy-football-wide-receiver-bust"
+     },
+     {
+      "name": "Last Word: Falcons QB news and London",
+      "url": "https://lastwordonsports.com/nfl/2026/08/27/falcons-qb-news-great-drake-london-2026-fantasy-outlook/"
+     }
+    ]
+   }
   },
   {
    "pick": 37,
    "round": 4,
    "priority": "WR value pocket, or second RB",
    "targets": [
+    "Tee Higgins",
     "Zay Flowers",
     "Garrett Wilson",
-    "Brian Thomas Jr.",
-    "DK Metcalf",
-    "Emeka Egbuka",
     "Tetairoa McMillan",
-    "Colston Loveland"
+    "DeVonta Smith",
+    "Ladd McConkey",
+    "Colston Loveland",
+    "Quinshon Judkins"
    ],
-   "fallback": "Breece Hall (small reach), TreVeyon Henderson, RJ Harvey. Judkins only if you accept the fibula risk."
+   "fallback": "Metcalf, Brian Thomas Jr., TreVeyon Henderson and RJ Harvey come off this list: all four go three to six rounds later and our own composites agree. Egbuka only if the top names are gone and you can absorb the turf toe. Breece Hall if he slid.",
+   "debate": {
+    "verdict": "Metcalf, Brian Thomas Jr. and the RB reaches removed",
+    "text": "Higgins is the consensus value and the simulation's most frequent pick here: ADP 35, PFN ranks him WR14 against a WR19 ADP (\"one of the more undervalued receivers on the board\"), Eisenberg would take him in early round 3, and SI picks him over both Garrett Wilson and Egbuka. Flowers is the co-favorite specifically in full PPR: Heath Cummings' top draft target, and RotoWire calls the pair \"a genuine coin flip\" that \"leans toward Zay Flowers in PPR\" on a floor nearly 36 points clear.\nGarrett Wilson (Karabell WR10, a 30 percent target share on bad quarterback play, Geno Smith now) and McMillan (offensive rookie of the year, undisputed Carolina WR1, but a Bryce Young bet) are the fallbacks, with DeVonta Smith a value if he slides past 32.\nRemoved as three-to-six-round reaches, all confirmed by our own composites: DK Metcalf (ADP 74, career lows, Pittman added, two \"avoid\" pieces; our composite 76), Brian Thomas Jr. (Clay WR39, Yates WR43, CBS says start considering him in round 7; our composite 78), TreVeyon Henderson (ADP fell from the mid-40s to the late 80s, no practice since Aug 24; our composite 64) and RJ Harvey (ADP 97, passing-down role behind Dobbins; our composite 96). All four are now round 7-10 names.\nDowngraded: Egbuka, three-plus weeks without practice on turf toe with SI cutting him to WR26 for the season, so only if the top four are gone and you can absorb a slow start. Judkins is the one RB the market supports here, though CBS wants him \"preferably on the later side\" of rounds 4-6.",
+    "sources": [
+     {
+      "name": "PFN: Tee Higgins undervalued",
+      "url": "https://www.profootballnetwork.com/fantasy-football/tee-higgins-fantasy-outlook-2026/"
+     },
+     {
+      "name": "RotoWire: Flowers vs Higgins",
+      "url": "https://www.rotowire.com/football/article/who-should-i-draft-zay-flowers-vs-tee-higgins-fantasy-football-2026-130237"
+     },
+     {
+      "name": "CBS Cummings: draft targets",
+      "url": "https://www.cbssports.com/fantasy/football/news/heath-cummings-2026-fantasy-football-draft-targets/"
+     },
+     {
+      "name": "CBS: Brian Thomas Jr. outlook (round 7)",
+      "url": "https://www.cbssports.com/fantasy/football/news/2026-outlook-brian-thomas-jr/"
+     },
+     {
+      "name": "Yahoo/PFN: avoid DK Metcalf",
+      "url": "https://sports.yahoo.com/articles/updated-dk-metcalf-fantasy-outlook-114216567.html"
+     },
+     {
+      "name": "4for4: Steelers' offense limits Metcalf",
+      "url": "https://www.4for4.com/2026/preseason/steelers-offense-should-limit-dk-metcalf-fantasy-football-again"
+     },
+     {
+      "name": "NBC: Henderson ankle, not practicing",
+      "url": "https://www.nbcsports.com/fantasy/football/player-news/2026-09-03/reiss-treveyon-henderson-ankle-not-practicing"
+     },
+     {
+      "name": "SI: Higgins vs Egbuka",
+      "url": "https://www.si.com/onsi/fantasy/rankings/wide-receiver-debate-rankings-upside-mid-round-tee-higgins-emeka-egbuka"
+     },
+     {
+      "name": "FantasyPros: Garrett Wilson outlook",
+      "url": "https://www.fantasypros.com/nfl/notes/419148/garrett-wilson-2026-outlook.php"
+     }
+    ]
+   }
   },
   {
    "pick": 44,
    "round": 5,
    "priority": "Fill RB2 / WR3, or tier-2 TE",
    "targets": [
+    "Ladd McConkey",
     "Colston Loveland",
-    "Tyler Warren",
+    "DeVonta Smith",
     "Quinshon Judkins",
-    "David Montgomery",
-    "Emeka Egbuka",
-    "Travis Hunter",
-    "Rome Odunze"
+    "Tyler Warren",
+    "Rome Odunze",
+    "Luther Burden III"
    ],
-   "fallback": "Lamar Jackson (ADP 45) is fine here only if RB and WR are already set. Skattebo is overpriced at ADP."
+   "fallback": "Travis Hunter (ADP 69, more defensive snaps planned) and Lamar Jackson (ADP 56, and the case against him is the rushing collapse) come off this pick; Lamar only if he slides past 57. Montgomery if you need the back. Skattebo is the consensus avoid.",
+   "debate": {
+    "verdict": "McConkey and DeVonta Smith added; Hunter and Lamar moved off this pick",
+    "text": "Loveland at 44 is on the money: ADP 48, TE3, and SI gives him \"the upside to be the TE1 in 2026\" over Warren, whose price has slipped into round 6 with a minor groin. The caution is Chicago's target competition now that Odunze and Burden are the top two wideouts after the DJ Moore trade, plus the seventh-hardest tight-end schedule.\nMcConkey is the name three sources call a bargain here: 4for4 (\"Ladd McConkey is a fantasy football bargain\", WR20 at ADP 42), ESPN's Schefter sheet (ADP 50, could be McDaniel's focal point) and PFN on Keenan Allen leaving for the Colts; PFN's only pushback is that they do not see WR1 upside. DeVonta Smith (ADP 40, more targets without A.J. Brown) is the other value the experts list at this slot that we were missing.\nJudkins is fine but CBS wants him \"preferably on the later side\" of rounds 4-6 as he comes back from the fibula and ankle, and Yahoo calls him priced too high; SI prefers Bucky Irving's upside. Egbuka's turf toe leaves Week 1 \"up in the air\" (FantasyPros), which the IR slot can absorb if he falls. Odunze's Sept 3 practice exit was cramps.\nMoved off 44: Travis Hunter goes at ADP 69 and Jacksonville plans more defensive snaps for him; Lamar Jackson's ADP is 56 and FantasyPros' \"case against\" notes a career-worst 26.8 rushing yards a game, so only if he slides. Skattebo avoid is unanimous: SI's most overvalued player, a Rotoworld top fade, on PFF's avoid list.",
+    "sources": [
+     {
+      "name": "SI: Loveland vs Warren",
+      "url": "https://www.si.com/onsi/fantasy/news/fantasy-football-early-round-tight-end-debate-colston-loveland-vs-tyler-warren"
+     },
+     {
+      "name": "4for4: McConkey is a bargain",
+      "url": "https://www.4for4.com/2026/preseason/ladd-mcconkey-fantasy-football-bargain"
+     },
+     {
+      "name": "ESPN Schefter: sleepers and values cheat sheet",
+      "url": "https://www.espn.com/fantasy/football/story/_/id/49734267/2026-fantasy-football-sleepers-cheat-sheet-adam-schefter"
+     },
+     {
+      "name": "CBS: Judkins outlook",
+      "url": "https://www.cbssports.com/fantasy/football/news/2026-outlook-quinshon-judkins/"
+     },
+     {
+      "name": "FantasyPros: Egbuka toe up in the air for Week 1",
+      "url": "https://www.fantasypros.com/nfl/news/605324/emeka-egbuka-toe-remains-up-air-week-1.php"
+     },
+     {
+      "name": "SI: Hunter's role and ADP",
+      "url": "https://www.si.com/onsi/fantasy/rankings/debate-adp-wide-receiver-role-jaguars-travis-hunter-2026"
+     },
+     {
+      "name": "FantasyPros: the case against Lamar Jackson",
+      "url": "https://www.fantasypros.com/2026/08/fantasy-football-the-case-against-lamar-jackson-2026/"
+     },
+     {
+      "name": "SI: Skattebo, most overvalued",
+      "url": "https://www.si.com/onsi/fantasy/nfl/cam-skattebo-and-3-overvalued-fantasy-football-adp-players-may-look-to-avoid"
+     },
+     {
+      "name": "Rotoworld: top fades",
+      "url": "https://www.nbcsports.com/fantasy/football/news/fantasy-football-busts-2026-omarion-hampton-cam-skattebo-among-rotoworlds-top-fades"
+     }
+    ]
+   }
   },
   {
    "pick": 57,
@@ -106,11 +335,50 @@
     "Jayden Daniels",
     "Drake Maye",
     "Joe Burrow",
+    "Jalen Hurts",
+    "Luther Burden III",
     "MarShawn Lloyd",
-    "Bucky Irving",
-    "Chris Godwin"
+    "Bucky Irving"
    ],
-   "fallback": "If the QBs are gone, take the best RB with a path to volume (Lloyd is the Jacobs-exempt-list beneficiary) and get QB at 64 or 97."
+   "fallback": "Godwin comes off the list: his ADP is 128. If the quarterbacks are gone, take the back with a path to volume (Lloyd is the Jacobs-exempt-list beneficiary, with Kaleb Johnson as the hedge) and get the quarterback at 64 or 77.",
+   "debate": {
+    "verdict": "plan holds; Godwin dropped",
+    "text": "The QB tier is flat and cheap, which is the whole argument for waiting: SI says Maye, Daniels, Burrow and Hurts are \"separated by fewer than four projected fantasy points\" with ADPs from 58 to 70, and Draft Sharks, Yahoo's QB preview, FantasyPros' September how-to and CBS's Eisenberg all keep late QB in one-QB leagues. Snippet preference runs Maye (350.9 points, added A.J. Brown and Doubs) and Daniels (rushing edge, seven games in 2025) ahead of Hurts (new coordinator, lost Brown) and Burrow (ADP drifting into the 70s and 80s, health). Nobody argues that waiting past 64 leaves nothing: Williams, Herbert, Lawrence and Prescott sit in rounds 6-8 \"within three points\" of each other.\nBurden at 57 is supported: Ben Johnson said he would be \"buying stock\", WalterFootball tags him a value at 5.06, and slot receivers have always produced in Johnson's offense; the simulation takes him here most often. Lloyd is the post-Jacobs re-rank (\"bumped up 60 spots to top-65\" per Yahoo; Jacobs' over-under is about six games) with Kaleb Johnson as the handcuff. Irving is a split market: NBC and PFN say rebound, CBS's Cummings has him on the do-not-draft list.\nDropped: Chris Godwin. His ADP is 128 and Yahoo says his \"name is more valuable than his projection\", so 57 or 64 is a six-round overpay.",
+    "sources": [
+     {
+      "name": "SI: who goes as QB3",
+      "url": "https://www.si.com/onsi/fantasy/news/who-goes-as-qb-3-in-fantasy-football-jayden-daniels-joe-burrow-or-drake-maye"
+     },
+     {
+      "name": "FantasyPros: how to draft a QB (Sept)",
+      "url": "https://www.fantasypros.com/2026/09/how-to-draft-a-quarterback-expert-advice-2026-fantasy-football/"
+     },
+     {
+      "name": "Draft Sharks: QB draft preview",
+      "url": "https://www.draftsharks.com/article/fantasy-football-draft-preview-quarterbacks"
+     },
+     {
+      "name": "FTN: Daniels or Burrow",
+      "url": "https://ftnfantasy.com/nfl/should-you-draft-jayden-daniels-or-joe-burrow-in-2026-fantasy-football"
+     },
+     {
+      "name": "WalterFootball: 2026 values",
+      "url": "https://walterfootball.com/fantasy2026values.php"
+     },
+     {
+      "name": "Yahoo: Jacobs exempt-list fantasy impact",
+      "url": "https://sports.yahoo.com/fantasy/article/fantasy-football-impact-of-nfl-placing-packers-rb-josh-jacobs-on-commissioner-exempt-list-202836289.html"
+     },
+     {
+      "name": "CBS Cummings: do-not-draft list",
+      "url": "https://www.cbssports.com/fantasy/football/news/heath-cummings-2026-fantasy-football-do-not-draft-list-bucky-irving/"
+     },
+     {
+      "name": "Yahoo: Godwin outlook",
+      "url": "https://sports.yahoo.com/articles/chris-godwin-fantasy-outlook-2026-170741654.html"
+     }
+    ]
+   }
   },
   {
    "pick": 64,
@@ -119,12 +387,54 @@
    "targets": [
     "Jayden Daniels",
     "Jalen Hurts",
-    "Caleb Williams",
+    "Harold Fannin Jr.",
     "Tucker Kraft",
-    "Sam LaPorta",
-    "Harold Fannin Jr."
+    "Caleb Williams",
+    "Justin Herbert"
    ],
-   "fallback": "Chris Godwin, Josh Downs, Stefon Diggs if he is climbing."
+   "fallback": "Tight end order is Fannin, then Kraft, then LaPorta: Fannin is TE4 in two ranking sets, Kraft is cleared but had zero preseason snaps, LaPorta's ADP is 111. Henderson, Price, Diggs and Downs are all cheaper than this pick now — take them at 77.",
+   "debate": {
+    "verdict": "TEs reordered Fannin, Kraft, LaPorta; Henderson and Price pushed to 77",
+    "text": "Daniels and Hurts land exactly on ADP (64-66) here, and the tier-flatness argument says take whichever is last. Fantasy Life and Yahoo both list Hurts among priority and league-winning targets; PhillyVoice flags the new coordinator and the loss of A.J. Brown.\nAt tight end the consensus order is Fannin, then Kraft, then LaPorta. ESPN's Bowen has Fannin as \"the unquestioned No. 1 in Cleveland\" with four TE1 weeks in his last five, and two ranking sets put him TE4. Kraft was cleared for full contact Sept 1-2 and \"will play in Week 1\", but he had zero preseason snaps and Dave Richard asks whether he will be himself in September; Footballguys says he \"can help you more as the season progresses\". LaPorta's ADP is 111 with a summer hip scare, so he can wait a round.\nMoved later: Henderson's ADP tumbled into the late 80s after an ankle scare he has since cleared (PFN calls it \"a premier draft-day value\"), and Price slid toward pick 90 after being held out of the last two preseason games, so both are round-8 or round-9 picks, not 64. Downs took a hit from the Keenan Allen signing and a calf injury; Diggs (ADP 91) is a 77 pick.\nIf the top QB tier is gone: Caleb Williams (QB8 last year, \"continues to rise\"), Herbert (reworked mechanics under McDaniel) and Lawrence are CBS's round 6-7 names and SI says there is \"little reason to force the first name\" from that tier.",
+    "sources": [
+     {
+      "name": "ESPN Bowen: TE tiers",
+      "url": "https://www.espn.com/fantasy/football/story/_/id/49585178/2026-fantasy-football-rankings-tight-end-tiers-te"
+     },
+     {
+      "name": "PrizePicks: Kraft will play Week 1",
+      "url": "https://www.prizepicks.com/playbook-article/tucker-kraft-injury-update-will-packers-te-play-week-1-wednesday-september-2"
+     },
+     {
+      "name": "CBS Dave Richard: TE tiers",
+      "url": "https://www.cbssports.com/fantasy/football/news/tight-end-tiers-fantasy-football-rankings-te-dave-richard-august/"
+     },
+     {
+      "name": "SI: LaPorta hip",
+      "url": "https://www.si.com/onsi/fantasy/injuries/sam-laporta-injury-update-latest-on-lions-te-could-raise-fantasy-football-concerns"
+     },
+     {
+      "name": "PFN: Henderson, market overreaction",
+      "url": "https://www.profootballnetwork.com/fantasy-football/treveyon-henderson-fantasy-projection-2026/"
+     },
+     {
+      "name": "FantasyPros: 4 mid-round RBs (Price)",
+      "url": "https://www.fantasypros.com/2026/09/4-mid-round-rbs-to-draft-2026-fantasy-football/"
+     },
+     {
+      "name": "Fantasy Life: Hurts headlines priority targets",
+      "url": "https://www.fantasylife.com/articles/fantasy/quarterback-fantasy-football-draft-strategy-for-2026"
+     },
+     {
+      "name": "DK Network: Downs after the Keenan Allen signing",
+      "url": "https://dknetwork.draftkings.com/2026/09/03/should-you-still-draft-josh-downs-in-2026-fantasy-football-after-keenan-allens-signing/"
+     },
+     {
+      "name": "CBS Eisenberg: draft plan",
+      "url": "https://www.cbssports.com/fantasy/football/news/jamey-eisenbergs-2026-fantasy-draft-plan/"
+     }
+    ]
+   }
   },
   {
    "pick": 77,
@@ -132,13 +442,53 @@
    "priority": "Second TE tier or RB upside",
    "targets": [
     "Tucker Kraft",
-    "Sam LaPorta",
     "Harold Fannin Jr.",
-    "Caleb Williams",
-    "Bhayshul Tuten",
-    "Carnell Tate"
+    "Sam LaPorta",
+    "Jaylen Warren",
+    "Jadarian Price",
+    "TreVeyon Henderson",
+    "Kyle Pitts Sr.",
+    "Stefon Diggs"
    ],
-   "fallback": "Whichever of TE or QB you still lack."
+   "fallback": "Everything here sits at or below its September ADP. Jaylen Warren slid to the late 80s with his starting role intact; Price and Henderson are the two ankle-scare discounts. Caleb Williams or Herbert if you still need the quarterback. Tuten's price spiked on opportunity, not production; Tate is about two rounds early.",
+   "debate": {
+    "verdict": "Price, Henderson, Jaylen Warren and Diggs added",
+    "text": "Everything on this list sits at or below its September ADP: Kraft, Fannin and LaPorta are TE4-6 by ADP, Pitts is \"fair from the middle of round 7\" in full PPR (118 targets, 88 catches last year, but \"do not chase him\"), and Caleb Williams, Herbert and Lawrence are the round 6-8 QB tier.\nAdded: Jaylen Warren, whose ADP \"has slipped into the late 80s\" with his starting role intact (Draft Sharks calls it exceptional value); Jadarian Price (ADP toward 90, Charbonnet's knee, FantasyPros says he \"has a chance to be a massive steal\"); TreVeyon Henderson (late 80s after the ankle scare, cleared); and Stefon Diggs (ADP 91, ranked WR35 against a WR40 ADP, funnel offense with McLaurin, but 33 and declining).\nCautions: Tuten's ADP \"spiked on opportunity, not production\" (PFN), though Seahawks.com thinks he could be Jacksonville's most productive back. Tate is about two rounds early at 77 by composite ADP (103) even though CBS calls him the immediate Titans WR1; PFN sees a WR3 ceiling behind a shaky line and Cam Ward.\nThe late-QB safety net is real: Yahoo counts 13 quarterbacks you can start with confidence and Draft Sharks notes last year's breakouts (Stafford, Maye, Lawrence, Goff) all came late.",
+    "sources": [
+     {
+      "name": "Football Nation: Pitts round-8 value",
+      "url": "https://www.footballnationusa.com/post/kyle-pitts-fantasy-outlook-2026-round-8-value"
+     },
+     {
+      "name": "FFC: Jaylen Warren ADP",
+      "url": "https://fantasyfootballcalculator.com/players/jaylen-warren"
+     },
+     {
+      "name": "SI: Price vs Tuten",
+      "url": "https://www.si.com/onsi/fantasy/rankings/fantasy-football-running-back-debate-upside-rankings-jadarian-price-bhayshul-tuten"
+     },
+     {
+      "name": "PFN: Tuten, opportunity not production",
+      "url": "https://www.profootballnetwork.com/fantasy-football/bhayshul-tuten-fantasy-projection-2026/"
+     },
+     {
+      "name": "Yahoo: Diggs outlook",
+      "url": "https://sports.yahoo.com/articles/updated-stefon-diggs-fantasy-outlook-113912676.html"
+     },
+     {
+      "name": "CBS: Tate outlook",
+      "url": "https://www.cbssports.com/fantasy/football/news/2026-outlook-carnell-tate/"
+     },
+     {
+      "name": "PFN: Tate ceiling",
+      "url": "https://www.profootballnetwork.com/fantasy-football/carnell-tate-fantasy-outlook-updated-2026/"
+     },
+     {
+      "name": "Yahoo: 2026 QB preview and strategy",
+      "url": "https://sports.yahoo.com/fantasy/article/2026-fantasy-football-qb-preview-draft-strategy-rankings-fades-and-sleepers-173310318.html"
+     }
+    ]
+   }
   },
   {
    "pick": 84,
@@ -146,75 +496,265 @@
    "priority": "Handcuffs with standalone value",
    "targets": [
     "Blake Corum",
-    "Tyler Allgeier",
+    "Kyler Murray",
     "George Kittle",
+    "Jordan Mason",
+    "Dalton Kincaid",
     "Stefon Diggs"
    ],
-   "fallback": "Corum out-efficiencies Kyren; Allgeier starts if Love misses Week 1 and keeps a role after."
+   "fallback": "Corum is the one handcuff with standalone value (39 percent of carries and 55 percent inside the five from week 10 on). Murray is the pick if you waited on quarterback. Kittle is a swing, not a plan. Monangai (knee, week-to-week) and Harvey (behind Dobbins) move to 104.",
+   "debate": {
+    "verdict": "Corum first; Kyler Murray added; Monangai and Harvey pushed later",
+    "text": "Corum is the single most-cited handcuff in the market and the only one with standalone value: from week 10 on he took 39 percent of the Rams' carries and 55 percent of the attempts inside the five, his 5.1 yards a carry ranked fifth at the position, and McVay held him out of the entire preseason alongside the starters, which Heavy reads as treating him \"essentially as a co-starter\". Fantasy Life ranks him the number one handcuff in football and floats a 50-50 split. The PPR knock is real: eight catches to Kyren's 36.\nAdded here: Kyler Murray, the most-cited late quarterback value (\"going in the 10th round and officially sleeper-eligible\"; a QB1 in points per game in every season he has played eight games), now the Vikings' named Week 1 starter with Jefferson, Addison and Jennings. If you waited on quarterback, this is the pick.\nKittle stays as the upside gamble with eyes open: activated from the physically-unable list Aug 24, back in team drills, Schefter says a legitimate chance for the Thursday opener in Melbourne, but PFN notes the travel and a Week 2-3 fallback. Our model scores him bust 99 and risk 99, so he is a swing, not a plan.\nMoved later: Monangai is week-to-week with a knee and in danger of missing Week 1, and Harvey sits behind Dobbins with Jonah Coleman also drafted; both fit at 104 or 117 now. On Allgeier, the injured back is Jeremiyah Love, Arizona's rookie first-rounder, who is \"50-50\" for Week 1; Allgeier is a Week 1 flex in that case but every outlet expects Love to take the backfield once healthy, so he is a short-window play best taken at 104.",
+    "sources": [
+     {
+      "name": "Fantasy Life: the best backup RBs to draft",
+      "url": "https://www.fantasylife.com/articles/fantasy/the-best-backup-rbs-to-draft-in-fantasy-football-blake-corum-lea"
+     },
+     {
+      "name": "Heavy: Corum treated as a co-starter",
+      "url": "https://heavy.com/sports/nfl/los-angeles-rams/rams-rb-blake-corum-kyren-williams/"
+     },
+     {
+      "name": "Yahoo: 2026 all-sleeper team (Murray)",
+      "url": "https://sports.yahoo.com/fantasy/article/fantasy-football-from-kyler-murray-to-isaiah-likely-we-present-the-2026-all-sleeper-team-154637740.html"
+     },
+     {
+      "name": "NFL.com: Vikings name Murray Week 1 starter",
+      "url": "https://www.nfl.com/news/vikings-name-kyler-murray-starting-week-1-quarterback-for-2026-season"
+     },
+     {
+      "name": "ESPN: 49ers activate Kittle from PUP",
+      "url": "https://www.espn.com/nfl/story/_/id/49702970/49ers-activate-star-te-george-kittle-pup-list"
+     },
+     {
+      "name": "PFN: Kittle outlook and the Melbourne travel",
+      "url": "https://www.profootballnetwork.com/fantasy-football/george-kittle-fantasy-outlook-updated-2026/"
+     },
+     {
+      "name": "CBS: Monangai remains week-to-week",
+      "url": "https://www.cbssports.com/fantasy/football/news/bears-kyle-monangai-remains-week-to-week/"
+     },
+     {
+      "name": "Pro Football Rumors: Jeremiyah Love 50-50 for Week 1",
+      "url": "https://www.profootballrumors.com/2026/09/cardinals-rb-jeremiyah-love-50-50-for-week-1"
+     }
+    ]
+   }
   },
   {
    "pick": 97,
    "round": 10,
-   "priority": "QB if you waited; sleeper WR",
+   "priority": "QB2-tier starter if you still need one; sleeper RB / WR",
    "targets": [
-    "Matthew Stafford",
-    "Stefon Diggs",
-    "George Kittle"
+    "Jaxson Dart",
+    "Jordan Mason",
+    "Isaiah Likely",
+    "Josh Downs",
+    "RJ Harvey",
+    "Stefon Diggs"
    ],
-   "fallback": "Yahoo: you can wait until round 9 or 10 for a viable starter."
+   "fallback": "Stafford comes off this pick: his ADP is 75-76, so he is a round-8 name, and his touchdown rate has to regress. Dart's ADP is exactly this pick and FantasyPros gives him top-five upside. Mason is a PFF sleeper behind a 31-year-old Aaron Jones; Likely is the Giants' number two target.",
+   "debate": {
+    "verdict": "Stafford replaced by Dart and Murray; Mason and Likely added",
+    "text": "Stafford comes off this slot. His consensus ADP is 75-76, which makes him a round-8 pick in a 10-teamer, and the Fantasy Footballers warn his 7.7 percent touchdown rate \"shattered his career high\" and must regress; our model has him at bust 98. If you still need a quarterback here the outlets' names are Kyler Murray (if he lasted) and Jaxson Dart, whom FantasyPros lists among five quarterbacks drafted outside the top 12 with \"a realistic path to finishing as a top-five producer\" after 2,272 yards, 15 touchdowns, 487 rushing yards and nine rushing scores as a rookie. Dart's ADP of 97 is literally this pick.\nAdded: Jordan Mason, named by PFF's Nathan Jahnke as one of three running back sleepers with \"the potential to become weekly must-start\" behind a 31-year-old Aaron Jones who has missed at least five games in two of the last three years; and Isaiah Likely, who followed Harbaugh to the Giants and projects as the number two target behind Nabers, ranked TE13 and named on ESPN's and Yahoo's sleeper teams.\nDiggs remains listed because his ADP fits and NFL.com calls him a worthy tenth-round sleeper who led the league in catch rate over expected, but this is the biggest split on the board: our model has him at boom 20 and bust 98 on the age-33 decline, so treat him as a floor play, not upside.",
+    "sources": [
+     {
+      "name": "FFC: Stafford ADP 7.04",
+      "url": "https://fantasyfootballcalculator.com/players/matthew-stafford"
+     },
+     {
+      "name": "Fantasy Footballers: risk baked into QB ADP",
+      "url": "https://www.thefantasyfootballers.com/analysis/2026-risk-baked-into-adp-qbs-fantasy-football/"
+     },
+     {
+      "name": "FantasyPros: 5 QB2s with top-5 potential",
+      "url": "https://www.fantasypros.com/2026/09/5-qb2s-with-top-5-potential-2026-fantasy-football/"
+     },
+     {
+      "name": "PFF: running back sleepers (Mason)",
+      "url": "https://www.pff.com/news/fantasy-football-running-back-sleepers"
+     },
+     {
+      "name": "ESPN: sleepers, breakouts and busts (Likely, Downs)",
+      "url": "https://www.espn.com/fantasy/football/story/_/page/FFSleepBustBreak26-49030808/fantasy-football-2026-rankings-nfl-sleepers-breakouts-busts"
+     },
+     {
+      "name": "NFL.com: six late-round sleepers (Diggs)",
+      "url": "https://www.nfl.com/news/2026-nfl-fantasy-football-six-late-round-sleepers-to-target"
+     },
+     {
+      "name": "Yahoo: Diggs outlook, age-33 decline",
+      "url": "https://sports.yahoo.com/articles/updated-stefon-diggs-fantasy-outlook-113912676.html"
+     }
+    ]
+   }
   },
   {
    "pick": 104,
    "round": 11,
-   "priority": "RB lottery ticket or handcuff; Kyler only if he falls",
+   "priority": "RB with a path to Week 1 touches",
    "targets": [
-    "Rachaad White",
-    "Keaton Mitchell",
-    "Jordan Mason",
-    "Kyler Murray"
+    "Tyler Allgeier",
+    "Jonathon Brooks",
+    "Kyle Monangai",
+    "RJ Harvey",
+    "J.K. Dobbins"
    ],
-   "fallback": "With five bench slots the QB2 has to earn a roster spot: Kyler qualifies because of his rushing floor and Jefferson / Addison. Mitchell is the explosive change-of-pace behind Hampton under McDaniel."
+   "fallback": "Keaton Mitchell and Rachaad White come off the board: both are injured number twos in committees (Mitchell has missed six straight practices, White has had a hamstring since Aug 19). Allgeier is a Week 1 flex if Jeremiyah Love (50-50) sits; Brooks is ESPN's bust-to-boom name at ADP 125. Murray as a QB2 only if he fell this far.",
+   "debate": {
+    "verdict": "Keaton Mitchell and Rachaad White dropped for Allgeier and Brooks",
+    "text": "Both of the darts we had here are injured number twos in committees. Keaton Mitchell has missed six straight practices, was absent again Sept 3, and Hampton is the clear lead back; the Chargers' general manager said \"we could put him down on IR today and we did not do that\". Rachaad White has had a hamstring since Aug 19, missed the last two preseason games, and Jacory Croskey-Merritt \"appears to have the edge as the number one\". No outlet treats either as more than a speculative flier.\nIn their place: Tyler Allgeier, who becomes \"at least a flex play\" in Week 1 if Jeremiyah Love (50-50, high ankle sprain from Aug 13) sits; and Jonathon Brooks, ESPN's bust-to-boom candidate at an ADP of 125 with Carolina confident in his recovery. Monangai (ADP 107, knee) and Harvey (behind Dobbins) drop in from round 9, and Dobbins himself is Ratcliffe's RB36 as the actual Denver starter.\nOn the quarterback: with five bench slots a QB2 has to beat a running back who could start, so Murray only if he somehow falls to here.",
+    "sources": [
+     {
+      "name": "Draft Sharks: Keaton Mitchell still sidelined",
+      "url": "https://www.draftsharks.com/fantasy-football-news/82467/keaton-mitchell-still-sidelined-week-1-in-question"
+     },
+     {
+      "name": "Draft Sharks: hamstring sidelines Rachaad White",
+      "url": "https://www.draftsharks.com/fantasy-football-news/82288/hamstring-sidelines-rachaad-white"
+     },
+     {
+      "name": "Yahoo: why Allgeier matters in Week 1",
+      "url": "https://sports.yahoo.com/articles/fantasy-football-why-rb-tyler-190913722.html"
+     },
+     {
+      "name": "PFN: Allgeier blocked again once Love returns",
+      "url": "https://www.profootballnetwork.com/fantasy-football/tyler-allgeier-fantasy-outlook-updated-2026/"
+     },
+     {
+      "name": "ESPN: Jonathon Brooks, bust-to-boom",
+      "url": "https://www.espn.com/fantasy/football/story/_/page/FFSleepBustBreak26-49030808/fantasy-football-2026-rankings-nfl-sleepers-breakouts-busts"
+     },
+     {
+      "name": "FTN Ratcliffe: rankings updated Sept 4",
+      "url": "https://ftnfantasy.com/nfl/2026-fantasy-football-rankings-from-jeff-ratcliffe-updated-september-4"
+     }
+    ]
+   }
   },
   {
    "pick": 117,
    "round": 12,
-   "priority": "Last skill dart (rookie WR / TE2) or a QB2 only if a starter falls",
+   "priority": "Last skill dart: rookie WR upside",
    "targets": [
-    "Caleb Douglas",
     "Ja'Kobi Lane",
+    "Caleb Douglas",
     "De'Zhaun Stribling",
-    "Baker Mayfield",
-    "Bo Nix"
+    "Mike Washington Jr.",
+    "Kaelon Black"
    ],
-   "fallback": "Douglas is already in Miami's first-team offense; Lane is a 6-4 red-zone target for Lamar; Stribling had 11 catches for 109 yards in two preseason games in a thin 49ers room. Baker or Nix only if they are still there at 117."
+   "fallback": "Lane is Baltimore's new number two with red-zone usage at ADP 172; Douglas played every first-team snap on Miami's lone preseason starters' drive; Stribling's price is rising since the Pearsall injury and Deebo is back. Prefer the receivers to Rodriguez in full PPR (2.9 percent of his touches are catches). Skip the QB2: with five bench slots two weekly starters beat a star quarterback plus a bench piece. Dart is the only exception worth making.",
+   "debate": {
+    "verdict": "plan confirmed; Lane and Douglas ahead of Stribling, no QB2",
+    "text": "This is the round the research agrees with most: Lane, Douglas and Stribling are the three most-cited late-round receiver darts (five to six outlets each), and Washington Jr. and Kaelon Black are the two most-cited rookie handcuffs.\nThe order changes. Ja'Kobi Lane has \"positioned himself to be Baltimore's new number two receiver opposite Zay Flowers\" with the coach saying they expect to use him in the red zone, and he goes at ADP 172. Caleb Douglas played 100 percent of Miami's first-team snaps on the starters' lone preseason drive, is a Week 1 starter, and inherits the targets Hill and Waddle left behind. Stribling drops to third: his ADP is \"zooming up\" since the Pearsall injury and San Francisco brought Deebo Samuel back.\nIn full PPR, prefer the receivers to Chris Rodriguez Jr., whose receptions are 2.9 percent of his touches. Dulcich and Helm go at ADP 180-195, which is waiver-wire territory in a 10-teamer, not a pick-117 name.\nOn a QB2: skip it. FantasyPros says a surplus at quarterback or tight end \"wastes picks better spent elsewhere\" because both are replaceable off waivers, and with five bench slots the consensus is that two weekly starters beat a star quarterback plus a bench piece. Dart is the only faller worth the exception; Nix will not reach here and Mayfield is streamer tier.",
+    "sources": [
+     {
+      "name": "SI: Ja'Kobi Lane breakout candidate",
+      "url": "https://www.si.com/onsi/fantasy/rankings/preseason-breakout-sleeper-candidate-wide-receiver-fantasy-football-jakobi-lane"
+     },
+     {
+      "name": "NFL.com: Caleb Douglas turning heads",
+      "url": "https://www.nfl.com/news/rookie-wr-caleb-douglas-turning-heads-in-dolphins-training-camp"
+     },
+     {
+      "name": "Draft Sharks: Douglas, round-3 pick turned Week 1 starter",
+      "url": "https://www.draftsharks.com/fantasy-football-news/82236/caleb-douglas-round-3-pick-turned-week-1-starter"
+     },
+     {
+      "name": "FantasyPros: sleepers experts love to draft (Stribling)",
+      "url": "https://www.fantasypros.com/2026/09/fantasy-football-sleepers-experts-love-to-draft-2026/"
+     },
+     {
+      "name": "CBS: Mike Washington Jr., a top handcuff",
+      "url": "https://www.cbssports.com/fantasy/football/news/2026-fantasy-football-rookie-sleepers-mike-washington-jr-a-top-handcuff/"
+     },
+     {
+      "name": "49ers Webzone: Kaelon Black sleeper",
+      "url": "https://www.49erswebzone.com/articles/200639-rookie-kaelon-fantasy-football-sleeper/"
+     },
+     {
+      "name": "RotoWire: Rodriguez's receptions cap his PPR value",
+      "url": "https://www.rotowire.com/football/article/2026-fantasy-football-sleepers-breakout-rookies-second-year-players-updated-131255"
+     },
+     {
+      "name": "FantasyPros: 2026 draft strategy guide (no QB surplus)",
+      "url": "https://www.fantasypros.com/2026/08/2026-fantasy-football-draft-strategy-guide-expert-advice/"
+     }
+    ]
+   }
   },
   {
    "pick": 124,
    "round": 13,
    "priority": "Defense with a soft early schedule",
    "targets": [],
-   "fallback": "Stream it after week 3. Nine starters plus five bench means the skill darts end at 117."
+   "fallback": "Chargers are the consensus best weeks 1-2 (they host Arizona and Las Vegas); Chiefs are the best weeks 2-4 if you can stomach Denver in week 1; Packers and Bears also open soft. Stream it after week 3. Nine starters plus five bench means the skill darts end at 117.",
+   "debate": {
+    "verdict": "plan confirmed; specific defenses named",
+    "text": "Every 2026 strategy piece found says the same thing: take one defense in the last two rounds and stream it. Football Nation states it plainly, that the gap between a top preseason defense and a usable weekly streamer \"is usually less valuable than the gap between your favorite late RB or WR and the waiver replacement\". No source argues for taking a defense earlier in a 10-team league.\nThe early-schedule names: the Chargers are the consensus best for weeks 1-2, the number 11 scoring defense last season hosting Arizona and Las Vegas to open, and ESPN says \"there isn't a better one to draft\" if you need the first two weeks. The Chiefs are the best weeks 2-4 play if you can stomach Denver in week 1, with the Colts at Arrowhead and then Miami. The Packers are a plug-and-play opener (with Parsons' status a week-1 risk) and the Bears open at Carolina.\nThe one deviation experts endorse in these two rounds is taking Brandon Aubrey at 124 if he is somehow there, and the defense at 137.",
+    "sources": [
+     {
+      "name": "ESPN: D/ST road map, early season",
+      "url": "https://www.espn.com/fantasy/football/story/_/id/49798496/2026-fantasy-football-d-st-road-map-early-season"
+     },
+     {
+      "name": "PFN: defenses with favorable early schedules",
+      "url": "https://www.profootballnetwork.com/fantasy-football/fantasy-football-defense-rankings-2026-teams-to-target-with-favorable-early-season-schedules/"
+     },
+     {
+      "name": "NBC: tiered D/ST rankings and strategy",
+      "url": "https://www.nbcsports.com/fantasy/football/news/2026-fantasy-football-tiered-defense-dst-rankings-and-strategy"
+     },
+     {
+      "name": "Football Nation: when to draft a defense",
+      "url": "https://www.footballnationusa.com/post/when-draft-defense-fantasy-football-2026"
+     }
+    ]
+   }
   },
   {
    "pick": 137,
    "round": 14,
    "priority": "Kicker, last",
    "targets": [],
-   "fallback": "No 2026 source argues otherwise for a 10-team league."
+   "fallback": "Kicker last is still consensus. The only exception experts endorse is Brandon Aubrey (or Ka'imi Fairbairn) a round early; Aubrey is the number one kicker on three straight top-three finishes, Cameron Dicker second, and our league's distance-tiered scoring (3 / 4 / 5, minus 1 for a miss) is exactly what rewards his range.",
+   "debate": {
+    "verdict": "plan confirmed; Aubrey is the only exception",
+    "text": "Kicker last is still the consensus. Yahoo's kicker piece puts it as: \"If your league requires you to start a kicker, the best strategy is typically to wait until the final round\" — with two exceptions this year. RotoWire's line is that it is \"no longer taboo to take a kicker before the last few rounds of a fantasy draft, as long as his name is Brandon Aubrey or Ka'imi Fairbairn\", and PFF calls Aubrey the clear top kicker, worth taking earlier than the final round depending on scoring.\nOur league's kicking scoring is standard (3 points from 0-39, 4 from 40-49, 5 from 50-59, minus 1 for a miss), which is exactly the setup that rewards Aubrey's range. Aubrey is the number one kicker on three straight top-three finishes, with Cameron Dicker second; Dicker, Eddy Pineiro and Harrison Mevis all cleared 90 percent in 2025.",
+    "sources": [
+     {
+      "name": "Yahoo: 2026 kicker rankings",
+      "url": "https://sports.yahoo.com/fantasy/article/2026-fantasy-football-kicker-rankings-k-155928625.html"
+     },
+     {
+      "name": "RotoWire: kicker draft strategy",
+      "url": "https://www.rotowire.com/football/article/2026-fantasy-football-draft-strategy-kickers-rankings-and-draft-strategy-130303"
+     },
+     {
+      "name": "PFF: kicker rankings",
+      "url": "https://www.pff.com/news/fantasy-football-kicker-rankings"
+     },
+     {
+      "name": "SI: 2026 kicker rankings",
+      "url": "https://www.si.com/onsi/fantasy/rankings/2026-fantasy-football-kickers-rankings-updated-tyler-loop-blake-grupe"
+     }
+    ]
+   }
   }
  ],
  "qbte": "QB: late-round QB is still the consensus in one-QB leagues. Only 10 QBs start, so the replacement level (Nix, Dart, Stafford, Kyler) sits close to the QB5-8 tier. Josh Allen is the clear QB1 at ADP 26-35 but Mike Clay questions the round-3 opportunity cost; Jayden Daniels goes three rounds later and could out-score him. The cheap way to buy a QB edge in a 10-teamer is Daniels / Maye / Burrow at 57-64, never Allen at 24. TE: Bowers (ADP 21) and McBride (22.5) are the elite tier; ESPN says round 1-2 is too early for a TE in 10-team leagues but warns neither lasts to round 3. Loveland (41) and Warren (52.5) are tier 2; Kraft, LaPorta and Fannin at 74-81 are the 10-team sweet spot; Kittle at 98 carries Achilles risk. Take an elite TE at 17 only if the RB anchor tier is gone.",
  "rules": [
   "At 4, take Nacua only if he is cleared for the Thursday opener and not suspended; otherwise Gibbs, Bijan or Chase if one falls, else Smith-Njigba or Taylor. Never McCaffrey in full PPR.",
-  "Anchor one bell-cow RB at 17 from whoever is left of Achane, Chase Brown, Cook, Kenneth Walker, Hampton or Henry. Achane and Henry are usually gone by 17 on ESPN; the chip shows each man's chance of being there. Round-2 backs have hit 77 percent since 2016 against 57 percent for round-2 receivers.",
+  "Anchor one bell-cow RB at 17. Chase Brown is the most-endorsed name in the market (CBS calls him a perfect second-round pick, PFN says he belongs at the 1/2 turn), then Hampton, then Walker; Achane drops behind them on the Miami offense and Henry is last in full PPR. Round-2 backs have hit 77 percent since 2016 against 57 percent for round-2 receivers.",
   "If two of Walker, Hampton, Chase Brown, Cook or Henry are on the board at 17 and 24, going RB-RB is the stronger branch (round-3 backs hit 68 percent, receivers 64 percent). If the tier is gone at 17, do not reach: pivot to Bowers, McBride, London or Collins and take backs at 24 and 37.",
-  "Hammer WR in rounds 3-6. That is the value pocket: Nabers, A.J. Brown, Flowers, Thomas Jr., Metcalf, Egbuka, McMillan.",
+  "Hammer WR in rounds 3-6. That is the value pocket: London, Collins, A.J. Brown, Olave, then Higgins and Flowers at 37, McConkey and DeVonta Smith at 44. Metcalf, Brian Thomas Jr. and Egbuka are no longer round-4 names.",
   "Pay for an elite TE only as a pivot, never as the plan. Loveland in round 4 or Kraft / LaPorta / Fannin in rounds 7-8 is the 10-team sweet spot.",
   "Take a QB when the Daniels, Maye, Burrow, Hurts tier is down to its last name, which on ESPN usually happens around picks 57-64; if it empties early, wait for Stafford, Kyler or Baker at 97-124. Do not pay the Allen tax at 24.",
-  "Fade the 2026 landmines at ADP: McCaffrey, Jeanty, Love, Kyren Williams, Etienne, Judkins, Skattebo, Tate, Davante Adams.",
-  "Buy this week's news: MarShawn Lloyd (Jacobs on the exempt list), Allgeier (Love's ankle), Corum (Kyren's drive split).",
-  "Bench equals upside only. In a 10-teamer the waiver wire replaces safe veterans, so spend picks 84-117 on rookies and handcuffs with a path to volume. Five bench slots and one IR leave no room for both a QB2 and a TE2: skip the QB2 unless a starter-quality one falls to 104 or 117.",
-  "Kicker and defense at 124 and 137, the last two rounds, and mock from picks 2, 7 and 12 before draft night so you know the turns."
+  "Fade the 2026 landmines at ADP: McCaffrey, Jeanty (no practice since Aug 23), Jeremiyah Love, Kyren Williams, Etienne, Judkins at a reach, Skattebo, Tate, Davante Adams, DK Metcalf, Brian Thomas Jr.",
+  "Buy this week's news: MarShawn Lloyd (Jacobs on the exempt list), Tyler Allgeier (Jeremiyah Love 50-50 with a high ankle sprain), Corum (Kyren's drive split), Stribling (Pearsall out for the year).",
+  "Bench equals upside only, and with five slots there is no room for filler. The expert consensus for a 10-team, one-QB bench is three or four backs (one standalone handcuff like Corum, the rest contingent) plus one or two rookie receiver darts, and no QB2 or TE2: FantasyPros says a surplus at quarterback or tight end wastes picks because both are replaceable off waivers.",
+  "Kicker and defense at 124 and 137, the last two rounds. Chargers open softest (weeks 1-2), Chiefs are best weeks 2-4. The only kicker worth a round early is Brandon Aubrey. Mock from picks 2, 7 and 12 before draft night so you know the turns."
  ],
  "sleepers": [
   "MarShawn Lloyd",
@@ -256,6 +796,7 @@
   "Bowers vs McBride: the crowd flipped to Bowers on the Cousins upgrade; FantasySP and ESPN's Matt Bowen still prefer McBride's record 169-target volume.",
   "Josh Allen: crowd ADP pushes him to about 26 in some rooms versus 35 in others, a tax the experts say not to pay in a one-QB league.",
   "Where they agree: Gibbs 1.01, Nacua at 4 in PPR, punt K and DST, and treat 10-team waivers as a resource.",
-  "Caveat: reddit.com could not be fetched from this environment, so Reddit sentiment is secondhand and no quotes are reproduced. Search r/fantasyfootball for the Sept 1-4 draft-help threads before your draft."
+  "Footballguys forum, picks 4-6 thread: \"take whoever falls between Puka / Chase / JSN at picks 4-6. JSN, Lamb, ARSB are options at this spot\", with the stated Nacua worries being the injury, concussion history and Stafford's age, neck and back.",
+  "Caveat, and it got worse on the second pass: a dedicated round-by-round research sweep on Sept 5 ran about 170 searches across four researchers, and reddit.com returned zero results in every one of the roughly 35 Reddit-targeted queries, with direct fetches blocked. The only forum text anyone retrieved was a Footballguys thread (\"Picks 4-6 Discussion\"), quoted in the round 1 notes. Everything in the round-by-round blocks below is from expert-article snippets with the URL attached, not from Reddit. Search r/fantasyfootball for the Sept 8-12 draft-help threads yourself before draft night."
  ]
 }
