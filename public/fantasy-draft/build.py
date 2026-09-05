@@ -79,7 +79,7 @@ OUTLET_WEIGHT = {
 }
 # ADP feeds: full-PPR redraft platforms count 1, other formats or older snapshots count less.
 ADP_WEIGHT = {
-    "ffc_sep4": 1.5, "espn_live": 1.0, "sleeper_live": 1.0, "fantasypros_live": 1.0, "yahoo_live": 1.0,   # Sept 4 feeds
+    "espn_live": 3.0, "ffc_sep4": 1.0, "sleeper_live": 0.75, "fantasypros_live": 0.75, "yahoo_live": 0.5,   # Sept 4 feeds; the league drafts on ESPN
     "sleeper_ppr": 0.5, "nfc_ppr": 0.5, "espn": 0.25, "yahoo": 0.25, "fantasypros_avg": 0.5,
     "fantasypros_cbs": 0.5, "fantasypros_rtsports": 0.5, "fantasypros_fantrax": 0.5, "fantasypros_espn": 0.25, "fantasypros_sleeper": 0.25,
     "underdog": 0.5, "rotowire_underdog": 0.25, "ffpc": 0.5, "draftsharks_half_consensus": 0.5,
@@ -444,7 +444,10 @@ def main():
             status_conflicts.append(f"{r['name']}: adjustments say '{camp_text}' but the Week 1 roster lists him active")
             camp, camp_flag = 0.4, None
             camp_text = "Listed active on the Week 1 roster; earlier reports said " + (ad.get("camp_status") or rk.get("camp_status") or "")
-            ad = dict(ad, bust_adj=ad.get("bust_adj", 0) * 0.5, flag=None)   # roster is authoritative: drop the reported-out flag
+            ad = dict(ad, bust_adj=0.0, flag=None)
+        if nv.get("status_code") == "A01":
+            # percentile ranking amplifies hand nudges; for players the roster confirms active, cap them
+            ad = dict(ad, boom_adj=max(-0.05, min(0.05, ad.get("boom_adj", 0))), bust_adj=max(-0.05, min(0.05, ad.get("bust_adj", 0))), risk_adj=max(-0.05, min(0.05, ad.get("risk_adj", 0))))   # roster is authoritative: drop the reported-out flag
         if pos in ("WR", "TE") and (tctx.get("vacated_target_share") or 0) >= 0.25:
             boom_factors.append(f"{team_code} vacated {tctx['vacated_target_share'] * 100:.0f}% of its 2025 targets ({tctx['vacated_targets']})")
         if pos == "RB" and (tctx.get("vacated_carry_share") or 0) >= 0.30:
@@ -486,6 +489,7 @@ def main():
             "proj": round(proj_pts) if proj_pts is not None else None, "projSources": pj or None, "projSd": round(proj_sd, 1) if proj_sd is not None else None,
             "ceilPts": round(bayes["p90"]) if bayes.get("p90") else (round(proj_pts * fa["ceil_ratio"]) if proj_pts and fa.get("ceil_ratio") else None),
             "floorPts": round(bayes["p10"]) if bayes.get("p10") is not None else (round(proj_pts * fa["floor_ratio"]) if proj_pts and fa.get("floor_ratio") else None),
+            "espnAdp": espn.get("adp"), "espnRank": espn.get("pprRank"),
             "market": {"adpD7": adp_d7, "adpD30": adp_d30, "ffcSd": ffc_sd, "ffcN": (mk.get("ffc") or {}).get("n"), "ffcRange": [mk["ffc"]["high"], mk["ffc"]["low"]] if mk.get("ffc") else None,
                        "espnStatus": espn.get("injuryStatus"), "espnOwned": espn.get("pctOwned"), "injProb": lh.get("injProb"), "projGames": bayes.get("games"),
                        "epDiff": ep.get("diffPct"), "injuryLog": mk.get("injuryLog")} if mk else None,
@@ -571,7 +575,7 @@ def main():
         pr = percentile_within([p for p in players if p["pos"] == pos], lambda p: p["_raw"]["risk"], pos)
         for p in players:
             if p["pos"] == pos:
-                p["sit"] = round(pct_sit(p["_sig"]["sitRaw"]))
+                p["sit"] = round(max(1, min(99, 50 + 140 * p["_sig"]["sitRaw"])))   # linear, 50 = neutral; raw is capped at +-0.35
                 p["boom"] = round(pb(p["_raw"]["boom"]))
                 p["bust"] = round(pu(p["_raw"]["bust"]))
                 p["risk"] = round(pr(p["_raw"]["risk"]))

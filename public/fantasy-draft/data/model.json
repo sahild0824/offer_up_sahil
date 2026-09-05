@@ -63,7 +63,7 @@
     {
       "title": "Chance he is there at your pick",
       "paras": [
-        "A logistic curve around ADP whose width grows with ADP spread and with pick number, since later picks are noisier. The Draft tab uses your league size and slot; the defaults are 10 teams and slot 4 (picks 4, 17, 24, 37, 44, 57, 64, 77, 84, 97, 104, 117, 124, 137, 144, 157)."
+        "A logistic curve around ADP whose width grows with ADP spread and with pick number. The league (GDL Fantasy) drafts on ESPN, so the Draft tab defaults to ESPN's own ADP for availability and the blended ADP weights ESPN's feed three times any other; switch the room to Blended ADP to see the cross-site view. League assumptions: 10 teams, snake, head-to-head points, PPR, ESPN default roster of QB, 2 RB, 2 WR, TE, FLEX, D/ST, K and 7 bench (16 rounds), playoffs weeks 15-17. Slot 4 picks: 4, 17, 24, 37, 44, 57, 64, 77, 84, 97, 104, 117, 124, 137, 144, 157."
       ],
       "formula": "P(available at pick N) = 1 / (1 + e^((N − ADP) / s))\ns = max(1.6, 0.55 · max(ADP spread, 0.15 · ADP))"
     },

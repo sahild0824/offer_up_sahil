@@ -122,8 +122,10 @@ def compute(pos, team, env_row, opp_row, sos_row, team_ctx, league, arrival=Fals
     prior = 0.0
     if pos == "RB" and years_exp == 1:
         prior += 0.10; why.append("Year-2 RB: boomed 10 points more often than peers at the same ADP, 2016-25")
-    if rookie and pos == "WR" and draft_no and draft_no <= 64:
-        prior += 0.15; why.append("Drafted rookie WR: boomed 16 points more and busted 17 points less than peers at the same ADP, 2016-25")
+    if rookie and pos == "WR" and draft_no and draft_no <= 32:
+        prior += 0.10; why.append("First-round rookie WR: boomed 16 points more and busted 17 points less than peers at the same ADP, 2016-25 (n=25)")
+    elif rookie and pos == "WR" and draft_no and draft_no <= 100:
+        prior += 0.05; why.append("Day-2 rookie WR: rookie receivers with draft capital boomed more often, 2016-25")
     elif rookie and draft_no and draft_no <= 32:
         prior += 0.05; why.append("First-round rookie")
     if arrival and pos in ("WR", "RB"):
