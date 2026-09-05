@@ -100,7 +100,7 @@ def lineup_value(roster, key):
     return val + flex + 0.25 * bench   # the five bench slots count a quarter: injuries and byes make depth matter in head-to-head
 
 
-def simulate(players, teams, slot, strategy, profile, sims, seed=7, forced_first=None, probe=None):
+def simulate(players, teams, slot, strategy, profile, sims, seed=7, forced_first=None, probe=None, forced=None):
     """probe: {label: (pick, [player ids])} -> per-sim record of how many of the group survived to that pick."""
     rng = np.random.default_rng(seed)
     n = len(players)
@@ -132,11 +132,14 @@ def simulate(players, teams, slot, strategy, profile, sims, seed=7, forced_first
                     continue  # K / D/ST
                 avail_count[r_ix] += ~taken
                 cands = [players[i] for i in range(n) if not taken[i]]
+                # forced: {round_index: name or [names]} -- take the first listed name still on the board
+                want = None
                 if forced_first and r_ix == 0:
-                    f = [p for p in cands if p["name"] == forced_first]
-                    choice = f[0] if f else max(cands, key=lambda p: my_score(p, rnd, profile, strategy, my_roster))
-                else:
-                    choice = max(cands, key=lambda p: my_score(p, rnd, profile, strategy, my_roster))
+                    want = [forced_first]
+                elif forced and r_ix in forced:
+                    want = forced[r_ix] if isinstance(forced[r_ix], list) else [forced[r_ix]]
+                f = [p for w in (want or []) for p in cands if p["name"] == w]
+                choice = f[0] if f else max(cands, key=lambda p: my_score(p, rnd, profile, strategy, my_roster))
                 taken[idx_by_id[choice["id"]]] = True
                 for k in heat:
                     heat[k] *= RUN_DECAY
