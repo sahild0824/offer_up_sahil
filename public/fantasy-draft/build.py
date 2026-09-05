@@ -467,7 +467,7 @@ def main():
             sit.append("coaching change")
         players.append({
             "id": key.replace(" ", "-") + "-" + pos.lower(),
-            "env": env_block, "chg": chg_block, "sos": sos_block, "sitWhy": sit_why, "sitParts": sit_parts,
+            "chg": chg_block, "sos": sos_block, "sitWhy": sit_why, "sitParts": sit_parts,
             "name": r["name"], "team": team_code, "pos": pos,
             "bye": byes.get(team_code) or r.get("bye") or "?",
             "age": age,
@@ -675,7 +675,7 @@ def main():
             counts["nflverse"] = counts.get("nflverse", 0) + 1
         if p.get("sos"):
             counts["sos"] = counts.get("sos", 0) + 1
-        if p.get("env"):
+        if team_env.get(p["team"]):
             counts["team_env"] = counts.get("team_env", 0) + 1
         if p.get("chg"):
             counts["opportunity"] = counts.get("opportunity", 0) + 1
@@ -684,9 +684,9 @@ def main():
             counts["lhallee"] = counts.get("lhallee", 0) + 1
         if mkb.get("epDiff") is not None:
             counts["ffopportunity"] = counts.get("ffopportunity", 0) + 1
-        if p.get("env") and p["env"].get("playcaller"):
+        if team_env.get(p["team"], {}).get("playcaller"):
             counts["census"] = counts.get("census", 0) + 1
-        if p.get("env") and p["env"].get("vegasWins") is not None:
+        if team_env.get(p["team"], {}).get("vegas_wins") is not None:
             counts["vegas"] = counts.get("vegas", 0) + 1
     for s in model.get("sources", []):
         if s.get("key") in counts:
@@ -706,6 +706,10 @@ def main():
             "unavailable": model.get("unavailable", []),
             "model": {"intro": model.get("intro", ""), "sections": model.get("sections", [])},
             "weights": W, "situationWeights": situation.SW, "outletWeights": OUTLET_WEIGHT, "baselines": BASELINE,
+            "teams": {t: {"hc": r.get("hc"), "hcNew": r.get("hc_new"), "oc": r.get("oc"), "ocNew": r.get("oc_new"), "playcaller": r.get("playcaller"), "scheme": r.get("scheme_notes"),
+                          "passRate": r.get("pass_rate_tendency"), "pace": r.get("pace_tendency"), "rbUsage": r.get("rb_usage"), "qb": r.get("qb"), "qbNew": r.get("qb_new"), "qbTier": r.get("qb_tier"),
+                          "qbNote": r.get("qb_note"), "vegasWins": r.get("vegas_wins"), "impliedPpg": r.get("implied_ppg"), "olineRank": r.get("oline_rank"), "arrivals": r.get("arrivals"),
+                          "departures": r.get("departures"), "verdict": r.get("env_verdict"), "bye": byes.get(t)} for t, r in team_env.items()},
         },
     }
     (DATA / "players.json").write_text(json.dumps(out["players"], indent=1))

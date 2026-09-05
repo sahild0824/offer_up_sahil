@@ -11,7 +11,20 @@ Open `index.html` on your phone, or the published copy at https://claude.ai/code
 
 Tap any player for the full sheet: source-by-source ranks on a strip chart, ADP by platform, floor / ceiling, the reasons behind his boom, bust and risk scores, and availability at each of your picks.
 
+## 2026 situation layer
+
+The fourth meter, **2026**, scores each player's situation relative to his position: team offensive environment (confirmed play-caller and his computed 2022-25 tendencies, quarterback tier, Vegas win total, PFF offensive-line rank), the player's 2026 change (opportunity, competition, quarterback and coaching change, with an unresolved flag), vacated volume for arrivals and drafted rookies, and 2026 strength of schedule by position with fantasy-playoff weeks 15-17 weighted most. Evidence-based priors from `research/methods_2026.md` are applied (year-2 and year-3 receivers, first-round rookies, receivers who changed teams). The player sheet shows the team card, the change drivers, the schedule and the reasons.
+
 ## Rebuilding the data
+
+```
+python3 nflverse_features.py --fetch   # 2024-25 game logs, 2026 rosters, birthdates -> data/nflverse_features.json
+python3 market_features.py --fetch     # fresh ADP (FFC, ESPN, Sleeper, FantasyPros, Yahoo), projections, injury model, Vegas, O-line, play-callers
+python3 build.py                       # scores everything and injects the data into index.html
+python3 scenario.py --strategy hero-rb # top-4 targets per round (also --sit-weight, --sos-weight)
+```
+
+## Rebuilding the data (details)
 
 ```
 python3 build.py          # merges data/*.json + data/raw/*.csv, scores players, injects into index.html
@@ -28,6 +41,11 @@ Inputs live in `data/`:
 | `strategy.json` | the Plan tab content (`research/strategy.md` is the long form with links) |
 | `model.json` | Model tab text, source list, unreachable-sources list |
 | `byes.json` | 2026 bye weeks |
+| `nflverse_features.json` | per-player 2024-25 boom/bust-week rates, usage shares, consistency, games missed, ages, Week 1 roster status; per-team vacated targets and carries; 2025 points allowed by defense (built by `nflverse_features.py`) |
+| `market_features.json` | Sept 4 ADP feeds with per-player stdev and 7/30-day trend, live ESPN and Sleeper projections, Bayesian p10/p50/p90 and projected games, calibrated injury probability, injury log, expected-points regression, Vegas and O-line by team, play-caller census (built by `market_features.py`) |
+| `team_env.json` | 2026 team environments: coaches, play-callers and their computed tendencies, QB tiers, Vegas, arrivals and departures (`research/team_env_notes.md`) |
+| `sos.json` | 2026 strength of schedule by position, full / early / playoffs (`research/sos_notes.md`) |
+| `opportunity.json` | per-player 2026 change drivers for the top 165 (`research/opportunity_notes.md`) |
 
 Weights and baselines sit at the top of `build.py`. The scoring method is documented in the app's Model tab and in `research/methodology.md`.
 

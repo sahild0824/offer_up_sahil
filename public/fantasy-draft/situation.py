@@ -83,7 +83,7 @@ def compute(pos, team, env_row, opp_row, sos_row, team_ctx, league, arrival=Fals
                 who.append(f"new HC {env_row.get('hc')}")
             if env_row.get("oc_new"):
                 who.append(f"new OC {env_row.get('oc')}")
-            why.append(", ".join(who) + (f": {env_row['scheme_notes']}" if env_row.get("scheme_notes") else ""))
+            why.append(", ".join(who) + " (see team card)")
         if env_row.get("oline_rank"):
             why.append(f"Offensive line ranked {env_row['oline_rank']} of 32")
 

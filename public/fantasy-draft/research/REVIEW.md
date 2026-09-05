@@ -81,3 +81,12 @@ Items 1, 2 and 6 depend on the GitHub repository survey (`repos_survey.md`, in p
 ## 5. Draft-day checks that no model replaces
 
 Puka Nacua's NFL review, Jeanty's and Love's Week 1 status, Kittle's Achilles timeline, and the Falcons QB decision were all unresolved on September 4. Check each the morning of the draft; the app's flags reflect the September 4 state.
+
+
+## Addendum, September 5: what changed after this review
+
+- **Real game logs.** nflverse 2024-25 weekly stats now supply per-player boom-week and bust-week rates at the FantasyPros thresholds, weekly consistency, games missed, exact ages, and Week 1 roster status codes (item 2 above, done; item 6 partly done).
+- **Fresh market data.** Five September 4 ADP feeds (Fantasy Football Calculator with per-player stdev over 7,681 drafts, ESPN live, Sleeper live, FantasyPros and Yahoo daily snapshots) replace the stale feeds when present, and a 7/30-day ADP trend flags news-driven moves (item 3, done). Availability now uses the within-draft stdev (item 7 partly done).
+- **More projections and a calibrated injury model.** ESPN live, CBS, Sleeper and a hierarchical-Bayesian model (with p10/p90 and projected games) feed projections; a calibrated missed-time injury probability (AUC 0.75) replaces the positional base rate for 247 of 253 players (items 4 and 6, done).
+- **2026 situation layer.** Team environment (confirmed play-callers with computed tendencies, QB tiers, Vegas, O-line), per-player opportunity change, vacated volume and schedule strength, with priors and weights taken from the methods research rather than guessed. Its mean effect is capped and the larger half of any change goes into variance.
+- **Still open.** No backtest (item 1). The expert-only composite with a truncation guard (item 5) is measured but not switched on. Opponent simulation in the scenario runner (item 7) is not built. Team-environment inputs still lean on search snippets for some coordinators and win totals; see `research/team_env_notes.md` for the [UNVERIFIED] flags.
