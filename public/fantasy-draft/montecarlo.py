@@ -90,7 +90,8 @@ def lineup_value(roster, key):
     return val + flex + 0.25 * bench   # the five bench slots count a quarter: injuries and byes make depth matter in head-to-head
 
 
-def simulate(players, teams, slot, strategy, profile, sims, seed=7, forced_first=None):
+def simulate(players, teams, slot, strategy, profile, sims, seed=7, forced_first=None, probe=None):
+    """probe: {label: (pick, [player ids])} -> per-sim record of how many of the group survived to that pick."""
     rng = np.random.default_rng(seed)
     n = len(players)
     adp = np.array([p["adp"] for p in players]); sd = np.array([p["sd"] for p in players])
@@ -99,6 +100,7 @@ def simulate(players, teams, slot, strategy, profile, sims, seed=7, forced_first
     avail_count = np.zeros((SKILL_ROUNDS, n))
     pick_counter = [Counter() for _ in range(SKILL_ROUNDS)]
     values = []
+    probe_hits = {k: [] for k in (probe or {})}
     for _ in range(sims):
         X = rng.normal(adp, sd)
         order = np.argsort(X)
@@ -112,6 +114,9 @@ def simulate(players, teams, slot, strategy, profile, sims, seed=7, forced_first
             team_ix = pos_in_round - 1 if rnd % 2 else teams - pos_in_round
             if pick in my_picks:
                 r_ix = my_picks.index(pick)
+                for lab, (ppick, ids) in (probe or {}).items():
+                    if pick == ppick:
+                        probe_hits[lab].append(sum(1 for pid in ids if pid in idx_by_id and not taken[idx_by_id[pid]]))
                 if r_ix >= SKILL_ROUNDS:
                     continue  # K / D/ST
                 avail_count[r_ix] += ~taken
@@ -147,7 +152,7 @@ def simulate(players, teams, slot, strategy, profile, sims, seed=7, forced_first
         values.append((lineup_value(my_roster, "proj"), lineup_value(my_roster, "floor"), lineup_value(my_roster, "ceil"),
                        Counter(p["pos"] for p in my_roster)))
     avail = avail_count / sims
-    return {"values": values, "avail": avail, "picks": pick_counter, "my_picks": my_picks[:SKILL_ROUNDS]}
+    return {"values": values, "avail": avail, "picks": pick_counter, "my_picks": my_picks[:SKILL_ROUNDS], "probe": probe_hits}
 
 
 def main():

@@ -26,12 +26,14 @@ import json
 import math
 import re
 import unicodedata
+from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 DATA = HERE / "data" / "players.json"
 OUT = HERE / "scenarios"
+BENCH = 5   # QB, 2 RB, 2 WR, TE, FLEX, D/ST, K + 5 bench (GDL Fantasy)
 
 PROFILES = {  # log-rank units per 100 points of score
     "safe": {"boom": 0.15, "bust": 0.50, "risk": 0.30},
@@ -127,6 +129,24 @@ def pick_score(p, rnd, pick, profile, strategy, roster, teams, sit_w=0.0, sos_w=
     return s, pa
 
 
+def lineup_value(roster, key):
+    """Same scoring as the Monte Carlo: best lineup plus a quarter of the five bench slots."""
+    by = defaultdict(list)
+    for p in roster:
+        by[p["pos"]].append(p.get(key) or 0)
+    for pos in by:
+        by[pos].sort(reverse=True)
+    take = lambda pos, n: sum(by[pos][:n])
+    starters = take("QB", 1) + take("RB", 2) + take("WR", 2) + take("TE", 1)
+    flex_c = [(by["RB"][2] if len(by["RB"]) > 2 else 0, "RB"), (by["WR"][2] if len(by["WR"]) > 2 else 0, "WR"), (by["TE"][1] if len(by["TE"]) > 1 else 0, "TE")]
+    flex, fpos = max(flex_c)
+    used = {"QB": 1, "RB": 2, "WR": 2, "TE": 1}
+    used[fpos] += 1
+    leftovers = sorted((v for pos in ("QB", "RB", "WR", "TE") for v in by[pos][used[pos]:]), reverse=True)
+    bench = sum(leftovers[:BENCH])
+    return starters + flex + 0.25 * bench, starters, flex, 0.25 * bench
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--teams", type=int, default=10)
@@ -136,6 +156,7 @@ def main():
     ap.add_argument("--profile", choices=sorted(PROFILES), default="balanced")
     ap.add_argument("--min-avail", type=float, default=0.30, help="only list players at least this likely to be there")
     ap.add_argument("--taken", default="", help="comma-separated names already drafted by others")
+    ap.add_argument("--avoid", default="", help="comma-separated names to keep off the board (research verdicts, injuries)")
     ap.add_argument("--mine", default="", help="comma-separated names already on your roster (in order)")
     ap.add_argument("--start-round", type=int, default=None, help="first round to plan (default: after your --mine picks)")
     ap.add_argument("--top", type=int, default=4)
@@ -162,7 +183,13 @@ def main():
 
     taken = resolve(a.taken)
     roster = resolve(a.mine)
+    avoid = resolve(a.avoid)
     gone = {p["id"] for p in taken} | {p["id"] for p in roster}
+    blocked = {p["id"] for p in avoid}
+
+    mc_path = OUT / "montecarlo_avail.json"
+    mc = json.loads(mc_path.read_text()) if mc_path.exists() else None
+    use_mc = bool(mc) and mc["teams"] == a.teams and mc["slot"] == a.slot
     picks = my_picks(a.teams, a.slot, a.rounds)
     start = a.start_round or (len(roster) + 1)
 
@@ -171,9 +198,11 @@ def main():
         pick = picks[rnd - 1]
         cands = []
         for p in players:
-            if p["id"] in gone:
+            if p["id"] in gone or p["id"] in blocked:
                 continue
             s, pa = pick_score(p, rnd, pick, a.profile, a.strategy, roster, a.teams, a.sit_weight, a.sos_weight)
+            if use_mc and p["id"] in mc["players"] and pick in mc["picks"]:
+                pa = mc["players"][p["id"]][mc["picks"].index(pick)]   # simulated opponents beat the ADP curve
             if pa < a.min_avail:
                 continue
             cands.append((s, pa, p))
@@ -196,10 +225,13 @@ def main():
     hdr += f"- Strategy: **{a.strategy}** · risk profile: **{a.profile}** · min availability {a.min_avail:.0%} · 2026 situation weight {a.sit_weight} · playoff-schedule weight {a.sos_weight}\n"
     if taken:
         hdr += f"- Already gone: {', '.join(p['name'] for p in taken)}\n"
+    if avoid:
+        hdr += f"- Kept off the board: {', '.join(p['name'] for p in avoid)}\n"
     if a.mine:
         hdr += f"- Your roster coming in: {', '.join(p['name'] for p in resolve(a.mine))}\n"
     hdr += f"- Generated {datetime.now():%Y-%m-%d %H:%M}\n\n"
-    hdr += "Cell = player (position rank, composite rank, chance still on the board at that pick). "
+    hdr += f"- Availability from {mc['sims']} simulated ESPN drafts\n" if use_mc else "- Availability from the ADP curve\n"
+    hdr += "\nCell = player (position rank, composite rank, chance still on the board at that pick). "
     hdr += "The #1 target each round is assumed drafted before planning the next round.\n\n"
 
     cols = ["Rd", "Pick"] + [f"#{i + 1}" for i in range(a.top)]
@@ -214,6 +246,11 @@ def main():
         md += f"{i}. {p['name']} — {p['pos']}{p['posRank']} {p['team']} (bye {p['bye']}) · comp {p['comp']} · proj {p.get('proj') or '–'} · VBD {p.get('vbd') if p.get('vbd') is not None else '–'} · boom {p['boom']} / bust {p['bust']} / risk {p['risk']}\n"
     counts = {pos: sum(1 for p in final if p["pos"] == pos) for pos in ("QB", "RB", "WR", "TE")}
     md += "\nPosition mix: " + ", ".join(f"{k} {v}" for k, v in counts.items()) + "\n"
+
+    for key, lab in (("proj", "Projected"), ("floorPts", "Floor (p10)"), ("ceilPts", "Ceiling (p90)")):
+        v = lineup_value(final, key)
+        md += f"\n{lab}: **{v[0]:.0f}** (starters {v[1]:.0f} + flex {v[2]:.0f} + a quarter of the five bench {v[3]:.0f})"
+    md += "\n"
 
     (OUT / f"{name}.md").write_text(md)
     with (OUT / f"{name}.csv").open("w", newline="") as f:
