@@ -87,18 +87,21 @@ def season_features(rows, year):
     """rows = weekly player stats for one season. Returns per-player dict and thresholds."""
     reg = [r for r in rows if r["season_type"] == "REG" and r["position"] in POS]
     # weekly positional cut-offs
-    by_week = defaultdict(lambda: defaultdict(list))
-    for r in reg:
-        by_week[int(r["week"])][r["position"]].append(num(r["fantasy_points_ppr"]))
+    FMT = {"ppr": lambda r: num(r["fantasy_points_ppr"]), "half": lambda r: 0.5 * (num(r["fantasy_points_ppr"]) + num(r["fantasy_points"])), "std": lambda r: num(r["fantasy_points"])}
     thr = {}
-    for pos in POS:
-        booms, busts = [], []
-        for wk, d in by_week.items():
-            pts = sorted(d[pos], reverse=True)
-            if len(pts) >= BUST_SLOT[pos]:
-                booms.append(pts[BOOM_SLOT[pos] - 1])
-                busts.append(pts[BUST_SLOT[pos] - 1])
-        thr[pos] = {"boom": round(statistics.mean(booms), 1), "bust": round(statistics.mean(busts), 1)}
+    for fmt, fn in FMT.items():
+        by_week = defaultdict(lambda: defaultdict(list))
+        for r in reg:
+            by_week[int(r["week"])][r["position"]].append(fn(r))
+        for pos in POS:
+            booms, busts = [], []
+            for wk, d in by_week.items():
+                pts = sorted(d[pos], reverse=True)
+                if len(pts) >= BUST_SLOT[pos]:
+                    booms.append(pts[BOOM_SLOT[pos] - 1])
+                    busts.append(pts[BUST_SLOT[pos] - 1])
+            thr[(fmt, pos)] = {"boom": round(statistics.mean(booms), 1), "bust": round(statistics.mean(busts), 1)}
+    thr_out = {pos: thr[("ppr", pos)] for pos in POS}
     # team volume per week for shares
     team_wk = defaultdict(lambda: defaultdict(float))
     for r in reg:
@@ -110,10 +113,11 @@ def season_features(rows, year):
         if num(r["targets"]) + num(r["carries"]) + num(r["attempts"]) == 0:
             continue  # did not play
         key = (r["player_id"], r["position"])
-        p = players.setdefault(key, {"name": r["player_display_name"], "pos": r["position"], "team": team(r["team"]), "weeks": [], "targets": 0, "carries": 0, "receptions": 0,
+        p = players.setdefault(key, {"name": r["player_display_name"], "pos": r["position"], "team": team(r["team"]), "weeks": [], "weeks_half": [], "weeks_std": [], "targets": 0, "carries": 0, "receptions": 0,
                                      "rec_yds": 0, "rush_yds": 0, "tds": 0, "team_targets": 0, "team_carries": 0, "pass_att": 0, "rush_att": 0})
         pts = num(r["fantasy_points_ppr"])
         p["weeks"].append(pts)
+        p["weeks_half"].append(FMT["half"](r)); p["weeks_std"].append(FMT["std"](r))
         p["team"] = team(r["team"])  # last team of the season
         p["targets"] += num(r["targets"]); p["carries"] += num(r["carries"]); p["receptions"] += num(r["receptions"])
         p["rec_yds"] += num(r["receiving_yards"]); p["rush_yds"] += num(r["rushing_yards"])
@@ -125,19 +129,24 @@ def season_features(rows, year):
     for (pid, pos), p in players.items():
         w = p["weeks"]
         g = len(w)
-        boom = sum(1 for x in w if x >= thr[pos]["boom"]) / g
-        bust = sum(1 for x in w if x <= thr[pos]["bust"]) / g
+        boom = sum(1 for x in w if x >= thr[("ppr", pos)]["boom"]) / g
+        bust = sum(1 for x in w if x <= thr[("ppr", pos)]["bust"]) / g
         mean = statistics.mean(w)
         sd = statistics.pstdev(w) if g > 1 else 0.0
+        fmt_rates = {}
+        for fmt, wk in (("half", p["weeks_half"]), ("std", p["weeks_std"])):
+            b_t, u_t = thr[(fmt, pos)]["boom"], thr[(fmt, pos)]["bust"]
+            fmt_rates[fmt] = {"boom_rate": round(sum(1 for x in wk if x >= b_t) / g, 3), "bust_rate": round(sum(1 for x in wk if x <= u_t) / g, 3), "ppg": round(statistics.mean(wk), 1)}
         out[(pid, pos)] = {
             "name": p["name"], "pos": pos, "team": p["team"], "games": g, "ppg": round(mean, 1), "total": round(sum(w), 1),
             "boom_rate": round(boom, 3), "bust_rate": round(bust, 3), "weekly_sd": round(sd, 1), "cv": round(sd / mean, 3) if mean > 0 else None,
+            "formats": fmt_rates,
             "targets": int(p["targets"]), "target_share": round(p["targets"] / p["team_targets"], 3) if p["team_targets"] else None,
             "carries": int(p["carries"]), "carry_share": round(p["carries"] / p["team_carries"], 3) if p["team_carries"] else None,
             "receptions": int(p["receptions"]), "rec_yds": int(p["rec_yds"]), "rush_yds": int(p["rush_yds"]), "tds": int(p["tds"]), "pass_att": int(p["pass_att"]),
             "year": year,
         }
-    return out, thr
+    return out, thr_out
 
 
 def defense_allowed(rows):
@@ -206,6 +215,13 @@ def main():
         else:
             boom = (s25 or s24 or {}).get("boom_rate")
             bust = (s25 or s24 or {}).get("bust_rate")
+        rates_fmt = {}
+        for fmt in ("half", "std"):
+            a = (s25 or {}).get("formats", {}).get(fmt); b = (s24 or {}).get("formats", {}).get(fmt)
+            if a and b:
+                rates_fmt[fmt] = {"boom_rate": round(0.65 * a["boom_rate"] + 0.35 * b["boom_rate"], 3), "bust_rate": round(0.65 * a["bust_rate"] + 0.35 * b["bust_rate"], 3)}
+            elif a or b:
+                rates_fmt[fmt] = {"boom_rate": (a or b)["boom_rate"], "bust_rate": (a or b)["bust_rate"]}
         status_code = (r26 or {}).get("status_description_abbr")
         avail, flag = ROSTER_STATUS.get(status_code, (None, None))
         draft_no = (r26 or {}).get("draft_number") or ""
@@ -222,6 +238,7 @@ def main():
             "s2025": s25, "s2024": s24,
             "boom_rate": round(boom, 3) if boom is not None else None,
             "bust_rate": round(bust, 3) if bust is not None else None,
+            "rates_by_format": rates_fmt,
         }
 
     # --- per team: 2025 volume and 2026 vacated volume ---------------------------------------

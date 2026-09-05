@@ -44,6 +44,8 @@ FILES = {
     "najib_xref.parquet": "https://raw.githubusercontent.com/najibismail95/Fantasy-Football-ADP-Comparison-Tool/main/data/silver/player_xref.parquet",
     "ep_weekly_2025.csv": "https://github.com/ffverse/ffopportunity/releases/download/latest-data/ep_weekly_2025.csv",
     "demansou_playcaller_census.json": "https://raw.githubusercontent.com/demansou/fantasy-football-26/main/data/research/2026/playcaller_census.json",
+    "ffc-half-ppr.json": "https://raw.githubusercontent.com/Danoodli/fantasy-drafter/main/data/raw/ffc-half-ppr.json",
+    "ffc-standard.json": "https://raw.githubusercontent.com/Danoodli/fantasy-drafter/main/data/raw/ffc-standard.json",
 }
 POS = ("QB", "RB", "WR", "TE")
 ESPN_TEAM = {1: "ATL", 2: "BUF", 3: "CHI", 4: "CIN", 5: "CLE", 6: "DAL", 7: "DEN", 8: "DET", 9: "GB", 10: "TEN", 11: "IND", 12: "KC", 13: "LV", 14: "LAR",
@@ -105,6 +107,10 @@ def main():
         if r["position"] in POS:
             P[key_for(r["name"], r["position"])]["ffc"] = {"adp": r["adp"], "stdev": r["stdev"], "high": r["high"], "low": r["low"], "n": r["times_drafted"]}
     ffc_meta = ffc["meta"]
+    for fname, key in (("ffc-half-ppr.json", "ffcHalf"), ("ffc-standard.json", "ffcStd")):
+        for r in jload(fname)["players"]:
+            if r["position"] in POS:
+                P[key_for(r["name"], r["position"])][key] = {"adp": r["adp"], "stdev": r["stdev"], "n": r["times_drafted"]}
 
     # --- Sleeper ADP history (PPR) -> 7-day trend ------------------------------------------------
     hist = jload("adp-history-ppr.json")
@@ -133,7 +139,9 @@ def main():
         if pts < 20:
             continue
         for pos in ([nm[1]] if nm[1] else POS):
-            P[key_for(nm[0], pos)]["sleeper"] = {"projPpr": round(pts, 1), "adpPpr": (v.get("adp") or {}).get("ppr")}
+            P[key_for(nm[0], pos)]["sleeper"] = {"projPpr": round(pts, 1), "adpPpr": (v.get("adp") or {}).get("ppr"), "adpHalf": (v.get("adp") or {}).get("half-ppr"), "adpStd": (v.get("adp") or {}).get("standard"),
+                                                 "stats": {"passYds": st.get("passYds", 0), "passTD": st.get("passTD", 0), "ints": st.get("passInt", 0), "rushYds": st.get("rushYds", 0), "rushTD": st.get("rushTD", 0),
+                                                           "rec": st.get("receptions", 0), "recYds": st.get("recYds", 0), "recTD": st.get("recTD", 0), "fum": st.get("fumblesLost", 0)}}
 
     # --- ESPN live player file ------------------------------------------------------------------
     kona = jload("espn-kona.json")
@@ -145,15 +153,16 @@ def main():
             continue
         team = ESPN_TEAM.get(pl.get("proTeamId"))
         proj = next((s for s in pl.get("stats", []) if s.get("seasonId") == 2026 and s.get("statSourceId") == 1 and s.get("statSplitTypeId") == 0), None)
-        pts = None
+        pts = None; stats = None
         if proj and proj.get("stats"):
             st = {int(k): v for k, v in proj["stats"].items()}
             pts = round(ppr(st.get(3, 0), st.get(4, 0), st.get(20, 0), st.get(24, 0), st.get(25, 0), st.get(53, 0), st.get(42, 0), st.get(43, 0), st.get(72, 0)), 1)
+            stats = {"passYds": st.get(3, 0), "passTD": st.get(4, 0), "ints": st.get(20, 0), "rushYds": st.get(24, 0), "rushTD": st.get(25, 0), "rec": st.get(53, 0), "recYds": st.get(42, 0), "recTD": st.get(43, 0), "fum": st.get(72, 0)}
         own = pl.get("ownership") or {}
         rk = ((pl.get("draftRanksByRankType") or {}).get("PPR") or {}).get("rank")
         P[key_for(pl["fullName"], pos)]["espn"] = {
             "team": team, "adp": own.get("averageDraftPosition"), "adpChangePct": own.get("averageDraftPositionPercentChange"), "pctOwned": own.get("percentOwned"),
-            "pprRank": rk, "injuryStatus": pl.get("injuryStatus"), "projPpr": pts, "auction": own.get("auctionValueAverage"),
+            "pprRank": rk, "injuryStatus": pl.get("injuryStatus"), "projPpr": pts, "auction": own.get("auctionValueAverage"), "stats": stats,
         }
 
     # --- daily multi-source ADP snapshots -> latest per source + 7/30-day trend --------------------
@@ -195,6 +204,7 @@ def main():
         P[key_for(r["player_name"], r["position"])]["bayes"] = {
             "proj": round(float(r["projection"]), 1), "p10": round(float(r["p10"]), 1), "p50": round(float(r["p50"]), 1), "p90": round(float(r["p90"]), 1),
             "games": round(float(r["projected_games"]), 1), "tgtShare": round(float(r["target_share"]), 3) if pd.notna(r["target_share"]) else None,
+            "recEst": round(float(r["targets"]) * float(r["catch_rate"]), 1) if pd.notna(r.get("targets")) and pd.notna(r.get("catch_rate")) else None,
             "carShare": round(float(r["carry_share"]), 3) if pd.notna(r["carry_share"]) else None, "team": r["team"],
         }
 

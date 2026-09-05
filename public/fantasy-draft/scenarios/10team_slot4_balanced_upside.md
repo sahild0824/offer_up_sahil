@@ -1,8 +1,8 @@
 # Scenario: 10team_slot4_balanced_upside
 
-- League: 10 teams, slot 4, full PPR snake, picks #4, #17, #24, #37, #44, #57, #64, #77, #84, #97, #104, #117, #124, #137
+- League: 10 teams, slot 4, full PPR snake, picks #4, #17, #24, #37, #44, #57, #64, #77, #84, #97, #104, #117
 - Strategy: **balanced** · risk profile: **upside** · min availability 30% · 2026 situation weight 0.1 · playoff-schedule weight 0.04
-- Generated 2026-09-05 01:55
+- Generated 2026-09-05 02:22
 
 Cell = player (position rank, composite rank, chance still on the board at that pick). The #1 target each round is assumed drafted before planning the next round.
 
@@ -15,13 +15,11 @@ Cell = player (position rank, composite rank, chance still on the board at that 
 | 5 | 44 | Luther Burden III (WR23, comp 51, 98%, 2026 85) | Jaylen Waddle (WR21, comp 41, 73%, 2026 85) | Emeka Egbuka (WR20, comp 41, 33%, 2026 78) | Ladd McConkey (WR18, comp 39, 42%, 2026 85) |
 | 6 | 57 | Jadarian Price (RB24, comp 63, 84%, 2026 85) | Christian Watson (WR28, comp 58, 95%, 2026 68) | Bhayshul Tuten (RB23, comp 59, 57%, 2026 85) | TreVeyon Henderson (RB25, comp 64, 91%, 2026 46) |
 | 7 | 64 | Christian Watson (WR28, comp 58, 85%, 2026 68) | Justin Herbert (QB9, comp 80, 97%, 2026 77) | Parker Washington (WR30, comp 68, 90%, 2026 62) | Carnell Tate (WR32, comp 72, 90%, 2026 79) |
-| 8 | 77 | Justin Herbert (QB9, comp 80, 85%, 2026 77) | Parker Washington (WR30, comp 68, 54%, 2026 62) | Carnell Tate (WR32, comp 72, 54%, 2026 79) | RJ Harvey (RB34, comp 96, 98%, 2026 85) |
+| 8 | 77 | Justin Herbert (QB9, comp 80, 85%, 2026 77) | Trevor Lawrence (QB10, comp 91, 92%, 2026 49) | Caleb Williams (QB8, comp 79, 76%, 2026 58) | Parker Washington (WR30, comp 68, 54%, 2026 62) |
 | 9 | 84 | RJ Harvey (RB34, comp 96, 95%, 2026 85) | Chris Godwin Jr. (WR36, comp 87, 90%, 2026 78) | Brian Thomas Jr. (WR34, comp 78, 79%, 2026 31) | Blake Corum (RB35, comp 102, 97%, 2026 85) |
 | 10 | 97 | Blake Corum (RB35, comp 102, 90%, 2026 85) | Chris Godwin Jr. (WR36, comp 87, 67%, 2026 78) | KC Concepcion (WR49, comp 114, 96%, 2026 68) | Quentin Johnston (WR43, comp 99, 86%, 2026 81) |
 | 11 | 104 | KC Concepcion (WR49, comp 114, 93%, 2026 68) | Jordan Mason (RB40, comp 112, 88%, 2026 69) | Quentin Johnston (WR43, comp 99, 75%, 2026 81) | Jayden Reed (WR40, comp 95, 82%, 2026 68) |
-| 12 | 117 | Jordan Mason (RB40, comp 112, 68%, 2026 69) | Kyle Monangai (RB37, comp 110, 46%, 2026 80) | Jacory Croskey-Merritt (RB38, comp 110, 65%, 2026 43) | Kyler Murray (QB17, comp 120, 81%, 2026 85) |
-| 13 | 124 | Kyler Murray (QB17, comp 120, 70%, 2026 85) | Dalton Kincaid (TE11, comp 113, 64%, 2026 71) | Jordan Love (QB18, comp 129, 87%, 2026 47) | Makai Lemon (WR46, comp 106, 58%, 2026 85) |
-| 14 | 137 | Dalton Kincaid (TE11, comp 113, 35%, 2026 71) | Brenton Strange (TE18, comp 152, 86%, 2026 46) | Jordyn Tyson (WR51, comp 122, 78%, 2026 62) | Juwan Johnson (TE16, comp 141, 78%, 2026 22) |
+| 12 | 117 | Jordan Mason (RB40, comp 112, 68%, 2026 69) | Kyle Monangai (RB37, comp 110, 46%, 2026 80) | Jacory Croskey-Merritt (RB38, comp 110, 65%, 2026 43) | Rachaad White (RB39, comp 111, 63%, 2026 23) |
 
 ## Resulting roster if you take the #1 target every round
 
@@ -37,7 +35,5 @@ Cell = player (position rank, composite rank, chance still on the board at that 
 10. Blake Corum — RB35 LAR (bye 11) · comp 102.2 · proj 128 · VBD -56 · boom 97 / bust 41 / risk 48
 11. KC Concepcion — WR49 CLE (bye 11) · comp 113.9 · proj 138 · VBD -53 · boom 100 / bust 58 / risk 79
 12. Jordan Mason — RB40 MIN (bye 6) · comp 111.7 · proj 141 · VBD -43 · boom 89 / bust 34 / risk 61
-13. Kyler Murray — QB17 MIN (bye 6) · comp 119.6 · proj 257 · VBD -26 · boom 98 / bust 62 / risk 98
-14. Dalton Kincaid — TE11 BUF (bye 7) · comp 113.0 · proj 154 · VBD -17 · boom 90 / bust 59 / risk 76
 
-Position mix: QB 2, RB 5, WR 5, TE 2
+Position mix: QB 1, RB 5, WR 5, TE 1

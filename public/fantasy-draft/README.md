@@ -22,6 +22,7 @@ python3 nflverse_features.py --fetch   # 2024-25 game logs, 2026 rosters, birthd
 python3 market_features.py --fetch     # fresh ADP (FFC, ESPN, Sleeper, FantasyPros, Yahoo), projections, injury model, Vegas, O-line, play-callers
 python3 build.py                       # scores everything and injects the data into index.html
 python3 scenario.py --strategy hero-rb # top-4 targets per round (also --sit-weight, --sos-weight)
+python3 montecarlo.py --sims 1500        # simulated opponents; feeds per-pick availability into the app
 ```
 
 ## Rebuilding the data (details)
@@ -60,6 +61,20 @@ python3 scenario.py --teams 12 --slot 7
 ```
 
 Each run prints and saves `scenarios/<name>.md` and `.csv`: the top 4 targets for every one of your picks (name, position rank, composite, chance still on the board), assuming you take the #1 target each round, plus the resulting roster. Strategies: `balanced`, `hero-rb`, `zero-rb`, `robust-rb`, `wr-heavy`. Profiles: `safe`, `balanced`, `upside`. Use `--min-avail` to tighten or loosen how likely a player must be to reach your pick.
+
+## Monte Carlo draft simulator
+
+```
+python3 montecarlo.py --sims 1500                                   # GDL Fantasy: 10 teams, slot 4, ESPN room, full PPR
+python3 montecarlo.py --sims 1000 --players data/players_half.json --tag _half
+python3 montecarlo.py --teams 12 --slot 7 --room blend
+```
+
+`montecarlo.py` replays the whole 14-round draft (QB, 2 RB, 2 WR, TE, FLEX, D/ST, K and 5 bench; the IR slot is not drafted) a few thousand times. The nine opponents draw each player's draft position from a normal around his ESPN ADP with his measured spread and follow simple roster rules (one QB and one TE until the late rounds, position caps, K and D/ST mostly in rounds 13-14). Your picks follow a strategy preset. It writes `scenarios/montecarlo_summary<tag>.md` (strategy and first-pick comparison, per-round pick frequencies, availability at every one of your picks) and `scenarios/montecarlo_avail<tag>.json`, which `build.py` attaches to every player as `mcAvail` so the app's availability chips use simulated rather than logistic odds when the league settings match.
+
+## Scoring formats
+
+The header toggle switches the app between full PPR (GDL Fantasy's setting: 1 point per reception), half PPR and standard. `build.py` builds all three: stat-line projections are re-scored, the Bayesian floor / ceiling shift by projected receptions, boom / bust week rates are recomputed from the game logs at the format's thresholds, format-specific ADP feeds are used (FFC, Sleeper, ESPN, Yahoo, Underdog, Draft Sharks) and the composite is shifted by half the change in value over the positional baseline. Overlays are embedded in `index.html` as `alt.half` and `alt.std`.
 
 ## Caveats
 

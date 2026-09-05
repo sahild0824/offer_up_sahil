@@ -87,12 +87,12 @@ def need_adj(roster, rnd, pos, teams):
         return -3.0
     if pos == "QB":
         if count["QB"] >= 1:
-            adj -= 1.5 if rnd < 12 else 0.2
+            adj -= 1.5 if rnd < 10 else 0.4   # five bench slots: a QB2 is a luxury until the last skill rounds
         elif rnd <= 3:
             adj -= 0.4  # the research: do not pay the Allen tax in a 10-team one-QB league
     if pos == "TE":
         if count["TE"] >= 1:
-            adj -= 1.2 if rnd < 11 else 0.2
+            adj -= 1.2 if rnd < 10 else 0.3
         elif rnd <= 2:
             adj -= 0.15  # elite TE is a pivot, not the plan
     if pos in ("RB", "WR"):
@@ -103,10 +103,10 @@ def need_adj(roster, rnd, pos, teams):
             adj += 0.05
         if count[pos] >= 5:
             adj -= 0.30
-    if pos == "QB" and count["QB"] == 0 and rnd >= 9:
-        adj += 0.15 + 0.10 * (rnd - 9)
-    if pos == "TE" and count["TE"] == 0 and rnd >= 8:
-        adj += 0.12 + 0.10 * (rnd - 8)
+    if pos == "QB" and count["QB"] == 0 and rnd >= 8:
+        adj += 0.15 + 0.12 * (rnd - 8)   # 12 skill rounds: the starter has to be in by round 12
+    if pos == "TE" and count["TE"] == 0 and rnd >= 7:
+        adj += 0.12 + 0.12 * (rnd - 7)
     return adj
 
 
@@ -131,7 +131,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--teams", type=int, default=10)
     ap.add_argument("--slot", type=int, default=4)
-    ap.add_argument("--rounds", type=int, default=14)
+    ap.add_argument("--rounds", type=int, default=12)  # skill rounds: 7 starters + 5 bench; D/ST and K go in rounds 13-14
     ap.add_argument("--strategy", choices=sorted(STRATEGIES), default="balanced")
     ap.add_argument("--profile", choices=sorted(PROFILES), default="balanced")
     ap.add_argument("--min-avail", type=float, default=0.30, help="only list players at least this likely to be there")

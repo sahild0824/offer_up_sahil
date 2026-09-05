@@ -1,8 +1,8 @@
 # Scenario: 10team_slot4_balanced_safe
 
-- League: 10 teams, slot 4, full PPR snake, picks #4, #17, #24, #37, #44, #57, #64, #77, #84, #97, #104, #117, #124, #137
+- League: 10 teams, slot 4, full PPR snake, picks #4, #17, #24, #37, #44, #57, #64, #77, #84, #97, #104, #117
 - Strategy: **balanced** · risk profile: **safe** · min availability 30% · 2026 situation weight 0.1 · playoff-schedule weight 0.04
-- Generated 2026-09-05 01:55
+- Generated 2026-09-05 02:22
 
 Cell = player (position rank, composite rank, chance still on the board at that pick). The #1 target each round is assumed drafted before planning the next round.
 
@@ -14,14 +14,12 @@ Cell = player (position rank, composite rank, chance still on the board at that 
 | 4 | 37 | Tee Higgins (WR17, comp 36, 86%, 2026 85) | D'Andre Swift (RB19, comp 47, 94%, 2026 51) | Ladd McConkey (WR18, comp 39, 84%, 2026 85) | Colston Loveland (TE3, comp 38, 84%, 2026 75) |
 | 5 | 44 | D'Andre Swift (RB19, comp 47, 74%, 2026 51) | Colston Loveland (TE3, comp 38, 58%, 2026 75) | Luther Burden III (WR23, comp 51, 98%, 2026 85) | Tyler Warren (TE4, comp 53, 93%, 2026 63) |
 | 6 | 57 | Luther Burden III (WR23, comp 51, 80%, 2026 85) | Tyler Warren (TE4, comp 53, 43%, 2026 63) | Justin Herbert (QB9, comp 80, 99%, 2026 77) | Jaylen Warren (RB26, comp 72, 96%, 2026 45) |
-| 7 | 64 | Justin Herbert (QB9, comp 80, 97%, 2026 77) | Jaylen Warren (RB26, comp 72, 88%, 2026 45) | TreVeyon Henderson (RB25, comp 64, 75%, 2026 46) | Trevor Lawrence (QB10, comp 91, 98%, 2026 49) |
-| 8 | 77 | Jaylen Warren (RB26, comp 72, 48%, 2026 45) | J.K. Dobbins (RB33, comp 95, 94%, 2026 54) | Kyle Monangai (RB37, comp 110, 98%, 2026 80) | Kyle Pitts Sr. (TE8, comp 80, 36%, 2026 66) |
-| 9 | 84 | Jake Ferguson (TE13, comp 121, 97%, 2026 51) | Tucker Kraft (TE5, comp 73, 62%, 2026 68) | J.K. Dobbins (RB33, comp 95, 88%, 2026 54) | Kyle Monangai (RB37, comp 110, 96%, 2026 80) |
+| 7 | 64 | Justin Herbert (QB9, comp 80, 97%, 2026 77) | Jaylen Warren (RB26, comp 72, 88%, 2026 45) | Kyle Pitts Sr. (TE8, comp 80, 83%, 2026 66) | TreVeyon Henderson (RB25, comp 64, 75%, 2026 46) |
+| 8 | 77 | Jaylen Warren (RB26, comp 72, 48%, 2026 45) | Kyle Pitts Sr. (TE8, comp 80, 36%, 2026 66) | Tucker Kraft (TE5, comp 73, 76%, 2026 68) | J.K. Dobbins (RB33, comp 95, 94%, 2026 54) |
+| 9 | 84 | Jake Ferguson (TE13, comp 121, 97%, 2026 51) | Tucker Kraft (TE5, comp 73, 62%, 2026 68) | Juwan Johnson (TE16, comp 141, 100%, 2026 22) | Sam LaPorta (TE6, comp 75, 49%, 2026 62) |
 | 10 | 97 | Kyle Monangai (RB37, comp 110, 88%, 2026 80) | J.K. Dobbins (RB33, comp 95, 60%, 2026 54) | Blake Corum (RB35, comp 102, 90%, 2026 85) | Jacory Croskey-Merritt (RB38, comp 110, 93%, 2026 43) |
 | 11 | 104 | Blake Corum (RB35, comp 102, 82%, 2026 85) | Jacory Croskey-Merritt (RB38, comp 110, 87%, 2026 43) | Jordan Mason (RB40, comp 112, 88%, 2026 69) | J.K. Dobbins (RB33, comp 95, 39%, 2026 54) |
 | 12 | 117 | Jacory Croskey-Merritt (RB38, comp 110, 65%, 2026 43) | Jordan Mason (RB40, comp 112, 68%, 2026 69) | Dylan Sampson (RB50, comp 163, 97%, 2026 44) | Woody Marks (RB44, comp 139, 91%, 2026 30) |
-| 13 | 124 | Tyler Shough (QB20, comp 136, 86%, 2026 62) | Juwan Johnson (TE16, comp 141, 91%, 2026 22) | Jared Goff (QB16, comp 118, 48%, 2026 60) | Brenton Strange (TE18, comp 152, 94%, 2026 46) |
-| 14 | 137 | Juwan Johnson (TE16, comp 141, 78%, 2026 22) | Brenton Strange (TE18, comp 152, 86%, 2026 46) | Dylan Sampson (RB50, comp 163, 89%, 2026 44) | Hunter Henry (TE17, comp 151, 77%, 2026 47) |
 
 ## Resulting roster if you take the #1 target every round
 
@@ -37,7 +35,5 @@ Cell = player (position rank, composite rank, chance still on the board at that 
 10. Kyle Monangai — RB37 CHI (bye 10) · comp 109.5 · proj 148 · VBD -36 · boom 88 / bust 23 / risk 18
 11. Blake Corum — RB35 LAR (bye 11) · comp 102.2 · proj 128 · VBD -56 · boom 97 / bust 41 / risk 48
 12. Jacory Croskey-Merritt — RB38 WAS (bye 7) · comp 109.9 · proj 138 · VBD -46 · boom 90 / bust 20 / risk 34
-13. Tyler Shough — QB20 NO (bye 8) · comp 135.6 · proj 255 · VBD -28 · boom 45 / bust 22 / risk 2
-14. Juwan Johnson — TE16 NO (bye 8) · comp 140.9 · proj 146 · VBD -25 · boom 47 / bust 19 / risk 4
 
-Position mix: QB 2, RB 5, WR 5, TE 2
+Position mix: QB 1, RB 5, WR 5, TE 1

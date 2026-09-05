@@ -1,8 +1,8 @@
 # Scenario: 10team_slot4_balanced_balanced
 
-- League: 10 teams, slot 4, full PPR snake, picks #4, #17, #24, #37, #44, #57, #64, #77, #84, #97, #104, #117, #124, #137
+- League: 10 teams, slot 4, full PPR snake, picks #4, #17, #24, #37, #44, #57, #64, #77, #84, #97, #104, #117
 - Strategy: **balanced** · risk profile: **balanced** · min availability 30% · 2026 situation weight 0.1 · playoff-schedule weight 0.04
-- Generated 2026-09-05 01:55
+- Generated 2026-09-05 02:22
 
 Cell = player (position rank, composite rank, chance still on the board at that pick). The #1 target each round is assumed drafted before planning the next round.
 
@@ -20,8 +20,6 @@ Cell = player (position rank, composite rank, chance still on the board at that 
 | 10 | 97 | Blake Corum (RB35, comp 102, 90%, 2026 85) | Jayden Reed (WR40, comp 95, 90%, 2026 68) | Jordan Addison (WR42, comp 98, 83%, 2026 46) | Jordan Mason (RB40, comp 112, 94%, 2026 69) |
 | 11 | 104 | Jayden Reed (WR40, comp 95, 82%, 2026 68) | Jordan Mason (RB40, comp 112, 88%, 2026 69) | Jordan Addison (WR42, comp 98, 69%, 2026 46) | Quentin Johnston (WR43, comp 99, 75%, 2026 81) |
 | 12 | 117 | Jordan Mason (RB40, comp 112, 68%, 2026 69) | Jacory Croskey-Merritt (RB38, comp 110, 65%, 2026 43) | Rachaad White (RB39, comp 111, 63%, 2026 23) | Dylan Sampson (RB50, comp 163, 97%, 2026 44) |
-| 13 | 124 | Tyler Shough (QB20, comp 136, 86%, 2026 62) | Kyler Murray (QB17, comp 120, 70%, 2026 85) | Dalton Kincaid (TE11, comp 113, 64%, 2026 71) | KC Concepcion (WR49, comp 114, 70%, 2026 68) |
-| 14 | 137 | Brenton Strange (TE18, comp 152, 86%, 2026 46) | Juwan Johnson (TE16, comp 141, 78%, 2026 22) | Dalton Kincaid (TE11, comp 113, 35%, 2026 71) | KC Concepcion (WR49, comp 114, 41%, 2026 68) |
 
 ## Resulting roster if you take the #1 target every round
 
@@ -37,7 +35,5 @@ Cell = player (position rank, composite rank, chance still on the board at that 
 10. Blake Corum — RB35 LAR (bye 11) · comp 102.2 · proj 128 · VBD -56 · boom 97 / bust 41 / risk 48
 11. Jayden Reed — WR40 GB (bye 11) · comp 94.9 · proj 170 · VBD -21 · boom 74 / bust 41 / risk 56
 12. Jordan Mason — RB40 MIN (bye 6) · comp 111.7 · proj 141 · VBD -43 · boom 89 / bust 34 / risk 61
-13. Tyler Shough — QB20 NO (bye 8) · comp 135.6 · proj 255 · VBD -28 · boom 45 / bust 22 / risk 2
-14. Brenton Strange — TE18 JAX (bye 7) · comp 151.6 · proj 144 · VBD -27 · boom 84 / bust 24 / risk 24
 
-Position mix: QB 2, RB 5, WR 5, TE 2
+Position mix: QB 1, RB 5, WR 5, TE 1

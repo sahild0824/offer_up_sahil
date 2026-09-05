@@ -205,13 +205,19 @@ def percentile_within(players, key_fn, pos):
 # ---------------------------------------------------------------------------
 # projections
 # ---------------------------------------------------------------------------
-def ppr_points(r):
-    g = lambda k: float(r.get(k) or 0)
-    return (g("pass_yds") / 25 + g("pass_tds") * 4 - g("pass_ints") * 2 + g("rush_yds") / 10 + g("rush_tds") * 6
-            + g("receptions") + g("reception_yds") / 10 + g("reception_tds") * 6 - g("fumbles") * 2)
+REC_W = {"ppr": 1.0, "half": 0.5, "std": 0.0}   # points per reception by scoring format
+FORMATS = ("ppr", "half", "std")
+
+
+def stat_points(st, w):
+    """Fantasy points from a stat line with reception weight w (ESPN scoring: 25 pass yds, 4 pass TD, -2 INT, 10 yds, 6 TD, -2 fumble)."""
+    g = lambda k: float(st.get(k) or 0)
+    return (g("passYds") / 25 + g("passTD") * 4 - g("ints") * 2 + g("rushYds") / 10 + g("rushTD") * 6
+            + g("rec") * w + g("recYds") / 10 + g("recTD") * 6 - g("fum") * 2)
 
 
 def load_projections():
+    """Stat lines from the CBS (and older ESPN) exports: {(name, pos): {src: stats}}."""
     out = {}
     for src, fname in (("espn", "espn_projections_2026.csv"), ("cbs", "cbs_projections_2026.csv")):
         p = DATA / "raw" / fname
@@ -224,7 +230,9 @@ def load_projections():
                     continue
                 if not any(r.get(k) for k in ("pass_yds", "rush_yds", "reception_yds")):
                     continue
-                out.setdefault((norm_name(r["name"]), r["pos"]), {})[src] = round(ppr_points(r), 1)
+                g = lambda k: float(r.get(k) or 0)
+                out.setdefault((norm_name(r["name"]), r["pos"]), {})[src] = {"passYds": g("pass_yds"), "passTD": g("pass_tds"), "ints": g("pass_ints"), "rushYds": g("rush_yds"), "rushTD": g("rush_tds"),
+                                                                             "rec": g("receptions"), "recYds": g("reception_yds"), "recTD": g("reception_tds"), "fum": g("fumbles")}
     return out
 
 
@@ -253,7 +261,8 @@ def load_ffa():
 
 
 # ---------------------------------------------------------------------------
-def main():
+def build(scoring="ppr", mc_tag=""):
+    w_rec = REC_W[scoring]
     rankings = load("rankings.json", [])
     risk = load("risk.json", [])
     byes = load("byes.json", {})
@@ -345,51 +354,80 @@ def main():
         # --- ADP ------------------------------------------------------------------------------
         mk = mkt_players.get(key + "|" + pos, {})
         adps = {}
-        if mk.get("ffc"):
-            adps["ffc_sep4"] = mk["ffc"]["adp"]
         if (mk.get("espn") or {}).get("adp"):
-            adps["espn_live"] = mk["espn"]["adp"]
-        if (mk.get("sleeperAdp") or {}).get("latest"):
-            adps["sleeper_live"] = mk["sleeperAdp"]["latest"]
-        for src, dst in (("fantasypros", "fantasypros_live"), ("yahoo", "yahoo_live")):
-            a = (mk.get("adpLatest") or {}).get(src)
-            if a and a.get("adp") and a.get("date", "") >= "2026-09-01":
-                adps[dst] = a["adp"]
-        for k, v in (r.get("adp") or {}).items():
-            if v is None:
-                continue
-            if k == "draftsharks_half_consensus":      # feed is round.pick for a 12-team draft, e.g. 6.2 = round 6, pick 2
-                rd, pk = divmod(round(v * 10), 10)
-                v = (rd - 1) * 12 + (pk if pk else 10)
-            if v > 300:                                # undrafted placeholders (701, 3054 ...)
-                continue
-            adps[k] = v
-        fresh = {"ffc_sep4", "espn_live", "sleeper_live", "fantasypros_live", "yahoo_live"}
-        n_fresh = sum(1 for k in adps if k in fresh)
-        # when three or more Sept 4 feeds exist, the older feeds add lag, not information
-        adp_pairs = [(v, ADP_WEIGHT.get(k, 0.25) * (0.1 if (n_fresh >= 3 and k not in fresh) else 1.0)) for k, v in adps.items()]
+            adps["espn_live"] = mk["espn"]["adp"]          # ESPN leagues of every format; the league's own room
+        if scoring == "ppr":
+            if mk.get("ffc"):
+                adps["ffc_sep4"] = mk["ffc"]["adp"]
+            if (mk.get("sleeperAdp") or {}).get("latest"):
+                adps["sleeper_live"] = mk["sleeperAdp"]["latest"]
+            for src, dst in (("fantasypros", "fantasypros_live"), ("yahoo", "yahoo_live")):
+                a = (mk.get("adpLatest") or {}).get(src)
+                if a and a.get("adp") and a.get("date", "") >= "2026-09-01":
+                    adps[dst] = a["adp"]
+            for k, v in (r.get("adp") or {}).items():
+                if v is None:
+                    continue
+                if k == "draftsharks_half_consensus":      # feed is round.pick for a 12-team draft, e.g. 6.2 = round 6, pick 2
+                    rd, pk = divmod(round(v * 10), 10)
+                    v = (rd - 1) * 12 + (pk if pk else 10)
+                if v > 300:                                # undrafted placeholders (701, 3054 ...)
+                    continue
+                adps[k] = v
+            fresh = {"ffc_sep4", "espn_live", "sleeper_live", "fantasypros_live", "yahoo_live"}
+            n_fresh = sum(1 for k in adps if k in fresh)
+            # when three or more Sept 4 feeds exist, the older feeds add lag, not information
+            adp_pairs = [(v, ADP_WEIGHT.get(k, 0.25) * (0.1 if (n_fresh >= 3 and k not in fresh) else 1.0)) for k, v in adps.items()]
+            ffc_row = mk.get("ffc")
+        else:
+            ffc_key, sl_key = ("ffcHalf", "adpHalf") if scoring == "half" else ("ffcStd", "adpStd")
+            ffc_row = mk.get(ffc_key)
+            if ffc_row:
+                adps["ffc_" + scoring] = ffc_row["adp"]
+            if (mk.get("sleeper") or {}).get(sl_key):
+                adps["sleeper_" + scoring] = mk["sleeper"][sl_key]
+            if scoring == "half":
+                a = (mk.get("adpLatest") or {}).get("yahoo")     # Yahoo defaults to half PPR
+                if a and a.get("adp") and a.get("date", "") >= "2026-09-01":
+                    adps["yahoo_live"] = a["adp"]
+                for k in ("underdog", "draftsharks_half_consensus"):
+                    v = (r.get("adp") or {}).get(k)
+                    if v is not None and k == "draftsharks_half_consensus":
+                        rd, pk = divmod(round(v * 10), 10); v = (rd - 1) * 12 + (pk if pk else 10)
+                    if v is not None and v <= 300:
+                        adps[k] = v
+            fmt_w = {"espn_live": 2.0, "ffc_" + scoring: 1.5, "sleeper_" + scoring: 1.5, "yahoo_live": 1.0, "underdog": 1.0, "draftsharks_half_consensus": 0.5}
+            adp_pairs = [(v, fmt_w.get(k, 0.1)) for k, v in adps.items()]
         adp = wmean(adp_pairs)
-        plat = [adps[k] for k in ADP_PLATFORMS if k in adps]
+        plat = [adps[k] for k in (ADP_PLATFORMS if scoring == "ppr" else list(adps)) if k in adps]
         adp_sd = statistics.pstdev(plat) if len(plat) > 1 else None
-        ffc_sd = (mk.get("ffc") or {}).get("stdev")
-        if ffc_sd is not None and (mk["ffc"].get("n") or 0) >= 50:
-            adp_sd = round(max(ffc_sd, 0.5 * (adp_sd or 0)), 1)   # within-draft spread from 7,681 FFC drafts, floored by half the cross-site spread
+        ffc_sd = (ffc_row or {}).get("stdev")
+        if ffc_sd is not None and ((ffc_row or {}).get("n") or 0) >= 50:
+            adp_sd = round(max(ffc_sd, 0.5 * (adp_sd or 0)), 1)   # within-draft spread from FFC drafts, floored by half the cross-site spread
         trend = mk.get("adpTrend") or {}
         adp_d7, adp_d30 = trend.get("d7"), trend.get("d30")
         value = (adp - comp) if adp is not None else None
         value_score = 50 + 50 * math.tanh(math.log(adp / comp) / math.log(2)) if adp else None
 
         # --- projections / VBD ----------------------------------------------------------------
-        pj = dict(pj)
-        if (mk.get("espn") or {}).get("projPpr"):
-            pj["espn"] = mk["espn"]["projPpr"]          # live Sept 4 file replaces the older ESPN export
-        if (mk.get("sleeper") or {}).get("projPpr"):
-            pj["sleeper"] = mk["sleeper"]["projPpr"]
-        if (mk.get("bayes") or {}).get("p50"):
-            pj["bayes"] = mk["bayes"]["p50"]
+        stat_lines = dict(pj)                                   # cbs (+ older espn export)
+        if (mk.get("espn") or {}).get("stats"):
+            stat_lines["espn"] = mk["espn"]["stats"]            # live Sept 4 file replaces the older ESPN export
+        if (mk.get("sleeper") or {}).get("stats"):
+            stat_lines["sleeper"] = mk["sleeper"]["stats"]
+        pj = {src: round(stat_points(st, w_rec), 1) for src, st in stat_lines.items()}
+        pj_ppr = {src: round(stat_points(st, 1.0), 1) for src, st in stat_lines.items()}
+        bayes = dict(mk.get("bayes") or {})
+        if bayes.get("p50"):
+            pj_ppr["bayes"] = bayes["p50"]
+            if scoring != "ppr" and bayes.get("recEst") is not None and bayes["p50"] > 0:
+                shift = (1.0 - w_rec) * bayes["recEst"]
+                ratio = max(0.0, (bayes["p50"] - shift) / bayes["p50"])
+                bayes = dict(bayes, p50=round(bayes["p50"] - shift, 1), p10=round(bayes["p10"] * ratio, 1), p90=round(bayes["p90"] * ratio, 1))
+            pj["bayes"] = bayes["p50"]
         proj_pts = statistics.mean(pj.values()) if pj else None
+        proj_ppr = statistics.mean(pj_ppr.values()) if pj_ppr else None
         proj_sd = statistics.pstdev(pj.values()) if len(pj) > 1 else None
-        bayes = mk.get("bayes") or {}
         lh = mk.get("lhallee") or {}
         espn = mk.get("espn") or {}
         ep = mk.get("ep2025") or {}
@@ -504,7 +542,10 @@ def main():
             "teamCtx": {"vacTgtShare": tctx.get("vacated_target_share"), "vacCarShare": tctx.get("vacated_carry_share"), "vacTgt": tctx.get("vacated_targets"), "vacCar": tctx.get("vacated_carries"), "departed": tctx.get("departed"), "unavailable": tctx.get("unavailable")} if tctx else None,
             "_sig": {
                 "sitRaw": sit_raw, "sitUncertain": sit_uncertain,
-                "histBoom": nv.get("boom_rate"), "histBust": nv.get("bust_rate"), "cv": s25.get("cv") if s25 and s25.get("games", 0) >= 6 else None,
+                "histBoom": (nv.get("rates_by_format", {}).get(scoring) or {}).get("boom_rate", nv.get("boom_rate")) if scoring != "ppr" else nv.get("boom_rate"),
+                "histBust": (nv.get("rates_by_format", {}).get(scoring) or {}).get("bust_rate", nv.get("bust_rate")) if scoring != "ppr" else nv.get("bust_rate"),
+                "projPpr": proj_ppr,
+                "cv": s25.get("cv") if s25 and s25.get("games", 0) >= 6 else None,
                 "upside": (comp - best) / comp, "downside": (worst - comp) / comp,
                 "ceil": (bayes["p90"] / bayes["p50"] - 1.0) if bayes.get("p50") and bayes.get("p90") else ((fa.get("ceil_ratio") or 1.0) - 1.0),
                 "floor": (1.0 - bayes["p10"] / bayes["p50"]) if bayes.get("p50") and bayes.get("p10") is not None else (1.0 - (fa.get("floor_ratio") or 1.0)),
@@ -516,6 +557,30 @@ def main():
             },
         })
 
+    if scoring != "ppr":
+        # Expert ranks are full PPR. Shift each player's composite by how his projection rank moves under this
+        # format (70% credited), so backs rise and target-heavy receivers / tight ends fall in half and standard.
+        have = [p for p in players if p["proj"] is not None and p["_sig"].get("projPpr") is not None]
+        # value over the positional baseline in each format, so the shift respects scarcity (the WR baseline drops too)
+        def vbd_map(key):
+            out = {}
+            for pos in ("QB", "RB", "WR", "TE"):
+                g = sorted((p for p in have if p["pos"] == pos), key=lambda p: -(p[key] if key == "proj" else p["_sig"][key]))
+                base = (g[BASELINE[pos] - 1][key] if key == "proj" else g[BASELINE[pos] - 1]["_sig"][key]) if len(g) >= BASELINE[pos] else 0
+                for p in g:
+                    out[p["id"]] = (p[key] if key == "proj" else p["_sig"][key]) - base
+            return out
+        v_fmt, v_ppr = vbd_map("proj"), vbd_map("projPpr")
+        order_fmt = {pid: i for i, pid in enumerate(sorted(v_fmt, key=lambda k: -v_fmt[k]), 1)}
+        order_ppr = {pid: i for i, pid in enumerate(sorted(v_ppr, key=lambda k: -v_ppr[k]), 1)}
+        for p in have:
+            delta = 0.5 * (order_fmt[p["id"]] - order_ppr[p["id"]])
+            p["comp"] = round(max(1.0, p["comp"] + delta), 1)
+            p["value"] = round(p["adp"] - p["comp"], 1) if p["adp"] is not None else None
+            p["valueScore"] = round(50 + 50 * math.tanh(math.log(p["adp"] / p["comp"]) / math.log(2))) if p["adp"] else None
+            p["_sig"]["upside"] = (p["comp"] - p["best"]) / p["comp"]
+            p["_sig"]["downside"] = (p["worst"] - p["comp"]) / p["comp"]
+            p["_sig"]["spread"] = p["sd"] / p["comp"]
     players.sort(key=lambda p: p["comp"])
 
     # --- positional rank, VBD baselines, tiers ---------------------------------------------
@@ -708,6 +773,13 @@ def main():
         g = [p for p in players if p["pos"] == pos]
         print(f"{pos}: {len(g)} players, tiers {max(p['tier'] for p in g)}, top: " + ", ".join(f"{p['name']} {p['comp']}" for p in g[:5]))
 
+    mc_path = HERE / "scenarios" / f"montecarlo_avail{mc_tag}.json"
+    mc = json.loads(mc_path.read_text()) if mc_path.exists() else None
+    if mc:
+        for p in players:
+            if p["id"] in mc["players"]:
+                p["mcAvail"] = mc["players"][p["id"]]
+        print(f"monte carlo availability attached for {sum(1 for p in players if p.get('mcAvail'))} players ({mc['sims']} sims, {mc['room']} room, slot {mc['slot']})")
     out = {
         "players": [{k: v for k, v in p.items() if not k.startswith("_")} for p in players],
         "strategy": strategy,
@@ -719,21 +791,41 @@ def main():
             "unavailable": model.get("unavailable", []),
             "model": {"intro": model.get("intro", ""), "sections": model.get("sections", [])},
             "weights": W, "situationWeights": situation.SW, "outletWeights": OUTLET_WEIGHT, "baselines": BASELINE,
+            "mc": {"teams": mc["teams"], "slot": mc["slot"], "room": mc["room"], "sims": mc["sims"], "picks": mc["picks"], "generated": mc["generated"]} if mc else None,
             "teams": {t: {"hc": r.get("hc"), "hcNew": r.get("hc_new"), "oc": r.get("oc"), "ocNew": r.get("oc_new"), "playcaller": r.get("playcaller"), "scheme": r.get("scheme_notes"),
                           "passRate": r.get("pass_rate_tendency"), "pace": r.get("pace_tendency"), "rbUsage": r.get("rb_usage"), "qb": r.get("qb"), "qbNew": r.get("qb_new"), "qbTier": r.get("qb_tier"),
                           "qbNote": r.get("qb_note"), "vegasWins": r.get("vegas_wins"), "impliedPpg": r.get("implied_ppg"), "olineRank": r.get("oline_rank"), "arrivals": r.get("arrivals"),
                           "departures": r.get("departures"), "verdict": r.get("env_verdict"), "bye": byes.get(t)} for t, r in team_env.items()},
         },
     }
-    (DATA / "players.json").write_text(json.dumps(out["players"], indent=1))
+    (DATA / f"players_{scoring}.json").write_text(json.dumps(out["players"], indent=1))
+    return out
+
+
+OVERLAY_FIELDS = ("comp", "adp", "adpSd", "adpSources", "value", "valueScore", "proj", "projSources", "vbd", "floorPts", "ceilPts",
+                  "boom", "bust", "risk", "sit", "tier", "posRank", "flag", "mcAvail", "boomWhy", "bustWhy", "riskWhy")
+
+
+def main():
+    outs = {}
+    for fmt in FORMATS:
+        print(f"=== scoring format: {fmt}")
+        outs[fmt] = build(fmt, "" if fmt == "ppr" else "_" + fmt)
+    base = outs["ppr"]
+    by_id = {fmt: {p["id"]: p for p in outs[fmt]["players"]} for fmt in FORMATS}
+    for p in base["players"]:
+        p["alt"] = {fmt: {k: by_id[fmt][p["id"]].get(k) for k in OVERLAY_FIELDS} for fmt in ("half", "std") if p["id"] in by_id[fmt]}
+    base["meta"]["scoring"] = {"base": "ppr", "formats": list(FORMATS), "recWeights": REC_W,
+                               "mc": {fmt: outs[fmt]["meta"].get("mc") for fmt in FORMATS}}
+    (DATA / "players.json").write_text(json.dumps([{k: v for k, v in p.items() if k != "alt"} for p in base["players"]], indent=1))
 
     html_path = HERE / "index.html"
     html = html_path.read_text()
-    blob = json.dumps(out, separators=(",", ":")).replace("</", "<\\/")
+    blob = json.dumps(base, separators=(",", ":")).replace("</", "<\\/")
     new_html, n = re.subn(r'(<script id="data" type="application/json">)(.*?)(</script>)', lambda m: m.group(1) + "\n" + blob + "\n" + m.group(3), html, flags=re.S)
     assert n == 1, "data script block not found"
     html_path.write_text(new_html)
-    print(f"wrote index.html ({len(new_html) // 1024} KB)")
+    print(f"wrote index.html ({len(new_html) // 1024} KB) with half / standard overlays")
 
 
 if __name__ == "__main__":

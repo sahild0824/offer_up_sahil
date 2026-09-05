@@ -1,8 +1,8 @@
 # 2026 Draft Strategy: Pick 4, 10-Team, Full-PPR Snake
 
 **Prepared:** September 4, 2026 (Week 1 kicks off next week)
-**Your picks:** 4, 17, 24, 37, 44, 57, 64, 77, 84, 97, 104, 117, 124, 137, 144, 157
-**Assumed lineup:** QB, 2 RB, 2 WR, TE, FLEX, K, DST, ~6 bench
+**Your picks:** 4, 17, 24, 37, 44, 57, 64, 77, 84, 97, 104, 117, 124, 137
+**Lineup (confirmed Sept 5 from ESPN League Info, league 1281953459):** QB, 2 RB, 2 WR, TE, FLEX, D/ST, K, 5 bench, 1 IR; 14 rounds, full PPR (1 per reception), head-to-head points
 
 > **Method / caveats.** This was built from ~70 targeted web searches across PFF, Draft Sharks, ESPN (Mike Clay, Field Yates, Matt Bowen, Eric Karabell), CBS (Jamey Eisenberg, Jacob Gibbs, Dave Richard), FantasyPros, 4for4, Fantasy Life, Yahoo, Footballguys, The Fantasy Footballers, RotoBaller, NFL.com, Legion Report / Fantasy Football Calculator ADP, and several published 10-team mocks. Direct page fetches (including reddit.com) were blocked by the network in this environment, so Reddit sentiment is secondhand (see Section 6) and ADP figures are the consensus numbers quoted in those sources (mostly 12-team PPR aggregates; overall pick number transfers reasonably to a 10-team room). Verify against your platform's live ADP before the draft; ESPN and Sleeper are PPR while Yahoo defaults to half-PPR, and Fantasy Life notes ADP differs meaningfully by site ([Fantasy Life v2](https://www.fantasylife.com/articles/fantasy/the-perfect-fantasy-football-draft-strategy-for-2026-v2)).
 
@@ -117,16 +117,17 @@ Round 3 in current mocks: Jonathan Taylor (if he slid), Saquon Barkley (RB11), W
 ### Pick 104 (Rd 11, 11.04) — Upside QB2 / RB lottery
 - Kyler Murray (ADP 119.9; new start in Minnesota; rushing floor) ([Yahoo](https://sports.yahoo.com/articles/5-overvalued-fantasy-football-quarterbacks-161604319.html)); Rachaad White (WAS receiving back) ([Seahawks.com sleepers](https://www.seahawks.com/news/fantasy-football-sleepers-value-picks-for-2026)); Keaton Mitchell (LAC change-of-pace behind Hampton with Mike McDaniel as OC) ([Fantasy Six Pack](https://fantasysixpack.net/2026-fantasy-football-late-round-targets/)).
 
-### Pick 117 (Rd 12, 12.07) — Second QB or another RB dart
+### Pick 117 (Rd 12, 12.07) — Last skill dart, or a second QB only if a starter falls
+With five bench slots this is the last skill pick; the rookie WR / TE2 darts and the QB2 compete for the same spot.
 - Baker Mayfield (ADP 125.6; "one of the best value plays at the position"), Bo Nix, Jaxson Dart (QB8 in FPPG once he started; Roto Street Journal is fading him at his price, so only as a QB2) ([RSJ busts](https://www.rotostreetjournal.com/2026/09/04/2026-fantasy-football-busts-8-overpriced-players-to-fade/)); Mike Washington Jr. (Jeanty handcuff); Kaelon Black (rising).
 
-### Pick 124 (Rd 13, 13.04) — Rookie WR / TE2 darts
+#### Rookie WR / TE2 darts for 117 (formerly the round-13 list)
 - Caleb Douglas (MIA rookie already in the first-team offense, 6-4 with downfield speed), Ja'Kobi Lane (BAL, 6-4 red-zone weapon for Lamar) ([Seahawks.com](https://www.seahawks.com/news/fantasy-football-sleepers-value-picks-for-2026)); Chris Rodriguez Jr. (JAX, post-Etienne) ([NFL.com](https://www.nfl.com/news/2026-nfl-fantasy-football-six-late-round-sleepers-to-target)).
 
-### Pick 137 (Rd 14, 14.07) — Last skill dart
+#### More darts for 117 (formerly the round-14 list)
 - "Stribling" (WR; 13 targets, 11 catches, 109 yards in two preseason games — RSJ's "Puka vibes" penny stock) ([RSJ sleepers](https://www.rotostreetjournal.com/2026/09/01/2026-fantasy-football-sleepers-10-late-round-picks-set-to-explode/)); Greg Dulcich (MIA TE, second target for Malik Willis) or Gunnar Helm (TEN) as TE2/streamers; Jordan Mason, Jonathon Brooks, Isaiah Likely, Chig Okonkwo.
 
-### Pick 144 (Rd 15) — DST. Pick 157 (Rd 16) — K.
+### Pick 124 (Rd 13) — DST. Pick 137 (Rd 14) — K.
 Take a defense with a soft early schedule; kicker last. No 2026 source argues otherwise for a 10-team league.
 
 ---
@@ -232,7 +233,7 @@ Note PFF's pick-4 plan explicitly *does* like Kyren and Chase Brown as the Rd 2-
 | 84 | Corum, Allgeier, Tuten, Kittle (98) |
 | 97 | Kittle (98), Stafford (99.6), Diggs (Rd 10-12) |
 | 104-117 | Kyler (119.9), Baker (125.6), Nix, Dart, R. White, K. Mitchell |
-| 124-137 | Douglas, Lane, Rodriguez, Stribling, Dulcich, Helm, Washington Jr., K. Black |
-| 144 / 157 | DST / K |
+| 117 | Douglas, Lane, Rodriguez, Stribling, Dulcich, Helm, Washington Jr., K. Black (one bench slot left) |
+| 124 / 137 | DST / K |
 
 Sources for the map: [Legion Report](https://legionreport.com/fantasy-football-rankings/), [DIRECTV Insider ADP](https://www.directv.com/insider/fantasy-football-adp-rankings/), [FFC Jeanty](https://fantasyfootballcalculator.com/players/ashton-jeanty), [FFC Breece Hall](https://fantasyfootballcalculator.com/players/breece-hall), [FFC Carnell Tate](https://fantasyfootballcalculator.com/players/carnell-tate), [FantasySP TE ADP](https://www.fantasysp.com/news/nfl/3057384/fantasy-football-te-adp-are-mcbride), [SI QB tiers](https://www.si.com/fantasy/2026-football-quarterback-tiers-lamar-jackson), [Yahoo QB ADP](https://sports.yahoo.com/articles/5-overvalued-fantasy-football-quarterbacks-161604319.html), [Wolf Sports 10-team mock](https://wolfsports.com/fantasy/2026-fantasy-football-mock-draft-2-0-10-team-ppr/), [FantasyPros Sept mock](https://www.fantasypros.com/2026/09/fantasy-football-mock-draft-ppr-12-team-early-slot-2026/), [CBS 10-team mock](https://www.cbssports.com/fantasy/football/news/fantasy-football-10-team-mock-ppr/).

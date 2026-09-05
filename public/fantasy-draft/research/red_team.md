@@ -203,7 +203,7 @@ Applied:
 - **#14 QB window:** replaced by a tier trigger (when the Daniels / Maye / Burrow / Hurts tier is down to one name), with 57-64 given only as where that usually lands on ESPN.
 
 Not applied, and why:
-- **Monte Carlo opponents** in the scenario runner: worthwhile, not built in this pass; the greedy runner is labeled as such and every availability number is shown per player.
+- **Monte Carlo opponents**: built (`montecarlo.py`, Sept 5). Opponents draw draft positions from ESPN ADP with each player's measured spread, follow roster rules and fill K / D/ST late; the full 14-round GDL Fantasy roster (5 bench, IR not drafted) is replayed 1,500 times per strategy and the per-pick availability replaces the logistic curve in the app whenever the league settings match. Results in `scenarios/montecarlo_summary.md`.
 - **Accuracy-weighted outlets:** no trailing accuracy data is reachable from here.
 - **Signed coaching-change feature (#7):** the opportunity file already carries a signed coaching_change per player; the remaining cases (Irving, Smith-Njigba) moved with the linear scale and the schedule cut rather than a new feature.
 - **Re-running the injury model with September inputs:** not possible offline; the status layer is the substitute.

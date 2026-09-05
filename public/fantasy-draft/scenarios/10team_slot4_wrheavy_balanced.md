@@ -1,8 +1,8 @@
 # Scenario: 10team_slot4_wrheavy_balanced
 
-- League: 10 teams, slot 4, full PPR snake, picks #4, #17, #24, #37, #44, #57, #64, #77, #84, #97, #104, #117, #124, #137
+- League: 10 teams, slot 4, full PPR snake, picks #4, #17, #24, #37, #44, #57, #64, #77, #84, #97, #104, #117
 - Strategy: **wr-heavy** · risk profile: **balanced** · min availability 30% · 2026 situation weight 0.1 · playoff-schedule weight 0.04
-- Generated 2026-09-05 01:55
+- Generated 2026-09-05 02:22
 
 Cell = player (position rank, composite rank, chance still on the board at that pick). The #1 target each round is assumed drafted before planning the next round.
 
@@ -15,13 +15,11 @@ Cell = player (position rank, composite rank, chance still on the board at that 
 | 5 | 44 | D'Andre Swift (RB19, comp 47, 74%, 2026 51) | Bhayshul Tuten (RB23, comp 59, 95%, 2026 85) | Colston Loveland (TE3, comp 38, 58%, 2026 75) | Luther Burden III (WR23, comp 51, 98%, 2026 85) |
 | 6 | 57 | Luther Burden III (WR23, comp 51, 80%, 2026 85) | Jadarian Price (RB24, comp 63, 84%, 2026 85) | Bhayshul Tuten (RB23, comp 59, 57%, 2026 85) | TreVeyon Henderson (RB25, comp 64, 91%, 2026 46) |
 | 7 | 64 | Jadarian Price (RB24, comp 63, 63%, 2026 85) | Jaylen Warren (RB26, comp 72, 88%, 2026 45) | TreVeyon Henderson (RB25, comp 64, 75%, 2026 46) | Justin Herbert (QB9, comp 80, 97%, 2026 77) |
-| 8 | 77 | Justin Herbert (QB9, comp 80, 85%, 2026 77) | Tucker Kraft (TE5, comp 73, 76%, 2026 68) | RJ Harvey (RB34, comp 96, 98%, 2026 85) | Kyle Monangai (RB37, comp 110, 98%, 2026 80) |
-| 9 | 84 | Tucker Kraft (TE5, comp 73, 62%, 2026 68) | Sam LaPorta (TE6, comp 75, 49%, 2026 62) | Dalton Kincaid (TE11, comp 113, 99%, 2026 71) | Kyle Monangai (RB37, comp 110, 96%, 2026 80) |
+| 8 | 77 | Justin Herbert (QB9, comp 80, 85%, 2026 77) | Tucker Kraft (TE5, comp 73, 76%, 2026 68) | Trevor Lawrence (QB10, comp 91, 92%, 2026 49) | RJ Harvey (RB34, comp 96, 98%, 2026 85) |
+| 9 | 84 | Tucker Kraft (TE5, comp 73, 62%, 2026 68) | Sam LaPorta (TE6, comp 75, 49%, 2026 62) | Dalton Kincaid (TE11, comp 113, 99%, 2026 71) | Jake Ferguson (TE13, comp 121, 97%, 2026 51) |
 | 10 | 97 | Kyle Monangai (RB37, comp 110, 88%, 2026 80) | Blake Corum (RB35, comp 102, 90%, 2026 85) | RJ Harvey (RB34, comp 96, 81%, 2026 85) | Jordan Mason (RB40, comp 112, 94%, 2026 69) |
 | 11 | 104 | Blake Corum (RB35, comp 102, 82%, 2026 85) | Jordan Mason (RB40, comp 112, 88%, 2026 69) | RJ Harvey (RB34, comp 96, 67%, 2026 85) | Jacory Croskey-Merritt (RB38, comp 110, 87%, 2026 43) |
 | 12 | 117 | Jordan Mason (RB40, comp 112, 68%, 2026 69) | Jacory Croskey-Merritt (RB38, comp 110, 65%, 2026 43) | RJ Harvey (RB34, comp 96, 33%, 2026 85) | Rachaad White (RB39, comp 111, 63%, 2026 23) |
-| 13 | 124 | Tyler Shough (QB20, comp 136, 86%, 2026 62) | Kyler Murray (QB17, comp 120, 70%, 2026 85) | Dalton Kincaid (TE11, comp 113, 64%, 2026 71) | KC Concepcion (WR49, comp 114, 70%, 2026 68) |
-| 14 | 137 | Brenton Strange (TE18, comp 152, 86%, 2026 46) | Juwan Johnson (TE16, comp 141, 78%, 2026 22) | Dalton Kincaid (TE11, comp 113, 35%, 2026 71) | KC Concepcion (WR49, comp 114, 41%, 2026 68) |
 
 ## Resulting roster if you take the #1 target every round
 
@@ -37,7 +35,5 @@ Cell = player (position rank, composite rank, chance still on the board at that 
 10. Kyle Monangai — RB37 CHI (bye 10) · comp 109.5 · proj 148 · VBD -36 · boom 88 / bust 23 / risk 18
 11. Blake Corum — RB35 LAR (bye 11) · comp 102.2 · proj 128 · VBD -56 · boom 97 / bust 41 / risk 48
 12. Jordan Mason — RB40 MIN (bye 6) · comp 111.7 · proj 141 · VBD -43 · boom 89 / bust 34 / risk 61
-13. Tyler Shough — QB20 NO (bye 8) · comp 135.6 · proj 255 · VBD -28 · boom 45 / bust 22 / risk 2
-14. Brenton Strange — TE18 JAX (bye 7) · comp 151.6 · proj 144 · VBD -27 · boom 84 / bust 24 / risk 24
 
-Position mix: QB 2, RB 5, WR 5, TE 2
+Position mix: QB 1, RB 5, WR 5, TE 1

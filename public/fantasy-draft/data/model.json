@@ -1,355 +1,363 @@
 {
-  "intro": "Every number in this app is built from public rankings, ADP feeds and projections compiled on September 4, 2026, scored with methods borrowed from FantasyPros, ffanalytics, Boris Chen's tiers and Draft Sharks. Nothing is a gut call: the same inputs always produce the same scores, and each player's sheet lists the signals behind his numbers.",
-  "sections": [
-    {
-      "title": "Composite rank",
-      "paras": [
-        "Nineteen outlets contribute an overall PPR rank. Where an outlet published more than one list (three ESPN boards, two RotoWire, two Yahoo analysts) those are averaged first so no publisher counts twice. The FantasyPros Expert Consensus counts once: the 2016-25 backtest found it no more predictive than ADP, and many of the other outlets feed it, so double weight would only amplify herding. Platform default orders (Sleeper), value-model boards and July snapshots count half.",
-        "Best and worst are the most bullish and most bearish placements across every outlet plus the FantasyPros best/worst expert. Spread is the weighted standard deviation of outlet ranks: the size of the argument about a player."
-      ],
-      "formula": "composite = Σ(w_outlet · rank_outlet) / Σ w_outlet\nw = 1.0 FantasyPros ECR, ESPN, Yahoo, RotoWire, RotoBaller, Draft Sharks, Flock, NBC\n    0.75 LineupExperts, FFToday, PrizePicks, Bleacher Report, ETR · 0.5 Sleeper, Subvertadown, BDGE, July lists"
-    },
-    {
-      "title": "Tiers",
-      "paras": [
-        "Within each position, a new tier starts when the composite has dropped, since the tier began, by more than the local cross-source spread (the median spread of the ten neighbouring players), or when a single gap exceeds three quarters of that. This is the ffanalytics tier rule applied to ranks; tiers widen deeper in the draft because experts disagree more there."
-      ],
-      "formula": "new tier if (comp_i − comp_tierStart) > T_i  or  (comp_i − comp_i−1) > 0.75·T_i\nT_i = max(3, median spread of players i−5 … i+5 at the position)"
-    },
-    {
-      "title": "ADP and value",
-      "paras": [
-        "ADP blends five September 4 feeds (Fantasy Football Calculator over 7,681 PPR drafts, ESPN live, Sleeper live, FantasyPros and Yahoo daily snapshots) with older feeds counted at a tenth once three fresh feeds exist, so a news-driven move like Josh Jacobs' exempt-list placement shows up instead of being averaged away. ADP spread is the Fantasy Football Calculator within-draft standard deviation where available, otherwise the spread across platforms. A 7-day and 30-day ADP trend is kept per player: a fall of 8-plus picks in a week is a market-reacting-to-news risk signal.",
-        "Value is ADP minus composite in picks: positive means the market lets him fall past where the experts rank him. The log-space score (jeisey's form) treats a rank-20 player with ADP 40 the same as a rank-80 player with ADP 160."
-      ],
-      "formula": "value = ADP − composite\nvalueScore = 50 + 50 · tanh( ln(ADP / composite) / ln 2 )"
-    },
-    {
-      "title": "Boom (0-100)",
-      "paras": [
-        "Boom is a within-position percentile, so 80 means more upside signal than 80 percent of players at his position. Inputs: the player's own 2024-25 boom-week rate (weeks at or above the weekly RB6 / WR6 / QB3 / TE3 score, from nflverse game logs, 2025 weighted 0.65), how far the most bullish source sits above the composite (FantasyPros' upside disagreement), the ffanalytics ceiling-to-projection ratio, breakout and sleeper citations across 2026 articles (saturating so ten mentions beat three), situational boom factors from the context research, youth relative to the positional age curve, and positive ADP value.",
-        "Read boom as upside beyond his price. A consensus top-5 pick rarely scores high because the market already pays for his ceiling; his own 2025 top-6 week rate is printed on his sheet for the absolute view."
-      ],
-      "formula": "raw = .15·pct(upside) + .10·pct(ceiling gap) + .20·pct(2024-25 boom-week rate) + .15·sat(boom mentions)\n      + .10·sat(boom factors) + .10·youth + .20·clamp(value/10) + .12·situation⁺ + context adjustment\nboom = percentile of raw within position        sat(n) = 1 − e^(−n/3)"
-    },
-    {
-      "title": "Bust (0-100)",
-      "paras": [
-        "Bust is the directional downside, also as a within-position percentile. Inputs: the player's own 2024-25 bust-week rate (weeks at or below the weekly RB40 / WR56 / QB18 / TE18 score), how far the most bearish source sits below the composite, the ffanalytics floor gap, bust and avoid-at-ADP citations, structural risk factors (committee, new QB, workload), an age flag at the historical cliff (RB 27 and 29, WR 29 and 31, TE 30 and 32, QB 34 and 36), a reach penalty when ADP runs ahead of the composite, and injury history. Players on IR, PUP or the exempt list get a large hand adjustment."
-      ],
-      "formula": "raw = .10·pct(downside) + .10·pct(floor gap) + .15·pct(2024-25 bust-week rate) + .20·sat(bust mentions) + .15·sat(risk factors)\n      + .10·ageFlag + .05·clamp(−value/10) + .15·injury + .12·situation⁻ + context adjustment\nbust = percentile of raw within position"
-    },
-    {
-      "title": "Risk / volatility (0-100)",
-      "paras": [
-        "Risk is symmetric uncertainty, following Isaac Petersen's ffanalytics measure: spread of expert ranks, spread of ADP across platforms and drafts, the ffanalytics projection uncertainty, plus the player's own 2025 week-to-week variation (coefficient of variation from game logs), an injury signal that blends a calibrated missed-time probability (lhallee model, AUC 0.75, counted double), games missed in 2024-25 from nflverse and a 2024-25 injury log by body part, camp status from the Week 1 roster codes and ESPN's live status, and situation changes including an unresolved 2026 role. High risk with high boom and low bust is a target; high risk with high bust is a fade.",
-        "The calibrated injury model was frozen on August 9, so a hand status layer dated September 5 (practice reports, PUP / IR / exempt designations, the Nacua review, Chase's knee, Kittle's Achilles) overrides it for Week 1 to 4 risk. Anything after September 5 is not in the model."
-      ],
-      "formula": "raw = .20·pct(rank spread) + .10·pct(ADP spread) + .10·uncertainty + .15·pct(2025 weekly CV) + .20·injury\n      + .10·camp + .15·sat(situation changes, 2) + .10·unresolved + context adjustment\nrisk = percentile of raw within position"
-    },
-    {
-      "title": "2026 situation (0-100)",
-      "paras": [
-        "The 2026 layer scores what the market prices least. Team environment uses Vegas win totals (August 23 lines, DraftKings totals as fallback), PFF preseason offensive-line rank, the confirmed play-caller for every team (a sourced census as of September 2), a quarterback tier and the play-caller's pass-rate and backfield tendencies from the coaching research. The player's 2026 change combines opportunity, competition, quarterback and coaching change with an unresolved flag. Vacated volume (share of the team's 2025 targets or carries that left, from nflverse and the Week 1 roster) only counts for arrivals and drafted rookies, because vacated targets do not predict incumbents' growth (R-squared below 0.01 in a four-season study). Evidence-based priors are added: year-2 receivers (about 15 percent breakout rate) and year-3 receivers (10 percent) get a bump, first-round rookies get a bump (71 percent of first-round RBs finish top-24), and receivers who changed teams get a penalty (they decline about 2 points per game on average, 77 percent decline). Schedule uses 2026 strength of schedule by position from nflverse 2024-25 points allowed, schedule-adjusted; fantasy playoff weeks 15-17 weigh more than the full season because year-over-year correlation of points allowed by position is 0.25 or lower.",
-        "The situation score is a within-position percentile. Per the methods research, the larger half of any situational change goes into variance: positive situation raw adds to boom, negative adds to bust, the size of the change adds to both, and an unresolved role adds to risk. The mean effect is capped. The scenario runner uses the score as a tiebreak (0.10 log-rank units per 100 points) along with the playoff-schedule z-score (0.04 per z)."
-      ],
-      "formula": "raw = clip(.35·environment + .35·change + .15·vacated(arrivals, rookies only) + .15·(0.4·SOS_full_z + 0.6·SOS_playoffs_z) + priors, ±0.35)\npriors: +.15 year-2 WR/TE · +.10 year-3 WR/TE · +.12 first-round rookie · −.10 WR who changed teams\nvariance = .5·|change| + .25·unresolved  → added to both boom and bust\nsituation = percentile of raw within position"
-    },
-    {
-      "title": "Projection and VBD",
-      "paras": [
-        "Four projection sources are converted to full PPR and averaged: ESPN's live September 4 stat lines, CBS stat lines, Sleeper stat lines, and the median of a hierarchical-Bayesian model (srsavas42) that also supplies a real PPR floor (p10) and ceiling (p90) plus projected games played. VBD is points over the 10-team replacement baseline: the 10th QB, 22nd RB, 28th WR and 10th TE by projection. Use it to compare across positions at a pick; use composite to compare within one."
-      ],
-      "formula": "proj = mean(ESPN live, CBS, Sleeper, Bayesian p50)   floor = Bayesian p10   ceiling = Bayesian p90\nVBD = proj − proj(baseline player at position)   baselines QB10 · RB22 · WR28 · TE10"
-    },
-    {
-      "title": "Chance he is there at your pick",
-      "paras": [
-        "A logistic curve around ADP whose width grows with ADP spread and with pick number. The league (GDL Fantasy) drafts on ESPN, so the Draft tab defaults to ESPN's own ADP for availability and the blended ADP weights ESPN's feed three times any other; switch the room to Blended ADP to see the cross-site view. League assumptions: 10 teams, snake, head-to-head points, PPR, ESPN default roster of QB, 2 RB, 2 WR, TE, FLEX, D/ST, K and 7 bench (16 rounds), playoffs weeks 15-17. Slot 4 picks: 4, 17, 24, 37, 44, 57, 64, 77, 84, 97, 104, 117, 124, 137, 144, 157."
-      ],
-      "formula": "P(available at pick N) = 1 / (1 + e^((N − ADP) / s))\ns = max(1.6, 0.55 · max(ADP spread, 0.15 · ADP))"
-    },
-    {
-      "title": "What the backtest says",
-      "paras": [
-        "1,599 drafted player-seasons from 2016-2025 (FantasyPros preseason ADP, expert consensus with spread for 2020-2025, nflverse game logs for outcomes). Expert consensus and ADP predict finishes about equally (rank correlation 0.40 vs 0.42). Preseason signals add little beyond ADP for boom: the fitted model's holdout AUC is 0.54 vs 0.54 for ADP alone, and this app's own weights score 0.60. Bust is more predictable (0.59 to 0.65): age and expert disagreement are the strongest predictors, and players who changed teams bust 7-8 points more often.",
-        "Measured hit rate / bust rate by ADP round (12-team rounds), as percentages: R1: RB 78/23 · WR 80/22 · QB – · TE –; R2: RB 77/25 · WR 56/43 · QB 83/16 · TE 77/22; R3: RB 68/31 · WR 64/35 · QB 69/30 · TE 83/16; R4: RB 57/42 · WR 49/49 · QB 50/50 · TE 63/36; R5: RB 39/48 · WR 46/51 · QB 68/31 · TE 52/47; R6: RB 38/43 · WR 34/55 · QB 68/31 · TE 46/53; R7: RB 28/51 · WR 13/59 · QB 26/73 · TE 45/55; R8: RB 26/47 · WR 19/52 · QB 50/43 · TE 25/66. Round-2 backs have hit 77 percent against 57 percent for round-2 receivers, which is the evidence behind taking a bell-cow at 17; from round 5 on, receivers hold up better than backs, and quarterbacks taken in rounds 5-6 hit about 68 percent.",
-        "Changes made from the backtest: the RB age cliff moved from 27 to 28 (age-28 backs hit 38 percent, bust 54 percent, and lose 3.3 points per game on average); vacated volume is shown but no longer scored (it predicted nothing for incumbents or arrivals); the team-change penalty now covers backs as well as receivers; the rookie prior applies to drafted receivers (boom +16, bust −17 points) and year-2 backs (boom +10) rather than year-2 receivers (no lift); weekly volatility was cut from the risk score (volatile players busted slightly less, not more); expert spread was raised in risk and bust; ADP-versus-consensus value was raised in boom (receivers the market lets fall 8-plus picks boomed 12 points more). Full tables in research/BACKTEST.md."
-      ],
-      "formula": "holdout 2024-25, ADP top 120:  boom AUC  ADP 0.54 · fitted 0.54 · this app 0.60\n                                bust AUC  ADP 0.58 · fitted 0.59 · this app 0.60"
-    }
-  ],
-  "sourceNames": {
-    "fantasypros_ecr": "FantasyPros ECR",
-    "espn": "ESPN (3 boards)",
-    "yahoo": "Yahoo (Winks, Boone)",
-    "rotowire": "RotoWire",
-    "rotoballer": "RotoBaller",
-    "draftsharks": "Draft Sharks",
-    "flock": "Flock consensus",
-    "nbc_rotoworld": "NBC / Rotoworld",
-    "lineupexperts": "LineupExperts",
-    "fftoday": "FFToday (Krueger)",
-    "prizepicks": "PrizePicks (Hardy)",
-    "bleacher_report": "Bleacher Report",
-    "etr": "Establish The Run ($)",
-    "bdge": "BDGE top 50",
-    "subvertadown": "Subvertadown board",
-    "sleeper_rank": "Sleeper default",
-    "fantasylife_jul": "Fantasy Life (Jul 28)",
-    "fourfor4_jul": "4for4 (Jul 27)",
-    "cbs_aug3": "CBS (Aug 3)"
+ "intro": "Every number in this app is built from public rankings, ADP feeds and projections compiled on September 4, 2026, scored with methods borrowed from FantasyPros, ffanalytics, Boris Chen's tiers and Draft Sharks. Nothing is a gut call: the same inputs always produce the same scores, and each player's sheet lists the signals behind his numbers.",
+ "sections": [
+  {
+   "title": "Scoring formats",
+   "paras": [
+    "The header toggle switches the whole app between full PPR, half PPR and standard. Under the hood every stat-line projection (ESPN live, CBS, Sleeper) is re-scored with the chosen reception weight and the Bayesian floor, median and ceiling are shifted by the projected receptions. Expert ranks are published for full PPR, so the composite is shifted for other formats by how each player's value over the positional baseline moves (half credited), which keeps positional scarcity intact; the result sits within a couple of picks of the format-specific Fantasy Football Calculator ADP at the top of the board. ADP, weekly boom and bust rates from game logs, VBD, availability and the Monte Carlo simulation are all format-specific. Boom, bust, risk and situation are recomputed on the re-scored inputs.",
+    "GDL Fantasy's scoring page (League Info, Scoring) shows 1 point per reception, so the app opens on full PPR and the plan is written for it. Half PPR and standard stay in the header as what-if views for mock rooms and other leagues."
+   ],
+   "formula": "points = passYds/25 + 4·passTD − 2·INT + rushYds/10 + 6·TD + recYds/10 + w·rec − 2·fumble,  w = 1 / 0.5 / 0\ncomposite_fmt = composite_ppr + 0.5 · (rank by VBD_fmt − rank by VBD_ppr)"
   },
-  "sources": [
-    {
-      "key": "fantasypros_ecr",
-      "name": "FantasyPros Expert Consensus (PPR overall)",
-      "note": "Sept 4 · weight 2 · via DynastyProcess mirror"
-    },
-    {
-      "key": "espn",
-      "name": "ESPN PPR-300 sheet, default draft rank, Aug 24 snapshot",
-      "note": "Sept 4 · averaged into one ESPN number"
-    },
-    {
-      "key": "yahoo",
-      "name": "Yahoo: Hayden Winks and Justin Boone",
-      "note": "Sept 4 · averaged"
-    },
-    {
-      "key": "rotoballer",
-      "name": "RotoBaller PPR rankings",
-      "note": "Sept 2"
-    },
-    {
-      "key": "flock",
-      "name": "Flock Fantasy expert consensus",
-      "note": "Aug 31"
-    },
-    {
-      "key": "fftoday",
-      "name": "FFToday, Mike Krueger",
-      "note": "Aug 30 · weight 0.75"
-    },
-    {
-      "key": "prizepicks",
-      "name": "PrizePicks, Christian Hardy top 200",
-      "note": "Aug 29 · weight 0.75"
-    },
-    {
-      "key": "rotowire",
-      "name": "RotoWire expert consensus and value rank",
-      "note": "Aug 26 · averaged"
-    },
-    {
-      "key": "draftsharks",
-      "name": "Draft Sharks rankings",
-      "note": "Aug 26"
-    },
-    {
-      "key": "lineupexperts",
-      "name": "LineupExperts",
-      "note": "Aug 26 · weight 0.75"
-    },
-    {
-      "key": "nbc_rotoworld",
-      "name": "NBC Sports / Rotoworld top 200",
-      "note": "Aug 15"
-    },
-    {
-      "key": "bleacher_report",
-      "name": "Bleacher Report top 100 PPR",
-      "note": "Aug 14 · weight 0.75"
-    },
-    {
-      "key": "bdge",
-      "name": "BDGE top 50",
-      "note": "Aug 12 · weight 0.5"
-    },
-    {
-      "key": "etr",
-      "name": "Establish The Run auction values (ordered)",
-      "note": "Sept 1 · weight 0.75"
-    },
-    {
-      "key": "subvertadown",
-      "name": "Subvertadown value board",
-      "note": "Aug 31 · weight 0.5"
-    },
-    {
-      "key": "sleeper_rank",
-      "name": "Sleeper default rank",
-      "note": "Sept 4 · weight 0.5, ADP-driven"
-    },
-    {
-      "key": "fantasylife_jul",
-      "name": "Fantasy Life consensus and Matthew Berry",
-      "note": "Jul 28 · weight 0.5, stale"
-    },
-    {
-      "key": "fourfor4_jul",
-      "name": "4for4 PPR rankings",
-      "note": "Jul 27 · weight 0.5, stale"
-    },
-    {
-      "key": "cbs_aug3",
-      "name": "CBS Sports PPR",
-      "note": "Aug 3 · weight 0.5, stale"
-    },
-    {
-      "key": "adp_sleeper_ppr",
-      "name": "ADP: Sleeper PPR",
-      "note": "Sept 4"
-    },
-    {
-      "key": "adp_nfc_ppr",
-      "name": "ADP: Fantasy Football Calculator PPR",
-      "note": "Sept 4"
-    },
-    {
-      "key": "adp_espn",
-      "name": "ADP: ESPN",
-      "note": "Aug 29"
-    },
-    {
-      "key": "adp_yahoo",
-      "name": "ADP: Yahoo",
-      "note": "Aug 29"
-    },
-    {
-      "key": "adp_underdog",
-      "name": "ADP: Underdog (half-PPR best ball)",
-      "note": "Sept 2 · weight 0.5"
-    },
-    {
-      "key": "adp_ffpc",
-      "name": "ADP: FFPC (TE premium)",
-      "note": "Aug 29 · weight 0.5"
-    },
-    {
-      "key": "adp_fantasypros_cbs",
-      "name": "ADP: CBS, RTSports, Fantrax via FantasyPros",
-      "note": "Aug 28"
-    },
-    {
-      "key": "adp_draftsharks_half_consensus",
-      "name": "ADP: Draft Sharks consensus (half-PPR)",
-      "note": "Aug 26 · weight 0.5"
-    },
-    {
-      "key": "proj_espn",
-      "name": "Projections: ESPN stat lines to PPR",
-      "note": "2026 season"
-    },
-    {
-      "key": "proj_cbs",
-      "name": "Projections: CBS stat lines to PPR",
-      "note": "2026 season"
-    },
-    {
-      "key": "ffa",
-      "name": "Projections: ffanalytics floor, ceiling, uncertainty, age",
-      "note": "standard scoring, used as ratios"
-    },
-    {
-      "key": "risk",
-      "name": "Boom / bust / injury citations: ~70 articles (FantasyPros, Yahoo, ESPN, CBS, PFF, SI, RotoBaller, RotoWire, NBC, Bleacher Report, Fantasy Points, 4for4, FTN)",
-      "note": "from search summaries · research/risk_sources.md"
-    },
-    {
-      "key": "context",
-      "name": "2026 context: trades, coaching changes, injuries, depth charts",
-      "note": "research/context.md"
-    },
-    {
-      "key": "nflverse",
-      "name": "nflverse: 2024-25 weekly player stats, 2026 Week 1 rosters, player birthdates",
-      "note": "GitHub release assets · boom/bust rates, usage, ages, status codes, vacated volume"
-    },
-    {
-      "key": "sos",
-      "name": "2026 schedule strength by position (weeks 1-17, 1-4, 15-17)",
-      "note": "computed from nflverse 2024-25 points allowed, schedule-adjusted · research/sos_notes.md"
-    },
-    {
-      "key": "team_env",
-      "name": "2026 team environments: coaches, play-callers, QBs, Vegas, O-line",
-      "note": "research/team_env_notes.md"
-    },
-    {
-      "key": "opportunity",
-      "name": "2026 per-player opportunity change drivers",
-      "note": "research/opportunity_notes.md"
-    },
-    {
-      "key": "adp_ffc_sep4",
-      "name": "ADP: Fantasy Football Calculator PPR, 7,681 drafts Aug 28 - Sep 4, with per-player stdev",
-      "note": "via Danoodli/fantasy-drafter"
-    },
-    {
-      "key": "adp_espn_live",
-      "name": "ADP: ESPN live (Sept 4), plus ESPN PPR rank, injury status, ownership",
-      "note": "via Danoodli/fantasy-drafter"
-    },
-    {
-      "key": "adp_sleeper_live",
-      "name": "ADP: Sleeper live (Sept 4) and daily history since Aug 26",
-      "note": "via Danoodli/fantasy-drafter"
-    },
-    {
-      "key": "adp_fantasypros_live",
-      "name": "ADP: FantasyPros and Yahoo daily snapshots (Sept 4)",
-      "note": "via najibismail95 ADP tool"
-    },
-    {
-      "key": "proj_sleeper",
-      "name": "Projections: Sleeper stat lines to PPR",
-      "note": "Sept 4"
-    },
-    {
-      "key": "proj_bayes",
-      "name": "Projections: hierarchical-Bayesian PPR p10 / p50 / p90, projected games",
-      "note": "srsavas42/fantasy-football-research, Sept 4"
-    },
-    {
-      "key": "lhallee",
-      "name": "Injury: calibrated missed-time probability (AUC 0.75)",
-      "note": "lhallee/fantasy-football-feature-discovery, frozen Aug 9"
-    },
-    {
-      "key": "census",
-      "name": "Play-caller census with sources for all 32 teams",
-      "note": "demansou/fantasy-football-26, as of Sept 2"
-    },
-    {
-      "key": "vegas",
-      "name": "Vegas win totals (Aug 23) and PFF preseason O-line ranks",
-      "note": "srsavas42, StrubeTube/the-lab"
-    },
-    {
-      "key": "ffopportunity",
-      "name": "2025 expected fantasy points (efficiency / TD regression)",
-      "note": "ffverse/ffopportunity"
-    }
-  ],
-  "unavailable": [
-    "Direct page fetches were blocked for every fantasy site in this environment (FantasyPros, ESPN, Yahoo, CBS, NFL.com, PFF, Draft Sharks, Fantasy Football Calculator, Sleeper API) and for reddit.com. Rankings and ADP come from public GitHub mirrors of those sites with verified dates; article findings come from search-result summaries.",
-    "Not obtained at all: PFF rankings, NFL.com (Fabiano / Grant), ESPN individual analysts (Clay, Karabell, Yates), current CBS (Eisenberg / Richard), The Athletic, FTN / numberFire, Fantasy Points, Footballguys.",
-    "Reddit threads could not be read. Community sentiment is secondhand (Fantasy Squawk's roundup) and from ADP-versus-expert gaps.",
-    "Draft Sharks injury percentages exist only for McCaffrey (78%); everyone else uses games missed in 2024-25 from nflverse plus reported labels.",
-    "Weekly boom/bust rates now come from nflverse game logs; they still cannot capture 2026 role changes for players who moved.",
-    "Fantasy Football Calculator's 10-team PPR ADP is blocked; ESPN's ADP (from leagues that default to 10 teams) is the closest proxy and is what this league's room uses, so it carries triple weight and drives the ESPN-room availability mode."
-  ],
-  "adpNames": {
-    "sleeper_ppr": "Sleeper",
-    "nfc_ppr": "FF Calculator",
-    "espn": "ESPN",
-    "yahoo": "Yahoo",
-    "underdog": "Underdog (½ PPR)",
-    "ffpc": "FFPC (TE prem.)",
-    "fantasypros_cbs": "CBS",
-    "fantasypros_rtsports": "RTSports",
-    "fantasypros_fantrax": "Fantrax",
-    "draftsharks_half_consensus": "Draft Sharks (½ PPR)"
+  {
+   "title": "Composite rank",
+   "paras": [
+    "Nineteen outlets contribute an overall PPR rank. Where an outlet published more than one list (three ESPN boards, two RotoWire, two Yahoo analysts) those are averaged first so no publisher counts twice. The FantasyPros Expert Consensus counts once: the 2016-25 backtest found it no more predictive than ADP, and many of the other outlets feed it, so double weight would only amplify herding. Platform default orders (Sleeper), value-model boards and July snapshots count half.",
+    "Best and worst are the most bullish and most bearish placements across every outlet plus the FantasyPros best/worst expert. Spread is the weighted standard deviation of outlet ranks: the size of the argument about a player."
+   ],
+   "formula": "composite = Σ(w_outlet · rank_outlet) / Σ w_outlet\nw = 1.0 FantasyPros ECR, ESPN, Yahoo, RotoWire, RotoBaller, Draft Sharks, Flock, NBC\n    0.75 LineupExperts, FFToday, PrizePicks, Bleacher Report, ETR · 0.5 Sleeper, Subvertadown, BDGE, July lists"
+  },
+  {
+   "title": "Tiers",
+   "paras": [
+    "Within each position, a new tier starts when the composite has dropped, since the tier began, by more than the local cross-source spread (the median spread of the ten neighbouring players), or when a single gap exceeds three quarters of that. This is the ffanalytics tier rule applied to ranks; tiers widen deeper in the draft because experts disagree more there."
+   ],
+   "formula": "new tier if (comp_i − comp_tierStart) > T_i  or  (comp_i − comp_i−1) > 0.75·T_i\nT_i = max(3, median spread of players i−5 … i+5 at the position)"
+  },
+  {
+   "title": "ADP and value",
+   "paras": [
+    "ADP blends five September 4 feeds (Fantasy Football Calculator over 7,681 PPR drafts, ESPN live, Sleeper live, FantasyPros and Yahoo daily snapshots) with older feeds counted at a tenth once three fresh feeds exist, so a news-driven move like Josh Jacobs' exempt-list placement shows up instead of being averaged away. ADP spread is the Fantasy Football Calculator within-draft standard deviation where available, otherwise the spread across platforms. A 7-day and 30-day ADP trend is kept per player: a fall of 8-plus picks in a week is a market-reacting-to-news risk signal.",
+    "Value is ADP minus composite in picks: positive means the market lets him fall past where the experts rank him. The log-space score (jeisey's form) treats a rank-20 player with ADP 40 the same as a rank-80 player with ADP 160."
+   ],
+   "formula": "value = ADP − composite\nvalueScore = 50 + 50 · tanh( ln(ADP / composite) / ln 2 )"
+  },
+  {
+   "title": "Boom (0-100)",
+   "paras": [
+    "Boom is a within-position percentile, so 80 means more upside signal than 80 percent of players at his position. Inputs: the player's own 2024-25 boom-week rate (weeks at or above the weekly RB6 / WR6 / QB3 / TE3 score, from nflverse game logs, 2025 weighted 0.65), how far the most bullish source sits above the composite (FantasyPros' upside disagreement), the ffanalytics ceiling-to-projection ratio, breakout and sleeper citations across 2026 articles (saturating so ten mentions beat three), situational boom factors from the context research, youth relative to the positional age curve, and positive ADP value.",
+    "Read boom as upside beyond his price. A consensus top-5 pick rarely scores high because the market already pays for his ceiling; his own 2025 top-6 week rate is printed on his sheet for the absolute view."
+   ],
+   "formula": "raw = .15·pct(upside) + .10·pct(ceiling gap) + .20·pct(2024-25 boom-week rate) + .15·sat(boom mentions)\n      + .10·sat(boom factors) + .10·youth + .20·clamp(value/10) + .12·situation⁺ + context adjustment\nboom = percentile of raw within position        sat(n) = 1 − e^(−n/3)"
+  },
+  {
+   "title": "Bust (0-100)",
+   "paras": [
+    "Bust is the directional downside, also as a within-position percentile. Inputs: the player's own 2024-25 bust-week rate (weeks at or below the weekly RB40 / WR56 / QB18 / TE18 score), how far the most bearish source sits below the composite, the ffanalytics floor gap, bust and avoid-at-ADP citations, structural risk factors (committee, new QB, workload), an age flag at the historical cliff (RB 27 and 29, WR 29 and 31, TE 30 and 32, QB 34 and 36), a reach penalty when ADP runs ahead of the composite, and injury history. Players on IR, PUP or the exempt list get a large hand adjustment."
+   ],
+   "formula": "raw = .10·pct(downside) + .10·pct(floor gap) + .15·pct(2024-25 bust-week rate) + .20·sat(bust mentions) + .15·sat(risk factors)\n      + .10·ageFlag + .05·clamp(−value/10) + .15·injury + .12·situation⁻ + context adjustment\nbust = percentile of raw within position"
+  },
+  {
+   "title": "Risk / volatility (0-100)",
+   "paras": [
+    "Risk is symmetric uncertainty, following Isaac Petersen's ffanalytics measure: spread of expert ranks, spread of ADP across platforms and drafts, the ffanalytics projection uncertainty, plus the player's own 2025 week-to-week variation (coefficient of variation from game logs), an injury signal that blends a calibrated missed-time probability (lhallee model, AUC 0.75, counted double), games missed in 2024-25 from nflverse and a 2024-25 injury log by body part, camp status from the Week 1 roster codes and ESPN's live status, and situation changes including an unresolved 2026 role. High risk with high boom and low bust is a target; high risk with high bust is a fade.",
+    "The calibrated injury model was frozen on August 9, so a hand status layer dated September 5 (practice reports, PUP / IR / exempt designations, the Nacua review, Chase's knee, Kittle's Achilles) overrides it for Week 1 to 4 risk. Anything after September 5 is not in the model."
+   ],
+   "formula": "raw = .20·pct(rank spread) + .10·pct(ADP spread) + .10·uncertainty + .15·pct(2025 weekly CV) + .20·injury\n      + .10·camp + .15·sat(situation changes, 2) + .10·unresolved + context adjustment\nrisk = percentile of raw within position"
+  },
+  {
+   "title": "2026 situation (0-100)",
+   "paras": [
+    "The 2026 layer scores what the market prices least. Team environment uses Vegas win totals (August 23 lines, DraftKings totals as fallback), PFF preseason offensive-line rank, the confirmed play-caller for every team (a sourced census as of September 2), a quarterback tier and the play-caller's pass-rate and backfield tendencies from the coaching research. The player's 2026 change combines opportunity, competition, quarterback and coaching change with an unresolved flag. Vacated volume (share of the team's 2025 targets or carries that left, from nflverse and the Week 1 roster) only counts for arrivals and drafted rookies, because vacated targets do not predict incumbents' growth (R-squared below 0.01 in a four-season study). Evidence-based priors are added: year-2 receivers (about 15 percent breakout rate) and year-3 receivers (10 percent) get a bump, first-round rookies get a bump (71 percent of first-round RBs finish top-24), and receivers who changed teams get a penalty (they decline about 2 points per game on average, 77 percent decline). Schedule uses 2026 strength of schedule by position from nflverse 2024-25 points allowed, schedule-adjusted; fantasy playoff weeks 15-17 weigh more than the full season because year-over-year correlation of points allowed by position is 0.25 or lower.",
+    "The situation score is a within-position percentile. Per the methods research, the larger half of any situational change goes into variance: positive situation raw adds to boom, negative adds to bust, the size of the change adds to both, and an unresolved role adds to risk. The mean effect is capped. The scenario runner uses the score as a tiebreak (0.10 log-rank units per 100 points) along with the playoff-schedule z-score (0.04 per z)."
+   ],
+   "formula": "raw = clip(.35·environment + .35·change + .15·vacated(arrivals, rookies only) + .15·(0.4·SOS_full_z + 0.6·SOS_playoffs_z) + priors, ±0.35)\npriors: +.15 year-2 WR/TE · +.10 year-3 WR/TE · +.12 first-round rookie · −.10 WR who changed teams\nvariance = .5·|change| + .25·unresolved  → added to both boom and bust\nsituation = percentile of raw within position"
+  },
+  {
+   "title": "Projection and VBD",
+   "paras": [
+    "Four projection sources are converted to full PPR and averaged: ESPN's live September 4 stat lines, CBS stat lines, Sleeper stat lines, and the median of a hierarchical-Bayesian model (srsavas42) that also supplies a real PPR floor (p10) and ceiling (p90) plus projected games played. VBD is points over the 10-team replacement baseline: the 10th QB, 22nd RB, 28th WR and 10th TE by projection. Use it to compare across positions at a pick; use composite to compare within one."
+   ],
+   "formula": "proj = mean(ESPN live, CBS, Sleeper, Bayesian p50)   floor = Bayesian p10   ceiling = Bayesian p90\nVBD = proj − proj(baseline player at position)   baselines QB10 · RB22 · WR28 · TE10"
+  },
+  {
+   "title": "Chance he is there at your pick",
+   "paras": [
+    "A logistic curve around ADP whose width grows with ADP spread and with pick number. The league (GDL Fantasy) drafts on ESPN, so the Draft tab defaults to ESPN's own ADP for availability and the blended ADP weights ESPN's feed three times any other; switch the room to Blended ADP to see the cross-site view. League assumptions: 10 teams, snake, head-to-head points, PPR, the league roster of QB, 2 RB, 2 WR, TE, FLEX, D/ST, K, 5 bench and 1 IR (14 rounds, the IR slot is not drafted), playoffs weeks 15-17. Slot 4 picks: 4, 17, 24, 37, 44, 57, 64, 77, 84, 97, 104, 117, 124, 137; rounds 1-12 are skill picks, D/ST and K go at 124 and 137."
+   ],
+   "formula": "P(available at pick N) = 1 / (1 + e^((N − ADP) / s))\ns = max(1.6, 0.55 · max(ADP spread, 0.15 · ADP))"
+  },
+  {
+   "title": "What the backtest says",
+   "paras": [
+    "1,599 drafted player-seasons from 2016-2025 (FantasyPros preseason ADP, expert consensus with spread for 2020-2025, nflverse game logs for outcomes). Expert consensus and ADP predict finishes about equally (rank correlation 0.40 vs 0.42). Preseason signals add little beyond ADP for boom: the fitted model's holdout AUC is 0.54 vs 0.54 for ADP alone, and this app's own weights score 0.60. Bust is more predictable (0.59 to 0.65): age and expert disagreement are the strongest predictors, and players who changed teams bust 7-8 points more often.",
+    "Measured hit rate / bust rate by ADP round (12-team rounds), as percentages: R1: RB 78/23 · WR 80/22 · QB – · TE –; R2: RB 77/25 · WR 56/43 · QB 83/16 · TE 77/22; R3: RB 68/31 · WR 64/35 · QB 69/30 · TE 83/16; R4: RB 57/42 · WR 49/49 · QB 50/50 · TE 63/36; R5: RB 39/48 · WR 46/51 · QB 68/31 · TE 52/47; R6: RB 38/43 · WR 34/55 · QB 68/31 · TE 46/53; R7: RB 28/51 · WR 13/59 · QB 26/73 · TE 45/55; R8: RB 26/47 · WR 19/52 · QB 50/43 · TE 25/66. Round-2 backs have hit 77 percent against 57 percent for round-2 receivers, which is the evidence behind taking a bell-cow at 17; from round 5 on, receivers hold up better than backs, and quarterbacks taken in rounds 5-6 hit about 68 percent.",
+    "Changes made from the backtest: the RB age cliff moved from 27 to 28 (age-28 backs hit 38 percent, bust 54 percent, and lose 3.3 points per game on average); vacated volume is shown but no longer scored (it predicted nothing for incumbents or arrivals); the team-change penalty now covers backs as well as receivers; the rookie prior applies to drafted receivers (boom +16, bust −17 points) and year-2 backs (boom +10) rather than year-2 receivers (no lift); weekly volatility was cut from the risk score (volatile players busted slightly less, not more); expert spread was raised in risk and bust; ADP-versus-consensus value was raised in boom (receivers the market lets fall 8-plus picks boomed 12 points more). Full tables in research/BACKTEST.md."
+   ],
+   "formula": "holdout 2024-25, ADP top 120:  boom AUC  ADP 0.54 · fitted 0.54 · this app 0.60\n                                bust AUC  ADP 0.58 · fitted 0.59 · this app 0.60"
   }
+ ],
+ "sourceNames": {
+  "fantasypros_ecr": "FantasyPros ECR",
+  "espn": "ESPN (3 boards)",
+  "yahoo": "Yahoo (Winks, Boone)",
+  "rotowire": "RotoWire",
+  "rotoballer": "RotoBaller",
+  "draftsharks": "Draft Sharks",
+  "flock": "Flock consensus",
+  "nbc_rotoworld": "NBC / Rotoworld",
+  "lineupexperts": "LineupExperts",
+  "fftoday": "FFToday (Krueger)",
+  "prizepicks": "PrizePicks (Hardy)",
+  "bleacher_report": "Bleacher Report",
+  "etr": "Establish The Run ($)",
+  "bdge": "BDGE top 50",
+  "subvertadown": "Subvertadown board",
+  "sleeper_rank": "Sleeper default",
+  "fantasylife_jul": "Fantasy Life (Jul 28)",
+  "fourfor4_jul": "4for4 (Jul 27)",
+  "cbs_aug3": "CBS (Aug 3)"
+ },
+ "sources": [
+  {
+   "key": "fantasypros_ecr",
+   "name": "FantasyPros Expert Consensus (PPR overall)",
+   "note": "Sept 4 · weight 2 · via DynastyProcess mirror"
+  },
+  {
+   "key": "espn",
+   "name": "ESPN PPR-300 sheet, default draft rank, Aug 24 snapshot",
+   "note": "Sept 4 · averaged into one ESPN number"
+  },
+  {
+   "key": "yahoo",
+   "name": "Yahoo: Hayden Winks and Justin Boone",
+   "note": "Sept 4 · averaged"
+  },
+  {
+   "key": "rotoballer",
+   "name": "RotoBaller PPR rankings",
+   "note": "Sept 2"
+  },
+  {
+   "key": "flock",
+   "name": "Flock Fantasy expert consensus",
+   "note": "Aug 31"
+  },
+  {
+   "key": "fftoday",
+   "name": "FFToday, Mike Krueger",
+   "note": "Aug 30 · weight 0.75"
+  },
+  {
+   "key": "prizepicks",
+   "name": "PrizePicks, Christian Hardy top 200",
+   "note": "Aug 29 · weight 0.75"
+  },
+  {
+   "key": "rotowire",
+   "name": "RotoWire expert consensus and value rank",
+   "note": "Aug 26 · averaged"
+  },
+  {
+   "key": "draftsharks",
+   "name": "Draft Sharks rankings",
+   "note": "Aug 26"
+  },
+  {
+   "key": "lineupexperts",
+   "name": "LineupExperts",
+   "note": "Aug 26 · weight 0.75"
+  },
+  {
+   "key": "nbc_rotoworld",
+   "name": "NBC Sports / Rotoworld top 200",
+   "note": "Aug 15"
+  },
+  {
+   "key": "bleacher_report",
+   "name": "Bleacher Report top 100 PPR",
+   "note": "Aug 14 · weight 0.75"
+  },
+  {
+   "key": "bdge",
+   "name": "BDGE top 50",
+   "note": "Aug 12 · weight 0.5"
+  },
+  {
+   "key": "etr",
+   "name": "Establish The Run auction values (ordered)",
+   "note": "Sept 1 · weight 0.75"
+  },
+  {
+   "key": "subvertadown",
+   "name": "Subvertadown value board",
+   "note": "Aug 31 · weight 0.5"
+  },
+  {
+   "key": "sleeper_rank",
+   "name": "Sleeper default rank",
+   "note": "Sept 4 · weight 0.5, ADP-driven"
+  },
+  {
+   "key": "fantasylife_jul",
+   "name": "Fantasy Life consensus and Matthew Berry",
+   "note": "Jul 28 · weight 0.5, stale"
+  },
+  {
+   "key": "fourfor4_jul",
+   "name": "4for4 PPR rankings",
+   "note": "Jul 27 · weight 0.5, stale"
+  },
+  {
+   "key": "cbs_aug3",
+   "name": "CBS Sports PPR",
+   "note": "Aug 3 · weight 0.5, stale"
+  },
+  {
+   "key": "adp_sleeper_ppr",
+   "name": "ADP: Sleeper PPR",
+   "note": "Sept 4"
+  },
+  {
+   "key": "adp_nfc_ppr",
+   "name": "ADP: Fantasy Football Calculator PPR",
+   "note": "Sept 4"
+  },
+  {
+   "key": "adp_espn",
+   "name": "ADP: ESPN",
+   "note": "Aug 29"
+  },
+  {
+   "key": "adp_yahoo",
+   "name": "ADP: Yahoo",
+   "note": "Aug 29"
+  },
+  {
+   "key": "adp_underdog",
+   "name": "ADP: Underdog (half-PPR best ball)",
+   "note": "Sept 2 · weight 0.5"
+  },
+  {
+   "key": "adp_ffpc",
+   "name": "ADP: FFPC (TE premium)",
+   "note": "Aug 29 · weight 0.5"
+  },
+  {
+   "key": "adp_fantasypros_cbs",
+   "name": "ADP: CBS, RTSports, Fantrax via FantasyPros",
+   "note": "Aug 28"
+  },
+  {
+   "key": "adp_draftsharks_half_consensus",
+   "name": "ADP: Draft Sharks consensus (half-PPR)",
+   "note": "Aug 26 · weight 0.5"
+  },
+  {
+   "key": "proj_espn",
+   "name": "Projections: ESPN stat lines to PPR",
+   "note": "2026 season"
+  },
+  {
+   "key": "proj_cbs",
+   "name": "Projections: CBS stat lines to PPR",
+   "note": "2026 season"
+  },
+  {
+   "key": "ffa",
+   "name": "Projections: ffanalytics floor, ceiling, uncertainty, age",
+   "note": "standard scoring, used as ratios"
+  },
+  {
+   "key": "risk",
+   "name": "Boom / bust / injury citations: ~70 articles (FantasyPros, Yahoo, ESPN, CBS, PFF, SI, RotoBaller, RotoWire, NBC, Bleacher Report, Fantasy Points, 4for4, FTN)",
+   "note": "from search summaries · research/risk_sources.md"
+  },
+  {
+   "key": "context",
+   "name": "2026 context: trades, coaching changes, injuries, depth charts",
+   "note": "research/context.md"
+  },
+  {
+   "key": "nflverse",
+   "name": "nflverse: 2024-25 weekly player stats, 2026 Week 1 rosters, player birthdates",
+   "note": "GitHub release assets · boom/bust rates, usage, ages, status codes, vacated volume"
+  },
+  {
+   "key": "sos",
+   "name": "2026 schedule strength by position (weeks 1-17, 1-4, 15-17)",
+   "note": "computed from nflverse 2024-25 points allowed, schedule-adjusted · research/sos_notes.md"
+  },
+  {
+   "key": "team_env",
+   "name": "2026 team environments: coaches, play-callers, QBs, Vegas, O-line",
+   "note": "research/team_env_notes.md"
+  },
+  {
+   "key": "opportunity",
+   "name": "2026 per-player opportunity change drivers",
+   "note": "research/opportunity_notes.md"
+  },
+  {
+   "key": "adp_ffc_sep4",
+   "name": "ADP: Fantasy Football Calculator PPR, 7,681 drafts Aug 28 - Sep 4, with per-player stdev",
+   "note": "via Danoodli/fantasy-drafter"
+  },
+  {
+   "key": "adp_espn_live",
+   "name": "ADP: ESPN live (Sept 4), plus ESPN PPR rank, injury status, ownership",
+   "note": "via Danoodli/fantasy-drafter"
+  },
+  {
+   "key": "adp_sleeper_live",
+   "name": "ADP: Sleeper live (Sept 4) and daily history since Aug 26",
+   "note": "via Danoodli/fantasy-drafter"
+  },
+  {
+   "key": "adp_fantasypros_live",
+   "name": "ADP: FantasyPros and Yahoo daily snapshots (Sept 4)",
+   "note": "via najibismail95 ADP tool"
+  },
+  {
+   "key": "proj_sleeper",
+   "name": "Projections: Sleeper stat lines to PPR",
+   "note": "Sept 4"
+  },
+  {
+   "key": "proj_bayes",
+   "name": "Projections: hierarchical-Bayesian PPR p10 / p50 / p90, projected games",
+   "note": "srsavas42/fantasy-football-research, Sept 4"
+  },
+  {
+   "key": "lhallee",
+   "name": "Injury: calibrated missed-time probability (AUC 0.75)",
+   "note": "lhallee/fantasy-football-feature-discovery, frozen Aug 9"
+  },
+  {
+   "key": "census",
+   "name": "Play-caller census with sources for all 32 teams",
+   "note": "demansou/fantasy-football-26, as of Sept 2"
+  },
+  {
+   "key": "vegas",
+   "name": "Vegas win totals (Aug 23) and PFF preseason O-line ranks",
+   "note": "srsavas42, StrubeTube/the-lab"
+  },
+  {
+   "key": "ffopportunity",
+   "name": "2025 expected fantasy points (efficiency / TD regression)",
+   "note": "ffverse/ffopportunity"
+  }
+ ],
+ "unavailable": [
+  "Direct page fetches were blocked for every fantasy site in this environment (FantasyPros, ESPN, Yahoo, CBS, NFL.com, PFF, Draft Sharks, Fantasy Football Calculator, Sleeper API) and for reddit.com. Rankings and ADP come from public GitHub mirrors of those sites with verified dates; article findings come from search-result summaries.",
+  "Not obtained at all: PFF rankings, NFL.com (Fabiano / Grant), ESPN individual analysts (Clay, Karabell, Yates), current CBS (Eisenberg / Richard), The Athletic, FTN / numberFire, Fantasy Points, Footballguys.",
+  "Reddit threads could not be read. Community sentiment is secondhand (Fantasy Squawk's roundup) and from ADP-versus-expert gaps.",
+  "Draft Sharks injury percentages exist only for McCaffrey (78%); everyone else uses games missed in 2024-25 from nflverse plus reported labels.",
+  "Weekly boom/bust rates now come from nflverse game logs; they still cannot capture 2026 role changes for players who moved.",
+  "Fantasy Football Calculator's 10-team PPR ADP is blocked; ESPN's ADP (from leagues that default to 10 teams) is the closest proxy and is what this league's room uses, so it carries triple weight and drives the ESPN-room availability mode."
+ ],
+ "adpNames": {
+  "sleeper_ppr": "Sleeper",
+  "nfc_ppr": "FF Calculator",
+  "espn": "ESPN",
+  "yahoo": "Yahoo",
+  "underdog": "Underdog (½ PPR)",
+  "ffpc": "FFPC (TE prem.)",
+  "fantasypros_cbs": "CBS",
+  "fantasypros_rtsports": "RTSports",
+  "fantasypros_fantrax": "Fantrax",
+  "draftsharks_half_consensus": "Draft Sharks (½ PPR)"
+ }
 }
