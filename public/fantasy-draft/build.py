@@ -36,6 +36,8 @@ import unicodedata
 from datetime import date
 from pathlib import Path
 
+import situation
+
 HERE = Path(__file__).resolve().parent
 DATA = HERE / "data"
 
@@ -86,9 +88,9 @@ ADP_WEIGHT = {
 ADP_PLATFORMS = ["sleeper_ppr", "nfc_ppr", "espn", "yahoo", "underdog", "ffpc", "fantasypros_cbs", "fantasypros_rtsports", "fantasypros_fantrax", "draftsharks_half_consensus"]
 
 W = {
-    "boom": {"upside": 0.25, "ceiling": 0.15, "mentions": 0.25, "factors": 0.15, "youth": 0.10, "value": 0.10},
-    "bust": {"downside": 0.15, "floor": 0.10, "mentions": 0.25, "factors": 0.15, "age": 0.10, "reach": 0.10, "injury": 0.15},
-    "risk": {"spread": 0.25, "adp_spread": 0.15, "uncertainty": 0.15, "injury": 0.25, "camp": 0.10, "situation": 0.10},
+    "boom": {"upside": 0.20, "ceiling": 0.10, "hist_boom": 0.20, "mentions": 0.20, "factors": 0.10, "youth": 0.10, "value": 0.10},
+    "bust": {"downside": 0.10, "floor": 0.10, "hist_bust": 0.15, "mentions": 0.20, "factors": 0.15, "age": 0.10, "reach": 0.05, "injury": 0.15},
+    "risk": {"spread": 0.20, "adp_spread": 0.10, "uncertainty": 0.10, "consistency": 0.15, "injury": 0.20, "camp": 0.10, "situation": 0.15},
 }
 BASELINE = {"QB": 10, "RB": 22, "WR": 28, "TE": 10}          # 10-team VOLS + flex split
 AGE_CLIFF = {"RB": (27, 29), "WR": (29, 31), "TE": (30, 32), "QB": (34, 36)}  # (at, past)
@@ -256,6 +258,18 @@ def main():
     model = load("model.json", {})
     proj = load_projections()
     ffa = load_ffa()
+    team_env = {r["team"]: r for r in load("team_env.json", [])} if (DATA / "team_env.json").exists() else {}
+    sos = load("sos.json", {}).get("teams", {}) if (DATA / "sos.json").exists() else {}
+    opp_rows = load("opportunity.json", []) if (DATA / "opportunity.json").exists() else []
+    opp_by = {}
+    for o in opp_rows:
+        opp_by[norm_name(o["name"]) + "|" + (o.get("pos") or "").upper()] = o
+    league_env = situation.team_env_scores(team_env) if team_env else {"implied": [], "wins": [], "oline": []}
+    used_opp = set()
+    nfl = load("nflverse_features.json", {})
+    nfl_players = nfl.get("players", {})
+    nfl_teams = nfl.get("teams", {})
+    team_changes, status_conflicts = [], []
 
     risk_by = {norm_name(r["name"]): r for r in risk}
     adj_by = {norm_name(k): v for k, v in adjustments.items() if not k.startswith("_")}
@@ -275,6 +289,19 @@ def main():
         used_risk.add(key) if rk else None
         used_adj.add(key) if ad else None
         used_proj += 1 if pj else 0
+        nv = nfl_players.get(key + "|" + pos, {})
+        team_code = r["team"]
+        if nv.get("team_2026") and nv["team_2026"] != team_code and nv.get("roster_status") in ("ACT", "RES", "EXE"):
+            team_changes.append(f"{r['name']}: {team_code} -> {nv['team_2026']}")
+            team_code = nv["team_2026"]
+        s25 = nv.get("s2025") or {}
+        s24 = nv.get("s2024") or {}
+        games_missed = None
+        if s25 or s24:
+            games_missed = (17 - s25["games"] if s25 else 17) + ((17 - s24["games"]) if s24 else 0) if (s25 and not nv.get("rookie")) else None
+            if s25 and not s24:
+                games_missed = 17 - s25["games"]
+        tctx = nfl_teams.get(team_code, {})
 
         # --- composite: average inside each outlet, then weighted across outlets ------------
         outlet_ranks = {}
@@ -311,13 +338,14 @@ def main():
         proj_pts = statistics.mean(pj.values()) if pj else None
         proj_sd = statistics.pstdev(pj.values()) if len(pj) > 1 else None
 
-        age = rk.get("age") or fa.get("age") or r.get("age")
+        age = nv.get("age") or rk.get("age") or fa.get("age") or r.get("age")
 
         # --- signals --------------------------------------------------------------------------
         boom_mentions = (rk.get("boom_mentions") or []) + (rk.get("sleeper_mentions") or [])
-        boom_factors = list(rk.get("boom_factors") or []) + list(ad.get("boom_factors") or [])
+        pre = "Before the move: " if nv.get("moved") else ""   # article notes for traded / signed players describe the old team
+        boom_factors = [pre + f for f in (rk.get("boom_factors") or [])] + list(ad.get("boom_factors") or [])
         bust_mentions = rk.get("bust_mentions") or []
-        risk_factors = list(rk.get("risk_factors") or []) + list(ad.get("risk_factors") or [])
+        risk_factors = [pre + f for f in (rk.get("risk_factors") or [])] + list(ad.get("risk_factors") or [])
         pct = rk.get("injury_risk_pct")
         inj_parts = []
         if pct is not None:
@@ -328,15 +356,47 @@ def main():
                 inj_parts.append(ls)
         if rk.get("games_missed_last3") is not None:
             inj_parts.append(clamp(rk["games_missed_last3"] / 18.0))
+        if games_missed is not None and not nv.get("rookie"):
+            inj_parts.append(clamp(games_missed / 12.0))
         injury = sum(inj_parts) / len(inj_parts) if inj_parts else None
         camp_text = ad.get("camp_status") or rk.get("camp_status")   # hand-curated context (newer, cross-checked) wins over article snippets
         camp, camp_flag = camp_status(camp_text)
+        roster_flag = nv.get("status_flag")
+        if roster_flag in ("Exempt", "IR", "PUP", "NFI", "Holdout", "Retired"):
+            camp, camp_flag = 1.0, roster_flag
+            camp_text = "Week 1 roster: " + nv.get("availability", roster_flag)
+        elif nv.get("status_code") == "A01" and camp >= 0.8:
+            status_conflicts.append(f"{r['name']}: adjustments say '{camp_text}' but the Week 1 roster lists him active")
+            camp, camp_flag = 0.4, None
+            camp_text = "Listed active on the Week 1 roster; earlier reports said " + (ad.get("camp_status") or rk.get("camp_status") or "")
+            ad = dict(ad, bust_adj=ad.get("bust_adj", 0) * 0.5)
+        if pos in ("WR", "TE") and (tctx.get("vacated_target_share") or 0) >= 0.25:
+            boom_factors.append(f"{team_code} vacated {tctx['vacated_target_share'] * 100:.0f}% of its 2025 targets ({tctx['vacated_targets']})")
+        if pos == "RB" and (tctx.get("vacated_carry_share") or 0) >= 0.30:
+            boom_factors.append(f"{team_code} vacated {tctx['vacated_carry_share'] * 100:.0f}% of its 2025 carries ({tctx['vacated_carries']})")
+        if nv.get("rookie"):
+            risk_factors.append("Rookie: no NFL usage history")
+            if nv.get("draft_number") and nv["draft_number"] <= 32:
+                boom_factors.append(f"First-round draft capital (pick {nv['draft_number']})")
+        if nv.get("moved"):
+            risk_factors.append(f"New team in 2026 ({nv.get('team_2025')} to {team_code})")
         sit = [f for f in risk_factors if any(w in f.lower() for w in SITUATION_WORDS)]
 
+        opp_row = opp_by.get(key + "|" + pos)
+        if opp_row:
+            used_opp.add(key + "|" + pos)
+        sit_raw, sit_parts, sit_why, env_block, chg_block, sos_block, sit_uncertain = situation.compute(
+            pos, team_code, team_env.get(team_code), opp_row, sos.get(team_code), tctx, league_env)
+        if sit_uncertain:
+            risk_factors.append("2026 role unresolved: " + (opp_row.get("note") or "competition or scheme still unsettled"))
+            sit = [f for f in risk_factors if any(w in f.lower() for w in SITUATION_WORDS)]
+        if chg_block and (chg_block.get("coaching") or 0) != 0:
+            sit.append("coaching change")
         players.append({
             "id": key.replace(" ", "-") + "-" + pos.lower(),
-            "name": r["name"], "team": r["team"], "pos": pos,
-            "bye": r.get("bye") or byes.get(r["team"]) or "?",
+            "env": env_block, "chg": chg_block, "sos": sos_block, "sitWhy": sit_why, "sitParts": sit_parts,
+            "name": r["name"], "team": team_code, "pos": pos,
+            "bye": byes.get(team_code) or r.get("bye") or "?",
             "age": age,
             "comp": round(comp, 1), "n": len(outlet_ranks), "nRaw": len(raw_ranks), "best": best, "worst": worst, "sd": round(sd, 1),
             "sources": outlet_ranks, "ecrAvg": meta.get("fantasypros_ecr_avg"),
@@ -346,7 +406,16 @@ def main():
             "proj": round(proj_pts) if proj_pts is not None else None, "projSources": pj or None, "projSd": round(proj_sd, 1) if proj_sd is not None else None,
             "ceilPts": round(proj_pts * fa["ceil_ratio"]) if proj_pts and fa.get("ceil_ratio") else None,
             "floorPts": round(proj_pts * fa["floor_ratio"]) if proj_pts and fa.get("floor_ratio") else None,
+            "hist": {
+                "games25": s25.get("games"), "ppg25": s25.get("ppg"), "boom25": s25.get("boom_rate"), "bust25": s25.get("bust_rate"), "cv25": s25.get("cv"),
+                "targets25": s25.get("targets"), "tgtShare25": s25.get("target_share"), "carries25": s25.get("carries"), "carryShare25": s25.get("carry_share"),
+                "games24": s24.get("games"), "ppg24": s24.get("ppg"), "boomRate": nv.get("boom_rate"), "bustRate": nv.get("bust_rate"), "gamesMissed": games_missed,
+                "rookie": nv.get("rookie"), "draftNo": nv.get("draft_number"), "rosterStatus": nv.get("availability"),
+            } if nv else None,
+            "teamCtx": {"vacTgtShare": tctx.get("vacated_target_share"), "vacCarShare": tctx.get("vacated_carry_share"), "vacTgt": tctx.get("vacated_targets"), "vacCar": tctx.get("vacated_carries"), "departed": tctx.get("departed"), "unavailable": tctx.get("unavailable")} if tctx else None,
             "_sig": {
+                "sitRaw": sit_raw, "sitUncertain": sit_uncertain,
+                "histBoom": nv.get("boom_rate"), "histBust": nv.get("bust_rate"), "cv": s25.get("cv") if s25 and s25.get("games", 0) >= 6 else None,
                 "upside": (comp - best) / comp, "downside": (worst - comp) / comp,
                 "ceil": (fa.get("ceil_ratio") or 1.0) - 1.0, "floor": 1.0 - (fa.get("floor_ratio") or 1.0),
                 "boomMentions": boom_mentions, "boomFactors": boom_factors, "bustMentions": bust_mentions, "riskFactors": risk_factors,
@@ -387,22 +456,30 @@ def main():
         pct_ce = percentile_within(players, lambda p: p["_sig"]["ceil"], pos)
         pct_fl = percentile_within(players, lambda p: p["_sig"]["floor"], pos)
         pct_sp = percentile_within(players, lambda p: p["_sig"]["spread"], pos)
+        pct_hb = percentile_within([p for p in players if p["_sig"]["histBoom"] is not None], lambda p: p["_sig"]["histBoom"], pos)
+        pct_hu = percentile_within([p for p in players if p["_sig"]["histBust"] is not None], lambda p: p["_sig"]["histBust"], pos)
+        pct_cv = percentile_within([p for p in players if p["_sig"]["cv"] is not None], lambda p: p["_sig"]["cv"], pos)
+        pct_sit = percentile_within(players, lambda p: p["_sig"]["sitRaw"], pos)
         pct_as = percentile_within([p for p in players if p["_sig"]["adpSpread"] is not None], lambda p: p["_sig"]["adpSpread"], pos)
         for p in players:
             if p["pos"] != pos:
                 continue
             s = p["_sig"]
             bw, uw, rw = W["boom"], W["bust"], W["risk"]
-            boom_raw = (bw["upside"] * pct_up(s["upside"]) / 100 + bw["ceiling"] * pct_ce(s["ceil"]) / 100
+            hb = pct_hb(s["histBoom"]) / 100 if s["histBoom"] is not None else 0.5
+            hu = pct_hu(s["histBust"]) / 100 if s["histBust"] is not None else 0.5
+            cvp = pct_cv(s["cv"]) / 100 if s["cv"] is not None else 0.5
+            sit_up = max(0.0, s["sitRaw"]); sit_dn = max(0.0, -s["sitRaw"])
+            boom_raw = (0.12 * sit_up / 0.5) + (bw["upside"] * pct_up(s["upside"]) / 100 + bw["ceiling"] * pct_ce(s["ceil"]) / 100 + bw["hist_boom"] * hb
                         + bw["mentions"] * saturate(len(s["boomMentions"])) + bw["factors"] * saturate(len(s["boomFactors"]))
                         + bw["youth"] * youth_bonus(pos, p["age"]) + bw["value"] * clamp((p["value"] or 0) / 10.0) + s["boomAdj"])
             inj = s["injury"] if s["injury"] is not None else INJURY_PRIOR[pos]
-            bust_raw = (uw["downside"] * pct_dn(s["downside"]) / 100 + uw["floor"] * pct_fl(s["floor"]) / 100
+            bust_raw = (0.12 * sit_dn / 0.5) + (uw["downside"] * pct_dn(s["downside"]) / 100 + uw["floor"] * pct_fl(s["floor"]) / 100 + uw["hist_bust"] * hu
                         + uw["mentions"] * saturate(len(s["bustMentions"])) + uw["factors"] * saturate(len(s["riskFactors"]))
                         + uw["age"] * age_flag(pos, p["age"]) + uw["reach"] * clamp(-(p["value"] or 0) / 10.0) + uw["injury"] * inj + s["bustAdj"])
             unc = (s["uncertainty"] / 100.0) if s["uncertainty"] is not None else 0.5
             adp_sp = pct_as(s["adpSpread"]) / 100 if s["adpSpread"] is not None else 0.5
-            risk_raw = (rw["spread"] * pct_sp(s["spread"]) / 100 + rw["adp_spread"] * adp_sp + rw["uncertainty"] * unc
+            risk_raw = (0.10 * (1.0 if s["sitUncertain"] else 0.0)) + (rw["spread"] * pct_sp(s["spread"]) / 100 + rw["adp_spread"] * adp_sp + rw["uncertainty"] * unc + rw["consistency"] * cvp
                         + rw["injury"] * inj + rw["camp"] * s["camp"] + rw["situation"] * saturate(len(s["sit"]), 2.0) + s["riskAdj"])
             p["_raw"] = {"boom": boom_raw, "bust": bust_raw, "risk": risk_raw}
         pb = percentile_within([p for p in players if p["pos"] == pos], lambda p: p["_raw"]["boom"], pos)
@@ -410,6 +487,7 @@ def main():
         pr = percentile_within([p for p in players if p["pos"] == pos], lambda p: p["_raw"]["risk"], pos)
         for p in players:
             if p["pos"] == pos:
+                p["sit"] = round(pct_sit(p["_sig"]["sitRaw"]))
                 p["boom"] = round(pb(p["_raw"]["boom"]))
                 p["bust"] = round(pu(p["_raw"]["bust"]))
                 p["risk"] = round(pr(p["_raw"]["risk"]))
@@ -423,6 +501,8 @@ def main():
             why_b.append(f"Most bullish source has him #{int(best)}, {comp - best:.0f} spots above the composite")
         if p["ceilPts"] and p["proj"] and p["ceilPts"] - p["proj"] >= 0.08 * p["proj"]:
             why_b.append(f"ffanalytics ceiling {p['ceilPts']} pts vs {p['proj']} projected")
+        if p["hist"] and p["hist"]["boomRate"] is not None and p["hist"]["games25"]:
+            why_b.append(f"Boom weeks (top-{ {'QB': 3, 'RB': 6, 'WR': 6, 'TE': 3}[p['pos']]} scoring) in {p['hist']['boomRate'] * 100:.0f}% of games, 2024-25 weighted")
         if s["boomMentions"]:
             why_b.append("Breakout/sleeper pick by " + ", ".join(s["boomMentions"][:4]))
         why_b += s["boomFactors"]
@@ -438,6 +518,8 @@ def main():
             why_u.append(f"Most bearish source has him #{int(worst)}, {worst - comp:.0f} spots below the composite")
         if p["floorPts"] and p["proj"] and p["proj"] - p["floorPts"] >= 0.10 * p["proj"]:
             why_u.append(f"ffanalytics floor {p['floorPts']} pts vs {p['proj']} projected")
+        if p["hist"] and p["hist"]["bustRate"] is not None and p["hist"]["games25"]:
+            why_u.append(f"Bust weeks (below the startable line) in {p['hist']['bustRate'] * 100:.0f}% of games, 2024-25 weighted")
         if s["bustMentions"]:
             why_u.append("On bust/avoid lists from " + ", ".join(s["bustMentions"][:4]))
         why_u += s["riskFactors"]
@@ -458,8 +540,12 @@ def main():
             why_r.append(f"Injury model: {rk['injury_risk_pct']:.0f}% chance of missing time")
         elif rk.get("injury_risk_label"):
             why_r.append("Injury risk: " + rk["injury_risk_label"])
-        if rk.get("games_missed_last3"):
+        if p["hist"] and p["hist"]["gamesMissed"]:
+            why_r.append(f"Missed {p['hist']['gamesMissed']} regular-season games in 2024-25")
+        elif rk.get("games_missed_last3"):
             why_r.append(f"Missed {rk['games_missed_last3']} games over the last three seasons")
+        if s["cv"] is not None and s["cv"] >= 0.6:
+            why_r.append(f"Week-to-week swing: 2025 scores varied ±{s['cv'] * 100:.0f}% of his average")
         if s["camp"] >= 0.4:
             why_r.append("Status: " + s["campText"])
         if s["sit"]:
@@ -481,6 +567,11 @@ def main():
     # --- report -------------------------------------------------------------------------------
     print(f"players scored: {len(players)}   with projections: {used_proj}   with risk signals: {len(used_risk)}/{len(risk)}   with adjustments: {len(used_adj)}/{len(adj_by)}")
     print("unmatched risk rows:", sorted(set(risk_by) - used_risk))
+    print("nflverse matched:", sum(1 for p in players if p["hist"]), "of", len(players), "| team changes from Week 1 roster:", team_changes)
+    print("status conflicts (roster active vs reported out):", status_conflicts)
+    print(f"situation inputs: team_env {len(team_env)} teams, sos {len(sos)} teams, opportunity rows matched {len(used_opp)}/{len(opp_by)}")
+    if opp_by:
+        print("unmatched opportunity rows:", sorted(set(opp_by) - used_opp)[:15])
     print("unmatched adjustments:", sorted(set(adj_by) - used_adj))
     counts = {}
     for p in players:
@@ -496,6 +587,14 @@ def main():
             counts["risk"] = counts.get("risk", 0) + 1
         if norm_name(p["name"]) in used_adj:
             counts["context"] = counts.get("context", 0) + 1
+        if p.get("hist"):
+            counts["nflverse"] = counts.get("nflverse", 0) + 1
+        if p.get("sos"):
+            counts["sos"] = counts.get("sos", 0) + 1
+        if p.get("env"):
+            counts["team_env"] = counts.get("team_env", 0) + 1
+        if p.get("chg"):
+            counts["opportunity"] = counts.get("opportunity", 0) + 1
     for s in model.get("sources", []):
         if s.get("key") in counts:
             s["count"] = counts[s["key"]]
@@ -513,7 +612,7 @@ def main():
             "sources": model.get("sources", []),
             "unavailable": model.get("unavailable", []),
             "model": {"intro": model.get("intro", ""), "sections": model.get("sections", [])},
-            "weights": W, "outletWeights": OUTLET_WEIGHT, "baselines": BASELINE,
+            "weights": W, "situationWeights": situation.SW, "outletWeights": OUTLET_WEIGHT, "baselines": BASELINE,
         },
     }
     (DATA / "players.json").write_text(json.dumps(out["players"], indent=1))

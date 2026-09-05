@@ -110,12 +110,16 @@ def need_adj(roster, rnd, pos, teams):
     return adj
 
 
-def pick_score(p, rnd, pick, profile, strategy, roster, teams):
+def pick_score(p, rnd, pick, profile, strategy, roster, teams, sit_w=0.0, sos_w=0.0):
     k = PROFILES[profile]
     s = -math.log(p["comp"])
     s += k["boom"] * (p["boom"] - 50) / 100
     s -= k["bust"] * (p["bust"] - 50) / 100
     s -= k["risk"] * (p["risk"] - 50) / 100
+    if p.get("sit") is not None:
+        s += sit_w * (p["sit"] - 50) / 100
+    if p.get("sos") and p["sos"].get("playoffsZ") is not None:
+        s += sos_w * p["sos"]["playoffsZ"]
     s += strategy_adj(strategy, rnd, p["pos"])
     s += need_adj(roster, rnd, p["pos"], teams)
     pa = p_avail(p["adp"], pick, p.get("adpSd"))
@@ -135,6 +139,8 @@ def main():
     ap.add_argument("--mine", default="", help="comma-separated names already on your roster (in order)")
     ap.add_argument("--start-round", type=int, default=None, help="first round to plan (default: after your --mine picks)")
     ap.add_argument("--top", type=int, default=4)
+    ap.add_argument("--sit-weight", type=float, default=0.10, help="log-rank units per 100 points of 2026 situation score (0 to ignore)")
+    ap.add_argument("--sos-weight", type=float, default=0.04, help="log-rank units per z-score of fantasy-playoff schedule strength (weeks 15-17)")
     ap.add_argument("--name", default=None, help="scenario file name (default derived from settings)")
     a = ap.parse_args()
 
@@ -167,7 +173,7 @@ def main():
         for p in players:
             if p["id"] in gone:
                 continue
-            s, pa = pick_score(p, rnd, pick, a.profile, a.strategy, roster, a.teams)
+            s, pa = pick_score(p, rnd, pick, a.profile, a.strategy, roster, a.teams, a.sit_weight, a.sos_weight)
             if pa < a.min_avail:
                 continue
             cands.append((s, pa, p))
@@ -183,11 +189,11 @@ def main():
 
     def cell(t):
         s, pa, p = t
-        return f"{p['name']} ({p['pos']}{p['posRank']}, comp {p['comp']:.0f}, {pa * 100:.0f}%)"
+        return f"{p['name']} ({p['pos']}{p['posRank']}, comp {p['comp']:.0f}, {pa * 100:.0f}%, 2026 {p.get('sit', '–')})"
 
     hdr = f"# Scenario: {name}\n\n"
     hdr += f"- League: {a.teams} teams, slot {a.slot}, full PPR snake, picks {', '.join('#' + str(x) for x in picks)}\n"
-    hdr += f"- Strategy: **{a.strategy}** · risk profile: **{a.profile}** · min availability {a.min_avail:.0%}\n"
+    hdr += f"- Strategy: **{a.strategy}** · risk profile: **{a.profile}** · min availability {a.min_avail:.0%} · 2026 situation weight {a.sit_weight} · playoff-schedule weight {a.sos_weight}\n"
     if taken:
         hdr += f"- Already gone: {', '.join(p['name'] for p in taken)}\n"
     if a.mine:
@@ -212,10 +218,10 @@ def main():
     (OUT / f"{name}.md").write_text(md)
     with (OUT / f"{name}.csv").open("w", newline="") as f:
         w = csv.writer(f)
-        w.writerow(["round", "pick", "slot", "player", "pos", "pos_rank", "team", "bye", "composite", "adp", "p_available", "proj", "vbd", "boom", "bust", "risk", "score"])
+        w.writerow(["round", "pick", "slot", "player", "pos", "pos_rank", "team", "bye", "composite", "adp", "p_available", "proj", "vbd", "boom", "bust", "risk", "situation", "playoff_sos_rank", "score"])
         for rnd, pick, top in rows:
             for i, (s, pa, p) in enumerate(top, 1):
-                w.writerow([rnd, pick, i, p["name"], p["pos"], p["posRank"], p["team"], p["bye"], p["comp"], p["adp"], round(pa, 2), p.get("proj"), p.get("vbd"), p["boom"], p["bust"], p["risk"], round(s, 3)])
+                w.writerow([rnd, pick, i, p["name"], p["pos"], p["posRank"], p["team"], p["bye"], p["comp"], p["adp"], round(pa, 2), p.get("proj"), p.get("vbd"), p["boom"], p["bust"], p["risk"], p.get("sit"), (p.get("sos") or {}).get("playoffs"), round(s, 3)])
 
     print(md)
     print(f"saved scenarios/{name}.md and .csv")

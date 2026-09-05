@@ -27,23 +27,31 @@
     {
       "title": "Boom (0-100)",
       "paras": [
-        "Boom is a within-position percentile, so 80 means more upside signal than 80 percent of players at his position. Inputs: how far the most bullish source sits above the composite (FantasyPros' upside disagreement), the ffanalytics ceiling-to-projection ratio, breakout and sleeper citations across 2026 articles (saturating so ten mentions beat three), situational boom factors from the context research, youth relative to the positional age curve, and positive ADP value."
+        "Boom is a within-position percentile, so 80 means more upside signal than 80 percent of players at his position. Inputs: the player's own 2024-25 boom-week rate (weeks at or above the weekly RB6 / WR6 / QB3 / TE3 score, from nflverse game logs, 2025 weighted 0.65), how far the most bullish source sits above the composite (FantasyPros' upside disagreement), the ffanalytics ceiling-to-projection ratio, breakout and sleeper citations across 2026 articles (saturating so ten mentions beat three), situational boom factors from the context research, youth relative to the positional age curve, and positive ADP value."
       ],
-      "formula": "raw = .25·pct(upside) + .15·pct(ceiling gap) + .25·sat(boom mentions) + .15·sat(boom factors)\n      + .10·youth + .10·clamp(value/10) + context adjustment\nboom = percentile of raw within position        sat(n) = 1 − e^(−n/3)"
+      "formula": "raw = .20·pct(upside) + .10·pct(ceiling gap) + .20·pct(2024-25 boom-week rate) + .20·sat(boom mentions)\n      + .10·sat(boom factors) + .10·youth + .10·clamp(value/10) + .12·situation⁺ + context adjustment\nboom = percentile of raw within position        sat(n) = 1 − e^(−n/3)"
     },
     {
       "title": "Bust (0-100)",
       "paras": [
-        "Bust is the directional downside, also as a within-position percentile. Inputs: how far the most bearish source sits below the composite, the ffanalytics floor gap, bust and avoid-at-ADP citations, structural risk factors (committee, new QB, workload), an age flag at the historical cliff (RB 27 and 29, WR 29 and 31, TE 30 and 32, QB 34 and 36), a reach penalty when ADP runs ahead of the composite, and injury history. Players on IR, PUP or the exempt list get a large hand adjustment."
+        "Bust is the directional downside, also as a within-position percentile. Inputs: the player's own 2024-25 bust-week rate (weeks at or below the weekly RB40 / WR56 / QB18 / TE18 score), how far the most bearish source sits below the composite, the ffanalytics floor gap, bust and avoid-at-ADP citations, structural risk factors (committee, new QB, workload), an age flag at the historical cliff (RB 27 and 29, WR 29 and 31, TE 30 and 32, QB 34 and 36), a reach penalty when ADP runs ahead of the composite, and injury history. Players on IR, PUP or the exempt list get a large hand adjustment."
       ],
-      "formula": "raw = .15·pct(downside) + .10·pct(floor gap) + .25·sat(bust mentions) + .15·sat(risk factors)\n      + .10·ageFlag + .10·clamp(−value/10) + .15·injury + context adjustment\nbust = percentile of raw within position"
+      "formula": "raw = .10·pct(downside) + .10·pct(floor gap) + .15·pct(2024-25 bust-week rate) + .20·sat(bust mentions) + .15·sat(risk factors)\n      + .10·ageFlag + .05·clamp(−value/10) + .15·injury + .12·situation⁻ + context adjustment\nbust = percentile of raw within position"
     },
     {
       "title": "Risk / volatility (0-100)",
       "paras": [
-        "Risk is symmetric uncertainty, following Isaac Petersen's ffanalytics measure: spread of expert ranks, spread of ADP across platforms and the ffanalytics projection uncertainty, plus injury signal (position base rate when nothing is known: RB 40, WR 35, TE 35, QB 25), camp status and situation changes. High risk with high boom and low bust is a target; high risk with high bust is a fade."
+        "Risk is symmetric uncertainty, following Isaac Petersen's ffanalytics measure: spread of expert ranks, spread of ADP across platforms and the ffanalytics projection uncertainty, plus the player's own 2025 week-to-week variation (coefficient of variation from game logs), injury signal (games missed in 2024-25 from nflverse, blended with reported injury labels; position base rate only for rookies), camp status from the Week 1 roster codes, and situation changes including an unresolved 2026 role. High risk with high boom and low bust is a target; high risk with high bust is a fade."
       ],
-      "formula": "raw = .25·pct(rank spread) + .15·pct(ADP spread) + .15·uncertainty + .25·injury\n      + .10·camp + .10·sat(situation changes, 2) + context adjustment\nrisk = percentile of raw within position"
+      "formula": "raw = .20·pct(rank spread) + .10·pct(ADP spread) + .10·uncertainty + .15·pct(2025 weekly CV) + .20·injury\n      + .10·camp + .15·sat(situation changes, 2) + .10·unresolved + context adjustment\nrisk = percentile of raw within position"
+    },
+    {
+      "title": "2026 situation (0-100)",
+      "paras": [
+        "Experts and ADP already price the headline moves (A.J. Brown to New England, Kenneth Walker to Kansas City), so this layer does not move the composite rank. It scores what the market prices least and widens or narrows the range of outcomes. Four parts: team offensive environment (Vegas implied points, quarterback tier, offensive line, play-caller pass-rate and backfield tendencies, from the 2026 coaching research), the player's 2026 change (opportunity, competition, quarterback and coaching change from the opportunity research, with an unresolved flag), vacated volume (share of the team's 2025 targets or carries that left, computed from nflverse 2025 stats and the Week 1 2026 roster; only ever adds, since low churn is stable rather than bad), and schedule (2026 strength of schedule by position from nflverse 2024-25 points allowed, schedule-adjusted; fantasy playoff weeks 15-17 weigh more than the full season because the research finds full-season schedule strength is close to noise).",
+        "The situation score is a within-position percentile. Positive situation raw adds to boom, negative adds to bust, and an unresolved role adds to risk. The scenario runner uses it as a tiebreak (0.10 log-rank units per 100 points) along with the playoff-schedule z-score (0.04 per z)."
+      ],
+      "formula": "raw = .35·environment + .35·change + .15·vacated + .15·(0.4·SOS_full_z + 0.6·SOS_playoffs_z)\nenvironment(WR/TE) = .40·z(Vegas pts) + .35·QB tier + .10·z(O-line) + .15·pass-rate lean\nenvironment(RB)    = .40·z(Vegas pts) + .10·QB tier + .25·z(O-line) − .10·pass-rate lean + .15·bell-cow lean\nchange = (.5·opportunity + .25·competition + qb_w·QB + .25·coaching) / 2,  qb_w = .5 WR/TE, .25 RB\nsituation = percentile of raw within position"
     },
     {
       "title": "Projection and VBD",
@@ -241,14 +249,34 @@
       "key": "context",
       "name": "2026 context: trades, coaching changes, injuries, depth charts",
       "note": "research/context.md"
+    },
+    {
+      "key": "nflverse",
+      "name": "nflverse: 2024-25 weekly player stats, 2026 Week 1 rosters, player birthdates",
+      "note": "GitHub release assets · boom/bust rates, usage, ages, status codes, vacated volume"
+    },
+    {
+      "key": "sos",
+      "name": "2026 schedule strength by position (weeks 1-17, 1-4, 15-17)",
+      "note": "computed from nflverse 2024-25 points allowed, schedule-adjusted · research/sos_notes.md"
+    },
+    {
+      "key": "team_env",
+      "name": "2026 team environments: coaches, play-callers, QBs, Vegas, O-line",
+      "note": "research/team_env_notes.md"
+    },
+    {
+      "key": "opportunity",
+      "name": "2026 per-player opportunity change drivers",
+      "note": "research/opportunity_notes.md"
     }
   ],
   "unavailable": [
     "Direct page fetches were blocked for every fantasy site in this environment (FantasyPros, ESPN, Yahoo, CBS, NFL.com, PFF, Draft Sharks, Fantasy Football Calculator, Sleeper API) and for reddit.com. Rankings and ADP come from public GitHub mirrors of those sites with verified dates; article findings come from search-result summaries.",
     "Not obtained at all: PFF rankings, NFL.com (Fabiano / Grant), ESPN individual analysts (Clay, Karabell, Yates), current CBS (Eisenberg / Richard), The Athletic, FTN / numberFire, Fantasy Points, Footballguys.",
     "Reddit threads could not be read. Community sentiment is secondhand (Fantasy Squawk's roundup) and from ADP-versus-expert gaps.",
-    "Draft Sharks injury percentages exist only for McCaffrey (78%); everyone else carries a label from articles or the position base rate.",
-    "No weekly boom/bust rates (FantasyPros' game-level thresholds) because game logs were not reachable."
+    "Draft Sharks injury percentages exist only for McCaffrey (78%); everyone else uses games missed in 2024-25 from nflverse plus reported labels.",
+    "Weekly boom/bust rates now come from nflverse game logs; they still cannot capture 2026 role changes for players who moved."
   ],
   "adpNames": {
     "sleeper_ppr": "Sleeper",

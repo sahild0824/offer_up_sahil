@@ -1,0 +1,4487 @@
+{
+ "method": "Fantasy strength of schedule by position for the 2026 NFL regular season (weeks 1-17; week 18 excluded as in ESPN/FantasyPros convention). Defense ratings = PPR fantasy points allowed per game to QB/RB/WR/TE, computed by this agent from nflverse weekly player stats (stats_player_week_2025.csv and _2024.csv, REG weeks 1-18, fantasy_points_ppr column; QB/RB/WR/TE by nflverse position; LA->LAR). Each season's table is schedule-adjusted (4for4 aFPA / Footballguys USOS style): points in each game are decomposed into league mean + offense effect + defense effect by alternating least-squares (10 iterations), so a defense is not penalized for facing strong offenses. Final rating = 0.75*adj2025 + 0.25*adj2024 (prior year at lower weight as a mild shrinkage; year-over-year r of points allowed is only ~0.2, see sos_notes.md). Team SOS = mean rating of opponents faced in the window (full = wk1-17, early = wk1-4, playoffs = wk15-17; bye weeks skipped). Rank 1 = easiest (opponents allow the most points); z-scores across the 32 teams, positive = easier. No numeric 2026 projection overlay was applied because no complete 1-32 projected defensive table could be retrieved; major 2026 defensive changes are listed per team in defense_ratings[team].notes_2026 and in sos_notes.md. League-average rating (pts/game allowed): {'QB': 16.43, 'RB': 21.94, 'WR': 31.45, 'TE': 13.0}.",
+ "scoring": "PPR: pass yd 0.04, pass TD 4, INT -2, rush/rec yd 0.1, rush/rec TD 6, reception 1, fumble lost -2, 2-pt 2 (nflverse fantasy_points_ppr)",
+ "windows": {
+  "full": "weeks 1-17",
+  "early": "weeks 1-4",
+  "playoffs": "weeks 15-17"
+ },
+ "league_avg_rating": {
+  "QB": 16.43,
+  "RB": 21.94,
+  "WR": 31.45,
+  "TE": 13.0
+ },
+ "defense_ratings": {
+  "ARI": {
+   "QB": 16.31,
+   "RB": 24.92,
+   "WR": 27.64,
+   "TE": 15.32,
+   "components": {
+    "adj_2025": {
+     "QB": 16.43,
+     "RB": 25.38,
+     "WR": 26.78,
+     "TE": 16.88
+    },
+    "raw_2025": {
+     "QB": 16.95,
+     "RB": 26.22,
+     "WR": 30.16,
+     "TE": 16.94
+    },
+    "adj_2024": {
+     "QB": 15.96,
+     "RB": 23.56,
+     "WR": 30.25,
+     "TE": 10.63
+    }
+   },
+   "rank_generosity": {
+    "QB": 17,
+    "RB": 6,
+    "WR": 28,
+    "TE": 4
+   },
+   "source": "Computed by this agent from nflverse stats_player_week_2025.csv and stats_player_week_2024.csv (REG season, weeks 1-18, fantasy_points_ppr summed by opponent_team x position / 17 games), schedule-adjusted by iterative offense/defense decomposition; rating = 0.75*adj2025 + 0.25*adj2024. Higher = more fantasy points allowed = easier matchup.",
+   "notes_2026": "Ranked the worst projected defense for 2026 by Sportsnaut."
+  },
+  "ATL": {
+   "QB": 17.52,
+   "RB": 21.87,
+   "WR": 34.35,
+   "TE": 10.93,
+   "components": {
+    "adj_2025": {
+     "QB": 16.62,
+     "RB": 22.0,
+     "WR": 33.13,
+     "TE": 10.47
+    },
+    "raw_2025": {
+     "QB": 16.32,
+     "RB": 21.51,
+     "WR": 33.63,
+     "TE": 10.19
+    },
+    "adj_2024": {
+     "QB": 20.21,
+     "RB": 21.49,
+     "WR": 38.03,
+     "TE": 12.3
+    }
+   },
+   "rank_generosity": {
+    "QB": 11,
+    "RB": 15,
+    "WR": 7,
+    "TE": 28
+   },
+   "source": "Computed by this agent from nflverse stats_player_week_2025.csv and stats_player_week_2024.csv (REG season, weeks 1-18, fantasy_points_ppr summed by opponent_team x position / 17 games), schedule-adjusted by iterative offense/defense decomposition; rating = 0.75*adj2025 + 0.25*adj2024. Higher = more fantasy points allowed = easier matchup."
+  },
+  "BAL": {
+   "QB": 17.97,
+   "RB": 21.93,
+   "WR": 36.85,
+   "TE": 11.0,
+   "components": {
+    "adj_2025": {
+     "QB": 18.22,
+     "RB": 22.62,
+     "WR": 37.05,
+     "TE": 10.49
+    },
+    "raw_2025": {
+     "QB": 17.71,
+     "RB": 23.12,
+     "WR": 35.96,
+     "TE": 10.92
+    },
+    "adj_2024": {
+     "QB": 17.21,
+     "RB": 19.85,
+     "WR": 36.27,
+     "TE": 12.52
+    }
+   },
+   "rank_generosity": {
+    "QB": 8,
+    "RB": 13,
+    "WR": 2,
+    "TE": 27
+   },
+   "source": "Computed by this agent from nflverse stats_player_week_2025.csv and stats_player_week_2024.csv (REG season, weeks 1-18, fantasy_points_ppr summed by opponent_team x position / 17 games), schedule-adjusted by iterative offense/defense decomposition; rating = 0.75*adj2025 + 0.25*adj2024. Higher = more fantasy points allowed = easier matchup.",
+   "notes_2026": "New DC in 2026 (search snippets conflict: Anthony Weaver vs. Mike Rutenberg)."
+  },
+  "BUF": {
+   "QB": 14.8,
+   "RB": 24.62,
+   "WR": 30.2,
+   "TE": 9.21,
+   "components": {
+    "adj_2025": {
+     "QB": 14.39,
+     "RB": 24.34,
+     "WR": 28.78,
+     "TE": 8.43
+    },
+    "raw_2025": {
+     "QB": 13.09,
+     "RB": 23.92,
+     "WR": 26.46,
+     "TE": 7.57
+    },
+    "adj_2024": {
+     "QB": 16.05,
+     "RB": 25.47,
+     "WR": 34.45,
+     "TE": 11.52
+    }
+   },
+   "rank_generosity": {
+    "QB": 24,
+    "RB": 8,
+    "WR": 21,
+    "TE": 31
+   },
+   "source": "Computed by this agent from nflverse stats_player_week_2025.csv and stats_player_week_2024.csv (REG season, weeks 1-18, fantasy_points_ppr summed by opponent_team x position / 17 games), schedule-adjusted by iterative offense/defense decomposition; rating = 0.75*adj2025 + 0.25*adj2024. Higher = more fantasy points allowed = easier matchup.",
+   "notes_2026": "New DC Jim Leonhard."
+  },
+  "CAR": {
+   "QB": 15.17,
+   "RB": 24.95,
+   "WR": 27.61,
+   "TE": 13.85,
+   "components": {
+    "adj_2025": {
+     "QB": 13.32,
+     "RB": 23.47,
+     "WR": 25.38,
+     "TE": 13.66
+    },
+    "raw_2025": {
+     "QB": 13.82,
+     "RB": 24.15,
+     "WR": 26.58,
+     "TE": 13.71
+    },
+    "adj_2024": {
+     "QB": 20.72,
+     "RB": 29.41,
+     "WR": 34.29,
+     "TE": 14.44
+    }
+   },
+   "rank_generosity": {
+    "QB": 21,
+    "RB": 5,
+    "WR": 29,
+    "TE": 10
+   },
+   "source": "Computed by this agent from nflverse stats_player_week_2025.csv and stats_player_week_2024.csv (REG season, weeks 1-18, fantasy_points_ppr summed by opponent_team x position / 17 games), schedule-adjusted by iterative offense/defense decomposition; rating = 0.75*adj2025 + 0.25*adj2024. Higher = more fantasy points allowed = easier matchup.",
+   "notes_2026": "Signed EDGE Jaelan Phillips."
+  },
+  "CHI": {
+   "QB": 17.52,
+   "RB": 21.92,
+   "WR": 34.66,
+   "TE": 13.09,
+   "components": {
+    "adj_2025": {
+     "QB": 19.0,
+     "RB": 21.06,
+     "WR": 37.14,
+     "TE": 13.18
+    },
+    "raw_2025": {
+     "QB": 18.13,
+     "RB": 21.16,
+     "WR": 36.21,
+     "TE": 13.06
+    },
+    "adj_2024": {
+     "QB": 13.07,
+     "RB": 24.49,
+     "WR": 27.19,
+     "TE": 12.84
+    }
+   },
+   "rank_generosity": {
+    "QB": 10,
+    "RB": 14,
+    "WR": 6,
+    "TE": 12
+   },
+   "source": "Computed by this agent from nflverse stats_player_week_2025.csv and stats_player_week_2024.csv (REG season, weeks 1-18, fantasy_points_ppr summed by opponent_team x position / 17 games), schedule-adjusted by iterative offense/defense decomposition; rating = 0.75*adj2025 + 0.25*adj2024. Higher = more fantasy points allowed = easier matchup."
+  },
+  "CIN": {
+   "QB": 19.07,
+   "RB": 26.12,
+   "WR": 30.18,
+   "TE": 19.32,
+   "components": {
+    "adj_2025": {
+     "QB": 19.17,
+     "RB": 27.12,
+     "WR": 28.75,
+     "TE": 20.61
+    },
+    "raw_2025": {
+     "QB": 18.42,
+     "RB": 28.3,
+     "WR": 25.29,
+     "TE": 20.86
+    },
+    "adj_2024": {
+     "QB": 18.76,
+     "RB": 23.12,
+     "WR": 34.46,
+     "TE": 15.47
+    }
+   },
+   "rank_generosity": {
+    "QB": 3,
+    "RB": 2,
+    "WR": 22,
+    "TE": 1
+   },
+   "source": "Computed by this agent from nflverse stats_player_week_2025.csv and stats_player_week_2024.csv (REG season, weeks 1-18, fantasy_points_ppr summed by opponent_team x position / 17 games), schedule-adjusted by iterative offense/defense decomposition; rating = 0.75*adj2025 + 0.25*adj2024. Higher = more fantasy points allowed = easier matchup.",
+   "notes_2026": "Reportedly acquired DL \"Lawrence\" from NYG for the No. 10 pick (per CBS/ESPN snippets)."
+  },
+  "CLE": {
+   "QB": 14.54,
+   "RB": 19.87,
+   "WR": 31.22,
+   "TE": 11.91,
+   "components": {
+    "adj_2025": {
+     "QB": 13.94,
+     "RB": 20.19,
+     "WR": 29.26,
+     "TE": 11.95
+    },
+    "raw_2025": {
+     "QB": 13.31,
+     "RB": 21.85,
+     "WR": 26.91,
+     "TE": 12.11
+    },
+    "adj_2024": {
+     "QB": 16.33,
+     "RB": 18.91,
+     "WR": 37.11,
+     "TE": 11.77
+    }
+   },
+   "rank_generosity": {
+    "QB": 26,
+    "RB": 23,
+    "WR": 18,
+    "TE": 23
+   },
+   "source": "Computed by this agent from nflverse stats_player_week_2025.csv and stats_player_week_2024.csv (REG season, weeks 1-18, fantasy_points_ppr summed by opponent_team x position / 17 games), schedule-adjusted by iterative offense/defense decomposition; rating = 0.75*adj2025 + 0.25*adj2024. Higher = more fantasy points allowed = easier matchup.",
+   "notes_2026": "Lost Myles Garrett (to LAR); received Jared Verse. Pass rush likely worse than 2025 numbers imply."
+  },
+  "DAL": {
+   "QB": 22.37,
+   "RB": 25.34,
+   "WR": 39.25,
+   "TE": 12.1,
+   "components": {
+    "adj_2025": {
+     "QB": 23.24,
+     "RB": 26.57,
+     "WR": 40.25,
+     "TE": 12.84
+    },
+    "raw_2025": {
+     "QB": 23.33,
+     "RB": 24.89,
+     "WR": 39.31,
+     "TE": 12.35
+    },
+    "adj_2024": {
+     "QB": 19.76,
+     "RB": 21.66,
+     "WR": 36.27,
+     "TE": 9.91
+    }
+   },
+   "rank_generosity": {
+    "QB": 1,
+    "RB": 3,
+    "WR": 1,
+    "TE": 22
+   },
+   "source": "Computed by this agent from nflverse stats_player_week_2025.csv and stats_player_week_2024.csv (REG season, weeks 1-18, fantasy_points_ppr summed by opponent_team x position / 17 games), schedule-adjusted by iterative offense/defense decomposition; rating = 0.75*adj2025 + 0.25*adj2024. Higher = more fantasy points allowed = easier matchup.",
+   "notes_2026": "New DC in 2026 (snippets conflict: Christian Parker from PHI vs. Jonathan Gannon). 2025 unit was the most generous in the league to QB/WR/RB."
+  },
+  "DEN": {
+   "QB": 14.48,
+   "RB": 19.83,
+   "WR": 27.96,
+   "TE": 13.0,
+   "components": {
+    "adj_2025": {
+     "QB": 13.89,
+     "RB": 19.34,
+     "WR": 26.43,
+     "TE": 13.87
+    },
+    "raw_2025": {
+     "QB": 14.2,
+     "RB": 16.95,
+     "WR": 27.03,
+     "TE": 13.65
+    },
+    "adj_2024": {
+     "QB": 16.25,
+     "RB": 21.32,
+     "WR": 32.52,
+     "TE": 10.39
+    }
+   },
+   "rank_generosity": {
+    "QB": 27,
+    "RB": 24,
+    "WR": 26,
+    "TE": 15
+   },
+   "source": "Computed by this agent from nflverse stats_player_week_2025.csv and stats_player_week_2024.csv (REG season, weeks 1-18, fantasy_points_ppr summed by opponent_team x position / 17 games), schedule-adjusted by iterative offense/defense decomposition; rating = 0.75*adj2025 + 0.25*adj2024. Higher = more fantasy points allowed = easier matchup."
+  },
+  "DET": {
+   "QB": 18.07,
+   "RB": 19.92,
+   "WR": 35.52,
+   "TE": 12.74,
+   "components": {
+    "adj_2025": {
+     "QB": 18.23,
+     "RB": 20.22,
+     "WR": 35.66,
+     "TE": 13.6
+    },
+    "raw_2025": {
+     "QB": 18.23,
+     "RB": 19.37,
+     "WR": 35.7,
+     "TE": 13.67
+    },
+    "adj_2024": {
+     "QB": 17.58,
+     "RB": 19.02,
+     "WR": 35.08,
+     "TE": 10.14
+    }
+   },
+   "rank_generosity": {
+    "QB": 7,
+    "RB": 22,
+    "WR": 4,
+    "TE": 18
+   },
+   "source": "Computed by this agent from nflverse stats_player_week_2025.csv and stats_player_week_2024.csv (REG season, weeks 1-18, fantasy_points_ppr summed by opponent_team x position / 17 games), schedule-adjusted by iterative offense/defense decomposition; rating = 0.75*adj2025 + 0.25*adj2024. Higher = more fantasy points allowed = easier matchup."
+  },
+  "GB": {
+   "QB": 15.15,
+   "RB": 21.23,
+   "WR": 31.07,
+   "TE": 12.4,
+   "components": {
+    "adj_2025": {
+     "QB": 15.38,
+     "RB": 21.07,
+     "WR": 31.5,
+     "TE": 12.2
+    },
+    "raw_2025": {
+     "QB": 15.01,
+     "RB": 21.46,
+     "WR": 31.25,
+     "TE": 12.11
+    },
+    "adj_2024": {
+     "QB": 14.45,
+     "RB": 21.72,
+     "WR": 29.78,
+     "TE": 13.01
+    }
+   },
+   "rank_generosity": {
+    "QB": 22,
+    "RB": 17,
+    "WR": 19,
+    "TE": 20
+   },
+   "source": "Computed by this agent from nflverse stats_player_week_2025.csv and stats_player_week_2024.csv (REG season, weeks 1-18, fantasy_points_ppr summed by opponent_team x position / 17 games), schedule-adjusted by iterative offense/defense decomposition; rating = 0.75*adj2025 + 0.25*adj2024. Higher = more fantasy points allowed = easier matchup."
+  },
+  "HOU": {
+   "QB": 13.13,
+   "RB": 19.47,
+   "WR": 27.36,
+   "TE": 11.68,
+   "components": {
+    "adj_2025": {
+     "QB": 11.83,
+     "RB": 19.61,
+     "WR": 25.04,
+     "TE": 11.74
+    },
+    "raw_2025": {
+     "QB": 12.82,
+     "RB": 19.97,
+     "WR": 25.94,
+     "TE": 12.28
+    },
+    "adj_2024": {
+     "QB": 17.04,
+     "RB": 19.05,
+     "WR": 34.33,
+     "TE": 11.51
+    }
+   },
+   "rank_generosity": {
+    "QB": 31,
+    "RB": 27,
+    "WR": 30,
+    "TE": 24
+   },
+   "source": "Computed by this agent from nflverse stats_player_week_2025.csv and stats_player_week_2024.csv (REG season, weeks 1-18, fantasy_points_ppr summed by opponent_team x position / 17 games), schedule-adjusted by iterative offense/defense decomposition; rating = 0.75*adj2025 + 0.25*adj2024. Higher = more fantasy points allowed = easier matchup.",
+   "notes_2026": "Consensus top-3 projected defense for 2026 (NFL.com/Sportsnaut rank it No.1)."
+  },
+  "IND": {
+   "QB": 17.3,
+   "RB": 21.16,
+   "WR": 35.66,
+   "TE": 15.13,
+   "components": {
+    "adj_2025": {
+     "QB": 17.03,
+     "RB": 20.12,
+     "WR": 36.19,
+     "TE": 14.73
+    },
+    "raw_2025": {
+     "QB": 16.9,
+     "RB": 19.94,
+     "WR": 36.13,
+     "TE": 15.24
+    },
+    "adj_2024": {
+     "QB": 18.11,
+     "RB": 24.3,
+     "WR": 34.07,
+     "TE": 16.35
+    }
+   },
+   "rank_generosity": {
+    "QB": 12,
+    "RB": 18,
+    "WR": 3,
+    "TE": 6
+   },
+   "source": "Computed by this agent from nflverse stats_player_week_2025.csv and stats_player_week_2024.csv (REG season, weeks 1-18, fantasy_points_ppr summed by opponent_team x position / 17 games), schedule-adjusted by iterative offense/defense decomposition; rating = 0.75*adj2025 + 0.25*adj2024. Higher = more fantasy points allowed = easier matchup."
+  },
+  "JAX": {
+   "QB": 17.25,
+   "RB": 21.13,
+   "WR": 31.91,
+   "TE": 14.43,
+   "components": {
+    "adj_2025": {
+     "QB": 16.03,
+     "RB": 19.21,
+     "WR": 30.11,
+     "TE": 14.39
+    },
+    "raw_2025": {
+     "QB": 15.86,
+     "RB": 18.32,
+     "WR": 31.24,
+     "TE": 14.78
+    },
+    "adj_2024": {
+     "QB": 20.93,
+     "RB": 26.91,
+     "WR": 37.3,
+     "TE": 14.53
+    }
+   },
+   "rank_generosity": {
+    "QB": 13,
+    "RB": 19,
+    "WR": 14,
+    "TE": 8
+   },
+   "source": "Computed by this agent from nflverse stats_player_week_2025.csv and stats_player_week_2024.csv (REG season, weeks 1-18, fantasy_points_ppr summed by opponent_team x position / 17 games), schedule-adjusted by iterative offense/defense decomposition; rating = 0.75*adj2025 + 0.25*adj2024. Higher = more fantasy points allowed = easier matchup.",
+   "notes_2026": "Cited as a strong run defense / top-10 projected unit (NFL.com)."
+  },
+  "KC": {
+   "QB": 14.97,
+   "RB": 18.77,
+   "WR": 28.24,
+   "TE": 12.15,
+   "components": {
+    "adj_2025": {
+     "QB": 14.31,
+     "RB": 19.69,
+     "WR": 26.31,
+     "TE": 11.43
+    },
+    "raw_2025": {
+     "QB": 15.08,
+     "RB": 19.2,
+     "WR": 27.34,
+     "TE": 11.01
+    },
+    "adj_2024": {
+     "QB": 16.93,
+     "RB": 16.04,
+     "WR": 34.05,
+     "TE": 14.31
+    }
+   },
+   "rank_generosity": {
+    "QB": 23,
+    "RB": 31,
+    "WR": 25,
+    "TE": 21
+   },
+   "source": "Computed by this agent from nflverse stats_player_week_2025.csv and stats_player_week_2024.csv (REG season, weeks 1-18, fantasy_points_ppr summed by opponent_team x position / 17 games), schedule-adjusted by iterative offense/defense decomposition; rating = 0.75*adj2025 + 0.25*adj2024. Higher = more fantasy points allowed = easier matchup.",
+   "notes_2026": "Traded CB Trent McDuffie (and Watson) to LAR; secondary likely weaker than 2025."
+  },
+  "LAC": {
+   "QB": 13.8,
+   "RB": 19.7,
+   "WR": 29.91,
+   "TE": 9.9,
+   "components": {
+    "adj_2025": {
+     "QB": 12.93,
+     "RB": 20.01,
+     "WR": 28.12,
+     "TE": 10.41
+    },
+    "raw_2025": {
+     "QB": 12.58,
+     "RB": 18.52,
+     "WR": 27.42,
+     "TE": 10.45
+    },
+    "adj_2024": {
+     "QB": 16.41,
+     "RB": 18.76,
+     "WR": 35.3,
+     "TE": 8.38
+    }
+   },
+   "rank_generosity": {
+    "QB": 29,
+    "RB": 26,
+    "WR": 24,
+    "TE": 30
+   },
+   "source": "Computed by this agent from nflverse stats_player_week_2025.csv and stats_player_week_2024.csv (REG season, weeks 1-18, fantasy_points_ppr summed by opponent_team x position / 17 games), schedule-adjusted by iterative offense/defense decomposition; rating = 0.75*adj2025 + 0.25*adj2024. Higher = more fantasy points allowed = easier matchup.",
+   "notes_2026": "New DC Chris O'Leary (replacing Jesse Minter)."
+  },
+  "LAR": {
+   "QB": 15.71,
+   "RB": 19.44,
+   "WR": 32.18,
+   "TE": 13.05,
+   "components": {
+    "adj_2025": {
+     "QB": 15.21,
+     "RB": 19.12,
+     "WR": 31.48,
+     "TE": 12.8
+    },
+    "raw_2025": {
+     "QB": 15.16,
+     "RB": 20.16,
+     "WR": 31.71,
+     "TE": 13.13
+    },
+    "adj_2024": {
+     "QB": 17.2,
+     "RB": 20.4,
+     "WR": 34.27,
+     "TE": 13.81
+    }
+   },
+   "rank_generosity": {
+    "QB": 19,
+    "RB": 28,
+    "WR": 12,
+    "TE": 13
+   },
+   "source": "Computed by this agent from nflverse stats_player_week_2025.csv and stats_player_week_2024.csv (REG season, weeks 1-18, fantasy_points_ppr summed by opponent_team x position / 17 games), schedule-adjusted by iterative offense/defense decomposition; rating = 0.75*adj2025 + 0.25*adj2024. Higher = more fantasy points allowed = easier matchup.",
+   "notes_2026": "Major 2026 upgrade: traded for EDGE Myles Garrett (from CLE, for Jared Verse + picks) and CB Trent McDuffie (+ Watson) from KC; ratings based on 2025 likely understate this pass defense."
+  },
+  "LV": {
+   "QB": 15.66,
+   "RB": 23.99,
+   "WR": 31.72,
+   "TE": 11.53,
+   "components": {
+    "adj_2025": {
+     "QB": 14.95,
+     "RB": 24.62,
+     "WR": 31.71,
+     "TE": 10.43
+    },
+    "raw_2025": {
+     "QB": 16.09,
+     "RB": 22.95,
+     "WR": 33.51,
+     "TE": 10.06
+    },
+    "adj_2024": {
+     "QB": 17.79,
+     "RB": 22.09,
+     "WR": 31.75,
+     "TE": 14.84
+    }
+   },
+   "rank_generosity": {
+    "QB": 20,
+    "RB": 10,
+    "WR": 15,
+    "TE": 26
+   },
+   "source": "Computed by this agent from nflverse stats_player_week_2025.csv and stats_player_week_2024.csv (REG season, weeks 1-18, fantasy_points_ppr summed by opponent_team x position / 17 games), schedule-adjusted by iterative offense/defense decomposition; rating = 0.75*adj2025 + 0.25*adj2024. Higher = more fantasy points allowed = easier matchup."
+  },
+  "MIA": {
+   "QB": 17.16,
+   "RB": 23.97,
+   "WR": 31.57,
+   "TE": 15.91,
+   "components": {
+    "adj_2025": {
+     "QB": 18.1,
+     "RB": 24.45,
+     "WR": 31.56,
+     "TE": 16.81
+    },
+    "raw_2025": {
+     "QB": 18.16,
+     "RB": 24.86,
+     "WR": 29.87,
+     "TE": 16.28
+    },
+    "adj_2024": {
+     "QB": 14.32,
+     "RB": 22.51,
+     "WR": 31.6,
+     "TE": 13.2
+    }
+   },
+   "rank_generosity": {
+    "QB": 15,
+    "RB": 11,
+    "WR": 16,
+    "TE": 3
+   },
+   "source": "Computed by this agent from nflverse stats_player_week_2025.csv and stats_player_week_2024.csv (REG season, weeks 1-18, fantasy_points_ppr summed by opponent_team x position / 17 games), schedule-adjusted by iterative offense/defense decomposition; rating = 0.75*adj2025 + 0.25*adj2024. Higher = more fantasy points allowed = easier matchup.",
+   "notes_2026": "Projected among the worst pass defenses in 2026 (Sportsnaut)."
+  },
+  "MIN": {
+   "QB": 12.1,
+   "RB": 18.38,
+   "WR": 26.68,
+   "TE": 11.66,
+   "components": {
+    "adj_2025": {
+     "QB": 11.02,
+     "RB": 18.3,
+     "WR": 22.78,
+     "TE": 11.15
+    },
+    "raw_2025": {
+     "QB": 11.12,
+     "RB": 19.58,
+     "WR": 23.72,
+     "TE": 10.65
+    },
+    "adj_2024": {
+     "QB": 15.32,
+     "RB": 18.63,
+     "WR": 38.39,
+     "TE": 13.19
+    }
+   },
+   "rank_generosity": {
+    "QB": 32,
+    "RB": 32,
+    "WR": 31,
+    "TE": 25
+   },
+   "source": "Computed by this agent from nflverse stats_player_week_2025.csv and stats_player_week_2024.csv (REG season, weeks 1-18, fantasy_points_ppr summed by opponent_team x position / 17 games), schedule-adjusted by iterative offense/defense decomposition; rating = 0.75*adj2025 + 0.25*adj2024. Higher = more fantasy points allowed = easier matchup."
+  },
+  "NE": {
+   "QB": 16.15,
+   "RB": 19.82,
+   "WR": 33.36,
+   "TE": 13.82,
+   "components": {
+    "adj_2025": {
+     "QB": 16.17,
+     "RB": 18.27,
+     "WR": 33.75,
+     "TE": 14.25
+    },
+    "raw_2025": {
+     "QB": 14.7,
+     "RB": 18.76,
+     "WR": 29.19,
+     "TE": 13.81
+    },
+    "adj_2024": {
+     "QB": 16.1,
+     "RB": 24.45,
+     "WR": 32.18,
+     "TE": 12.52
+    }
+   },
+   "rank_generosity": {
+    "QB": 18,
+    "RB": 25,
+    "WR": 9,
+    "TE": 11
+   },
+   "source": "Computed by this agent from nflverse stats_player_week_2025.csv and stats_player_week_2024.csv (REG season, weeks 1-18, fantasy_points_ppr summed by opponent_team x position / 17 games), schedule-adjusted by iterative offense/defense decomposition; rating = 0.75*adj2025 + 0.25*adj2024. Higher = more fantasy points allowed = easier matchup."
+  },
+  "NO": {
+   "QB": 14.68,
+   "RB": 20.42,
+   "WR": 30.05,
+   "TE": 12.8,
+   "components": {
+    "adj_2025": {
+     "QB": 14.06,
+     "RB": 19.16,
+     "WR": 28.62,
+     "TE": 12.83
+    },
+    "raw_2025": {
+     "QB": 14.0,
+     "RB": 20.72,
+     "WR": 27.78,
+     "TE": 12.48
+    },
+    "adj_2024": {
+     "QB": 16.54,
+     "RB": 24.21,
+     "WR": 34.33,
+     "TE": 12.73
+    }
+   },
+   "rank_generosity": {
+    "QB": 25,
+    "RB": 21,
+    "WR": 23,
+    "TE": 17
+   },
+   "source": "Computed by this agent from nflverse stats_player_week_2025.csv and stats_player_week_2024.csv (REG season, weeks 1-18, fantasy_points_ppr summed by opponent_team x position / 17 games), schedule-adjusted by iterative offense/defense decomposition; rating = 0.75*adj2025 + 0.25*adj2024. Higher = more fantasy points allowed = easier matchup."
+  },
+  "NYG": {
+   "QB": 17.2,
+   "RB": 26.46,
+   "WR": 31.96,
+   "TE": 10.72,
+   "components": {
+    "adj_2025": {
+     "QB": 17.62,
+     "RB": 27.19,
+     "WR": 31.67,
+     "TE": 11.26
+    },
+    "raw_2025": {
+     "QB": 18.25,
+     "RB": 25.7,
+     "WR": 33.78,
+     "TE": 11.36
+    },
+    "adj_2024": {
+     "QB": 15.95,
+     "RB": 24.28,
+     "WR": 32.82,
+     "TE": 9.12
+    }
+   },
+   "rank_generosity": {
+    "QB": 14,
+    "RB": 1,
+    "WR": 13,
+    "TE": 29
+   },
+   "source": "Computed by this agent from nflverse stats_player_week_2025.csv and stats_player_week_2024.csv (REG season, weeks 1-18, fantasy_points_ppr summed by opponent_team x position / 17 games), schedule-adjusted by iterative offense/defense decomposition; rating = 0.75*adj2025 + 0.25*adj2024. Higher = more fantasy points allowed = easier matchup.",
+   "notes_2026": "New DC Dennard Wilson; reportedly traded DL \"Lawrence\" to CIN for the No. 10 pick."
+  },
+  "NYJ": {
+   "QB": 18.89,
+   "RB": 24.97,
+   "WR": 31.28,
+   "TE": 14.31,
+   "components": {
+    "adj_2025": {
+     "QB": 19.74,
+     "RB": 26.6,
+     "WR": 31.0,
+     "TE": 15.44
+    },
+    "raw_2025": {
+     "QB": 19.95,
+     "RB": 27.98,
+     "WR": 30.35,
+     "TE": 15.23
+    },
+    "adj_2024": {
+     "QB": 16.32,
+     "RB": 20.06,
+     "WR": 32.15,
+     "TE": 10.92
+    }
+   },
+   "rank_generosity": {
+    "QB": 4,
+    "RB": 4,
+    "WR": 17,
+    "TE": 9
+   },
+   "source": "Computed by this agent from nflverse stats_player_week_2025.csv and stats_player_week_2024.csv (REG season, weeks 1-18, fantasy_points_ppr summed by opponent_team x position / 17 games), schedule-adjusted by iterative offense/defense decomposition; rating = 0.75*adj2025 + 0.25*adj2024. Higher = more fantasy points allowed = easier matchup."
+  },
+  "PHI": {
+   "QB": 13.53,
+   "RB": 21.51,
+   "WR": 25.56,
+   "TE": 8.79,
+   "components": {
+    "adj_2025": {
+     "QB": 13.24,
+     "RB": 23.19,
+     "WR": 24.06,
+     "TE": 8.57
+    },
+    "raw_2025": {
+     "QB": 14.53,
+     "RB": 22.75,
+     "WR": 26.78,
+     "TE": 8.34
+    },
+    "adj_2024": {
+     "QB": 14.39,
+     "RB": 16.47,
+     "WR": 30.07,
+     "TE": 9.44
+    }
+   },
+   "rank_generosity": {
+    "QB": 30,
+    "RB": 16,
+    "WR": 32,
+    "TE": 32
+   },
+   "source": "Computed by this agent from nflverse stats_player_week_2025.csv and stats_player_week_2024.csv (REG season, weeks 1-18, fantasy_points_ppr summed by opponent_team x position / 17 games), schedule-adjusted by iterative offense/defense decomposition; rating = 0.75*adj2025 + 0.25*adj2024. Higher = more fantasy points allowed = easier matchup.",
+   "notes_2026": "Traded for EDGE Jonathan Greenard (per CBS/ESPN offseason recaps)."
+  },
+  "PIT": {
+   "QB": 18.1,
+   "RB": 19.07,
+   "WR": 35.19,
+   "TE": 16.3,
+   "components": {
+    "adj_2025": {
+     "QB": 19.54,
+     "RB": 18.57,
+     "WR": 36.26,
+     "TE": 17.18
+    },
+    "raw_2025": {
+     "QB": 18.79,
+     "RB": 19.46,
+     "WR": 35.24,
+     "TE": 16.61
+    },
+    "adj_2024": {
+     "QB": 13.78,
+     "RB": 20.54,
+     "WR": 31.99,
+     "TE": 13.67
+    }
+   },
+   "rank_generosity": {
+    "QB": 6,
+    "RB": 29,
+    "WR": 5,
+    "TE": 2
+   },
+   "source": "Computed by this agent from nflverse stats_player_week_2025.csv and stats_player_week_2024.csv (REG season, weeks 1-18, fantasy_points_ppr summed by opponent_team x position / 17 games), schedule-adjusted by iterative offense/defense decomposition; rating = 0.75*adj2025 + 0.25*adj2024. Higher = more fantasy points allowed = easier matchup.",
+   "notes_2026": "New DC Patrick Graham; added a starting DB (reported as \"Dean\", 3yr/$36.75M) opposite Joey Porter Jr."
+  },
+  "SEA": {
+   "QB": 14.36,
+   "RB": 18.89,
+   "WR": 27.89,
+   "TE": 13.01,
+   "components": {
+    "adj_2025": {
+     "QB": 13.77,
+     "RB": 18.24,
+     "WR": 26.16,
+     "TE": 13.26
+    },
+    "raw_2025": {
+     "QB": 14.0,
+     "RB": 18.48,
+     "WR": 26.26,
+     "TE": 14.68
+    },
+    "adj_2024": {
+     "QB": 16.14,
+     "RB": 20.85,
+     "WR": 33.09,
+     "TE": 12.24
+    }
+   },
+   "rank_generosity": {
+    "QB": 28,
+    "RB": 30,
+    "WR": 27,
+    "TE": 14
+   },
+   "source": "Computed by this agent from nflverse stats_player_week_2025.csv and stats_player_week_2024.csv (REG season, weeks 1-18, fantasy_points_ppr summed by opponent_team x position / 17 games), schedule-adjusted by iterative offense/defense decomposition; rating = 0.75*adj2025 + 0.25*adj2024. Higher = more fantasy points allowed = easier matchup.",
+   "notes_2026": "2025 No.1 scoring defense; consensus top-3 projected unit for 2026 (NFL.com, Sportsnaut)."
+  },
+  "SF": {
+   "QB": 16.7,
+   "RB": 23.99,
+   "WR": 30.53,
+   "TE": 12.95,
+   "components": {
+    "adj_2025": {
+     "QB": 16.99,
+     "RB": 23.78,
+     "WR": 30.9,
+     "TE": 13.88
+    },
+    "raw_2025": {
+     "QB": 17.11,
+     "RB": 23.58,
+     "WR": 32.16,
+     "TE": 14.82
+    },
+    "adj_2024": {
+     "QB": 15.81,
+     "RB": 24.62,
+     "WR": 29.43,
+     "TE": 10.16
+    }
+   },
+   "rank_generosity": {
+    "QB": 16,
+    "RB": 9,
+    "WR": 20,
+    "TE": 16
+   },
+   "source": "Computed by this agent from nflverse stats_player_week_2025.csv and stats_player_week_2024.csv (REG season, weeks 1-18, fantasy_points_ppr summed by opponent_team x position / 17 games), schedule-adjusted by iterative offense/defense decomposition; rating = 0.75*adj2025 + 0.25*adj2024. Higher = more fantasy points allowed = easier matchup."
+  },
+  "TB": {
+   "QB": 19.91,
+   "RB": 20.76,
+   "WR": 32.99,
+   "TE": 15.21,
+   "components": {
+    "adj_2025": {
+     "QB": 19.76,
+     "RB": 21.33,
+     "WR": 31.6,
+     "TE": 15.64
+    },
+    "raw_2025": {
+     "QB": 19.45,
+     "RB": 22.06,
+     "WR": 31.46,
+     "TE": 15.81
+    },
+    "adj_2024": {
+     "QB": 20.37,
+     "RB": 19.05,
+     "WR": 37.17,
+     "TE": 13.9
+    }
+   },
+   "rank_generosity": {
+    "QB": 2,
+    "RB": 20,
+    "WR": 10,
+    "TE": 5
+   },
+   "source": "Computed by this agent from nflverse stats_player_week_2025.csv and stats_player_week_2024.csv (REG season, weeks 1-18, fantasy_points_ppr summed by opponent_team x position / 17 games), schedule-adjusted by iterative offense/defense decomposition; rating = 0.75*adj2025 + 0.25*adj2024. Higher = more fantasy points allowed = easier matchup.",
+   "notes_2026": "Cited as a top-10 projected defense (NFL.com)."
+  },
+  "TEN": {
+   "QB": 17.76,
+   "RB": 22.78,
+   "WR": 32.38,
+   "TE": 12.68,
+   "components": {
+    "adj_2025": {
+     "QB": 18.22,
+     "RB": 22.28,
+     "WR": 33.77,
+     "TE": 13.34
+    },
+    "raw_2025": {
+     "QB": 19.05,
+     "RB": 21.41,
+     "WR": 35.58,
+     "TE": 14.16
+    },
+    "adj_2024": {
+     "QB": 16.39,
+     "RB": 24.3,
+     "WR": 28.24,
+     "TE": 10.7
+    }
+   },
+   "rank_generosity": {
+    "QB": 9,
+    "RB": 12,
+    "WR": 11,
+    "TE": 19
+   },
+   "source": "Computed by this agent from nflverse stats_player_week_2025.csv and stats_player_week_2024.csv (REG season, weeks 1-18, fantasy_points_ppr summed by opponent_team x position / 17 games), schedule-adjusted by iterative offense/defense decomposition; rating = 0.75*adj2025 + 0.25*adj2024. Higher = more fantasy points allowed = easier matchup.",
+   "notes_2026": "Traded for EDGE Jermaine Johnson II; signed John Franklin-Myers."
+  },
+  "WAS": {
+   "QB": 18.44,
+   "RB": 24.73,
+   "WR": 33.51,
+   "TE": 15.12,
+   "components": {
+    "adj_2025": {
+     "QB": 19.33,
+     "RB": 25.67,
+     "WR": 33.66,
+     "TE": 16.47
+    },
+    "raw_2025": {
+     "QB": 19.56,
+     "RB": 25.45,
+     "WR": 34.91,
+     "TE": 15.89
+    },
+    "adj_2024": {
+     "QB": 15.76,
+     "RB": 21.9,
+     "WR": 33.03,
+     "TE": 11.05
+    }
+   },
+   "rank_generosity": {
+    "QB": 5,
+    "RB": 7,
+    "WR": 8,
+    "TE": 7
+   },
+   "source": "Computed by this agent from nflverse stats_player_week_2025.csv and stats_player_week_2024.csv (REG season, weeks 1-18, fantasy_points_ppr summed by opponent_team x position / 17 games), schedule-adjusted by iterative offense/defense decomposition; rating = 0.75*adj2025 + 0.25*adj2024. Higher = more fantasy points allowed = easier matchup.",
+   "notes_2026": "Signed EDGE Odafe Oweh and K'Lavon Chaisson; new DC Sean Duggan (from GB)."
+  }
+ },
+ "teams": {
+  "ARI": {
+   "bye": 14,
+   "opponents": {
+    "1": "LAC",
+    "2": "SEA",
+    "3": "SF",
+    "4": "NYG",
+    "5": "DET",
+    "6": "LAR",
+    "7": "DEN",
+    "8": "DAL",
+    "9": "SEA",
+    "10": "LAR",
+    "11": "KC",
+    "12": "WAS",
+    "13": "PHI",
+    "15": "NYJ",
+    "16": "NO",
+    "17": "LV",
+    "18": "SF"
+   },
+   "opponents_ha": {
+    "1": "@LAC",
+    "2": "SEA",
+    "3": "@SF",
+    "4": "@NYG",
+    "5": "DET",
+    "6": "@LAR",
+    "7": "DEN",
+    "8": "@DAL",
+    "9": "@SEA",
+    "10": "LAR",
+    "11": "@KC",
+    "12": "WAS",
+    "13": "PHI",
+    "15": "NYJ",
+    "16": "@NO",
+    "17": "LV",
+    "18": "SF"
+   },
+   "sos": {
+    "QB": {
+     "full": 22,
+     "early": 25,
+     "playoffs": 15,
+     "full_z": -0.54,
+     "early_z": -0.96,
+     "playoffs_z": -0.02,
+     "full_avg": 16.18,
+     "early_avg": 15.52,
+     "playoffs_avg": 16.41,
+     "full_rank_2025only": 22,
+     "playoffs_rank_2025only": 17
+    },
+    "RB": {
+     "full": 22,
+     "early": 11,
+     "playoffs": 5,
+     "full_z": -0.61,
+     "early_z": 0.32,
+     "playoffs_z": 1.39,
+     "full_avg": 21.64,
+     "early_avg": 22.26,
+     "playoffs_avg": 23.13,
+     "full_rank_2025only": 20,
+     "playoffs_rank_2025only": 3
+    },
+    "WR": {
+     "full": 22,
+     "early": 24,
+     "playoffs": 22,
+     "full_z": -0.63,
+     "early_z": -0.85,
+     "playoffs_z": -0.24,
+     "full_avg": 30.98,
+     "early_avg": 30.07,
+     "playoffs_avg": 31.02,
+     "full_rank_2025only": 22,
+     "playoffs_rank_2025only": 21
+    },
+    "TE": {
+     "full": 32,
+     "early": 29,
+     "playoffs": 17,
+     "full_z": -1.73,
+     "early_z": -1.37,
+     "playoffs_z": -0.09,
+     "full_avg": 12.39,
+     "early_avg": 11.65,
+     "playoffs_avg": 12.88,
+     "full_rank_2025only": 31,
+     "playoffs_rank_2025only": 18
+    }
+   },
+   "playoff_opponents": [
+    "NYJ",
+    "@NO",
+    "LV"
+   ],
+   "weeks_1_4": [
+    "@LAC",
+    "SEA",
+    "@SF",
+    "@NYG"
+   ]
+  },
+  "ATL": {
+   "bye": 11,
+   "opponents": {
+    "1": "PIT",
+    "2": "CAR",
+    "3": "GB",
+    "4": "NO",
+    "5": "BAL",
+    "6": "CHI",
+    "7": "SF",
+    "8": "TB",
+    "9": "CIN",
+    "10": "KC",
+    "12": "MIN",
+    "13": "DET",
+    "14": "CLE",
+    "15": "WAS",
+    "16": "TB",
+    "17": "NO",
+    "18": "CAR"
+   },
+   "opponents_ha": {
+    "1": "@PIT",
+    "2": "CAR",
+    "3": "@GB",
+    "4": "@NO",
+    "5": "BAL",
+    "6": "CHI",
+    "7": "SF",
+    "8": "@TB",
+    "9": "CIN",
+    "10": "KC",
+    "12": "@MIN",
+    "13": "DET",
+    "14": "@CLE",
+    "15": "@WAS",
+    "16": "TB",
+    "17": "NO",
+    "18": "@CAR"
+   },
+   "sos": {
+    "QB": {
+     "full": 11,
+     "early": 24,
+     "playoffs": 6,
+     "full_z": 0.56,
+     "early_z": -0.69,
+     "playoffs_z": 1.05,
+     "full_avg": 16.68,
+     "early_avg": 15.77,
+     "playoffs_avg": 17.68,
+     "full_rank_2025only": 9,
+     "playoffs_rank_2025only": 5
+    },
+    "RB": {
+     "full": 28,
+     "early": 22,
+     "playoffs": 14,
+     "full_z": -1.01,
+     "early_z": -0.5,
+     "playoffs_z": 0.04,
+     "full_avg": 21.45,
+     "early_avg": 21.42,
+     "playoffs_avg": 21.97,
+     "full_rank_2025only": 26,
+     "playoffs_rank_2025only": 14
+    },
+    "WR": {
+     "full": 13,
+     "early": 21,
+     "playoffs": 12,
+     "full_z": 0.34,
+     "early_z": -0.29,
+     "playoffs_z": 0.41,
+     "full_avg": 31.71,
+     "early_avg": 30.98,
+     "playoffs_avg": 32.18,
+     "full_rank_2025only": 12,
+     "playoffs_rank_2025only": 13
+    },
+    "TE": {
+     "full": 1,
+     "early": 9,
+     "playoffs": 4,
+     "full_z": 1.86,
+     "early_z": 0.85,
+     "playoffs_z": 1.05,
+     "full_avg": 13.66,
+     "early_avg": 13.84,
+     "playoffs_avg": 14.37,
+     "full_rank_2025only": 2,
+     "playoffs_rank_2025only": 5
+    }
+   },
+   "playoff_opponents": [
+    "@WAS",
+    "TB",
+    "NO"
+   ],
+   "weeks_1_4": [
+    "@PIT",
+    "CAR",
+    "@GB",
+    "@NO"
+   ]
+  },
+  "BAL": {
+   "bye": 13,
+   "opponents": {
+    "1": "IND",
+    "2": "NO",
+    "3": "DAL",
+    "4": "TEN",
+    "5": "ATL",
+    "6": "CLE",
+    "7": "CIN",
+    "8": "BUF",
+    "9": "JAX",
+    "10": "LAC",
+    "11": "CAR",
+    "12": "HOU",
+    "14": "TB",
+    "15": "PIT",
+    "16": "CLE",
+    "17": "CIN",
+    "18": "PIT"
+   },
+   "opponents_ha": {
+    "1": "@IND",
+    "2": "NO",
+    "3": "@DAL",
+    "4": "TEN",
+    "5": "@ATL",
+    "6": "@CLE",
+    "7": "CIN",
+    "8": "@BUF",
+    "9": "JAX",
+    "10": "LAC",
+    "11": "@CAR",
+    "12": "@HOU",
+    "14": "TB",
+    "15": "@PIT",
+    "16": "CLE",
+    "17": "@CIN",
+    "18": "PIT"
+   },
+   "sos": {
+    "QB": {
+     "full": 8,
+     "early": 3,
+     "playoffs": 8,
+     "full_z": 0.84,
+     "early_z": 1.68,
+     "playoffs_z": 0.68,
+     "full_avg": 16.81,
+     "early_avg": 18.03,
+     "playoffs_avg": 17.23,
+     "full_rank_2025only": 11,
+     "playoffs_rank_2025only": 8
+    },
+    "RB": {
+     "full": 14,
+     "early": 9,
+     "playoffs": 21,
+     "full_z": 0.3,
+     "early_z": 0.48,
+     "playoffs_z": -0.29,
+     "full_avg": 22.08,
+     "early_avg": 22.43,
+     "playoffs_avg": 21.68,
+     "full_rank_2025only": 18,
+     "playoffs_rank_2025only": 16
+    },
+    "WR": {
+     "full": 10,
+     "early": 2,
+     "playoffs": 10,
+     "full_z": 0.54,
+     "early_z": 1.77,
+     "playoffs_z": 0.41,
+     "full_avg": 31.85,
+     "early_avg": 34.34,
+     "playoffs_avg": 32.2,
+     "full_rank_2025only": 14,
+     "playoffs_rank_2025only": 11
+    },
+    "TE": {
+     "full": 3,
+     "early": 15,
+     "playoffs": 2,
+     "full_z": 1.53,
+     "early_z": 0.18,
+     "playoffs_z": 2.18,
+     "full_avg": 13.54,
+     "early_avg": 13.18,
+     "playoffs_avg": 15.84,
+     "full_rank_2025only": 3,
+     "playoffs_rank_2025only": 2
+    }
+   },
+   "playoff_opponents": [
+    "@PIT",
+    "CLE",
+    "@CIN"
+   ],
+   "weeks_1_4": [
+    "@IND",
+    "NO",
+    "@DAL",
+    "TEN"
+   ]
+  },
+  "BUF": {
+   "bye": 7,
+   "opponents": {
+    "1": "HOU",
+    "2": "DET",
+    "3": "LAC",
+    "4": "NE",
+    "5": "LAR",
+    "6": "LV",
+    "8": "BAL",
+    "9": "MIN",
+    "10": "NYJ",
+    "11": "MIA",
+    "12": "KC",
+    "13": "NE",
+    "14": "GB",
+    "15": "CHI",
+    "16": "DEN",
+    "17": "MIA",
+    "18": "NYJ"
+   },
+   "opponents_ha": {
+    "1": "@HOU",
+    "2": "DET",
+    "3": "LAC",
+    "4": "NE",
+    "5": "@LAR",
+    "6": "@LV",
+    "8": "BAL",
+    "9": "@MIN",
+    "10": "@NYJ",
+    "11": "MIA",
+    "12": "KC",
+    "13": "@NE",
+    "14": "@GB",
+    "15": "CHI",
+    "16": "@DEN",
+    "17": "@MIA",
+    "18": "NYJ"
+   },
+   "sos": {
+    "QB": {
+     "full": 29,
+     "early": 27,
+     "playoffs": 16,
+     "full_z": -1.21,
+     "early_z": -1.2,
+     "playoffs_z": -0.04,
+     "full_avg": 15.88,
+     "early_avg": 15.29,
+     "playoffs_avg": 16.39,
+     "full_rank_2025only": 26,
+     "playoffs_rank_2025only": 12
+    },
+    "RB": {
+     "full": 31,
+     "early": 32,
+     "playoffs": 17,
+     "full_z": -1.81,
+     "early_z": -2.15,
+     "playoffs_z": -0.03,
+     "full_avg": 21.07,
+     "early_avg": 19.73,
+     "playoffs_avg": 21.91,
+     "full_rank_2025only": 31,
+     "playoffs_rank_2025only": 23
+    },
+    "WR": {
+     "full": 14,
+     "early": 15,
+     "playoffs": 16,
+     "full_z": 0.01,
+     "early_z": 0.05,
+     "playoffs_z": -0.03,
+     "full_avg": 31.46,
+     "early_avg": 31.54,
+     "playoffs_avg": 31.39,
+     "full_rank_2025only": 13,
+     "playoffs_rank_2025only": 10
+    },
+    "TE": {
+     "full": 18,
+     "early": 28,
+     "playoffs": 7,
+     "full_z": -0.36,
+     "early_z": -0.97,
+     "playoffs_z": 0.76,
+     "full_avg": 12.87,
+     "early_avg": 12.04,
+     "playoffs_avg": 14.0,
+     "full_rank_2025only": 21,
+     "playoffs_rank_2025only": 7
+    }
+   },
+   "playoff_opponents": [
+    "CHI",
+    "@DEN",
+    "@MIA"
+   ],
+   "weeks_1_4": [
+    "@HOU",
+    "DET",
+    "LAC",
+    "NE"
+   ]
+  },
+  "CAR": {
+   "bye": 5,
+   "opponents": {
+    "1": "CHI",
+    "2": "ATL",
+    "3": "CLE",
+    "4": "DET",
+    "6": "PHI",
+    "7": "TB",
+    "8": "GB",
+    "9": "DEN",
+    "10": "NO",
+    "11": "BAL",
+    "12": "TB",
+    "13": "MIN",
+    "14": "NO",
+    "15": "CIN",
+    "16": "PIT",
+    "17": "SEA",
+    "18": "ATL"
+   },
+   "opponents_ha": {
+    "1": "CHI",
+    "2": "@ATL",
+    "3": "@CLE",
+    "4": "DET",
+    "6": "@PHI",
+    "7": "TB",
+    "8": "@GB",
+    "9": "DEN",
+    "10": "@NO",
+    "11": "BAL",
+    "12": "@TB",
+    "13": "@MIN",
+    "14": "NO",
+    "15": "CIN",
+    "16": "@PIT",
+    "17": "SEA",
+    "18": "ATL"
+   },
+   "sos": {
+    "QB": {
+     "full": 16,
+     "early": 11,
+     "playoffs": 9,
+     "full_z": -0.18,
+     "early_z": 0.5,
+     "playoffs_z": 0.63,
+     "full_avg": 16.35,
+     "early_avg": 16.91,
+     "playoffs_avg": 17.18,
+     "full_rank_2025only": 19,
+     "playoffs_rank_2025only": 9
+    },
+    "RB": {
+     "full": 32,
+     "early": 28,
+     "playoffs": 24,
+     "full_z": -2.36,
+     "early_z": -1.01,
+     "playoffs_z": -0.68,
+     "full_avg": 20.81,
+     "early_avg": 20.89,
+     "playoffs_avg": 21.36,
+     "full_rank_2025only": 32,
+     "playoffs_rank_2025only": 24
+    },
+    "WR": {
+     "full": 15,
+     "early": 3,
+     "playoffs": 21,
+     "full_z": -0.0,
+     "early_z": 1.52,
+     "playoffs_z": -0.2,
+     "full_avg": 31.45,
+     "early_avg": 33.94,
+     "playoffs_avg": 31.09,
+     "full_rank_2025only": 18,
+     "playoffs_rank_2025only": 22
+    },
+    "TE": {
+     "full": 11,
+     "early": 24,
+     "playoffs": 1,
+     "full_z": 0.38,
+     "early_z": -0.84,
+     "playoffs_z": 2.46,
+     "full_avg": 13.14,
+     "early_avg": 12.17,
+     "playoffs_avg": 16.21,
+     "full_rank_2025only": 12,
+     "playoffs_rank_2025only": 1
+    }
+   },
+   "playoff_opponents": [
+    "CIN",
+    "@PIT",
+    "SEA"
+   ],
+   "weeks_1_4": [
+    "CHI",
+    "@ATL",
+    "@CLE",
+    "DET"
+   ]
+  },
+  "CHI": {
+   "bye": 10,
+   "opponents": {
+    "1": "CAR",
+    "2": "MIN",
+    "3": "PHI",
+    "4": "NYJ",
+    "5": "GB",
+    "6": "ATL",
+    "7": "NE",
+    "8": "SEA",
+    "9": "TB",
+    "11": "NO",
+    "12": "DET",
+    "13": "JAX",
+    "14": "MIA",
+    "15": "BUF",
+    "16": "GB",
+    "17": "DET",
+    "18": "MIN"
+   },
+   "opponents_ha": {
+    "1": "@CAR",
+    "2": "MIN",
+    "3": "PHI",
+    "4": "NYJ",
+    "5": "@GB",
+    "6": "@ATL",
+    "7": "NE",
+    "8": "@SEA",
+    "9": "TB",
+    "11": "NO",
+    "12": "@DET",
+    "13": "JAX",
+    "14": "@MIA",
+    "15": "@BUF",
+    "16": "GB",
+    "17": "DET",
+    "18": "@MIN"
+   },
+   "sos": {
+    "QB": {
+     "full": 24,
+     "early": 31,
+     "playoffs": 20,
+     "full_z": -0.68,
+     "early_z": -1.59,
+     "playoffs_z": -0.36,
+     "full_avg": 16.12,
+     "early_avg": 14.92,
+     "playoffs_avg": 16.01,
+     "full_rank_2025only": 25,
+     "playoffs_rank_2025only": 20
+    },
+    "RB": {
+     "full": 26,
+     "early": 8,
+     "playoffs": 16,
+     "full_z": -0.96,
+     "early_z": 0.5,
+     "playoffs_z": -0.01,
+     "full_avg": 21.47,
+     "early_avg": 22.45,
+     "playoffs_avg": 21.92,
+     "full_rank_2025only": 28,
+     "playoffs_rank_2025only": 18
+    },
+    "WR": {
+     "full": 21,
+     "early": 32,
+     "playoffs": 9,
+     "full_z": -0.55,
+     "early_z": -2.25,
+     "playoffs_z": 0.45,
+     "full_avg": 31.04,
+     "early_avg": 27.78,
+     "playoffs_avg": 32.26,
+     "full_rank_2025only": 24,
+     "playoffs_rank_2025only": 9
+    },
+    "TE": {
+     "full": 24,
+     "early": 25,
+     "playoffs": 30,
+     "full_z": -0.67,
+     "early_z": -0.86,
+     "playoffs_z": -1.19,
+     "full_avg": 12.76,
+     "early_avg": 12.15,
+     "playoffs_avg": 11.45,
+     "full_rank_2025only": 26,
+     "playoffs_rank_2025only": 29
+    }
+   },
+   "playoff_opponents": [
+    "@BUF",
+    "GB",
+    "DET"
+   ],
+   "weeks_1_4": [
+    "@CAR",
+    "MIN",
+    "PHI",
+    "NYJ"
+   ]
+  },
+  "CIN": {
+   "bye": 6,
+   "opponents": {
+    "1": "TB",
+    "2": "HOU",
+    "3": "PIT",
+    "4": "JAX",
+    "5": "MIA",
+    "7": "BAL",
+    "8": "TEN",
+    "9": "ATL",
+    "10": "PIT",
+    "11": "WAS",
+    "12": "NO",
+    "13": "CLE",
+    "14": "KC",
+    "15": "CAR",
+    "16": "IND",
+    "17": "BAL",
+    "18": "CLE"
+   },
+   "opponents_ha": {
+    "1": "TB",
+    "2": "@HOU",
+    "3": "@PIT",
+    "4": "JAX",
+    "5": "@MIA",
+    "7": "@BAL",
+    "8": "TEN",
+    "9": "@ATL",
+    "10": "PIT",
+    "11": "@WAS",
+    "12": "NO",
+    "13": "@CLE",
+    "14": "KC",
+    "15": "@CAR",
+    "16": "@IND",
+    "17": "BAL",
+    "18": "CLE"
+   },
+   "sos": {
+    "QB": {
+     "full": 7,
+     "early": 10,
+     "playoffs": 13,
+     "full_z": 0.97,
+     "early_z": 0.7,
+     "playoffs_z": 0.32,
+     "full_avg": 16.87,
+     "early_avg": 17.1,
+     "playoffs_avg": 16.81,
+     "full_rank_2025only": 8,
+     "playoffs_rank_2025only": 18
+    },
+    "RB": {
+     "full": 29,
+     "early": 31,
+     "playoffs": 8,
+     "full_z": -1.19,
+     "early_z": -1.78,
+     "playoffs_z": 0.87,
+     "full_avg": 21.37,
+     "early_avg": 20.11,
+     "playoffs_avg": 22.68,
+     "full_rank_2025only": 30,
+     "playoffs_rank_2025only": 13
+    },
+    "WR": {
+     "full": 4,
+     "early": 13,
+     "playoffs": 6,
+     "full_z": 1.48,
+     "early_z": 0.25,
+     "playoffs_z": 1.06,
+     "full_avg": 32.56,
+     "early_avg": 31.86,
+     "playoffs_avg": 33.37,
+     "full_rank_2025only": 7,
+     "playoffs_rank_2025only": 6
+    },
+    "TE": {
+     "full": 5,
+     "early": 3,
+     "playoffs": 14,
+     "full_z": 1.48,
+     "early_z": 1.42,
+     "playoffs_z": 0.25,
+     "full_avg": 13.53,
+     "early_avg": 14.4,
+     "playoffs_avg": 13.33,
+     "full_rank_2025only": 7,
+     "playoffs_rank_2025only": 17
+    }
+   },
+   "playoff_opponents": [
+    "@CAR",
+    "@IND",
+    "BAL"
+   ],
+   "weeks_1_4": [
+    "TB",
+    "@HOU",
+    "@PIT",
+    "JAX"
+   ]
+  },
+  "CLE": {
+   "bye": 11,
+   "opponents": {
+    "1": "JAX",
+    "2": "TB",
+    "3": "CAR",
+    "4": "PIT",
+    "5": "NYJ",
+    "6": "BAL",
+    "7": "TEN",
+    "8": "PIT",
+    "9": "NO",
+    "10": "HOU",
+    "12": "LV",
+    "13": "CIN",
+    "14": "ATL",
+    "15": "NYG",
+    "16": "BAL",
+    "17": "IND",
+    "18": "CIN"
+   },
+   "opponents_ha": {
+    "1": "@JAX",
+    "2": "@TB",
+    "3": "CAR",
+    "4": "PIT",
+    "5": "@NYJ",
+    "6": "BAL",
+    "7": "@TEN",
+    "8": "@PIT",
+    "9": "@NO",
+    "10": "HOU",
+    "12": "LV",
+    "13": "CIN",
+    "14": "ATL",
+    "15": "@NYG",
+    "16": "@BAL",
+    "17": "IND",
+    "18": "@CIN"
+   },
+   "sos": {
+    "QB": {
+     "full": 3,
+     "early": 4,
+     "playoffs": 7,
+     "full_z": 1.76,
+     "early_z": 1.24,
+     "playoffs_z": 0.89,
+     "full_avg": 17.23,
+     "early_avg": 17.61,
+     "playoffs_avg": 17.49,
+     "full_rank_2025only": 3,
+     "playoffs_rank_2025only": 6
+    },
+    "RB": {
+     "full": 10,
+     "early": 20,
+     "playoffs": 3,
+     "full_z": 0.67,
+     "early_z": -0.45,
+     "playoffs_z": 1.46,
+     "full_avg": 22.25,
+     "early_avg": 21.48,
+     "playoffs_avg": 23.18,
+     "full_rank_2025only": 11,
+     "playoffs_rank_2025only": 4
+    },
+    "WR": {
+     "full": 3,
+     "early": 12,
+     "playoffs": 2,
+     "full_z": 1.52,
+     "early_z": 0.29,
+     "playoffs_z": 1.87,
+     "full_avg": 32.6,
+     "early_avg": 31.93,
+     "playoffs_avg": 34.82,
+     "full_rank_2025only": 5,
+     "playoffs_rank_2025only": 2
+    },
+    "TE": {
+     "full": 2,
+     "early": 1,
+     "playoffs": 22,
+     "full_z": 1.62,
+     "early_z": 1.96,
+     "playoffs_z": -0.55,
+     "full_avg": 13.58,
+     "early_avg": 14.95,
+     "playoffs_avg": 12.28,
+     "full_rank_2025only": 4,
+     "playoffs_rank_2025only": 23
+    }
+   },
+   "playoff_opponents": [
+    "@NYG",
+    "@BAL",
+    "IND"
+   ],
+   "weeks_1_4": [
+    "@JAX",
+    "@TB",
+    "CAR",
+    "PIT"
+   ]
+  },
+  "DAL": {
+   "bye": 14,
+   "opponents": {
+    "1": "NYG",
+    "2": "WAS",
+    "3": "BAL",
+    "4": "HOU",
+    "5": "TB",
+    "6": "GB",
+    "7": "PHI",
+    "8": "ARI",
+    "9": "IND",
+    "10": "SF",
+    "11": "TEN",
+    "12": "PHI",
+    "13": "SEA",
+    "15": "LAR",
+    "16": "JAX",
+    "17": "NYG",
+    "18": "WAS"
+   },
+   "opponents_ha": {
+    "1": "@NYG",
+    "2": "WAS",
+    "3": "BAL",
+    "4": "@HOU",
+    "5": "TB",
+    "6": "@GB",
+    "7": "@PHI",
+    "8": "ARI",
+    "9": "@IND",
+    "10": "SF",
+    "11": "TEN",
+    "12": "PHI",
+    "13": "@SEA",
+    "15": "@LAR",
+    "16": "JAX",
+    "17": "NYG",
+    "18": "@WAS"
+   },
+   "sos": {
+    "QB": {
+     "full": 17,
+     "early": 15,
+     "playoffs": 14,
+     "full_z": -0.2,
+     "early_z": 0.27,
+     "playoffs_z": 0.24,
+     "full_avg": 16.34,
+     "early_avg": 16.68,
+     "playoffs_avg": 16.72,
+     "full_rank_2025only": 15,
+     "playoffs_rank_2025only": 16
+    },
+    "RB": {
+     "full": 9,
+     "early": 4,
+     "playoffs": 11,
+     "full_z": 0.71,
+     "early_z": 1.18,
+     "playoffs_z": 0.48,
+     "full_avg": 22.27,
+     "early_avg": 23.15,
+     "playoffs_avg": 22.34,
+     "full_rank_2025only": 6,
+     "playoffs_rank_2025only": 20
+    },
+    "WR": {
+     "full": 24,
+     "early": 9,
+     "playoffs": 13,
+     "full_z": -0.68,
+     "early_z": 0.59,
+     "playoffs_z": 0.31,
+     "full_avg": 30.94,
+     "early_avg": 32.42,
+     "playoffs_avg": 32.02,
+     "full_rank_2025only": 20,
+     "playoffs_rank_2025only": 15
+    },
+    "TE": {
+     "full": 29,
+     "early": 26,
+     "playoffs": 18,
+     "full_z": -1.24,
+     "early_z": -0.88,
+     "playoffs_z": -0.2,
+     "full_avg": 12.56,
+     "early_avg": 12.13,
+     "playoffs_avg": 12.73,
+     "full_rank_2025only": 30,
+     "playoffs_rank_2025only": 20
+    }
+   },
+   "playoff_opponents": [
+    "@LAR",
+    "JAX",
+    "NYG"
+   ],
+   "weeks_1_4": [
+    "@NYG",
+    "WAS",
+    "BAL",
+    "@HOU"
+   ]
+  },
+  "DEN": {
+   "bye": 10,
+   "opponents": {
+    "1": "KC",
+    "2": "JAX",
+    "3": "LAR",
+    "4": "SF",
+    "5": "LAC",
+    "6": "SEA",
+    "7": "ARI",
+    "8": "KC",
+    "9": "CAR",
+    "11": "LV",
+    "12": "PIT",
+    "13": "MIA",
+    "14": "NYJ",
+    "15": "LV",
+    "16": "BUF",
+    "17": "NE",
+    "18": "LAC"
+   },
+   "opponents_ha": {
+    "1": "@KC",
+    "2": "JAX",
+    "3": "LAR",
+    "4": "@SF",
+    "5": "@LAC",
+    "6": "SEA",
+    "7": "@ARI",
+    "8": "KC",
+    "9": "@CAR",
+    "11": "LV",
+    "12": "@PIT",
+    "13": "MIA",
+    "14": "@NYJ",
+    "15": "@LV",
+    "16": "BUF",
+    "17": "@NE",
+    "18": "LAC"
+   },
+   "sos": {
+    "QB": {
+     "full": 28,
+     "early": 17,
+     "playoffs": 26,
+     "full_z": -0.99,
+     "early_z": -0.29,
+     "playoffs_z": -0.75,
+     "full_avg": 15.98,
+     "early_avg": 16.16,
+     "playoffs_avg": 15.54,
+     "full_rank_2025only": 30,
+     "playoffs_rank_2025only": 25
+    },
+    "RB": {
+     "full": 18,
+     "early": 29,
+     "playoffs": 7,
+     "full_z": 0.0,
+     "early_z": -1.07,
+     "playoffs_z": 1.02,
+     "full_avg": 21.94,
+     "early_avg": 20.83,
+     "playoffs_avg": 22.81,
+     "full_rank_2025only": 21,
+     "playoffs_rank_2025only": 9
+    },
+    "WR": {
+     "full": 29,
+     "early": 22,
+     "playoffs": 14,
+     "full_z": -1.17,
+     "early_z": -0.45,
+     "playoffs_z": 0.17,
+     "full_avg": 30.58,
+     "early_avg": 30.72,
+     "playoffs_avg": 31.76,
+     "full_rank_2025only": 29,
+     "playoffs_rank_2025only": 12
+    },
+    "TE": {
+     "full": 12,
+     "early": 16,
+     "playoffs": 29,
+     "full_z": 0.25,
+     "early_z": 0.15,
+     "playoffs_z": -1.13,
+     "full_avg": 13.09,
+     "early_avg": 13.15,
+     "playoffs_avg": 11.52,
+     "full_rank_2025only": 16,
+     "playoffs_rank_2025only": 30
+    }
+   },
+   "playoff_opponents": [
+    "@LV",
+    "BUF",
+    "@NE"
+   ],
+   "weeks_1_4": [
+    "@KC",
+    "JAX",
+    "LAR",
+    "@SF"
+   ]
+  },
+  "DET": {
+   "bye": 6,
+   "opponents": {
+    "1": "NO",
+    "2": "BUF",
+    "3": "NYJ",
+    "4": "CAR",
+    "5": "ARI",
+    "7": "GB",
+    "8": "MIN",
+    "9": "MIA",
+    "10": "NE",
+    "11": "TB",
+    "12": "CHI",
+    "13": "ATL",
+    "14": "TEN",
+    "15": "MIN",
+    "16": "NYG",
+    "17": "CHI",
+    "18": "GB"
+   },
+   "opponents_ha": {
+    "1": "NO",
+    "2": "@BUF",
+    "3": "NYJ",
+    "4": "@CAR",
+    "5": "@ARI",
+    "7": "GB",
+    "8": "MIN",
+    "9": "@MIA",
+    "10": "NE",
+    "11": "TB",
+    "12": "CHI",
+    "13": "@ATL",
+    "14": "TEN",
+    "15": "@MIN",
+    "16": "NYG",
+    "17": "@CHI",
+    "18": "@GB"
+   },
+   "sos": {
+    "QB": {
+     "full": 21,
+     "early": 23,
+     "playoffs": 24,
+     "full_z": -0.41,
+     "early_z": -0.57,
+     "playoffs_z": -0.69,
+     "full_avg": 16.25,
+     "early_avg": 15.88,
+     "playoffs_avg": 15.61,
+     "full_rank_2025only": 16,
+     "playoffs_rank_2025only": 22
+    },
+    "RB": {
+     "full": 8,
+     "early": 2,
+     "playoffs": 12,
+     "full_z": 0.84,
+     "early_z": 1.76,
+     "playoffs_z": 0.37,
+     "full_avg": 22.34,
+     "early_avg": 23.74,
+     "playoffs_avg": 22.25,
+     "full_rank_2025only": 13,
+     "playoffs_rank_2025only": 12
+    },
+    "WR": {
+     "full": 19,
+     "early": 27,
+     "playoffs": 20,
+     "full_z": -0.51,
+     "early_z": -1.02,
+     "playoffs_z": -0.2,
+     "full_avg": 31.07,
+     "early_avg": 29.79,
+     "playoffs_avg": 31.1,
+     "full_rank_2025only": 19,
+     "playoffs_rank_2025only": 19
+    },
+    "TE": {
+     "full": 17,
+     "early": 20,
+     "playoffs": 28,
+     "full_z": -0.24,
+     "early_z": -0.46,
+     "playoffs_z": -0.9,
+     "full_avg": 12.92,
+     "early_avg": 12.54,
+     "playoffs_avg": 11.82,
+     "full_rank_2025only": 19,
+     "playoffs_rank_2025only": 26
+    }
+   },
+   "playoff_opponents": [
+    "@MIN",
+    "NYG",
+    "@CHI"
+   ],
+   "weeks_1_4": [
+    "NO",
+    "@BUF",
+    "NYJ",
+    "@CAR"
+   ]
+  },
+  "GB": {
+   "bye": 11,
+   "opponents": {
+    "1": "MIN",
+    "2": "NYJ",
+    "3": "ATL",
+    "4": "TB",
+    "5": "CHI",
+    "6": "DAL",
+    "7": "DET",
+    "8": "CAR",
+    "9": "NE",
+    "10": "MIN",
+    "12": "LAR",
+    "13": "NO",
+    "14": "BUF",
+    "15": "MIA",
+    "16": "CHI",
+    "17": "HOU",
+    "18": "DET"
+   },
+   "opponents_ha": {
+    "1": "@MIN",
+    "2": "@NYJ",
+    "3": "ATL",
+    "4": "@TB",
+    "5": "CHI",
+    "6": "DAL",
+    "7": "@DET",
+    "8": "CAR",
+    "9": "@NE",
+    "10": "MIN",
+    "12": "@LAR",
+    "13": "@NO",
+    "14": "BUF",
+    "15": "MIA",
+    "16": "@CHI",
+    "17": "HOU",
+    "18": "DET"
+   },
+   "sos": {
+    "QB": {
+     "full": 14,
+     "early": 9,
+     "playoffs": 22,
+     "full_z": -0.01,
+     "early_z": 0.71,
+     "playoffs_z": -0.41,
+     "full_avg": 16.42,
+     "early_avg": 17.1,
+     "playoffs_avg": 15.94,
+     "full_rank_2025only": 13,
+     "playoffs_rank_2025only": 15
+    },
+    "RB": {
+     "full": 23,
+     "early": 19,
+     "playoffs": 19,
+     "full_z": -0.63,
+     "early_z": -0.43,
+     "playoffs_z": -0.18,
+     "full_avg": 21.63,
+     "early_avg": 21.49,
+     "playoffs_avg": 21.79,
+     "full_rank_2025only": 25,
+     "playoffs_rank_2025only": 22
+    },
+    "WR": {
+     "full": 12,
+     "early": 18,
+     "playoffs": 19,
+     "full_z": 0.43,
+     "early_z": -0.08,
+     "playoffs_z": -0.14,
+     "full_avg": 31.78,
+     "early_avg": 31.33,
+     "playoffs_avg": 31.2,
+     "full_rank_2025only": 11,
+     "playoffs_rank_2025only": 14
+    },
+    "TE": {
+     "full": 21,
+     "early": 17,
+     "playoffs": 12,
+     "full_z": -0.51,
+     "early_z": 0.03,
+     "playoffs_z": 0.43,
+     "full_avg": 12.82,
+     "early_avg": 13.03,
+     "playoffs_avg": 13.56,
+     "full_rank_2025only": 25,
+     "playoffs_rank_2025only": 13
+    }
+   },
+   "playoff_opponents": [
+    "MIA",
+    "@CHI",
+    "HOU"
+   ],
+   "weeks_1_4": [
+    "@MIN",
+    "@NYJ",
+    "ATL",
+    "@TB"
+   ]
+  },
+  "HOU": {
+   "bye": 8,
+   "opponents": {
+    "1": "BUF",
+    "2": "CIN",
+    "3": "IND",
+    "4": "DAL",
+    "5": "TEN",
+    "6": "JAX",
+    "7": "NYG",
+    "9": "LAC",
+    "10": "CLE",
+    "11": "IND",
+    "12": "BAL",
+    "13": "PIT",
+    "14": "WAS",
+    "15": "JAX",
+    "16": "PHI",
+    "17": "GB",
+    "18": "TEN"
+   },
+   "opponents_ha": {
+    "1": "BUF",
+    "2": "CIN",
+    "3": "@IND",
+    "4": "DAL",
+    "5": "@TEN",
+    "6": "@JAX",
+    "7": "NYG",
+    "9": "@LAC",
+    "10": "@CLE",
+    "11": "IND",
+    "12": "BAL",
+    "13": "@PIT",
+    "14": "@WAS",
+    "15": "JAX",
+    "16": "@PHI",
+    "17": "@GB",
+    "18": "TEN"
+   },
+   "sos": {
+    "QB": {
+     "full": 4,
+     "early": 1,
+     "playoffs": 27,
+     "full_z": 1.23,
+     "early_z": 2.05,
+     "playoffs_z": -0.94,
+     "full_avg": 16.99,
+     "early_avg": 18.39,
+     "playoffs_avg": 15.31,
+     "full_rank_2025only": 5,
+     "playoffs_rank_2025only": 26
+    },
+    "RB": {
+     "full": 7,
+     "early": 1,
+     "playoffs": 25,
+     "full_z": 0.91,
+     "early_z": 2.31,
+     "playoffs_z": -0.75,
+     "full_avg": 22.37,
+     "early_avg": 24.31,
+     "playoffs_avg": 21.29,
+     "full_rank_2025only": 8,
+     "playoffs_rank_2025only": 25
+    },
+    "WR": {
+     "full": 2,
+     "early": 4,
+     "playoffs": 26,
+     "full_z": 1.6,
+     "early_z": 1.45,
+     "playoffs_z": -1.07,
+     "full_avg": 32.65,
+     "early_avg": 33.82,
+     "playoffs_avg": 29.51,
+     "full_rank_2025only": 4,
+     "playoffs_rank_2025only": 27
+    },
+    "TE": {
+     "full": 15,
+     "early": 7,
+     "playoffs": 27,
+     "full_z": 0.1,
+     "early_z": 0.95,
+     "playoffs_z": -0.86,
+     "full_avg": 13.04,
+     "early_avg": 13.94,
+     "playoffs_avg": 11.87,
+     "full_rank_2025only": 15,
+     "playoffs_rank_2025only": 27
+    }
+   },
+   "playoff_opponents": [
+    "JAX",
+    "@PHI",
+    "@GB"
+   ],
+   "weeks_1_4": [
+    "BUF",
+    "CIN",
+    "@IND",
+    "DAL"
+   ]
+  },
+  "IND": {
+   "bye": 13,
+   "opponents": {
+    "1": "BAL",
+    "2": "KC",
+    "3": "HOU",
+    "4": "WAS",
+    "5": "PIT",
+    "6": "TEN",
+    "7": "MIN",
+    "8": "JAX",
+    "9": "DAL",
+    "10": "MIA",
+    "11": "HOU",
+    "12": "NYG",
+    "14": "PHI",
+    "15": "TEN",
+    "16": "CIN",
+    "17": "CLE",
+    "18": "JAX"
+   },
+   "opponents_ha": {
+    "1": "BAL",
+    "2": "@KC",
+    "3": "HOU",
+    "4": "@WAS",
+    "5": "@PIT",
+    "6": "TEN",
+    "7": "@MIN",
+    "8": "@JAX",
+    "9": "DAL",
+    "10": "MIA",
+    "11": "@HOU",
+    "12": "NYG",
+    "14": "@PHI",
+    "15": "@TEN",
+    "16": "CIN",
+    "17": "@CLE",
+    "18": "JAX"
+   },
+   "sos": {
+    "QB": {
+     "full": 12,
+     "early": 20,
+     "playoffs": 10,
+     "full_z": 0.22,
+     "early_z": -0.32,
+     "playoffs_z": 0.58,
+     "full_avg": 16.53,
+     "early_avg": 16.13,
+     "playoffs_avg": 17.12,
+     "full_rank_2025only": 10,
+     "playoffs_rank_2025only": 11
+    },
+    "RB": {
+     "full": 17,
+     "early": 26,
+     "playoffs": 6,
+     "full_z": 0.11,
+     "early_z": -0.69,
+     "playoffs_z": 1.15,
+     "full_avg": 21.99,
+     "early_avg": 21.23,
+     "playoffs_avg": 22.92,
+     "full_rank_2025only": 9,
+     "playoffs_rank_2025only": 5
+    },
+    "WR": {
+     "full": 16,
+     "early": 16,
+     "playoffs": 18,
+     "full_z": -0.13,
+     "early_z": 0.02,
+     "playoffs_z": -0.11,
+     "full_avg": 31.35,
+     "early_avg": 31.49,
+     "playoffs_avg": 31.26,
+     "full_rank_2025only": 15,
+     "playoffs_rank_2025only": 18
+    },
+    "TE": {
+     "full": 16,
+     "early": 21,
+     "playoffs": 3,
+     "full_z": 0.02,
+     "early_z": -0.52,
+     "playoffs_z": 1.25,
+     "full_avg": 13.01,
+     "early_avg": 12.49,
+     "playoffs_avg": 14.64,
+     "full_rank_2025only": 13,
+     "playoffs_rank_2025only": 3
+    }
+   },
+   "playoff_opponents": [
+    "@TEN",
+    "CIN",
+    "@CLE"
+   ],
+   "weeks_1_4": [
+    "BAL",
+    "@KC",
+    "HOU",
+    "@WAS"
+   ]
+  },
+  "JAX": {
+   "bye": 7,
+   "opponents": {
+    "1": "CLE",
+    "2": "DEN",
+    "3": "NE",
+    "4": "CIN",
+    "5": "PHI",
+    "6": "HOU",
+    "8": "IND",
+    "9": "BAL",
+    "10": "TEN",
+    "11": "NYG",
+    "12": "TEN",
+    "13": "CHI",
+    "14": "PIT",
+    "15": "HOU",
+    "16": "DAL",
+    "17": "WAS",
+    "18": "IND"
+   },
+   "opponents_ha": {
+    "1": "CLE",
+    "2": "@DEN",
+    "3": "NE",
+    "4": "@CIN",
+    "5": "PHI",
+    "6": "HOU",
+    "8": "IND",
+    "9": "@BAL",
+    "10": "@TEN",
+    "11": "@NYG",
+    "12": "TEN",
+    "13": "@CHI",
+    "14": "PIT",
+    "15": "@HOU",
+    "16": "@DAL",
+    "17": "WAS",
+    "18": "@IND"
+   },
+   "sos": {
+    "QB": {
+     "full": 9,
+     "early": 21,
+     "playoffs": 4,
+     "full_z": 0.77,
+     "early_z": -0.39,
+     "playoffs_z": 1.3,
+     "full_avg": 16.78,
+     "early_avg": 16.06,
+     "playoffs_avg": 17.98,
+     "full_rank_2025only": 6,
+     "playoffs_rank_2025only": 4
+    },
+    "RB": {
+     "full": 16,
+     "early": 23,
+     "playoffs": 4,
+     "full_z": 0.17,
+     "early_z": -0.51,
+     "playoffs_z": 1.46,
+     "full_avg": 22.02,
+     "early_avg": 21.41,
+     "playoffs_avg": 23.18,
+     "full_rank_2025only": 14,
+     "playoffs_rank_2025only": 2
+    },
+    "WR": {
+     "full": 8,
+     "early": 23,
+     "playoffs": 7,
+     "full_z": 0.97,
+     "early_z": -0.47,
+     "playoffs_z": 1.06,
+     "full_avg": 32.18,
+     "early_avg": 30.68,
+     "playoffs_avg": 33.37,
+     "full_rank_2025only": 6,
+     "playoffs_rank_2025only": 5
+    },
+    "TE": {
+     "full": 13,
+     "early": 2,
+     "playoffs": 16,
+     "full_z": 0.18,
+     "early_z": 1.52,
+     "playoffs_z": -0.03,
+     "full_avg": 13.06,
+     "early_avg": 14.51,
+     "playoffs_avg": 12.97,
+     "full_rank_2025only": 11,
+     "playoffs_rank_2025only": 14
+    }
+   },
+   "playoff_opponents": [
+    "@HOU",
+    "@DAL",
+    "WAS"
+   ],
+   "weeks_1_4": [
+    "CLE",
+    "@DEN",
+    "NE",
+    "@CIN"
+   ]
+  },
+  "KC": {
+   "bye": 5,
+   "opponents": {
+    "1": "DEN",
+    "2": "IND",
+    "3": "MIA",
+    "4": "LV",
+    "6": "LAC",
+    "7": "SEA",
+    "8": "DEN",
+    "9": "NYJ",
+    "10": "ATL",
+    "11": "ARI",
+    "12": "BUF",
+    "13": "LAR",
+    "14": "CIN",
+    "15": "NE",
+    "16": "SF",
+    "17": "LAC",
+    "18": "LV"
+   },
+   "opponents_ha": {
+    "1": "DEN",
+    "2": "IND",
+    "3": "@MIA",
+    "4": "@LV",
+    "6": "LAC",
+    "7": "@SEA",
+    "8": "@DEN",
+    "9": "NYJ",
+    "10": "@ATL",
+    "11": "ARI",
+    "12": "@BUF",
+    "13": "@LAR",
+    "14": "@CIN",
+    "15": "NE",
+    "16": "SF",
+    "17": "@LAC",
+    "18": "LV"
+   },
+   "sos": {
+    "QB": {
+     "full": 26,
+     "early": 18,
+     "playoffs": 25,
+     "full_z": -0.92,
+     "early_z": -0.29,
+     "playoffs_z": -0.74,
+     "full_avg": 16.01,
+     "early_avg": 16.15,
+     "playoffs_avg": 15.55,
+     "full_rank_2025only": 28,
+     "playoffs_rank_2025only": 23
+    },
+    "RB": {
+     "full": 15,
+     "early": 12,
+     "playoffs": 27,
+     "full_z": 0.24,
+     "early_z": 0.29,
+     "playoffs_z": -0.9,
+     "full_avg": 22.05,
+     "early_avg": 22.24,
+     "playoffs_avg": 21.17,
+     "full_rank_2025only": 16,
+     "playoffs_rank_2025only": 28
+    },
+    "WR": {
+     "full": 25,
+     "early": 14,
+     "playoffs": 17,
+     "full_z": -0.91,
+     "early_z": 0.17,
+     "playoffs_z": -0.1,
+     "full_avg": 30.77,
+     "early_avg": 31.73,
+     "playoffs_avg": 31.27,
+     "full_rank_2025only": 26,
+     "playoffs_rank_2025only": 17
+    },
+    "TE": {
+     "full": 10,
+     "early": 8,
+     "playoffs": 25,
+     "full_z": 0.4,
+     "early_z": 0.9,
+     "playoffs_z": -0.59,
+     "full_avg": 13.14,
+     "early_avg": 13.89,
+     "playoffs_avg": 12.22,
+     "full_rank_2025only": 10,
+     "playoffs_rank_2025only": 19
+    }
+   },
+   "playoff_opponents": [
+    "NE",
+    "SF",
+    "@LAC"
+   ],
+   "weeks_1_4": [
+    "DEN",
+    "IND",
+    "@MIA",
+    "@LV"
+   ]
+  },
+  "LAC": {
+   "bye": 7,
+   "opponents": {
+    "1": "ARI",
+    "2": "LV",
+    "3": "BUF",
+    "4": "SEA",
+    "5": "DEN",
+    "6": "KC",
+    "8": "LAR",
+    "9": "HOU",
+    "10": "BAL",
+    "11": "NYJ",
+    "12": "NE",
+    "13": "TB",
+    "14": "LV",
+    "15": "SF",
+    "16": "MIA",
+    "17": "KC",
+    "18": "DEN"
+   },
+   "opponents_ha": {
+    "1": "ARI",
+    "2": "LV",
+    "3": "@BUF",
+    "4": "@SEA",
+    "5": "DEN",
+    "6": "@KC",
+    "8": "@LAR",
+    "9": "HOU",
+    "10": "@BAL",
+    "11": "NYJ",
+    "12": "NE",
+    "13": "@TB",
+    "14": "@LV",
+    "15": "SF",
+    "16": "@MIA",
+    "17": "KC",
+    "18": "@DEN"
+   },
+   "sos": {
+    "QB": {
+     "full": 25,
+     "early": 28,
+     "playoffs": 17,
+     "full_z": -0.83,
+     "early_z": -1.2,
+     "playoffs_z": -0.13,
+     "full_avg": 16.05,
+     "early_avg": 15.28,
+     "playoffs_avg": 16.27,
+     "full_rank_2025only": 27,
+     "playoffs_rank_2025only": 14
+    },
+    "RB": {
+     "full": 19,
+     "early": 6,
+     "playoffs": 13,
+     "full_z": -0.37,
+     "early_z": 1.14,
+     "playoffs_z": 0.36,
+     "full_avg": 21.76,
+     "early_avg": 23.11,
+     "playoffs_avg": 22.24,
+     "full_rank_2025only": 17,
+     "playoffs_rank_2025only": 8
+    },
+    "WR": {
+     "full": 28,
+     "early": 29,
+     "playoffs": 25,
+     "full_z": -1.12,
+     "early_z": -1.28,
+     "playoffs_z": -0.74,
+     "full_avg": 30.61,
+     "early_avg": 29.36,
+     "playoffs_avg": 30.12,
+     "full_rank_2025only": 28,
+     "playoffs_rank_2025only": 23
+    },
+    "TE": {
+     "full": 20,
+     "early": 22,
+     "playoffs": 9,
+     "full_z": -0.39,
+     "early_z": -0.74,
+     "playoffs_z": 0.51,
+     "full_avg": 12.86,
+     "early_avg": 12.27,
+     "playoffs_avg": 13.67,
+     "full_rank_2025only": 24,
+     "playoffs_rank_2025only": 11
+    }
+   },
+   "playoff_opponents": [
+    "SF",
+    "@MIA",
+    "KC"
+   ],
+   "weeks_1_4": [
+    "ARI",
+    "LV",
+    "@BUF",
+    "@SEA"
+   ]
+  },
+  "LAR": {
+   "bye": 11,
+   "opponents": {
+    "1": "SF",
+    "2": "NYG",
+    "3": "DEN",
+    "4": "PHI",
+    "5": "BUF",
+    "6": "ARI",
+    "7": "LV",
+    "8": "LAC",
+    "9": "WAS",
+    "10": "ARI",
+    "12": "GB",
+    "13": "KC",
+    "14": "SF",
+    "15": "DAL",
+    "16": "SEA",
+    "17": "TB",
+    "18": "SEA"
+   },
+   "opponents_ha": {
+    "1": "SF",
+    "2": "NYG",
+    "3": "@DEN",
+    "4": "@PHI",
+    "5": "BUF",
+    "6": "ARI",
+    "7": "@LV",
+    "8": "LAC",
+    "9": "@WAS",
+    "10": "@ARI",
+    "12": "GB",
+    "13": "KC",
+    "14": "@SF",
+    "15": "DAL",
+    "16": "@SEA",
+    "17": "@TB",
+    "18": "SEA"
+   },
+   "sos": {
+    "QB": {
+     "full": 20,
+     "early": 26,
+     "playoffs": 1,
+     "full_z": -0.3,
+     "early_z": -1.0,
+     "playoffs_z": 2.06,
+     "full_avg": 16.29,
+     "early_avg": 15.48,
+     "playoffs_avg": 18.88,
+     "full_rank_2025only": 18,
+     "playoffs_rank_2025only": 2
+    },
+    "RB": {
+     "full": 3,
+     "early": 7,
+     "playoffs": 22,
+     "full_z": 1.66,
+     "early_z": 0.99,
+     "playoffs_z": -0.32,
+     "full_avg": 22.73,
+     "early_avg": 22.95,
+     "playoffs_avg": 21.66,
+     "full_rank_2025only": 1,
+     "playoffs_rank_2025only": 15
+    },
+    "WR": {
+     "full": 31,
+     "early": 31,
+     "playoffs": 5,
+     "full_z": -1.38,
+     "early_z": -1.5,
+     "playoffs_z": 1.07,
+     "full_avg": 30.41,
+     "early_avg": 29.0,
+     "playoffs_avg": 33.38,
+     "full_rank_2025only": 30,
+     "playoffs_rank_2025only": 7
+    },
+    "TE": {
+     "full": 30,
+     "early": 31,
+     "playoffs": 13,
+     "full_z": -1.47,
+     "early_z": -1.65,
+     "playoffs_z": 0.34,
+     "full_avg": 12.48,
+     "early_avg": 11.36,
+     "playoffs_avg": 13.44,
+     "full_rank_2025only": 27,
+     "playoffs_rank_2025only": 12
+    }
+   },
+   "playoff_opponents": [
+    "DAL",
+    "@SEA",
+    "@TB"
+   ],
+   "weeks_1_4": [
+    "SF",
+    "NYG",
+    "@DEN",
+    "@PHI"
+   ]
+  },
+  "LV": {
+   "bye": 13,
+   "opponents": {
+    "1": "MIA",
+    "2": "LAC",
+    "3": "NO",
+    "4": "KC",
+    "5": "NE",
+    "6": "BUF",
+    "7": "LAR",
+    "8": "NYJ",
+    "9": "SF",
+    "10": "SEA",
+    "11": "DEN",
+    "12": "CLE",
+    "14": "LAC",
+    "15": "DEN",
+    "16": "TEN",
+    "17": "ARI",
+    "18": "KC"
+   },
+   "opponents_ha": {
+    "1": "MIA",
+    "2": "@LAC",
+    "3": "@NO",
+    "4": "KC",
+    "5": "@NE",
+    "6": "BUF",
+    "7": "LAR",
+    "8": "@NYJ",
+    "9": "@SF",
+    "10": "SEA",
+    "11": "@DEN",
+    "12": "@CLE",
+    "14": "LAC",
+    "15": "DEN",
+    "16": "TEN",
+    "17": "@ARI",
+    "18": "@KC"
+   },
+   "sos": {
+    "QB": {
+     "full": 32,
+     "early": 30,
+     "playoffs": 18,
+     "full_z": -1.97,
+     "early_z": -1.34,
+     "playoffs_z": -0.2,
+     "full_avg": 15.54,
+     "early_avg": 15.15,
+     "playoffs_avg": 16.19,
+     "full_rank_2025only": 32,
+     "playoffs_rank_2025only": 19
+    },
+    "RB": {
+     "full": 30,
+     "early": 30,
+     "playoffs": 10,
+     "full_z": -1.23,
+     "early_z": -1.19,
+     "playoffs_z": 0.68,
+     "full_avg": 21.35,
+     "early_avg": 20.72,
+     "playoffs_avg": 22.51,
+     "full_rank_2025only": 29,
+     "playoffs_rank_2025only": 10
+    },
+    "WR": {
+     "full": 32,
+     "early": 25,
+     "playoffs": 27,
+     "full_z": -1.74,
+     "early_z": -0.92,
+     "playoffs_z": -1.18,
+     "full_avg": 30.14,
+     "early_avg": 29.94,
+     "playoffs_avg": 29.33,
+     "full_rank_2025only": 32,
+     "playoffs_rank_2025only": 25
+    },
+    "TE": {
+     "full": 27,
+     "early": 19,
+     "playoffs": 10,
+     "full_z": -0.9,
+     "early_z": -0.31,
+     "playoffs_z": 0.51,
+     "full_avg": 12.68,
+     "early_avg": 12.69,
+     "playoffs_avg": 13.67,
+     "full_rank_2025only": 18,
+     "playoffs_rank_2025only": 6
+    }
+   },
+   "playoff_opponents": [
+    "DEN",
+    "TEN",
+    "@ARI"
+   ],
+   "weeks_1_4": [
+    "MIA",
+    "@LAC",
+    "@NO",
+    "KC"
+   ]
+  },
+  "MIA": {
+   "bye": 6,
+   "opponents": {
+    "1": "LV",
+    "2": "SF",
+    "3": "KC",
+    "4": "MIN",
+    "5": "CIN",
+    "7": "NYJ",
+    "8": "NE",
+    "9": "DET",
+    "10": "IND",
+    "11": "BUF",
+    "12": "NYJ",
+    "13": "DEN",
+    "14": "CHI",
+    "15": "GB",
+    "16": "LAC",
+    "17": "BUF",
+    "18": "NE"
+   },
+   "opponents_ha": {
+    "1": "@LV",
+    "2": "@SF",
+    "3": "KC",
+    "4": "@MIN",
+    "5": "CIN",
+    "7": "@NYJ",
+    "8": "NE",
+    "9": "DET",
+    "10": "@IND",
+    "11": "@BUF",
+    "12": "NYJ",
+    "13": "@DEN",
+    "14": "CHI",
+    "15": "@GB",
+    "16": "LAC",
+    "17": "BUF",
+    "18": "@NE"
+   },
+   "sos": {
+    "QB": {
+     "full": 23,
+     "early": 32,
+     "playoffs": 31,
+     "full_z": -0.63,
+     "early_z": -1.65,
+     "playoffs_z": -1.55,
+     "full_avg": 16.15,
+     "early_avg": 14.85,
+     "playoffs_avg": 14.58,
+     "full_rank_2025only": 20,
+     "playoffs_rank_2025only": 29
+    },
+    "RB": {
+     "full": 12,
+     "early": 25,
+     "playoffs": 18,
+     "full_z": 0.4,
+     "early_z": -0.64,
+     "playoffs_z": -0.1,
+     "full_avg": 22.13,
+     "early_avg": 21.28,
+     "playoffs_avg": 21.85,
+     "full_rank_2025only": 10,
+     "playoffs_rank_2025only": 21
+    },
+    "WR": {
+     "full": 18,
+     "early": 30,
+     "playoffs": 24,
+     "full_z": -0.4,
+     "early_z": -1.32,
+     "playoffs_z": -0.59,
+     "full_avg": 31.15,
+     "early_avg": 29.29,
+     "playoffs_avg": 30.39,
+     "full_rank_2025only": 17,
+     "playoffs_rank_2025only": 24
+    },
+    "TE": {
+     "full": 23,
+     "early": 27,
+     "playoffs": 31,
+     "full_z": -0.58,
+     "early_z": -0.94,
+     "playoffs_z": -1.91,
+     "full_avg": 12.8,
+     "early_avg": 12.07,
+     "playoffs_avg": 10.5,
+     "full_rank_2025only": 23,
+     "playoffs_rank_2025only": 31
+    }
+   },
+   "playoff_opponents": [
+    "@GB",
+    "LAC",
+    "BUF"
+   ],
+   "weeks_1_4": [
+    "@LV",
+    "@SF",
+    "KC",
+    "@MIN"
+   ]
+  },
+  "MIN": {
+   "bye": 6,
+   "opponents": {
+    "1": "GB",
+    "2": "CHI",
+    "3": "TB",
+    "4": "MIA",
+    "5": "NO",
+    "7": "IND",
+    "8": "DET",
+    "9": "BUF",
+    "10": "GB",
+    "11": "SF",
+    "12": "ATL",
+    "13": "CAR",
+    "14": "NE",
+    "15": "DET",
+    "16": "WAS",
+    "17": "NYJ",
+    "18": "CHI"
+   },
+   "opponents_ha": {
+    "1": "GB",
+    "2": "@CHI",
+    "3": "@TB",
+    "4": "MIA",
+    "5": "@NO",
+    "7": "IND",
+    "8": "@DET",
+    "9": "BUF",
+    "10": "@GB",
+    "11": "@SF",
+    "12": "ATL",
+    "13": "CAR",
+    "14": "@NE",
+    "15": "DET",
+    "16": "WAS",
+    "17": "@NYJ",
+    "18": "CHI"
+   },
+   "sos": {
+    "QB": {
+     "full": 6,
+     "early": 5,
+     "playoffs": 2,
+     "full_z": 1.07,
+     "early_z": 1.06,
+     "playoffs_z": 1.71,
+     "full_avg": 16.92,
+     "early_avg": 17.43,
+     "playoffs_avg": 18.46,
+     "full_rank_2025only": 4,
+     "playoffs_rank_2025only": 1
+    },
+    "RB": {
+     "full": 11,
+     "early": 15,
+     "playoffs": 2,
+     "full_z": 0.59,
+     "early_z": 0.03,
+     "playoffs_z": 1.48,
+     "full_avg": 22.22,
+     "early_avg": 21.97,
+     "playoffs_avg": 23.2,
+     "full_rank_2025only": 15,
+     "playoffs_rank_2025only": 1
+    },
+    "WR": {
+     "full": 6,
+     "early": 8,
+     "playoffs": 4,
+     "full_z": 1.31,
+     "early_z": 0.69,
+     "playoffs_z": 1.1,
+     "full_avg": 32.43,
+     "early_avg": 32.57,
+     "playoffs_avg": 33.44,
+     "full_rank_2025only": 3,
+     "playoffs_rank_2025only": 4
+    },
+    "TE": {
+     "full": 8,
+     "early": 5,
+     "playoffs": 6,
+     "full_z": 0.81,
+     "early_z": 1.16,
+     "playoffs_z": 0.81,
+     "full_avg": 13.29,
+     "early_avg": 14.15,
+     "playoffs_avg": 14.05,
+     "full_rank_2025only": 8,
+     "playoffs_rank_2025only": 4
+    }
+   },
+   "playoff_opponents": [
+    "DET",
+    "WAS",
+    "@NYJ"
+   ],
+   "weeks_1_4": [
+    "GB",
+    "@CHI",
+    "@TB",
+    "MIA"
+   ]
+  },
+  "NE": {
+   "bye": 11,
+   "opponents": {
+    "1": "SEA",
+    "2": "PIT",
+    "3": "JAX",
+    "4": "BUF",
+    "5": "LV",
+    "6": "NYJ",
+    "7": "CHI",
+    "8": "MIA",
+    "9": "GB",
+    "10": "DET",
+    "12": "LAC",
+    "13": "BUF",
+    "14": "MIN",
+    "15": "KC",
+    "16": "NYJ",
+    "17": "DEN",
+    "18": "MIA"
+   },
+   "opponents_ha": {
+    "1": "@SEA",
+    "2": "PIT",
+    "3": "@JAX",
+    "4": "@BUF",
+    "5": "LV",
+    "6": "NYJ",
+    "7": "@CHI",
+    "8": "@MIA",
+    "9": "GB",
+    "10": "@DET",
+    "12": "@LAC",
+    "13": "BUF",
+    "14": "MIN",
+    "15": "@KC",
+    "16": "@NYJ",
+    "17": "DEN",
+    "18": "MIA"
+   },
+   "sos": {
+    "QB": {
+     "full": 27,
+     "early": 19,
+     "playoffs": 19,
+     "full_z": -0.95,
+     "early_z": -0.32,
+     "playoffs_z": -0.27,
+     "full_avg": 16.0,
+     "early_avg": 16.13,
+     "playoffs_avg": 16.11,
+     "full_rank_2025only": 23,
+     "playoffs_rank_2025only": 21
+    },
+    "RB": {
+     "full": 25,
+     "early": 27,
+     "playoffs": 26,
+     "full_z": -0.65,
+     "early_z": -0.98,
+     "playoffs_z": -0.87,
+     "full_avg": 21.62,
+     "early_avg": 20.93,
+     "playoffs_avg": 21.19,
+     "full_rank_2025only": 22,
+     "playoffs_rank_2025only": 19
+    },
+    "WR": {
+     "full": 23,
+     "early": 19,
+     "playoffs": 29,
+     "full_z": -0.66,
+     "early_z": -0.09,
+     "playoffs_z": -1.27,
+     "full_avg": 30.96,
+     "early_avg": 31.3,
+     "playoffs_avg": 29.16,
+     "full_rank_2025only": 23,
+     "playoffs_rank_2025only": 28
+    },
+    "TE": {
+     "full": 26,
+     "early": 14,
+     "playoffs": 15,
+     "full_z": -0.86,
+     "early_z": 0.24,
+     "playoffs_z": 0.12,
+     "full_avg": 12.7,
+     "early_avg": 13.24,
+     "playoffs_avg": 13.15,
+     "full_rank_2025only": 29,
+     "playoffs_rank_2025only": 15
+    }
+   },
+   "playoff_opponents": [
+    "@KC",
+    "@NYJ",
+    "DEN"
+   ],
+   "weeks_1_4": [
+    "@SEA",
+    "PIT",
+    "@JAX",
+    "@BUF"
+   ]
+  },
+  "NO": {
+   "bye": 8,
+   "opponents": {
+    "1": "DET",
+    "2": "BAL",
+    "3": "LV",
+    "4": "ATL",
+    "5": "MIN",
+    "6": "NYG",
+    "7": "PIT",
+    "9": "CLE",
+    "10": "CAR",
+    "11": "CHI",
+    "12": "CIN",
+    "13": "GB",
+    "14": "CAR",
+    "15": "TB",
+    "16": "ARI",
+    "17": "ATL",
+    "18": "TB"
+   },
+   "opponents_ha": {
+    "1": "@DET",
+    "2": "@BAL",
+    "3": "LV",
+    "4": "ATL",
+    "5": "MIN",
+    "6": "@NYG",
+    "7": "PIT",
+    "9": "CLE",
+    "10": "CAR",
+    "11": "@CHI",
+    "12": "@CIN",
+    "13": "GB",
+    "14": "@CAR",
+    "15": "@TB",
+    "16": "ARI",
+    "17": "@ATL",
+    "18": "TB"
+   },
+   "sos": {
+    "QB": {
+     "full": 10,
+     "early": 7,
+     "playoffs": 5,
+     "full_z": 0.56,
+     "early_z": 0.92,
+     "playoffs_z": 1.25,
+     "full_avg": 16.68,
+     "early_avg": 17.3,
+     "playoffs_avg": 17.91,
+     "full_rank_2025only": 12,
+     "playoffs_rank_2025only": 7
+    },
+    "RB": {
+     "full": 5,
+     "early": 16,
+     "playoffs": 9,
+     "full_z": 0.95,
+     "early_z": -0.01,
+     "playoffs_z": 0.68,
+     "full_avg": 22.39,
+     "early_avg": 21.93,
+     "playoffs_avg": 22.52,
+     "full_rank_2025only": 7,
+     "playoffs_rank_2025only": 6
+    },
+    "WR": {
+     "full": 11,
+     "early": 1,
+     "playoffs": 15,
+     "full_z": 0.53,
+     "early_z": 1.94,
+     "playoffs_z": 0.12,
+     "full_avg": 31.85,
+     "early_avg": 34.61,
+     "playoffs_avg": 31.66,
+     "full_rank_2025only": 10,
+     "playoffs_rank_2025only": 20
+    },
+    "TE": {
+     "full": 9,
+     "early": 30,
+     "playoffs": 8,
+     "full_z": 0.49,
+     "early_z": -1.46,
+     "playoffs_z": 0.63,
+     "full_avg": 13.17,
+     "early_avg": 11.55,
+     "playoffs_avg": 13.82,
+     "full_rank_2025only": 14,
+     "playoffs_rank_2025only": 8
+    }
+   },
+   "playoff_opponents": [
+    "@TB",
+    "ARI",
+    "@ATL"
+   ],
+   "weeks_1_4": [
+    "@DET",
+    "@BAL",
+    "LV",
+    "ATL"
+   ]
+  },
+  "NYG": {
+   "bye": 8,
+   "opponents": {
+    "1": "DAL",
+    "2": "LAR",
+    "3": "TEN",
+    "4": "ARI",
+    "5": "WAS",
+    "6": "NO",
+    "7": "HOU",
+    "9": "PHI",
+    "10": "WAS",
+    "11": "JAX",
+    "12": "IND",
+    "13": "SF",
+    "14": "SEA",
+    "15": "CLE",
+    "16": "DET",
+    "17": "DAL",
+    "18": "PHI"
+   },
+   "opponents_ha": {
+    "1": "DAL",
+    "2": "@LAR",
+    "3": "TEN",
+    "4": "ARI",
+    "5": "@WAS",
+    "6": "NO",
+    "7": "@HOU",
+    "9": "@PHI",
+    "10": "WAS",
+    "11": "JAX",
+    "12": "@IND",
+    "13": "SF",
+    "14": "@SEA",
+    "15": "CLE",
+    "16": "@DET",
+    "17": "@DAL",
+    "18": "PHI"
+   },
+   "sos": {
+    "QB": {
+     "full": 5,
+     "early": 2,
+     "playoffs": 3,
+     "full_z": 1.11,
+     "early_z": 1.69,
+     "playoffs_z": 1.59,
+     "full_avg": 16.93,
+     "early_avg": 18.04,
+     "playoffs_avg": 18.33,
+     "full_rank_2025only": 7,
+     "playoffs_rank_2025only": 3
+    },
+    "RB": {
+     "full": 13,
+     "early": 5,
+     "playoffs": 20,
+     "full_z": 0.35,
+     "early_z": 1.16,
+     "playoffs_z": -0.26,
+     "full_avg": 22.1,
+     "early_avg": 23.12,
+     "playoffs_avg": 21.71,
+     "full_rank_2025only": 12,
+     "playoffs_rank_2025only": 11
+    },
+    "WR": {
+     "full": 9,
+     "early": 7,
+     "playoffs": 1,
+     "full_z": 0.85,
+     "early_z": 0.87,
+     "playoffs_z": 2.15,
+     "full_avg": 32.09,
+     "early_avg": 32.87,
+     "playoffs_avg": 35.33,
+     "full_rank_2025only": 8,
+     "playoffs_rank_2025only": 1
+    },
+    "TE": {
+     "full": 14,
+     "early": 13,
+     "playoffs": 24,
+     "full_z": 0.16,
+     "early_z": 0.29,
+     "playoffs_z": -0.58,
+     "full_avg": 13.06,
+     "early_avg": 13.29,
+     "playoffs_avg": 12.25,
+     "full_rank_2025only": 9,
+     "playoffs_rank_2025only": 21
+    }
+   },
+   "playoff_opponents": [
+    "CLE",
+    "@DET",
+    "@DAL"
+   ],
+   "weeks_1_4": [
+    "DAL",
+    "@LAR",
+    "TEN",
+    "ARI"
+   ]
+  },
+  "NYJ": {
+   "bye": 13,
+   "opponents": {
+    "1": "TEN",
+    "2": "GB",
+    "3": "DET",
+    "4": "CHI",
+    "5": "CLE",
+    "6": "NE",
+    "7": "MIA",
+    "8": "LV",
+    "9": "KC",
+    "10": "BUF",
+    "11": "LAC",
+    "12": "MIA",
+    "14": "DEN",
+    "15": "ARI",
+    "16": "NE",
+    "17": "MIN",
+    "18": "BUF"
+   },
+   "opponents_ha": {
+    "1": "@TEN",
+    "2": "GB",
+    "3": "@DET",
+    "4": "@CHI",
+    "5": "CLE",
+    "6": "@NE",
+    "7": "MIA",
+    "8": "LV",
+    "9": "@KC",
+    "10": "BUF",
+    "11": "@LAC",
+    "12": "@MIA",
+    "14": "DEN",
+    "15": "@ARI",
+    "16": "NE",
+    "17": "MIN",
+    "18": "@BUF"
+   },
+   "sos": {
+    "QB": {
+     "full": 31,
+     "early": 8,
+     "playoffs": 28,
+     "full_z": -1.53,
+     "early_z": 0.73,
+     "playoffs_z": -1.32,
+     "full_avg": 15.74,
+     "early_avg": 17.12,
+     "playoffs_avg": 14.85,
+     "full_rank_2025only": 29,
+     "playoffs_rank_2025only": 28
+    },
+    "RB": {
+     "full": 27,
+     "early": 21,
+     "playoffs": 28,
+     "full_z": -0.98,
+     "early_z": -0.46,
+     "playoffs_z": -1.04,
+     "full_avg": 21.47,
+     "early_avg": 21.46,
+     "playoffs_avg": 21.04,
+     "full_rank_2025only": 27,
+     "playoffs_rank_2025only": 29
+    },
+    "WR": {
+     "full": 20,
+     "early": 5,
+     "playoffs": 28,
+     "full_z": -0.51,
+     "early_z": 1.2,
+     "playoffs_z": -1.23,
+     "full_avg": 31.07,
+     "early_avg": 33.41,
+     "playoffs_avg": 29.23,
+     "full_rank_2025only": 16,
+     "playoffs_rank_2025only": 29
+    },
+    "TE": {
+     "full": 22,
+     "early": 18,
+     "playoffs": 11,
+     "full_z": -0.53,
+     "early_z": -0.28,
+     "playoffs_z": 0.46,
+     "full_avg": 12.81,
+     "early_avg": 12.73,
+     "playoffs_avg": 13.6,
+     "full_rank_2025only": 20,
+     "playoffs_rank_2025only": 10
+    }
+   },
+   "playoff_opponents": [
+    "@ARI",
+    "NE",
+    "MIN"
+   ],
+   "weeks_1_4": [
+    "@TEN",
+    "GB",
+    "@DET",
+    "@CHI"
+   ]
+  },
+  "PHI": {
+   "bye": 10,
+   "opponents": {
+    "1": "WAS",
+    "2": "TEN",
+    "3": "CHI",
+    "4": "LAR",
+    "5": "JAX",
+    "6": "CAR",
+    "7": "DAL",
+    "8": "WAS",
+    "9": "NYG",
+    "11": "PIT",
+    "12": "DAL",
+    "13": "ARI",
+    "14": "IND",
+    "15": "SEA",
+    "16": "HOU",
+    "17": "SF",
+    "18": "NYG"
+   },
+   "opponents_ha": {
+    "1": "WAS",
+    "2": "@TEN",
+    "3": "@CHI",
+    "4": "LAR",
+    "5": "@JAX",
+    "6": "CAR",
+    "7": "DAL",
+    "8": "@WAS",
+    "9": "NYG",
+    "11": "PIT",
+    "12": "@DAL",
+    "13": "@ARI",
+    "14": "IND",
+    "15": "SEA",
+    "16": "HOU",
+    "17": "@SF",
+    "18": "@NYG"
+   },
+   "sos": {
+    "QB": {
+     "full": 1,
+     "early": 6,
+     "playoffs": 30,
+     "full_z": 2.1,
+     "early_z": 0.97,
+     "playoffs_z": -1.43,
+     "full_avg": 17.38,
+     "early_avg": 17.36,
+     "playoffs_avg": 14.73,
+     "full_rank_2025only": 1,
+     "playoffs_rank_2025only": 30
+    },
+    "RB": {
+     "full": 1,
+     "early": 13,
+     "playoffs": 29,
+     "full_z": 1.75,
+     "early_z": 0.28,
+     "playoffs_z": -1.35,
+     "full_avg": 22.77,
+     "early_avg": 22.22,
+     "playoffs_avg": 20.78,
+     "full_rank_2025only": 3,
+     "playoffs_rank_2025only": 30
+    },
+    "WR": {
+     "full": 5,
+     "early": 6,
+     "playoffs": 30,
+     "full_z": 1.44,
+     "early_z": 1.06,
+     "playoffs_z": -1.58,
+     "full_avg": 32.53,
+     "early_avg": 33.18,
+     "playoffs_avg": 28.59,
+     "full_rank_2025only": 1,
+     "playoffs_rank_2025only": 30
+    },
+    "TE": {
+     "full": 4,
+     "early": 12,
+     "playoffs": 19,
+     "full_z": 1.53,
+     "early_z": 0.49,
+     "playoffs_z": -0.35,
+     "full_avg": 13.54,
+     "early_avg": 13.49,
+     "playoffs_avg": 12.55,
+     "full_rank_2025only": 1,
+     "playoffs_rank_2025only": 16
+    }
+   },
+   "playoff_opponents": [
+    "SEA",
+    "HOU",
+    "@SF"
+   ],
+   "weeks_1_4": [
+    "WAS",
+    "@TEN",
+    "@CHI",
+    "LAR"
+   ]
+  },
+  "PIT": {
+   "bye": 9,
+   "opponents": {
+    "1": "ATL",
+    "2": "NE",
+    "3": "CIN",
+    "4": "CLE",
+    "5": "IND",
+    "6": "TB",
+    "7": "NO",
+    "8": "CLE",
+    "10": "CIN",
+    "11": "PHI",
+    "12": "DEN",
+    "13": "HOU",
+    "14": "JAX",
+    "15": "BAL",
+    "16": "CAR",
+    "17": "TEN",
+    "18": "BAL"
+   },
+   "opponents_ha": {
+    "1": "ATL",
+    "2": "@NE",
+    "3": "CIN",
+    "4": "@CLE",
+    "5": "IND",
+    "6": "@TB",
+    "7": "@NO",
+    "8": "CLE",
+    "10": "@CIN",
+    "11": "@PHI",
+    "12": "DEN",
+    "13": "HOU",
+    "14": "@JAX",
+    "15": "BAL",
+    "16": "CAR",
+    "17": "@TEN",
+    "18": "@BAL"
+   },
+   "sos": {
+    "QB": {
+     "full": 15,
+     "early": 14,
+     "playoffs": 12,
+     "full_z": -0.11,
+     "early_z": 0.41,
+     "playoffs_z": 0.45,
+     "full_avg": 16.38,
+     "early_avg": 16.82,
+     "playoffs_avg": 16.97,
+     "full_rank_2025only": 24,
+     "playoffs_rank_2025only": 13
+    },
+    "RB": {
+     "full": 20,
+     "early": 17,
+     "playoffs": 1,
+     "full_z": -0.44,
+     "early_z": -0.02,
+     "playoffs_z": 1.5,
+     "full_avg": 21.73,
+     "early_avg": 21.92,
+     "playoffs_avg": 23.22,
+     "full_rank_2025only": 23,
+     "playoffs_rank_2025only": 7
+    },
+    "WR": {
+     "full": 17,
+     "early": 10,
+     "playoffs": 8,
+     "full_z": -0.36,
+     "early_z": 0.51,
+     "playoffs_z": 0.46,
+     "full_avg": 31.18,
+     "early_avg": 32.28,
+     "playoffs_avg": 32.28,
+     "full_rank_2025only": 25,
+     "playoffs_rank_2025only": 8
+    },
+    "TE": {
+     "full": 6,
+     "early": 6,
+     "playoffs": 20,
+     "full_z": 1.37,
+     "early_z": 1.0,
+     "playoffs_z": -0.37,
+     "full_avg": 13.49,
+     "early_avg": 13.99,
+     "playoffs_avg": 12.51,
+     "full_rank_2025only": 5,
+     "playoffs_rank_2025only": 22
+    }
+   },
+   "playoff_opponents": [
+    "BAL",
+    "CAR",
+    "@TEN"
+   ],
+   "weeks_1_4": [
+    "ATL",
+    "@NE",
+    "CIN",
+    "@CLE"
+   ]
+  },
+  "SEA": {
+   "bye": 11,
+   "opponents": {
+    "1": "NE",
+    "2": "ARI",
+    "3": "WAS",
+    "4": "LAC",
+    "5": "SF",
+    "6": "DEN",
+    "7": "KC",
+    "8": "CHI",
+    "9": "ARI",
+    "10": "LV",
+    "12": "SF",
+    "13": "DAL",
+    "14": "NYG",
+    "15": "PHI",
+    "16": "LAR",
+    "17": "CAR",
+    "18": "LAR"
+   },
+   "opponents_ha": {
+    "1": "NE",
+    "2": "@ARI",
+    "3": "@WAS",
+    "4": "LAC",
+    "5": "SF",
+    "6": "@DEN",
+    "7": "KC",
+    "8": "CHI",
+    "9": "ARI",
+    "10": "@LV",
+    "12": "@SF",
+    "13": "DAL",
+    "14": "NYG",
+    "15": "@PHI",
+    "16": "LAR",
+    "17": "@CAR",
+    "18": "@LAR"
+   },
+   "sos": {
+    "QB": {
+     "full": 19,
+     "early": 16,
+     "playoffs": 29,
+     "full_z": -0.26,
+     "early_z": -0.27,
+     "playoffs_z": -1.37,
+     "full_avg": 16.31,
+     "early_avg": 16.18,
+     "playoffs_avg": 14.8,
+     "full_rank_2025only": 14,
+     "playoffs_rank_2025only": 31
+    },
+    "RB": {
+     "full": 2,
+     "early": 10,
+     "playoffs": 15,
+     "full_z": 1.74,
+     "early_z": 0.35,
+     "playoffs_z": 0.04,
+     "full_avg": 22.77,
+     "early_avg": 22.29,
+     "playoffs_avg": 21.97,
+     "full_rank_2025only": 2,
+     "playoffs_rank_2025only": 17
+    },
+    "WR": {
+     "full": 26,
+     "early": 20,
+     "playoffs": 31,
+     "full_z": -0.91,
+     "early_z": -0.21,
+     "playoffs_z": -1.66,
+     "full_avg": 30.77,
+     "early_avg": 31.11,
+     "playoffs_avg": 28.45,
+     "full_rank_2025only": 21,
+     "playoffs_rank_2025only": 31
+    },
+    "TE": {
+     "full": 25,
+     "early": 11,
+     "playoffs": 26,
+     "full_z": -0.77,
+     "early_z": 0.54,
+     "playoffs_z": -0.84,
+     "full_avg": 12.73,
+     "early_avg": 13.54,
+     "playoffs_avg": 11.9,
+     "full_rank_2025only": 17,
+     "playoffs_rank_2025only": 28
+    }
+   },
+   "playoff_opponents": [
+    "@PHI",
+    "LAR",
+    "@CAR"
+   ],
+   "weeks_1_4": [
+    "NE",
+    "@ARI",
+    "@WAS",
+    "LAC"
+   ]
+  },
+  "SF": {
+   "bye": 8,
+   "opponents": {
+    "1": "LAR",
+    "2": "MIA",
+    "3": "ARI",
+    "4": "DEN",
+    "5": "SEA",
+    "6": "WAS",
+    "7": "ATL",
+    "9": "LV",
+    "10": "DAL",
+    "11": "MIN",
+    "12": "SEA",
+    "13": "NYG",
+    "14": "LAR",
+    "15": "LAC",
+    "16": "KC",
+    "17": "PHI",
+    "18": "ARI"
+   },
+   "opponents_ha": {
+    "1": "@LAR",
+    "2": "MIA",
+    "3": "ARI",
+    "4": "DEN",
+    "5": "@SEA",
+    "6": "WAS",
+    "7": "@ATL",
+    "9": "LV",
+    "10": "@DAL",
+    "11": "MIN",
+    "12": "SEA",
+    "13": "@NYG",
+    "14": "LAR",
+    "15": "@LAC",
+    "16": "@KC",
+    "17": "PHI",
+    "18": "@ARI"
+   },
+   "sos": {
+    "QB": {
+     "full": 30,
+     "early": 22,
+     "playoffs": 32,
+     "full_z": -1.27,
+     "early_z": -0.54,
+     "playoffs_z": -1.96,
+     "full_avg": 15.85,
+     "early_avg": 15.92,
+     "playoffs_avg": 14.1,
+     "full_rank_2025only": 31,
+     "playoffs_rank_2025only": 32
+    },
+    "RB": {
+     "full": 24,
+     "early": 14,
+     "playoffs": 32,
+     "full_z": -0.63,
+     "early_z": 0.1,
+     "playoffs_z": -2.27,
+     "full_avg": 21.63,
+     "early_avg": 22.04,
+     "playoffs_avg": 19.99,
+     "full_rank_2025only": 19,
+     "playoffs_rank_2025only": 27
+    },
+    "WR": {
+     "full": 30,
+     "early": 26,
+     "playoffs": 32,
+     "full_z": -1.23,
+     "early_z": -0.99,
+     "playoffs_z": -1.96,
+     "full_avg": 30.53,
+     "early_avg": 29.84,
+     "playoffs_avg": 27.91,
+     "full_rank_2025only": 31,
+     "playoffs_rank_2025only": 32
+    },
+    "TE": {
+     "full": 31,
+     "early": 4,
+     "playoffs": 32,
+     "full_z": -1.55,
+     "early_z": 1.33,
+     "playoffs_z": -2.08,
+     "full_avg": 12.45,
+     "early_avg": 14.32,
+     "playoffs_avg": 10.28,
+     "full_rank_2025only": 32,
+     "playoffs_rank_2025only": 32
+    }
+   },
+   "playoff_opponents": [
+    "@LAC",
+    "@KC",
+    "PHI"
+   ],
+   "weeks_1_4": [
+    "@LAR",
+    "MIA",
+    "ARI",
+    "DEN"
+   ]
+  },
+  "TB": {
+   "bye": 10,
+   "opponents": {
+    "1": "CIN",
+    "2": "CLE",
+    "3": "MIN",
+    "4": "GB",
+    "5": "DAL",
+    "6": "PIT",
+    "7": "CAR",
+    "8": "ATL",
+    "9": "CHI",
+    "11": "DET",
+    "12": "CAR",
+    "13": "LAC",
+    "14": "BAL",
+    "15": "NO",
+    "16": "ATL",
+    "17": "LAR",
+    "18": "NO"
+   },
+   "opponents_ha": {
+    "1": "@CIN",
+    "2": "CLE",
+    "3": "MIN",
+    "4": "GB",
+    "5": "@DAL",
+    "6": "PIT",
+    "7": "@CAR",
+    "8": "ATL",
+    "9": "@CHI",
+    "11": "@DET",
+    "12": "CAR",
+    "13": "LAC",
+    "14": "@BAL",
+    "15": "NO",
+    "16": "@ATL",
+    "17": "LAR",
+    "18": "@NO"
+   },
+   "sos": {
+    "QB": {
+     "full": 13,
+     "early": 29,
+     "playoffs": 21,
+     "full_z": 0.21,
+     "early_z": -1.28,
+     "playoffs_z": -0.39,
+     "full_avg": 16.53,
+     "early_avg": 15.21,
+     "playoffs_avg": 15.97,
+     "full_rank_2025only": 17,
+     "playoffs_rank_2025only": 24
+    },
+    "RB": {
+     "full": 21,
+     "early": 24,
+     "playoffs": 30,
+     "full_z": -0.52,
+     "early_z": -0.52,
+     "playoffs_z": -1.59,
+     "full_avg": 21.69,
+     "early_avg": 21.4,
+     "playoffs_avg": 20.58,
+     "full_rank_2025only": 24,
+     "playoffs_rank_2025only": 31
+    },
+    "WR": {
+     "full": 7,
+     "early": 28,
+     "playoffs": 11,
+     "full_z": 1.12,
+     "early_z": -1.02,
+     "playoffs_z": 0.41,
+     "full_avg": 32.29,
+     "early_avg": 29.79,
+     "playoffs_avg": 32.19,
+     "full_rank_2025only": 9,
+     "playoffs_rank_2025only": 16
+    },
+    "TE": {
+     "full": 19,
+     "early": 10,
+     "playoffs": 23,
+     "full_z": -0.38,
+     "early_z": 0.83,
+     "playoffs_z": -0.57,
+     "full_avg": 12.87,
+     "early_avg": 13.82,
+     "playoffs_avg": 12.26,
+     "full_rank_2025only": 22,
+     "playoffs_rank_2025only": 24
+    }
+   },
+   "playoff_opponents": [
+    "NO",
+    "@ATL",
+    "LAR"
+   ],
+   "weeks_1_4": [
+    "@CIN",
+    "CLE",
+    "MIN",
+    "GB"
+   ]
+  },
+  "TEN": {
+   "bye": 9,
+   "opponents": {
+    "1": "NYJ",
+    "2": "PHI",
+    "3": "NYG",
+    "4": "BAL",
+    "5": "HOU",
+    "6": "IND",
+    "7": "CLE",
+    "8": "CIN",
+    "10": "JAX",
+    "11": "DAL",
+    "12": "JAX",
+    "13": "WAS",
+    "14": "DET",
+    "15": "IND",
+    "16": "LV",
+    "17": "PIT",
+    "18": "HOU"
+   },
+   "opponents_ha": {
+    "1": "NYJ",
+    "2": "PHI",
+    "3": "@NYG",
+    "4": "@BAL",
+    "5": "HOU",
+    "6": "@IND",
+    "7": "CLE",
+    "8": "@CIN",
+    "10": "JAX",
+    "11": "@DAL",
+    "12": "@JAX",
+    "13": "WAS",
+    "14": "@DET",
+    "15": "IND",
+    "16": "@LV",
+    "17": "PIT",
+    "18": "@HOU"
+   },
+   "sos": {
+    "QB": {
+     "full": 2,
+     "early": 12,
+     "playoffs": 11,
+     "full_z": 1.81,
+     "early_z": 0.49,
+     "playoffs_z": 0.49,
+     "full_avg": 17.25,
+     "early_avg": 16.9,
+     "playoffs_avg": 17.02,
+     "full_rank_2025only": 2,
+     "playoffs_rank_2025only": 10
+    },
+    "RB": {
+     "full": 6,
+     "early": 3,
+     "playoffs": 23,
+     "full_z": 0.91,
+     "early_z": 1.73,
+     "playoffs_z": -0.62,
+     "full_avg": 22.37,
+     "early_avg": 23.72,
+     "playoffs_avg": 21.41,
+     "full_rank_2025only": 5,
+     "playoffs_rank_2025only": 26
+    },
+    "WR": {
+     "full": 1,
+     "early": 17,
+     "playoffs": 3,
+     "full_z": 1.79,
+     "early_z": -0.02,
+     "playoffs_z": 1.52,
+     "full_avg": 32.8,
+     "early_avg": 31.41,
+     "playoffs_avg": 34.19,
+     "full_rank_2025only": 2,
+     "playoffs_rank_2025only": 3
+    },
+    "TE": {
+     "full": 7,
+     "early": 32,
+     "playoffs": 5,
+     "full_z": 1.17,
+     "early_z": -1.81,
+     "playoffs_z": 1.01,
+     "full_avg": 13.41,
+     "early_avg": 11.21,
+     "playoffs_avg": 14.32,
+     "full_rank_2025only": 6,
+     "playoffs_rank_2025only": 9
+    }
+   },
+   "playoff_opponents": [
+    "IND",
+    "@LV",
+    "PIT"
+   ],
+   "weeks_1_4": [
+    "NYJ",
+    "PHI",
+    "@NYG",
+    "@BAL"
+   ]
+  },
+  "WAS": {
+   "bye": 7,
+   "opponents": {
+    "1": "PHI",
+    "2": "DAL",
+    "3": "SEA",
+    "4": "IND",
+    "5": "NYG",
+    "6": "SF",
+    "8": "PHI",
+    "9": "LAR",
+    "10": "NYG",
+    "11": "CIN",
+    "12": "ARI",
+    "13": "TEN",
+    "14": "HOU",
+    "15": "ATL",
+    "16": "MIN",
+    "17": "JAX",
+    "18": "DAL"
+   },
+   "opponents_ha": {
+    "1": "@PHI",
+    "2": "@DAL",
+    "3": "SEA",
+    "4": "IND",
+    "5": "NYG",
+    "6": "@SF",
+    "8": "PHI",
+    "9": "LAR",
+    "10": "@NYG",
+    "11": "CIN",
+    "12": "@ARI",
+    "13": "@TEN",
+    "14": "HOU",
+    "15": "ATL",
+    "16": "@MIN",
+    "17": "@JAX",
+    "18": "DAL"
+   },
+   "sos": {
+    "QB": {
+     "full": 18,
+     "early": 13,
+     "playoffs": 23,
+     "full_z": -0.25,
+     "early_z": 0.48,
+     "playoffs_z": -0.68,
+     "full_avg": 16.31,
+     "early_avg": 16.89,
+     "playoffs_avg": 15.62,
+     "full_rank_2025only": 21,
+     "playoffs_rank_2025only": 27
+    },
+    "RB": {
+     "full": 4,
+     "early": 18,
+     "playoffs": 31,
+     "full_z": 1.11,
+     "early_z": -0.2,
+     "playoffs_z": -1.72,
+     "full_avg": 22.47,
+     "early_avg": 21.73,
+     "playoffs_avg": 20.46,
+     "full_rank_2025only": 4,
+     "playoffs_rank_2025only": 32
+    },
+    "WR": {
+     "full": 27,
+     "early": 11,
+     "playoffs": 23,
+     "full_z": -1.01,
+     "early_z": 0.39,
+     "playoffs_z": -0.26,
+     "full_avg": 30.69,
+     "early_avg": 32.09,
+     "playoffs_avg": 30.98,
+     "full_rank_2025only": 27,
+     "playoffs_rank_2025only": 26
+    },
+    "TE": {
+     "full": 28,
+     "early": 23,
+     "playoffs": 21,
+     "full_z": -1.19,
+     "early_z": -0.75,
+     "playoffs_z": -0.51,
+     "full_avg": 12.58,
+     "early_avg": 12.26,
+     "playoffs_avg": 12.34,
+     "full_rank_2025only": 28,
+     "playoffs_rank_2025only": 25
+    }
+   },
+   "playoff_opponents": [
+    "ATL",
+    "@MIN",
+    "@JAX"
+   ],
+   "weeks_1_4": [
+    "@PHI",
+    "@DAL",
+    "SEA",
+    "IND"
+   ]
+  }
+ }
+}
