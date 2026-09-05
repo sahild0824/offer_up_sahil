@@ -47,7 +47,8 @@ def team_env_scores(team_env):
     }
 
 
-def compute(pos, team, env_row, opp_row, sos_row, team_ctx, league):
+def compute(pos, team, env_row, opp_row, sos_row, team_ctx, league, arrival=False, rookie=False, draft_no=None, years_exp=None):
+    """arrival / rookie / draft_no / years_exp come from the nflverse roster; they gate the evidence-based priors."""
     why, parts = [], {}
     env_row = env_row or {}
     opp_row = opp_row or {}
@@ -105,11 +106,28 @@ def compute(pos, team, env_row, opp_row, sos_row, team_ctx, league):
             why.append(f"Projected 2026 target share {opp_row['proj_target_share_2026']:.0%}")
 
     # --- vacated volume (nflverse) -----------------------------------------------------------
+    # Evidence: vacated targets do not predict incumbents' growth (R^2 < 0.01, Dynasty Football Factory; ff-edge weight ~0),
+    # but they matter for arrivals and for rookies with draft capital. So the opening only counts for those players.
     v = 0.0
     share = team_ctx.get("vacated_target_share" if pos in ("WR", "TE", "QB") else "vacated_carry_share")
-    if share is not None:
-        v = _clamp((share - 0.2) / 0.25, 0.0, 1.0)   # 20% vacated is normal churn; 45% is a big opening; low churn is neutral, not bad
+    if share is not None and (arrival or (rookie and draft_no and draft_no <= 100)):
+        v = _clamp((share - 0.2) / 0.25, 0.0, 1.0)   # 20% vacated is normal churn; 45% is a big opening
         parts["vacated"] = round(v, 2)
+        if v > 0:
+            why.append(f"Arrives into a room that vacated {share:.0%} of its 2025 {'targets' if pos != 'RB' else 'carries'}")
+
+    # --- evidence-based priors (research/methods_2026.md) --------------------------------------
+    prior = 0.0
+    if pos in ("WR", "TE") and years_exp is not None:
+        if years_exp == 1:
+            prior += 0.15; why.append("Year-2 receiver: ~15% breakout base rate (RotoViz)")
+        elif years_exp == 2:
+            prior += 0.10; why.append("Year-3 receiver: ~10% breakout base rate")
+    if rookie and draft_no and draft_no <= 32:
+        prior += 0.12; why.append("First-round rookie: 71% of first-round RBs finish top-24; first-round WRs average ~100 targets")
+    if arrival and pos == "WR":
+        prior -= 0.10; why.append("Receivers who change teams decline ~2 PPG on average (77% decline)")
+    parts["priors"] = round(prior, 2)
 
     # --- schedule ----------------------------------------------------------------------------
     s = 0.0
@@ -118,7 +136,11 @@ def compute(pos, team, env_row, opp_row, sos_row, team_ctx, league):
         s = _clamp((0.4 * (sp.get("full_z") or 0) + 0.6 * (sp.get("playoffs_z") or 0)) / 2)
         parts["schedule"] = round(s, 2)
 
-    raw = SW["env"] * e + SW["change"] * c + SW["vacated"] * v + SW["schedule"] * s
+    raw = SW["env"] * e + SW["change"] * c + SW["vacated"] * v + SW["schedule"] * s + prior
+    # Route the larger half of situational change into variance rather than the mean (methods sanity rule 2):
+    # the caller adds |change| to both boom and bust; the mean effect is capped at about +-0.35 raw.
+    raw = max(-0.35, min(0.35, raw))
+    parts["variance"] = round(abs(c) * 0.5 + (0.25 if uncertain else 0.0), 2)
     env_block = {
         "hc": env_row.get("hc"), "hcNew": env_row.get("hc_new"), "oc": env_row.get("oc"), "ocNew": env_row.get("oc_new"), "playcaller": env_row.get("playcaller"),
         "scheme": env_row.get("scheme_notes"), "passRate": env_row.get("pass_rate_tendency"), "pace": env_row.get("pace_tendency"), "rbUsage": env_row.get("rb_usage"),
@@ -135,4 +157,4 @@ def compute(pos, team, env_row, opp_row, sos_row, team_ctx, league):
         "full": sp.get("full"), "early": sp.get("early"), "playoffs": sp.get("playoffs"), "fullZ": sp.get("full_z"), "playoffsZ": sp.get("playoffs_z"),
         "playoffOpp": sos_row.get("playoff_opponents"), "opponents": sos_row.get("opponents_ha") or sos_row.get("opponents"),
     } if sp else None
-    return raw, parts, why[:7], env_block, chg_block, sos_block, uncertain
+    return raw, parts, why[:8], env_block, chg_block, sos_block, uncertain

@@ -1,43 +1,43 @@
 # Scenario: 10team_slot4_herorb_upside
 
 - League: 10 teams, slot 4, full PPR snake, picks #4, #17, #24, #37, #44, #57, #64, #77, #84, #97, #104, #117, #124, #137
-- Strategy: **hero-rb** · risk profile: **upside** · min availability 30%
-- Generated 2026-09-05 00:07
+- Strategy: **hero-rb** · risk profile: **upside** · min availability 30% · 2026 situation weight 0.1 · playoff-schedule weight 0.04
+- Generated 2026-09-05 00:32
 
 Cell = player (position rank, composite rank, chance still on the board at that pick). The #1 target each round is assumed drafted before planning the next round.
 
 | Rd | Pick | #1 | #2 | #3 | #4 |
 |---|---|---|---|---|---|
-| 1 | 4 | Ja'Marr Chase (WR1, comp 3, 39%) | Puka Nacua (WR2, comp 4, 55%) | Jaxon Smith-Njigba (WR3, comp 5, 80%) | Amon-Ra St. Brown (WR4, comp 7, 91%) |
-| 2 | 17 | Omarion Hampton (RB9, comp 19, 68%) | Kenneth Walker III (RB10, comp 19, 67%) | Ashton Jeanty (RB11, comp 20, 35%) | Derrick Henry (RB12, comp 22, 59%) |
-| 3 | 24 | DeVonta Smith (WR14, comp 30, 96%) | Brock Bowers (TE1, comp 20, 45%) | Nico Collins (WR9, comp 20, 39%) | Chris Olave (WR11, comp 24, 84%) |
-| 4 | 37 | Jaylen Waddle (WR20, comp 40, 91%) | Garrett Wilson (WR16, comp 36, 75%) | Ladd McConkey (WR18, comp 39, 80%) | Colston Loveland (TE3, comp 38, 80%) |
-| 5 | 44 | Luther Burden III (WR23, comp 50, 93%) | Colston Loveland (TE3, comp 38, 45%) | Ladd McConkey (WR18, comp 39, 35%) | Tyler Warren (TE4, comp 53, 84%) |
-| 6 | 57 | Jadarian Price (RB24, comp 63, 79%) | Bhayshul Tuten (RB23, comp 59, 56%) | Tucker Kraft (TE5, comp 73, 92%) | Christian Watson (WR27, comp 58, 87%) |
-| 7 | 64 | Tucker Kraft (TE5, comp 73, 81%) | Christian Watson (WR27, comp 58, 67%) | Parker Washington (WR30, comp 67, 80%) | Marvin Harrison Jr. (WR31, comp 69, 83%) |
-| 8 | 77 | Blake Corum (RB35, comp 102, 96%) | RJ Harvey (RB34, comp 95, 86%) | Justin Herbert (QB9, comp 79, 82%) | Josh Downs (WR39, comp 94, 97%) |
-| 9 | 84 | Justin Herbert (QB9, comp 79, 63%) | Trevor Lawrence (QB10, comp 89, 72%) | Jaxson Dart (QB11, comp 94, 84%) | Josh Downs (WR39, comp 94, 93%) |
-| 10 | 97 | Wan'Dale Robinson (WR45, comp 101, 80%) | Josh Downs (WR39, comp 94, 75%) | KC Concepcion (WR49, comp 113, 92%) | Michael Pittman Jr. (WR37, comp 91, 57%) |
-| 11 | 104 | MarShawn Lloyd (RB42, comp 128, 97%) | Dylan Sampson (RB50, comp 161, 99%) | Tyjae Spears (RB45, comp 147, 97%) | Jacory Croskey-Merritt (RB37, comp 110, 65%) |
-| 12 | 117 | Dylan Sampson (RB50, comp 161, 98%) | Tyjae Spears (RB45, comp 147, 91%) | Chris Rodriguez Jr. (RB43, comp 131, 86%) | Jordan Love (QB18, comp 127, 90%) |
-| 13 | 124 | Jordan Love (QB18, comp 127, 84%) | Kyler Murray (QB17, comp 119, 69%) | Brenton Strange (TE17, comp 150, 91%) | KC Concepcion (WR49, comp 113, 46%) |
-| 14 | 137 | Brenton Strange (TE17, comp 150, 78%) | Tyjae Spears (RB45, comp 147, 66%) | Juwan Johnson (TE16, comp 139, 74%) | Chris Rodriguez Jr. (RB43, comp 131, 52%) |
+| 1 | 4 | Ja'Marr Chase (WR1, comp 3, 45%, 2026 81) | Puka Nacua (WR2, comp 4, 48%, 2026 68) | Jaxon Smith-Njigba (WR3, comp 5, 79%, 2026 19) | Amon-Ra St. Brown (WR4, comp 7, 89%, 2026 44) |
+| 2 | 17 | Omarion Hampton (RB9, comp 19, 79%, 2026 73) | Kenneth Walker III (RB10, comp 19, 82%, 2026 97) | Ashton Jeanty (RB11, comp 20, 77%, 2026 18) | Jeremiyah Love (RB13, comp 30, 99%, 2026 86) |
+| 3 | 24 | Brock Bowers (TE1, comp 20, 74%, 2026 21) | DeVonta Smith (WR14, comp 30, 94%, 2026 55) | Malik Nabers (WR13, comp 29, 90%, 2026 88) | Trey McBride (TE2, comp 24, 75%, 2026 4) |
+| 4 | 37 | Emeka Egbuka (WR21, comp 41, 71%, 2026 99) | Tee Higgins (WR17, comp 36, 64%, 2026 81) | Luther Burden III (WR23, comp 50, 99%, 2026 98) | Ladd McConkey (WR18, comp 39, 78%, 2026 60) |
+| 5 | 44 | Luther Burden III (WR23, comp 50, 95%, 2026 98) | Jaylen Waddle (WR20, comp 40, 57%, 2026 13) | Jadarian Price (RB24, comp 63, 98%, 2026 99) | Lamar Jackson (QB2, comp 43, 66%, 2026 95) |
+| 6 | 57 | Jadarian Price (RB24, comp 63, 85%, 2026 99) | Bhayshul Tuten (RB23, comp 59, 51%, 2026 39) | Carnell Tate (WR32, comp 71, 97%, 2026 97) | Parker Washington (WR30, comp 67, 92%, 2026 50) |
+| 7 | 64 | Carnell Tate (WR32, comp 71, 90%, 2026 97) | Parker Washington (WR30, comp 67, 79%, 2026 50) | Jalen Hurts (QB6, comp 62, 65%, 2026 92) | RJ Harvey (RB34, comp 96, 99%, 2026 89) |
+| 8 | 77 | RJ Harvey (RB34, comp 96, 95%, 2026 89) | Blake Corum (RB35, comp 103, 98%, 2026 93) | Justin Herbert (QB9, comp 79, 88%, 2026 68) | Jaxson Dart (QB11, comp 95, 96%, 2026 65) |
+| 9 | 84 | Justin Herbert (QB9, comp 79, 74%, 2026 68) | Jaxson Dart (QB11, comp 95, 92%, 2026 65) | Blake Corum (RB35, comp 103, 96%, 2026 93) | Trevor Lawrence (QB10, comp 90, 75%, 2026 45) |
+| 10 | 97 | KC Concepcion (WR49, comp 114, 94%, 2026 83) | Blake Corum (RB35, comp 103, 87%, 2026 93) | Makai Lemon (WR46, comp 106, 94%, 2026 100) | Jordan Addison (WR43, comp 99, 73%, 2026 64) |
+| 11 | 104 | Blake Corum (RB35, comp 103, 76%, 2026 93) | Jordan Mason (RB40, comp 112, 79%, 2026 78) | Jacory Croskey-Merritt (RB37, comp 110, 77%, 2026 11) | Kyle Monangai (RB38, comp 110, 69%, 2026 56) |
+| 12 | 117 | Kyler Murray (QB17, comp 119, 77%, 2026 88) | Jordan Mason (RB40, comp 112, 49%, 2026 78) | Jacory Croskey-Merritt (RB37, comp 110, 47%, 2026 11) | Dalton Kincaid (TE11, comp 113, 76%, 2026 73) |
+| 13 | 124 | Jordan Mason (RB40, comp 112, 32%, 2026 78) | Dalton Kincaid (TE11, comp 113, 63%, 2026 73) | Chris Rodriguez Jr. (RB43, comp 132, 89%, 2026 91) | Makai Lemon (WR46, comp 106, 53%, 2026 100) |
+| 14 | 137 | Dalton Kincaid (TE11, comp 113, 34%, 2026 73) | Jordyn Tyson (WR51, comp 123, 62%, 2026 67) | Brenton Strange (TE18, comp 152, 82%, 2026 13) | Chris Rodriguez Jr. (RB43, comp 132, 74%, 2026 91) |
 
 ## Resulting roster if you take the #1 target every round
 
-1. Ja'Marr Chase — WR1 CIN (bye 6) · comp 2.9 · proj 340 · VBD 132 · boom 66 / bust 1 / risk 35
-2. Omarion Hampton — RB9 LAC (bye 7) · comp 18.6 · proj 265 · VBD 47 · boom 97 / bust 76 / risk 64
-3. DeVonta Smith — WR14 PHI (bye 10) · comp 29.5 · proj 240 · VBD 32 · boom 100 / bust 25 / risk 54
-4. Jaylen Waddle — WR20 DEN (bye 10) · comp 40.4 · proj 212 · VBD 4 · boom 90 / bust 39 / risk 56
-5. Luther Burden III — WR23 CHI (bye 10) · comp 50.3 · proj 208 · VBD 0 · boom 98 / bust 18 / risk 61
-6. Jadarian Price — RB24 SEA (bye 11) · comp 63.0 · proj 192 · VBD -26 · boom 86 / bust 43 / risk 89
-7. Tucker Kraft — TE5 GB (bye 11) · comp 73.2 · proj 196 · VBD 2 · boom 99 / bust 30 / risk 53
-8. Blake Corum — RB35 LAR (bye 11) · comp 102.3 · proj 120 · VBD -98 · boom 82 / bust 8 / risk 42
-9. Justin Herbert — QB9 LAC (bye 7) · comp 79.2 · proj 299 · VBD -5 · boom 65 / bust 12 / risk 5
-10. Wan'Dale Robinson — WR45 TEN (bye 9) · comp 101.4 · proj 186 · VBD -22 · boom 94 / bust 13 / risk 81
-11. MarShawn Lloyd — RB42 GB (bye 11) · comp 128.4 · proj – · VBD – · boom 98 / bust 65 / risk 93
-12. Dylan Sampson — RB50 CLE (bye 11) · comp 161.0 · proj 126 · VBD -92 · boom 93 / bust 7 / risk 8
-13. Jordan Love — QB18 GB (bye 11) · comp 127.0 · proj 258 · VBD -46 · boom 75 / bust 5 / risk 22
-14. Brenton Strange — TE17 JAX (bye 7) · comp 150.0 · proj 162 · VBD -32 · boom 87 / bust 16 / risk 16
+1. Ja'Marr Chase — WR1 CIN (bye 6) · comp 2.9 · proj 323 · VBD 132 · boom 80 / bust 1 / risk 60
+2. Omarion Hampton — RB9 LAC (bye 7) · comp 18.6 · proj 232 · VBD 48 · boom 97 / bust 70 / risk 53
+3. Brock Bowers — TE1 LV (bye 13) · comp 20.4 · proj 231 · VBD 60 · boom 96 / bust 24 / risk 73
+4. Emeka Egbuka — WR21 TB (bye 10) · comp 40.9 · proj 224 · VBD 33 · boom 97 / bust 17 / risk 63
+5. Luther Burden III — WR23 CHI (bye 10) · comp 50.4 · proj 200 · VBD 9 · boom 94 / bust 14 / risk 71
+6. Jadarian Price — RB24 SEA (bye 11) · comp 63.0 · proj 170 · VBD -14 · boom 96 / bust 30 / risk 96
+7. Carnell Tate — WR32 TEN (bye 9) · comp 71.3 · proj 170 · VBD -21 · boom 98 / bust 74 / risk 72
+8. RJ Harvey — RB34 DEN (bye 10) · comp 95.6 · proj 155 · VBD -29 · boom 91 / bust 40 / risk 40
+9. Justin Herbert — QB9 LAC (bye 7) · comp 79.4 · proj 281 · VBD -2 · boom 72 / bust 5 / risk 5
+10. KC Concepcion — WR49 CLE (bye 11) · comp 113.5 · proj 138 · VBD -53 · boom 100 / bust 25 / risk 55
+11. Blake Corum — RB35 LAR (bye 11) · comp 102.7 · proj 128 · VBD -56 · boom 92 / bust 18 / risk 43
+12. Kyler Murray — QB17 MIN (bye 6) · comp 119.2 · proj 257 · VBD -26 · boom 98 / bust 52 / risk 92
+13. Jordan Mason — RB40 MIN (bye 6) · comp 111.8 · proj 141 · VBD -43 · boom 60 / bust 20 / risk 27
+14. Dalton Kincaid — TE11 BUF (bye 7) · comp 112.8 · proj 154 · VBD -17 · boom 81 / bust 59 / risk 47
 
 Position mix: QB 2, RB 5, WR 5, TE 2

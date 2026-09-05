@@ -1,2 +1,4 @@
 # large nflverse downloads; regenerate with: python3 nflverse_features.py --fetch
 data/raw/nflverse/
+# pulled market datasets; regenerate with: python3 market_features.py --fetch
+data/raw/pull/

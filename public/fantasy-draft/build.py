@@ -47,7 +47,7 @@ DATA = HERE / "data"
 # Ranking sources are grouped by outlet so one publisher never counts twice.
 OUTLETS = {
     "fantasypros_ecr": ["fantasypros_ecr"],
-    "espn": ["espn_ppr300", "espn_draft_rank", "espn_rank_aug24"],
+    "espn": ["espn_ppr300", "espn_draft_rank", "espn_rank_aug24", "espn_live_ppr_rank"],
     "yahoo": ["yahoo_winks", "yahoo_boone"],
     "rotowire": ["rotowire_consensus", "rotowire_rank"],
     "rotoballer": ["rotoballer"],
@@ -79,13 +79,14 @@ OUTLET_WEIGHT = {
 }
 # ADP feeds: full-PPR redraft platforms count 1, other formats or older snapshots count less.
 ADP_WEIGHT = {
-    "sleeper_ppr": 1.0, "nfc_ppr": 1.0, "espn": 1.0, "yahoo": 1.0, "fantasypros_avg": 1.0,
+    "ffc_sep4": 1.5, "espn_live": 1.0, "sleeper_live": 1.0, "fantasypros_live": 1.0, "yahoo_live": 1.0,   # Sept 4 feeds
+    "sleeper_ppr": 0.5, "nfc_ppr": 0.5, "espn": 0.25, "yahoo": 0.25, "fantasypros_avg": 0.5,
     "fantasypros_cbs": 0.5, "fantasypros_rtsports": 0.5, "fantasypros_fantrax": 0.5, "fantasypros_espn": 0.25, "fantasypros_sleeper": 0.25,
     "underdog": 0.5, "rotowire_underdog": 0.25, "ffpc": 0.5, "draftsharks_half_consensus": 0.5,
     "sleeper_aug29": 0.5, "yahoo_aug25": 0.5, "nfc_ppr_aug28": 0.5,
     "udk_avg_pick": 0.5, "udk_sleeper_pick": 0.25, "udk_espn_pick": 0.25, "udk_yahoo_pick": 0.25, "udk_underdog_pick": 0.25,
 }
-ADP_PLATFORMS = ["sleeper_ppr", "nfc_ppr", "espn", "yahoo", "underdog", "ffpc", "fantasypros_cbs", "fantasypros_rtsports", "fantasypros_fantrax", "draftsharks_half_consensus"]
+ADP_PLATFORMS = ["ffc_sep4", "espn_live", "sleeper_live", "fantasypros_live", "yahoo_live", "underdog", "ffpc", "fantasypros_cbs", "fantasypros_rtsports", "fantasypros_fantrax", "draftsharks_half_consensus"]
 
 W = {
     "boom": {"upside": 0.20, "ceiling": 0.10, "hist_boom": 0.20, "mentions": 0.20, "factors": 0.10, "youth": 0.10, "value": 0.10},
@@ -264,8 +265,27 @@ def main():
     opp_by = {}
     for o in opp_rows:
         opp_by[norm_name(o["name"]) + "|" + (o.get("pos") or "").upper()] = o
-    league_env = situation.team_env_scores(team_env) if team_env else {"implied": [], "wins": [], "oline": []}
     used_opp = set()
+    mkt = load("market_features.json", {})
+    mkt_players = mkt.get("players", {})
+    mkt_teams = mkt.get("teams", {})
+    NEW_HC_2026 = {"ARI", "ATL", "BAL", "BUF", "CLE", "LV", "MIA", "NYG", "PIT", "TEN"}   # research/context.md
+    TEAMS32 = set(byes)
+    for t, m in mkt_teams.items():
+        if t not in TEAMS32:
+            continue
+        row = team_env.setdefault(t, {"team": t})
+        cz = m.get("census") or {}
+        row.setdefault("hc", cz.get("head_coach") or m.get("hcListed"))
+        row.setdefault("oc", cz.get("offensive_coordinator"))
+        row.setdefault("playcaller", cz.get("play_caller"))
+        row.setdefault("playcaller_evidence", cz.get("evidence_summary"))
+        row.setdefault("hc_new", t in NEW_HC_2026)
+        if row.get("vegas_wins") is None:
+            row["vegas_wins"] = m.get("vegasWins") if m.get("vegasWins") is not None else m.get("dkWins")
+        if row.get("oline_rank") is None:
+            row["oline_rank"] = m.get("olineRank")
+    league_env = situation.team_env_scores(team_env) if team_env else {"implied": [], "wins": [], "oline": []}
     nfl = load("nflverse_features.json", {})
     nfl_players = nfl.get("players", {})
     nfl_teams = nfl.get("teams", {})
@@ -304,6 +324,9 @@ def main():
         tctx = nfl_teams.get(team_code, {})
 
         # --- composite: average inside each outlet, then weighted across outlets ------------
+        mk_early = mkt_players.get(key + "|" + pos, {})
+        if (mk_early.get("espn") or {}).get("pprRank"):
+            raw_ranks = dict(raw_ranks, espn_live_ppr_rank=mk_early["espn"]["pprRank"])
         outlet_ranks = {}
         for outlet, keys in OUTLETS.items():
             vals = [raw_ranks[k] for k in keys if k in raw_ranks]
@@ -317,7 +340,18 @@ def main():
         worst = max([max(outlet_ranks.values())] + ([meta["fantasypros_worst"]] if meta.get("fantasypros_worst") else []))
 
         # --- ADP ------------------------------------------------------------------------------
+        mk = mkt_players.get(key + "|" + pos, {})
         adps = {}
+        if mk.get("ffc"):
+            adps["ffc_sep4"] = mk["ffc"]["adp"]
+        if (mk.get("espn") or {}).get("adp"):
+            adps["espn_live"] = mk["espn"]["adp"]
+        if (mk.get("sleeperAdp") or {}).get("latest"):
+            adps["sleeper_live"] = mk["sleeperAdp"]["latest"]
+        for src, dst in (("fantasypros", "fantasypros_live"), ("yahoo", "yahoo_live")):
+            a = (mk.get("adpLatest") or {}).get(src)
+            if a and a.get("adp") and a.get("date", "") >= "2026-09-01":
+                adps[dst] = a["adp"]
         for k, v in (r.get("adp") or {}).items():
             if v is None:
                 continue
@@ -327,16 +361,35 @@ def main():
             if v > 300:                                # undrafted placeholders (701, 3054 ...)
                 continue
             adps[k] = v
-        adp_pairs = [(v, ADP_WEIGHT.get(k, 0.25)) for k, v in adps.items()]
+        fresh = {"ffc_sep4", "espn_live", "sleeper_live", "fantasypros_live", "yahoo_live"}
+        n_fresh = sum(1 for k in adps if k in fresh)
+        # when three or more Sept 4 feeds exist, the older feeds add lag, not information
+        adp_pairs = [(v, ADP_WEIGHT.get(k, 0.25) * (0.1 if (n_fresh >= 3 and k not in fresh) else 1.0)) for k, v in adps.items()]
         adp = wmean(adp_pairs)
         plat = [adps[k] for k in ADP_PLATFORMS if k in adps]
         adp_sd = statistics.pstdev(plat) if len(plat) > 1 else None
+        ffc_sd = (mk.get("ffc") or {}).get("stdev")
+        if ffc_sd is not None and (mk["ffc"].get("n") or 0) >= 50:
+            adp_sd = round(max(ffc_sd, 0.5 * (adp_sd or 0)), 1)   # within-draft spread from 7,681 FFC drafts, floored by half the cross-site spread
+        trend = mk.get("adpTrend") or {}
+        adp_d7, adp_d30 = trend.get("d7"), trend.get("d30")
         value = (adp - comp) if adp is not None else None
         value_score = 50 + 50 * math.tanh(math.log(adp / comp) / math.log(2)) if adp else None
 
         # --- projections / VBD ----------------------------------------------------------------
+        pj = dict(pj)
+        if (mk.get("espn") or {}).get("projPpr"):
+            pj["espn"] = mk["espn"]["projPpr"]          # live Sept 4 file replaces the older ESPN export
+        if (mk.get("sleeper") or {}).get("projPpr"):
+            pj["sleeper"] = mk["sleeper"]["projPpr"]
+        if (mk.get("bayes") or {}).get("p50"):
+            pj["bayes"] = mk["bayes"]["p50"]
         proj_pts = statistics.mean(pj.values()) if pj else None
         proj_sd = statistics.pstdev(pj.values()) if len(pj) > 1 else None
+        bayes = mk.get("bayes") or {}
+        lh = mk.get("lhallee") or {}
+        espn = mk.get("espn") or {}
+        ep = mk.get("ep2025") or {}
 
         age = nv.get("age") or rk.get("age") or fa.get("age") or r.get("age")
 
@@ -358,9 +411,28 @@ def main():
             inj_parts.append(clamp(rk["games_missed_last3"] / 18.0))
         if games_missed is not None and not nv.get("rookie"):
             inj_parts.append(clamp(games_missed / 12.0))
+        if lh.get("injProb") is not None:
+            inj_parts += [clamp((lh["injProb"] - 0.15) / 0.55)] * 2   # calibrated missed-time probability (AUC 0.75) counts double
+        if mk.get("gamesOut2425"):
+            inj_parts.append(clamp(mk["gamesOut2425"] / 12.0))
         injury = sum(inj_parts) / len(inj_parts) if inj_parts else None
+        ESPN_STATUS = {"OUT": 1.0, "INJURY_RESERVE": 1.0, "SUSPENSION": 1.0, "DOUBTFUL": 0.8, "QUESTIONABLE": 0.6, "DAY_TO_DAY": 0.4}
+        espn_camp = ESPN_STATUS.get(str(espn.get("injuryStatus") or "").upper(), 0.0)
+        if ep.get("diffPct") is not None and ep["diffPct"] >= 0.15 and ep["games"] >= 10:
+            risk_factors.append(f"Scored {ep['diffPct']:.0%} above expected fantasy points in 2025 (touchdown / efficiency regression risk)")
+        elif ep.get("diffPct") is not None and ep["diffPct"] <= -0.12 and ep["games"] >= 10:
+            boom_factors.append(f"Scored {-ep['diffPct']:.0%} below expected fantasy points in 2025 (positive regression candidate)")
+        if bayes.get("games") is not None and bayes["games"] < 12 and not nv.get("rookie"):
+            risk_factors.append(f"Bayesian model projects only {bayes['games']:.1f} games")
+        if adp_d7 is not None and adp_d7 >= 8:
+            risk_factors.append(f"ADP fell {adp_d7:.0f} picks in the last week (market reacting to news)")
+        elif adp_d7 is not None and adp_d7 <= -8:
+            boom_factors.append(f"ADP rose {-adp_d7:.0f} picks in the last week (market buying)")
         camp_text = ad.get("camp_status") or rk.get("camp_status")   # hand-curated context (newer, cross-checked) wins over article snippets
         camp, camp_flag = camp_status(camp_text)
+        if espn_camp > camp and not (nv.get("status_code") == "A01" and espn_camp >= 1.0):
+            camp = max(camp, espn_camp)
+            camp_text = camp_text or f"ESPN status: {espn.get('injuryStatus')}"
         roster_flag = nv.get("status_flag")
         if roster_flag in ("Exempt", "IR", "PUP", "NFI", "Holdout", "Retired"):
             camp, camp_flag = 1.0, roster_flag
@@ -386,7 +458,8 @@ def main():
         if opp_row:
             used_opp.add(key + "|" + pos)
         sit_raw, sit_parts, sit_why, env_block, chg_block, sos_block, sit_uncertain = situation.compute(
-            pos, team_code, team_env.get(team_code), opp_row, sos.get(team_code), tctx, league_env)
+            pos, team_code, team_env.get(team_code), opp_row, sos.get(team_code), tctx, league_env,
+            arrival=bool(nv.get("moved")), rookie=bool(nv.get("rookie")), draft_no=nv.get("draft_number"), years_exp=nv.get("years_exp"))
         if sit_uncertain:
             risk_factors.append("2026 role unresolved: " + (opp_row.get("note") or "competition or scheme still unsettled"))
             sit = [f for f in risk_factors if any(w in f.lower() for w in SITUATION_WORDS)]
@@ -404,8 +477,11 @@ def main():
             "adpSources": {k: adps[k] for k in ADP_PLATFORMS if k in adps} or None,
             "value": round(value, 1) if value is not None else None, "valueScore": round(value_score) if value_score is not None else None,
             "proj": round(proj_pts) if proj_pts is not None else None, "projSources": pj or None, "projSd": round(proj_sd, 1) if proj_sd is not None else None,
-            "ceilPts": round(proj_pts * fa["ceil_ratio"]) if proj_pts and fa.get("ceil_ratio") else None,
-            "floorPts": round(proj_pts * fa["floor_ratio"]) if proj_pts and fa.get("floor_ratio") else None,
+            "ceilPts": round(bayes["p90"]) if bayes.get("p90") else (round(proj_pts * fa["ceil_ratio"]) if proj_pts and fa.get("ceil_ratio") else None),
+            "floorPts": round(bayes["p10"]) if bayes.get("p10") is not None else (round(proj_pts * fa["floor_ratio"]) if proj_pts and fa.get("floor_ratio") else None),
+            "market": {"adpD7": adp_d7, "adpD30": adp_d30, "ffcSd": ffc_sd, "ffcN": (mk.get("ffc") or {}).get("n"), "ffcRange": [mk["ffc"]["high"], mk["ffc"]["low"]] if mk.get("ffc") else None,
+                       "espnStatus": espn.get("injuryStatus"), "espnOwned": espn.get("pctOwned"), "injProb": lh.get("injProb"), "projGames": bayes.get("games"),
+                       "epDiff": ep.get("diffPct"), "injuryLog": mk.get("injuryLog")} if mk else None,
             "hist": {
                 "games25": s25.get("games"), "ppg25": s25.get("ppg"), "boom25": s25.get("boom_rate"), "bust25": s25.get("bust_rate"), "cv25": s25.get("cv"),
                 "targets25": s25.get("targets"), "tgtShare25": s25.get("target_share"), "carries25": s25.get("carries"), "carryShare25": s25.get("carry_share"),
@@ -417,7 +493,8 @@ def main():
                 "sitRaw": sit_raw, "sitUncertain": sit_uncertain,
                 "histBoom": nv.get("boom_rate"), "histBust": nv.get("bust_rate"), "cv": s25.get("cv") if s25 and s25.get("games", 0) >= 6 else None,
                 "upside": (comp - best) / comp, "downside": (worst - comp) / comp,
-                "ceil": (fa.get("ceil_ratio") or 1.0) - 1.0, "floor": 1.0 - (fa.get("floor_ratio") or 1.0),
+                "ceil": (bayes["p90"] / bayes["p50"] - 1.0) if bayes.get("p50") and bayes.get("p90") else ((fa.get("ceil_ratio") or 1.0) - 1.0),
+                "floor": (1.0 - bayes["p10"] / bayes["p50"]) if bayes.get("p50") and bayes.get("p10") is not None else (1.0 - (fa.get("floor_ratio") or 1.0)),
                 "boomMentions": boom_mentions, "boomFactors": boom_factors, "bustMentions": bust_mentions, "riskFactors": risk_factors,
                 "injury": injury, "camp": camp, "campText": camp_text, "sit": sit,
                 "uncertainty": fa.get("uncertainty"), "spread": sd / comp, "adpSpread": (adp_sd / adp) if adp and adp_sd is not None else None,
@@ -469,7 +546,7 @@ def main():
             hb = pct_hb(s["histBoom"]) / 100 if s["histBoom"] is not None else 0.5
             hu = pct_hu(s["histBust"]) / 100 if s["histBust"] is not None else 0.5
             cvp = pct_cv(s["cv"]) / 100 if s["cv"] is not None else 0.5
-            sit_up = max(0.0, s["sitRaw"]); sit_dn = max(0.0, -s["sitRaw"])
+            sit_up = max(0.0, s["sitRaw"]) + 0.5 * (p["sitParts"].get("variance") or 0.0); sit_dn = max(0.0, -s["sitRaw"]) + 0.5 * (p["sitParts"].get("variance") or 0.0)
             boom_raw = (0.12 * sit_up / 0.5) + (bw["upside"] * pct_up(s["upside"]) / 100 + bw["ceiling"] * pct_ce(s["ceil"]) / 100 + bw["hist_boom"] * hb
                         + bw["mentions"] * saturate(len(s["boomMentions"])) + bw["factors"] * saturate(len(s["boomFactors"]))
                         + bw["youth"] * youth_bonus(pos, p["age"]) + bw["value"] * clamp((p["value"] or 0) / 10.0) + s["boomAdj"])
@@ -500,7 +577,7 @@ def main():
         if (comp - best) / comp >= 0.25 and comp - best >= 3:
             why_b.append(f"Most bullish source has him #{int(best)}, {comp - best:.0f} spots above the composite")
         if p["ceilPts"] and p["proj"] and p["ceilPts"] - p["proj"] >= 0.08 * p["proj"]:
-            why_b.append(f"ffanalytics ceiling {p['ceilPts']} pts vs {p['proj']} projected")
+            why_b.append(f"Ceiling {p['ceilPts']} pts vs {p['proj']} projected" + (" (Bayesian p90)" if (p.get("market") or {}).get("projGames") else " (ffanalytics)"))
         if p["hist"] and p["hist"]["boomRate"] is not None and p["hist"]["games25"]:
             why_b.append(f"Boom weeks (top-{ {'QB': 3, 'RB': 6, 'WR': 6, 'TE': 3}[p['pos']]} scoring) in {p['hist']['boomRate'] * 100:.0f}% of games, 2024-25 weighted")
         if s["boomMentions"]:
@@ -516,8 +593,8 @@ def main():
             why_u.append("Some experts leave him off their boards entirely")
         elif (worst - comp) / comp >= 0.25 and worst - comp >= 3:
             why_u.append(f"Most bearish source has him #{int(worst)}, {worst - comp:.0f} spots below the composite")
-        if p["floorPts"] and p["proj"] and p["proj"] - p["floorPts"] >= 0.10 * p["proj"]:
-            why_u.append(f"ffanalytics floor {p['floorPts']} pts vs {p['proj']} projected")
+        if p["floorPts"] is not None and p["proj"] and p["proj"] - p["floorPts"] >= 0.10 * p["proj"]:
+            why_u.append(f"Floor {p['floorPts']} pts vs {p['proj']} projected" + (" (Bayesian p10)" if (p.get("market") or {}).get("projGames") else " (ffanalytics)"))
         if p["hist"] and p["hist"]["bustRate"] is not None and p["hist"]["games25"]:
             why_u.append(f"Bust weeks (below the startable line) in {p['hist']['bustRate'] * 100:.0f}% of games, 2024-25 weighted")
         if s["bustMentions"]:
@@ -536,6 +613,11 @@ def main():
         if s["uncertainty"] is not None and s["uncertainty"] >= 60:
             why_r.append(f"ffanalytics projection uncertainty {s['uncertainty']:.0f}/99")
         rk = risk_by.get(norm_name(p["name"]), {})
+        mkb = p.get("market") or {}
+        if mkb.get("injProb") is not None:
+            why_r.append(f"Calibrated injury model: {mkb['injProb']:.0%} chance of missing time (AUC 0.75)")
+        if mkb.get("ffcSd") is not None and mkb.get("ffcN"):
+            why_r.append(f"Drafted anywhere from pick {mkb['ffcRange'][0]} to {mkb['ffcRange'][1]} across {mkb['ffcN']} FFC drafts (±{mkb['ffcSd']})")
         if rk.get("injury_risk_pct") is not None:
             why_r.append(f"Injury model: {rk['injury_risk_pct']:.0f}% chance of missing time")
         elif rk.get("injury_risk_label"):
@@ -552,12 +634,14 @@ def main():
             why_r.append("Situation: " + "; ".join(s["sit"][:3]))
 
         flag = None
-        big = max(5.0, 0.15 * comp)  # a 5-pick gap matters at pick 20, not at pick 120
+        big = max(6.0, 0.20 * comp)  # a 6-pick gap matters at pick 20, not at pick 120
         if s["flag"] and s["camp"] >= 0.6:
             flag = s["flag"]
-        elif p["value"] is not None and p["value"] >= big:
+        elif (p.get("market") or {}).get("adpD7") is not None and abs(p["market"]["adpD7"]) >= max(8, 0.12 * comp) and comp <= 150:
+            flag = "Falling" if p["market"]["adpD7"] > 0 else "Rising"
+        elif p["value"] is not None and p["value"] >= big and comp <= 170:
             flag = "Value"
-        elif p["value"] is not None and p["value"] <= -big:
+        elif p["value"] is not None and p["value"] <= -big and comp <= 170 and (p["adp"] or 999) < 160:
             flag = "Reach"
         elif s["flag"]:
             flag = s["flag"]
@@ -595,6 +679,15 @@ def main():
             counts["team_env"] = counts.get("team_env", 0) + 1
         if p.get("chg"):
             counts["opportunity"] = counts.get("opportunity", 0) + 1
+        mkb = p.get("market") or {}
+        if mkb.get("injProb") is not None:
+            counts["lhallee"] = counts.get("lhallee", 0) + 1
+        if mkb.get("epDiff") is not None:
+            counts["ffopportunity"] = counts.get("ffopportunity", 0) + 1
+        if p.get("env") and p["env"].get("playcaller"):
+            counts["census"] = counts.get("census", 0) + 1
+        if p.get("env") and p["env"].get("vegasWins") is not None:
+            counts["vegas"] = counts.get("vegas", 0) + 1
     for s in model.get("sources", []):
         if s.get("key") in counts:
             s["count"] = counts[s["key"]]
