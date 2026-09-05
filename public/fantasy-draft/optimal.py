@@ -8,10 +8,10 @@ from pathlib import Path
 
 OUT = Path("scenarios")
 BR = [
-    ("A", "_swp35_A_robustrb_balanced", "Nacua is the best man left and is cleared to play", "robust RB", "58% of boards"),
-    ("B", "_swp35_B_robustrb_balanced", "Chase falls to 4", "robust RB", "39% of boards"),
-    ("C", "_swp35_C_balanced_safe", "Gibbs or Bijan falls to 4", "balanced, safe", "3% of boards"),
-    ("D", "_swp35_D_robustrb_balanced", "Nacua is out or suspended and Chase is gone", "robust RB", "only if Nacua is scratched"),
+    ("A", "branch_A_nacua", "Nacua is the best man left and is cleared to play", "robust RB", "58% of boards"),
+    ("B", "branch_B_chase", "Chase falls to 4", "robust RB", "39% of boards"),
+    ("C", "branch_C_rb_falls", "Gibbs or Bijan falls to 4", "balanced, safe", "3% of boards"),
+    ("D", "branch_D_nacua_out", "Nacua is out or suspended and Chase is gone", "robust RB", "only if Nacua is scratched"),
 ]
 FIRST = {"A": "Puka Nacua", "B": "Ja'Marr Chase", "C": "Bijan Robinson", "D": None}
 LATE = [(13, 124, "D/ST — Chargers", "host ARI and LV in weeks 1-2, the consensus best opener; Chiefs, Packers, Bears next"),
@@ -66,4 +66,28 @@ for key, label, strat, proj, floor, ceil in sorted(summary, key=lambda x: -int(x
     doc.append(f"| {key} | {label} | {strat} | {proj} | {floor} | {ceil} |")
 doc.append("")
 (OUT / "OPTIMAL.md").write_text("\n".join(doc))
+
+# machine-readable twin for the app
+js = {"freq": json.load(open(OUT / "branch_freq.json")), "survives": probs, "branches": []}
+for key, fname, label, strat, prob in BR:
+    md = (OUT / f"{fname}.md").read_text()
+    rows = list(csv.DictReader((OUT / f"{fname}.csv").open()))
+    picks = {int(r["round"]): r for r in rows if r["slot"] == "1"}
+    alts = {}
+    for r in rows:
+        rnd = int(r["round"])
+        if r["slot"] != "1" and rnd not in alts:
+            alts[rnd] = r
+    b = {"key": key, "label": label, "strategy": strat, "freq": prob,
+         "proj": int(re.search(r"Projected: \*\*(\d+)\*\*", md).group(1)),
+         "floor": int(re.search(r"Floor \(p10\): \*\*(\d+)\*\*", md).group(1)),
+         "ceil": int(re.search(r"Ceiling \(p90\): \*\*(\d+)\*\*", md).group(1)),
+         "first": FIRST[key], "picks": []}
+    for rnd in sorted(picks):
+        p, a = picks[rnd], alts.get(rnd)
+        b["picks"].append({"round": rnd, "pick": int(p["pick"]), "player": p["player"], "pos": p["pos"],
+                           "avail": float(p["p_available"]),
+                           "alt": a["player"] if a else None, "altAvail": float(a["p_available"]) if a else None})
+    js["branches"].append(b)
+(OUT / "optimal.json").write_text(json.dumps(js, indent=1))
 print("\n".join(doc))

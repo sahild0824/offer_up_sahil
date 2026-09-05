@@ -86,6 +86,35 @@ ADP_WEIGHT = {
     "sleeper_aug29": 0.5, "yahoo_aug25": 0.5, "nfc_ppr_aug28": 0.5,
     "udk_avg_pick": 0.5, "udk_sleeper_pick": 0.25, "udk_espn_pick": 0.25, "udk_yahoo_pick": 0.25, "udk_underdog_pick": 0.25,
 }
+# Per-feed, per-position ADP bias measured against ESPN's board (calibrate_adp.py). Half-PPR,
+# TE-premium and 12-team feeds price positions differently; the offset translates them onto our
+# league's scale so they can be blended without importing their format.
+_CAL_PATH = HERE / "data" / "adp_calibration.json"
+ADP_CALIB = json.loads(_CAL_PATH.read_text())["feeds"] if _CAL_PATH.exists() else {}
+
+
+def calibrated(feed, pos, v):
+    d = (ADP_CALIB.get(feed) or {}).get("byPos", {}).get(pos)
+    return v * math.exp(-d) if d else v
+
+
+# Ranking lists are opinions, so a positional tilt is signal, not error -- with one exception.
+# calibrate_ranks.py flags lists whose tilt is structural and matches a scoring format the list
+# does not claim. LineupExperts publishes an unlabelled "Rk" board that ranks tight ends ~16 picks
+# earlier than every full-PPR list, which is the TE-premium signature; that column is translated.
+# Everything else is left alone: disagreement between analysts is what the spread metric measures.
+RANK_FORMAT_FIX = {"lineupexperts": {"TE": True}}
+_RCAL_PATH = HERE / "data" / "rank_calibration.json"
+RANK_CALIB = json.loads(_RCAL_PATH.read_text())["feeds"] if _RCAL_PATH.exists() else {}
+
+
+def rank_calibrated(feed, pos, v):
+    if not RANK_FORMAT_FIX.get(feed, {}).get(pos):
+        return v
+    d = (RANK_CALIB.get(feed) or {}).get("byPos", {}).get(pos)
+    return v * math.exp(-d) if d else v
+
+
 ADP_PLATFORMS = ["ffc_sep4", "espn_live", "sleeper_live", "fantasypros_live", "yahoo_live", "underdog", "ffpc", "fantasypros_cbs", "fantasypros_rtsports", "fantasypros_fantrax", "draftsharks_half_consensus"]
 
 # Re-weighted after the 2016-2025 backtest (research/BACKTEST.md): expert spread and age are the strongest bust
@@ -309,10 +338,10 @@ def build(scoring="ppr", mc_tag=""):
 
     players = []
     for r in rankings:
-        raw_ranks = {k: v for k, v in (r.get("ranks") or {}).items() if v is not None and not k.endswith("_posrank")}
+        pos = r["pos"].upper()
+        raw_ranks = {k: rank_calibrated(k, pos, v) for k, v in (r.get("ranks") or {}).items() if v is not None and not k.endswith("_posrank")}
         if not raw_ranks:
             continue
-        pos = r["pos"].upper()
         key = norm_name(r["name"])
         rk = risk_by.get(key, {})
         ad = adj_by.get(key, {})
@@ -377,7 +406,7 @@ def build(scoring="ppr", mc_tag=""):
             fresh = {"ffc_sep4", "espn_live", "sleeper_live", "fantasypros_live", "yahoo_live"}
             n_fresh = sum(1 for k in adps if k in fresh)
             # when three or more Sept 4 feeds exist, the older feeds add lag, not information
-            adp_pairs = [(v, ADP_WEIGHT.get(k, 0.25) * (0.1 if (n_fresh >= 3 and k not in fresh) else 1.0)) for k, v in adps.items()]
+            adp_pairs = [(calibrated(k, pos, v), ADP_WEIGHT.get(k, 0.25) * (0.1 if (n_fresh >= 3 and k not in fresh) else 1.0)) for k, v in adps.items()]
             ffc_row = mk.get("ffc")
         else:
             ffc_key, sl_key = ("ffcHalf", "adpHalf") if scoring == "half" else ("ffcStd", "adpStd")
@@ -399,7 +428,7 @@ def build(scoring="ppr", mc_tag=""):
             fmt_w = {"espn_live": 2.0, "ffc_" + scoring: 1.5, "sleeper_" + scoring: 1.5, "yahoo_live": 1.0, "underdog": 1.0, "draftsharks_half_consensus": 0.5}
             adp_pairs = [(v, fmt_w.get(k, 0.1)) for k, v in adps.items()]
         adp = wmean(adp_pairs)
-        plat = [adps[k] for k in (ADP_PLATFORMS if scoring == "ppr" else list(adps)) if k in adps]
+        plat = [(calibrated(k, pos, adps[k]) if scoring == "ppr" else adps[k]) for k in (ADP_PLATFORMS if scoring == "ppr" else list(adps)) if k in adps]
         adp_sd = statistics.pstdev(plat) if len(plat) > 1 else None
         ffc_sd = (ffc_row or {}).get("stdev")
         if ffc_sd is not None and ((ffc_row or {}).get("n") or 0) >= 50:
@@ -791,6 +820,10 @@ def build(scoring="ppr", mc_tag=""):
             "unavailable": model.get("unavailable", []),
             "model": {"intro": model.get("intro", ""), "sections": model.get("sections", [])},
             "weights": W, "situationWeights": situation.SW, "outletWeights": OUTLET_WEIGHT, "baselines": BASELINE,
+            "verdicts": json.loads((HERE / "data" / "market_verdicts.json").read_text()) if (HERE / "data" / "market_verdicts.json").exists() else None,
+            "optimal": json.loads((HERE / "scenarios" / "optimal.json").read_text()) if (HERE / "scenarios" / "optimal.json").exists() else None,
+            "adpCalib": {k: {"byPos": v["byPos"], "note": v.get("note", "")} for k, v in ADP_CALIB.items()
+                         if v.get("byPos") and max(abs(x) for x in v["byPos"].values()) > 0.05},
             "mc": {"teams": mc["teams"], "slot": mc["slot"], "room": mc["room"], "sims": mc["sims"], "picks": mc["picks"], "generated": mc["generated"], "strategies": mc.get("strategies"), "best": mc.get("best"), "first": mc.get("first"), "rounds": mc.get("rounds")} if mc else None,
             "teams": {t: {"hc": r.get("hc"), "hcNew": r.get("hc_new"), "oc": r.get("oc"), "ocNew": r.get("oc_new"), "playcaller": r.get("playcaller"), "scheme": r.get("scheme_notes"),
                           "passRate": r.get("pass_rate_tendency"), "pace": r.get("pace_tendency"), "rbUsage": r.get("rb_usage"), "qb": r.get("qb"), "qbNew": r.get("qb_new"), "qbTier": r.get("qb_tier"),

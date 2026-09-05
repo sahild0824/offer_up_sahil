@@ -91,6 +91,25 @@ value, with the simulated chance each target survives to that pick and the best 
 per-player availability table gives marginals; `branch_probs.py` adds the joint numbers that actually
 decide a pick — whether *any* member of a tier survives to pick 17, 24, 57 or 77.
 
+## Translating sources onto our league
+
+```
+python3 calibrate_adp.py     # per-feed, per-position ADP bias vs ESPN 10-team full PPR
+python3 calibrate_ranks.py   # format check on the 23 ranking lists
+python3 market_verdicts.py   # the round research as structured rows
+```
+
+Most sources are not measured in our game: Underdog and Draft Sharks are half PPR, FFPC is
+TE-premium, FFC and UDK are 12-team. Each feed is ranked over the players it shares with ESPN's
+board and its per-position offset is measured, then removed before blending, so the information is
+kept and the format is not. The method validates itself — the ESPN-derived feeds calibrate to zero,
+and FFPC lands at TE −5.4 / QB +11.2 without being told it is TE-premium. Full numbers, and an
+honest account of how little it changes inside the drafted range, in `research/calibration.md`.
+
+`data/market_verdicts.json` turns the round-by-round research into 77 rows: how many outlets argued
+for and against each candidate, the resulting verdict, and the signed gap between the market's price
+and our composite. The Plan tab renders those rows instead of prose.
+
 ## Caveats
 
 This environment could not open fantasy sites, Reddit or the Sleeper API directly; rankings and ADP come from dated GitHub mirrors and article findings from search-result summaries. See the Model tab and `research/*.md` for what is stale or missing. Verify ADP on your own platform before draft night.
