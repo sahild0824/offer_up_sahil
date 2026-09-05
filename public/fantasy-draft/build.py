@@ -441,7 +441,7 @@ def main():
             status_conflicts.append(f"{r['name']}: adjustments say '{camp_text}' but the Week 1 roster lists him active")
             camp, camp_flag = 0.4, None
             camp_text = "Listed active on the Week 1 roster; earlier reports said " + (ad.get("camp_status") or rk.get("camp_status") or "")
-            ad = dict(ad, bust_adj=ad.get("bust_adj", 0) * 0.5)
+            ad = dict(ad, bust_adj=ad.get("bust_adj", 0) * 0.5, flag=None)   # roster is authoritative: drop the reported-out flag
         if pos in ("WR", "TE") and (tctx.get("vacated_target_share") or 0) >= 0.25:
             boom_factors.append(f"{team_code} vacated {tctx['vacated_target_share'] * 100:.0f}% of its 2025 targets ({tctx['vacated_targets']})")
         if pos == "RB" and (tctx.get("vacated_carry_share") or 0) >= 0.30:

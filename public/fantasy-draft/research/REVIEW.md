@@ -44,7 +44,7 @@ Injury risk is therefore the positional base rate (RB 40, WR 35, TE 35, QB 25 on
 Only two stat-line sources. The median ESPN-versus-CBS gap is 20 PPR points and 24 players differ by more than 40, so VBD has roughly a ±20-point error bar. The ffanalytics export is standard scoring and undated, so it is used only as ratios (ceiling/points, floor/points) and for age.
 
 ### Conflicts between research streams
-The risk research and the context research disagreed on Christian Watson (healthy vs PUP; PUP is correct, verified September 5), Kenneth Walker's team (SEA vs KC; KC is correct) and two other teams. Article snippets predate moves. Rule adopted: the curated context file wins over article-derived status text.
+The risk research and the context research disagreed on Christian Watson (healthy vs PUP), Kenneth Walker's team (SEA vs KC; KC is correct) and two other teams. Article snippets predate moves. Rule adopted: the curated context file wins over article-derived status text, and the nflverse Week 1 roster status code wins over both. For Watson the roster lists him active on September 4 while August reports said PUP, so the model now carries him as active with the earlier reports noted and the out-flag removed; verify on draft day.
 
 ### What is missing entirely
 PFF, NFL.com, ESPN's individual analysts, current CBS, The Athletic, FTN, Fantasy Points, Footballguys; first-hand Reddit; Draft Sharks injury probabilities beyond one player; weekly game logs (so no true boom/bust rates); any ADP snapshot after the August 30 news.
