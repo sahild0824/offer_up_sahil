@@ -169,6 +169,7 @@ def main():
     L.append("| strategy | profile | lineup proj (mean) | p10 of runs | p90 of runs | floor lineup | ceiling lineup | avg RB / WR / QB / TE drafted |")
     L.append("|---|---|---|---|---|---|---|---|")
     results = {}
+    strat_rows = []
     for strategy, profile in PRESETS:
         r = simulate(players, a.teams, a.slot, strategy, profile, a.sims)
         results[(strategy, profile)] = r
@@ -178,6 +179,7 @@ def main():
             mix.update(x[3])
         k = len(r["values"])
         L.append(f"| {strategy} | {profile} | {v.mean():.0f} | {np.quantile(v, 0.1):.0f} | {np.quantile(v, 0.9):.0f} | {fl.mean():.0f} | {ce.mean():.0f} | {mix['RB']/k:.1f} / {mix['WR']/k:.1f} / {mix['QB']/k:.1f} / {mix['TE']/k:.1f} |")
+        strat_rows.append({"strategy": strategy, "profile": profile, "mean": round(float(v.mean())), "p10": round(float(np.quantile(v, 0.1))), "p90": round(float(np.quantile(v, 0.9))), "floor": round(float(fl.mean())), "ceil": round(float(ce.mean())), "mix": {pos: round(mix[pos] / k, 1) for pos in ("RB", "WR", "QB", "TE")}})
     best = max(results, key=lambda key: np.mean([x[0] for x in results[key]["values"]]))
     L.append(f"\nBest mean lineup: **{best[0]} / {best[1]}**. Differences under ~10 points are noise at this sample size.\n")
 
@@ -188,6 +190,7 @@ def main():
     L.append("|---|---|---|---|---|")
     base = results[("hero-rb", "balanced")]
     name_ix = {p["name"]: i for i, p in enumerate(players)}
+    first_rows = []
     for cand in ["Jahmyr Gibbs", "Bijan Robinson", "Ja'Marr Chase", "Puka Nacua", "Jaxon Smith-Njigba", "Amon-Ra St. Brown", "Jonathan Taylor", "Christian McCaffrey"]:
         if cand not in name_ix:
             continue
@@ -195,11 +198,14 @@ def main():
         av = base["avail"][0, name_ix[cand]]
         v = np.array([x[0] for x in r["values"]]); fl = np.array([x[1] for x in r["values"]]); ce = np.array([x[2] for x in r["values"]])
         L.append(f"| {cand} | {av * 100:.0f}% | {v.mean():.0f} | {fl.mean():.0f} | {ce.mean():.0f} |")
+        first_rows.append({"player": cand, "id": players[name_ix[cand]]["id"], "avail": round(float(av), 3), "mean": round(float(v.mean())), "floor": round(float(fl.mean())), "ceil": round(float(ce.mean()))})
     L.append("")
 
     # --- per-round pick frequencies (hero-rb / balanced and robust-rb) ----------------------------------
+    round_freq = {}
     for key in (("hero-rb", "balanced"), ("robust-rb", "balanced"), ("balanced", "balanced")):
         r = results[key]
+        round_freq[f"{key[0]}/{key[1]}"] = [[[n, round(c / a.sims, 3)] for n, c in r["picks"][i].most_common(4)] for i in range(len(r["my_picks"]))]
         L.append(f"## 3. Most frequent picks by round: {key[0]} / {key[1]}\n")
         L.append("| Rd | Pick | #1 | #2 | #3 | #4 |")
         L.append("|---|---|---|---|---|---|")
@@ -224,6 +230,7 @@ def main():
 
     # --- availability json for the app ----------------------------------------------------------------
     avail_json = {"teams": a.teams, "slot": a.slot, "room": a.room, "sims": a.sims, "picks": base["my_picks"], "generated": datetime.now().isoformat(timespec="minutes"),
+                  "strategies": strat_rows, "best": f"{best[0]}/{best[1]}", "first": first_rows, "rounds": round_freq,
                   "players": {p["id"]: [round(float(base["avail"][r, i]), 3) for r in range(len(base["my_picks"]))] for i, p in enumerate(players)}}
     (OUT / f"montecarlo_avail{a.tag}.json").write_text(json.dumps(avail_json))
     (OUT / f"montecarlo_summary{a.tag}.md").write_text("\n".join(L))

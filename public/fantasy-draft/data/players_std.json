@@ -191,7 +191,21 @@
    "Week-to-week swing: 2025 scores varied \u00b161% of his average"
   ],
   "flag": null,
-  "note": "Consensus 1.01; contract resolved."
+  "note": "Consensus 1.01; contract resolved.",
+  "mcAvail": [
+   0.003,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "bijan-robinson-rb",
@@ -386,7 +400,21 @@
    "Situation: coaching change"
   ],
   "flag": null,
-  "note": "Hold-in ended with a $75M extension in early August; has never missed a game. Falcons QB competition (Tua vs Penix) is the only open question."
+  "note": "Hold-in ended with a $75M extension in early August; has never missed a game. Falcons QB competition (Tua vs Penix) is the only open question.",
+  "mcAvail": [
+   0.037,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "puka-nacua-wr",
@@ -575,7 +603,21 @@
    "Status: questionable: psoas since mid-August, back at practice Aug 30, McVay says good progress (Sept 4); Week 1 suspension not ruled out (Schefter)"
   ],
   "flag": "Watch",
-  "note": "Rams open Thursday Sept 10 in Melbourne, so his status will be known before a weekend draft. Take him at 4 only if he is cleared and not suspended."
+  "note": "Rams open Thursday Sept 10 in Melbourne, so his status will be known before a weekend draft. Take him at 4 only if he is cleared and not suspended.",
+  "mcAvail": [
+   0.836,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "jamarr-chase-wr",
@@ -765,7 +807,21 @@
    "Status: minor: hyperextended knee Sept 1-2, limited practice; Zac Taylor not concerned for Sept 13"
   ],
   "flag": null,
-  "note": "No bust signals found."
+  "note": "No bust signals found.",
+  "mcAvail": [
+   0.46,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "jonathan-taylor-rb",
@@ -954,7 +1010,21 @@
    "Missed 3 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": "Boom here means upside beyond his draft price; his week-to-week ceiling last season was among the best at the position."
+  "note": "Boom here means upside beyond his draft price; his week-to-week ceiling last season was among the best at the position.",
+  "mcAvail": [
+   0.968,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "jaxon-smith-njigba-wr",
@@ -1146,7 +1216,21 @@
    "Situation: new OC Brian Fleury (similar scheme)"
   ],
   "flag": null,
-  "note": "Regression flag only; still consensus first-round pick."
+  "note": "Regression flag only; still consensus first-round pick.",
+  "mcAvail": [
+   0.92,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "christian-mccaffrey-rb",
@@ -1351,7 +1435,21 @@
    "Injury model: 78% chance of missing time"
   ],
   "flag": null,
-  "note": "Most-cited bust/boom-or-bust player in 2026. Draft Sharks (via SI) lists him as the highest injury risk among all RBs: 78% chance of injury, 2.1 projected games missed. games_missed_last3 = 1 (2023 rest) + 13 (2024) + 0 (2025)."
+  "note": "Most-cited bust/boom-or-bust player in 2026. Draft Sharks (via SI) lists him as the highest injury risk among all RBs: 78% chance of injury, 2.1 projected games missed. games_missed_last3 = 1 (2023 rest) + 13 (2024) + 0 (2025).",
+  "mcAvail": [
+   0.961,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "james-cook-rb",
@@ -1544,7 +1642,21 @@
    "Situation: new OC Joe Brady shifting to a more aggressive passing attack (ESPN/Florio); coaching change"
   ],
   "flag": null,
-  "note": "SportsLine model bust; Florio predicts a pass-heavier Bills offense."
+  "note": "SportsLine model bust; Florio predicts a pass-heavier Bills offense.",
+  "mcAvail": [
+   0.999,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "amon-ra-st-brown-wr",
@@ -1734,7 +1846,21 @@
    "Situation: coaching change"
   ],
   "flag": null,
-  "note": "Safest league-winner profile cited."
+  "note": "Safest league-winner profile cited.",
+  "mcAvail": [
+   0.981,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "saquon-barkley-rb",
@@ -1925,7 +2051,21 @@
    "Missed 2 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": "Age/mileage bust cases from RotoBaller and PhillyVoice/RotoBaller aging-workhorse articles."
+  "note": "Age/mileage bust cases from RotoBaller and PhillyVoice/RotoBaller aging-workhorse articles.",
+  "mcAvail": [
+   1.0,
+   0.09,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "ceedee-lamb-wr",
@@ -2110,7 +2250,21 @@
    "Missed 6 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   0.017,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "justin-jefferson-wr",
@@ -2299,7 +2453,21 @@
    "Injury risk: Low"
   ],
   "flag": null,
-  "note": "SI positive-regression piece."
+  "note": "SI positive-regression piece.",
+  "mcAvail": [
+   1.0,
+   0.04,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "kenneth-walker-rb",
@@ -2497,7 +2665,21 @@
    "Missed 6 regular-season games in 2024-25"
   ],
   "flag": "Value",
-  "note": "Genuinely polarizing: PFF/Fantasy Points league winner vs RotoWire/SportsLine fade."
+  "note": "Genuinely polarizing: PFF/Fantasy Points league winner vs RotoWire/SportsLine fade.",
+  "mcAvail": [
+   1.0,
+   0.967,
+   0.242,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "devon-achane-rb",
@@ -2694,7 +2876,21 @@
    "Missed 1 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": "Four bust/injury citations; SI stresses the injury count."
+  "note": "Four bust/injury citations; SI stresses the injury count.",
+  "mcAvail": [
+   1.0,
+   0.011,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "aj-brown-wr",
@@ -2904,7 +3100,21 @@
    "Situation: New team in 2026 (PHI to NE): backs and receivers who changed teams busted 7-8 points more often, 2016-25; coaching change"
   ],
   "flag": "Value",
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   0.881,
+   0.083,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "derrick-henry-rb",
@@ -3099,7 +3309,21 @@
    "Injury risk: Low-Moderate (age/mileage)"
   ],
   "flag": null,
-  "note": "Yahoo cites the age-32/mileage cliff (fewer than 8% of peak RB seasons since 2010 came at 29+); Karabell counters that he is undervalued."
+  "note": "Yahoo cites the age-32/mileage cliff (fewer than 8% of peak RB seasons since 2010 came at 29+); Karabell counters that he is undervalued.",
+  "mcAvail": [
+   1.0,
+   0.362,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "drake-london-wr",
@@ -3295,7 +3519,21 @@
    "Week-to-week swing: 2025 scores varied \u00b165% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   0.856,
+   0.033,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "chase-brown-rb",
@@ -3487,7 +3725,21 @@
    "Missed 1 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": "PFF league-winner headliner."
+  "note": "PFF league-winner headliner.",
+  "mcAvail": [
+   1.0,
+   0.445,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "omarion-hampton-rb",
@@ -3682,7 +3934,21 @@
    "Situation: coaching change"
   ],
   "flag": null,
-  "note": "Team attribution per Yahoo ('Chargers' offensive scheme'); sources conflict on scheme fit - Rotoworld/Yahoo bust vs SI/Yahoo-roundtable breakout."
+  "note": "Team attribution per Yahoo ('Chargers' offensive scheme'); sources conflict on scheme fit - Rotoworld/Yahoo bust vs SI/Yahoo-roundtable breakout.",
+  "mcAvail": [
+   1.0,
+   0.585,
+   0.032,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "nico-collins-wr",
@@ -3877,7 +4143,21 @@
    "Missed 7 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": "BR buy/sell polarizing player."
+  "note": "BR buy/sell polarizing player.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   0.555,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "brock-bowers-te",
@@ -4073,7 +4353,21 @@
    "Missed 5 regular-season games in 2024-25"
   ],
   "flag": "Value",
-  "note": "Health caveat in FantasyPros piece."
+  "note": "Health caveat in FantasyPros piece.",
+  "mcAvail": [
+   0.948,
+   0.697,
+   0.428,
+   0.097,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "ashton-jeanty-rb",
@@ -4270,7 +4564,21 @@
    "Injury risk: Injured (ADP falling)"
   ],
   "flag": "Questionable",
-  "note": "Called the biggest coin flip of the early rounds by FantasyPros; Kubiak says he is optimistic for Week 1."
+  "note": "Called the biggest coin flip of the early rounds by FantasyPros; Kubiak says he is optimistic for Week 1.",
+  "mcAvail": [
+   1.0,
+   0.888,
+   0.149,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "george-pickens-wr",
@@ -4458,7 +4766,21 @@
    "Missed 3 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": "RotoBaller overvalued list."
+  "note": "RotoBaller overvalued list.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   0.849,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "josh-allen-qb",
@@ -4652,7 +4974,21 @@
    "Injury risk: Low"
   ],
   "flag": null,
-  "note": "Bust case is price/passing decline; boom case is scheme."
+  "note": "Bust case is price/passing decline; boom case is scheme.",
+  "mcAvail": [
+   0.947,
+   0.564,
+   0.253,
+   0.013,
+   0.002,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "chris-olave-wr",
@@ -4843,7 +5179,21 @@
    "Missed 10 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": "Fantasy Six Pack bust pod."
+  "note": "Fantasy Six Pack bust pod.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   0.912,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "trey-mcbride-te",
@@ -5039,7 +5389,21 @@
    "Missed 1 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": "TE1 by ADP around pick 29."
+  "note": "TE1 by ADP around pick 29.",
+  "mcAvail": [
+   0.948,
+   0.676,
+   0.388,
+   0.071,
+   0.026,
+   0.001,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "kyren-williams-rb",
@@ -5228,7 +5592,21 @@
    "Missed 1 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": "Efficiency decline vs volume security."
+  "note": "Efficiency decline vs volume security.",
+  "mcAvail": [
+   1.0,
+   0.999,
+   0.983,
+   0.183,
+   0.012,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "breece-hall-rb",
@@ -5422,7 +5800,21 @@
    "Situation: crowded/committee usage history; coaching change"
   ],
   "flag": null,
-  "note": "Yahoo and RotoWire both fade at RB15 due to team environment."
+  "note": "Yahoo and RotoWire both fade at RB15 due to team environment.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   0.161,
+   0.004,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "malik-nabers-wr",
@@ -5618,7 +6010,21 @@
    "Missed 15 regular-season games in 2024-25"
   ],
   "flag": "Questionable",
-  "note": "games_missed_last3 covers 2024-25 (2 + 13). Price WR12-WR15 depending on source."
+  "note": "games_missed_last3 covers 2024-25 (2 + 13). Price WR12-WR15 depending on source.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   0.984,
+   0.143,
+   0.009,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "rashee-rice-wr",
@@ -5815,7 +6221,21 @@
    "Missed 23 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": "games_missed_last3 estimated from 'played just 12 games over the past two seasons' (22) + 1 in 2023."
+  "note": "games_missed_last3 estimated from 'played just 12 games over the past two seasons' (22) + 1 in 2023.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   0.905,
+   0.001,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "javonte-williams-rb",
@@ -6000,7 +6420,21 @@
    "Missed 1 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   0.972,
+   0.039,
+   0.001,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "jeremiyah-love-rb",
@@ -6199,7 +6633,21 @@
    "Situation: rookie volatility; committee with James Conner and Tyler Allgeier; first-time play-caller Mike LaFleur (no record of featuring a rookie RB)"
   ],
   "flag": "Questionable",
-  "note": "Most polarizing rookie; ESPN's Clay is bullish on draft-capital history while Yahoo/SI/RotoBaller call the ADP a trap given the committee and the ankle."
+  "note": "Most polarizing rookie; ESPN's Clay is bullish on draft-capital history while Yahoo/SI/RotoBaller call the ADP a trap given the committee and the ankle.",
+  "mcAvail": [
+   1.0,
+   0.983,
+   0.556,
+   0.002,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "devonta-smith-wr",
@@ -6391,7 +6839,21 @@
    "Week-to-week swing: 2025 scores varied \u00b164% of his average"
   ],
   "flag": null,
-  "note": "Two league-winner citations."
+  "note": "Two league-winner citations.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   0.99,
+   0.302,
+   0.007,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "colston-loveland-te",
@@ -6582,7 +7044,21 @@
    "Week-to-week swing: 2025 scores varied \u00b180% of his average"
   ],
   "flag": "Value",
-  "note": "Three boom citations."
+  "note": "Three boom citations.",
+  "mcAvail": [
+   1.0,
+   0.997,
+   0.966,
+   0.622,
+   0.374,
+   0.016,
+   0.001,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "tee-higgins-wr",
@@ -6776,7 +7252,21 @@
    "Status: healthy"
   ],
   "flag": null,
-  "note": "Draft Sharks' 13-player injury-risk article excerpt mentions a 'Higgins' (could be Tee or Jayden)."
+  "note": "Draft Sharks' 13-player injury-risk article excerpt mentions a 'Higgins' (could be Tee or Jayden).",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   0.99,
+   0.334,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "zay-flowers-wr",
@@ -6971,7 +7461,21 @@
    "Situation: Being monitored for Week 1, no designation; new OC Declan Doyle; 2026 role unresolved: Cleanest role/cost combo on the roster; consensus expects a career year with less competition.; coaching change"
   ],
   "flag": null,
-  "note": "Excerpt names ('Quentin Flowers','Stefon Flowers') map to Zay Flowers via 1,200-yd/5-TD context."
+  "note": "Excerpt names ('Quentin Flowers','Stefon Flowers') map to Zay Flowers via 1,200-yd/5-TD context.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   0.769,
+   0.402,
+   0.002,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "lamar-jackson-qb",
@@ -7171,7 +7675,21 @@
    "Missed 4 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": "Yahoo bust list."
+  "note": "Yahoo bust list.",
+  "mcAvail": [
+   1.0,
+   0.981,
+   0.871,
+   0.284,
+   0.086,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "travis-etienne-rb",
@@ -7366,7 +7884,21 @@
    "Situation: Before the move: new team after 300-touch league-winning 2025 in Jacksonville under Coen; New team in 2026 (JAX to NO): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "flag": null,
-  "note": "Sources say he 'may not replicate the success he had in Jacksonville last year' - new team in 2026 (team not confirmed in excerpts)."
+  "note": "Sources say he 'may not replicate the success he had in Jacksonville last year' - new team in 2026 (team not confirmed in excerpts).",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   0.605,
+   0.124,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "garrett-wilson-wr",
@@ -7562,7 +8094,21 @@
    "Situation: more target competition in 2026; new coaching staff"
   ],
   "flag": null,
-  "note": "SI excerpt listed 'Gabriel Wilson ... new coaching staff ... projected WR38' - almost certainly Garrett Wilson."
+  "note": "SI excerpt listed 'Gabriel Wilson ... new coaching staff ... projected WR38' - almost certainly Garrett Wilson.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   0.995,
+   0.268,
+   0.028,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "emeka-egbuka-wr",
@@ -7755,7 +8301,21 @@
    "Status: healthy"
   ],
   "flag": null,
-  "note": "Year-2 target-share riser."
+  "note": "Year-2 target-share riser.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   0.92,
+   0.38,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "tetairoa-mcmillan-wr",
@@ -7941,7 +8501,21 @@
    "Drafted anywhere from pick 22 to 41 across 591 FFC drafts (\u00b13.4)"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   0.768,
+   0.149,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "jaylen-waddle-wr",
@@ -8133,7 +8707,21 @@
    "Situation: Before the move: new team/QB (Bo Nix) and Payton scheme; New team in 2026 (MIA to DEN): backs and receivers who changed teams busted 7-8 points more often, 2016-25; coaching change"
   ],
   "flag": null,
-  "note": "Trade to Denver widely viewed as positive."
+  "note": "Trade to Denver widely viewed as positive.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   0.979,
+   0.841,
+   0.054,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "ladd-mcconkey-wr",
@@ -8323,7 +8911,21 @@
    "Situation: coaching change"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   0.886,
+   0.476,
+   0.004,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "dandre-swift-rb",
@@ -8511,7 +9113,21 @@
    "Status: healthy"
   ],
   "flag": null,
-  "note": "Model favors him over Walker."
+  "note": "Model favors him over Walker.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   0.994,
+   0.883,
+   0.034,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "davante-adams-wr",
@@ -8706,7 +9322,21 @@
    "Missed 6 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": "Multiple regression citations; CBS ADP 60.8."
+  "note": "Multiple regression citations; CBS ADP 60.8.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   0.947,
+   0.522,
+   0.002,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "drake-maye-qb",
@@ -8896,7 +9526,21 @@
    "Missed 4 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": "Second QB off board."
+  "note": "Second QB off board.",
+  "mcAvail": [
+   1.0,
+   0.993,
+   0.959,
+   0.735,
+   0.562,
+   0.157,
+   0.074,
+   0.01,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "jameson-williams-wr",
@@ -9086,7 +9730,21 @@
    "Situation: 2026 role unresolved: Role solidified late 2025; new OC adds mild uncertainty.; coaching change"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.67,
+   0.178,
+   0.001,
+   0.001,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "cam-skattebo-rb",
@@ -9281,7 +9939,21 @@
    "Situation: Listed as co-starter with Tyrone Tracy; returning from a serious leg injury; New coaching staff under John Harbaugh; coaching change"
   ],
   "flag": null,
-  "note": "Rotoworld's headline fade; Karabell flags the Dart/Skattebo/Nabers trio as availability question marks (only 18 snaps together in 2025)."
+  "note": "Rotoworld's headline fade; Karabell flags the Dart/Skattebo/Nabers trio as availability question marks (only 18 snaps together in 2025).",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   0.879,
+   0.432,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "christian-watson-wr",
@@ -9478,7 +10150,21 @@
    "Missed 10 regular-season games in 2024-25"
   ],
   "flag": "Value",
-  "note": "August reports had him starting on PUP; the Week 1 roster and cutdown coverage say healthy and active. Verify Thursday."
+  "note": "August reports had him starting on PUP; the Week 1 roster and cutdown coverage say healthy and active. Verify Thursday.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.984,
+   0.546,
+   0.161,
+   0.006,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "quinshon-judkins-rb",
@@ -9674,7 +10360,21 @@
    "Missed 3 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": "Split verdict: three bust lists vs PFF breakout call."
+  "note": "Split verdict: three bust lists vs PFF breakout call.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   0.926,
+   0.661,
+   0.018,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "bucky-irving-rb",
@@ -9869,7 +10569,21 @@
    "Status: returning from shoulder surgery (reported recovered)"
   ],
   "flag": "Injured",
-  "note": "Five separate bust citations (Yahoo x2, RotoBaller, CBS Richard, SportsLine); SI is the lone breakout counter-take."
+  "note": "Five separate bust citations (Yahoo x2, RotoBaller, CBS Richard, SportsLine); SI is the lone breakout counter-take.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.98,
+   0.21,
+   0.007,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "bhayshul-tuten-rb",
@@ -10064,7 +10778,21 @@
    "Status: healthy"
   ],
   "flag": null,
-  "note": "Three league-winner calls vs one RotoWire fade."
+  "note": "Three league-winner calls vs one RotoWire fade.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.997,
+   0.492,
+   0.014,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "jayden-daniels-qb",
@@ -10258,7 +10986,21 @@
    "Missed 10 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": "Three bust citations; Yahoo prefers Hurts/Nix/Williams later."
+  "note": "Three bust citations; Yahoo prefers Hurts/Nix/Williams later.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   0.948,
+   0.813,
+   0.19,
+   0.046,
+   0.002,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "terry-mclaurin-wr",
@@ -10458,7 +11200,21 @@
    "Missed 7 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": "Post-hype/age profile; no 2026 list placement found."
+  "note": "Post-hype/age profile; no 2026 list placement found.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.453,
+   0.026,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "luther-burden-wr",
@@ -10651,7 +11407,21 @@
    "Missed 2 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": "Camp groin issue appears minor."
+  "note": "Camp groin issue appears minor.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.971,
+   0.361,
+   0.001,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "dj-moore-wr",
@@ -10844,7 +11614,21 @@
    "Situation: New team in 2026 (CHI to BUF): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.995,
+   0.435,
+   0.044,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "david-montgomery-rb",
@@ -11047,7 +11831,21 @@
    "Situation: Before the move: new team; less explosive offense than Detroit; Before the move: expected snap split with Woody Marks (900+ scrimmage yds as rookie); Traded to Houston; role vs incumbents unclear"
   ],
   "flag": null,
-  "note": "SportsLine model puts him in the same tier as Jaylen Warren/Kenneth Gainwell despite Rd 4-5 ADP."
+  "note": "SportsLine model puts him in the same tier as Jaylen Warren/Kenneth Gainwell despite Rd 4-5 ADP.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.998,
+   0.525,
+   0.086,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "joe-burrow-qb",
@@ -11231,7 +12029,21 @@
    "Missed 9 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   0.999,
+   0.94,
+   0.814,
+   0.272,
+   0.108,
+   0.005,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "tyler-warren-te",
@@ -11421,7 +12233,21 @@
    "Status: adductor strain; could return within a week; Week 1 not in serious jeopardy"
   ],
   "flag": null,
-  "note": "BR excerpt garbled as 'Josh Warren'."
+  "note": "BR excerpt garbled as 'Josh Warren'.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   0.999,
+   0.912,
+   0.754,
+   0.198,
+   0.069,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "jalen-hurts-qb",
@@ -11613,7 +12439,21 @@
    "Missed 3 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": "PFF headliner."
+  "note": "PFF headliner.",
+  "mcAvail": [
+   1.0,
+   0.994,
+   0.973,
+   0.866,
+   0.736,
+   0.365,
+   0.19,
+   0.053,
+   0.024,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "rome-odunze-wr",
@@ -11806,7 +12646,21 @@
    "Status: ESPN status: QUESTIONABLE"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.764,
+   0.17,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "jadarian-price-rb",
@@ -12000,7 +12854,21 @@
    "Situation: Held out of preseason; committee with Wilson and Holani unclear; Rookie; Rookie: no NFL usage history"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   0.998,
+   0.998,
+   0.753,
+   0.35,
+   0.008,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "mike-evans-wr",
@@ -12211,7 +13079,21 @@
    "Status: expected back for start of season; 49ers being 'smart' with him"
   ],
   "flag": null,
-  "note": "Moved from TB to SF; Shanahan managing his workload."
+  "note": "Moved from TB to SF; Shanahan managing his workload.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.965,
+   0.367,
+   0.089,
+   0.001,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "tucker-kraft-te",
@@ -12409,7 +13291,21 @@
    "Status: healthy: will play Week 1 on a likely snap count"
   ],
   "flag": "Value",
-  "note": "PFF top-3 upside."
+  "note": "PFF top-3 upside.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.993,
+   0.961,
+   0.748,
+   0.488,
+   0.157,
+   0.013,
+   0.0
+  ]
  },
  {
   "id": "treveyon-henderson-rb",
@@ -12601,7 +13497,21 @@
    "Status: healthy"
   ],
   "flag": null,
-  "note": "RotoWire says his price ignores a crowded backfield."
+  "note": "RotoWire says his price ignores a crowded backfield.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.987,
+   0.833,
+   0.09,
+   0.011,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "parker-washington-wr",
@@ -12788,7 +13698,21 @@
    "Missed 7 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": "PFF breakout."
+  "note": "PFF breakout.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.994,
+   0.652,
+   0.211,
+   0.002,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "marvin-harrison-wr",
@@ -12984,7 +13908,21 @@
    "Situation: coaching change"
   ],
   "flag": null,
-  "note": "BR boom/bust list."
+  "note": "BR boom/bust list.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.988,
+   0.873,
+   0.119,
+   0.009,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "josh-jacobs-rb",
@@ -13181,7 +14119,21 @@
    "Injury risk: Suspension risk (Commissioner's Exempt List)"
   ],
   "flag": "Exempt",
-  "note": "On the commissioner's exempt list since Aug 30; Packers traded for Kaleb Johnson and MarShawn Lloyd is the expected starter. Court date around Week 11; treat as a stash only."
+  "note": "On the commissioner's exempt list since Aug 30; Packers traded for Kaleb Johnson and MarShawn Lloyd is the expected starter. Court date around Week 11; treat as a stash only.",
+  "mcAvail": [
+   0.997,
+   0.992,
+   0.975,
+   0.92,
+   0.884,
+   0.716,
+   0.611,
+   0.362,
+   0.245,
+   0.125,
+   0.099,
+   0.054
+  ]
  },
  {
   "id": "sam-laporta-te",
@@ -13372,7 +14324,21 @@
    "Situation: coaching change"
   ],
   "flag": "Value",
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   0.994,
+   0.973,
+   0.948,
+   0.783,
+   0.64,
+   0.314,
+   0.206,
+   0.087,
+   0.019,
+   0.003
+  ]
  },
  {
   "id": "carnell-tate-wr",
@@ -13565,7 +14531,21 @@
    "Situation: rookie; year-1 consistency; Rookie; Rookie: no NFL usage history"
   ],
   "flag": null,
-  "note": "Rookie WR with split opinions."
+  "note": "Rookie WR with split opinions.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.988,
+   0.857,
+   0.111,
+   0.009,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "rhamondre-stevenson-rb",
@@ -13757,7 +14737,21 @@
    "Situation: 2026 role unresolved: Even split by design, tilted to Stevenson early."
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.988,
+   0.842,
+   0.109,
+   0.008,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "brian-thomas-wr",
@@ -13950,7 +14944,21 @@
    "Missed 3 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": "RotoWire says usage design caps his weekly target count."
+  "note": "RotoWire says usage design caps his weekly target count.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.972,
+   0.704,
+   0.387,
+   0.124
+  ]
  },
  {
   "id": "dk-metcalf-wr",
@@ -14148,7 +15156,21 @@
    "Status: ESPN status: QUESTIONABLE"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.992,
+   0.411,
+   0.061,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "harold-fannin-te",
@@ -14344,7 +15366,21 @@
    "Situation: 2026 role unresolved: Njoku's departure and Monken's TE usage offset the rookie WR additions; QB quality is the wild card.; coaching change"
   ],
   "flag": null,
-  "note": "Two Yahoo bust citations."
+  "note": "Two Yahoo bust citations.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   0.998,
+   0.99,
+   0.818,
+   0.61,
+   0.144,
+   0.056,
+   0.009,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "dak-prescott-qb",
@@ -14532,7 +15568,21 @@
    "Missed 9 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.916,
+   0.711,
+   0.202,
+   0.091,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "caleb-williams-qb",
@@ -14722,7 +15772,21 @@
    "Drafted anywhere from pick 55 to 119 across 1300 FFC drafts (\u00b113.3)"
   ],
   "flag": null,
-  "note": "BR boom-or-bust."
+  "note": "BR boom-or-bust.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.989,
+   0.956,
+   0.755,
+   0.608,
+   0.058,
+   0.031,
+   0.004
+  ]
  },
  {
   "id": "justin-herbert-qb",
@@ -14911,7 +15975,21 @@
    "Situation: coaching change"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.997,
+   0.964,
+   0.912,
+   0.678,
+   0.051,
+   0.005,
+   0.001,
+   0.0
+  ]
  },
  {
   "id": "tony-pollard-rb",
@@ -15099,7 +16177,21 @@
    "Missed 1 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.998,
+   0.958,
+   0.523,
+   0.205,
+   0.023,
+   0.005,
+   0.0
+  ]
  },
  {
   "id": "jaylen-warren-rb",
@@ -15293,7 +16385,21 @@
    "Situation: True committee with Rico Dowdle; 2026 role unresolved: Committee formalized."
   ],
   "flag": null,
-  "note": "Named as a later-round tier comp by SportsLine."
+  "note": "Named as a later-round tier comp by SportsLine.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.967,
+   0.891,
+   0.478,
+   0.233,
+   0.025,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "kyle-pitts-te",
@@ -15486,7 +16592,21 @@
    "Situation: coaching change"
   ],
   "flag": null,
-  "note": "RotoWire fade."
+  "note": "RotoWire fade.",
+  "mcAvail": [
+   0.996,
+   0.985,
+   0.964,
+   0.899,
+   0.852,
+   0.65,
+   0.533,
+   0.295,
+   0.207,
+   0.106,
+   0.03,
+   0.012
+  ]
  },
  {
   "id": "rico-dowdle-rb",
@@ -15683,7 +16803,21 @@
    "Situation: Before the move: new team (left Carolina for Pittsburgh); shares with Jaylen Warren; New team in 2026 (CAR to PIT): backs and receivers who changed teams busted 7-8 points more often, 2016-25; 2026 role unresolved: Fewer touches than 2025 but a clear role after K. Johnson's trade."
   ],
   "flag": null,
-  "note": "Move noted in SI committee article."
+  "note": "Move noted in SI committee article.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.996,
+   0.979,
+   0.765,
+   0.476,
+   0.117,
+   0.061,
+   0.008
+  ]
  },
  {
   "id": "trevor-lawrence-qb",
@@ -15870,7 +17004,21 @@
    "Missed 7 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": "Fantasy Points value QB."
+  "note": "Fantasy Points value QB.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.998,
+   0.994,
+   0.945,
+   0.84,
+   0.201,
+   0.135,
+   0.05
+  ]
  },
  {
   "id": "chris-godwin-wr",
@@ -16077,7 +17225,21 @@
    "Missed 18 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": "PlayerProfiler league-winner value."
+  "note": "PlayerProfiler league-winner value.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.927,
+   0.812,
+   0.384
+  ]
  },
  {
   "id": "jk-dobbins-rb",
@@ -16265,7 +17427,21 @@
    "Situation: Broncos three-way committee"
   ],
   "flag": null,
-  "note": "Committee flagged by SI/RotoBaller."
+  "note": "Committee flagged by SI/RotoBaller.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.994,
+   0.942,
+   0.604,
+   0.396,
+   0.076
+  ]
  },
  {
   "id": "courtland-sutton-wr",
@@ -16451,7 +17627,21 @@
    "Missed 1 regular-season games in 2024-25"
   ],
   "flag": "Reach",
-  "note": "Target-share loser from the Waddle trade."
+  "note": "Target-share loser from the Waddle trade.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.997,
+   0.936,
+   0.215,
+   0.024,
+   0.0,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "chuba-hubbard-rb",
@@ -16644,7 +17834,21 @@
    "Status: healthy"
   ],
   "flag": null,
-  "note": "Committee flagged by SI and RotoBaller."
+  "note": "Committee flagged by SI and RotoBaller.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.984,
+   0.904,
+   0.459,
+   0.29,
+   0.051
+  ]
  },
  {
   "id": "jaxson-dart-qb",
@@ -16834,7 +18038,21 @@
    "Missed 3 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": "Split 2 bust / 2 boom."
+  "note": "Split 2 bust / 2 boom.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.994,
+   0.947,
+   0.868,
+   0.619,
+   0.472,
+   0.047,
+   0.027,
+   0.006
+  ]
  },
  {
   "id": "george-kittle-te",
@@ -17028,7 +18246,21 @@
    "Status: questionable: Achilles; legitimate chance for the Thursday opener, decision in the next couple of days (Sept 1-3)"
   ],
   "flag": "Questionable",
-  "note": "Risky TE per ESPN/BR cheat sheet."
+  "note": "Risky TE per ESPN/BR cheat sheet.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   0.995,
+   0.985,
+   0.882,
+   0.71,
+   0.243,
+   0.144,
+   0.058,
+   0.003,
+   0.0
+  ]
  },
  {
   "id": "jayden-reed-wr",
@@ -17221,7 +18453,21 @@
    "Missed 12 regular-season games in 2024-25"
   ],
   "flag": "Value",
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.997,
+   0.99,
+   0.908
+  ]
  },
  {
   "id": "alec-pierce-wr",
@@ -17410,7 +18656,21 @@
    "Week-to-week swing: 2025 scores varied \u00b166% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.973,
+   0.873,
+   0.465,
+   0.303,
+   0.075
+  ]
  },
  {
   "id": "jordan-addison-wr",
@@ -17599,7 +18859,21 @@
    "Situation: 2026 role unresolved: QB up, target competition up."
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.9,
+   0.74,
+   0.347
+  ]
  },
  {
   "id": "quentin-johnston-wr",
@@ -17789,7 +19063,21 @@
    "Situation: coaching change"
   ],
   "flag": null,
-  "note": "New-OC beneficiary."
+  "note": "New-OC beneficiary.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.998,
+   0.973,
+   0.939,
+   0.71
+  ]
  },
  {
   "id": "michael-wilson-wr",
@@ -17979,7 +19267,21 @@
    "Week-to-week swing: 2025 scores varied \u00b179% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.99,
+   0.85,
+   0.157,
+   0.052,
+   0.0
+  ]
  },
  {
   "id": "brock-purdy-qb",
@@ -18168,7 +19470,21 @@
    "Missed 10 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.994,
+   0.983,
+   0.549,
+   0.398,
+   0.143
+  ]
  },
  {
   "id": "jonathon-brooks-rb",
@@ -18358,7 +19674,21 @@
    "Status: healthy"
   ],
   "flag": null,
-  "note": "PFF breakout vs Karabell do-not-draft."
+  "note": "PFF breakout vs Karabell do-not-draft.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.998,
+   0.927,
+   0.748,
+   0.301,
+   0.173,
+   0.043
+  ]
  },
  {
   "id": "blake-corum-rb",
@@ -18542,7 +19872,21 @@
    "Week-to-week swing: 2025 scores varied \u00b188% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.992,
+   0.969,
+   0.666,
+   0.186,
+   0.01
+  ]
  },
  {
   "id": "michael-pittman-wr",
@@ -18740,7 +20084,21 @@
    "Status: healthy"
   ],
   "flag": null,
-  "note": "Departed IND for PIT."
+  "note": "Departed IND for PIT.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.987,
+   0.61,
+   0.238,
+   0.008,
+   0.0,
+   0.0
+  ]
  },
  {
   "id": "josh-downs-wr",
@@ -18928,7 +20286,21 @@
    "Status: healthy"
   ],
   "flag": null,
-  "note": "Excerpt garbled as 'Parris Campbell (Downs)'; context is Josh Downs."
+  "note": "Excerpt garbled as 'Parris Campbell (Downs)'; context is Josh Downs.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.993,
+   0.936
+  ]
  },
  {
   "id": "jordan-mason-rb",
@@ -19117,7 +20489,21 @@
    "Situation: 2026 role unresolved: Share up in a better offense; exact split unresolved."
   ],
   "flag": null,
-  "note": "PFF late-round RB value; 2026 team not confirmed in excerpt."
+  "note": "PFF late-round RB value; 2026 team not confirmed in excerpt.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.973,
+   0.829,
+   0.187
+  ]
  },
  {
   "id": "jacory-croskey-merritt-rb",
@@ -19311,7 +20697,21 @@
    "Status: ESPN status: QUESTIONABLE"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.99,
+   0.979,
+   0.859
+  ]
  },
  {
   "id": "dallas-goedert-te",
@@ -19527,7 +20927,21 @@
    "Missed 9 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": "SI All-Bust."
+  "note": "SI All-Bust.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.994,
+   0.873,
+   0.084,
+   0.0
+  ]
  },
  {
   "id": "patrick-mahomes-qb",
@@ -19722,7 +21136,21 @@
    "Status: healthy: on track for Week 1, full participant since July"
   ],
   "flag": null,
-  "note": "Karabell value pick."
+  "note": "Karabell value pick.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.972,
+   0.95,
+   0.472,
+   0.327,
+   0.149
+  ]
  },
  {
   "id": "dalton-kincaid-te",
@@ -19915,7 +21343,21 @@
    "Missed 9 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": "PFF breakout contingent on health."
+  "note": "PFF breakout contingent on health.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.998,
+   0.984,
+   0.974,
+   0.915,
+   0.746,
+   0.557
+  ]
  },
  {
   "id": "kyle-monangai-rb",
@@ -20106,7 +21548,21 @@
    "Status: healthy"
   ],
   "flag": null,
-  "note": "SI lists Dart and Monangai atop its 2026 breakout list."
+  "note": "SI lists Dart and Monangai atop its 2026 breakout list.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.989,
+   0.862,
+   0.769,
+   0.384
+  ]
  },
  {
   "id": "stefon-diggs-wr",
@@ -20299,7 +21755,21 @@
    "Situation: New team in 2026 (NE to WAS): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.998,
+   0.927,
+   0.72,
+   0.228,
+   0.129,
+   0.013
+  ]
  },
  {
   "id": "makai-lemon-wr",
@@ -20491,7 +21961,21 @@
    "Situation: Rookie; Rookie: no NFL usage history"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.997,
+   0.956,
+   0.908,
+   0.708
+  ]
  },
  {
   "id": "bo-nix-qb",
@@ -20675,7 +22159,21 @@
    "Drafted anywhere from pick 77 to 140 across 723 FFC drafts (\u00b113.3)"
   ],
   "flag": null,
-  "note": "Named as a cheaper alternative to Daniels."
+  "note": "Named as a cheaper alternative to Daniels.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.998,
+   0.961,
+   0.914,
+   0.313,
+   0.184,
+   0.062
+  ]
  },
  {
   "id": "rj-harvey-rb",
@@ -20866,7 +22364,21 @@
    "Situation: Sean Payton three-way committee (Dobbins, Harvey, Coleman); coaching change"
   ],
   "flag": null,
-  "note": "CBS excerpt name garbled as 'Jaylen Harvey'; context (Broncos, Dobbins, Coleman) identifies RJ Harvey."
+  "note": "CBS excerpt name garbled as 'Jaylen Harvey'; context (Broncos, Dobbins, Coleman) identifies RJ Harvey.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.993,
+   0.98,
+   0.862,
+   0.782,
+   0.558
+  ]
  },
  {
   "id": "matthew-golden-wr",
@@ -21059,7 +22571,21 @@
    "Week-to-week swing: 2025 scores varied \u00b183% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.972,
+   0.892,
+   0.581,
+   0.452,
+   0.2
+  ]
  },
  {
   "id": "matthew-stafford-qb",
@@ -21246,7 +22772,21 @@
    "Missed 1 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": "Consensus negative regression."
+  "note": "Consensus negative regression.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.984,
+   0.875,
+   0.777,
+   0.071,
+   0.033,
+   0.005
+  ]
  },
  {
   "id": "travis-kelce-te",
@@ -21441,7 +22981,21 @@
    "Missed 1 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": "Most-cited TE bust."
+  "note": "Most-cited TE bust.",
+  "mcAvail": [
+   0.999,
+   0.998,
+   0.992,
+   0.978,
+   0.962,
+   0.904,
+   0.856,
+   0.71,
+   0.628,
+   0.489,
+   0.244,
+   0.105
+  ]
  },
  {
   "id": "wandale-robinson-wr",
@@ -21635,7 +23189,21 @@
    "Status: ESPN status: QUESTIONABLE"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.987,
+   0.688,
+   0.453,
+   0.083
+  ]
  },
  {
   "id": "jakobi-meyers-wr",
@@ -21826,7 +23394,21 @@
    "Status: ESPN status: QUESTIONABLE"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.997,
+   0.905,
+   0.82,
+   0.403
+  ]
  },
  {
   "id": "isaiah-likely-te",
@@ -22021,7 +23603,21 @@
    "Week-to-week swing: 2025 scores varied \u00b167% of his average"
   ],
   "flag": null,
-  "note": "Left BAL for NYG."
+  "note": "Left BAL for NYG.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.983,
+   0.971,
+   0.944,
+   0.743,
+   0.452
+  ]
  },
  {
   "id": "xavier-worthy-wr",
@@ -22212,7 +23808,21 @@
    "Missed 4 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": "PFF late-round option."
+  "note": "PFF late-round option.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.994,
+   0.974,
+   0.767
+  ]
  },
  {
   "id": "mark-andrews-te",
@@ -22404,7 +24014,21 @@
    "Situation: new coaching staff (Declan Doyle)"
   ],
   "flag": null,
-  "note": "Yahoo TE bust."
+  "note": "Yahoo TE bust.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.988,
+   0.844,
+   0.543
+  ]
  },
  {
   "id": "kyler-murray-qb",
@@ -22597,7 +24221,21 @@
    "Missed 12 regular-season games in 2024-25"
   ],
   "flag": "Value",
-  "note": "Signed with Minnesota and named the starter. Early rankings have him around QB16."
+  "note": "Signed with Minnesota and named the starter. Early rankings have him around QB16.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.969,
+   0.946,
+   0.841
+  ]
  },
  {
   "id": "jared-goff-qb",
@@ -22784,7 +24422,21 @@
    "Situation: coaching change"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.975,
+   0.946,
+   0.836
+  ]
  },
  {
   "id": "kc-concepcion-wr",
@@ -22978,7 +24630,21 @@
    "Situation: rookie; Rookie; Rookie: no NFL usage history"
   ],
   "flag": null,
-  "note": "PFF late-round rookie option; team not in excerpt."
+  "note": "PFF late-round rookie option; team not in excerpt.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.998,
+   0.987
+  ]
  },
  {
   "id": "jordyn-tyson-wr",
@@ -23173,7 +24839,21 @@
    "Drafted anywhere from pick 117 to 180 across 189 FFC drafts (\u00b116.9)"
   ],
   "flag": "IR",
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   0.999,
+   0.999,
+   0.994,
+   0.993,
+   0.984,
+   0.973,
+   0.955,
+   0.931,
+   0.896,
+   0.875,
+   0.821
+  ]
  },
  {
   "id": "rachaad-white-rb",
@@ -23369,7 +25049,21 @@
    "Status: ESPN status: QUESTIONABLE"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.998,
+   0.991,
+   0.562
+  ]
  },
  {
   "id": "romeo-doubs-wr",
@@ -23562,7 +25256,21 @@
    "Situation: New team in 2026 (GB to NE): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.998,
+   0.985
+  ]
  },
  {
   "id": "kenny-gainwell-rb",
@@ -23753,7 +25461,21 @@
    "Situation: New team in 2026 (PIT to TB): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.99,
+   0.963,
+   0.795,
+   0.612,
+   0.263,
+   0.18,
+   0.061
+  ]
  },
  {
   "id": "jake-ferguson-te",
@@ -23934,7 +25656,21 @@
    "Week-to-week swing: 2025 scores varied \u00b162% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.989,
+   0.969,
+   0.909,
+   0.863,
+   0.766,
+   0.452,
+   0.257
+  ]
  },
  {
   "id": "jordan-love-qb",
@@ -24125,7 +25861,21 @@
    "Missed 4 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": "Two boom citations."
+  "note": "Two boom citations.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.997,
+   0.978,
+   0.967,
+   0.93
+  ]
  },
  {
   "id": "chris-rodriguez-rb",
@@ -24318,7 +26068,21 @@
    "Week-to-week swing: 2025 scores varied \u00b160% of his average"
   ],
   "flag": null,
-  "note": "FTN sleeper ADP piece."
+  "note": "FTN sleeper ADP piece.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.997,
+   0.99
+  ]
  },
  {
   "id": "aaron-jones-rb",
@@ -24513,7 +26277,21 @@
    "Missed 5 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.997,
+   0.973,
+   0.91,
+   0.611,
+   0.485,
+   0.217
+  ]
  },
  {
   "id": "baker-mayfield-qb",
@@ -24701,7 +26479,21 @@
    "Situation: contract year (no holdout)"
   ],
   "flag": null,
-  "note": "Playing out deal."
+  "note": "Playing out deal.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.995
+  ]
  },
  {
   "id": "marshawn-lloyd-rb",
@@ -24893,7 +26685,21 @@
    "Drafted anywhere from pick 47 to 210 across 1306 FFC drafts (\u00b123.8)"
   ],
   "flag": "Rising",
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.993,
+   0.975,
+   0.895,
+   0.807,
+   0.608,
+   0.524,
+   0.358
+  ]
  },
  {
   "id": "tyler-shough-qb",
@@ -25080,7 +26886,21 @@
    "Missed 6 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.997,
+   0.992,
+   0.964
+  ]
  },
  {
   "id": "jalen-coker-wr",
@@ -25268,7 +27088,21 @@
    "Week-to-week swing: 2025 scores varied \u00b168% of his average"
   ],
   "flag": null,
-  "note": "TD-driven 2025; FantasyPros bust."
+  "note": "TD-driven 2025; FantasyPros bust.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.996,
+   0.993,
+   0.965
+  ]
  },
  {
   "id": "juwan-johnson-te",
@@ -25457,7 +27291,21 @@
    "Missed 2 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.998,
+   0.998,
+   0.997,
+   0.964,
+   0.888
+  ]
  },
  {
   "id": "khalil-shakir-wr",
@@ -25645,7 +27493,21 @@
    "Status: ESPN status: QUESTIONABLE"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.994,
+   0.988,
+   0.918
+  ]
  },
  {
   "id": "dezhaun-stribling-wr",
@@ -25840,7 +27702,21 @@
    "Status: ESPN status: QUESTIONABLE"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.993,
+   0.98,
+   0.922,
+   0.887,
+   0.756
+  ]
  },
  {
   "id": "rashid-shaheed-wr",
@@ -26026,7 +27902,21 @@
    "Week-to-week swing: 2025 scores varied \u00b165% of his average"
   ],
   "flag": null,
-  "note": "PFF late-round option."
+  "note": "PFF late-round option.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999
+  ]
  },
  {
   "id": "deebo-samuel-wr",
@@ -26237,7 +28127,21 @@
    "Situation: New team in 2026 (WAS to SF): backs and receivers who changed teams busted 7-8 points more often, 2016-25; coaching change"
   ],
   "flag": null,
-  "note": "Identification from a partial excerpt; treat as low-confidence."
+  "note": "Identification from a partial excerpt; treat as low-confidence.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.996,
+   0.954
+  ]
  },
  {
   "id": "hunter-henry-te",
@@ -26426,7 +28330,21 @@
    "Week-to-week swing: 2025 scores varied \u00b167% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.997,
+   0.994,
+   0.989,
+   0.961,
+   0.879
+  ]
  },
  {
   "id": "brenton-strange-te",
@@ -26609,7 +28527,21 @@
    "Missed 8 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": "PFF late TE."
+  "note": "PFF late TE.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.999,
+   0.998,
+   0.995,
+   0.992,
+   0.987,
+   0.963,
+   0.914
+  ]
  },
  {
   "id": "woody-marks-rb",
@@ -26804,7 +28736,21 @@
    "Situation: committee with David Montgomery"
   ],
   "flag": null,
-  "note": "Committee partner cited by CBS SportsLine."
+  "note": "Committee partner cited by CBS SportsLine.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.986,
+   0.979,
+   0.942
+  ]
  },
  {
   "id": "malik-willis-qb",
@@ -27001,7 +28947,21 @@
    "Situation: New team in 2026 (GB to MIA): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "flag": null,
-  "note": "PFF sleeper."
+  "note": "PFF sleeper.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999
+  ]
  },
  {
   "id": "tyler-allgeier-rb",
@@ -27195,7 +29155,21 @@
    "Situation: Before the move: Arizona committee with Love/Conner; New team in 2026 (ATL to ARI): backs and receivers who changed teams busted 7-8 points more often, 2016-25; 2026 role unresolved: Moves from Bijan's backup to a rookie's backup with a wider path; touches likely similar-to-up vs 143 carries."
   ],
   "flag": null,
-  "note": "Free-agent signing in the Cardinals committee."
+  "note": "Free-agent signing in the Cardinals committee.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.998,
+   0.992,
+   0.967
+  ]
  },
  {
   "id": "terrance-ferguson-te",
@@ -27375,7 +29349,21 @@
    "Status: healthy"
   ],
   "flag": null,
-  "note": "PFF late TE."
+  "note": "PFF late TE.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.998
+  ]
  },
  {
   "id": "zach-charbonnet-rb",
@@ -27565,7 +29553,21 @@
    "Missed 1 regular-season games in 2024-25"
   ],
   "flag": "IR",
-  "note": "Listed with Parsons/Branch/Joseph/Ekwonu/Moton as unavailable for the opening four games (Yahoo injury tracker)."
+  "note": "Listed with Parsons/Branch/Joseph/Ekwonu/Moton as unavailable for the opening four games (Yahoo injury tracker).",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.994,
+   0.984,
+   0.958
+  ]
  },
  {
   "id": "denzel-boston-wr",
@@ -27757,7 +29759,21 @@
    "Situation: Rookie: no NFL usage history"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "jalen-mcmillan-wr",
@@ -27947,7 +29963,21 @@
    "Status: ESPN status: QUESTIONABLE"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.997
+  ]
  },
  {
   "id": "daniel-jones-qb",
@@ -28134,7 +30164,21 @@
    "Missed 11 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": "Cited as the risk on Tyler Warren/Taylor/Downs."
+  "note": "Cited as the risk on Tyler Warren/Taylor/Downs.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.993
+  ]
  },
  {
   "id": "tre-tucker-wr",
@@ -28321,7 +30365,21 @@
    "Week-to-week swing: 2025 scores varied \u00b191% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "dalton-schultz-te",
@@ -28505,7 +30563,21 @@
    "Calibrated injury model: 50% chance of missing time (AUC 0.75)"
   ],
   "flag": null,
-  "note": "Yahoo bust list."
+  "note": "Yahoo bust list.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.994,
+   0.988,
+   0.978,
+   0.941,
+   0.883
+  ]
  },
  {
   "id": "keaton-mitchell-rb",
@@ -28698,7 +30770,21 @@
    "Week-to-week swing: 2025 scores varied \u00b165% of his average"
   ],
   "flag": null,
-  "note": "Rotoworld: 'addition of Keaton Mitchell' to Hampton's backfield; team inferred from that context."
+  "note": "Rotoworld: 'addition of Keaton Mitchell' to Hampton's backfield; team inferred from that context.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "sam-darnold-qb",
@@ -28884,7 +30970,21 @@
    "Situation: 2026 role unresolved: Same starter; new play-caller and a rookie-led backfield."
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "tyjae-spears-rb",
@@ -29071,7 +31171,21 @@
    "Week-to-week swing: 2025 scores varied \u00b162% of his average"
   ],
   "flag": null,
-  "note": "PFF late-round RB value."
+  "note": "PFF late-round RB value.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.998,
+   0.99,
+   0.951
+  ]
  },
  {
   "id": "chig-okonkwo-te",
@@ -29263,7 +31377,21 @@
    "Situation: New team in 2026 (TEN to WAS): backs and receivers who changed teams busted 7-8 points more often, 2016-25; coaching change"
   ],
   "flag": null,
-  "note": "Team not confirmed in excerpt."
+  "note": "Team not confirmed in excerpt.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "mike-washington-rb",
@@ -29450,7 +31578,21 @@
    "Situation: Rookie: no NFL usage history"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.999,
+   0.987
+  ]
  },
  {
   "id": "tj-hockenson-te",
@@ -29644,7 +31786,21 @@
    "Missed 9 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.998,
+   0.979
+  ]
  },
  {
   "id": "brian-robinson-rb",
@@ -29834,7 +31990,21 @@
    "Week-to-week swing: 2025 scores varied \u00b178% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.997,
+   0.992,
+   0.976,
+   0.966,
+   0.936,
+   0.919,
+   0.879
+  ]
  },
  {
   "id": "jonah-coleman-rb",
@@ -30017,7 +32187,21 @@
    "Situation: rookie in a Payton committee; Rookie: no NFL usage history; 2026 role unresolved: Rookie with no baseline; depth-chart climber."
   ],
   "flag": null,
-  "note": "Rookie piece of Denver committee (CBS/SI)."
+  "note": "Rookie piece of Denver committee (CBS/SI).",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.998,
+   0.982
+  ]
  },
  {
   "id": "kenyon-sadiq-te",
@@ -30207,7 +32391,21 @@
    "Situation: Rookie; role vs incumbent TE not confirmed; Rookie: no NFL usage history"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.998,
+   0.996,
+   0.993,
+   0.969,
+   0.926
+  ]
  },
  {
   "id": "keenan-allen-wr",
@@ -30401,7 +32599,21 @@
    "Situation: New team in 2026 (LAC to IND): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.997,
+   0.983,
+   0.975,
+   0.936
+  ]
  },
  {
   "id": "cj-stroud-qb",
@@ -30588,7 +32800,21 @@
    "Missed 3 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "travis-hunter-wr",
@@ -30753,7 +32979,21 @@
    "Drafted anywhere from pick 143 to 198 across 49 FFC drafts (\u00b117.5)"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.998,
+   0.994,
+   0.95,
+   0.884,
+   0.665,
+   0.577,
+   0.361
+  ]
  },
  {
   "id": "tank-bigsby-rb",
@@ -30938,7 +33178,21 @@
    "Week-to-week swing: 2025 scores varied \u00b1107% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "adonai-mitchell-wr",
@@ -31110,7 +33364,21 @@
    "Week-to-week swing: 2025 scores varied \u00b1120% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "jalen-nailor-wr",
@@ -31285,7 +33553,21 @@
    "Week-to-week swing: 2025 scores varied \u00b1109% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.997,
+   0.994,
+   0.976
+  ]
  },
  {
   "id": "dylan-sampson-rb",
@@ -31473,7 +33755,21 @@
    "Week-to-week swing: 2025 scores varied \u00b193% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.998,
+   0.989
+  ]
  },
  {
   "id": "isiah-pacheco-rb",
@@ -31665,7 +33961,21 @@
    "Status: Week 1 roster: injured reserve"
   ],
   "flag": "IR",
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "jerry-jeudy-wr",
@@ -31836,7 +34146,21 @@
    "Week-to-week swing: 2025 scores varied \u00b171% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "omar-cooper-wr",
@@ -32008,7 +34332,21 @@
    "Situation: Rookie: no NFL usage history"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "aj-barner-te",
@@ -32176,7 +34514,21 @@
    "Week-to-week swing: 2025 scores varied \u00b173% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.996,
+   0.984
+  ]
  },
  {
   "id": "bryce-young-qb",
@@ -32354,7 +34706,21 @@
    "Missed 4 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "kayshon-boutte-wr",
@@ -32531,7 +34897,21 @@
    "Week-to-week swing: 2025 scores varied \u00b180% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "jauan-jennings-wr",
@@ -32701,7 +35081,21 @@
    "Situation: New team in 2026 (SF to MIN): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.998,
+   0.998,
+   0.994
+  ]
  },
  {
   "id": "cam-ward-qb",
@@ -32882,7 +35276,21 @@
    "Situation: coaching change"
   ],
   "flag": null,
-  "note": "SI breakout."
+  "note": "SI breakout.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "tre-harris-wr",
@@ -33051,7 +35459,21 @@
    "Status: healthy"
   ],
   "flag": null,
-  "note": "FTN sleeper."
+  "note": "FTN sleeper.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "braelon-allen-rb",
@@ -33220,7 +35642,21 @@
    "Missed 13 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999
+  ]
  },
  {
   "id": "alvin-kamara-rb",
@@ -33423,7 +35859,21 @@
    "Status: healthy"
   ],
   "flag": null,
-  "note": "Aging-RB cohort (SI)."
+  "note": "Aging-RB cohort (SI).",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.996,
+   0.991,
+   0.966
+  ]
  },
  {
   "id": "tyrone-tracy-rb",
@@ -33593,7 +36043,21 @@
    "Week-to-week swing: 2025 scores varied \u00b169% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.997,
+   0.995,
+   0.989,
+   0.969
+  ]
  },
  {
   "id": "calvin-ridley-wr",
@@ -33771,7 +36235,21 @@
    "Week-to-week swing: 2025 scores varied \u00b175% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.997
+  ]
  },
  {
   "id": "oronde-gadsden-te",
@@ -33938,7 +36416,21 @@
    "Missed 2 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   0.998,
+   0.998,
+   0.996,
+   0.993,
+   0.982,
+   0.973,
+   0.962,
+   0.92,
+   0.859
+  ]
  },
  {
   "id": "ryan-flournoy-wr",
@@ -34103,7 +36595,21 @@
    "Week-to-week swing: 2025 scores varied \u00b177% of his average"
   ],
   "flag": null,
-  "note": "FTN sleeper."
+  "note": "FTN sleeper.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "emmett-johnson-rb",
@@ -34273,7 +36779,21 @@
    "Situation: Rookie: no NFL usage history"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.995,
+   0.991,
+   0.984
+  ]
  },
  {
   "id": "pat-freiermuth-te",
@@ -34442,7 +36962,21 @@
    "Week-to-week swing: 2025 scores varied \u00b182% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.999,
+   0.99,
+   0.96
+  ]
  },
  {
   "id": "jakobi-lane-wr",
@@ -34612,7 +37146,21 @@
    "Situation: Rookie: no NFL usage history"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "caleb-douglas-wr",
@@ -34784,7 +37332,21 @@
    "Situation: Rookie: no NFL usage history"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "greg-dulcich-te",
@@ -34956,7 +37518,21 @@
    "Missed 22 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": "FantasyPros league-winner TE."
+  "note": "FantasyPros league-winner TE.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.991,
+   0.965
+  ]
  },
  {
   "id": "ray-davis-rb",
@@ -35124,7 +37700,21 @@
    "Week-to-week swing: 2025 scores varied \u00b1149% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "pat-bryant-wr",
@@ -35284,7 +37874,21 @@
    "Week-to-week swing: 2025 scores varied \u00b160% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "gunnar-helm-te",
@@ -35447,7 +38051,21 @@
    "Week-to-week swing: 2025 scores varied \u00b167% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "cade-otton-te",
@@ -35611,7 +38229,21 @@
    "Week-to-week swing: 2025 scores varied \u00b171% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "malik-washington-wr",
@@ -35783,7 +38415,21 @@
    "Missed 5 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": "PFF late-round option."
+  "note": "PFF late-round option.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "germie-bernard-wr",
@@ -35954,7 +38600,21 @@
    "Situation: Rookie: no NFL usage history"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "rashod-bateman-wr",
@@ -36126,7 +38786,21 @@
    "Missed 5 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": "RotoBaller suspension watch."
+  "note": "RotoBaller suspension watch.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.989,
+   0.985,
+   0.965
+  ]
  },
  {
   "id": "isaac-teslaa-wr",
@@ -36293,7 +38967,21 @@
    "Week-to-week swing: 2025 scores varied \u00b1100% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "tank-dell-wr",
@@ -36461,7 +39149,21 @@
    "Status: Week 1 roster: injured reserve, designated to return"
   ],
   "flag": "IR",
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "kaelon-black-rb",
@@ -36628,7 +39330,21 @@
    "Situation: Rookie: no NFL usage history"
   ],
   "flag": null,
-  "note": "Stash only."
+  "note": "Stash only.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "jaylin-noel-wr",
@@ -36796,7 +39512,21 @@
    "Status: ESPN status: QUESTIONABLE"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "aaron-rodgers-qb",
@@ -36963,7 +39693,21 @@
    "Missed 1 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.99,
+   0.985,
+   0.962
+  ]
  },
  {
   "id": "chris-bell-wr",
@@ -37131,7 +39875,21 @@
    "Situation: Rookie: no NFL usage history"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.999,
+   0.996
+  ]
  },
  {
   "id": "zachariah-branch-wr",
@@ -37296,7 +40054,21 @@
    "Situation: Rookie: no NFL usage history"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "sean-tucker-rb",
@@ -37464,7 +40236,21 @@
    "Status: healthy"
   ],
   "flag": null,
-  "note": "Retained by TB; cited as threat to Irving's role."
+  "note": "Retained by TB; cited as threat to Irving's role.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "kimani-vidal-rb",
@@ -37629,7 +40415,21 @@
    "Week-to-week swing: 2025 scores varied \u00b180% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.998
+  ]
  },
  {
   "id": "cooper-kupp-wr",
@@ -37804,7 +40604,21 @@
    "Missed 6 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.998
+  ]
  },
  {
   "id": "jacoby-brissett-qb",
@@ -37968,7 +40782,21 @@
    "Missed 13 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.997
+  ]
  },
  {
   "id": "devaughn-vele-wr",
@@ -38135,7 +40963,21 @@
    "Week-to-week swing: 2025 scores varied \u00b187% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.991
+  ]
  },
  {
   "id": "malik-davis-rb",
@@ -38298,7 +41140,21 @@
    "Week-to-week swing: 2025 scores varied \u00b1102% of his average"
   ],
   "flag": null,
-  "note": "FTN sleeper ADP piece."
+  "note": "FTN sleeper ADP piece.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.988,
+   0.98,
+   0.952
+  ]
  },
  {
   "id": "david-njoku-te",
@@ -38491,7 +41347,21 @@
    "Situation: New team in 2026 (CLE to LAC): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.993
+  ]
  },
  {
   "id": "najee-harris-rb",
@@ -38656,7 +41526,21 @@
    "Situation: New team in 2026 (LAC to NYG): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "kaytron-allen-rb",
@@ -38820,7 +41704,21 @@
    "Situation: Rookie: no NFL usage history"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "tyquan-thornton-wr",
@@ -38987,7 +41885,21 @@
    "Week-to-week swing: 2025 scores varied \u00b172% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.997,
+   0.988,
+   0.983,
+   0.957
+  ]
  },
  {
   "id": "malachi-fields-wr",
@@ -39156,7 +42068,21 @@
    "Situation: Rookie: no NFL usage history"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.997,
+   0.997,
+   0.988
+  ]
  },
  {
   "id": "nicholas-singleton-rb",
@@ -39319,7 +42245,21 @@
    "Situation: Rookie: no NFL usage history"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "darnell-mooney-wr",
@@ -39489,7 +42429,21 @@
    "Situation: New team in 2026 (ATL to NYG): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "jaylen-wright-rb",
@@ -39654,7 +42608,21 @@
    "Week-to-week swing: 2025 scores varied \u00b197% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "fernando-mendoza-qb",
@@ -39823,7 +42791,21 @@
    "Situation: Rookie: no NFL usage history"
   ],
   "flag": "Backup",
-  "note": "No. 1 overall pick but opens as the backup. Redraft stash only."
+  "note": "No. 1 overall pick but opens as the backup. Redraft stash only.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "ted-hurst-wr",
@@ -39988,7 +42970,21 @@
    "Situation: Rookie: no NFL usage history"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "james-conner-rb",
@@ -40156,7 +43152,21 @@
    "Missed 15 regular-season games in 2024-25"
   ],
   "flag": "IR",
-  "note": "Part of Arizona committee flagged by SI/RotoBaller."
+  "note": "Part of Arizona committee flagged by SI/RotoBaller.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.995,
+   0.986,
+   0.972,
+   0.944,
+   0.931,
+   0.891
+  ]
  },
  {
   "id": "darren-waller-te",
@@ -40323,7 +43333,21 @@
    "Situation: New team in 2026 (MIA to CAR): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "kaleb-johnson-rb",
@@ -40492,7 +43516,21 @@
    "Situation: New team in 2026 (PIT to GB): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "emanuel-wilson-rb",
@@ -40661,7 +43699,21 @@
    "Situation: New team in 2026 (GB to SEA): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "demond-claiborne-rb",
@@ -40817,7 +43869,21 @@
    "Situation: Rookie: no NFL usage history"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "jaydon-blue-rb",
@@ -40982,7 +44048,21 @@
    "Situation: New team in 2026 (DAL to PHI): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.997,
+   0.993,
+   0.983
+  ]
  },
  {
   "id": "darius-slayton-wr",
@@ -41167,7 +44247,21 @@
    "Missed 4 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "colby-parkinson-te",
@@ -41326,7 +44420,21 @@
    "Week-to-week swing: 2025 scores varied \u00b176% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.996
+  ]
  },
  {
   "id": "jack-bech-wr",
@@ -41489,7 +44597,21 @@
    "Week-to-week swing: 2025 scores varied \u00b185% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.999,
+   0.999,
+   0.992
+  ]
  },
  {
   "id": "xavier-legette-wr",
@@ -41654,7 +44776,21 @@
    "Status: ESPN status: QUESTIONABLE"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.99,
+   0.983,
+   0.964
+  ]
  },
  {
   "id": "keon-coleman-wr",
@@ -41819,7 +44955,21 @@
    "Status: ESPN status: QUESTIONABLE"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.998
+  ]
  },
  {
   "id": "cyrus-allen-wr",
@@ -41986,7 +45136,21 @@
    "Situation: Rookie: no NFL usage history"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.99,
+   0.98,
+   0.959
+  ]
  },
  {
   "id": "kendre-miller-rb",
@@ -42148,7 +45312,21 @@
    "Status: ESPN status: QUESTIONABLE"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.989,
+   0.985,
+   0.954
+  ]
  },
  {
   "id": "tory-horton-wr",
@@ -42310,7 +45488,21 @@
    "Status: ESPN status: QUESTIONABLE"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "mason-taylor-te",
@@ -42473,7 +45665,21 @@
    "Week-to-week swing: 2025 scores varied \u00b173% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.998
+  ]
  },
  {
   "id": "christian-kirk-wr",
@@ -42651,7 +45857,21 @@
    "Situation: New team in 2026 (HOU to SF): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "flag": "IR",
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.998,
+   0.997,
+   0.995
+  ]
  },
  {
   "id": "dontayvion-wicks-wr",
@@ -42826,7 +46046,21 @@
    "Week-to-week swing: 2025 scores varied \u00b1116% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "demario-douglas-wr",
@@ -42986,7 +46220,21 @@
    "Week-to-week swing: 2025 scores varied \u00b184% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.998,
+   0.993,
+   0.987,
+   0.971
+  ]
  },
  {
   "id": "antonio-williams-wr",
@@ -43143,7 +46391,21 @@
    "Situation: Rookie: no NFL usage history"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "marvin-mims-wr",
@@ -43300,7 +46562,21 @@
    "Status: ESPN status: QUESTIONABLE"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "elijah-sarratt-wr",
@@ -43461,7 +46737,21 @@
    "Situation: Rookie: no NFL usage history"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "chimere-dike-wr",
@@ -43623,7 +46913,21 @@
    "Week-to-week swing: 2025 scores varied \u00b183% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "devin-neal-rb",
@@ -43781,7 +47085,21 @@
    "Status: Week 1 roster: injured reserve"
   ],
   "flag": "IR",
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.998,
+   0.995,
+   0.992,
+   0.962
+  ]
  },
  {
   "id": "elic-ayomanor-wr",
@@ -43943,7 +47261,21 @@
    "Missed 1 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "troy-franklin-wr",
@@ -44105,7 +47437,21 @@
    "Week-to-week swing: 2025 scores varied \u00b171% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "george-holani-rb",
@@ -44269,7 +47615,21 @@
    "Missed 28 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.994,
+   0.992,
+   0.966
+  ]
  },
  {
   "id": "justice-hill-rb",
@@ -44457,7 +47817,21 @@
    "Week-to-week swing: 2025 scores varied \u00b1114% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.997,
+   0.992,
+   0.988,
+   0.967
+  ]
  },
  {
   "id": "geno-smith-qb",
@@ -44636,7 +48010,21 @@
    "Situation: New team (Jets), new OC Frank Reich; New team in 2026 (LV to NYJ): backs and receivers who changed teams busted 7-8 points more often, 2016-25"
   ],
   "flag": null,
-  "note": "Expected to feed Garrett Wilson heavily."
+  "note": "Expected to feed Garrett Wilson heavily.",
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.99,
+   0.988,
+   0.968
+  ]
  },
  {
   "id": "chris-brooks-rb",
@@ -44799,7 +48187,21 @@
    "Week-to-week swing: 2025 scores varied \u00b182% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.991,
+   0.985,
+   0.961
+  ]
  },
  {
   "id": "kyle-williams-wr",
@@ -44961,7 +48363,21 @@
    "Week-to-week swing: 2025 scores varied \u00b1131% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0
+  ]
  },
  {
   "id": "samaje-perine-rb",
@@ -45136,7 +48552,21 @@
    "Week-to-week swing: 2025 scores varied \u00b181% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.997,
+   0.993,
+   0.986,
+   0.962
+  ]
  },
  {
   "id": "evan-engram-te",
@@ -45308,7 +48738,21 @@
    "Missed 9 regular-season games in 2024-25"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.99,
+   0.968
+  ]
  },
  {
   "id": "jordan-james-rb",
@@ -45473,7 +48917,21 @@
    "Calibrated injury model: 19% chance of missing time (AUC 0.75)"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.998,
+   0.992,
+   0.987,
+   0.963
+  ]
  },
  {
   "id": "isaiah-davis-rb",
@@ -45638,7 +49096,21 @@
    "Status: ESPN status: QUESTIONABLE"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.998,
+   0.989,
+   0.986,
+   0.955
+  ]
  },
  {
   "id": "mike-gesicki-te",
@@ -45808,7 +49280,21 @@
    "Week-to-week swing: 2025 scores varied \u00b191% of his average"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.997,
+   0.99,
+   0.965
+  ]
  },
  {
   "id": "seth-mcgowan-rb",
@@ -45966,7 +49452,21 @@
    "Situation: Rookie: no NFL usage history"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.994,
+   0.988,
+   0.966
+  ]
  },
  {
   "id": "ty-johnson-rb",
@@ -46133,7 +49633,21 @@
    "Status: ESPN status: QUESTIONABLE"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.998,
+   0.989,
+   0.984,
+   0.962
+  ]
  },
  {
   "id": "ollie-gordon-rb",
@@ -46299,7 +49813,21 @@
    "Status: ESPN status: QUESTIONABLE"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.999,
+   0.991,
+   0.984,
+   0.957
+  ]
  },
  {
   "id": "lequint-allen-rb",
@@ -46462,6 +49990,20 @@
    "Status: ESPN status: QUESTIONABLE"
   ],
   "flag": null,
-  "note": null
+  "note": null,
+  "mcAvail": [
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   1.0,
+   0.999,
+   0.988,
+   0.985,
+   0.961
+  ]
  }
 ]

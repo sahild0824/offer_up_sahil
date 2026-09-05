@@ -791,7 +791,7 @@ def build(scoring="ppr", mc_tag=""):
             "unavailable": model.get("unavailable", []),
             "model": {"intro": model.get("intro", ""), "sections": model.get("sections", [])},
             "weights": W, "situationWeights": situation.SW, "outletWeights": OUTLET_WEIGHT, "baselines": BASELINE,
-            "mc": {"teams": mc["teams"], "slot": mc["slot"], "room": mc["room"], "sims": mc["sims"], "picks": mc["picks"], "generated": mc["generated"]} if mc else None,
+            "mc": {"teams": mc["teams"], "slot": mc["slot"], "room": mc["room"], "sims": mc["sims"], "picks": mc["picks"], "generated": mc["generated"], "strategies": mc.get("strategies"), "best": mc.get("best"), "first": mc.get("first"), "rounds": mc.get("rounds")} if mc else None,
             "teams": {t: {"hc": r.get("hc"), "hcNew": r.get("hc_new"), "oc": r.get("oc"), "ocNew": r.get("oc_new"), "playcaller": r.get("playcaller"), "scheme": r.get("scheme_notes"),
                           "passRate": r.get("pass_rate_tendency"), "pace": r.get("pace_tendency"), "rbUsage": r.get("rb_usage"), "qb": r.get("qb"), "qbNew": r.get("qb_new"), "qbTier": r.get("qb_tier"),
                           "qbNote": r.get("qb_note"), "vegasWins": r.get("vegas_wins"), "impliedPpg": r.get("implied_ppg"), "olineRank": r.get("oline_rank"), "arrivals": r.get("arrivals"),
