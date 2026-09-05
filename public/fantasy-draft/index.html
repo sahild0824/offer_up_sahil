@@ -228,6 +228,11 @@
   .v-split { background: var(--surface-2); color: var(--ink-2); }
   .v-fade, .v-reach { background: var(--track-bad); color: var(--bad); }
   .muted { color: var(--muted); font-size: 13px; }
+  .cand.gone { opacity: .62; }
+  .cand.gone .lnk { text-decoration: line-through solid var(--muted) 1px; }
+  .goneflag { color: var(--bad); }
+  .v-sim { background: var(--surface-2); color: var(--accent-ink); }
+  .caveat { font-size: 12.5px; color: var(--ink-2); margin-top: 10px; padding-top: 9px; border-top: 1px solid var(--hair); }
 
 
   /* Round plan */
@@ -574,7 +579,9 @@
   // one candidate line: who, how likely he lasts, what the outlets said, how far the market is from us
   function candidateRow(v, pick, isPick) {
     const p = findPlayer(v.name);
-    const row = el('div', 'cand' + (isPick ? ' take' : ''));
+    const avNow = p ? availAt(p, pick) : null;
+    const gone = avNow != null && avNow < 0.15;
+    const row = el('div', 'cand' + (isPick ? ' take' : '') + (gone ? ' gone' : ''));
     const who = el('div', 'who');
     if (isPick) who.append(el('span', 'takemark', '▸'));
     who.append(posChip(v.pos));
@@ -584,7 +591,7 @@
     who.append(verdictChip(v.verdict));
     row.append(who);
 
-    const av = p ? availAt(p, pick) : null;
+    const av = avNow;
     const avWrap = el('div', 'availcell');
     if (av != null) {
       avWrap.append(bar(av * 100, 'seq', 'Still on the board at pick ' + pick + ' in ' + Math.round(av * 100) + '% of simulated drafts'));
@@ -595,31 +602,36 @@
     row.append(avWrap);
 
     const ev = el('div', 'eviscell');
-    const total = v.for + v.against;
+    const total = (v.for || 0) + (v.against || 0);
+    if (!total) { ev.append(el('span', 'muted', 'no round writeup')); }
+    else {
     const split = el('div', 'split');
     split.title = v.for + ' outlet' + (v.for === 1 ? '' : 's') + ' argued for him, ' + v.against + ' against';
     const f = el('i', 'for'); f.style.width = (total ? v.for / total * 100 : 0) + '%';
     const a = el('i', 'against'); a.style.width = (total ? v.against / total * 100 : 0) + '%';
     split.append(f, a);
     ev.append(split, el('span', 'num evnum', v.for + '–' + v.against));
+    }
     row.append(ev);
 
     if (v.gap != null) {
       const g = el('div', 'gapcell');
-      const mag = Math.min(100, Math.abs(v.gap) / 25 * 100);
+      const mag = Math.min(100, Math.sqrt(Math.min(Math.abs(v.gap), 20) / 20) * 100);
       const gb = el('div', 'gapbar' + (v.gap >= 0 ? ' pos' : ' neg'));
       gb.title = v.gap >= 0
         ? 'The market lets him fall ' + v.gap.toFixed(0) + ' picks past our composite rank'
         : 'The market drafts him ' + Math.abs(v.gap).toFixed(0) + ' picks earlier than our composite rank';
       const gf = el('i'); gf.style.width = mag / 2 + '%';
       gb.append(gf);
-      g.append(gb, el('span', 'num gapnum', (v.gap >= 0 ? '+' : '') + v.gap.toFixed(0)));
+      const gr = Math.round(v.gap); g.append(gb, el('span', 'num gapnum', (gr > 0 ? '+' : '') + gr));
       row.append(g);
     } else {
       row.append(el('div', 'gapcell'));
     }
 
-    const note = el('p', 'candnote', v.note);
+    const note = el('p', 'candnote');
+    if (gone) { note.append(el('b', 'goneflag', 'Gone before this pick in ' + Math.round((1 - avNow) * 100) + '% of drafts. ')); }
+    note.append(document.createTextNode(v.note || ''));
     row.append(note);
     return row;
   }
@@ -681,6 +693,7 @@
       lg.append(el('span', 'lg lg-seq'), document.createTextNode(' how often the branch fires   '),
                 el('span', 'lg lg-quiet'), document.createTextNode(' projected lineup points'));
       br.append(lg);
+      br.append(el('p', 'caveat', 'Read the projections as a ranking of branches, not as your score. Each one assumes every named player is there when your turn comes; multiplying the per-pick odds together, the exact printed roster lands in well under a tenth of drafts. The ordering is the durable part \u2014 the fallbacks are how it actually plays out.'));
       root.append(br);
     }
 
@@ -729,7 +742,19 @@
       head.append(ht);
       blk.append(head);
 
-      const cands = (byRound[r.round] || []).slice();
+      let cands = (byRound[r.round] || []).slice();
+      const want = pickFor[r.round];
+      if (want && !cands.some(c => c.name === want)) {
+        const wp = findPlayer(want);
+        if (wp) cands.unshift({ name: wp.name, id: wp.id, pos: wp.pos, round: r.round, for: 0, against: 0,
+                                verdict: 'sim', gap: (wp.adp != null && wp.comp != null) ? +(wp.adp - wp.comp).toFixed(1) : null,
+                                note: 'The simulation takes him here; no outlet wrote him up at this slot.' });
+      }
+      cands.sort((a, b) => {
+        const pa = findPlayer(a.name), pb = findPlayer(b.name);
+        const aa = pa ? (availAt(pa, r.pick) || 0) : 0, ab = pb ? (availAt(pb, r.pick) || 0) : 0;
+        return (aa < 0.15) - (ab < 0.15);
+      });
       if (cands.length) {
         const tbl = el('div', 'cands');
         cands.forEach(v => tbl.append(candidateRow(v, r.pick, pickFor[r.round] === v.name)));
