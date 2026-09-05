@@ -194,6 +194,7 @@
   .build.best .bar i { background: var(--accent-ink); }
 
   /* --- round board ----------------------------------------------------------------------- */
+  .keytip { color: var(--accent-ink); text-transform: none; letter-spacing: 0; }
   .keyrow { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 11px; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-top: 10px; }
   .rd { border-top: 1px solid var(--hair); padding: 14px 0 12px; }
   .rd:first-of-type { border-top: 0; }
@@ -235,6 +236,16 @@
   .indep { font-size: 10.5px; font-weight: 600; letter-spacing: .04em; padding: 2px 6px; border-radius: 4px; white-space: nowrap; }
   .indep.pos { background: var(--track-good); color: var(--good); }
   .indep.neg { background: var(--track-bad); color: var(--bad); }
+  .xl { cursor: pointer; text-decoration: underline dotted var(--muted) 1.5px; text-underline-offset: 3px; }
+  .xl:hover, .xl:focus-visible { text-decoration-color: var(--accent); }
+  .hint { position: fixed; left: 0; right: 0; bottom: calc(48px + env(safe-area-inset-bottom)); z-index: 25; display: flex; gap: 10px; align-items: flex-start;
+          max-width: 640px; margin: 0 auto; padding: 10px 14px; background: var(--ink); color: var(--bg); font-size: 14px; line-height: 1.4; border-radius: 10px 10px 0 0; box-shadow: var(--shadow); }
+  .hint[hidden] { display: none; }
+  .hint .txt { flex: 1; }
+  .hint .hclose { border: 0; background: none; color: inherit; font-size: 20px; line-height: 1; padding: 0 2px; }
+  .howto ol { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 7px; font-size: 14px; color: var(--ink-2); }
+  .howto b { color: var(--ink); }
+  .howto .btn { margin-top: 12px; }
   .caveat { font-size: 12.5px; color: var(--ink-2); margin-top: 10px; padding-top: 9px; border-top: 1px solid var(--hair); }
 
 
@@ -428,6 +439,8 @@
   <section class="tab stack" id="tab-model" hidden></section>
 </main>
 
+<div class="hint" id="hint" hidden role="status"><span class="txt"></span><button class="hclose" aria-label="Close explanation" onclick="document.getElementById('hint').hidden = true">×</button></div>
+
 <nav class="tabs" role="tablist" aria-label="Sections">
   <button role="tab" data-tab="plan" aria-selected="true">Plan</button>
   <button role="tab" data-tab="board" aria-selected="false">Board</button>
@@ -530,7 +543,8 @@
   // ---------- meters ----------
   function meter(kind, label, val, big) {
     const m = el('div', 'meter ' + kind + (big ? ' big' : ''));
-    const lab = el('div', 'lab'); lab.append(el('span', null, label), el('b', null, fmt0(val)));
+    const lab = el('div', 'lab'); const L = el('span', null, label); const K = { 'Boom': 'boom', 'Bust': 'bust', 'Risk': 'risk' }[label] || (/2026|situation/i.test(label) ? 'sit' : null);
+    lab.append(K ? xl(L, K) : L, el('b', null, fmt0(val)));
     const track = el('div', 'track'); const fill = el('div', 'fill'); fill.style.width = Math.max(0, Math.min(100, val || 0)) + '%';
     track.append(fill); m.append(lab, track);
     m.setAttribute('role', 'img'); m.setAttribute('aria-label', label + ' ' + fmt0(val) + ' out of 100');
@@ -555,6 +569,52 @@
   }
 
   // ---------- Plan ----------
+  // Plain-language explanations. Every label and number that carries one is tappable (dotted
+  // underline); on a phone hover text is invisible, so the explanation shows in a strip above the tabs.
+  const EXPLAIN = {
+    take: 'The pick. The arrow marks who the model would take this round if he is still there.',
+    avail: 'Still there. Out of 1,500 simulated drafts, the share where he was still on the board when your turn came. 38% means in 62 of every 100 drafts someone took him first.',
+    evidence: 'Writers for and against. How many fantasy outlets argued to draft him at this spot and how many argued against. Two thirds of all writeups are positive, so 3 for and 1 against is only average, not a strong endorsement.',
+    gap: 'Market vs our rank, in picks. Plus means real drafts take him LATER than our model ranks him, so you can usually wait and still get him. Minus means people are grabbing him earlier than we would.',
+    indep: 'Points-only second opinion. Uses projected points alone, ignoring every ranking and ADP. "Buy" means our points rank him higher within his position than the market does; "fade" means lower. WR31 = the 31st receiver by our points.',
+    consensus: 'Consensus: this is who the market itself takes here.',
+    value: 'Value: writers say he goes later than he should, so he is a bargain at this pick.',
+    split: 'Split: writers genuinely disagree about him.',
+    fade: 'Fade: most writers say pass at this price.',
+    reach: 'Reach: he usually goes several rounds later, so taking him here is early.',
+    sim: 'Sim: the simulation takes him here, but no writer covered him at this slot.',
+    gone: 'Gone: the simulation almost never has him on the board at this pick. He is listed because writers put him in this round; you will not get him here.',
+    simline: 'Simulation takes. Who the simulator actually picked at this spot across 1,500 drafts, and how often. This is what happens on average, as opposed to the plan, which is what you would take if everything fell your way.',
+    branchFreq: 'How often. Out of 3,000 simulated drafts, the share where this is the situation facing you at pick 4.',
+    branchProj: 'Projected season points from your best starting lineup plus a quarter of your bench, if every named player falls to you. Use it to compare branches with each other; it is not a prediction of your score.',
+    buildPts: 'Lineup points. Average season points of your best lineup when you follow this build through all 14 rounds, over 1,500 simulated drafts. Differences under 10 points are noise.',
+    comp: 'Composite rank. Where he lands when 19 expert ranking lists are averaged. Lower is better: 3.0 means roughly the third-best player in the draft.',
+    adp: 'ADP, average draft position. The pick number where real drafts usually take him. Lower means earlier. ESPN is our league’s platform, so its number matters most.',
+    valTile: 'Value. ADP minus composite rank. Positive means real drafts let him fall past where the experts rank him.',
+    proj: 'Projected points. His expected season total in this league’s scoring. Floor is a bad-but-realistic season, ceiling a good one.',
+    vbd: 'VBD, value over baseline. Points above the last starter at his position in a 10-team league. Higher means more edge over what you could get off the waiver wire.',
+    spread: 'Spread. How much the 19 ranking lists disagree about him, from the most bullish to the most bearish. Bigger means less certainty.',
+    boom: 'Boom, 0 to 100. Chance of a top-tier season compared with others at his position. 80 means only about 20% of his position looks likelier to boom.',
+    bust: 'Bust, 0 to 100. Chance he badly misses his draft price, compared with his position. Higher is worse.',
+    risk: 'Risk, 0 to 100. How wide his range of outcomes is: injury history, disagreement between experts, unsettled role. High risk cuts both ways; it means less certainty, not a bad player.',
+    sit: '2026 situation, 0 to 100. How good his setup is this year: team offense, coaching, competition for touches, schedule. 50 is average.',
+    tier: 'Tier. A group of players the rankings treat as roughly interchangeable. Take the best one left from the tier rather than fixating on one name.',
+    posRank: 'Position rank. WR9 means the ninth receiver in our composite.',
+    espn: 'ESPN ADP. Where drafts on ESPN, our league’s platform, take him. The most relevant single number for your draft.',
+    pickNo: 'Your pick numbers. Slot 4 in a 10-team snake means you pick 4th, then 17th, 24th, 37th and so on, alternating short and long waits.',
+  };
+  function xl(node, key) { node.classList.add('xl'); node.dataset.x = key; node.setAttribute('tabindex', '0'); node.setAttribute('role', 'button'); return node; }
+  function showHint(key) {
+    const h = document.getElementById('hint'); if (!h || !EXPLAIN[key]) return;
+    h.querySelector('.txt').textContent = EXPLAIN[key]; h.hidden = false;
+  }
+  document.addEventListener('click', e => {
+    const t = e.target.closest('.xl'); if (!t) return;
+    if (t.tagName === 'BUTTON' && t.classList.contains('lnk')) return;
+    e.preventDefault(); showHint(t.dataset.x);
+  });
+  document.addEventListener('keydown', e => { if (e.key === 'Enter' && e.target.classList && e.target.classList.contains('xl')) showHint(e.target.dataset.x); });
+
   const VERDICT = {
     consensus: { lab: 'consensus', hint: 'the market’s own pick at this slot' },
     value: { lab: 'value', hint: 'outlets say he is cheaper than he should be' },
@@ -576,7 +636,7 @@
     const d = VERDICT[v] || { lab: v, hint: '' };
     const c = el('span', 'vchip v-' + v, d.lab);
     c.title = d.hint;
-    return c;
+    return xl(c, EXPLAIN[v] ? v : 'consensus');
   }
 
   // one candidate line: who, how likely he lasts, what the outlets said, how far the market is from us
@@ -586,7 +646,7 @@
     const gone = avNow != null && avNow < 0.15;
     const row = el('div', 'cand' + (isPick ? ' take' : '') + (gone ? ' gone' : ''));
     const who = el('div', 'who');
-    if (isPick) who.append(el('span', 'takemark', '▸'));
+    if (isPick) who.append(xl(el('span', 'takemark', '▸'), 'take'));
     who.append(posChip(v.pos));
     const nm = el('button', 'lnk', v.name);
     nm.addEventListener('click', () => openSheet(v.id));
@@ -598,7 +658,7 @@
     const avWrap = el('div', 'availcell');
     if (av != null) {
       avWrap.append(bar(av * 100, 'seq', 'Still on the board at pick ' + pick + ' in ' + Math.round(av * 100) + '% of simulated drafts'));
-      avWrap.append(el('b', 'num', Math.round(av * 100) + '%'));
+      avWrap.append(xl(el('b', 'num', Math.round(av * 100) + '% there'), 'avail'));
     } else {
       avWrap.append(el('span', 'muted', '–'));
     }
@@ -617,7 +677,7 @@
     const f = el('i', 'for'); f.style.width = (total ? v.for / total * 100 : 0) + '%';
     const a = el('i', 'against'); a.style.width = (total ? v.against / total * 100 : 0) + '%';
     split.append(f, a);
-    ev.append(split, el('span', 'num evnum', v.for + '–' + v.against));
+    ev.append(split, xl(el('span', 'num evnum', v.for + ' for · ' + v.against + ' against'), 'evidence'));
     }
     row.append(ev);
 
@@ -630,7 +690,7 @@
         : 'The market drafts him ' + Math.abs(v.gap).toFixed(0) + ' picks earlier than our composite rank';
       const gf = el('i'); gf.style.width = mag / 2 + '%';
       gb.append(gf);
-      const gr = Math.round(v.gap); g.append(gb, el('span', 'num gapnum', (gr > 0 ? '+' : '') + gr));
+      const gr = Math.round(v.gap); g.append(gb, xl(el('span', 'num gapnum', (gr > 0 ? '+' : '') + gr + ' picks'), 'gap'));
       row.append(g);
     } else {
       row.append(el('div', 'gapcell'));
@@ -643,10 +703,10 @@
       iv.title = 'Ranked on points over the 10-team replacement baseline, within his own position, our projections have him '
         + Math.abs(pl2.indepValue) + ' place' + (Math.abs(pl2.indepValue) === 1 ? '' : 's') + ' '
         + (pl2.indepValue > 0 ? 'higher' : 'lower') + ' than the market does. This signal never sees ADP or the ranking consensus.';
-      row.querySelector('.who').append(iv);
+      row.querySelector('.who').append(xl(iv, 'indep'));
     }
     const note = el('p', 'candnote');
-    if (gone) { note.append(el('b', 'goneflag', 'Gone before this pick in ' + Math.round((1 - avNow) * 100) + '% of drafts. ')); }
+    if (gone) { note.append(xl(el('b', 'goneflag', 'Gone before this pick in ' + Math.round((1 - avNow) * 100) + '% of drafts. '), 'gone')); }
     note.append(document.createTextNode(v.note || ''));
     row.append(note);
     return row;
@@ -674,6 +734,33 @@
     if (s.approach) { hero.append(el('hr', 'divider')); const a = el('p', 'note'); a.append(el('b', null, 'Roster build: '), document.createTextNode(s.approach)); hero.append(a); }
     root.append(hero);
 
+    // ---- how to read this ----------------------------------------------------------------
+    let seenHowto = false;
+    try { seenHowto = localStorage.getItem('howto') === '1'; } catch (e) {}
+    const how = el('section', 'card howto');
+    how.append(el('p', 'eyebrow', 'Start here'), el('h2', null, 'How to read this page'));
+    const steps = [
+      ['Branches at 4.', 'Four things can be true when your first pick comes up. The bar shows how often each one happens in simulated drafts. Look at the one that matches your board and follow its plan.'],
+      ['Builds.', 'Seven ways to shape a roster, scored by average season points across 1,500 simulated drafts. The top one is best on paper; anything within 10 points is a tie.'],
+      ['Each round.', 'Your pick number on the left. The arrow marks who the model takes if he is there. The rows under it are the other names writers put in this round.'],
+      ['% there.', 'How likely he is to still be available when you pick. Under 15% is struck through: you will not get him here, whatever the writers say.'],
+      ['for · against.', 'How many outlets argued for and against him at this spot. Most writeups are positive, so 3 for and 1 against is average.'],
+      ['± picks.', 'Where real drafts take him compared with our rank. Plus means you can wait for him; minus means people are reaching.'],
+      ['Buy / fade.', 'A second opinion from projected points alone, ignoring rankings and ADP. When it disagrees with the market, that is worth a look.'],
+      ['The coloured meters', 'in each player’s sheet run 0 to 100: Boom is the chance of a big season, Bust the chance he flops at his price, Risk how uncertain he is, 2026 how good his situation is this year. Tap any dotted label anywhere for a one-line explanation.'],
+    ];
+    const ol = el('ol');
+    steps.forEach(([b, t]) => { const li = el('li'); li.append(el('b', null, b + ' '), document.createTextNode(t)); ol.append(li); });
+    if (!seenHowto) {
+      how.append(ol);
+      const ok = el('button', 'btn small', 'Got it, hide this');
+      ok.addEventListener('click', () => { try { localStorage.setItem('howto', '1'); } catch (e) {} renderPlan(); });
+      how.append(ok);
+    } else {
+      const d = el('details', 'debate'); d.append(el('summary', null, 'Show the guide again')); d.append(ol); how.append(d);
+    }
+    root.append(how);
+
     // ---- what happens at pick 4 -----------------------------------------------------------
     if (opt && opt.branches && opt.branches.length) {
       const br = el('section', 'card');
@@ -696,11 +783,11 @@
         head.append(t);
         r.append(head);
         const fq = el('div', 'bfreq');
-        fq.append(bar(pct, 'seq', b.freq + ' of simulated boards'), el('span', 'num', b.freq));
+        fq.append(bar(pct, 'seq', b.freq + ' of simulated boards'), xl(el('span', 'num', b.freq), 'branchFreq'));
         r.append(fq);
         const pj = el('div', 'bproj');
         pj.append(bar(b.proj / maxProj * 100, 'quiet', 'Projected lineup ' + b.proj + ', floor ' + b.floor + ', ceiling ' + b.ceil));
-        pj.append(el('span', 'num', String(b.proj)));
+        pj.append(xl(el('span', 'num', b.proj + ' pts'), 'branchProj'));
         r.append(pj);
         list.append(r);
       });
@@ -727,7 +814,7 @@
         const row = el('div', 'build' + (isBest ? ' best' : ''));
         row.append(el('div', 'blab', (STRAT_NAME[r.strategy] || r.strategy) + ' · ' + r.profile));
         row.append(bar((r.mean - lo) / (hi - lo) * 100, 'seq', 'Projected ' + r.mean + ' · floor ' + r.floor + ' · ceiling ' + r.ceil));
-        row.append(el('span', 'num', String(r.mean)));
+        row.append(xl(el('span', 'num', String(r.mean)), 'buildPts'));
         chart.append(row);
       });
       sim.append(chart);
@@ -740,10 +827,9 @@
     board.append(el('p', 'eyebrow', 'Round by round · picks ' + myPicks(10, 4, 14).slice(0, 6).join(' · ') + ' …'),
                  el('h2', null, 'The board'));
     const lg2 = el('div', 'keyrow');
-    lg2.append(el('span', null, '▸ the pick'), el('span', null, 'THERE = chance he lasts to your pick'),
-               el('span', null, 'FOR–AGAINST = outlets arguing each way, against a 67% positive base rate'),
-               el('span', null, 'GAP = picks the market is from our rank'),
-               el('span', null, 'BUY / FADE = our projections only, no ADP'));
+    lg2.append(xl(el('span', null, '▸ = the pick'), 'take'), xl(el('span', null, '% there = chance he lasts to you'), 'avail'),
+               xl(el('span', null, 'for · against = writers each way'), 'evidence'), xl(el('span', null, '± picks = market vs our rank'), 'gap'),
+               xl(el('span', null, 'buy / fade = points-only opinion'), 'indep'), el('span', 'keytip', 'tap any dotted label for a plain explanation'));
     board.append(lg2);
     const branchA = opt && opt.branches ? opt.branches[0] : null;
     const pickFor = {};
@@ -753,7 +839,7 @@
     s.rounds.forEach(r => {
       const blk = el('div', 'rd');
       const head = el('div', 'rdhead');
-      const pk = el('div', 'pick'); pk.append(el('b', null, '#' + r.pick), el('span', null, 'Rd ' + r.round)); head.append(pk);
+      const pk = el('div', 'pick'); pk.append(xl(el('b', null, '#' + r.pick), 'pickNo'), el('span', null, 'Rd ' + r.round)); head.append(pk);
       const ht = el('div');
       ht.append(el('div', 'pri', r.priority));
       if (r.debate && r.debate.verdict) ht.append(el('div', 'rverdict', r.debate.verdict));
@@ -787,7 +873,7 @@
         const fr = (META.mc.rounds['robust-rb/balanced'] || META.mc.rounds['hero-rb/balanced'] || [])[r.round - 1];
         if (fr && fr.length) {
           const sl = el('p', 'simline');
-          sl.append(el('b', null, 'Simulation takes: '));
+          sl.append(xl(el('b', null, 'Simulation takes: '), 'simline'));
           fr.slice(0, 3).forEach(([n, f], i, arr) => { sl.append(playerLink(n)); sl.append(document.createTextNode(' ' + Math.round(f * 100) + '%' + (i < arr.length - 1 ? ' · ' : ''))); });
           blk.append(sl);
         }
@@ -908,11 +994,11 @@
     const comp = el('span', 'comp num', fmt1(p.comp)); comp.append(el('small', null, 'Comp')); b.append(comp);
     const meta = el('span', 'meta');
     meta.append(metaBit('', p.team + ' · bye ' + p.bye));
-    meta.append(metaBit('ADP', fmt1(p.adp)));
-    if (p.espnAdp != null) meta.append(metaBit('ESPN', fmt1(p.espnAdp)));
-    meta.append(metaBit('Val', signed(p.value)));
-    if (p.vbd != null) meta.append(metaBit('VBD', signed0(p.vbd)));
-    meta.append(metaBit('Tier', String(p.tier)));
+    meta.append(xl(metaBit('ADP', fmt1(p.adp)), 'adp'));
+    if (p.espnAdp != null) meta.append(xl(metaBit('ESPN', fmt1(p.espnAdp)), 'espn'));
+    meta.append(xl(metaBit('Val', signed(p.value)), 'valTile'));
+    if (p.vbd != null) meta.append(xl(metaBit('VBD', signed0(p.vbd)), 'vbd'));
+    meta.append(xl(metaBit('Tier', String(p.tier)), 'tier'));
     if (p.flag) meta.append(el('span', 'flag', p.flag));
     b.append(meta);
     const ms = el('span', 'meters'); ms.append(meter('boom', 'Boom', p.boom), meter('bust', 'Bust', p.bust), meter('risk', 'Risk', p.risk), meter('sit', '2026', p.sit)); b.append(ms);
@@ -1044,8 +1130,10 @@
     sheet.append(panel); sheet.hidden = false; document.body.style.overflow = 'hidden';
     panel.scrollTop = 0;
   }
+  const TILE_KEY = { 'Composite': 'comp', 'ADP': 'adp', 'Value': 'valTile', 'VBD': 'vbd', 'Spread': 'spread' };
   function tile(lab, val, sub, tone) {
-    const t = el('div', 'tile'); t.append(el('div', 'lab', lab));
+    const t = el('div', 'tile'); const key = TILE_KEY[lab] || (lab.startsWith('Proj') ? 'proj' : null);
+    const L = el('div', 'lab', lab); t.append(key ? xl(L, key) : L);
     const v = el('div', 'val num' + (tone ? ' ' + tone : ''), val); t.append(v);
     if (sub) t.append(el('div', 'lab', sub));
     return t;
