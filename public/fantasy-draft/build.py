@@ -290,7 +290,16 @@ def main():
         worst = max([max(outlet_ranks.values())] + ([meta["fantasypros_worst"]] if meta.get("fantasypros_worst") else []))
 
         # --- ADP ------------------------------------------------------------------------------
-        adps = {k: v for k, v in (r.get("adp") or {}).items() if v is not None}
+        adps = {}
+        for k, v in (r.get("adp") or {}).items():
+            if v is None:
+                continue
+            if k == "draftsharks_half_consensus":      # feed is round.pick for a 12-team draft, e.g. 6.2 = round 6, pick 2
+                rd, pk = divmod(round(v * 10), 10)
+                v = (rd - 1) * 12 + (pk if pk else 10)
+            if v > 300:                                # undrafted placeholders (701, 3054 ...)
+                continue
+            adps[k] = v
         adp_pairs = [(v, ADP_WEIGHT.get(k, 0.25)) for k, v in adps.items()]
         adp = wmean(adp_pairs)
         plat = [adps[k] for k in ADP_PLATFORMS if k in adps]
@@ -320,7 +329,7 @@ def main():
         if rk.get("games_missed_last3") is not None:
             inj_parts.append(clamp(rk["games_missed_last3"] / 18.0))
         injury = sum(inj_parts) / len(inj_parts) if inj_parts else None
-        camp_text = rk.get("camp_status") or ad.get("camp_status")
+        camp_text = ad.get("camp_status") or rk.get("camp_status")   # hand-curated context (newer, cross-checked) wins over article snippets
         camp, camp_flag = camp_status(camp_text)
         sit = [f for f in risk_factors if any(w in f.lower() for w in SITUATION_WORDS)]
 
