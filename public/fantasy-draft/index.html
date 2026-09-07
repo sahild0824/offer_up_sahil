@@ -417,6 +417,7 @@
   .pastebox .ftop input { width: 18px; height: 18px; accent-color: var(--accent); }
   .pm-mine { color: var(--accent-ink); font-weight: 600; }
   .pm-miss { color: var(--bad); }
+  .whoami { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--hair); }
   .settings label { display: grid; gap: 4px; font-size: 12px; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; }
   .settings input { border: 1px solid var(--hair); background: var(--surface); border-radius: 8px; padding: 8px 10px; font-size: 16px; width: 100%; }
   .pickline { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
@@ -514,7 +515,8 @@
   const POS = ['ALL', 'QB', 'RB', 'WR', 'TE'];
 
   // ---------- state ----------
-  const state = { tab: 'plan', pos: 'ALL', sort: 'comp', q: '', taken: new Set(), mine: [], teams: 10, slot: 4, room: 'espn', scoring: 'ppr', myTeam: '' };
+  const MY_TEAM = 'Kai and his Guy';
+  const state = { tab: 'plan', pos: 'ALL', sort: 'comp', q: '', taken: new Set(), mine: [], teams: 10, slot: 4, room: 'espn', scoring: 'ppr', myTeam: MY_TEAM, picks: {} };
   const OVERLAY = ['comp', 'adp', 'adpSd', 'adpSources', 'value', 'valueScore', 'proj', 'projSources', 'vbd', 'floorPts', 'ceilPts', 'boom', 'bust', 'risk', 'sit', 'tier', 'posRank', 'flag', 'mcAvail', 'boomWhy', 'bustWhy', 'riskWhy'];
   PLAYERS.forEach(p => { p._base = {}; OVERLAY.forEach(k => { p._base[k] = p[k]; }); });
   const SCORING_NAME = { ppr: 'full PPR', half: 'half PPR', std: 'standard (no PPR)' };
@@ -541,13 +543,14 @@
         state.tab = s.tab || 'plan';
         state.room = s.room || 'espn';
         state.scoring = s.scoring || 'ppr';
-        state.myTeam = s.myTeam || '';
+        state.myTeam = s.myTeam != null ? s.myTeam : MY_TEAM;
+        state.picks = s.picks || {};
       }
     } catch (e) { /* storage unavailable: run in memory */ }
   }
   function save() {
     try {
-      localStorage.setItem(KEY, JSON.stringify({ taken: [...state.taken], mine: state.mine, teams: state.teams, slot: state.slot, tab: state.tab, room: state.room, scoring: state.scoring, myTeam: state.myTeam }));
+      localStorage.setItem(KEY, JSON.stringify({ taken: [...state.taken], mine: state.mine, teams: state.teams, slot: state.slot, tab: state.tab, room: state.room, scoring: state.scoring, myTeam: state.myTeam, picks: state.picks }));
     } catch (e) { /* ignore */ }
   }
 
@@ -1299,39 +1302,103 @@
     cands.sort((a, b) => (state.taken.has(a.id) - state.taken.has(b.id)) || (a.comp - b.comp));
     return cands[0];
   }
-  // Overall pick number carried by a pasted line, if it carries one at all.
-  // Understands "R2 P7", ESPN's "2.07" round.pick, and a plain leading "17.".
-  function parsePickNo(line, teams) {
-    let m = line.match(/^\s*r\s*(\d{1,2})\s*[.\-\s]*p\s*(\d{1,2})\b/i);
-    if (m) return (parseInt(m[1], 10) - 1) * teams + parseInt(m[2], 10);
-    m = line.match(/^\s*(\d{1,2})\.(\d{2})\b/);
-    if (m) return (parseInt(m[1], 10) - 1) * teams + parseInt(m[2], 10);
-    m = line.match(/^\s*(\d{1,3})\s*[.):\-]/);
-    if (m) return parseInt(m[1], 10);
-    return null;
+  // A pick's metadata line: "R1, P4 - Kai and his Guy", "R1 P4", ESPN's "2.07".
+  // Anchored end to end so a player line can never be mistaken for one.
+  function parseMeta(line, teams) {
+    let m = line.match(/^\s*r\s*(\d{1,2})\s*[,.\-\s]+p\s*(\d{1,2})\s*(?:[-\u2013\u2014:]\s*(.*))?$/i);
+    if (!m) m = line.match(/^\s*(\d{1,2})\.(\d{2})\s*(?:[-\u2013\u2014:]\s*(.*))?$/);
+    if (!m) return null;
+    const r = parseInt(m[1], 10); const p = parseInt(m[2], 10);
+    if (!r || !p || p > teams) return null;
+    return { round: r, slot: p, no: (r - 1) * teams + p, owner: (m[3] || '').trim() };
   }
-  // Marks a pasted block. A line is yours when its overall pick number lands on
-  // one of your snake picks, or when it names your team. Pick numbers come from
-  // the line when it has one, otherwise they run on from where the board stands.
+  const ownerMatch = (owner, my) => {
+    if (!owner || !my) return false;
+    const o = normQ(owner); if (!o) return false;
+    return o === my || o.includes(my) || my.includes(o);
+  };
+  // state.mine is derived from the recorded owners whenever a team name is known,
+  // so naming your team later relabels everything already pasted.
+  function recomputeMine() {
+    const my = normQ(state.myTeam || ''); if (!my) return;
+    const manual = state.mine.filter(id => !state.picks[id]);
+    const owned = Object.keys(state.picks).filter(id => ownerMatch(state.picks[id].owner, my));
+    const all = [...new Set([...manual, ...owned])].filter(id => state.taken.has(id));
+    all.sort((a, b) => ((state.picks[a] || {}).no || 1e9) - ((state.picks[b] || {}).no || 1e9));
+    state.mine = all;
+  }
+  function parsePasteLine(line) {
+    let s = line.replace(/^[\s*\u2022\-\u2013]+/, ' ');
+    s = s.split('/')[0];
+    s = s.replace(/\([^)]*\)/g, ' ').replace(/\bpick\b/gi, ' ');
+    s = s.replace(/^\s*(?:r?\d+\s*[.):\-]?\s*)+/i, ' ');
+    const q = normQ(s); if (!q) return null;
+    const toks = q.split(' ').filter(Boolean); if (!toks.length) return null;
+    const hit = p => normQ(p.name).split(' ').filter(Boolean)
+      .every(w => toks.some(t => t === w || w.startsWith(t) || t.startsWith(w)));
+    let cands = PLAYERS.filter(hit);
+    if (!cands.length) cands = PLAYERS.filter(p => matches(p, q));
+    if (!cands.length) return null;
+    cands.sort((a, b) => (state.taken.has(a.id) - state.taken.has(b.id)) || (a.comp - b.comp));
+    return cands[0];
+  }
+  // Splits a pasted block into records. ESPN writes two lines per pick - the
+  // player, then "R1, P4 - Team" - so a metadata line is paired with the player
+  // line next to it. Commas are only a separator on lines that are neither.
+  function pasteRecords(text, teams) {
+    const raw = text.split(/\r?\n/).map(s => s.trim()).filter(Boolean);
+    const lines = [];
+    raw.forEach(l => {
+      if (parseMeta(l, teams) || l.includes('/') || !l.includes(',')) { lines.push(l); return; }
+      l.split(',').map(s => s.trim()).filter(Boolean).forEach(x => lines.push(x));
+    });
+    const kinds = lines.map(l => { const m = parseMeta(l, teams); return m ? { t: 'meta', m } : { t: 'player', raw: l }; });
+    const used = new Set(); const recs = [];
+    kinds.forEach((k, i) => {
+      if (k.t !== 'player') return;
+      let meta = null;
+      if (kinds[i + 1] && kinds[i + 1].t === 'meta' && !used.has(i + 1)) { meta = kinds[i + 1].m; used.add(i + 1); }
+      else if (kinds[i - 1] && kinds[i - 1].t === 'meta' && !used.has(i - 1)) { meta = kinds[i - 1].m; used.add(i - 1); }
+      recs.push({ raw: k.raw, meta });
+    });
+    return recs;
+  }
+  // Marks a pasted block. Every record carrying "R#, P#" is placed by that number,
+  // so duplicates and out-of-order pastes are safe; records without one run on from
+  // where the board stands. Ownership comes from the team name when it is known,
+  // otherwise from whether the pick number is one of yours.
   function markList(text, fromTop) {
-    const lines = text.split(/[\n,;]+/).map(s => s.trim()).filter(Boolean);
-    const mineSet = new Set(myPicks(state.teams, state.slot, 14));
-    const myTeam = normQ(state.myTeam || '');
+    const teams = state.teams;
+    const recs = pasteRecords(text, teams);
+    const mineSet = new Set(myPicks(teams, state.slot, 14));
+    const my = normQ(state.myTeam || '');
     let seq = fromTop ? 0 : state.taken.size;
     const gone = []; const mine = []; const missed = []; const dupe = [];
-    lines.forEach(line => {
-      const explicit = parsePickNo(line, state.teams);
-      const no = explicit != null ? explicit : seq + 1;
-      seq = no;
-      const p = parsePasteLine(line);
-      if (!p) { missed.push(line); return; }
-      if (state.taken.has(p.id)) { dupe.push(p.name); return; }
-      const isMine = (myTeam && normQ(line).includes(myTeam)) || mineSet.has(no);
+    const owners = []; let maxSlot = 0; let learnedSlot = null;
+    recs.forEach(r => {
+      const no = r.meta ? r.meta.no : seq + 1; seq = no;
+      if (r.meta) {
+        if (r.meta.slot > maxSlot) maxSlot = r.meta.slot;
+        if (r.meta.owner) {
+          if (!owners.some(o => normQ(o) === normQ(r.meta.owner))) owners.push(r.meta.owner);
+          if (r.meta.round === 1 && my && ownerMatch(r.meta.owner, my)) learnedSlot = r.meta.slot;
+        }
+      }
+      const p = parsePasteLine(r.raw);
+      if (!p) { missed.push(r.raw); return; }
+      const owner = r.meta ? r.meta.owner : '';
+      const known = state.taken.has(p.id);
+      state.picks[p.id] = { no, owner: owner || ((state.picks[p.id] || {}).owner || '') };
+      if (known) { dupe.push(p.name); return; }
       state.taken.add(p.id);
-      if (isMine) { state.mine.push(p.id); LIVE.undo.push({ t: 'mine', id: p.id }); mine.push(p.name + ' at #' + no); }
+      const isMine = my ? (owner ? ownerMatch(owner, my) : mineSet.has(no)) : mineSet.has(no);
+      if (isMine) { if (!state.mine.includes(p.id)) state.mine.push(p.id); LIVE.undo.push({ t: 'mine', id: p.id }); mine.push(p.name + ' at #' + no); }
       else { LIVE.undo.push({ t: 'gone', id: p.id }); gone.push(p.name); }
     });
-    return { gone, mine, missed, dupe };
+    if (maxSlot > 1 && maxSlot !== teams && maxSlot <= 20) { state.teams = maxSlot; }
+    if (learnedSlot && learnedSlot !== state.slot) { state.slot = learnedSlot; }
+    recomputeMine();
+    return { gone, mine, missed, dupe, owners, learnedSlot, learnedTeams: state.teams !== teams ? state.teams : null };
   }
   function commit() { save(); renderDraft(); updateClock(); }
   function markGone(id) { state.taken.add(id); LIVE.undo.push({ t: 'gone', id }); LIVE.q = ''; LIVE.paste = []; commit(); }
@@ -1380,10 +1447,10 @@
     const inp = el('input', 'lsearch'); inp.type = 'search'; inp.placeholder = 'Type a name · Enter = gone'; inp.autocomplete = 'off'; inp.value = LIVE.q; inp.setAttribute('aria-label', 'Find a player');
     const pd = el('details', 'pastebox');
     pd.append(el('summary', null, 'Paste a list of picks'));
-    const pta = el('textarea'); pta.rows = 4; pta.placeholder = 'Paste from the ESPN draft board or chat, one pick per line:\n1. Jahmyr Gibbs (DET RB)\n2.07 Bijan Robinson\nJ. Chase';
+    const pta = el('textarea'); pta.rows = 4; pta.placeholder = '* Jahmyr Gibbs / DET RB\nR1, P1 - Audubon Condors\n* Jonathan Taylor / IND RB\nR1, P2 - NW BIRDIES';
     pta.setAttribute('aria-label', 'Paste picks to mark off the board');
     const mp = myPicks(state.teams, state.slot, 14);
-    pd.append(el('p', 'note', 'Yours are picked out for you: a line lands on your team when its pick number is one of ' + mp.slice(0, 4).join(', ') + '…, or when it names your team below. Numbers come from the line (“12.”, “2.07”, “R2 P7”); without them the list runs on from pick #' + (state.taken.size + 1) + '.'));
+    pd.append(el('p', 'note', 'Paste the board straight out of ESPN, "R1, P4 - Team" lines and all. Every pick that carries a number is placed by it, so repeats and out-of-order pastes are safe. Yours are the ones naming your team' + (state.myTeam ? ' (' + state.myTeam + ')' : ', which you can set below or tap after the first paste') + '; without a team name it falls back to your slot ' + state.slot + ' picks: ' + mp.slice(0, 4).join(', ') + '.'));
     const ftl = el('label', 'ftop'); const ftc = el('input'); ftc.type = 'checkbox'; ftc.checked = !!LIVE.fromTop;
     ftc.addEventListener('change', () => { LIVE.fromTop = ftc.checked; });
     ftl.append(ftc, el('span', null, 'This list starts at pick 1')); pd.append(ftl);
@@ -1393,16 +1460,30 @@
       const r = markList(pta.value, ftc.checked);
       if (!r.gone.length && !r.mine.length && !r.dupe.length && !r.missed.length) return;
       LIVE.paste = [];
+      if (r.learnedTeams) LIVE.paste.push({ k: 'ok', t: 'Read ' + r.learnedTeams + ' teams from the pick numbers.' });
+      if (r.learnedSlot) LIVE.paste.push({ k: 'ok', t: 'Your slot is ' + r.learnedSlot + ', from your round-1 pick.' });
       if (r.mine.length) LIVE.paste.push({ k: 'mine', t: 'Yours: ' + r.mine.join(', ') + '.' });
       if (r.gone.length) LIVE.paste.push({ k: 'ok', t: 'Off the board (' + r.gone.length + '): ' + r.gone.join(', ') + '.' });
-      if (r.dupe.length) LIVE.paste.push({ k: 'ok', t: 'Already marked: ' + r.dupe.join(', ') + '.' });
+      if (r.dupe.length) LIVE.paste.push({ k: 'ok', t: 'Already marked, left alone (' + r.dupe.length + '): ' + r.dupe.join(', ') + '.' });
       if (r.missed.length) LIVE.paste.push({ k: 'miss', t: 'No match: ' + r.missed.join(' | ') + '. Try just the last name.' });
+      LIVE.owners = (!state.myTeam && r.owners.length) ? r.owners : null;
       LIVE.pasteOpen = true; LIVE.fromTop = false;
       commit();
     });
     pd.append(pta, pbtn, pmsg);
     if (LIVE.pasteOpen) pd.open = true;
     if (LIVE.paste && LIVE.paste.length) LIVE.paste.forEach(m => { const s = el('span', 'pm-' + m.k, m.t); pmsg.append(s, el('br')); });
+    if (LIVE.owners && LIVE.owners.length) {
+      const pick = el('div', 'whoami');
+      pick.append(el('p', 'note', 'Which of these is you? Tap it once and every pick in the paste is re-sorted, now and next time.'));
+      const row = el('div', 'chips');
+      LIVE.owners.forEach(o => {
+        const b = el('button', 'chip', o); b.type = 'button';
+        b.addEventListener('click', () => { state.myTeam = o; recomputeMine(); LIVE.owners = null; LIVE.paste = [{ k: 'mine', t: 'Set to ' + o + '. Your picks: ' + (state.mine.map(id => (byId.get(id) || {}).name).filter(Boolean).join(', ') || 'none yet') + '.' }]; commit(); });
+        row.append(b);
+      });
+      pick.append(row); pmsg.append(pick);
+    }
     const res = el('div', 'lres');
     const renderRes = () => {
       res.replaceChildren();
@@ -1515,16 +1596,16 @@
     roomL.append(roomS); sg.append(roomL);
     const teamL = el('label'); teamL.append(document.createTextNode('My team name'));
     const teamI = el('input'); teamI.type = 'text'; teamI.value = state.myTeam || ''; teamI.placeholder = 'as ESPN shows it';
-    teamI.addEventListener('change', () => { state.myTeam = teamI.value.trim(); commit(); });
+    teamI.addEventListener('change', () => { state.myTeam = teamI.value.trim(); recomputeMine(); LIVE.owners = null; commit(); });
     teamL.append(teamI); teamL.style.gridColumn = '1 / -1'; sg.append(teamL);
     const btnRow = el('div', 'setbtns');
     const reset = el('button', 'btn small', 'Clear picks'); reset.type = 'button';
-    reset.addEventListener('click', () => { if (!confirm('Clear every taken and drafted mark? League settings stay as they are.')) return; state.taken = new Set(); state.mine = []; LIVE.undo = []; LIVE.q = ''; LIVE.paste = []; commit(); });
+    reset.addEventListener('click', () => { if (!confirm('Clear every taken and drafted mark? League settings stay as they are.')) return; state.taken = new Set(); state.mine = []; state.picks = {}; LIVE.undo = []; LIVE.q = ''; LIVE.paste = []; LIVE.owners = null; commit(); });
     const clearAll = el('button', 'btn small', 'Full reset'); clearAll.type = 'button';
     clearAll.addEventListener('click', () => {
       if (!confirm('Full reset: clears every mark, and puts teams, slot, room, scoring and the board filters back to their defaults.')) return;
-      state.taken = new Set(); state.mine = []; state.teams = 10; state.slot = 4; state.room = 'espn'; state.pos = 'ALL'; state.sort = 'comp'; state.q = ''; state.myTeam = '';
-      LIVE.undo = []; LIVE.fromTop = false; LIVE.q = ''; LIVE.paste = []; LIVE.pasteOpen = false; LIVE.pos = 'ALL';
+      state.taken = new Set(); state.mine = []; state.teams = 10; state.slot = 4; state.room = 'espn'; state.pos = 'ALL'; state.sort = 'comp'; state.q = ''; state.myTeam = MY_TEAM; state.picks = {};
+      LIVE.undo = []; LIVE.fromTop = false; LIVE.owners = null; LIVE.q = ''; LIVE.paste = []; LIVE.pasteOpen = false; LIVE.pos = 'ALL';
       applyScoring('ppr');
       const qi = document.getElementById('q'); if (qi) qi.value = '';
       const si = document.getElementById('sort'); if (si) si.value = 'comp';
