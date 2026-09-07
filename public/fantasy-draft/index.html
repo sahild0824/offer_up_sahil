@@ -399,6 +399,21 @@
   .stag.wait { background: var(--track-good); color: var(--good); }
   .stag.flip { background: var(--surface-2); color: var(--ink-2); }
   .r3 { font-size: 12.5px; color: var(--ink-2); }
+  .card > .verdict:first-child { margin-top: 0; }
+  .verdict { border: 2px solid var(--accent); background: var(--accent-soft); border-radius: 12px; padding: 14px 16px 16px; margin: 4px 0 12px; }
+  .verdict.live { border-width: 3px; }
+  .vlab { font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--accent-ink); }
+  .vname { display: flex; align-items: center; gap: 10px; margin-top: 6px; flex-wrap: wrap; }
+  .vlnk { border: 0; background: none; padding: 0; text-align: left; font-family: var(--display); font-size: 40px; font-weight: 700; line-height: 1; letter-spacing: .01em; color: var(--ink); }
+  .vwhy { margin-top: 8px; font-size: 15.5px; line-height: 1.35; color: var(--ink); }
+  .vgo { width: 100%; margin-top: 12px; padding: 15px; font-size: 19px; }
+  .valt { margin-top: 10px; font-size: 13px; color: var(--ink-2); }
+  .valtlnk { border: 0; background: none; padding: 0; font: inherit; font-weight: 700; color: var(--accent-ink); text-decoration: underline; }
+  .moreopts summary { cursor: pointer; font-size: 13px; font-weight: 600; color: var(--ink-2); list-style: none; padding: 4px 0; }
+  .moreopts summary::before { content: '\25B8  '; }
+  .moreopts[open] summary::before { content: '\25BE  '; }
+  .moreopts summary::-webkit-details-marker { display: none; }
+  .moreopts .seg { margin-top: 8px; }
   .ract { display: flex; gap: 8px; margin-top: 4px; }
   .ract .btn.mine { flex: 1; }
   /* Draft tab */
@@ -1264,7 +1279,7 @@
       if (c.RB + c.WR < 5 && rnd >= 6) adj += 0.05;
       if (c[pos] >= 5) adj -= 0.30;
     }
-    if (pos === 'QB' && c.QB === 0 && rnd >= 8) adj += 0.15 + 0.12 * (rnd - 8);
+    if (pos === 'QB' && c.QB === 0 && rnd >= 5) adj += 0.15 + 0.12 * (rnd - 5);
     if (pos === 'TE' && c.TE === 0 && rnd >= 7) adj += 0.12 + 0.12 * (rnd - 7);
     return adj;
   }
@@ -1276,6 +1291,19 @@
     s += needAdj(c, rnd, p.pos);
     if (myPick > cur) s -= (1 - pSurvive(p, cur, myPick)) * 0.5;   // might not reach me
     return s;
+  }
+  // The single most decisive thing about this pick, in one clause.
+  function pickReason(p, runnerUp, c, cur, target, gap) {
+    const bits = [];
+    if (c[p.pos] < (STARTERS[p.pos] || 1)) bits.push('fills your ' + p.pos + (c[p.pos] + 1) + ' spot');
+    const surv = target ? pSurvive(p, cur, target) : null;
+    if (surv != null && surv < 0.35) bits.push('will not last to #' + target);
+    else if (surv != null && surv >= 0.75) bits.push('but he would likely still be there at #' + target);
+    if (runnerUp && p.proj && runnerUp.proj && p.proj - runnerUp.proj >= 15) bits.push('+' + (p.proj - runnerUp.proj) + ' points on the next man');
+    if (p.bust >= 75) bits.push('bust risk ' + p.bust + ' is the trade-off');
+    else if (p.bust <= 30 && p.boom >= 70) bits.push('high floor and high ceiling');
+    if (!bits.length) bits.push('best score left on the board for your roster');
+    return bits.slice(0, 2).join(', ');
   }
   function needLabel(c, pos) {
     if (pos === 'QB' || pos === 'TE') return c[pos] === 0 ? 'fills ' + pos + '1' : 'backup ' + pos;
@@ -1522,13 +1550,52 @@
     // ---- what to take -------------------------------------------------------------------
     if (info.next != null && !skillDone) {
       const rec = el('section', 'card');
-      rec.append(el('p', 'eyebrow', onClock ? 'Your pick, ranked for your roster' : 'If the board holds until #' + myPick), el('h2', null, onClock ? 'Take one of these' : 'Getting ready for #' + myPick));
-      const seg = el('div', 'seg');
-      ['ALL', 'RB', 'WR', 'TE', 'QB'].forEach(pos => { const b = el('button', null, pos); b.type = 'button'; b.setAttribute('aria-pressed', LIVE.pos === pos ? 'true' : 'false'); b.addEventListener('click', () => { LIVE.pos = pos; renderDraft(); }); seg.append(b); });
-      rec.append(seg);
+      if (!onClock) rec.append(el('p', 'eyebrow', 'If the board holds until #' + myPick), el('h2', null, 'Getting ready for #' + myPick));
       const cur = info.cur;
       const avail = PLAYERS.filter(p => !state.taken.has(p.id) && (LIVE.pos === 'ALL' || p.pos === LIVE.pos));
-      const scored = avail.map(p => [liveScore(p, rnd, cur, myPick, c), p]).sort((a, b) => b[0] - a[0]).slice(0, LIVE.pos === 'ALL' ? 7 : 5);
+      const ranked = avail.map(p => [liveScore(p, rnd, cur, myPick, c), p]).sort((a, b) => b[0] - a[0]);
+      const scored = ranked.slice(0, LIVE.pos === 'ALL' ? 7 : 5);
+
+      // ---- the verdict: one pick, stated once, before any of the numbers ----
+      if (scored.length) {
+        const [s1, top] = scored[0];
+        const alt = scored[1] ? scored[1][1] : null;
+        const gap = scored[1] ? s1 - scored[1][0] : 99;
+        const close = gap < 0.12;
+        const target = onClock ? afterPick : myPick;
+        const v = el('section', 'verdict' + (onClock ? ' live' : ''));
+        v.append(el('p', 'vlab', onClock ? 'Take him' : 'Leaning, for #' + myPick));
+        const nameRow = el('div', 'vname');
+        nameRow.append(posChip(top.pos));
+        const nb = el('button', 'vlnk', top.name); nb.type = 'button';
+        nb.addEventListener('click', () => openSheet(top.id));
+        nameRow.append(nb);
+        v.append(nameRow);
+        v.append(el('p', 'vwhy', pickReason(top, alt, c, cur, target, gap)));
+        if (onClock) {
+          const go = el('button', 'btn mine vgo', 'Draft ' + top.name.split(' ').slice(-1)[0]); go.type = 'button';
+          go.addEventListener('click', () => markMine(top.id));
+          v.append(go);
+        }
+        if (alt) {
+          const or = el('p', 'valt');
+          or.append(document.createTextNode(close ? 'Nearly level with ' : 'Next best is '));
+          const ab = el('button', 'valtlnk', alt.name); ab.type = 'button';
+          ab.addEventListener('click', () => openSheet(alt.id));
+          or.append(ab, document.createTextNode(' (' + alt.pos + ', ' + (alt.proj || 0) + ' pts)' + (close ? ' - either is fine.' : '.')));
+          v.append(or);
+        }
+        rec.append(v);
+      }
+
+      const more = el('details', 'moreopts');
+      more.append(el('summary', null, 'Other options and the numbers'));
+      const seg = el('div', 'seg');
+      ['ALL', 'RB', 'WR', 'TE', 'QB'].forEach(pos => { const b = el('button', null, pos); b.type = 'button'; b.setAttribute('aria-pressed', LIVE.pos === pos ? 'true' : 'false'); b.addEventListener('click', () => { LIVE.pos = pos; LIVE.moreOpen = true; renderDraft(); }); seg.append(b); });
+      more.append(seg);
+      if (LIVE.moreOpen) more.open = true;
+      more.addEventListener('toggle', () => { LIVE.moreOpen = more.open; });
+      rec.append(more);
       const list = el('div', 'recs');
       const vById = {}; (META.verdicts || []).forEach(v => { vById[v.id] = v; });
       scored.forEach(([s, p], i) => {
@@ -1564,9 +1631,10 @@
         act.append(m, g); row.append(act);
         list.append(row);
       });
-      rec.append(list);
-      rec.append(el('p', 'legend', onClock ? 'Ranked by the model’s composite, your roster needs this round, and boom / bust / risk. “Take now” means he probably will not last to your next pick; “can wait” means he probably will. Tap a name for the full sheet.' : 'Ranked for your pick at #' + myPick + '. The tag is the chance he is still on the board when it comes up; as picks are marked, this list updates by itself.'));
+      more.append(list);
+      more.append(el('p', 'legend', onClock ? 'Ranked by the model’s composite, your roster needs this round, and boom / bust / risk. “Take now” means he probably will not last to your next pick; “can wait” means he probably will. Tap a name for the full sheet.' : 'Ranked for your pick at #' + myPick + '. The tag is the chance he is still on the board when it comes up; as picks are marked, this list updates by itself.'));
       root.append(rec);
+      if (onClock) root.insertBefore(rec, mark);   // on the clock, the verdict comes before the search box
     } else if (info.next != null) {
       const k = el('section', 'card'); k.append(el('p', 'eyebrow', 'Rounds 13 and 14'), el('h2', null, 'Defense, then kicker'));
       k.append(el('p', 'note', 'Chargers open softest (Arizona, Las Vegas in weeks 1-2); Chiefs are the best weeks 2-4; Packers and Bears also open soft. Kicker last: Aubrey, then Dicker, Fairbairn, Pineiro, Mevis. Neither position is in the player pool, so mark these with “Skip a pick I missed” to keep the count right.'));
