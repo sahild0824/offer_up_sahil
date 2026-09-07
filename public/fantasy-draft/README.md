@@ -15,6 +15,17 @@ Tap any player for the full sheet: source-by-source ranks on a strip chart, ADP 
 
 The fourth meter, **2026**, scores each player's situation relative to his position: team offensive environment (confirmed play-caller and his computed 2022-25 tendencies, quarterback tier, Vegas win total, PFF offensive-line rank), the player's 2026 change (opportunity, competition, quarterback and coaching change, with an unresolved flag), vacated volume for arrivals and drafted rookies, and 2026 strength of schedule by position with fantasy-playoff weeks 15-17 weighted most. Evidence-based priors from `research/methods_2026.md` are applied (year-2 and year-3 receivers, first-round rookies, receivers who changed teams). The player sheet shows the team card, the change drivers, the schedule and the reasons.
 
+## Draft night (the Draft tab)
+
+Built for a 30-second clock. Type two letters of a name and tap **GONE** (someone else's pick) or
+**MINE**; Enter marks the top match gone, Shift+Enter marks him yours. **Undo last** reverses a
+mistake and **Skip a pick I missed** keeps the pick count right when you did not catch who went.
+The list under it re-ranks instantly for your roster: the model's composite, what you still need
+this round, boom / bust / risk, and a tag saying whether he will last to your next pick ("take now"
+under 40%, "can wait" over 70%), from a normal around his ADP conditioned on him still being on
+the board now. Every row carries one line of why, taken from the round research where it exists.
+`#draft?q=hen` opens the tab with a search typed.
+
 ## Rebuilding the data
 
 ```
