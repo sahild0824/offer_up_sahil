@@ -413,6 +413,10 @@
   .pastebox textarea { width: 100%; margin-top: 8px; border: 1px solid var(--hair); background: var(--surface); color: var(--ink); border-radius: 8px; padding: 10px 12px; font: inherit; font-size: 15px; resize: vertical; }
   .pastebox .btn { width: 100%; margin-top: 8px; }
   .pastebox .note { margin-top: 8px; }
+  .pastebox .ftop { display: flex; align-items: center; gap: 8px; margin-top: 8px; font-size: 13px; color: var(--ink-2); }
+  .pastebox .ftop input { width: 18px; height: 18px; accent-color: var(--accent); }
+  .pm-mine { color: var(--accent-ink); font-weight: 600; }
+  .pm-miss { color: var(--bad); }
   .settings label { display: grid; gap: 4px; font-size: 12px; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; }
   .settings input { border: 1px solid var(--hair); background: var(--surface); border-radius: 8px; padding: 8px 10px; font-size: 16px; width: 100%; }
   .pickline { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
@@ -510,7 +514,7 @@
   const POS = ['ALL', 'QB', 'RB', 'WR', 'TE'];
 
   // ---------- state ----------
-  const state = { tab: 'plan', pos: 'ALL', sort: 'comp', q: '', taken: new Set(), mine: [], teams: 10, slot: 4, room: 'espn', scoring: 'ppr' };
+  const state = { tab: 'plan', pos: 'ALL', sort: 'comp', q: '', taken: new Set(), mine: [], teams: 10, slot: 4, room: 'espn', scoring: 'ppr', myTeam: '' };
   const OVERLAY = ['comp', 'adp', 'adpSd', 'adpSources', 'value', 'valueScore', 'proj', 'projSources', 'vbd', 'floorPts', 'ceilPts', 'boom', 'bust', 'risk', 'sit', 'tier', 'posRank', 'flag', 'mcAvail', 'boomWhy', 'bustWhy', 'riskWhy'];
   PLAYERS.forEach(p => { p._base = {}; OVERLAY.forEach(k => { p._base[k] = p[k]; }); });
   const SCORING_NAME = { ppr: 'full PPR', half: 'half PPR', std: 'standard (no PPR)' };
@@ -537,12 +541,13 @@
         state.tab = s.tab || 'plan';
         state.room = s.room || 'espn';
         state.scoring = s.scoring || 'ppr';
+        state.myTeam = s.myTeam || '';
       }
     } catch (e) { /* storage unavailable: run in memory */ }
   }
   function save() {
     try {
-      localStorage.setItem(KEY, JSON.stringify({ taken: [...state.taken], mine: state.mine, teams: state.teams, slot: state.slot, tab: state.tab, room: state.room, scoring: state.scoring }));
+      localStorage.setItem(KEY, JSON.stringify({ taken: [...state.taken], mine: state.mine, teams: state.teams, slot: state.slot, tab: state.tab, room: state.room, scoring: state.scoring, myTeam: state.myTeam }));
     } catch (e) { /* ignore */ }
   }
 
@@ -1294,16 +1299,39 @@
     cands.sort((a, b) => (state.taken.has(a.id) - state.taken.has(b.id)) || (a.comp - b.comp));
     return cands[0];
   }
-  function markList(text) {
+  // Overall pick number carried by a pasted line, if it carries one at all.
+  // Understands "R2 P7", ESPN's "2.07" round.pick, and a plain leading "17.".
+  function parsePickNo(line, teams) {
+    let m = line.match(/^\s*r\s*(\d{1,2})\s*[.\-\s]*p\s*(\d{1,2})\b/i);
+    if (m) return (parseInt(m[1], 10) - 1) * teams + parseInt(m[2], 10);
+    m = line.match(/^\s*(\d{1,2})\.(\d{2})\b/);
+    if (m) return (parseInt(m[1], 10) - 1) * teams + parseInt(m[2], 10);
+    m = line.match(/^\s*(\d{1,3})\s*[.):\-]/);
+    if (m) return parseInt(m[1], 10);
+    return null;
+  }
+  // Marks a pasted block. A line is yours when its overall pick number lands on
+  // one of your snake picks, or when it names your team. Pick numbers come from
+  // the line when it has one, otherwise they run on from where the board stands.
+  function markList(text, fromTop) {
     const lines = text.split(/[\n,;]+/).map(s => s.trim()).filter(Boolean);
-    const added = []; const missed = []; const dupe = [];
+    const mineSet = new Set(myPicks(state.teams, state.slot, 14));
+    const myTeam = normQ(state.myTeam || '');
+    let seq = fromTop ? 0 : state.taken.size;
+    const gone = []; const mine = []; const missed = []; const dupe = [];
     lines.forEach(line => {
+      const explicit = parsePickNo(line, state.teams);
+      const no = explicit != null ? explicit : seq + 1;
+      seq = no;
       const p = parsePasteLine(line);
       if (!p) { missed.push(line); return; }
       if (state.taken.has(p.id)) { dupe.push(p.name); return; }
-      state.taken.add(p.id); LIVE.undo.push({ t: 'gone', id: p.id }); added.push(p.name);
+      const isMine = (myTeam && normQ(line).includes(myTeam)) || mineSet.has(no);
+      state.taken.add(p.id);
+      if (isMine) { state.mine.push(p.id); LIVE.undo.push({ t: 'mine', id: p.id }); mine.push(p.name + ' at #' + no); }
+      else { LIVE.undo.push({ t: 'gone', id: p.id }); gone.push(p.name); }
     });
-    return { added, missed, dupe };
+    return { gone, mine, missed, dupe };
   }
   function commit() { save(); renderDraft(); updateClock(); }
   function markGone(id) { state.taken.add(id); LIVE.undo.push({ t: 'gone', id }); LIVE.q = ''; LIVE.paste = []; commit(); }
@@ -1352,23 +1380,29 @@
     const inp = el('input', 'lsearch'); inp.type = 'search'; inp.placeholder = 'Type a name · Enter = gone'; inp.autocomplete = 'off'; inp.value = LIVE.q; inp.setAttribute('aria-label', 'Find a player');
     const pd = el('details', 'pastebox');
     pd.append(el('summary', null, 'Paste a list of picks'));
-    const pta = el('textarea'); pta.rows = 4; pta.placeholder = 'Paste from the ESPN draft board or chat, one pick per line:\n1. Jahmyr Gibbs (DET RB)\nBijan Robinson\nJ. Chase';
-    pta.setAttribute('aria-label', 'Paste picks to mark as gone');
+    const pta = el('textarea'); pta.rows = 4; pta.placeholder = 'Paste from the ESPN draft board or chat, one pick per line:\n1. Jahmyr Gibbs (DET RB)\n2.07 Bijan Robinson\nJ. Chase';
+    pta.setAttribute('aria-label', 'Paste picks to mark off the board');
+    const mp = myPicks(state.teams, state.slot, 14);
+    pd.append(el('p', 'note', 'Yours are picked out for you: a line lands on your team when its pick number is one of ' + mp.slice(0, 4).join(', ') + '…, or when it names your team below. Numbers come from the line (“12.”, “2.07”, “R2 P7”); without them the list runs on from pick #' + (state.taken.size + 1) + '.'));
+    const ftl = el('label', 'ftop'); const ftc = el('input'); ftc.type = 'checkbox'; ftc.checked = !!LIVE.fromTop;
+    ftc.addEventListener('change', () => { LIVE.fromTop = ftc.checked; });
+    ftl.append(ftc, el('span', null, 'This list starts at pick 1')); pd.append(ftl);
     const pmsg = el('p', 'note');
-    const pbtn = el('button', 'btn', 'Mark all as gone'); pbtn.type = 'button';
+    const pbtn = el('button', 'btn', 'Mark these picks'); pbtn.type = 'button';
     pbtn.addEventListener('click', () => {
-      const r = markList(pta.value);
-      if (!r.added.length && !r.dupe.length && !r.missed.length) return;
+      const r = markList(pta.value, ftc.checked);
+      if (!r.gone.length && !r.mine.length && !r.dupe.length && !r.missed.length) return;
       LIVE.paste = [];
-      if (r.added.length) LIVE.paste.push('Marked ' + r.added.length + ': ' + r.added.join(', ') + '.');
-      if (r.dupe.length) LIVE.paste.push('Already off the board: ' + r.dupe.join(', ') + '.');
-      if (r.missed.length) LIVE.paste.push('No match: ' + r.missed.join(' | ') + '. Try just the last name.');
-      LIVE.pasteOpen = true;
+      if (r.mine.length) LIVE.paste.push({ k: 'mine', t: 'Yours: ' + r.mine.join(', ') + '.' });
+      if (r.gone.length) LIVE.paste.push({ k: 'ok', t: 'Off the board (' + r.gone.length + '): ' + r.gone.join(', ') + '.' });
+      if (r.dupe.length) LIVE.paste.push({ k: 'ok', t: 'Already marked: ' + r.dupe.join(', ') + '.' });
+      if (r.missed.length) LIVE.paste.push({ k: 'miss', t: 'No match: ' + r.missed.join(' | ') + '. Try just the last name.' });
+      LIVE.pasteOpen = true; LIVE.fromTop = false;
       commit();
     });
     pd.append(pta, pbtn, pmsg);
     if (LIVE.pasteOpen) pd.open = true;
-    if (LIVE.paste && LIVE.paste.length) LIVE.paste.forEach(t => pmsg.append(el('span', null, t), el('br')));
+    if (LIVE.paste && LIVE.paste.length) LIVE.paste.forEach(m => { const s = el('span', 'pm-' + m.k, m.t); pmsg.append(s, el('br')); });
     const res = el('div', 'lres');
     const renderRes = () => {
       res.replaceChildren();
@@ -1479,14 +1513,18 @@
     roomS.style.cssText = 'border:1px solid var(--hair);background:var(--surface);border-radius:8px;padding:8px 10px;font-size:15px;width:100%';
     roomS.addEventListener('change', () => { state.room = roomS.value; commit(); });
     roomL.append(roomS); sg.append(roomL);
+    const teamL = el('label'); teamL.append(document.createTextNode('My team name'));
+    const teamI = el('input'); teamI.type = 'text'; teamI.value = state.myTeam || ''; teamI.placeholder = 'as ESPN shows it';
+    teamI.addEventListener('change', () => { state.myTeam = teamI.value.trim(); commit(); });
+    teamL.append(teamI); teamL.style.gridColumn = '1 / -1'; sg.append(teamL);
     const btnRow = el('div', 'setbtns');
     const reset = el('button', 'btn small', 'Clear picks'); reset.type = 'button';
     reset.addEventListener('click', () => { if (!confirm('Clear every taken and drafted mark? League settings stay as they are.')) return; state.taken = new Set(); state.mine = []; LIVE.undo = []; LIVE.q = ''; LIVE.paste = []; commit(); });
     const clearAll = el('button', 'btn small', 'Full reset'); clearAll.type = 'button';
     clearAll.addEventListener('click', () => {
       if (!confirm('Full reset: clears every mark, and puts teams, slot, room, scoring and the board filters back to their defaults.')) return;
-      state.taken = new Set(); state.mine = []; state.teams = 10; state.slot = 4; state.room = 'espn'; state.pos = 'ALL'; state.sort = 'comp'; state.q = '';
-      LIVE.undo = []; LIVE.q = ''; LIVE.paste = []; LIVE.pasteOpen = false; LIVE.pos = 'ALL';
+      state.taken = new Set(); state.mine = []; state.teams = 10; state.slot = 4; state.room = 'espn'; state.pos = 'ALL'; state.sort = 'comp'; state.q = ''; state.myTeam = '';
+      LIVE.undo = []; LIVE.fromTop = false; LIVE.q = ''; LIVE.paste = []; LIVE.pasteOpen = false; LIVE.pos = 'ALL';
       applyScoring('ppr');
       const qi = document.getElementById('q'); if (qi) qi.value = '';
       const si = document.getElementById('sort'); if (si) si.value = 'comp';
