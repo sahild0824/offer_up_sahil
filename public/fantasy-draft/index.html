@@ -402,7 +402,17 @@
   .ract { display: flex; gap: 8px; margin-top: 4px; }
   .ract .btn.mine { flex: 1; }
   /* Draft tab */
-  .settings { display: grid; grid-template-columns: 1fr 1fr 1.3fr auto; gap: 8px; align-items: end; }
+  .settings { display: grid; grid-template-columns: 1fr 1fr 1.3fr; gap: 8px; align-items: end; }
+  .setbtns { grid-column: 1 / -1; display: flex; gap: 8px; }
+  .setbtns .btn { flex: 1; }
+  .pastebox { margin-top: 10px; }
+  .pastebox summary { cursor: pointer; font-size: 13px; font-weight: 600; color: var(--ink-2); list-style: none; }
+  .pastebox summary::before { content: '\25B8  '; }
+  .pastebox[open] summary::before { content: '\25BE  '; }
+  .pastebox summary::-webkit-details-marker { display: none; }
+  .pastebox textarea { width: 100%; margin-top: 8px; border: 1px solid var(--hair); background: var(--surface); color: var(--ink); border-radius: 8px; padding: 10px 12px; font: inherit; font-size: 15px; resize: vertical; }
+  .pastebox .btn { width: 100%; margin-top: 8px; }
+  .pastebox .note { margin-top: 8px; }
   .settings label { display: grid; gap: 4px; font-size: 12px; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; }
   .settings input { border: 1px solid var(--hair); background: var(--surface); border-radius: 8px; padding: 8px 10px; font-size: 16px; width: 100%; }
   .pickline { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
@@ -1271,9 +1281,33 @@
     const n = normQ(p.name); const toks = n.split(' ');
     return n.includes(q) || q.split(' ').every(t => toks.some(w => w.startsWith(t)));
   }
+  function parsePasteLine(line) {
+    let s = line.replace(/\([^)]*\)/g, ' ').replace(/\bpick\b/gi, ' ');
+    s = s.replace(/^\s*(?:r?\d+\s*[.):\-]?\s*)+/i, ' ');
+    const q = normQ(s); if (!q) return null;
+    const toks = q.split(' ').filter(Boolean); if (!toks.length) return null;
+    const hit = p => normQ(p.name).split(' ').filter(Boolean)
+      .every(w => toks.some(t => t === w || w.startsWith(t) || t.startsWith(w)));
+    let cands = PLAYERS.filter(hit);
+    if (!cands.length) cands = PLAYERS.filter(p => matches(p, q));
+    if (!cands.length) return null;
+    cands.sort((a, b) => (state.taken.has(a.id) - state.taken.has(b.id)) || (a.comp - b.comp));
+    return cands[0];
+  }
+  function markList(text) {
+    const lines = text.split(/[\n,;]+/).map(s => s.trim()).filter(Boolean);
+    const added = []; const missed = []; const dupe = [];
+    lines.forEach(line => {
+      const p = parsePasteLine(line);
+      if (!p) { missed.push(line); return; }
+      if (state.taken.has(p.id)) { dupe.push(p.name); return; }
+      state.taken.add(p.id); LIVE.undo.push({ t: 'gone', id: p.id }); added.push(p.name);
+    });
+    return { added, missed, dupe };
+  }
   function commit() { save(); renderDraft(); updateClock(); }
-  function markGone(id) { state.taken.add(id); LIVE.undo.push({ t: 'gone', id }); LIVE.q = ''; commit(); }
-  function markMine(id) { state.mine.push(id); state.taken.add(id); LIVE.undo.push({ t: 'mine', id }); LIVE.q = ''; commit(); }
+  function markGone(id) { state.taken.add(id); LIVE.undo.push({ t: 'gone', id }); LIVE.q = ''; LIVE.paste = []; commit(); }
+  function markMine(id) { state.mine.push(id); state.taken.add(id); LIVE.undo.push({ t: 'mine', id }); LIVE.q = ''; LIVE.paste = []; commit(); }
   function skipPick() { const id = '__skip_' + Date.now(); state.taken.add(id); LIVE.undo.push({ t: 'gone', id }); commit(); }
   function undoLast() {
     const u = LIVE.undo.pop(); if (!u) return;
@@ -1316,6 +1350,25 @@
     const mark = el('section', 'card');
     mark.append(el('p', 'eyebrow', 'Mark every pick as it happens'), el('h2', null, 'Who just went?'));
     const inp = el('input', 'lsearch'); inp.type = 'search'; inp.placeholder = 'Type a name · Enter = gone'; inp.autocomplete = 'off'; inp.value = LIVE.q; inp.setAttribute('aria-label', 'Find a player');
+    const pd = el('details', 'pastebox');
+    pd.append(el('summary', null, 'Paste a list of picks'));
+    const pta = el('textarea'); pta.rows = 4; pta.placeholder = 'Paste from the ESPN draft board or chat, one pick per line:\n1. Jahmyr Gibbs (DET RB)\nBijan Robinson\nJ. Chase';
+    pta.setAttribute('aria-label', 'Paste picks to mark as gone');
+    const pmsg = el('p', 'note');
+    const pbtn = el('button', 'btn', 'Mark all as gone'); pbtn.type = 'button';
+    pbtn.addEventListener('click', () => {
+      const r = markList(pta.value);
+      if (!r.added.length && !r.dupe.length && !r.missed.length) return;
+      LIVE.paste = [];
+      if (r.added.length) LIVE.paste.push('Marked ' + r.added.length + ': ' + r.added.join(', ') + '.');
+      if (r.dupe.length) LIVE.paste.push('Already off the board: ' + r.dupe.join(', ') + '.');
+      if (r.missed.length) LIVE.paste.push('No match: ' + r.missed.join(' | ') + '. Try just the last name.');
+      LIVE.pasteOpen = true;
+      commit();
+    });
+    pd.append(pta, pbtn, pmsg);
+    if (LIVE.pasteOpen) pd.open = true;
+    if (LIVE.paste && LIVE.paste.length) LIVE.paste.forEach(t => pmsg.append(el('span', null, t), el('br')));
     const res = el('div', 'lres');
     const renderRes = () => {
       res.replaceChildren();
@@ -1348,7 +1401,7 @@
       const first = PLAYERS.filter(p => !state.taken.has(p.id) && matches(p, q)).sort((a, b) => a.comp - b.comp)[0];
       if (first) (e.shiftKey ? markMine : markGone)(first.id);
     });
-    mark.append(inp, res); renderRes();
+    mark.append(inp, res); renderRes(); mark.append(pd);
     root.append(mark);
 
     // ---- what to take -------------------------------------------------------------------
@@ -1426,8 +1479,23 @@
     roomS.style.cssText = 'border:1px solid var(--hair);background:var(--surface);border-radius:8px;padding:8px 10px;font-size:15px;width:100%';
     roomS.addEventListener('change', () => { state.room = roomS.value; commit(); });
     roomL.append(roomS); sg.append(roomL);
-    const reset = el('button', 'btn small', 'Reset draft'); reset.type = 'button'; reset.addEventListener('click', () => { if (confirm('Clear every taken and drafted mark?')) { state.taken = new Set(); state.mine = []; LIVE.undo = []; commit(); } });
-    sg.append(reset); det.append(sg);
+    const btnRow = el('div', 'setbtns');
+    const reset = el('button', 'btn small', 'Clear picks'); reset.type = 'button';
+    reset.addEventListener('click', () => { if (!confirm('Clear every taken and drafted mark? League settings stay as they are.')) return; state.taken = new Set(); state.mine = []; LIVE.undo = []; LIVE.q = ''; LIVE.paste = []; commit(); });
+    const clearAll = el('button', 'btn small', 'Full reset'); clearAll.type = 'button';
+    clearAll.addEventListener('click', () => {
+      if (!confirm('Full reset: clears every mark, and puts teams, slot, room, scoring and the board filters back to their defaults.')) return;
+      state.taken = new Set(); state.mine = []; state.teams = 10; state.slot = 4; state.room = 'espn'; state.pos = 'ALL'; state.sort = 'comp'; state.q = '';
+      LIVE.undo = []; LIVE.q = ''; LIVE.paste = []; LIVE.pasteOpen = false; LIVE.pos = 'ALL';
+      applyScoring('ppr');
+      const qi = document.getElementById('q'); if (qi) qi.value = '';
+      const si = document.getElementById('sort'); if (si) si.value = 'comp';
+      if (seg) seg.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', String(x.textContent === 'ALL')));
+      try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
+      save(); renderPlan(); renderBoard(); renderDraft(); renderModel(); updateClock();
+    });
+    btnRow.append(reset, clearAll);
+    sg.append(btnRow); det.append(sg);
     const pl = el('div', 'pickline'); info.picks.forEach((pk, i) => pl.append(el('span', i < info.made ? 'done' : i === info.made ? 'next' : '', '#' + pk))); det.append(pl);
     root.append(det);
 
