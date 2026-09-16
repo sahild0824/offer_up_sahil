@@ -1,99 +1,83 @@
-# Week 2 - Kai and his Guy
+# Week 2 - engine output on the live roster (screenshots 2026-09-16 11:19)
 
-Run on the **draft-day roster** (no waiver moves applied). Send the two screenshots and it
-re-runs in a minute. Engine numbers are from `weekly.py` (nflverse through Week 1,
-FantasyPros consensus scraped 2026-09-16, Vegas lines from nflverse). Expert and community
-context is in `research/week02_consensus.md`.
+_Raw `weekly.py` output. The judgment overlay - TE call, opponent read, D/ST stream - is in the session notes; the draft-roster run this replaced is in git history._
+
+_Built 2026-09-16 from nflverse through week 1, FantasyPros consensus scraped 2026-09-16, Vegas lines from nflverse games.csv._
 
 ## Start this
 
-| Slot | Player | Proj | Floor-Ceil | The call |
+| Slot | Player | Proj | Floor-Ceil | Why |
 |---|---|---|---|---|
-| QB | **Justin Herbert** | 17.8 | 13-22 | vs LV. 27 attempts last week is the worry, not the matchup. FP QB9. |
-| RB | **David Montgomery** | 16.8 | 10-23 | vs CIN, 32nd-ranked run D in 2025. 20 carries and every goal-line touch. |
-| RB | **Chase Brown** | 15.5 | 9-21 | @ HOU is a tough spot (DvP 0.81) but 100% of the inside-the-5 work. FP RB11 A-. |
-| WR | **Ja'Marr Chase** | 16.9 | 9-23 | 4 targets was noise. 94% snaps, FP WR3 A+. Everyone says don't overreact. |
-| WR | **George Pickens** | 15.1 | 8-21 | vs WAS, who "cannot cover both" him and Lamb. 20% share, drops were the story. |
-| TE | **Tyler Warren** | 11.5 | 6-16 | 50 of 54 snaps, KC lost both starting corners, likely shootout. FP TE3. |
-| FLEX | **Breece Hall** | 14.3 | 8-19 | 22 carries, all 4 red-zone carries, Jets run from ahead. |
-| D/ST | Steelers | - | - | @ NE. Maye threw 3 INT, NE line allowed 38% pressure. See streaming note. |
+| QB | **Justin Herbert** | 17.8 | 13-22 | wk1: 13.3 pts; 100% snaps; -7 vs expected pts - unlucky; FP QB9 B |
+| RB | **David Montgomery** | 16.8 | 10-23 | wk1: 28.9 pts; ROLE UP: 23 expected pts/gm vs 11 preseason; 49% snaps; 20 car / 3 tgt |
+| RB | **Chase Brown** | 15.5 | 9-21 | wk1: 18.8 pts; 16 car / 6 tgt; FP RB11 A-; @ HOU, DvP x0.81, implied 21.8 |
+| WR | **Ja'Marr Chase** | 16.9 | 9-23 | wk1: 3.2 pts; 94% snaps; 4 tgt (12% share); FP WR3 A+ |
+| WR | **George Pickens** | 15.1 | 8-21 | wk1: 5.8 pts; 84% snaps; 6 tgt (20% share); FP WR9 A |
+| TE | **Isaiah Likely** **(from bench)** | 12.3 | 6-17 | wk1: 27.8 pts; ROLE UP: 18 expected pts/gm vs 9 preseason; 49% snaps; 8 tgt (28% share) |
+| FLEX | **Breece Hall** | 14.3 | 8-19 | wk1: 19.8 pts; 58% snaps; 22 car / 2 tgt; FP RB15 B+ |
 
-**Projected 107.8.** One change from the draft lineup: **Montgomery in at RB, DeVonta Smith to
-the bench.**
+Lineup total: **108.6** projected.
 
-## The close calls, honestly
+**Changes from your current lineup:** start Isaiah Likely at TE; bench Tyler Warren.
 
-| Decision | Margin | Read |
-|---|---|---|
-| Montgomery over Hubbard at RB2 | +3.6, 63% | A lean, not a lock. Montgomery split snaps 49/51 with Woody Marks; Hubbard had 71%. Montgomery wins on the CIN run D and the goal-line job. |
-| Hall over DeVonta Smith at FLEX | +0.3, 51% | Coin flip. Hall has the floor (volume, red zone); Smith has the game script (PHI heavily favored @TEN, 24% target share). Hall. |
-| Warren over Kraft at TE | 0.0, 50% | Coin flip on the numbers; Warren on the context - 93% snaps vs Kraft's 66% coming off the ACL, and a better matchup. |
-| Pickens over Smith at WR2 | +1.0, 53% | Coin flip. Pickens has the better opponent. Either is fine. |
+## Close calls
 
-Chase over Smith and Chase Brown over Hubbard are leans (58-59%), not close enough to overrule.
+Each starter against the best bench player who could take his slot. Under 55% is a coin flip - overrule with a reason.
+
+| Slot | Starter | vs bench | Gap | Confidence |
+|---|---|---|---|---|
+| RB | David Montgomery 16.8 | Chuba Hubbard 13.3 | +3.6 | 63% **lean** |
+| RB | Chase Brown 15.5 | Chuba Hubbard 13.3 | +2.2 | 58% **lean** |
+| WR | Ja'Marr Chase 16.9 | DeVonta Smith 14.1 | +2.8 | 59% **lean** |
+| WR | George Pickens 15.1 | DeVonta Smith 14.1 | +1.0 | 53% **coin flip** |
+| TE | Isaiah Likely 12.3 | Tyler Warren 11.5 | +0.8 | 53% **coin flip** |
+| FLEX | Breece Hall 14.3 | DeVonta Smith 14.1 | +0.3 | 51% **coin flip** |
 
 ## Bench
 
-| Player | Proj | ROS | Note |
-|---|---|---|---|
-| DeVonta Smith | 14.1 | 193 | First man up. Starts if Odunze-style news hits anyone above him. |
-| Chuba Hubbard | 13.3 | 225 | 71% snaps; a real RB3. Better rest-of-season than his week suggests. |
-| Tucker Kraft | 11.4 | 159 | Ramping from 66% snaps toward the 90s. TE2 with a trade-chip ceiling. |
-| Rome Odunze | 8.9 | 174 | **Questionable (calf)**, 36-snap count last week. Bench until the snap count lifts. |
-| RJ Harvey | 8.7 | 140 | Dobbins has the carries; Harvey has the air. Lowest value on the roster. |
-
-## Waivers - one spot, and it is Harvey's
-
-**Drop RJ Harvey.** 53% of snaps but only 3 carries; Dobbins owns the ground role and JAX just
-held Judkins to 7. Lowest rest-of-season number on your bench by 20.
-
-The engine and the expert consensus disagree on the top of the wire, and the disagreement
-is instructive:
-
-| Priority | Add | Engine | Consensus | Why |
+| Player | Proj | Floor-Ceil | ROS | Notes |
 |---|---|---|---|---|
-| **1** | **Jalen Coker** (WR, CAR) | 13.9 wk / **256 ROS** | #3 | 84% snaps, 26% target share, Panthers will trail all year. Engine's ROS puts him near your WR2. 51% rostered - may be gone. Ankle in a boot Monday, says he'll play. |
-| **2** | **Caleb Douglas** (WR, MIA) | 8.3 wk / 141 ROS | **#1-2** | 90% snaps, 86% routes, 26% target share, 40% first-read share - the exact profile the breakout research says predicts the next month. Engine calls it a wash vs Harvey because it is one game; the role says otherwise. Not a Week 2 start (MIA implied 16.0 @ SF). |
-| 3 | Devaughn Vele (WR, NO) | 10.1 wk / depth | #4 | Volume WR3 while Tyson is out 3+ weeks; Shough threw 56 times. Value expires when Tyson returns. |
+| DeVonta Smith (WR) | 14.1 | 8-19 | 198 | wk1: 8.3 pts; 95% snaps; 6 tgt (27% share) |
+| Chuba Hubbard (RB) | 13.3 | 8-18 | 225 | wk1: 23.7 pts; ROLE UP: 15 expected pts/gm vs 10 preseason; 71% snaps |
+| Tyler Warren (TE) | 11.5 | 6-16 | 173 | wk1: 10.3 pts; 93% snaps; 5 tgt (17% share) |
+| Tucker Kraft (TE) | 11.4 | 6-16 | 161 | wk1: 9.5 pts; 66% snaps; 6 tgt (15% share) |
+| Rome Odunze (WR) | 8.9 | 5-12 | 172 | wk1: 7.2 pts; Questionable (Calf) - report is from last week; 48% snaps |
 
-**Where the engine says pass and I agree:**
-- **Kaelon Black** (SF) - the consensus #1 add, but he is a McCaffrey handcuff. You do not own
-  McCaffrey. 43% snaps, FP RB39. A stash for someone else's roster.
-- **Tyler Shough** (NO) - the engine's raw #1 because one 56-attempt, 410-yard game projects
-  him above Herbert rest-of-season. Do not burn a roster spot on a QB2 in a 10-team league;
-  FP has Herbert QB9 B. Stream him only in a Herbert bye week.
-- **Kalif Raymond** (CHI) - 9 targets only because Odunze was on a snap count. Shrinks to 7.1
-  once you account for that.
-- Allgeier, Marks, Miller, Bateman, Hollins - all below Harvey or one-week fillers.
+## Waivers
 
-## D/ST streaming - a free upgrade if either is on the wire
+Drop candidate: **Tucker Kraft** (TE, 11.4 this week, 161 rest of season) - lowest rest-of-season value on your bench.
 
-| D/ST | FP | Opp | Opp implied |
-|---|---|---|---|
-| **49ers** | DST3 A- | vs MIA | **16.0** - lowest total on the board |
-| **Buccaneers** | DST2 A | vs CLE | 16.5 |
-| Steelers (yours) | DST13 C+ | @ NE | 23.5 |
+| # | Add | This week | +lineup this wk | ROS vs drop | Bucket | Notes |
+|---|---|---|---|---|---|---|
+| 1 | **Tyler Shough** (QB, NO) | 17.2 | +0.0 | +52 | season-later | wk1: 23.2 pts; ROLE UP: 28 expected pts/gm vs 15 preseason; 100% snaps |
+| 2 | **Patrick Mahomes II** (QB, KC) | 18.0 | +0.2 | +8 | season-later | wk1: 21.7 pts; 100% snaps; +6 vs expected pts - TD-inflated |
+| 3 | **Jared Goff** (QB, DET) | 16.7 | +0.0 | +1 | season-later | wk1: 16.4 pts; 100% snaps; -6 vs expected pts - unlucky |
+| 4 | **Khalil Shakir** (WR, BUF) | 10.7 | +0.0 | +0 | depth | wk1: 9.0 pts; ROLE UP: 14 expected pts/gm vs 10 preseason; 53% snaps |
+| 5 | **Kyle Monangai** (RB, CHI) | 9.7 | +0.0 | +0 | depth | wk1: 20.4 pts; 43% snaps; 10 car / 2 tgt |
 
-D/ST scoring is mostly the opponent and the line. Neither was drafted; if one is still
-available, it is roughly a 1.5-2 point edge over Pittsburgh this week at zero cost. Keep
-Butker - kickers are not streamable.
+Not worth a spot over Tucker Kraft: Baker Mayfield, C.J. Stroud, Jordan Mason, Xavier Worthy, Jordan Addison, Romeo Doubs, RJ Harvey, KC Concepcion, T.J. Hockenson, Jonathon Brooks.
 
-## Watch before Sunday
+_Buckets: **season** = improves your rest-of-season lineup and this week; **season-later** = better rest-of-season but not this week; **week** = a one-week filler; **depth** = beats your worst bench player only. Priority order is the table order._
 
-- **Rome Odunze** - Questionable (calf), report is from last week; Wednesday's designation
-  decides it. Already benched, so nothing to pivot.
-- **Ladd McConkey** (LAC, ribs, day-to-day) - not yours, but he is the swing for Herbert's
-  volume and for whether Quentin Johnston is worth a flex anywhere.
-- **Kyler Murray** (MIN, concussion) - Wentz likely starts vs CHI. Affects Odunze's game
-  script only.
-- **Zay Flowers / Tua / Sam Darnold** - none on your roster; listed in the consensus doc.
+## Kicker and D/ST
 
-## What the engine cannot see (and what I overlaid)
+| D/ST | FP rank | FP proj | Opp | Opp implied |
+|---|---|---|---|---|
+**mine** | Pittsburgh Steelers | DST13 C+ | 6.3 | @ NE | 23.5 |
+| Philadelphia Eagles | DST1 A+ | 8.8 | @ TEN | 16.2 |
+| Tampa Bay Buccaneers | DST2 A | 8.0 | vs CLE | 16.5 |
+| San Francisco 49ers | DST3 A- | 7.8 | vs MIA | 16.0 |
+| Seattle Seahawks | DST4 A- | 7.7 | @ ARI | 18.5 |
+| Baltimore Ravens | DST5 B+ | 7.5 | vs NO | 20.0 |
+| Los Angeles Chargers | DST6 B+ | 7.3 | vs LV | 18.5 |
 
-- Sleeper trending, ESPN most-added, Reddit and live weather are blocked from this sandbox.
-  Waiver demand and community sentiment came from aggregator coverage only.
-- One week of data. The engine deliberately shrinks a hot week toward the preseason number
-  and toward expected points, so it is slow to believe a breakout. That is the right default
-  for start/sit and the wrong one for a rookie who just took 90% of the snaps - which is why
-  Douglas ranks above his engine number here.
-- Wednesday-Friday practice reports are not in yet. Re-run Thursday if you can.
+_D/ST scoring is mostly the opponent and the line: a low opponent implied total is the signal. Kickers are not streamable - the week-to-week spread is noise - so keep yours unless he loses his job._
+
+K **Harrison Butker**: FP K11 C, proj 7.7.
+
+## Watch before kickoff
+
+- **Rome Odunze** - Questionable (Calf) - report is from last week. Projected 8.9 (11.9 if he plays).
+
+_Reports for Rome Odunze are from last week; this week's designations land Wed-Fri._
+

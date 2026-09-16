@@ -1,0 +1,14 @@
+QB   Justin Herbert
+RB   Chase Brown
+RB   Breece Hall
+WR   Ja'Marr Chase
+WR   George Pickens
+TE   Tyler Warren
+FLEX David Montgomery
+DST  Steelers
+K    Harrison Butker
+BE   DeVonta Smith
+BE   Rome Odunze
+BE   Tucker Kraft
+BE   Chuba Hubbard
+BE   Isaiah Likely
