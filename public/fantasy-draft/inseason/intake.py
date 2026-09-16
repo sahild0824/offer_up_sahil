@@ -35,9 +35,26 @@ def norm(s):
     return re.sub(r"[^a-z0-9 ]", " ", s).strip()
 
 
+WEEKLY = HERE.parent / "data" / "weekly_2026.json"
+
+
 def load_players():
+    """The draft model's 253 players, plus everyone nflverse has a 2026 stat line or injury row
+    for. Waiver-wire breakouts are usually rookies and backups the draft model never scored;
+    they still resolve here so the weekly engine can project them from this season's usage."""
     data = json.load(open(PLAYERS))
-    return data["players"] if isinstance(data, dict) else data
+    players = list(data["players"] if isinstance(data, dict) else data)
+    seen = {norm(p["name"]) + "|" + p["pos"] for p in players}
+    if WEEKLY.exists():
+        wk = json.load(open(WEEKLY))
+        for g, p in wk.get("players", {}).items():
+            key = norm(p["name"]) + "|" + p["pos"]
+            if key in seen or p["pos"] not in ("QB", "RB", "WR", "TE"):
+                continue
+            seen.add(key)
+            players.append({"id": "gsis:" + g, "name": p["name"], "pos": p["pos"], "team": p.get("team"),
+                            "bye": None, "comp": 999 + len(players)})
+    return players
 
 
 def clean_line(line):
