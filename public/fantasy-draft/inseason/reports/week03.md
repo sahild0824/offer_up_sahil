@@ -27,15 +27,15 @@ after the Brazil trip) - if he sits they have no receiver on the bench.
 | RB | **Breece Hall** | 14.7 | @DET. 21 touches, 2:1 snaps over Allen, full practice Wed. DET is "horrific vs the pass" - suits his 5-target role. |
 | WR | **Ja'Marr Chase** | 17.2 | @PIT. 7-75-2 on 9 targets last week; 85+ yds and 5+ rec in career games vs PIT. |
 | WR | **DeVonta Smith** | 14.9 | @CHI Mon. 13 of 33 team targets, 10-117-1. Goedert still out. Nobody disagrees. |
-| TE | **Tucker Kraft** | 11.4 | vs ATL **tonight 8:15**. See below - the one call that goes against last week's. |
+| TE | **Tyler Warren** | 11.2 | vs HOU. Expected points 13.3 to Kraft's 4.9 last week. Keeps the slot open for a Schultz pivot Sunday. |
 | FLEX | **Chuba Hubbard** | 13.2 + | @CLE. Jonathon Brooks to IR (4+ games). CBS's "Start of the Week", top-10 finish in sight. |
 | D/ST | **stream - see waivers** | | Steelers vs CIN is a unanimous sit, and every Steeler sack comes out of Chase Brown's and Chase's pockets. |
 | K | Butker | 8.9 | @MIA, KC -11.5. FP K5. Fine. |
 
-**Bench:** Herbert, Pickens, Montgomery, Warren, Odunze.
+**Bench:** Herbert, Pickens, Montgomery, Kraft, Odunze.
 
-**Changes from your current lineup:** Young in for Herbert. Kraft in for Warren. Hubbard in
-for Pickens at FLEX. Stream a D/ST over Pittsburgh.
+**Changes from your current lineup:** Young in for Herbert. Hubbard in for Pickens at FLEX.
+Warren stays. Stream a D/ST over Pittsburgh.
 
 ## The three real decisions
 
@@ -49,26 +49,35 @@ Lake Erie wind, a 42.5 total - and RotoWire has him QB12 for the week rather tha
 seven touchdowns in two games is the ceiling an underdog needs, and the engine leans Young
 even before the injury context. **Young.**
 
-**TE - Kraft tonight, reversing last week.** Last week I said Warren on usage and Warren
-delivered (14.4 to Kraft's 3.5). Two things changed. Kraft's **route rate jumped from 48% to
-84%** in Week 2 on 98% of snaps - the targets did not come, but the role did. And **Jayden
-Reed is out** (neck, 6-8 weeks per SI), which is confirmed on Wednesday's official report.
-ATL has already given up three touchdowns to tight ends and is missing its best edge rusher;
-GB is favoured at home. FantasyPros has Kraft TE3 and Warren TE5; SI, NFL.com and RotoBaller
-all start Kraft. Warren's case is his floor - but both his touchdowns were 1-yard plunges,
-CBS calls him "the most touchdown-dependent TE1," and IND-HOU is a 42.5 total. The engine
-has it 51/49. The tiebreaker is the information the engine cannot see: Reed's absence.
-**Kraft - and it has to be set before 8:15 tonight.**
+**TE - Warren, and leave Kraft on the bench tonight.** I first wrote this up as Kraft on
+Jayden Reed's confirmed absence and the expert consensus (TE3 vs TE5). Laid out in numbers
+it does not hold. Warren's expected points last week were 13.3 to Kraft's 4.9 on nearly
+identical snap counts - a 2.7x gap in role, and recent usage is the signal that tested best
+in every backtest the survey turned up. Reed frees perhaps one or two targets for Kraft, not
+five; ATL's generosity to tight ends is the signal that tested worst. The engine had it 51/49
+and the tiebreaker is structural: Warren plays Sunday, so the slot stays open. **Dalton
+Schultz** is on your wire with 14 targets and 140 yards last week against a Colts defence
+that just let Kelce score 25 (x1.20 to tight ends, the softest on the slate). He did not
+practice Wednesday. If he practices Friday he is the best TE play of the three, and you can
+only get to him if Kraft has not locked the slot at 8:15 tonight. The one argument left for
+Kraft is ceiling - GB favoured at home, both of Warren's touchdowns were 1-yard plunges. The
+research I was leaning on for "underdogs chase ceiling" found that rule lost out of sample,
+so: **Warren.**
 
-**FLEX - Hubbard over Pickens over Montgomery.** Hubbard has outscored Pickens 38-16 across
-two weeks and his role just went from 65% of snaps to the whole backfield. Pickens is the
-ceiling alternative - 52.5 total in Rio, BAL generous to receivers, NBC's positive-regression
-candidate after 14 targets for 66 yards - but zero touchdowns and Lamb takes the coverage
-away, not the targets. Montgomery @IND is the trap: IND's run defence is bottom-3 by every
-metric and he owns the goal line, which is why NFL.com and RotoBaller start him - but he had
-6 carries last week, splits 50/50 with Woody Marks, and Nico Collins is likely out, which
-shrinks the whole offence. **Hubbard.** If you want the swing, Pickens; Montgomery is
-third.
+**RB2 and FLEX - Hubbard and Hall; Pickens first off the bench; Montgomery sits.** Four
+players within a point of each other for two spots, so the roles decide it. Hall's expected
+points were 16.2 and 14.6 - the most stable role on the roster - on 21 touches and a 2:1
+snap edge over Allen. Hubbard's role just grew by a quarter with Brooks on IR (65% of snaps
+to roughly 80%), which moves his expected points from about 12.5 to 15 before the CBS "Start
+of the Week" tag. Pickens is the one the numbers quietly argue for: expected points rose
+8.9 to 14.2 while his actual lagged, the experts project him highest of the four (15.1), and
+he has the best game total (52.5), team implied (24.5) and matchup (x1.11) on this list.
+Zero touchdowns is the story; 14 targets behind Lamb is the fact. He is a defensible swap
+for Hall if you want the shootout. Montgomery is the clear fourth: expected points 23.0 to
+5.8, 20 carries to 6, in a 50/50 with Woody Marks, and Collins likely out shrinks the
+offence around him. IND's run defence is the softest on the slate (x1.14) and he owns the
+goal line, which is why NFL.com and RotoBaller start him - but a role that swings that hard
+is a bench role.
 
 ## Waivers - three moves, in priority order
 
@@ -80,7 +89,7 @@ Young.
 | # | Add | Drop | Why |
 |---|---|---|---|
 | **1** | **Denzel Boston** (WR, CLE) | Odunze | The rest-of-season asset on your wire. 7-154-2 through two games, 23% target share, 35% first-read share, 34 of 36 routes. CBS "must-add", "best rookie WR in fantasy so far." Consensus bid 20-30%. |
-| **2** | **Bengals D/ST** | Steelers | This week's stream. Top-ranked D/ST, 8 sacks, 4 takeaways, vs a Steelers offence with one touchdown in two games and Rodgers sacked six times. SI's #1 streamer. And it is the *same game* as Chase and Chase Brown - a Bengals D/ST score comes with a Bengals win. Vikings @TB (league-best 50.6% pressure vs a QB sacked 7 times) are the fallback; both are on your wire. |
+| **2** | **D/ST stream** | Steelers | Priority by projection minus opponent implied total: **Seahawks** @WAS (DST1, opp implied 16.75, Mariota behind a bad line) if available; **Chiefs** @MIA (DST2, 18.0) second; then **Bengals** @PIT (19.5) or **Vikings** @TB (20.5), a coin flip - Bengals for the correlation, since a Bengals D/ST score comes with a Bengals win for Chase Brown and Chase. FP has CIN only DST13 against SI's #1; MIN is FP's DST5. Bengals and Vikings are confirmed on your wire; check the other two. |
 | **3** | **Adonai Mitchell** (WR, NYJ) | Herbert | 82% snaps, 24% target share, team-high 12 targets. Defences roll to Garrett Wilson. @DET this week. A real WR3 rest of season. Only if you are done with Herbert - see below. |
 
 **On dropping Herbert.** In a 10-team league a second quarterback is a dead roster spot, and
@@ -114,8 +123,8 @@ be holding when Young's bye comes anyway.
 ## Rest-of-season health check
 
 After these moves: QB Young (bye 5, stream it), RB Chase Brown / Hall / Hubbard (now
-full-time) / Montgomery, WR Chase / Smith / Pickens / Boston, TE Warren / Kraft, streaming
-D/ST, Butker. That is a top-three roster in this league. The one thing to manage is the
+full-time) / Montgomery, WR Chase / Smith / Pickens / Boston, TE Warren / Kraft (or Schultz
+if he practices), streaming D/ST, Butker. That is a top-three roster in this league. The one thing to manage is the
 quarterback: Young's Week 5 bye, and whether his efficiency holds against real defences.
 CLE this week is the first test.
 
