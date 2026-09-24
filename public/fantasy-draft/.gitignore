@@ -6,3 +6,4 @@ data/raw/bt/
 __pycache__/
 scenarios/*.log
 scenarios/*.done
+data/raw/inseason/
