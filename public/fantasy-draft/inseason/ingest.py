@@ -166,6 +166,16 @@ def build(week, fetch_first):
         teams.setdefault(t, {"opp": None, "home": None, "implied": None, "opp_implied": None, "total": None,
                              "spread_home": None, "roof": None, "bye": True})
 
+    # bye week per team: the regular-season week with no game (the engine zeroes it in its
+    # week-by-week rest-of-season lineups)
+    reg = [g for g in games if g.get("game_type", "REG") == "REG"]
+    reg_weeks = sorted({int(g["week"]) for g in reg})
+    played = defaultdict(set)
+    for g in reg:
+        played[team(g["home_team"])].add(int(g["week"]))
+        played[team(g["away_team"])].add(int(g["week"]))
+    byes = {t: next((w for w in reg_weeks if w not in played[t]), None) for t in all_teams}
+
     # which teams played in each completed week (for absence = 0)
     played_in = defaultdict(set)
     for g in games:
@@ -369,7 +379,7 @@ def build(week, fetch_first):
         "fp_scrape_date": (fp[0].get("scrape_date") if fp else None),
         "fp_rows_this_week": sum(1 for p in players.values() if p["fp"]) + len(fp_dst) + len(fp_k),
         "fp_rows_stale": fp_stale,
-        "teams": teams, "players": players, "by_name": by_name, "fp_dst": fp_dst, "fp_k": fp_k,
+        "teams": teams, "byes": byes, "players": players, "by_name": by_name, "fp_dst": fp_dst, "fp_k": fp_k,
         "coverage": {"players": len(players), "with_snaps": sum(1 for p in players.values() if any(w.get("snap_pct") is not None for w in p["weeks"].values())),
                      "with_fp": sum(1 for p in players.values() if p["fp"]), "with_injury": sum(1 for p in players.values() if p["injury"]),
                      "snap_rows_unmatched": snap_miss, "fp_rows_unmatched": fp_miss, "by_name": len(by_name)},

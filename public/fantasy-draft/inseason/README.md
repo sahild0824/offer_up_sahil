@@ -35,8 +35,12 @@ python3 weekly.py --week N roster.json waivers.json --news news.json > week_N.md
   70% of his per-game role passes to his healthy same-position teammates by recent snap share,
   or by the split you name in `heirs` when the beat reporting is clearer than the snap counts:
 
+  `weeks` is a count, `"season"`, or a spread of outcomes for a week-to-week injury
+  (`{"1": 0.45, "2": 0.35, "4": 0.2}`), in which case every combination is simulated and
+  averaged, so a handcuff earns credit only in the weeks he would actually start.
+
   ```json
-  {"out": [{"name": "Breece Hall", "pos": "RB", "weeks": 1, "note": "quad"},
+  {"out": [{"name": "Breece Hall", "pos": "RB", "weeks": {"1": 0.45, "2": 0.35, "4": 0.2}, "note": "quad"},
            {"name": "De'Von Achane", "pos": "RB", "weeks": "season", "note": "torn ACL"},
            {"name": "Travis Etienne", "pos": "RB", "weeks": 3,
             "heirs": {"Alvin Kamara": 0.65, "Kendre Miller": 0.35}}]}
@@ -83,6 +87,11 @@ One markdown report:
 - **Start this** — the lineup, one line per slot saying why (matchup, usage trend, injury).
 - **Close calls** — every bench/flex decision with the margin in projected points, so you can
   overrule with a reason.
-- **Waivers** — ranked adds with a this-week score and a rest-of-season score, who to drop
-  for each, and a FAAB/priority suggestion.
+- **Bench** — each bench player's rest-of-season points and, more usefully, how many points
+  your season lineup loses without him. That is the real price of a drop: a backup quarterback
+  costs exactly his starter's bye week; a receiver who never starts costs nothing.
+- **Waivers** — ranked adds, each paired with the drop that leaves the best season lineup, with
+  a this-week lineup gain and a rest-of-season lineup gain. Rest of season is simulated one
+  week at a time through Week 17: byes zeroed, known absences zeroed, heirs promoted, and for
+  a week-to-week injury averaged over the return dates in `news.json`.
 - **Watch list** — injury designations to check before kickoff and the pivot if one is out.

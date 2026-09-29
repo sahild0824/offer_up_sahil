@@ -29,7 +29,15 @@ is valued as the starter he is about to be rather than the backup the data still
              {"name": "De'Von Achane", "pos": "RB", "weeks": "season", "note": "torn ACL"},
              {"name": "Travis Etienne", "pos": "RB", "weeks": 3, "heirs": {"Alvin Kamara": 0.65, "Kendre Miller": 0.35}}]}
 
-"heirs" overrides the snap-share split when the reporting names who takes the work.
+"heirs" overrides the snap-share split when the reporting names who takes the work. "weeks"
+may also be a spread of outcomes for a week-to-week injury, {"1": 0.45, "2": 0.35, "4": 0.2}:
+the season lineup is then averaged over every combination, so a backup earns credit in the
+scenarios where he would actually start.
+
+Rest-of-season value is never a raw points total. The optimizer is re-run for every remaining
+week through Week 17 - byes zeroed, absences zeroed, heirs promoted - and a bench player is
+worth what the season lineup loses without him. That is what makes a backup quarterback worth
+exactly his starter's bye week, and a handcuff worth exactly the weeks he would start.
 
 The lineup maximizes the sum of means - "start your studs"; variance-seeking did not hold up
 out of sample. Every starter is compared with the best bench alternative at that slot with
@@ -94,6 +102,9 @@ class Engine:
         imp = [t["implied"] for t in self.teams.values() if t.get("implied")]
         self.avg_implied = sum(imp) / len(imp) if imp else 22.0
         self.weeks_left = max(1, LAST_WEEK - week + 1)
+        self.byes = self.W.get("byes") or {}
+        if not self.byes:
+            print("!! weekly_2026.json has no bye table; rerun ingest.py so rest-of-season values see byes", file=sys.stderr)
         self.out, self.heirs = {}, {}
         self._apply_news(news or {})
 
@@ -122,10 +133,14 @@ class Engine:
             if not g or g not in self.W["players"]:
                 print(f"!! news: no 2026 player matches {o['name']!r}", file=sys.stderr)
                 continue
+            # "weeks" is a count, "season", or a spread of outcomes {"1": 0.5, "2": 0.3, "5": 0.2}
             wk = o.get("weeks", 1)
-            weeks = self.weeks_left if wk == "season" else min(int(wk), self.weeks_left)
-            self.out[g] = {"weeks": weeks, "note": o.get("note") or "out", "pos": pos, "season": wk == "season",
-                           "heirs": o.get("heirs")}
+            spread = wk if isinstance(wk, dict) else {wk: 1.0}
+            tot = sum(float(v) for v in spread.values()) or 1.0
+            dist = [(self.weeks_left if k == "season" else max(1, min(int(k), self.weeks_left)), float(v) / tot)
+                    for k, v in spread.items()]
+            self.out[g] = {"dist": dist, "weeks": max(k for k, _ in dist), "note": o.get("note") or "out",
+                           "pos": pos, "season": all(k >= self.weeks_left for k, _ in dist), "heirs": o.get("heirs")}
         for g, o in self.out.items():
             wp = self.W["players"][g]
             vac = self._role_value(wp, o["pos"])
@@ -144,10 +159,27 @@ class Engine:
                 own = self._role_value(q, o["pos"])
                 extra = min(own + NEWS_KEEP * vac * wts[h] / tot, max(own, NEWS_CAP * vac)) - own
                 if extra >= 0.5:
-                    hr = self.heirs.setdefault(h, {"extra": 0.0, "weeks": 0, "from": []})
+                    hr = self.heirs.setdefault(h, {"extra": 0.0, "parts": [], "from": []})
                     hr["extra"] += extra
-                    hr["weeks"] = max(hr["weeks"], o["weeks"])
+                    hr["parts"].append((g, extra))
                     hr["from"].append(wp["name"])
+        # One scenario per combination of uncertain return dates, so a handcuff is valued in
+        # the weeks he would actually start rather than against an averaged-out starter.
+        self.scenarios = [(1.0, {})]
+        for g, o in self.out.items():
+            if len(o["dist"]) > 1:
+                self.scenarios = [(pr * q, {**sc, g: k}) for pr, sc in self.scenarios for k, q in o["dist"]]
+        if len(self.scenarios) > 64:
+            print(f"!! news: {len(self.scenarios)} return-date combinations; using each player's median instead", file=sys.stderr)
+            med = {}
+            for g, o in self.out.items():
+                acc = 0.0
+                for k, q in sorted(o["dist"]):
+                    acc += q
+                    if acc >= 0.5:
+                        med[g] = k
+                        break
+            self.scenarios = [(1.0, med)]
 
     # ---- projection ---------------------------------------------------------------------
     def gsis_for(self, name, pos):
@@ -200,6 +232,7 @@ class Engine:
             usage = base
         # An heir's preseason number and his box scores both describe the backup job, so the
         # inherited work is added on top of whatever we believed about him, not blended in.
+        rate = usage
         heir = self.heirs.get(g) if g else None
         extra = heir["extra"] if heir and usage is not None else 0.0
         if extra:
@@ -214,8 +247,10 @@ class Engine:
         # matchup
         matchup = 1.0
         if tm.get("bye"):
-            return {"mean": 0.0, "floor": 0.0, "ceil": 0.0, "sd": 0.0, "bye": True, "team": team, "opp": None,
-                    "notes": ["BYE"], "avail": 0.0, "parts": {}}
+            p = {"mean": 0.0, "floor": 0.0, "ceil": 0.0, "sd": 0.0, "bye": True, "team": team, "opp": None,
+                 "notes": ["BYE"], "avail": 0.0, "parts": {}, "g": g, "rate": rate, "avail_future": 1.0}
+            p["ros"] = self.season_points(p) if rate is not None else None
+            return p
         opp = tm.get("opp")
         if tm.get("implied") and self.avg_implied:
             implied_term = clamp(1 + 0.35 * (tm["implied"] / self.avg_implied - 1), 0.9, 1.1)
@@ -249,7 +284,9 @@ class Engine:
         out = self.out.get(g) if g else None
         if out:
             avail = 0.0
-            notes.append(f"OUT ({out['note']}) - " + ("season" if out["season"] else f"{out['weeks']} wk"))
+            span = ("season" if out["season"] else f"{out['weeks']} wk" if len(out["dist"]) == 1
+                    else "/".join(f"{k} wk {q:.0%}" for k, q in sorted(out["dist"])))
+            notes.append(f"OUT ({out['note']}) - {span}")
         mean = mean_if_plays * avail
 
         cv = CV.get(pos, 0.55)
@@ -281,27 +318,54 @@ class Engine:
             notes.append(f"{'vs' if tm.get('home') else '@'} {opp}" + (f", DvP x{dvp_f:.2f}" if dvp_f else "")
                          + (f", implied {tm['implied']:.1f}" if tm.get("implied") else ""))
 
-        return {"mean": mean, "mean_if_plays": mean_if_plays, "floor": floor, "ceil": ceil, "sd": sd,
+        res = {"mean": mean, "mean_if_plays": mean_if_plays, "floor": floor, "ceil": ceil, "sd": sd,
                 "boom": boom, "bust": bust, "avail": avail, "team": team, "opp": opp, "bye": False, "notes": notes,
                 "parts": {"base": base, "ewma": ewma, "n": n, "usage_adj": usage_adj, "expert": expert,
                           "matchup": matchup, "implied": tm.get("implied"), "dvp": dvp_f},
-                "ros": self._ros_news(g, base, target, w_form, avail) if (base or target) else None}
+                "g": g, "rate": rate, "avail_future": 1.0 if out else avail_ros(avail)}
+        res["ros"] = self.season_points(res) if rate is not None else None
+        return res
 
-    def _ros_news(self, g, base, target, w_form, avail):
-        out, heir = self.out.get(g), self.heirs.get(g)
-        if out:
-            return self._ros(base, target, w_form) * max(0, self.weeks_left - out["weeks"]) / self.weeks_left
-        ros = self._ros(base, target, w_form) * avail_ros(avail)
-        if heir:
-            ros += heir["extra"] * min(heir["weeks"], self.weeks_left)
-        return ros
+    # ---- the rest of the season, one week at a time -----------------------------------------
+    def out_weeks(self, g, sc):
+        o = self.out.get(g)
+        return 0 if not o else sc.get(g, o["weeks"])
 
-    def _ros(self, base, target, w_form):
-        if base is not None and target is not None and w_form:
-            per = (1 - w_form) * base + w_form * target
-        else:
-            per = base if base is not None else target
-        return per * self.weeks_left
+    def week_points(self, p, w, sc=None):
+        """Expected points in week w under return-date scenario sc. This week is the full
+        projection (matchup, injury tag); later weeks are the per-game rate, zero on his bye and
+        while news has him out, plus whatever role he inherits while the player ahead is out."""
+        if p is None:
+            return 0.0
+        if w == self.week:
+            return p["mean"]
+        if self.byes.get(p.get("team")) == w:
+            return 0.0
+        sc = sc or {}
+        g = p.get("g")
+        if g in self.out and w < self.week + self.out_weeks(g, sc):
+            return 0.0
+        r = (p.get("rate") or 0.0) * p.get("avail_future", 1.0)
+        for src, extra in (self.heirs.get(g) or {}).get("parts", []):
+            if w < self.week + self.out_weeks(src, sc):
+                r += extra
+        return r
+
+    def season_points(self, p):
+        return sum(pr * sum(self.week_points(p, w, sc) for w in range(self.week, LAST_WEEK + 1))
+                   for pr, sc in self.scenarios)
+
+    def season_lineup(self, scored):
+        """Sum over the remaining weeks of the best lineup that week, averaged over return-date
+        scenarios. A backup is worth exactly the weeks he would start - a bye, an injury - which
+        is what a roster spot buys."""
+        live = [(e, p) for e, p in scored if p is not None]
+        total = 0.0
+        for pr, sc in self.scenarios:
+            for w in range(self.week, LAST_WEEK + 1):
+                pool = [(e, {"mean": self.week_points(p, w, sc)}) for e, p in live]
+                total += pr * self.total(self.best_lineup(pool)[0])
+        return total
 
     # ---- lineup ------------------------------------------------------------------------
     @staticmethod
@@ -402,11 +466,16 @@ def report(week, roster, waivers, E):
     say("")
 
     # ---- BENCH ---------------------------------------------------------------------------
+    # What each bench player is worth to THIS roster: the season lineup total with him, minus
+    # without him. A backup quarterback scores nothing until the starter's bye, then everything.
+    base_ros = E.season_lineup(scored)
+    drop_cost = {id(e): base_ros - E.season_lineup([x for x in scored if x[0] is not e]) for e, p in bench}
     say("## Bench\n")
-    say("| Player | Proj | Floor-Ceil | ROS | Notes |")
-    say("|---|---|---|---|---|")
+    say("| Player | Proj | Floor-Ceil | ROS pts | Lineup pts lost if dropped | Notes |")
+    say("|---|---|---|---|---|---|")
     for e, p in sorted(bench, key=lambda x: -x[1]["mean"]):
-        say(f"| {e['name']} ({e['pos']}) | {p['mean']:.1f} | {p['floor']:.0f}-{p['ceil']:.0f} | {p['ros']:.0f} | {'; '.join(p['notes'][:3])} |")
+        ros = f"{p['ros']:.0f}" if p.get("ros") is not None else "-"
+        say(f"| {e['name']} ({e['pos']}) | {p['mean']:.1f} | {p['floor']:.0f}-{p['ceil']:.0f} | {ros} | {drop_cost[id(e)]:.1f} | {'; '.join(p['notes'][:3])} |")
     unscored = [e for e, p in scored if p is None and e["pos"] not in ("K", "DST")]
     for e in unscored:
         say(f"| {e['name']} ({e['pos']}) | ? | | | no data - not in the model or no 2026 stats yet |")
@@ -416,28 +485,32 @@ def report(week, roster, waivers, E):
     say("## Waivers\n")
     base_total = E.total(starters)
     droppable = [(e, p) for e, p in bench if p is not None]
+    # The cheapest drop is the bench player whose loss costs the season lineup the least - not
+    # the one with the fewest raw points, which would cut the quarterback who covers a bye.
     if droppable:
-        drop_e, drop_p = min(droppable, key=lambda x: (x[1]["ros"] or 0))
+        drop_e, drop_p = min(droppable, key=lambda x: (drop_cost[id(x[0])], x[1]["ros"] or 0))
     else:
         drop_e = drop_p = None
-    # Rest-of-season value is a LINEUP delta too: the same optimizer run on rest-of-season
-    # totals, with the add in and the drop out. Raw points would rank a backup quarterback
-    # above a starting-caliber receiver - a QB2 never starts in a one-quarterback league.
-    def ros_pool(sc):
-        return [(e2, {"mean": (p2["ros"] or 0.0), "sd": 0.0}) for e2, p2 in sc if p2 is not None]
-    base_ros = E.total(E.best_lineup(ros_pool(scored))[0])
+    # Rest-of-season value is a LINEUP delta, week by week: the optimizer re-run for every
+    # remaining week with the add in and each possible drop out, byes and injuries included.
+    # Each add is paired with whichever drop leaves the best season lineup.
     has_qb = any(e2["pos"] == "QB" for e2, p2 in scored if p2 is not None)
     rows = []
     for e in waivers["players"]:
         e = dict(e); e["slot"] = "BE"
         p = E.project(e["name"], e["pos"], e.get("team"))
         if p is None:
-            rows.append((e, None, None, None, "no data"))
+            rows.append((e, None, None, None, "no data", None))
             continue
-        after = [(e2, p2) for e2, p2 in scored if e2 is not drop_e] + [(e, p)]
+        best = None
+        for de, dp in (droppable or [(None, None)]):
+            after = [(e2, p2) for e2, p2 in scored if e2 is not de] + [(e, p)]
+            rd = E.season_lineup(after) - base_ros
+            if best is None or rd > best[0] + 1e-9 or (abs(rd - best[0]) <= 1e-9 and de is drop_e):
+                best = (rd, de, dp, after)
+        ros_delta, de, dp, after = best
         wk_delta = E.total(E.best_lineup(after)[0]) - base_total
-        ros_delta = E.total(E.best_lineup(ros_pool(after))[0]) - base_ros
-        raw_ros_edge = (p["ros"] or 0) - ((drop_p or {}).get("ros") or 0) if drop_p else (p["ros"] or 0)
+        raw_ros_edge = (p["ros"] or 0) - ((dp or {}).get("ros") or 0) if dp else (p["ros"] or 0)
         if ros_delta > 0.5 and wk_delta > 0.5:
             bucket = "season"
         elif ros_delta > 0.5:
@@ -448,28 +521,29 @@ def report(week, roster, waivers, E):
             bucket = "depth"
         else:
             bucket = "pass"
-        rows.append((e, p, wk_delta, ros_delta, bucket))
+        rows.append((e, p, wk_delta, ros_delta, bucket, de))
     order = {"season": 0, "season-later": 1, "week": 2, "depth": 3, "pass": 4, "no data": 5}
     rows.sort(key=lambda r: (order.get(r[4], 9), -(r[3] or 0), -(r[1]["mean"] if r[1] else 0)))
     if drop_e:
-        say(f"Drop candidate: **{drop_e['name']}** ({drop_e['pos']}, {drop_p['mean']:.1f} this week, {drop_p['ros']:.0f} rest of season) - lowest rest-of-season value on your bench.\n")
-    say("| # | Add | This week | +lineup this wk | ROS vs drop | Bucket | Notes |")
-    say("|---|---|---|---|---|---|---|")
+        say(f"Cheapest drop: **{drop_e['name']}** ({drop_e['pos']}) - losing him costs your season lineup "
+            f"{drop_cost[id(drop_e)]:.1f} points, the least on your bench.\n")
+    say("| # | Add | Drop | This week | +lineup this wk | +lineup rest of season | Bucket | Notes |")
+    say("|---|---|---|---|---|---|---|---|")
     rank = 0
-    for e, p, wkd, rosd, bucket in rows:
+    for e, p, wkd, rosd, bucket, de in rows:
         if bucket in ("pass", "no data"):
             continue
         rank += 1
-        say(f"| {rank} | **{e['name']}** ({e['pos']}, {p['team'] or e.get('team') or '?'}) | {p['mean']:.1f} | {wkd:+.1f} | {rosd:+.0f} | {bucket} | {'; '.join(p['notes'][:3])} |")
+        say(f"| {rank} | **{e['name']}** ({e['pos']}, {p['team'] or e.get('team') or '?'}) | {de['name'] if de else '-'} | {p['mean']:.1f} | {wkd:+.1f} | {rosd:+.1f} | {bucket} | {'; '.join(p['notes'][:3])} |")
     if rank == 0:
-        say("| - | nobody on the wire improves this roster | | | | | |")
-    passed = [e["name"] for e, p, wkd, rosd, b in rows if b == "pass"]
+        say("| - | nobody on the wire improves this roster | | | | | | |")
+    passed = [e["name"] for e, p, wkd, rosd, b, de in rows if b == "pass"]
     if passed:
         say(f"\nNot worth a spot over {drop_e['name'] if drop_e else 'your bench'}: " + ", ".join(passed) + ".")
-    nodata = [e["name"] for e, p, wkd, rosd, b in rows if b == "no data"]
+    nodata = [e["name"] for e, p, wkd, rosd, b, de in rows if b == "no data"]
     if nodata:
         say(f"\nNo data for: " + ", ".join(nodata) + " - not in the model and no 2026 stat line; treat as unknowns.")
-    say("\n_Buckets: **season** = improves your rest-of-season lineup and this week; **season-later** = better rest-of-season but not this week; **week** = a one-week filler; **depth** = beats your worst bench player only. Priority order is the table order._\n")
+    say(f"\n_Rest of season is Weeks {week}-{LAST_WEEK}, one lineup per week, with byes and known absences zeroed. Buckets: **season** = improves your rest-of-season lineup and this week; **season-later** = better rest-of-season but not this week; **week** = a one-week filler; **depth** = more raw points than the drop but never starts for you. Priority order is the table order._\n")
 
     # ---- K and D/ST ----------------------------------------------------------------------
     say("## Kicker and D/ST\n")
