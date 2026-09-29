@@ -166,11 +166,13 @@ class Engine:
         # One scenario per combination of uncertain return dates, so a handcuff is valued in
         # the weeks he would actually start rather than against an averaged-out starter.
         self.scenarios = [(1.0, {})]
-        for g, o in self.out.items():
-            if len(o["dist"]) > 1:
-                self.scenarios = [(pr * q, {**sc, g: k}) for pr, sc in self.scenarios for k, q in o["dist"]]
-        if len(self.scenarios) > 64:
-            print(f"!! news: {len(self.scenarios)} return-date combinations; using each player's median instead", file=sys.stderr)
+        combos = math.prod(len(o["dist"]) for o in self.out.values())
+        if combos <= 64:
+            for g, o in self.out.items():
+                if len(o["dist"]) > 1:
+                    self.scenarios = [(pr * q, {**sc, g: k}) for pr, sc in self.scenarios for k, q in o["dist"]]
+        else:
+            print(f"!! news: {combos} return-date combinations; using each player's median instead", file=sys.stderr)
             med = {}
             for g, o in self.out.items():
                 acc = 0.0
@@ -182,6 +184,15 @@ class Engine:
             self.scenarios = [(1.0, med)]
 
     # ---- projection ---------------------------------------------------------------------
+    @staticmethod
+    def _status_avail(wp):
+        """Availability from the injury report and roster status (not news)."""
+        inj = (wp or {}).get("injury") or {}
+        avail = inj.get("avail", 1.0) if inj.get("status") else 1.0
+        if ((wp or {}).get("status") or "ACT") in ("RES", "IR", "PUP", "INA"):
+            avail = 0.0
+        return avail
+
     def gsis_for(self, name, pos):
         return self.W["by_name"].get(norm_name(name) + "|" + pos)
 
@@ -247,8 +258,11 @@ class Engine:
         # matchup
         matchup = 1.0
         if tm.get("bye"):
+            av = self._status_avail(wp)
+            bye_notes = ["BYE"] + ([f"OUT ({self.out[g]['note']})"] if g in self.out else [])
             p = {"mean": 0.0, "floor": 0.0, "ceil": 0.0, "sd": 0.0, "bye": True, "team": team, "opp": None,
-                 "notes": ["BYE"], "avail": 0.0, "parts": {}, "g": g, "rate": rate, "avail_future": 1.0}
+                 "notes": bye_notes, "avail": 0.0, "parts": {}, "g": g, "rate": rate,
+                 "avail_future": 1.0 if g in self.out else avail_ros(av)}
             p["ros"] = self.season_points(p) if rate is not None else None
             return p
         opp = tm.get("opp")
@@ -478,7 +492,7 @@ def report(week, roster, waivers, E):
         say(f"| {e['name']} ({e['pos']}) | {p['mean']:.1f} | {p['floor']:.0f}-{p['ceil']:.0f} | {ros} | {drop_cost[id(e)]:.1f} | {'; '.join(p['notes'][:3])} |")
     unscored = [e for e, p in scored if p is None and e["pos"] not in ("K", "DST")]
     for e in unscored:
-        say(f"| {e['name']} ({e['pos']}) | ? | | | no data - not in the model or no 2026 stats yet |")
+        say(f"| {e['name']} ({e['pos']}) | ? | | | | no data - not in the model or no 2026 stats yet |")
     say("")
 
     # ---- WAIVERS -------------------------------------------------------------------------
@@ -510,10 +524,13 @@ def report(week, roster, waivers, E):
                 best = (rd, de, dp, after)
         ros_delta, de, dp, after = best
         wk_delta = E.total(E.best_lineup(after)[0]) - base_total
+        # the season total includes this week; the buckets ask about the weeks after it, or a
+        # one-week filler would read as a season-long upgrade
+        later_delta = ros_delta - wk_delta
         raw_ros_edge = (p["ros"] or 0) - ((dp or {}).get("ros") or 0) if dp else (p["ros"] or 0)
-        if ros_delta > 0.5 and wk_delta > 0.5:
+        if later_delta > 0.5 and wk_delta > 0.5:
             bucket = "season"
-        elif ros_delta > 0.5:
+        elif later_delta > 0.5:
             bucket = "season-later"
         elif wk_delta > 0.5:
             bucket = "week"
@@ -521,13 +538,13 @@ def report(week, roster, waivers, E):
             bucket = "depth"
         else:
             bucket = "pass"
-        rows.append((e, p, wk_delta, ros_delta, bucket, de))
+        rows.append((e, p, wk_delta, later_delta, bucket, de))
     order = {"season": 0, "season-later": 1, "week": 2, "depth": 3, "pass": 4, "no data": 5}
-    rows.sort(key=lambda r: (order.get(r[4], 9), -(r[3] or 0), -(r[1]["mean"] if r[1] else 0)))
+    rows.sort(key=lambda r: (order.get(r[4], 9), -(r[3] or 0), -(r[2] or 0), -(r[1]["mean"] if r[1] else 0)))
     if drop_e:
         say(f"Cheapest drop: **{drop_e['name']}** ({drop_e['pos']}) - losing him costs your season lineup "
             f"{drop_cost[id(drop_e)]:.1f} points, the least on your bench.\n")
-    say("| # | Add | Drop | This week | +lineup this wk | +lineup rest of season | Bucket | Notes |")
+    say(f"| # | Add | Drop | This week | +lineup this wk | +lineup wk {week + 1}-{LAST_WEEK} | Bucket | Notes |")
     say("|---|---|---|---|---|---|---|---|")
     rank = 0
     for e, p, wkd, rosd, bucket, de in rows:
@@ -539,11 +556,11 @@ def report(week, roster, waivers, E):
         say("| - | nobody on the wire improves this roster | | | | | | |")
     passed = [e["name"] for e, p, wkd, rosd, b, de in rows if b == "pass"]
     if passed:
-        say(f"\nNot worth a spot over {drop_e['name'] if drop_e else 'your bench'}: " + ", ".join(passed) + ".")
+        say("\nNot worth a roster spot - no drop from your bench improves your lineup this week or later: " + ", ".join(passed) + ".")
     nodata = [e["name"] for e, p, wkd, rosd, b, de in rows if b == "no data"]
     if nodata:
         say(f"\nNo data for: " + ", ".join(nodata) + " - not in the model and no 2026 stat line; treat as unknowns.")
-    say(f"\n_Rest of season is Weeks {week}-{LAST_WEEK}, one lineup per week, with byes and known absences zeroed. Buckets: **season** = improves your rest-of-season lineup and this week; **season-later** = better rest-of-season but not this week; **week** = a one-week filler; **depth** = more raw points than the drop but never starts for you. Priority order is the table order._\n")
+    say(f"\n_Rest of season is Weeks {week + 1}-{LAST_WEEK}, one lineup per week, with byes and known absences zeroed; each add is paired with the drop that leaves the best lineup over Weeks {week}-{LAST_WEEK}. Buckets: **season** = improves your rest-of-season lineup and this week; **season-later** = better rest-of-season but not this week; **week** = a one-week filler; **depth** = more raw points than the drop but never starts for you. Priority order is the table order._\n")
 
     # ---- K and D/ST ----------------------------------------------------------------------
     say("## Kicker and D/ST\n")
