@@ -62,6 +62,10 @@ SLOTS = [("QB", 1), ("RB", 2), ("WR", 2), ("TE", 1)]
 FLEX_POS = ("RB", "WR", "TE")
 CV = {"QB": 0.32, "RB": 0.52, "WR": 0.58, "TE": 0.62}
 FORM_PRIOR_N = 3.0
+# Prior for a player with no preseason number and no current FantasyPros projection: a weekly
+# replacement-level starter. Three games move him halfway from here to his form, so a
+# 90%-catch-rate month is shrunk rather than taken at face value.
+REPLACEMENT = {"QB": 14.0, "RB": 6.0, "WR": 7.0, "TE": 5.0}
 NEWS_KEEP = 0.7         # share of a missing player's role that stays inside his position group
 NEWS_CAP = 0.9          # an heir's role tops out at this fraction of the missing player's role
 LAST_WEEK = 17          # value rest-of-season through the fantasy playoffs
@@ -115,6 +119,8 @@ class Engine:
         base = (base_p["proj"] / 17.0) if base_p and base_p.get("proj") else None
         form = wp.get("form") or {}
         n = form.get("games") or 0
+        if base is None and n:
+            base = REPLACEMENT.get(pos)
         ewma, ep = form.get("ewma_pts"), form.get("ewma_ep")
         target = 0.5 * ewma + 0.5 * ep if (ewma is not None and ep) else ewma
         if base is not None and target is not None and n:
@@ -216,6 +222,8 @@ class Engine:
         prior_is_expert = False
         if base is None and expert is not None:
             base, prior_is_expert = expert, True
+        if base is None and ((wp or {}).get("form") or {}).get("games"):
+            base = REPLACEMENT.get(pos)
         # this season's form
         form = (wp or {}).get("form") or {}
         n = form.get("games") or 0
@@ -576,7 +584,9 @@ def report(week, roster, waivers, E):
     for e in my_dst:
         t = DST_NICK.get(norm_name(e["name"]).split()[0], None) or next((k for k in DST_NICK.values() if k.lower() in norm_name(e["name"])), None)
         if t and (t in fp_dst or not fp_dst):
-            say("**mine** " + dst_row(t, fp_dst.get(t, {"name": e["name"]})))
+            d = dict(fp_dst.get(t, {"name": e["name"]}))
+            d["name"] = f"**{d.get('name', t)} (mine)**"
+            say(dst_row(t, d))
         else:
             say(f"| {e['name']} (mine) | not found in FP | | | |")
     if fp_dst:

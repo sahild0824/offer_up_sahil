@@ -285,9 +285,14 @@ def build(week, fetch_first):
             players[g]["espn_id"] = r.get("espn_id") or None
 
     # ---- recent form: EWMA half-life 2, absence = 0 when the team played -------------------
-    alpha = 1 - 0.5 ** (1 / EWMA_HALF_LIFE)
+    # Weight-normalised: a game k weeks back counts decay**k, divided by the sum of the weights.
+    # The recursive form seeded with the first game (e = x1, then e += alpha*(x - e)) gave that
+    # first game half the weight after three weeks - more than the latest week - so a 28.9-point
+    # opener outweighed the two games since.
+    decay = 0.5 ** (1 / EWMA_HALF_LIFE)
     for g, p in players.items():
-        ew = n = 0
+        n = 0
+        acc = {k: [0.0, 0.0] for k in ("pts", "snap", "tgt", "car", "ep")}   # [weighted sum, weight]
         ew_pts = ew_snap = ew_tgt = ew_car = ew_ep = None
         pts_list = []
         for w in weeks_done:
@@ -300,9 +305,10 @@ def build(week, fetch_first):
             else:
                 pts, snap, tgt, car, epv = wk["pts"], wk.get("snap_pct") or 0.0, wk.get("targets") or 0.0, wk.get("carries") or 0.0, wk.get("ep") or 0.0
             pts_list.append(pts)
-            def upd(prev, x):
-                return x if prev is None else (1 - alpha) * prev + alpha * x
-            ew_pts, ew_snap, ew_tgt, ew_car, ew_ep = upd(ew_pts, pts), upd(ew_snap, snap), upd(ew_tgt, tgt), upd(ew_car, car), upd(ew_ep, epv)
+            for k, x in (("pts", pts), ("snap", snap), ("tgt", tgt), ("car", car), ("ep", epv)):
+                acc[k][0] = decay * acc[k][0] + x
+                acc[k][1] = decay * acc[k][1] + 1.0
+            ew_pts, ew_snap, ew_tgt, ew_car, ew_ep = (acc[k][0] / acc[k][1] for k in ("pts", "snap", "tgt", "car", "ep"))
             n += 1
         p["form"] = {"games": n, "ewma_pts": ew_pts, "ewma_snap_pct": ew_snap, "ewma_targets": ew_tgt,
                      "ewma_carries": ew_car, "ewma_ep": ew_ep, "last_pts": pts_list[-1] if pts_list else None,
