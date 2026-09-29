@@ -14,6 +14,8 @@
   1.2
  ],
  "fp_scrape_date": "2026-09-28",
+ "fp_rows_this_week": 0,
+ "fp_rows_stale": 521,
  "teams": {
   "CLE": {
    "total": 38.5,
@@ -918,17 +920,7 @@
     "mean_pts": 13.066666666666668
    },
    "injury": null,
-   "fp": {
-    "ecr": 27.4,
-    "sd": 1.74,
-    "rank": 29.0,
-    "pos_rank": "QB29",
-    "grade": "F",
-    "proj": 13.6,
-    "opp": "vs. CIN",
-    "owned": 9.1,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "8439"
   },
@@ -1001,17 +993,7 @@
     "mean_pts": 17.326666666666664
    },
    "injury": null,
-   "fp": {
-    "ecr": 17.26,
-    "sd": 1.83,
-    "rank": 17.0,
-    "pos_rank": "QB17",
-    "grade": "C-",
-    "proj": 16.3,
-    "opp": "at DEN",
-    "owned": 90.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "12483"
   },
@@ -1084,17 +1066,7 @@
     "mean_pts": 18.746666666666666
    },
    "injury": null,
-   "fp": {
-    "ecr": 24.24,
-    "sd": 2.91,
-    "rank": 24.0,
-    "pos_rank": "QB24",
-    "grade": "F",
-    "proj": 14.5,
-    "opp": "at NO",
-    "owned": 17.4,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "14880"
   },
@@ -1174,17 +1146,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 54.63,
-    "sd": 3.13,
-    "rank": 54.0,
-    "pos_rank": "WR54",
-    "grade": "D+",
-    "proj": 9.0,
-    "opp": "vs. HOU",
-    "owned": 21.1,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "15818"
   },
@@ -1257,17 +1219,7 @@
     "mean_pts": 16.366666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 4.6,
-    "sd": 1.51,
-    "rank": 4.0,
-    "pos_rank": "TE4",
-    "grade": "A",
-    "proj": 13.3,
-    "opp": "at MIA",
-    "owned": 95.3,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "15847"
   },
@@ -1340,17 +1292,7 @@
     "mean_pts": 16.973333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 19.17,
-    "sd": 1.95,
-    "rank": 19.0,
-    "pos_rank": "QB19",
-    "grade": "D+",
-    "proj": 15.8,
-    "opp": "at DET",
-    "owned": 10.4,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "15864"
   },
@@ -1430,17 +1372,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 9.63,
-    "sd": 2.99,
-    "rank": 9.0,
-    "pos_rank": "WR9",
-    "grade": "A",
-    "proj": 15.5,
-    "opp": "at DEN",
-    "owned": 97.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "16800"
   },
@@ -1520,17 +1452,7 @@
     "avail": 0.75,
     "stale": true
    },
-   "fp": {
-    "ecr": 17.98,
-    "sd": 2.61,
-    "rank": 17.0,
-    "pos_rank": "WR17",
-    "grade": "A-",
-    "proj": 13.7,
-    "opp": "vs. ARI",
-    "owned": 94.3,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "16737"
   },
@@ -1603,17 +1525,7 @@
     "mean_pts": 14.833333333333334
    },
    "injury": null,
-   "fp": {
-    "ecr": 37.83,
-    "sd": 8.37,
-    "rank": 36.0,
-    "pos_rank": "WR36",
-    "grade": "C",
-    "proj": 10.9,
-    "opp": "vs. SEA",
-    "owned": 88.2,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "2976212"
   },
@@ -1693,17 +1605,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 24.98,
-    "sd": 1.67,
-    "rank": 24.0,
-    "pos_rank": "TE24",
-    "grade": "F",
-    "proj": 7.9,
-    "opp": "at CLE",
-    "owned": 18.9,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "2576925"
   },
@@ -1776,17 +1678,7 @@
     "mean_pts": 2.2333333333333334
    },
    "injury": null,
-   "fp": {
-    "ecr": 74.04,
-    "sd": 6.07,
-    "rank": 77.0,
-    "pos_rank": "RB77",
-    "grade": "F",
-    "proj": 1.3,
-    "opp": "vs. NE",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "2576336"
   },
@@ -1866,17 +1758,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 87.44,
-    "sd": 4.67,
-    "rank": 89.0,
-    "pos_rank": "WR89",
-    "grade": "F",
-    "proj": 5.8,
-    "opp": "at DAL",
-    "owned": 0.4,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "2576581"
   },
@@ -1949,17 +1831,7 @@
     "mean_pts": 15.466666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 61.88,
-    "sd": 7.09,
-    "rank": 58.0,
-    "pos_rank": "WR58",
-    "grade": "D-",
-    "proj": 8.6,
-    "opp": "vs. PHI",
-    "owned": 10.9,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "2973405"
   },
@@ -2032,17 +1904,7 @@
     "mean_pts": 24.96666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 6.59,
-    "sd": 1.72,
-    "rank": 6.0,
-    "pos_rank": "RB6",
-    "grade": "A",
-    "proj": 18.4,
-    "opp": "at DAL",
-    "owned": 99.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3043078"
   },
@@ -2175,17 +2037,7 @@
     "mean_pts": 8.513333333333334
    },
    "injury": null,
-   "fp": {
-    "ecr": 35.42,
-    "sd": 1.11,
-    "rank": 35.0,
-    "pos_rank": "QB35",
-    "grade": "F",
-    "proj": 0.9,
-    "opp": "at TB",
-    "owned": 2.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "2573079"
   },
@@ -2265,17 +2117,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 81.55,
-    "sd": 9.74,
-    "rank": 87.0,
-    "pos_rank": "WR87",
-    "grade": "F",
-    "proj": 5.9,
-    "opp": "vs. HOU",
-    "owned": 0.2,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3051889"
   },
@@ -2348,17 +2190,7 @@
     "mean_pts": 21.033333333333335
    },
    "injury": null,
-   "fp": {
-    "ecr": 5.81,
-    "sd": 0.96,
-    "rank": 6.0,
-    "pos_rank": "QB6",
-    "grade": "A",
-    "proj": 19.3,
-    "opp": "vs. BAL",
-    "owned": 95.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "2577417"
   },
@@ -2431,17 +2263,7 @@
     "mean_pts": 4.7
    },
    "injury": null,
-   "fp": {
-    "ecr": 17.8,
-    "sd": 3.07,
-    "rank": 18.0,
-    "pos_rank": "TE18",
-    "grade": "D",
-    "proj": 9.3,
-    "opp": "at JAC",
-    "owned": 58.4,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3046439"
   },
@@ -2514,17 +2336,7 @@
     "mean_pts": 21.86
    },
    "injury": null,
-   "fp": {
-    "ecr": 6.98,
-    "sd": 0.83,
-    "rank": 7.0,
-    "pos_rank": "QB7",
-    "grade": "B+",
-    "proj": 18.7,
-    "opp": "vs. NYJ",
-    "owned": 82.5,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3046779"
   },
@@ -2594,17 +2406,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 41.75,
-    "sd": 10.3,
-    "rank": 34.0,
-    "pos_rank": "TE34",
-    "grade": "F",
-    "proj": 4.9,
-    "opp": "at DEN",
-    "owned": 2.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "2573401"
   },
@@ -2684,17 +2486,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 22.93,
-    "sd": 1.72,
-    "rank": 22.0,
-    "pos_rank": "QB22",
-    "grade": "D-",
-    "proj": 14.9,
-    "opp": "at SF",
-    "owned": 9.9,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "2578570"
   },
@@ -2774,17 +2566,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 3.71,
-    "sd": 0.92,
-    "rank": 4.0,
-    "pos_rank": "RB4",
-    "grade": "A",
-    "proj": 19.4,
-    "opp": "vs. ARI",
-    "owned": 99.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3117251"
   },
@@ -2864,17 +2646,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 7.3,
-    "sd": 1.65,
-    "rank": 7.0,
-    "pos_rank": "TE7",
-    "grade": "B",
-    "proj": 12.1,
-    "opp": "vs. ARI",
-    "owned": 95.5,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3040151"
   },
@@ -2954,17 +2726,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 20.76,
-    "sd": 2.1,
-    "rank": 21.0,
-    "pos_rank": "RB21",
-    "grade": "B",
-    "proj": 12.8,
-    "opp": "at TB",
-    "owned": 83.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3042519"
   },
@@ -3037,17 +2799,7 @@
     "mean_pts": 7.6000000000000005
    },
    "injury": null,
-   "fp": {
-    "ecr": 63.56,
-    "sd": 7.63,
-    "rank": 62.0,
-    "pos_rank": "WR62",
-    "grade": "F",
-    "proj": 8.1,
-    "opp": "at SF",
-    "owned": 2.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3045523"
   },
@@ -3159,17 +2911,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 87.19,
-    "sd": 1.55,
-    "rank": 93.0,
-    "pos_rank": "RB93",
-    "grade": "F",
-    "proj": 0.5,
-    "opp": "vs. TEN",
-    "owned": 0.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "2975417"
   },
@@ -3246,17 +2988,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 52.68,
-    "sd": 3.32,
-    "rank": 54.0,
-    "pos_rank": "RB54",
-    "grade": "F",
-    "proj": 5.0,
-    "opp": "at PIT",
-    "owned": 6.1,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3116389"
   },
@@ -3329,17 +3061,7 @@
     "mean_pts": 17.993333333333336
    },
    "injury": null,
-   "fp": {
-    "ecr": 24.45,
-    "sd": 2.67,
-    "rank": 25.0,
-    "pos_rank": "QB25",
-    "grade": "F",
-    "proj": 14.4,
-    "opp": "vs. CAR",
-    "owned": 8.1,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3122840"
   },
@@ -3412,17 +3134,7 @@
     "mean_pts": 9.2
    },
    "injury": null,
-   "fp": {
-    "ecr": 66.89,
-    "sd": 9.21,
-    "rank": 69.0,
-    "pos_rank": "WR69",
-    "grade": "F",
-    "proj": 6.9,
-    "opp": "at JAC",
-    "owned": 3.2,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "2991662"
   },
@@ -3495,17 +3207,7 @@
     "mean_pts": 2.766666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 83.11,
-    "sd": 4.31,
-    "rank": 85.0,
-    "pos_rank": "TE85",
-    "grade": "F",
-    "proj": 1.2,
-    "opp": "at WAS",
-    "owned": 1.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "2975863"
   },
@@ -3638,17 +3340,7 @@
     "mean_pts": 3.533333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 43.0,
-    "sd": 6.14,
-    "rank": 40.0,
-    "pos_rank": "TE40",
-    "grade": "F",
-    "proj": 3.8,
-    "opp": "vs. ATL",
-    "owned": 0.9,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3054212"
   },
@@ -3728,17 +3420,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 4.21,
-    "sd": 0.77,
-    "rank": 4.0,
-    "pos_rank": "QB4",
-    "grade": "A",
-    "proj": 21.0,
-    "opp": "at MIA",
-    "owned": 93.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3139477"
   },
@@ -3811,17 +3493,7 @@
     "mean_pts": 5.666666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 27.51,
-    "sd": 1.93,
-    "rank": 28.0,
-    "pos_rank": "TE28",
-    "grade": "F",
-    "proj": 6.6,
-    "opp": "vs. LAR",
-    "owned": 4.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3051876"
   },
@@ -3964,17 +3636,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 75.05,
-    "sd": 2.62,
-    "rank": 75.0,
-    "pos_rank": "WR75",
-    "grade": "F",
-    "proj": 6.5,
-    "opp": "at WAS",
-    "owned": 12.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "2977187"
   },
@@ -4047,17 +3709,7 @@
     "mean_pts": 7.533333333333334
    },
    "injury": null,
-   "fp": {
-    "ecr": 41.63,
-    "sd": 5.47,
-    "rank": 41.0,
-    "pos_rank": "WR41",
-    "grade": "C",
-    "proj": 10.3,
-    "opp": "vs. MIN",
-    "owned": 80.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3116165"
   },
@@ -4130,17 +3782,7 @@
     "mean_pts": 5.3999999999999995
    },
    "injury": null,
-   "fp": {
-    "ecr": 45.12,
-    "sd": 3.25,
-    "rank": 46.0,
-    "pos_rank": "WR46",
-    "grade": "C",
-    "proj": 9.9,
-    "opp": "vs. LAR",
-    "owned": 82.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3128429"
   },
@@ -4290,17 +3932,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 5.65,
-    "sd": 1.01,
-    "rank": 6.0,
-    "pos_rank": "TE6",
-    "grade": "B+",
-    "proj": 12.2,
-    "opp": "at IND",
-    "owned": 75.2,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3117256"
   },
@@ -4373,17 +4005,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 146.36,
-    "sd": 8.34,
-    "rank": 148.0,
-    "pos_rank": "WR148",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "vs. TEN",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "DEV",
    "espn_id": "3123075"
   },
@@ -4446,17 +4068,7 @@
     "mean_pts": 1.5666666666666664
    },
    "injury": null,
-   "fp": {
-    "ecr": 90.44,
-    "sd": 4.19,
-    "rank": 88.0,
-    "pos_rank": "TE88",
-    "grade": "F",
-    "proj": 1.1,
-    "opp": "at PIT",
-    "owned": 2.3,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "DEV",
    "espn_id": "3050481"
   },
@@ -4529,17 +4141,7 @@
     "mean_pts": 8.4
    },
    "injury": null,
-   "fp": {
-    "ecr": 10.5,
-    "sd": 2.55,
-    "rank": 10.0,
-    "pos_rank": "TE10",
-    "grade": "C+",
-    "proj": 11.0,
-    "opp": "at DAL",
-    "owned": 85.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3116365"
   },
@@ -4612,17 +4214,7 @@
     "mean_pts": 20.066666666666666
    },
    "injury": null,
-   "fp": {
-    "ecr": 2.19,
-    "sd": 0.66,
-    "rank": 2.0,
-    "pos_rank": "QB2",
-    "grade": "A",
-    "proj": 23.0,
-    "opp": "at DAL",
-    "owned": 99.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3916387"
   },
@@ -4685,17 +4277,7 @@
     "mean_pts": 0.4666666666666666
    },
    "injury": null,
-   "fp": {
-    "ecr": 54.31,
-    "sd": 5.51,
-    "rank": 54.0,
-    "pos_rank": "TE54",
-    "grade": "F",
-    "proj": 2.7,
-    "opp": "at DAL",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3052897"
   },
@@ -4775,17 +4357,7 @@
     "avail": 0.75,
     "stale": true
    },
-   "fp": {
-    "ecr": 31.12,
-    "sd": 11.86,
-    "rank": 30.0,
-    "pos_rank": "WR30",
-    "grade": "B",
-    "proj": 11.2,
-    "opp": "vs. LAC",
-    "owned": 96.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3915416"
   },
@@ -4848,17 +4420,7 @@
     "mean_pts": 10.5
    },
    "injury": null,
-   "fp": {
-    "ecr": 27.53,
-    "sd": 1.39,
-    "rank": 27.0,
-    "pos_rank": "TE27",
-    "grade": "F",
-    "proj": 6.6,
-    "opp": "at PIT",
-    "owned": 9.1,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3116164"
   },
@@ -4938,17 +4500,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 10.73,
-    "sd": 1.82,
-    "rank": 10.0,
-    "pos_rank": "RB10",
-    "grade": "A-",
-    "proj": 16.1,
-    "opp": "at CHI",
-    "owned": 99.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3929630"
   },
@@ -5021,17 +4573,7 @@
     "mean_pts": 0.9333333333333332
    },
    "injury": null,
-   "fp": {
-    "ecr": 112.78,
-    "sd": 7.67,
-    "rank": 116.0,
-    "pos_rank": "WR116",
-    "grade": "F",
-    "proj": 3.1,
-    "opp": "vs. ARI",
-    "owned": 1.2,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3047876"
   },
@@ -5111,17 +4653,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 20.6,
-    "sd": 1.45,
-    "rank": 20.0,
-    "pos_rank": "QB20",
-    "grade": "D",
-    "proj": 15.5,
-    "opp": "vs. MIN",
-    "owned": 55.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3052587"
   },
@@ -5194,17 +4726,7 @@
     "mean_pts": 31.313333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 1.02,
-    "sd": 0.15,
-    "rank": 1.0,
-    "pos_rank": "QB1",
-    "grade": "A+",
-    "proj": 24.5,
-    "opp": "vs. LAC",
-    "owned": 99.9,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3918298"
   },
@@ -5274,17 +4796,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 20.69,
-    "sd": 2.66,
-    "rank": 21.0,
-    "pos_rank": "QB21",
-    "grade": "D",
-    "proj": 15.2,
-    "opp": "at WAS",
-    "owned": 39.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3912547"
   },
@@ -5364,17 +4876,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 47.66,
-    "sd": 4.52,
-    "rank": 48.0,
-    "pos_rank": "WR48",
-    "grade": "C-",
-    "proj": 9.6,
-    "opp": "vs. NE",
-    "owned": 62.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3916433"
   },
@@ -5447,17 +4949,7 @@
     "mean_pts": 3.633333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 48.39,
-    "sd": 2.91,
-    "rank": 48.0,
-    "pos_rank": "RB48",
-    "grade": "F",
-    "proj": 6.2,
-    "opp": "at DAL",
-    "owned": 8.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4038441"
   },
@@ -5530,17 +5022,7 @@
     "mean_pts": 5.866666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 48.72,
-    "sd": 3.57,
-    "rank": 47.0,
-    "pos_rank": "TE47",
-    "grade": "F",
-    "proj": 3.1,
-    "opp": "at IND",
-    "owned": 1.2,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3843945"
   },
@@ -5673,17 +5155,7 @@
     "mean_pts": 1.8999999999999997
    },
    "injury": null,
-   "fp": {
-    "ecr": 96.41,
-    "sd": 5.39,
-    "rank": 95.0,
-    "pos_rank": "WR95",
-    "grade": "F",
-    "proj": 5.1,
-    "opp": "at GB",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3917914"
   },
@@ -5753,17 +5225,7 @@
     "avail": 0.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 13.48,
-    "sd": 2.08,
-    "rank": 13.0,
-    "pos_rank": "QB13",
-    "grade": "C+",
-    "proj": 17.1,
-    "opp": "at TB",
-    "owned": 63.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3917315"
   },
@@ -5836,17 +5298,7 @@
     "mean_pts": 7.533333333333334
    },
    "injury": null,
-   "fp": {
-    "ecr": 20.78,
-    "sd": 1.98,
-    "rank": 21.0,
-    "pos_rank": "TE21",
-    "grade": "D-",
-    "proj": 8.5,
-    "opp": "at TB",
-    "owned": 44.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4036133"
   },
@@ -5919,17 +5371,7 @@
     "mean_pts": 2.533333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 43.2,
-    "sd": 4.11,
-    "rank": 43.0,
-    "pos_rank": "TE43",
-    "grade": "F",
-    "proj": 3.4,
-    "opp": "at TB",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3921690"
   },
@@ -6072,17 +5514,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 28.17,
-    "sd": 2.04,
-    "rank": 28.0,
-    "pos_rank": "RB28",
-    "grade": "C",
-    "proj": 11.5,
-    "opp": "at NYG",
-    "owned": 87.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3916148"
   },
@@ -6155,17 +5587,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 158.5,
-    "sd": 7.0,
-    "rank": 156.0,
-    "pos_rank": "WR156",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "vs. LAC",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4037235"
   },
@@ -6238,17 +5660,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 165.71,
-    "sd": 4.77,
-    "rank": 167.0,
-    "pos_rank": "WR167",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "vs. NYJ",
-    "owned": 0.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3126997"
   },
@@ -6311,17 +5723,7 @@
     "mean_pts": 1.9666666666666668
    },
    "injury": null,
-   "fp": {
-    "ecr": 46.42,
-    "sd": 3.82,
-    "rank": 46.0,
-    "pos_rank": "TE46",
-    "grade": "F",
-    "proj": 3.2,
-    "opp": "at PIT",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3127310"
   },
@@ -6394,17 +5796,7 @@
     "mean_pts": 8.933333333333332
    },
    "injury": null,
-   "fp": {
-    "ecr": 28.2,
-    "sd": 3.39,
-    "rank": 27.0,
-    "pos_rank": "WR27",
-    "grade": "B",
-    "proj": 11.4,
-    "opp": "vs. CIN",
-    "owned": 91.1,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4047650"
   },
@@ -6477,17 +5869,7 @@
     "mean_pts": 10.866666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 36.76,
-    "sd": 2.29,
-    "rank": 39.0,
-    "pos_rank": "TE39",
-    "grade": "F",
-    "proj": 3.9,
-    "opp": "vs. LV",
-    "owned": 1.3,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4036131"
   },
@@ -6560,17 +5942,7 @@
     "mean_pts": 10.033333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 40.93,
-    "sd": 5.71,
-    "rank": 39.0,
-    "pos_rank": "WR39",
-    "grade": "C",
-    "proj": 10.6,
-    "opp": "vs. SEA",
-    "owned": 94.3,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3121422"
   },
@@ -6696,17 +6068,7 @@
     "mean_pts": 13.366666666666665
    },
    "injury": null,
-   "fp": {
-    "ecr": 21.22,
-    "sd": 2.2,
-    "rank": 22.0,
-    "pos_rank": "RB22",
-    "grade": "B-",
-    "proj": 12.5,
-    "opp": "at IND",
-    "owned": 96.5,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4035538"
   },
@@ -6779,17 +6141,7 @@
     "mean_pts": 3.9
    },
    "injury": null,
-   "fp": {
-    "ecr": 37.63,
-    "sd": 3.66,
-    "rank": 36.0,
-    "pos_rank": "TE36",
-    "grade": "F",
-    "proj": 4.4,
-    "opp": "vs. LAC",
-    "owned": 1.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3930086"
   },
@@ -6852,17 +6204,7 @@
     "mean_pts": 11.393333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 34.38,
-    "sd": 4.01,
-    "rank": 34.0,
-    "pos_rank": "QB34",
-    "grade": "F",
-    "proj": 0.9,
-    "opp": "at WAS",
-    "owned": 3.4,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3924327"
   },
@@ -6935,17 +6277,7 @@
     "mean_pts": 9.446666666666665
    },
    "injury": null,
-   "fp": {
-    "ecr": 26.1,
-    "sd": 1.34,
-    "rank": 26.0,
-    "pos_rank": "QB26",
-    "grade": "F",
-    "proj": 14.3,
-    "opp": "vs. HOU",
-    "owned": 24.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3917792"
   },
@@ -7018,17 +6350,7 @@
     "mean_pts": 13.299999999999999
    },
    "injury": null,
-   "fp": {
-    "ecr": 26.2,
-    "sd": 2.09,
-    "rank": 25.0,
-    "pos_rank": "WR25",
-    "grade": "B",
-    "proj": 11.8,
-    "opp": "vs. ARI",
-    "owned": 79.3,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3126486"
   },
@@ -7101,17 +6423,7 @@
     "mean_pts": 7.933333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 126.63,
-    "sd": 7.84,
-    "rank": 120.0,
-    "pos_rank": "WR120",
-    "grade": "F",
-    "proj": 2.9,
-    "opp": "at NO",
-    "owned": 0.2,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "DEV",
    "espn_id": "4241983"
   },
@@ -7191,17 +6503,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 12.4,
-    "sd": 1.91,
-    "rank": 12.0,
-    "pos_rank": "TE12",
-    "grade": "C",
-    "proj": 10.3,
-    "opp": "vs. LV",
-    "owned": 58.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3929645"
   },
@@ -7351,17 +6653,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 34.46,
-    "sd": 3.76,
-    "rank": 33.0,
-    "pos_rank": "RB33",
-    "grade": "C",
-    "proj": 8.9,
-    "opp": "vs. LAR",
-    "owned": 83.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4241985"
   },
@@ -7441,17 +6733,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 7.05,
-    "sd": 1.23,
-    "rank": 7.0,
-    "pos_rank": "RB7",
-    "grade": "A",
-    "proj": 17.9,
-    "opp": "vs. HOU",
-    "owned": 99.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4242335"
   },
@@ -7531,17 +6813,7 @@
     "avail": 0.75,
     "stale": true
    },
-   "fp": {
-    "ecr": 31.21,
-    "sd": 4.61,
-    "rank": 31.0,
-    "pos_rank": "TE31",
-    "grade": "F",
-    "proj": 6.0,
-    "opp": "at DEN",
-    "owned": 3.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4242557"
   },
@@ -7611,17 +6883,7 @@
     "avail": 0.75,
     "stale": true
    },
-   "fp": {
-    "ecr": 53.06,
-    "sd": 11.51,
-    "rank": 68.0,
-    "pos_rank": "WR68",
-    "grade": "D+",
-    "proj": 7.1,
-    "opp": "vs. CIN",
-    "owned": 77.9,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4035687"
   },
@@ -7691,17 +6953,7 @@
     "avail": 0.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 95.82,
-    "sd": 12.91,
-    "rank": 103.0,
-    "pos_rank": "WR103",
-    "grade": "F",
-    "proj": 3.9,
-    "opp": "at TB",
-    "owned": 12.4,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3886598"
   },
@@ -7774,17 +7026,7 @@
     "mean_pts": 17.253333333333334
    },
    "injury": null,
-   "fp": {
-    "ecr": 10.83,
-    "sd": 1.36,
-    "rank": 11.0,
-    "pos_rank": "QB11",
-    "grade": "B",
-    "proj": 17.5,
-    "opp": "vs. ATL",
-    "owned": 63.4,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4036378"
   },
@@ -7857,17 +7099,7 @@
     "mean_pts": 1.6333333333333335
    },
    "injury": null,
-   "fp": {
-    "ecr": 61.34,
-    "sd": 6.03,
-    "rank": 60.0,
-    "pos_rank": "RB60",
-    "grade": "F",
-    "proj": 3.7,
-    "opp": "at CLE",
-    "owned": 1.2,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4239934"
   },
@@ -7947,17 +7179,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 19.59,
-    "sd": 2.04,
-    "rank": 19.0,
-    "pos_rank": "RB19",
-    "grade": "B",
-    "proj": 13.9,
-    "opp": "vs. PHI",
-    "owned": 96.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4259545"
   },
@@ -8030,17 +7252,7 @@
     "mean_pts": 3.8333333333333335
    },
    "injury": null,
-   "fp": {
-    "ecr": 38.5,
-    "sd": 1.99,
-    "rank": 38.0,
-    "pos_rank": "TE38",
-    "grade": "F",
-    "proj": 4.0,
-    "opp": "vs. PHI",
-    "owned": 1.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4258595"
   },
@@ -8113,17 +7325,7 @@
     "mean_pts": 5.466666666666666
    },
    "injury": null,
-   "fp": {
-    "ecr": 80.58,
-    "sd": 2.9,
-    "rank": 82.0,
-    "pos_rank": "WR82",
-    "grade": "F",
-    "proj": 6.3,
-    "opp": "vs. TEN",
-    "owned": 3.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4040655"
   },
@@ -8196,17 +7398,7 @@
     "mean_pts": 14.966666666666669
    },
    "injury": null,
-   "fp": {
-    "ecr": 6.15,
-    "sd": 1.2,
-    "rank": 6.0,
-    "pos_rank": "WR6",
-    "grade": "A+",
-    "proj": 17.0,
-    "opp": "at TB",
-    "owned": 99.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4262921"
   },
@@ -8279,17 +7471,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 161.8,
-    "sd": 7.78,
-    "rank": 168.0,
-    "pos_rank": "WR168",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "at SF",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4039050"
   },
@@ -8362,17 +7544,7 @@
     "mean_pts": 11.293333333333335
    },
    "injury": null,
-   "fp": {
-    "ecr": 13.95,
-    "sd": 1.05,
-    "rank": 14.0,
-    "pos_rank": "QB14",
-    "grade": "C+",
-    "proj": 17.0,
-    "opp": "at BUF",
-    "owned": 89.1,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4038941"
   },
@@ -8445,17 +7617,7 @@
     "mean_pts": 23.63333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 4.32,
-    "sd": 1.28,
-    "rank": 4.0,
-    "pos_rank": "WR4",
-    "grade": "A+",
-    "proj": 18.3,
-    "opp": "vs. BAL",
-    "owned": 99.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4241389"
   },
@@ -8528,17 +7690,7 @@
     "mean_pts": 17.833333333333332
    },
    "injury": null,
-   "fp": {
-    "ecr": 4.93,
-    "sd": 1.12,
-    "rank": 5.0,
-    "pos_rank": "QB5",
-    "grade": "A",
-    "proj": 20.1,
-    "opp": "at CHI",
-    "owned": 98.5,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4040715"
   },
@@ -8608,17 +7760,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 76.5,
-    "sd": 5.5,
-    "rank": 76.0,
-    "pos_rank": "WR76",
-    "grade": "F",
-    "proj": 6.4,
-    "opp": "vs. CAR",
-    "owned": 16.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4241463"
   },
@@ -8698,17 +7840,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 19.22,
-    "sd": 1.63,
-    "rank": 18.0,
-    "pos_rank": "WR18",
-    "grade": "A-",
-    "proj": 13.2,
-    "opp": "at PIT",
-    "owned": 98.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4239993"
   },
@@ -8761,17 +7893,7 @@
     "mean_pts": 1.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 52.24,
-    "sd": 4.8,
-    "rank": 51.0,
-    "pos_rank": "TE51",
-    "grade": "F",
-    "proj": 2.9,
-    "opp": "vs. LAR",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3911853"
   },
@@ -8851,17 +7973,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 64.21,
-    "sd": 5.63,
-    "rank": 62.0,
-    "pos_rank": "RB62",
-    "grade": "F",
-    "proj": 3.3,
-    "opp": "at TB",
-    "owned": 0.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4240631"
   },
@@ -8941,17 +8053,7 @@
     "avail": 0.75,
     "stale": true
    },
-   "fp": {
-    "ecr": 9.81,
-    "sd": 1.58,
-    "rank": 10.0,
-    "pos_rank": "QB10",
-    "grade": "B",
-    "proj": 17.7,
-    "opp": "at PIT",
-    "owned": 98.3,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3915511"
   },
@@ -9024,17 +8126,7 @@
     "mean_pts": 1.2
    },
    "injury": null,
-   "fp": {
-    "ecr": 129.67,
-    "sd": 10.35,
-    "rank": 150.0,
-    "pos_rank": "WR150",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "at GB",
-    "owned": 0.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4369886"
   },
@@ -9107,17 +8199,7 @@
     "mean_pts": 9.166666666666666
    },
    "injury": null,
-   "fp": {
-    "ecr": 33.22,
-    "sd": 4.36,
-    "rank": 31.0,
-    "pos_rank": "WR31",
-    "grade": "C+",
-    "proj": 11.2,
-    "opp": "at DAL",
-    "owned": 47.2,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4360939"
   },
@@ -9250,17 +8332,7 @@
     "mean_pts": 17.7
    },
    "injury": null,
-   "fp": {
-    "ecr": 13.15,
-    "sd": 3.09,
-    "rank": 13.0,
-    "pos_rank": "RB13",
-    "grade": "B+",
-    "proj": 15.3,
-    "opp": "at CLE",
-    "owned": 93.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4241416"
   },
@@ -9323,17 +8395,7 @@
     "mean_pts": 0.5666666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 75.4,
-    "sd": 5.48,
-    "rank": 75.0,
-    "pos_rank": "TE75",
-    "grade": "F",
-    "proj": 1.5,
-    "opp": "vs. NE",
-    "owned": 1.4,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4244049"
   },
@@ -9406,17 +8468,7 @@
     "mean_pts": 9.799999999999999
    },
    "injury": null,
-   "fp": {
-    "ecr": 15.46,
-    "sd": 2.14,
-    "rank": 15.0,
-    "pos_rank": "WR15",
-    "grade": "A",
-    "proj": 14.1,
-    "opp": "vs. LAR",
-    "owned": 97.4,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4372016"
   },
@@ -9489,17 +8541,7 @@
     "mean_pts": 1.3666666666666665
    },
    "injury": null,
-   "fp": {
-    "ecr": 103.83,
-    "sd": 7.74,
-    "rank": 104.0,
-    "pos_rank": "WR104",
-    "grade": "F",
-    "proj": 3.8,
-    "opp": "vs. SEA",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4361577"
   },
@@ -9562,17 +8604,7 @@
     "mean_pts": 1.7333333333333332
    },
    "injury": null,
-   "fp": {
-    "ecr": 54.25,
-    "sd": 6.83,
-    "rank": 53.0,
-    "pos_rank": "TE53",
-    "grade": "F",
-    "proj": 2.7,
-    "opp": "vs. SEA",
-    "owned": 1.2,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4048228"
   },
@@ -9645,17 +8677,7 @@
     "mean_pts": 2.8000000000000003
    },
    "injury": null,
-   "fp": {
-    "ecr": 42.19,
-    "sd": 7.42,
-    "rank": 41.0,
-    "pos_rank": "TE41",
-    "grade": "F",
-    "proj": 3.5,
-    "opp": "at MIA",
-    "owned": 0.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4240472"
   },
@@ -9718,17 +8740,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 160.0,
-    "sd": 6.3,
-    "rank": 158.0,
-    "pos_rank": "WR158",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "at SF",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4360739"
   },
@@ -9801,17 +8813,7 @@
     "mean_pts": 1.4000000000000001
    },
    "injury": null,
-   "fp": {
-    "ecr": 65.0,
-    "sd": 4.47,
-    "rank": 68.0,
-    "pos_rank": "TE68",
-    "grade": "F",
-    "proj": 2.0,
-    "opp": "vs. NYJ",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4242392"
   },
@@ -9884,17 +8886,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 103.0,
-    "sd": 3.04,
-    "rank": 104.0,
-    "pos_rank": "TE104",
-    "grade": "F",
-    "proj": 0.4,
-    "opp": "at CLE",
-    "owned": 0.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4034948"
   },
@@ -9967,17 +8959,7 @@
     "mean_pts": 8.3
    },
    "injury": null,
-   "fp": {
-    "ecr": 28.63,
-    "sd": 1.63,
-    "rank": 30.0,
-    "pos_rank": "RB30",
-    "grade": "C",
-    "proj": 10.3,
-    "opp": "at JAC",
-    "owned": 91.5,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4569173"
   },
@@ -10050,17 +9032,7 @@
     "mean_pts": 1.3
    },
    "injury": null,
-   "fp": {
-    "ecr": 53.91,
-    "sd": 12.21,
-    "rank": 64.0,
-    "pos_rank": "TE64",
-    "grade": "F",
-    "proj": 2.1,
-    "opp": "vs. ARI",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4040612"
   },
@@ -10133,17 +9105,7 @@
     "mean_pts": 9.366666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 16.73,
-    "sd": 2.29,
-    "rank": 16.0,
-    "pos_rank": "TE16",
-    "grade": "D+",
-    "proj": 9.7,
-    "opp": "vs. CIN",
-    "owned": 21.1,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4361411"
   },
@@ -10223,17 +9185,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 3.2,
-    "sd": 0.67,
-    "rank": 3.0,
-    "pos_rank": "WR3",
-    "grade": "A+",
-    "proj": 19.4,
-    "opp": "at PIT",
-    "owned": 99.9,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4362628"
   },
@@ -10313,17 +9265,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 8.54,
-    "sd": 1.53,
-    "rank": 8.0,
-    "pos_rank": "WR8",
-    "grade": "A",
-    "proj": 15.7,
-    "opp": "at CHI",
-    "owned": 99.5,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4241478"
   },
@@ -10396,17 +9338,7 @@
     "mean_pts": 3.4333333333333336
    },
    "injury": null,
-   "fp": {
-    "ecr": 42.22,
-    "sd": 2.39,
-    "rank": 44.0,
-    "pos_rank": "RB44",
-    "grade": "D",
-    "proj": 7.4,
-    "opp": "vs. MIN",
-    "owned": 66.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4371733"
   },
@@ -10479,17 +9411,7 @@
     "mean_pts": 25.26666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 1.61,
-    "sd": 0.69,
-    "rank": 2.0,
-    "pos_rank": "WR2",
-    "grade": "A+",
-    "proj": 20.9,
-    "opp": "vs. NYJ",
-    "owned": 99.9,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4374302"
   },
@@ -10562,17 +9484,7 @@
     "mean_pts": 1.3333333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 17.88,
-    "sd": 2.44,
-    "rank": 19.0,
-    "pos_rank": "TE19",
-    "grade": "D",
-    "proj": 8.6,
-    "opp": "at GB",
-    "owned": 87.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4360248"
   },
@@ -10645,17 +9557,7 @@
     "mean_pts": 17.346666666666668
    },
    "injury": null,
-   "fp": {
-    "ecr": 8.86,
-    "sd": 1.63,
-    "rank": 8.0,
-    "pos_rank": "QB8",
-    "grade": "B",
-    "proj": 18.3,
-    "opp": "vs. NE",
-    "owned": 90.5,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4360310"
   },
@@ -10735,17 +9637,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 26.39,
-    "sd": 1.67,
-    "rank": 26.0,
-    "pos_rank": "RB26",
-    "grade": "C+",
-    "proj": 12.0,
-    "opp": "vs. LV",
-    "owned": 96.5,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4239996"
   },
@@ -10808,17 +9700,7 @@
     "mean_pts": 7.233333333333334
    },
    "injury": null,
-   "fp": {
-    "ecr": 73.42,
-    "sd": 7.24,
-    "rank": 74.0,
-    "pos_rank": "WR74",
-    "grade": "F",
-    "proj": 6.5,
-    "opp": "vs. LAC",
-    "owned": 3.9,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4242433"
   },
@@ -10891,17 +9773,7 @@
     "mean_pts": 16.833333333333332
    },
    "injury": null,
-   "fp": {
-    "ecr": 14.68,
-    "sd": 1.87,
-    "rank": 14.0,
-    "pos_rank": "RB14",
-    "grade": "B",
-    "proj": 15.0,
-    "opp": "vs. BAL",
-    "owned": 99.2,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4361579"
   },
@@ -10974,17 +9846,7 @@
     "mean_pts": 0.5
    },
    "injury": null,
-   "fp": {
-    "ecr": 79.13,
-    "sd": 2.32,
-    "rank": 84.0,
-    "pos_rank": "TE84",
-    "grade": "F",
-    "proj": 1.2,
-    "opp": "at SF",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4239944"
   },
@@ -11057,17 +9919,7 @@
     "mean_pts": 4.666666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 37.43,
-    "sd": 3.03,
-    "rank": 37.0,
-    "pos_rank": "TE37",
-    "grade": "F",
-    "proj": 4.3,
-    "opp": "at CLE",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4372780"
   },
@@ -11147,17 +9999,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 114.42,
-    "sd": 6.29,
-    "rank": 124.0,
-    "pos_rank": "WR124",
-    "grade": "F",
-    "proj": 2.5,
-    "opp": "vs. ATL",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4259305"
   },
@@ -11237,17 +10079,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 142.57,
-    "sd": 7.93,
-    "rank": 137.0,
-    "pos_rank": "WR137",
-    "grade": "F",
-    "proj": 0.6,
-    "opp": "at NO",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4401805"
   },
@@ -11320,17 +10152,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 167.8,
-    "sd": 3.06,
-    "rank": 171.0,
-    "pos_rank": "WR171",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "at CHI",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3926231"
   },
@@ -11410,17 +10232,7 @@
     "avail": 0.75,
     "stale": true
    },
-   "fp": {
-    "ecr": 14.9,
-    "sd": 2.56,
-    "rank": 15.0,
-    "pos_rank": "RB15",
-    "grade": "B",
-    "proj": 14.7,
-    "opp": "vs. CIN",
-    "owned": 91.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4569987"
   },
@@ -11493,17 +10305,7 @@
     "mean_pts": 14.266666666666666
    },
    "injury": null,
-   "fp": {
-    "ecr": 11.24,
-    "sd": 1.83,
-    "rank": 11.0,
-    "pos_rank": "WR11",
-    "grade": "A",
-    "proj": 15.1,
-    "opp": "at GB",
-    "owned": 99.5,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4426502"
   },
@@ -11583,17 +10385,7 @@
     "avail": 0.75,
     "stale": true
    },
-   "fp": {
-    "ecr": 5.56,
-    "sd": 1.33,
-    "rank": 5.0,
-    "pos_rank": "WR5",
-    "grade": "A+",
-    "proj": 17.3,
-    "opp": "vs. LV",
-    "owned": 99.5,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4361370"
   },
@@ -11666,17 +10458,7 @@
     "mean_pts": 7.566666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 25.46,
-    "sd": 3.19,
-    "rank": 24.0,
-    "pos_rank": "WR24",
-    "grade": "B",
-    "proj": 11.9,
-    "opp": "vs. NYJ",
-    "owned": 94.5,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4426388"
   },
@@ -11749,17 +10531,7 @@
     "mean_pts": 10.333333333333334
    },
    "injury": null,
-   "fp": {
-    "ecr": 12.46,
-    "sd": 1.84,
-    "rank": 13.0,
-    "pos_rank": "WR13",
-    "grade": "A",
-    "proj": 14.8,
-    "opp": "vs. BAL",
-    "owned": 99.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4426354"
   },
@@ -11832,17 +10604,7 @@
     "mean_pts": 16.73333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 8.66,
-    "sd": 1.03,
-    "rank": 9.0,
-    "pos_rank": "RB9",
-    "grade": "A",
-    "proj": 16.7,
-    "opp": "vs. LAC",
-    "owned": 99.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4379399"
   },
@@ -11915,17 +10677,7 @@
     "mean_pts": 6.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 30.19,
-    "sd": 1.76,
-    "rank": 29.0,
-    "pos_rank": "TE29",
-    "grade": "F",
-    "proj": 6.5,
-    "opp": "vs. KC",
-    "owned": 7.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4367209"
   },
@@ -11998,17 +10750,7 @@
     "mean_pts": 10.033333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 36.51,
-    "sd": 3.16,
-    "rank": 36.0,
-    "pos_rank": "RB36",
-    "grade": "C-",
-    "proj": 8.6,
-    "opp": "vs. SEA",
-    "owned": 64.5,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4697815"
   },
@@ -12081,17 +10823,7 @@
     "mean_pts": 5.800000000000001
    },
    "injury": null,
-   "fp": {
-    "ecr": 37.98,
-    "sd": 5.1,
-    "rank": 37.0,
-    "pos_rank": "WR37",
-    "grade": "C",
-    "proj": 10.7,
-    "opp": "vs. LAC",
-    "owned": 60.5,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4373678"
   },
@@ -12164,17 +10896,7 @@
     "mean_pts": 5.933333333333334
    },
    "injury": null,
-   "fp": {
-    "ecr": 40.71,
-    "sd": 3.46,
-    "rank": 42.0,
-    "pos_rank": "RB42",
-    "grade": "D",
-    "proj": 7.7,
-    "opp": "at SF",
-    "owned": 45.4,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4373626"
   },
@@ -12247,17 +10969,7 @@
     "mean_pts": 3.4
    },
    "injury": null,
-   "fp": {
-    "ecr": 68.85,
-    "sd": 6.38,
-    "rank": 66.0,
-    "pos_rank": "WR66",
-    "grade": "F",
-    "proj": 7.4,
-    "opp": "at NO",
-    "owned": 19.4,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4382466"
   },
@@ -12327,17 +11039,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 75.73,
-    "sd": 2.8,
-    "rank": 73.0,
-    "pos_rank": "TE73",
-    "grade": "F",
-    "proj": 1.6,
-    "opp": "vs. HOU",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4722908"
   },
@@ -12407,17 +11109,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 102.5,
-    "sd": 9.5,
-    "rank": 112.0,
-    "pos_rank": "TE112",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "at GB",
-    "owned": 0.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4249624"
   },
@@ -12470,17 +11162,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 169.2,
-    "sd": 3.92,
-    "rank": 172.0,
-    "pos_rank": "WR172",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "vs. PHI",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "DEV",
    "espn_id": "5065495"
   },
@@ -12543,17 +11225,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 158.5,
-    "sd": 5.71,
-    "rank": 160.0,
-    "pos_rank": "WR160",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "vs. NYJ",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4245144"
   },
@@ -12679,17 +11351,7 @@
     "mean_pts": 3.9000000000000004
    },
    "injury": null,
-   "fp": {
-    "ecr": 58.29,
-    "sd": 3.11,
-    "rank": 56.0,
-    "pos_rank": "WR56",
-    "grade": "D",
-    "proj": 9.0,
-    "opp": "at WAS",
-    "owned": 40.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4032473"
   },
@@ -12885,17 +11547,7 @@
     "mean_pts": 19.099999999999998
    },
    "injury": null,
-   "fp": {
-    "ecr": 6.61,
-    "sd": 1.12,
-    "rank": 7.0,
-    "pos_rank": "WR7",
-    "grade": "A+",
-    "proj": 15.7,
-    "opp": "at DET",
-    "owned": 98.3,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4569618"
   },
@@ -12968,17 +11620,7 @@
     "mean_pts": 2.6999999999999997
    },
    "injury": null,
-   "fp": {
-    "ecr": 80.6,
-    "sd": 6.79,
-    "rank": 83.0,
-    "pos_rank": "WR83",
-    "grade": "F",
-    "proj": 6.3,
-    "opp": "at GB",
-    "owned": 1.5,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4361409"
   },
@@ -13058,17 +11700,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 1.0,
-    "sd": 0.0,
-    "rank": 1.0,
-    "pos_rank": "TE1",
-    "grade": "A+",
-    "proj": 17.1,
-    "opp": "at SF",
-    "owned": 99.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4361307"
   },
@@ -13148,17 +11780,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 57.38,
-    "sd": 2.45,
-    "rank": 56.0,
-    "pos_rank": "RB56",
-    "grade": "F",
-    "proj": 4.8,
-    "opp": "at GB",
-    "owned": 31.4,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4241474"
   },
@@ -13231,17 +11853,7 @@
     "mean_pts": 3.566666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 107.46,
-    "sd": 6.51,
-    "rank": 99.0,
-    "pos_rank": "WR99",
-    "grade": "F",
-    "proj": 4.5,
-    "opp": "vs. BAL",
-    "owned": 2.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3676833"
   },
@@ -13314,17 +11926,7 @@
     "mean_pts": 6.266666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 46.56,
-    "sd": 7.47,
-    "rank": 49.0,
-    "pos_rank": "TE49",
-    "grade": "F",
-    "proj": 3.0,
-    "opp": "at DET",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4361372"
   },
@@ -13457,17 +12059,7 @@
     "mean_pts": 6.833333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 34.05,
-    "sd": 3.33,
-    "rank": 32.0,
-    "pos_rank": "WR32",
-    "grade": "C+",
-    "proj": 11.2,
-    "opp": "at JAC",
-    "owned": 66.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4361432"
   },
@@ -13540,17 +12132,7 @@
     "mean_pts": 26.953333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 3.21,
-    "sd": 0.71,
-    "rank": 3.0,
-    "pos_rank": "QB3",
-    "grade": "A",
-    "proj": 22.0,
-    "opp": "vs. ARI",
-    "owned": 91.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4361741"
   },
@@ -13623,17 +12205,7 @@
     "mean_pts": 13.133333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 11.48,
-    "sd": 1.72,
-    "rank": 11.0,
-    "pos_rank": "TE11",
-    "grade": "C",
-    "proj": 10.3,
-    "opp": "vs. TEN",
-    "owned": 89.9,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4361050"
   },
@@ -13706,17 +12278,7 @@
     "mean_pts": 17.666666666666668
    },
    "injury": null,
-   "fp": {
-    "ecr": 17.49,
-    "sd": 1.52,
-    "rank": 17.0,
-    "pos_rank": "RB17",
-    "grade": "B",
-    "proj": 14.3,
-    "opp": "at DEN",
-    "owned": 99.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4430737"
   },
@@ -13789,17 +12351,7 @@
     "mean_pts": 10.733333333333334
    },
    "injury": null,
-   "fp": {
-    "ecr": 18.63,
-    "sd": 2.81,
-    "rank": 20.0,
-    "pos_rank": "TE20",
-    "grade": "D",
-    "proj": 8.6,
-    "opp": "vs. BAL",
-    "owned": 82.2,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4242355"
   },
@@ -13942,17 +12494,7 @@
     "mean_pts": 2.9
    },
    "injury": null,
-   "fp": {
-    "ecr": 98.65,
-    "sd": 6.63,
-    "rank": 96.0,
-    "pos_rank": "WR96",
-    "grade": "F",
-    "proj": 5.1,
-    "opp": "vs. ATL",
-    "owned": 0.9,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4430191"
   },
@@ -14088,17 +12630,7 @@
     "mean_pts": 5.6000000000000005
    },
    "injury": null,
-   "fp": {
-    "ecr": 70.71,
-    "sd": 6.32,
-    "rank": 65.0,
-    "pos_rank": "WR65",
-    "grade": "F",
-    "proj": 7.5,
-    "opp": "at MIA",
-    "owned": 3.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4362921"
   },
@@ -14178,17 +12710,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 58.38,
-    "sd": 5.84,
-    "rank": 56.0,
-    "pos_rank": "TE56",
-    "grade": "F",
-    "proj": 2.5,
-    "opp": "at NYG",
-    "owned": 2.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4361516"
   },
@@ -14261,17 +12783,7 @@
     "mean_pts": 9.799999999999999
    },
    "injury": null,
-   "fp": {
-    "ecr": 52.98,
-    "sd": 4.06,
-    "rank": 52.0,
-    "pos_rank": "WR52",
-    "grade": "C-",
-    "proj": 9.3,
-    "opp": "at NYG",
-    "owned": 62.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4569587"
   },
@@ -14351,17 +12863,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 12.56,
-    "sd": 1.59,
-    "rank": 12.0,
-    "pos_rank": "RB12",
-    "grade": "B+",
-    "proj": 15.4,
-    "opp": "at DET",
-    "owned": 98.5,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4427366"
   },
@@ -14434,17 +12936,7 @@
     "mean_pts": 23.133333333333336
    },
    "injury": null,
-   "fp": {
-    "ecr": 10.56,
-    "sd": 1.62,
-    "rank": 10.0,
-    "pos_rank": "WR10",
-    "grade": "A",
-    "proj": 15.3,
-    "opp": "vs. ATL",
-    "owned": 94.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4248528"
   },
@@ -14524,17 +13016,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 22.95,
-    "sd": 2.1,
-    "rank": 23.0,
-    "pos_rank": "QB23",
-    "grade": "D-",
-    "proj": 14.7,
-    "opp": "vs. KC",
-    "owned": 27.1,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4242512"
   },
@@ -14607,17 +13089,7 @@
     "mean_pts": 7.666666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 25.95,
-    "sd": 2.19,
-    "rank": 26.0,
-    "pos_rank": "TE26",
-    "grade": "F",
-    "proj": 7.1,
-    "opp": "vs. MIN",
-    "owned": 6.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4243331"
   },
@@ -14690,17 +13162,7 @@
     "mean_pts": 26.400000000000002
    },
    "injury": null,
-   "fp": {
-    "ecr": 2.27,
-    "sd": 0.91,
-    "rank": 2.0,
-    "pos_rank": "RB2",
-    "grade": "A+",
-    "proj": 21.1,
-    "opp": "at MIA",
-    "owned": 99.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4567048"
   },
@@ -14773,17 +13235,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 111.67,
-    "sd": 8.69,
-    "rank": 108.0,
-    "pos_rank": "WR108",
-    "grade": "F",
-    "proj": 3.6,
-    "opp": "at DEN",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4386544"
   },
@@ -14856,17 +13308,7 @@
     "mean_pts": 10.966666666666669
    },
    "injury": null,
-   "fp": {
-    "ecr": 34.56,
-    "sd": 3.57,
-    "rank": 33.0,
-    "pos_rank": "WR33",
-    "grade": "C+",
-    "proj": 11.2,
-    "opp": "at CHI",
-    "owned": 37.3,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4428850"
   },
@@ -14946,17 +13388,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 49.63,
-    "sd": 2.71,
-    "rank": 49.0,
-    "pos_rank": "RB49",
-    "grade": "F",
-    "proj": 6.2,
-    "opp": "at BUF",
-    "owned": 28.9,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4596334"
   },
@@ -15024,17 +13456,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 94.43,
-    "sd": 6.37,
-    "rank": 97.0,
-    "pos_rank": "TE97",
-    "grade": "F",
-    "proj": 0.7,
-    "opp": "at WAS",
-    "owned": 0.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4243176"
   },
@@ -15168,17 +13590,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 162.43,
-    "sd": 3.16,
-    "rank": 161.0,
-    "pos_rank": "WR161",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "at MIA",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4372716"
   },
@@ -15251,17 +13663,7 @@
     "mean_pts": 25.899999999999995
    },
    "injury": null,
-   "fp": {
-    "ecr": 3.27,
-    "sd": 0.77,
-    "rank": 3.0,
-    "pos_rank": "RB3",
-    "grade": "A+",
-    "proj": 20.3,
-    "opp": "at GB",
-    "owned": 99.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4430807"
   },
@@ -15334,17 +13736,7 @@
     "mean_pts": 34.68666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 1.59,
-    "sd": 0.62,
-    "rank": 1.0,
-    "pos_rank": "WR1",
-    "grade": "A+",
-    "proj": 22.1,
-    "opp": "at WAS",
-    "owned": 99.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4430878"
   },
@@ -15417,17 +13809,7 @@
     "mean_pts": 4.366666666666666
    },
    "injury": null,
-   "fp": {
-    "ecr": 46.22,
-    "sd": 3.27,
-    "rank": 47.0,
-    "pos_rank": "WR47",
-    "grade": "C",
-    "proj": 9.9,
-    "opp": "at BUF",
-    "owned": 70.4,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4429025"
   },
@@ -15497,17 +13879,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 65.85,
-    "sd": 6.68,
-    "rank": 65.0,
-    "pos_rank": "TE65",
-    "grade": "F",
-    "proj": 2.1,
-    "opp": "vs. BAL",
-    "owned": 0.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4372096"
   },
@@ -15577,17 +13949,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 89.87,
-    "sd": 13.1,
-    "rank": 94.0,
-    "pos_rank": "RB94",
-    "grade": "F",
-    "proj": 0.5,
-    "opp": "vs. LV",
-    "owned": 2.1,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4599739"
   },
@@ -15667,17 +14029,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 55.35,
-    "sd": 5.27,
-    "rank": 53.0,
-    "pos_rank": "RB53",
-    "grade": "F",
-    "proj": 5.0,
-    "opp": "at CHI",
-    "owned": 31.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4429013"
   },
@@ -15757,17 +14109,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 34.2,
-    "sd": 1.81,
-    "rank": 33.0,
-    "pos_rank": "TE33",
-    "grade": "F",
-    "proj": 4.9,
-    "opp": "vs. CIN",
-    "owned": 2.4,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4430802"
   },
@@ -15840,17 +14182,7 @@
     "mean_pts": 13.433333333333332
    },
    "injury": null,
-   "fp": {
-    "ecr": 29.12,
-    "sd": 3.07,
-    "rank": 28.0,
-    "pos_rank": "WR28",
-    "grade": "B-",
-    "proj": 11.4,
-    "opp": "at SF",
-    "owned": 83.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4360761"
   },
@@ -15923,17 +14255,7 @@
     "mean_pts": 11.966666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 43.76,
-    "sd": 3.28,
-    "rank": 45.0,
-    "pos_rank": "WR45",
-    "grade": "C",
-    "proj": 9.9,
-    "opp": "at NO",
-    "owned": 49.9,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4428718"
   },
@@ -16013,17 +14335,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 130.5,
-    "sd": 5.59,
-    "rank": 128.0,
-    "pos_rank": "WR128",
-    "grade": "F",
-    "proj": 2.0,
-    "opp": "at BUF",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4362477"
   },
@@ -16093,17 +14405,7 @@
     "mean_pts": 12.966666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 7.51,
-    "sd": 2.14,
-    "rank": 8.0,
-    "pos_rank": "RB8",
-    "grade": "A",
-    "proj": 17.5,
-    "opp": "at PIT",
-    "owned": 99.5,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4362238"
   },
@@ -16176,17 +14478,7 @@
     "mean_pts": 16.366666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 11.37,
-    "sd": 1.53,
-    "rank": 12.0,
-    "pos_rank": "WR12",
-    "grade": "A",
-    "proj": 14.8,
-    "opp": "vs. NE",
-    "owned": 94.1,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4432620"
   },
@@ -16259,17 +14551,7 @@
     "mean_pts": 4.633333333333334
    },
    "injury": null,
-   "fp": {
-    "ecr": 54.02,
-    "sd": 3.3,
-    "rank": 53.0,
-    "pos_rank": "WR53",
-    "grade": "D+",
-    "proj": 9.2,
-    "opp": "at IND",
-    "owned": 21.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4429022"
   },
@@ -16342,17 +14624,7 @@
     "mean_pts": 4.433333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 51.54,
-    "sd": 3.62,
-    "rank": 51.0,
-    "pos_rank": "RB51",
-    "grade": "F",
-    "proj": 5.2,
-    "opp": "vs. NE",
-    "owned": 33.1,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4362619"
   },
@@ -16425,17 +14697,7 @@
     "mean_pts": 7.133333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 52.76,
-    "sd": 6.31,
-    "rank": 51.0,
-    "pos_rank": "WR51",
-    "grade": "C-",
-    "proj": 9.5,
-    "opp": "at IND",
-    "owned": 10.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4686422"
   },
@@ -16578,17 +14840,7 @@
     "mean_pts": 4.566666666666666
    },
    "injury": null,
-   "fp": {
-    "ecr": 71.49,
-    "sd": 10.37,
-    "rank": 80.0,
-    "pos_rank": "WR80",
-    "grade": "F",
-    "proj": 6.3,
-    "opp": "at JAC",
-    "owned": 3.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4427095"
   },
@@ -16661,17 +14913,7 @@
     "mean_pts": 2.6333333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 51.44,
-    "sd": 3.21,
-    "rank": 50.0,
-    "pos_rank": "RB50",
-    "grade": "F",
-    "proj": 5.3,
-    "opp": "vs. ATL",
-    "owned": 9.9,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3149687"
   },
@@ -16734,17 +14976,7 @@
     "mean_pts": 0.5
    },
    "injury": null,
-   "fp": {
-    "ecr": 65.79,
-    "sd": 3.65,
-    "rank": 64.0,
-    "pos_rank": "RB64",
-    "grade": "F",
-    "proj": 3.2,
-    "opp": "vs. BAL",
-    "owned": 2.1,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4362478"
   },
@@ -16807,17 +15039,7 @@
     "mean_pts": 3.6999999999999997
    },
    "injury": null,
-   "fp": {
-    "ecr": 54.86,
-    "sd": 2.95,
-    "rank": 57.0,
-    "pos_rank": "TE57",
-    "grade": "F",
-    "proj": 2.4,
-    "opp": "vs. CAR",
-    "owned": 0.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4362018"
   },
@@ -16890,17 +15112,7 @@
     "mean_pts": 3.5
    },
    "injury": null,
-   "fp": {
-    "ecr": 95.08,
-    "sd": 8.5,
-    "rank": 98.0,
-    "pos_rank": "WR98",
-    "grade": "F",
-    "proj": 4.7,
-    "opp": "at IND",
-    "owned": 0.1,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4430681"
   },
@@ -16961,17 +15173,7 @@
     "mean_pts": 0.26666666666666666
    },
    "injury": null,
-   "fp": {
-    "ecr": 74.75,
-    "sd": 5.75,
-    "rank": 78.0,
-    "pos_rank": "RB78",
-    "grade": "F",
-    "proj": 1.3,
-    "opp": "vs. BAL",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4383396"
   },
@@ -17044,17 +15246,7 @@
     "mean_pts": 6.866666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 71.45,
-    "sd": 6.26,
-    "rank": 69.0,
-    "pos_rank": "TE69",
-    "grade": "F",
-    "proj": 2.0,
-    "opp": "vs. LAR",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4383440"
   },
@@ -17134,17 +15326,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 45.37,
-    "sd": 3.34,
-    "rank": 46.0,
-    "pos_rank": "RB46",
-    "grade": "D-",
-    "proj": 6.6,
-    "opp": "at WAS",
-    "owned": 34.9,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4887558"
   },
@@ -17217,17 +15399,7 @@
     "mean_pts": 4.1000000000000005
    },
    "injury": null,
-   "fp": {
-    "ecr": 136.54,
-    "sd": 9.67,
-    "rank": 134.0,
-    "pos_rank": "WR134",
-    "grade": "F",
-    "proj": 0.9,
-    "opp": "at CLE",
-    "owned": 0.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4360763"
   },
@@ -17300,17 +15472,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 88.09,
-    "sd": 10.09,
-    "rank": 88.0,
-    "pos_rank": "RB88",
-    "grade": "F",
-    "proj": 0.8,
-    "opp": "vs. NYJ",
-    "owned": 1.2,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4383429"
   },
@@ -17383,17 +15545,7 @@
     "mean_pts": 14.766666666666666
    },
    "injury": null,
-   "fp": {
-    "ecr": 2.23,
-    "sd": 0.47,
-    "rank": 2.0,
-    "pos_rank": "TE2",
-    "grade": "A",
-    "proj": 14.2,
-    "opp": "vs. LAC",
-    "owned": 95.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4385690"
   },
@@ -17466,17 +15618,7 @@
     "mean_pts": 6.733333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 22.63,
-    "sd": 1.64,
-    "rank": 22.0,
-    "pos_rank": "TE22",
-    "grade": "F",
-    "proj": 8.3,
-    "opp": "vs. NE",
-    "owned": 33.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4430539"
   },
@@ -17609,17 +15751,7 @@
     "mean_pts": 8.033333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 41.56,
-    "sd": 4.59,
-    "rank": 40.0,
-    "pos_rank": "WR40",
-    "grade": "C",
-    "proj": 10.5,
-    "opp": "at TB",
-    "owned": 75.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4429205"
   },
@@ -17692,17 +15824,7 @@
     "mean_pts": 6.533333333333334
    },
    "injury": null,
-   "fp": {
-    "ecr": 8.05,
-    "sd": 2.01,
-    "rank": 8.0,
-    "pos_rank": "TE8",
-    "grade": "B",
-    "proj": 12.1,
-    "opp": "vs. ATL",
-    "owned": 94.5,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4572680"
   },
@@ -17775,17 +15897,7 @@
     "mean_pts": 10.866666666666665
    },
    "injury": null,
-   "fp": {
-    "ecr": 23.24,
-    "sd": 2.57,
-    "rank": 23.0,
-    "pos_rank": "WR23",
-    "grade": "B+",
-    "proj": 12.2,
-    "opp": "vs. HOU",
-    "owned": 81.9,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4688813"
   },
@@ -17838,17 +15950,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 88.83,
-    "sd": 7.23,
-    "rank": 91.0,
-    "pos_rank": "RB91",
-    "grade": "F",
-    "proj": 0.6,
-    "opp": "vs. PHI",
-    "owned": 1.4,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4426386"
   },
@@ -17928,17 +16030,7 @@
     "avail": 0.75,
     "stale": true
    },
-   "fp": {
-    "ecr": 40.24,
-    "sd": 5.56,
-    "rank": 41.0,
-    "pos_rank": "RB41",
-    "grade": "D+",
-    "proj": 7.7,
-    "opp": "at NYG",
-    "owned": 42.2,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4428557"
   },
@@ -18011,17 +16103,7 @@
     "mean_pts": 8.2
    },
    "injury": null,
-   "fp": {
-    "ecr": 11.73,
-    "sd": 1.79,
-    "rank": 11.0,
-    "pos_rank": "RB11",
-    "grade": "A-",
-    "proj": 16.1,
-    "opp": "vs. KC",
-    "owned": 99.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "RES",
    "espn_id": "4429160"
   },
@@ -18074,17 +16156,7 @@
     "mean_pts": 0.6666666666666666
    },
    "injury": null,
-   "fp": {
-    "ecr": 130.0,
-    "sd": 5.74,
-    "rank": 127.0,
-    "pos_rank": "WR127",
-    "grade": "F",
-    "proj": 2.0,
-    "opp": "vs. BAL",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4426485"
   },
@@ -18154,17 +16226,7 @@
     "avail": 0.75,
     "stale": true
    },
-   "fp": {
-    "ecr": 48.89,
-    "sd": 19.95,
-    "rank": 57.0,
-    "pos_rank": "WR57",
-    "grade": "C-",
-    "proj": 8.8,
-    "opp": "at DAL",
-    "owned": 98.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4429615"
   },
@@ -18237,17 +16299,7 @@
     "mean_pts": 11.466666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 5.33,
-    "sd": 1.68,
-    "rank": 5.0,
-    "pos_rank": "TE5",
-    "grade": "A-",
-    "proj": 12.4,
-    "opp": "vs. NYJ",
-    "owned": 97.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4430027"
   },
@@ -18320,17 +16372,7 @@
     "mean_pts": 8.9
    },
    "injury": null,
-   "fp": {
-    "ecr": 30.31,
-    "sd": 2.21,
-    "rank": 30.0,
-    "pos_rank": "TE30",
-    "grade": "F",
-    "proj": 6.4,
-    "opp": "at NO",
-    "owned": 10.3,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4429086"
   },
@@ -18410,17 +16452,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 19.24,
-    "sd": 2.84,
-    "rank": 19.0,
-    "pos_rank": "WR19",
-    "grade": "A-",
-    "proj": 13.2,
-    "opp": "at MIA",
-    "owned": 98.9,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4428331"
   },
@@ -18493,17 +16525,7 @@
     "mean_pts": 2.6333333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 60.0,
-    "sd": 6.65,
-    "rank": 59.0,
-    "pos_rank": "TE59",
-    "grade": "F",
-    "proj": 2.4,
-    "opp": "at DEN",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4426553"
   },
@@ -18689,17 +16711,7 @@
     "mean_pts": 32.76666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 1.1,
-    "sd": 0.3,
-    "rank": 1.0,
-    "pos_rank": "RB1",
-    "grade": "A+",
-    "proj": 26.5,
-    "opp": "vs. NYJ",
-    "owned": 99.9,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4429795"
   },
@@ -18842,17 +16854,7 @@
     "mean_pts": 23.05333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 14.62,
-    "sd": 1.41,
-    "rank": 15.0,
-    "pos_rank": "QB15",
-    "grade": "C",
-    "proj": 16.8,
-    "opp": "at CLE",
-    "owned": 57.3,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4685720"
   },
@@ -18925,17 +16927,7 @@
     "mean_pts": 15.053333333333335
    },
    "injury": null,
-   "fp": {
-    "ecr": 18.64,
-    "sd": 2.23,
-    "rank": 18.0,
-    "pos_rank": "QB18",
-    "grade": "D+",
-    "proj": 16.1,
-    "opp": "at IND",
-    "owned": 42.2,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4432577"
   },
@@ -19015,17 +17007,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 54.03,
-    "sd": 3.16,
-    "rank": 55.0,
-    "pos_rank": "RB55",
-    "grade": "F",
-    "proj": 4.9,
-    "opp": "at WAS",
-    "owned": 4.4,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4429835"
   },
@@ -19105,17 +17087,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 19.98,
-    "sd": 3.34,
-    "rank": 20.0,
-    "pos_rank": "WR20",
-    "grade": "A-",
-    "proj": 13.0,
-    "opp": "vs. TEN",
-    "owned": 98.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4595348"
   },
@@ -19308,17 +17280,7 @@
     "mean_pts": 0.26666666666666666
    },
    "injury": null,
-   "fp": {
-    "ecr": 74.36,
-    "sd": 11.49,
-    "rank": 72.0,
-    "pos_rank": "TE72",
-    "grade": "F",
-    "proj": 1.6,
-    "opp": "at IND",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4426496"
   },
@@ -19391,17 +17353,7 @@
     "mean_pts": 13.699999999999998
    },
    "injury": null,
-   "fp": {
-    "ecr": 18.66,
-    "sd": 1.91,
-    "rank": 18.0,
-    "pos_rank": "RB18",
-    "grade": "B",
-    "proj": 14.0,
-    "opp": "vs. MIN",
-    "owned": 97.5,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4596448"
   },
@@ -19474,17 +17426,7 @@
     "mean_pts": 3.5
    },
    "injury": null,
-   "fp": {
-    "ecr": 64.73,
-    "sd": 6.71,
-    "rank": 63.0,
-    "pos_rank": "RB63",
-    "grade": "F",
-    "proj": 3.3,
-    "opp": "vs. NYJ",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4912274"
   },
@@ -19557,17 +17499,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 106.05,
-    "sd": 4.22,
-    "rank": 111.0,
-    "pos_rank": "WR111",
-    "grade": "F",
-    "proj": 3.4,
-    "opp": "vs. ARI",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4575665"
   },
@@ -19640,17 +17572,7 @@
     "mean_pts": -0.09999999999999999
    },
    "injury": null,
-   "fp": {
-    "ecr": 73.31,
-    "sd": 9.44,
-    "rank": 71.0,
-    "pos_rank": "RB71",
-    "grade": "F",
-    "proj": 2.0,
-    "opp": "vs. TEN",
-    "owned": 8.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4360516"
   },
@@ -19723,17 +17645,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 85.24,
-    "sd": 5.5,
-    "rank": 84.0,
-    "pos_rank": "RB84",
-    "grade": "F",
-    "proj": 1.0,
-    "opp": "at NO",
-    "owned": 0.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4366963"
   },
@@ -19806,17 +17718,7 @@
     "mean_pts": 5.233333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 61.9,
-    "sd": 5.11,
-    "rank": 59.0,
-    "pos_rank": "WR59",
-    "grade": "D-",
-    "proj": 8.6,
-    "opp": "vs. BAL",
-    "owned": 7.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "5083754"
   },
@@ -19889,17 +17791,7 @@
     "mean_pts": 12.733333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 29.66,
-    "sd": 3.61,
-    "rank": 29.0,
-    "pos_rank": "WR29",
-    "grade": "C+",
-    "proj": 11.3,
-    "opp": "vs. LV",
-    "owned": 46.9,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4569559"
   },
@@ -19972,17 +17864,7 @@
     "mean_pts": 5.2
    },
    "injury": null,
-   "fp": {
-    "ecr": 67.74,
-    "sd": 10.49,
-    "rank": 70.0,
-    "pos_rank": "WR70",
-    "grade": "F",
-    "proj": 6.8,
-    "opp": "at DET",
-    "owned": 2.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4569371"
   },
@@ -20035,17 +17917,7 @@
     "mean_pts": 0.09999999999999999
    },
    "injury": null,
-   "fp": {
-    "ecr": 99.8,
-    "sd": 5.81,
-    "rank": 103.0,
-    "pos_rank": "RB103",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "vs. LAC",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "DEV",
    "espn_id": "4429805"
   },
@@ -20125,17 +17997,7 @@
     "avail": 0.75,
     "stale": true
    },
-   "fp": {
-    "ecr": 20.22,
-    "sd": 2.84,
-    "rank": 21.0,
-    "pos_rank": "WR21",
-    "grade": "A-",
-    "proj": 12.8,
-    "opp": "at CLE",
-    "owned": 90.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4695883"
   },
@@ -20261,17 +18123,7 @@
     "mean_pts": 2.1
    },
    "injury": null,
-   "fp": {
-    "ecr": 61.08,
-    "sd": 4.03,
-    "rank": 63.0,
-    "pos_rank": "TE63",
-    "grade": "F",
-    "proj": 2.3,
-    "opp": "vs. BAL",
-    "owned": 0.1,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4360967"
   },
@@ -20344,17 +18196,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 167.0,
-    "sd": 7.13,
-    "rank": 170.0,
-    "pos_rank": "WR170",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "vs. MIN",
-    "owned": 0.1,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "5097554"
   },
@@ -20427,17 +18269,7 @@
     "mean_pts": 1.2
    },
    "injury": null,
-   "fp": {
-    "ecr": 59.15,
-    "sd": 3.86,
-    "rank": 60.0,
-    "pos_rank": "TE60",
-    "grade": "F",
-    "proj": 2.4,
-    "opp": "vs. SEA",
-    "owned": 1.1,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4361088"
   },
@@ -20510,17 +18342,7 @@
     "mean_pts": 14.566666666666668
    },
    "injury": null,
-   "fp": {
-    "ecr": 16.38,
-    "sd": 2.15,
-    "rank": 16.0,
-    "pos_rank": "QB16",
-    "grade": "C-",
-    "proj": 16.6,
-    "opp": "vs. LAR",
-    "owned": 78.5,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4426338"
   },
@@ -20593,17 +18415,7 @@
     "mean_pts": 6.366666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 33.78,
-    "sd": 3.25,
-    "rank": 31.0,
-    "pos_rank": "RB31",
-    "grade": "C",
-    "proj": 9.8,
-    "opp": "at DEN",
-    "owned": 81.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4429096"
   },
@@ -20676,17 +18488,7 @@
     "mean_pts": 9.466666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 73.49,
-    "sd": 5.65,
-    "rank": 73.0,
-    "pos_rank": "WR73",
-    "grade": "F",
-    "proj": 6.6,
-    "opp": "vs. CIN",
-    "owned": 1.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4431492"
   },
@@ -20766,17 +18568,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 59.11,
-    "sd": 4.12,
-    "rank": 58.0,
-    "pos_rank": "RB58",
-    "grade": "F",
-    "proj": 4.5,
-    "opp": "at CHI",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4431545"
   },
@@ -20836,17 +18628,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 113.1,
-    "sd": 16.97,
-    "rank": 114.0,
-    "pos_rank": "WR114",
-    "grade": "F",
-    "proj": 3.2,
-    "opp": "at DEN",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4569382"
   },
@@ -20926,17 +18708,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 24.97,
-    "sd": 2.47,
-    "rank": 25.0,
-    "pos_rank": "TE25",
-    "grade": "F",
-    "proj": 7.3,
-    "opp": "at WAS",
-    "owned": 13.5,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4576297"
   },
@@ -21009,17 +18781,7 @@
     "mean_pts": 5.733333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 45.41,
-    "sd": 3.48,
-    "rank": 47.0,
-    "pos_rank": "RB47",
-    "grade": "D-",
-    "proj": 6.6,
-    "opp": "at DET",
-    "owned": 18.1,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4685247"
   },
@@ -21092,17 +18854,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 85.57,
-    "sd": 7.79,
-    "rank": 86.0,
-    "pos_rank": "RB86",
-    "grade": "F",
-    "proj": 0.8,
-    "opp": "at DAL",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4690013"
   },
@@ -21175,17 +18927,7 @@
     "mean_pts": 5.366666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 41.95,
-    "sd": 3.44,
-    "rank": 43.0,
-    "pos_rank": "RB43",
-    "grade": "D",
-    "proj": 7.7,
-    "opp": "vs. ATL",
-    "owned": 70.4,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4429023"
   },
@@ -21255,17 +18997,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 43.47,
-    "sd": 3.03,
-    "rank": 45.0,
-    "pos_rank": "TE45",
-    "grade": "F",
-    "proj": 3.2,
-    "opp": "vs. TEN",
-    "owned": 1.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4429148"
   },
@@ -21338,17 +19070,7 @@
     "mean_pts": 3.766666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 55.49,
-    "sd": 3.66,
-    "rank": 55.0,
-    "pos_rank": "WR55",
-    "grade": "D+",
-    "proj": 9.0,
-    "opp": "at SF",
-    "owned": 79.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4432708"
   },
@@ -21421,17 +19143,7 @@
     "mean_pts": 7.2
    },
    "injury": null,
-   "fp": {
-    "ecr": 11.9,
-    "sd": 1.41,
-    "rank": 12.0,
-    "pos_rank": "QB12",
-    "grade": "B-",
-    "proj": 17.3,
-    "opp": "at JAC",
-    "owned": 96.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4431452"
   },
@@ -21511,17 +19223,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 90.97,
-    "sd": 7.26,
-    "rank": 88.0,
-    "pos_rank": "WR88",
-    "grade": "F",
-    "proj": 5.8,
-    "opp": "vs. LAR",
-    "owned": 1.5,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4431280"
   },
@@ -21654,17 +19356,7 @@
     "mean_pts": 0.09999999999999999
    },
    "injury": null,
-   "fp": {
-    "ecr": 65.17,
-    "sd": 5.13,
-    "rank": 61.0,
-    "pos_rank": "RB61",
-    "grade": "F",
-    "proj": 3.4,
-    "opp": "vs. LAC",
-    "owned": 8.2,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4429501"
   },
@@ -21737,17 +19429,7 @@
     "mean_pts": 8.700000000000001
    },
    "injury": null,
-   "fp": {
-    "ecr": 42.98,
-    "sd": 6.35,
-    "rank": 44.0,
-    "pos_rank": "WR44",
-    "grade": "C",
-    "proj": 10.2,
-    "opp": "vs. KC",
-    "owned": 25.1,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4569603"
   },
@@ -21897,17 +19579,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 49.07,
-    "sd": 3.69,
-    "rank": 49.0,
-    "pos_rank": "WR49",
-    "grade": "C-",
-    "proj": 9.5,
-    "opp": "vs. NE",
-    "owned": 80.9,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4432773"
   },
@@ -21987,17 +19659,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 36.66,
-    "sd": 6.23,
-    "rank": 35.0,
-    "pos_rank": "WR35",
-    "grade": "C",
-    "proj": 11.0,
-    "opp": "at MIA",
-    "owned": 73.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4683062"
   },
@@ -22077,17 +19739,7 @@
     "avail": 0.75,
     "stale": true
    },
-   "fp": {
-    "ecr": 68.89,
-    "sd": 5.82,
-    "rank": 72.0,
-    "pos_rank": "WR72",
-    "grade": "F",
-    "proj": 6.6,
-    "opp": "vs. LAC",
-    "owned": 11.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4635008"
   },
@@ -22237,17 +19889,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 15.9,
-    "sd": 1.85,
-    "rank": 16.0,
-    "pos_rank": "WR16",
-    "grade": "A",
-    "proj": 14.0,
-    "opp": "at BUF",
-    "owned": 97.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4612826"
   },
@@ -22317,17 +19959,7 @@
     "avail": 0.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 49.0,
-    "sd": 13.0,
-    "rank": 58.0,
-    "pos_rank": "QB58",
-    "grade": "F",
-    "proj": 0.3,
-    "opp": "vs. PHI",
-    "owned": 93.5,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4431611"
   },
@@ -22407,17 +20039,7 @@
     "avail": 0.75,
     "stale": true
    },
-   "fp": {
-    "ecr": 49.88,
-    "sd": 4.92,
-    "rank": 50.0,
-    "pos_rank": "WR50",
-    "grade": "C-",
-    "proj": 9.5,
-    "opp": "vs. PHI",
-    "owned": 91.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4431299"
   },
@@ -22490,17 +20112,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 159.0,
-    "sd": 18.64,
-    "rank": 163.0,
-    "pos_rank": "WR163",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "vs. CAR",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4613104"
   },
@@ -22573,17 +20185,7 @@
     "mean_pts": 3.533333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 116.65,
-    "sd": 8.78,
-    "rank": 115.0,
-    "pos_rank": "WR115",
-    "grade": "F",
-    "proj": 3.1,
-    "opp": "at CHI",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4715355"
   },
@@ -22656,17 +20258,7 @@
     "mean_pts": 1.9666666666666668
    },
    "injury": null,
-   "fp": {
-    "ecr": 95.18,
-    "sd": 8.19,
-    "rank": 102.0,
-    "pos_rank": "WR102",
-    "grade": "F",
-    "proj": 4.0,
-    "opp": "at DAL",
-    "owned": 0.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4690143"
   },
@@ -22729,17 +20321,7 @@
     "mean_pts": 0.6333333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 85.4,
-    "sd": 6.61,
-    "rank": 83.0,
-    "pos_rank": "TE83",
-    "grade": "F",
-    "proj": 1.2,
-    "opp": "at MIA",
-    "owned": 0.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4431196"
   },
@@ -22819,17 +20401,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 5.95,
-    "sd": 1.25,
-    "rank": 5.0,
-    "pos_rank": "RB5",
-    "grade": "A",
-    "proj": 19.1,
-    "opp": "at NO",
-    "owned": 99.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4890973"
   },
@@ -22902,17 +20474,7 @@
     "mean_pts": 9.766666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 15.27,
-    "sd": 2.08,
-    "rank": 14.0,
-    "pos_rank": "WR14",
-    "grade": "A",
-    "proj": 14.3,
-    "opp": "at CLE",
-    "owned": 98.5,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4685472"
   },
@@ -22985,17 +20547,7 @@
     "mean_pts": 2.8000000000000003
    },
    "injury": null,
-   "fp": {
-    "ecr": 16.6,
-    "sd": 1.76,
-    "rank": 15.0,
-    "pos_rank": "TE15",
-    "grade": "D+",
-    "proj": 10.1,
-    "opp": "vs. PHI",
-    "owned": 95.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4723086"
   },
@@ -23068,17 +20620,7 @@
     "mean_pts": 13.133333333333335
    },
    "injury": null,
-   "fp": {
-    "ecr": 8.23,
-    "sd": 1.46,
-    "rank": 9.0,
-    "pos_rank": "TE9",
-    "grade": "B-",
-    "proj": 11.4,
-    "opp": "vs. HOU",
-    "owned": 98.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4431459"
   },
@@ -23158,17 +20700,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 27.1,
-    "sd": 3.08,
-    "rank": 26.0,
-    "pos_rank": "WR26",
-    "grade": "B",
-    "proj": 11.6,
-    "opp": "vs. MIN",
-    "owned": 97.2,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4567750"
   },
@@ -23241,17 +20773,7 @@
     "mean_pts": 2.1333333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 96.03,
-    "sd": 4.3,
-    "rank": 94.0,
-    "pos_rank": "WR94",
-    "grade": "F",
-    "proj": 5.3,
-    "opp": "at JAC",
-    "owned": 1.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4613202"
   },
@@ -23324,17 +20846,7 @@
     "mean_pts": 8.066666666666666
    },
    "injury": null,
-   "fp": {
-    "ecr": 64.85,
-    "sd": 4.81,
-    "rank": 63.0,
-    "pos_rank": "WR63",
-    "grade": "F",
-    "proj": 8.0,
-    "opp": "vs. LAR",
-    "owned": 8.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4600981"
   },
@@ -23407,17 +20919,7 @@
     "mean_pts": 5.733333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 68.93,
-    "sd": 8.28,
-    "rank": 67.0,
-    "pos_rank": "WR67",
-    "grade": "F",
-    "proj": 7.1,
-    "opp": "at IND",
-    "owned": 5.1,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4586312"
   },
@@ -23490,17 +20992,7 @@
     "mean_pts": 1.9333333333333336
    },
    "injury": null,
-   "fp": {
-    "ecr": 40.17,
-    "sd": 2.44,
-    "rank": 40.0,
-    "pos_rank": "RB40",
-    "grade": "D",
-    "proj": 8.2,
-    "opp": "vs. ATL",
-    "owned": 9.4,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4819231"
   },
@@ -23633,17 +21125,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 141.71,
-    "sd": 6.93,
-    "rank": 135.0,
-    "pos_rank": "WR135",
-    "grade": "F",
-    "proj": 0.7,
-    "opp": "vs. SEA",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4602667"
   },
@@ -23716,17 +21198,7 @@
     "mean_pts": 6.366666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 89.24,
-    "sd": 7.4,
-    "rank": 86.0,
-    "pos_rank": "WR86",
-    "grade": "F",
-    "proj": 5.9,
-    "opp": "at NYG",
-    "owned": 1.5,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4883647"
   },
@@ -23799,17 +21271,7 @@
     "mean_pts": 3.5999999999999996
    },
    "injury": null,
-   "fp": {
-    "ecr": 50.53,
-    "sd": 3.24,
-    "rank": 50.0,
-    "pos_rank": "TE50",
-    "grade": "F",
-    "proj": 2.9,
-    "opp": "at CLE",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4683243"
   },
@@ -23882,17 +21344,7 @@
     "mean_pts": 5.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 16.88,
-    "sd": 2.24,
-    "rank": 17.0,
-    "pos_rank": "TE17",
-    "grade": "D+",
-    "proj": 9.3,
-    "opp": "at BUF",
-    "owned": 28.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4595342"
   },
@@ -23953,17 +21405,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 91.4,
-    "sd": 4.65,
-    "rank": 92.0,
-    "pos_rank": "RB92",
-    "grade": "F",
-    "proj": 0.6,
-    "opp": "at PIT",
-    "owned": 0.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4429299"
   },
@@ -24016,17 +21458,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 156.4,
-    "sd": 21.56,
-    "rank": 162.0,
-    "pos_rank": "WR162",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "vs. CAR",
-    "owned": 0.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "DEV",
    "espn_id": "4708486"
   },
@@ -24106,17 +21538,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 35.78,
-    "sd": 2.25,
-    "rank": 35.0,
-    "pos_rank": "RB35",
-    "grade": "C",
-    "proj": 8.7,
-    "opp": "vs. PHI",
-    "owned": 81.1,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4608686"
   },
@@ -24189,17 +21611,7 @@
     "mean_pts": 2.433333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 106.37,
-    "sd": 9.76,
-    "rank": 100.0,
-    "pos_rank": "WR100",
-    "grade": "F",
-    "proj": 4.4,
-    "opp": "vs. MIN",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4608810"
   },
@@ -24279,17 +21691,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 39.61,
-    "sd": 2.39,
-    "rank": 38.0,
-    "pos_rank": "RB38",
-    "grade": "D+",
-    "proj": 8.2,
-    "opp": "vs. SEA",
-    "owned": 79.5,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4575131"
   },
@@ -24342,17 +21744,7 @@
     "mean_pts": 2.3666666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 132.14,
-    "sd": 9.59,
-    "rank": 130.0,
-    "pos_rank": "WR130",
-    "grade": "F",
-    "proj": 1.6,
-    "opp": "vs. PHI",
-    "owned": 0.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "5160110"
   },
@@ -24415,17 +21807,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 97.63,
-    "sd": 3.46,
-    "rank": 99.0,
-    "pos_rank": "TE99",
-    "grade": "F",
-    "proj": 0.6,
-    "opp": "vs. LAC",
-    "owned": 0.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4688552"
   },
@@ -24478,17 +21860,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 98.2,
-    "sd": 11.27,
-    "rank": 108.0,
-    "pos_rank": "RB108",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "vs. MIN",
-    "owned": 0.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "DEV",
    "espn_id": "4568024"
   },
@@ -24561,17 +21933,7 @@
     "mean_pts": 5.599999999999999
    },
    "injury": null,
-   "fp": {
-    "ecr": 60.83,
-    "sd": 3.87,
-    "rank": 59.0,
-    "pos_rank": "RB59",
-    "grade": "F",
-    "proj": 4.0,
-    "opp": "vs. CAR",
-    "owned": 2.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4601080"
   },
@@ -24644,17 +22006,7 @@
     "mean_pts": 2.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 147.6,
-    "sd": 5.35,
-    "rank": 149.0,
-    "pos_rank": "WR149",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "at TB",
-    "owned": 0.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4430656"
   },
@@ -24727,17 +22079,7 @@
     "mean_pts": 1.6000000000000003
    },
    "injury": null,
-   "fp": {
-    "ecr": 89.52,
-    "sd": 5.4,
-    "rank": 90.0,
-    "pos_rank": "RB90",
-    "grade": "F",
-    "proj": 0.6,
-    "opp": "at JAC",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4431431"
   },
@@ -24790,17 +22132,7 @@
     "mean_pts": 0.9666666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 105.5,
-    "sd": 0.5,
-    "rank": 112.0,
-    "pos_rank": "RB112",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "at JAC",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "DEV",
    "espn_id": "4698253"
   },
@@ -24936,17 +22268,7 @@
     "mean_pts": 7.533333333333334
    },
    "injury": null,
-   "fp": {
-    "ecr": 34.59,
-    "sd": 1.62,
-    "rank": 34.0,
-    "pos_rank": "RB34",
-    "grade": "C",
-    "proj": 8.8,
-    "opp": "at IND",
-    "owned": 52.3,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4429059"
   },
@@ -25019,17 +22341,7 @@
     "mean_pts": 4.5
    },
    "injury": null,
-   "fp": {
-    "ecr": 30.0,
-    "sd": 2.19,
-    "rank": 32.0,
-    "pos_rank": "TE32",
-    "grade": "F",
-    "proj": 5.4,
-    "opp": "at NYG",
-    "owned": 4.4,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4686728"
   },
@@ -25102,17 +22414,7 @@
     "mean_pts": 7.166666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 99.88,
-    "sd": 7.64,
-    "rank": 97.0,
-    "pos_rank": "WR97",
-    "grade": "F",
-    "proj": 4.8,
-    "opp": "at DEN",
-    "owned": 0.9,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4710855"
   },
@@ -25238,17 +22540,7 @@
     "mean_pts": 3.5666666666666664
    },
    "injury": null,
-   "fp": {
-    "ecr": 114.33,
-    "sd": 6.7,
-    "rank": 112.0,
-    "pos_rank": "WR112",
-    "grade": "F",
-    "proj": 3.2,
-    "opp": "at MIA",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "5082630"
   },
@@ -25321,17 +22613,7 @@
     "mean_pts": 12.866666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 14.5,
-    "sd": 1.84,
-    "rank": 14.0,
-    "pos_rank": "TE14",
-    "grade": "C-",
-    "proj": 10.2,
-    "opp": "vs. CAR",
-    "owned": 89.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "5083076"
   },
@@ -25404,17 +22686,7 @@
     "mean_pts": 10.466666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 15.1,
-    "sd": 1.97,
-    "rank": 16.0,
-    "pos_rank": "RB16",
-    "grade": "B",
-    "proj": 14.6,
-    "opp": "at BUF",
-    "owned": 99.5,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4685382"
   },
@@ -25487,17 +22759,7 @@
     "mean_pts": 15.433333333333332
    },
    "injury": null,
-   "fp": {
-    "ecr": 20.61,
-    "sd": 3.05,
-    "rank": 22.0,
-    "pos_rank": "WR22",
-    "grade": "A-",
-    "proj": 12.7,
-    "opp": "vs. ATL",
-    "owned": 84.4,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4701936"
   },
@@ -25570,17 +22832,7 @@
     "mean_pts": 4.733333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 85.36,
-    "sd": 5.2,
-    "rank": 84.0,
-    "pos_rank": "WR84",
-    "grade": "F",
-    "proj": 6.0,
-    "opp": "vs. NYJ",
-    "owned": 3.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "5123663"
   },
@@ -25653,17 +22905,7 @@
     "mean_pts": 13.719999999999999
    },
    "injury": null,
-   "fp": {
-    "ecr": 30.21,
-    "sd": 0.99,
-    "rank": 31.0,
-    "pos_rank": "QB31",
-    "grade": "F",
-    "proj": 13.1,
-    "opp": "at NYG",
-    "owned": 11.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4688380"
   },
@@ -25806,17 +23048,7 @@
     "mean_pts": 1.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 114.76,
-    "sd": 14.06,
-    "rank": 106.0,
-    "pos_rank": "WR106",
-    "grade": "F",
-    "proj": 3.7,
-    "opp": "at NYG",
-    "owned": 1.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4431268"
   },
@@ -25889,17 +23121,7 @@
     "mean_pts": 12.200000000000001
    },
    "injury": null,
-   "fp": {
-    "ecr": 19.63,
-    "sd": 2.4,
-    "rank": 20.0,
-    "pos_rank": "RB20",
-    "grade": "B",
-    "proj": 12.8,
-    "opp": "vs. TEN",
-    "owned": 98.2,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4696981"
   },
@@ -25972,17 +23194,7 @@
     "mean_pts": 13.666666666666666
    },
    "injury": null,
-   "fp": {
-    "ecr": 24.07,
-    "sd": 1.7,
-    "rank": 24.0,
-    "pos_rank": "RB24",
-    "grade": "B-",
-    "proj": 12.4,
-    "opp": "vs. NE",
-    "owned": 93.4,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4882093"
   },
@@ -26055,17 +23267,7 @@
     "mean_pts": 8.299999999999999
    },
    "injury": null,
-   "fp": {
-    "ecr": 60.55,
-    "sd": 3.83,
-    "rank": 61.0,
-    "pos_rank": "WR61",
-    "grade": "D-",
-    "proj": 8.1,
-    "opp": "at BUF",
-    "owned": 5.3,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4686612"
   },
@@ -26128,17 +23330,7 @@
     "mean_pts": 5.266666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 77.37,
-    "sd": 6.07,
-    "rank": 78.0,
-    "pos_rank": "WR78",
-    "grade": "F",
-    "proj": 6.4,
-    "opp": "at NO",
-    "owned": 1.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4603186"
   },
@@ -26208,17 +23400,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 33.85,
-    "sd": 5.3,
-    "rank": 32.0,
-    "pos_rank": "RB32",
-    "grade": "C",
-    "proj": 9.3,
-    "opp": "vs. LAR",
-    "owned": 76.9,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4568490"
   },
@@ -26291,17 +23473,7 @@
     "mean_pts": 11.833333333333334
    },
    "injury": null,
-   "fp": {
-    "ecr": 38.0,
-    "sd": 3.19,
-    "rank": 38.0,
-    "pos_rank": "WR38",
-    "grade": "C",
-    "proj": 10.6,
-    "opp": "vs. PHI",
-    "owned": 92.2,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4685278"
   },
@@ -26441,17 +23613,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 13.33,
-    "sd": 3.13,
-    "rank": 13.0,
-    "pos_rank": "TE13",
-    "grade": "C",
-    "proj": 10.2,
-    "opp": "at DEN",
-    "owned": 37.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4570037"
   },
@@ -26524,17 +23686,7 @@
     "mean_pts": 23.126666666666665
    },
    "injury": null,
-   "fp": {
-    "ecr": 9.55,
-    "sd": 1.68,
-    "rank": 9.0,
-    "pos_rank": "QB9",
-    "grade": "B",
-    "proj": 17.9,
-    "opp": "vs. LV",
-    "owned": 83.2,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4360689"
   },
@@ -26614,17 +23766,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 22.88,
-    "sd": 2.29,
-    "rank": 23.0,
-    "pos_rank": "RB23",
-    "grade": "B-",
-    "proj": 12.5,
-    "opp": "vs. CAR",
-    "owned": 95.3,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4685702"
   },
@@ -26697,17 +23839,7 @@
     "mean_pts": 3.233333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 105.42,
-    "sd": 7.65,
-    "rank": 109.0,
-    "pos_rank": "WR109",
-    "grade": "F",
-    "proj": 3.5,
-    "opp": "at PIT",
-    "owned": 1.5,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4384852"
   },
@@ -26780,17 +23912,7 @@
     "mean_pts": 3.4333333333333336
    },
    "injury": null,
-   "fp": {
-    "ecr": 62.1,
-    "sd": 5.72,
-    "rank": 60.0,
-    "pos_rank": "WR60",
-    "grade": "D-",
-    "proj": 8.2,
-    "opp": "at CHI",
-    "owned": 63.2,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4870795"
   },
@@ -26916,17 +24038,7 @@
     "mean_pts": 5.3999999999999995
    },
    "injury": null,
-   "fp": {
-    "ecr": 53.76,
-    "sd": 3.3,
-    "rank": 52.0,
-    "pos_rank": "RB52",
-    "grade": "F",
-    "proj": 5.1,
-    "opp": "at NO",
-    "owned": 39.4,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4686658"
   },
@@ -27042,17 +24154,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 118.09,
-    "sd": 11.22,
-    "rank": 110.0,
-    "pos_rank": "WR110",
-    "grade": "F",
-    "proj": 3.5,
-    "opp": "at MIA",
-    "owned": 11.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4912218"
   },
@@ -27125,17 +24227,7 @@
     "mean_pts": 0.26666666666666666
    },
    "injury": null,
-   "fp": {
-    "ecr": 125.33,
-    "sd": 10.5,
-    "rank": 119.0,
-    "pos_rank": "WR119",
-    "grade": "F",
-    "proj": 3.0,
-    "opp": "at NO",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "5150247"
   },
@@ -27208,17 +24300,7 @@
     "mean_pts": 5.333333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 39.85,
-    "sd": 3.96,
-    "rank": 39.0,
-    "pos_rank": "RB39",
-    "grade": "D+",
-    "proj": 8.2,
-    "opp": "at MIA",
-    "owned": 28.9,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4832955"
   },
@@ -27298,17 +24380,7 @@
     "avail": 0.75,
     "stale": true
    },
-   "fp": {
-    "ecr": 24.51,
-    "sd": 2.83,
-    "rank": 25.0,
-    "pos_rank": "RB25",
-    "grade": "C+",
-    "proj": 12.1,
-    "opp": "at SF",
-    "owned": 98.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4870808"
   },
@@ -27388,17 +24460,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 21.21,
-    "sd": 3.38,
-    "rank": 23.0,
-    "pos_rank": "TE23",
-    "grade": "D-",
-    "proj": 8.3,
-    "opp": "at DET",
-    "owned": 33.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "5083315"
   },
@@ -27471,17 +24533,7 @@
     "mean_pts": 14.166666666666666
    },
    "injury": null,
-   "fp": {
-    "ecr": 34.61,
-    "sd": 4.54,
-    "rank": 34.0,
-    "pos_rank": "WR34",
-    "grade": "C+",
-    "proj": 11.0,
-    "opp": "vs. CAR",
-    "owned": 65.2,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4832800"
   },
@@ -27554,17 +24606,7 @@
     "mean_pts": 8.433333333333332
    },
    "injury": null,
-   "fp": {
-    "ecr": 76.97,
-    "sd": 9.43,
-    "rank": 79.0,
-    "pos_rank": "WR79",
-    "grade": "F",
-    "proj": 6.3,
-    "opp": "vs. SEA",
-    "owned": 9.9,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "5081432"
   },
@@ -27637,17 +24679,7 @@
     "mean_pts": 4.466666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 68.29,
-    "sd": 4.51,
-    "rank": 64.0,
-    "pos_rank": "WR64",
-    "grade": "F",
-    "proj": 7.9,
-    "opp": "vs. TEN",
-    "owned": 13.2,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4682648"
   },
@@ -27727,17 +24759,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 93.59,
-    "sd": 6.61,
-    "rank": 90.0,
-    "pos_rank": "WR90",
-    "grade": "F",
-    "proj": 5.7,
-    "opp": "at GB",
-    "owned": 8.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4870612"
   },
@@ -27810,17 +24832,7 @@
     "mean_pts": 7.433333333333334
    },
    "injury": null,
-   "fp": {
-    "ecr": 76.76,
-    "sd": 5.29,
-    "rank": 77.0,
-    "pos_rank": "WR77",
-    "grade": "F",
-    "proj": 6.4,
-    "opp": "vs. MIN",
-    "owned": 4.4,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "5220680"
   },
@@ -27900,17 +24912,7 @@
     "avail": 0.75,
     "stale": true
    },
-   "fp": {
-    "ecr": 42.83,
-    "sd": 3.3,
-    "rank": 45.0,
-    "pos_rank": "RB45",
-    "grade": "D",
-    "proj": 6.7,
-    "opp": "vs. ARI",
-    "owned": 38.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4696044"
   },
@@ -27983,17 +24985,7 @@
     "mean_pts": 3.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 86.57,
-    "sd": 5.11,
-    "rank": 91.0,
-    "pos_rank": "WR91",
-    "grade": "F",
-    "proj": 5.7,
-    "opp": "vs. LV",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4879276"
   },
@@ -28056,17 +25048,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 98.0,
-    "sd": 4.03,
-    "rank": 100.0,
-    "pos_rank": "TE100",
-    "grade": "F",
-    "proj": 0.6,
-    "opp": "vs. MIN",
-    "owned": 0.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4890373"
   },
@@ -28136,17 +25118,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 71.15,
-    "sd": 4.64,
-    "rank": 66.0,
-    "pos_rank": "RB66",
-    "grade": "F",
-    "proj": 2.9,
-    "opp": "vs. SEA",
-    "owned": 4.3,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4685246"
   },
@@ -28289,17 +25261,7 @@
     "mean_pts": 6.066666666666666
    },
    "injury": null,
-   "fp": {
-    "ecr": 117.94,
-    "sd": 4.18,
-    "rank": 117.0,
-    "pos_rank": "WR117",
-    "grade": "F",
-    "proj": 3.1,
-    "opp": "vs. NE",
-    "owned": 0.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4879194"
   },
@@ -28372,17 +25334,7 @@
     "mean_pts": 0.7999999999999999
    },
    "injury": null,
-   "fp": {
-    "ecr": 76.67,
-    "sd": 3.71,
-    "rank": 75.0,
-    "pos_rank": "RB75",
-    "grade": "F",
-    "proj": 1.4,
-    "opp": "vs. HOU",
-    "owned": 1.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4686468"
   },
@@ -28445,17 +25397,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 92.88,
-    "sd": 8.46,
-    "rank": 93.0,
-    "pos_rank": "TE93",
-    "grade": "F",
-    "proj": 0.9,
-    "opp": "vs. CAR",
-    "owned": 1.1,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4685540"
   },
@@ -28528,17 +25470,7 @@
     "mean_pts": 0.6333333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 75.32,
-    "sd": 7.36,
-    "rank": 76.0,
-    "pos_rank": "RB76",
-    "grade": "F",
-    "proj": 1.4,
-    "opp": "vs. LV",
-    "owned": 2.3,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "5081999"
   },
@@ -28681,17 +25613,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 166.75,
-    "sd": 6.61,
-    "rank": 165.0,
-    "pos_rank": "WR165",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "vs. CIN",
-    "owned": 0.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "5081338"
   },
@@ -28764,17 +25686,7 @@
     "mean_pts": 8.433333333333334
    },
    "injury": null,
-   "fp": {
-    "ecr": 42.22,
-    "sd": 2.84,
-    "rank": 43.0,
-    "pos_rank": "WR43",
-    "grade": "C",
-    "proj": 10.3,
-    "opp": "at NYG",
-    "owned": 86.4,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4871023"
   },
@@ -28827,17 +25739,7 @@
     "mean_pts": 0.8666666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 63.86,
-    "sd": 10.07,
-    "rank": 62.0,
-    "pos_rank": "TE62",
-    "grade": "F",
-    "proj": 2.3,
-    "opp": "at IND",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4695705"
   },
@@ -28970,17 +25872,7 @@
     "avail": 0.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 103.5,
-    "sd": 1.5,
-    "rank": 111.0,
-    "pos_rank": "RB111",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "vs. LAR",
-    "owned": 40.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "RES",
    "espn_id": "4702555"
   },
@@ -29043,17 +25935,7 @@
     "mean_pts": 0.6333333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 63.58,
-    "sd": 5.12,
-    "rank": 66.0,
-    "pos_rank": "TE66",
-    "grade": "F",
-    "proj": 2.1,
-    "opp": "vs. NE",
-    "owned": 0.9,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4686248"
   },
@@ -29193,17 +26075,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 27.0,
-    "sd": 2.56,
-    "rank": 27.0,
-    "pos_rank": "RB27",
-    "grade": "C+",
-    "proj": 11.5,
-    "opp": "at WAS",
-    "owned": 93.4,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4685512"
   },
@@ -29353,17 +26225,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 62.93,
-    "sd": 8.52,
-    "rank": 61.0,
-    "pos_rank": "TE61",
-    "grade": "F",
-    "proj": 2.4,
-    "opp": "vs. KC",
-    "owned": 0.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4880236"
   },
@@ -29443,17 +26305,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 74.08,
-    "sd": 6.43,
-    "rank": 71.0,
-    "pos_rank": "WR71",
-    "grade": "F",
-    "proj": 6.7,
-    "opp": "vs. KC",
-    "owned": 6.4,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4869961"
   },
@@ -29516,17 +26368,7 @@
     "mean_pts": 0.43333333333333335
    },
    "injury": null,
-   "fp": {
-    "ecr": 97.22,
-    "sd": 9.89,
-    "rank": 101.0,
-    "pos_rank": "WR101",
-    "grade": "F",
-    "proj": 4.2,
-    "opp": "vs. KC",
-    "owned": 1.1,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4685307"
   },
@@ -29599,17 +26441,7 @@
     "mean_pts": 6.3
    },
    "injury": null,
-   "fp": {
-    "ecr": 41.76,
-    "sd": 5.75,
-    "rank": 42.0,
-    "pos_rank": "WR42",
-    "grade": "C",
-    "proj": 10.3,
-    "opp": "vs. CAR",
-    "owned": 66.3,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4870653"
   },
@@ -29672,17 +26504,7 @@
     "mean_pts": 2.8866666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 27.24,
-    "sd": 2.62,
-    "rank": 27.0,
-    "pos_rank": "QB27",
-    "grade": "F",
-    "proj": 14.1,
-    "opp": "vs. TEN",
-    "owned": 5.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "2969939"
   },
@@ -29752,17 +26574,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 30.18,
-    "sd": 1.91,
-    "rank": 30.0,
-    "pos_rank": "QB30",
-    "grade": "F",
-    "proj": 13.3,
-    "opp": "vs. SEA",
-    "owned": 4.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "2576980"
   },
@@ -29825,17 +26637,7 @@
     "mean_pts": 4.366666666666666
    },
    "injury": null,
-   "fp": {
-    "ecr": 55.36,
-    "sd": 9.43,
-    "rank": 58.0,
-    "pos_rank": "TE58",
-    "grade": "F",
-    "proj": 2.4,
-    "opp": "at GB",
-    "owned": 0.9,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3043275"
   },
@@ -29898,17 +26700,7 @@
     "mean_pts": 1.3999999999999997
    },
    "injury": null,
-   "fp": {
-    "ecr": 51.19,
-    "sd": 5.38,
-    "rank": 52.0,
-    "pos_rank": "TE52",
-    "grade": "F",
-    "proj": 2.9,
-    "opp": "at CHI",
-    "owned": 0.2,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3052096"
   },
@@ -29978,17 +26770,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 39.1,
-    "sd": 7.04,
-    "rank": 37.0,
-    "pos_rank": "RB37",
-    "grade": "C-",
-    "proj": 8.3,
-    "opp": "vs. LV",
-    "owned": 47.5,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3054850"
   },
@@ -30041,17 +26823,7 @@
     "mean_pts": 0.7000000000000001
    },
    "injury": null,
-   "fp": {
-    "ecr": 83.0,
-    "sd": 8.93,
-    "rank": 82.0,
-    "pos_rank": "TE82",
-    "grade": "F",
-    "proj": 1.2,
-    "opp": "at NO",
-    "owned": 0.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4045305"
   },
@@ -30104,17 +26876,7 @@
     "mean_pts": 0.09999999999999999
    },
    "injury": null,
-   "fp": {
-    "ecr": 49.6,
-    "sd": 2.33,
-    "rank": 48.0,
-    "pos_rank": "QB48",
-    "grade": "F",
-    "proj": 0.4,
-    "opp": "vs. CIN",
-    "owned": 0.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3116407"
   },
@@ -30177,17 +26939,7 @@
     "mean_pts": 1.8333333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 88.06,
-    "sd": 8.89,
-    "rank": 85.0,
-    "pos_rank": "WR85",
-    "grade": "F",
-    "proj": 5.9,
-    "opp": "at NYG",
-    "owned": 7.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3925357"
   },
@@ -30303,17 +27055,7 @@
     "mean_pts": 0.5333333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 67.19,
-    "sd": 7.64,
-    "rank": 72.0,
-    "pos_rank": "RB72",
-    "grade": "F",
-    "proj": 1.8,
-    "opp": "vs. CIN",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4037457"
   },
@@ -30432,17 +27174,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 96.43,
-    "sd": 3.92,
-    "rank": 97.0,
-    "pos_rank": "RB97",
-    "grade": "F",
-    "proj": 0.4,
-    "opp": "at JAC",
-    "owned": 0.1,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4039505"
   },
@@ -30495,17 +27227,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 69.14,
-    "sd": 3.98,
-    "rank": 81.0,
-    "pos_rank": "TE81",
-    "grade": "F",
-    "proj": 1.2,
-    "opp": "at GB",
-    "owned": 0.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4035020"
   },
@@ -30621,17 +27343,7 @@
     "mean_pts": 3.5
    },
    "injury": null,
-   "fp": {
-    "ecr": 149.08,
-    "sd": 7.62,
-    "rank": 146.0,
-    "pos_rank": "WR146",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "vs. CIN",
-    "owned": 0.1,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4035656"
   },
@@ -30694,17 +27406,7 @@
     "mean_pts": 1.9333333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 56.5,
-    "sd": 5.88,
-    "rank": 57.0,
-    "pos_rank": "RB57",
-    "grade": "F",
-    "proj": 4.6,
-    "opp": "vs. TEN",
-    "owned": 5.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4241457"
   },
@@ -30757,17 +27459,7 @@
     "mean_pts": -0.06666666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 40.0,
-    "sd": 2.24,
-    "rank": 38.0,
-    "pos_rank": "QB38",
-    "grade": "F",
-    "proj": 0.5,
-    "opp": "vs. ARI",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4241464"
   },
@@ -30830,17 +27522,7 @@
     "mean_pts": 2.4333333333333336
    },
    "injury": null,
-   "fp": {
-    "ecr": 77.3,
-    "sd": 5.8,
-    "rank": 79.0,
-    "pos_rank": "RB79",
-    "grade": "F",
-    "proj": 1.3,
-    "opp": "vs. LAR",
-    "owned": 1.1,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4362748"
   },
@@ -30893,17 +27575,7 @@
     "mean_pts": 0.7999999999999999
    },
    "injury": null,
-   "fp": {
-    "ecr": 82.9,
-    "sd": 5.61,
-    "rank": 83.0,
-    "pos_rank": "RB83",
-    "grade": "F",
-    "proj": 1.0,
-    "opp": "at SF",
-    "owned": 0.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4427728"
   },
@@ -30956,17 +27628,7 @@
     "mean_pts": 0.5666666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 138.67,
-    "sd": 5.19,
-    "rank": 139.0,
-    "pos_rank": "WR139",
-    "grade": "F",
-    "proj": 0.5,
-    "opp": "vs. LV",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "DEV",
    "espn_id": "4372758"
   },
@@ -31029,17 +27691,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 96.5,
-    "sd": 3.27,
-    "rank": 98.0,
-    "pos_rank": "RB98",
-    "grade": "F",
-    "proj": 0.4,
-    "opp": "at NYG",
-    "owned": 1.2,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4367567"
   },
@@ -31102,17 +27754,7 @@
     "mean_pts": 3.3000000000000003
    },
    "injury": null,
-   "fp": {
-    "ecr": 126.0,
-    "sd": 12.4,
-    "rank": 123.0,
-    "pos_rank": "WR123",
-    "grade": "F",
-    "proj": 2.5,
-    "opp": "at CLE",
-    "owned": 1.3,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4567096"
   },
@@ -31175,17 +27817,7 @@
     "mean_pts": 3.1
    },
    "injury": null,
-   "fp": {
-    "ecr": 129.06,
-    "sd": 7.08,
-    "rank": 122.0,
-    "pos_rank": "WR122",
-    "grade": "F",
-    "proj": 2.8,
-    "opp": "vs. SEA",
-    "owned": 1.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4567156"
   },
@@ -31245,17 +27877,7 @@
     "avail": 0.75,
     "stale": true
    },
-   "fp": {
-    "ecr": 32.5,
-    "sd": 2.08,
-    "rank": 33.0,
-    "pos_rank": "QB33",
-    "grade": "F",
-    "proj": 6.3,
-    "opp": "vs. PHI",
-    "owned": 1.3,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4434153"
   },
@@ -31318,17 +27940,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 79.64,
-    "sd": 5.07,
-    "rank": 79.0,
-    "pos_rank": "TE79",
-    "grade": "F",
-    "proj": 1.4,
-    "opp": "at JAC",
-    "owned": 1.2,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4372026"
   },
@@ -31391,17 +28003,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 153.89,
-    "sd": 5.43,
-    "rank": 153.0,
-    "pos_rank": "WR153",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "at SF",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4692835"
   },
@@ -31464,17 +28066,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 89.5,
-    "sd": 4.69,
-    "rank": 89.0,
-    "pos_rank": "TE89",
-    "grade": "F",
-    "proj": 1.1,
-    "opp": "vs. ARI",
-    "owned": 0.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4360290"
   },
@@ -31527,17 +28119,7 @@
     "mean_pts": 0.09999999999999999
    },
    "injury": null,
-   "fp": {
-    "ecr": 77.55,
-    "sd": 4.22,
-    "rank": 80.0,
-    "pos_rank": "RB80",
-    "grade": "F",
-    "proj": 1.2,
-    "opp": "vs. CAR",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4722893"
   },
@@ -31607,17 +28189,7 @@
     "avail": 0.75,
     "stale": true
    },
-   "fp": {
-    "ecr": 122.38,
-    "sd": 13.95,
-    "rank": 126.0,
-    "pos_rank": "WR126",
-    "grade": "F",
-    "proj": 2.1,
-    "opp": "vs. KC",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4369466"
   },
@@ -31680,17 +28252,7 @@
     "mean_pts": 1.6666666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 72.0,
-    "sd": 7.54,
-    "rank": 70.0,
-    "pos_rank": "TE70",
-    "grade": "F",
-    "proj": 2.0,
-    "opp": "at SF",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4426844"
   },
@@ -31753,17 +28315,7 @@
     "mean_pts": 1.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 69.03,
-    "sd": 6.11,
-    "rank": 69.0,
-    "pos_rank": "RB69",
-    "grade": "F",
-    "proj": 2.2,
-    "opp": "at BUF",
-    "owned": 2.4,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4430968"
   },
@@ -31816,17 +28368,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 99.38,
-    "sd": 2.29,
-    "rank": 104.0,
-    "pos_rank": "RB104",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "at IND",
-    "owned": 0.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4373273"
   },
@@ -31896,17 +28438,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 93.6,
-    "sd": 4.77,
-    "rank": 93.0,
-    "pos_rank": "WR93",
-    "grade": "F",
-    "proj": 5.3,
-    "opp": "at DAL",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4696882"
   },
@@ -31976,17 +28508,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 88.45,
-    "sd": 5.45,
-    "rank": 89.0,
-    "pos_rank": "RB89",
-    "grade": "F",
-    "proj": 0.7,
-    "opp": "at DET",
-    "owned": 0.9,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4695404"
   },
@@ -32039,17 +28561,7 @@
     "mean_pts": 0.8333333333333334
    },
    "injury": null,
-   "fp": {
-    "ecr": 50.67,
-    "sd": 5.75,
-    "rank": 48.0,
-    "pos_rank": "TE48",
-    "grade": "F",
-    "proj": 3.0,
-    "opp": "at PIT",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4427834"
   },
@@ -32112,17 +28624,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 151.5,
-    "sd": 8.88,
-    "rank": 152.0,
-    "pos_rank": "WR152",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "vs. HOU",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4429684"
   },
@@ -32192,17 +28694,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 44.43,
-    "sd": 5.5,
-    "rank": 42.0,
-    "pos_rank": "TE42",
-    "grade": "F",
-    "proj": 3.5,
-    "opp": "vs. SEA",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4690923"
   },
@@ -32265,17 +28757,7 @@
     "mean_pts": 0.4666666666666666
    },
    "injury": null,
-   "fp": {
-    "ecr": 83.35,
-    "sd": 7.58,
-    "rank": 82.0,
-    "pos_rank": "RB82",
-    "grade": "F",
-    "proj": 1.1,
-    "opp": "at MIA",
-    "owned": 1.4,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4596602"
   },
@@ -32328,17 +28810,7 @@
     "mean_pts": 0.5
    },
    "injury": null,
-   "fp": {
-    "ecr": 87.52,
-    "sd": 7.19,
-    "rank": 85.0,
-    "pos_rank": "RB85",
-    "grade": "F",
-    "proj": 1.0,
-    "opp": "vs. ARI",
-    "owned": 1.4,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4685397"
   },
@@ -32401,17 +28873,7 @@
     "mean_pts": 5.066666666666666
    },
    "injury": null,
-   "fp": {
-    "ecr": 70.0,
-    "sd": 3.67,
-    "rank": 70.0,
-    "pos_rank": "RB70",
-    "grade": "F",
-    "proj": 2.1,
-    "opp": "vs. KC",
-    "owned": 1.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4711533"
   },
@@ -32481,17 +28943,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 71.59,
-    "sd": 5.2,
-    "rank": 73.0,
-    "pos_rank": "RB73",
-    "grade": "F",
-    "proj": 1.5,
-    "opp": "vs. NE",
-    "owned": 0.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4911851"
   },
@@ -32554,17 +29006,7 @@
     "mean_pts": 0.8466666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 132.86,
-    "sd": 4.29,
-    "rank": 131.0,
-    "pos_rank": "WR131",
-    "grade": "F",
-    "proj": 1.5,
-    "opp": "at JAC",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4695193"
   },
@@ -32634,17 +29076,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 28.44,
-    "sd": 1.98,
-    "rank": 29.0,
-    "pos_rank": "RB29",
-    "grade": "C",
-    "proj": 11.2,
-    "opp": "at JAC",
-    "owned": 92.9,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4432710"
   },
@@ -32697,17 +29129,7 @@
     "mean_pts": 0.9
    },
    "injury": null,
-   "fp": {
-    "ecr": 46.0,
-    "sd": 2.81,
-    "rank": 44.0,
-    "pos_rank": "TE44",
-    "grade": "F",
-    "proj": 3.4,
-    "opp": "at WAS",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4678006"
   },
@@ -32760,17 +29182,7 @@
     "mean_pts": 0.6666666666666666
    },
    "injury": null,
-   "fp": {
-    "ecr": 131.94,
-    "sd": 14.31,
-    "rank": 125.0,
-    "pos_rank": "WR125",
-    "grade": "F",
-    "proj": 2.2,
-    "opp": "vs. CAR",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4808839"
   },
@@ -32823,17 +29235,7 @@
     "mean_pts": 0.3333333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 76.07,
-    "sd": 4.46,
-    "rank": 74.0,
-    "pos_rank": "RB74",
-    "grade": "F",
-    "proj": 1.5,
-    "opp": "at NYG",
-    "owned": 8.1,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4685555"
   },
@@ -32896,17 +29298,7 @@
     "mean_pts": 1.7333333333333334
    },
    "injury": null,
-   "fp": {
-    "ecr": 128.63,
-    "sd": 2.91,
-    "rank": 144.0,
-    "pos_rank": "WR144",
-    "grade": "F",
-    "proj": 0.5,
-    "opp": "vs. ATL",
-    "owned": 0.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4635009"
   },
@@ -32966,17 +29358,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 76.82,
-    "sd": 7.73,
-    "rank": 74.0,
-    "pos_rank": "TE74",
-    "grade": "F",
-    "proj": 1.6,
-    "opp": "vs. LV",
-    "owned": 1.2,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4702559"
   },
@@ -33039,17 +29421,7 @@
     "mean_pts": 0.3666666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 147.64,
-    "sd": 10.83,
-    "rank": 141.0,
-    "pos_rank": "WR141",
-    "grade": "F",
-    "proj": 0.5,
-    "opp": "vs. PHI",
-    "owned": 1.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4869748"
   },
@@ -33112,17 +29484,7 @@
     "mean_pts": 0.9666666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 108.62,
-    "sd": 6.31,
-    "rank": 107.0,
-    "pos_rank": "WR107",
-    "grade": "F",
-    "proj": 3.7,
-    "opp": "at PIT",
-    "owned": 0.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "5092508"
   },
@@ -33185,17 +29547,7 @@
     "mean_pts": 0.43333333333333335
    },
    "injury": null,
-   "fp": {
-    "ecr": 65.42,
-    "sd": 6.94,
-    "rank": 65.0,
-    "pos_rank": "RB65",
-    "grade": "F",
-    "proj": 2.9,
-    "opp": "at TB",
-    "owned": 4.2,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4832846"
   },
@@ -33248,17 +29600,7 @@
     "mean_pts": 0.4666666666666666
    },
    "injury": null,
-   "fp": {
-    "ecr": 133.69,
-    "sd": 11.77,
-    "rank": 132.0,
-    "pos_rank": "WR132",
-    "grade": "F",
-    "proj": 1.2,
-    "opp": "vs. HOU",
-    "owned": 2.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4683151"
   },
@@ -33435,17 +29777,7 @@
     "mean_pts": 3.3000000000000003
    },
    "injury": null,
-   "fp": {
-    "ecr": 77.41,
-    "sd": 7.84,
-    "rank": 81.0,
-    "pos_rank": "WR81",
-    "grade": "F",
-    "proj": 6.3,
-    "opp": "vs. CIN",
-    "owned": 5.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4685261"
   },
@@ -33568,17 +29900,7 @@
     "mean_pts": 1.5
    },
    "injury": null,
-   "fp": {
-    "ecr": 73.64,
-    "sd": 11.68,
-    "rank": 71.0,
-    "pos_rank": "TE71",
-    "grade": "F",
-    "proj": 2.0,
-    "opp": "vs. PHI",
-    "owned": 0.7,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4685504"
   },
@@ -33631,17 +29953,7 @@
     "mean_pts": -0.6666666666666666
    },
    "injury": null,
-   "fp": {
-    "ecr": 53.8,
-    "sd": 8.23,
-    "rank": 50.0,
-    "pos_rank": "QB50",
-    "grade": "F",
-    "proj": 0.4,
-    "opp": "at CHI",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "14012"
   },
@@ -33694,17 +30006,7 @@
     "mean_pts": 8.16
    },
    "injury": null,
-   "fp": {
-    "ecr": 32.38,
-    "sd": 2.73,
-    "rank": 32.0,
-    "pos_rank": "QB32",
-    "grade": "F",
-    "proj": 7.0,
-    "opp": "vs. PHI",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "15168"
   },
@@ -33757,17 +30059,7 @@
     "mean_pts": 0.6333333333333333
    },
    "injury": null,
-   "fp": {
-    "ecr": 33.72,
-    "sd": 6.16,
-    "rank": 35.0,
-    "pos_rank": "TE35",
-    "grade": "F",
-    "proj": 4.7,
-    "opp": "at CHI",
-    "owned": 5.1,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "15835"
   },
@@ -33820,17 +30112,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 128.31,
-    "sd": 11.31,
-    "rank": 121.0,
-    "pos_rank": "WR121",
-    "grade": "F",
-    "proj": 2.8,
-    "opp": "vs. TEN",
-    "owned": 2.9,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "16733"
   },
@@ -33883,17 +30165,7 @@
     "mean_pts": 1.0999999999999999
    },
    "injury": null,
-   "fp": {
-    "ecr": 135.36,
-    "sd": 15.32,
-    "rank": 140.0,
-    "pos_rank": "WR140",
-    "grade": "F",
-    "proj": 0.5,
-    "opp": "at DET",
-    "owned": 1.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "DEV",
    "espn_id": "2976592"
   },
@@ -33946,17 +30218,7 @@
     "mean_pts": 0.8666666666666667
    },
    "injury": null,
-   "fp": {
-    "ecr": 75.4,
-    "sd": 3.95,
-    "rank": 76.0,
-    "pos_rank": "TE76",
-    "grade": "F",
-    "proj": 1.5,
-    "opp": "vs. HOU",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "2998565"
   },
@@ -34009,17 +30271,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 156.83,
-    "sd": 6.28,
-    "rank": 159.0,
-    "pos_rank": "WR159",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "at CLE",
-    "owned": 1.4,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "DEV",
    "espn_id": "4212909"
   },
@@ -34072,17 +30324,7 @@
     "mean_pts": 0.39999999999999997
    },
    "injury": null,
-   "fp": {
-    "ecr": 96.63,
-    "sd": 5.15,
-    "rank": 98.0,
-    "pos_rank": "TE98",
-    "grade": "F",
-    "proj": 0.7,
-    "opp": "vs. CIN",
-    "owned": 0.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "2975674"
   },
@@ -34135,17 +30377,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 140.18,
-    "sd": 5.64,
-    "rank": 142.0,
-    "pos_rank": "WR142",
-    "grade": "F",
-    "proj": 0.5,
-    "opp": "at BUF",
-    "owned": 1.3,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3051738"
   },
@@ -34205,17 +30437,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 64.14,
-    "sd": 9.47,
-    "rank": 67.0,
-    "pos_rank": "RB67",
-    "grade": "F",
-    "proj": 2.6,
-    "opp": "vs. LAC",
-    "owned": 1.3,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "3915411"
   },
@@ -34268,17 +30490,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 142.18,
-    "sd": 6.0,
-    "rank": 145.0,
-    "pos_rank": "WR145",
-    "grade": "F",
-    "proj": 0.5,
-    "opp": "vs. CAR",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4241424"
   },
@@ -34384,17 +30596,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 105.71,
-    "sd": 2.31,
-    "rank": 106.0,
-    "pos_rank": "TE106",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "vs. MIN",
-    "owned": 0.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4034779"
   },
@@ -34447,17 +30649,7 @@
     "mean_pts": 1.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 77.67,
-    "sd": 4.92,
-    "rank": 80.0,
-    "pos_rank": "TE80",
-    "grade": "F",
-    "proj": 1.4,
-    "opp": "at DET",
-    "owned": 3.9,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4241410"
   },
@@ -34510,17 +30702,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 85.0,
-    "sd": 11.28,
-    "rank": 99.0,
-    "pos_rank": "RB99",
-    "grade": "F",
-    "proj": 0.4,
-    "opp": "vs. CIN",
-    "owned": 2.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "DEV",
    "espn_id": "4428119"
   },
@@ -34573,17 +30755,7 @@
     "mean_pts": 0.4666666666666666
    },
    "injury": null,
-   "fp": {
-    "ecr": 63.8,
-    "sd": 8.18,
-    "rank": 59.0,
-    "pos_rank": "QB59",
-    "grade": "F",
-    "proj": 0.3,
-    "opp": "at JAC",
-    "owned": 0.9,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4240391"
   },
@@ -34636,17 +30808,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 76.0,
-    "sd": 3.26,
-    "rank": 77.0,
-    "pos_rank": "TE77",
-    "grade": "F",
-    "proj": 1.4,
-    "opp": "at CHI",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4248557"
   },
@@ -34699,17 +30861,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 166.8,
-    "sd": 1.83,
-    "rank": 169.0,
-    "pos_rank": "WR169",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "vs. LV",
-    "owned": 0.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "DEV",
    "espn_id": "4426990"
   },
@@ -34762,17 +30914,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 95.75,
-    "sd": 5.61,
-    "rank": 95.0,
-    "pos_rank": "TE95",
-    "grade": "F",
-    "proj": 0.8,
-    "opp": "vs. MIN",
-    "owned": 1.1,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4372505"
   },
@@ -34832,17 +30974,7 @@
     "avail": 0.75,
     "stale": true
    },
-   "fp": {
-    "ecr": 4.03,
-    "sd": 1.78,
-    "rank": 3.0,
-    "pos_rank": "TE3",
-    "grade": "A",
-    "proj": 13.6,
-    "opp": "at NO",
-    "owned": 99.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4432665"
   },
@@ -34895,17 +31027,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 132.78,
-    "sd": 14.94,
-    "rank": 143.0,
-    "pos_rank": "WR143",
-    "grade": "F",
-    "proj": 0.5,
-    "opp": "vs. SEA",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4426948"
   },
@@ -34958,17 +31080,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 76.3,
-    "sd": 11.49,
-    "rank": 78.0,
-    "pos_rank": "TE78",
-    "grade": "F",
-    "proj": 1.4,
-    "opp": "at BUF",
-    "owned": 0.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4428396"
   },
@@ -35028,17 +31140,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 93.97,
-    "sd": 6.05,
-    "rank": 92.0,
-    "pos_rank": "WR92",
-    "grade": "F",
-    "proj": 5.5,
-    "opp": "vs. MIN",
-    "owned": 13.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4430834"
   },
@@ -35098,17 +31200,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 28.15,
-    "sd": 2.03,
-    "rank": 28.0,
-    "pos_rank": "QB28",
-    "grade": "F",
-    "proj": 13.8,
-    "opp": "at GB",
-    "owned": 6.3,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4360423"
   },
@@ -35161,17 +31253,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 155.43,
-    "sd": 12.47,
-    "rank": 154.0,
-    "pos_rank": "WR154",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "at TB",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4565185"
   },
@@ -35224,17 +31306,7 @@
     "mean_pts": 2.6666666666666665
    },
    "injury": null,
-   "fp": {
-    "ecr": 123.67,
-    "sd": 9.85,
-    "rank": 129.0,
-    "pos_rank": "WR129",
-    "grade": "F",
-    "proj": 1.7,
-    "opp": "vs. ARI",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4431466"
   },
@@ -35287,17 +31359,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 68.33,
-    "sd": 4.75,
-    "rank": 67.0,
-    "pos_rank": "TE67",
-    "grade": "F",
-    "proj": 2.0,
-    "opp": "vs. LAC",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4573699"
   },
@@ -35350,17 +31412,7 @@
     "mean_pts": 0.6
    },
    "injury": null,
-   "fp": {
-    "ecr": 156.0,
-    "sd": 3.74,
-    "rank": 166.0,
-    "pos_rank": "WR166",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "vs. NYJ",
-    "owned": 0.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4602788"
   },
@@ -35465,17 +31517,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 146.0,
-    "sd": 11.82,
-    "rank": 151.0,
-    "pos_rank": "WR151",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "at DET",
-    "owned": 0.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4892576"
   },
@@ -35528,17 +31570,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 136.44,
-    "sd": 8.14,
-    "rank": 147.0,
-    "pos_rank": "WR147",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "at PIT",
-    "owned": 0.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4570738"
   },
@@ -35598,17 +31630,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 121.18,
-    "sd": 4.73,
-    "rank": 118.0,
-    "pos_rank": "WR118",
-    "grade": "F",
-    "proj": 3.1,
-    "opp": "at WAS",
-    "owned": 1.9,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4597703"
   },
@@ -35661,17 +31683,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 36.0,
-    "sd": 1.41,
-    "rank": 36.0,
-    "pos_rank": "QB36",
-    "grade": "F",
-    "proj": 0.8,
-    "opp": "vs. CAR",
-    "owned": 2.8,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4432762"
   },
@@ -35724,17 +31736,7 @@
     "mean_pts": 0.7999999999999999
    },
    "injury": null,
-   "fp": {
-    "ecr": 90.0,
-    "sd": 5.39,
-    "rank": 90.0,
-    "pos_rank": "TE90",
-    "grade": "F",
-    "proj": 1.1,
-    "opp": "at DAL",
-    "owned": 1.1,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "ACT",
    "espn_id": "4876132"
   },
@@ -35996,17 +31998,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 97.5,
-    "sd": 5.65,
-    "rank": 105.0,
-    "pos_rank": "RB105",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "at DEN",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "DEV",
    "espn_id": "5082269"
   },
@@ -36059,17 +32051,7 @@
     "mean_pts": 0.0
    },
    "injury": null,
-   "fp": {
-    "ecr": 132.0,
-    "sd": 4.92,
-    "rank": 136.0,
-    "pos_rank": "WR136",
-    "grade": "F",
-    "proj": 0.6,
-    "opp": "at IND",
-    "owned": 1.1,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": "DEV",
    "espn_id": "4683159"
   },
@@ -36268,17 +32250,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 44.0,
-    "sd": 14.91,
-    "rank": 39.0,
-    "pos_rank": "QB39",
-    "grade": "F",
-    "proj": 0.5,
-    "opp": "at GB",
-    "owned": 5.3,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": null
   },
   "00-0036354": {
@@ -37214,17 +33186,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 45.8,
-    "sd": 10.61,
-    "rank": 45.0,
-    "pos_rank": "QB45",
-    "grade": "F",
-    "proj": 0.4,
-    "opp": "vs. HOU",
-    "owned": 1.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": null
   },
   "00-0039178": {
@@ -37692,17 +33654,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 96.0,
-    "sd": 5.1,
-    "rank": 96.0,
-    "pos_rank": "TE96",
-    "grade": "F",
-    "proj": 0.8,
-    "opp": "vs. KC",
-    "owned": 0.0,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": null
   },
   "00-0029606": {
@@ -38170,17 +34122,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 65.69,
-    "sd": 4.54,
-    "rank": 68.0,
-    "pos_rank": "RB68",
-    "grade": "F",
-    "proj": 2.2,
-    "opp": "vs. ARI",
-    "owned": 0.9,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": null
   },
   "00-0034982": {
@@ -38396,17 +34338,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 80.96,
-    "sd": 5.79,
-    "rank": 81.0,
-    "pos_rank": "RB81",
-    "grade": "F",
-    "proj": 1.2,
-    "opp": "vs. MIN",
-    "owned": 3.4,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": null
   },
   "00-0041031": {
@@ -40170,17 +36102,7 @@
     "avail": 1.0,
     "stale": true
    },
-   "fp": {
-    "ecr": 162.83,
-    "sd": 5.34,
-    "rank": 164.0,
-    "pos_rank": "WR164",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "at CHI",
-    "owned": 1.1,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": null
   },
   "00-0038386": {
@@ -41404,17 +37326,7 @@
     "avail": 0.75,
     "stale": true
    },
-   "fp": {
-    "ecr": 44.8,
-    "sd": 3.54,
-    "rank": 41.0,
-    "pos_rank": "QB41",
-    "grade": "F",
-    "proj": 0.5,
-    "opp": "at BUF",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
+   "fp": null,
    "status": null
   },
   "00-0038103": {
@@ -42352,867 +38264,6 @@
    },
    "fp": null,
    "status": null
-  },
-  "00-0041562": {
-   "gsis_id": "00-0041562",
-   "name": "Fernando Mendoza",
-   "pos": "QB",
-   "team": "LV",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 36.38,
-    "sd": 1.11,
-    "rank": 37.0,
-    "pos_rank": "QB37",
-    "grade": "F",
-    "proj": 0.5,
-    "opp": "at NO",
-    "owned": 15.5,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0036945": {
-   "gsis_id": "00-0036945",
-   "name": "Justin Fields",
-   "pos": "QB",
-   "team": "KC",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 40.0,
-    "sd": 2.1,
-    "rank": 40.0,
-    "pos_rank": "QB40",
-    "grade": "F",
-    "proj": 0.5,
-    "opp": "at MIA",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0039376": {
-   "gsis_id": "00-0039376",
-   "name": "Spencer Rattler",
-   "pos": "QB",
-   "team": "NO",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 45.2,
-    "sd": 5.49,
-    "rank": 42.0,
-    "pos_rank": "QB42",
-    "grade": "F",
-    "proj": 0.5,
-    "opp": "vs. LV",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0035264": {
-   "gsis_id": "00-0035264",
-   "name": "Jarrett Stidham",
-   "pos": "QB",
-   "team": "DEN",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 45.2,
-    "sd": 3.97,
-    "rank": 43.0,
-    "pos_rank": "QB43",
-    "grade": "F",
-    "proj": 0.4,
-    "opp": "vs. LAR",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0026158": {
-   "gsis_id": "00-0026158",
-   "name": "Joe Flacco",
-   "pos": "QB",
-   "team": "CIN",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 45.2,
-    "sd": 2.79,
-    "rank": 44.0,
-    "pos_rank": "QB44",
-    "grade": "F",
-    "proj": 0.4,
-    "opp": "at PIT",
-    "owned": 0.8,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0041056": {
-   "gsis_id": "00-0041056",
-   "name": "Cade Klubnik",
-   "pos": "QB",
-   "team": "NYJ",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 48.2,
-    "sd": 6.24,
-    "rank": 46.0,
-    "pos_rank": "QB46",
-    "grade": "F",
-    "proj": 0.4,
-    "opp": "at DET",
-    "owned": 1.2,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0040014": {
-   "gsis_id": "00-0040014",
-   "name": "Kyle McCord",
-   "pos": "QB",
-   "team": "MIA",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 49.4,
-    "sd": 1.96,
-    "rank": 47.0,
-    "pos_rank": "QB47",
-    "grade": "F",
-    "proj": 0.4,
-    "opp": "vs. KC",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0037077": {
-   "gsis_id": "00-0037077",
-   "name": "Sam Howell",
-   "pos": "QB",
-   "team": "DAL",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 52.4,
-    "sd": 4.18,
-    "rank": 49.0,
-    "pos_rank": "QB49",
-    "grade": "F",
-    "proj": 0.4,
-    "opp": "vs. BAL",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0033869": {
-   "gsis_id": "00-0033869",
-   "name": "Mitchell Trubisky",
-   "pos": "QB",
-   "team": "TEN",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 55.2,
-    "sd": 9.58,
-    "rank": 51.0,
-    "pos_rank": "QB51",
-    "grade": "F",
-    "proj": 0.4,
-    "opp": "at NYG",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0035993": {
-   "gsis_id": "00-0035993",
-   "name": "Tyler Huntley",
-   "pos": "QB",
-   "team": "BAL",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 55.2,
-    "sd": 6.24,
-    "rank": 52.0,
-    "pos_rank": "QB52",
-    "grade": "F",
-    "proj": 0.4,
-    "opp": "at DAL",
-    "owned": 1.2,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0033949": {
-   "gsis_id": "00-0033949",
-   "name": "Joshua Dobbs",
-   "pos": "QB",
-   "team": "DET",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 56.4,
-    "sd": 3.72,
-    "rank": 53.0,
-    "pos_rank": "QB53",
-    "grade": "F",
-    "proj": 0.4,
-    "opp": "vs. NYJ",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0028118": {
-   "gsis_id": "00-0028118",
-   "name": "Tyrod Taylor",
-   "pos": "QB",
-   "team": "GB",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 54.0,
-    "sd": 9.49,
-    "rank": 54.0,
-    "pos_rank": "QB54",
-    "grade": "F",
-    "proj": 0.4,
-    "opp": "vs. ATL",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0035289": {
-   "gsis_id": "00-0035289",
-   "name": "Gardner Minshew",
-   "pos": "QB",
-   "team": "ARI",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 57.4,
-    "sd": 4.72,
-    "rank": 55.0,
-    "pos_rank": "QB55",
-    "grade": "F",
-    "proj": 0.4,
-    "opp": "at SF",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0036898": {
-   "gsis_id": "00-0036898",
-   "name": "Davis Mills",
-   "pos": "QB",
-   "team": "HOU",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 60.6,
-    "sd": 11.93,
-    "rank": 56.0,
-    "pos_rank": "QB56",
-    "grade": "F",
-    "proj": 0.3,
-    "opp": "at IND",
-    "owned": 1.1,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0031345": {
-   "gsis_id": "00-0031345",
-   "name": "Jimmy Garoppolo",
-   "pos": "QB",
-   "team": "LAR",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 62.0,
-    "sd": 12.54,
-    "rank": 57.0,
-    "pos_rank": "QB57",
-    "grade": "F",
-    "proj": 0.3,
-    "opp": "at DEN",
-    "owned": 1.4,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0040203": {
-   "gsis_id": "00-0040203",
-   "name": "Will Howard",
-   "pos": "QB",
-   "team": "PIT",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 58.33,
-    "sd": 1.89,
-    "rank": 60.0,
-    "pos_rank": "QB60",
-    "grade": "F",
-    "proj": 0.2,
-    "opp": "vs. CIN",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0038400": {
-   "gsis_id": "00-0038400",
-   "name": "Tanner McKee",
-   "pos": "QB",
-   "team": "PHI",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 66.2,
-    "sd": 6.55,
-    "rank": 61.0,
-    "pos_rank": "QB61",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "at CHI",
-    "owned": 1.3,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0035125": {
-   "gsis_id": "00-0035125",
-   "name": "Alec Ingold",
-   "pos": "RB",
-   "team": "LAC",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 83.74,
-    "sd": 3.43,
-    "rank": 87.0,
-    "pos_rank": "RB87",
-    "grade": "F",
-    "proj": 0.8,
-    "opp": "at BUF",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0034959": {
-   "gsis_id": "00-0034959",
-   "name": "Andrew Beck",
-   "pos": "RB",
-   "team": "NYJ",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 91.92,
-    "sd": 3.84,
-    "rank": 96.0,
-    "pos_rank": "RB96",
-    "grade": "F",
-    "proj": 0.4,
-    "opp": "at DET",
-    "owned": 0.0,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0031595": {
-   "gsis_id": "00-0031595",
-   "name": "Michael Burton",
-   "pos": "RB",
-   "team": "CLE",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 97.18,
-    "sd": 4.51,
-    "rank": 101.0,
-    "pos_rank": "RB101",
-    "grade": "F",
-    "proj": 0.2,
-    "opp": "vs. CAR",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0037267": {
-   "gsis_id": "00-0037267",
-   "name": "Jerome Ford",
-   "pos": "RB",
-   "team": "MIN",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 69.0,
-    "sd": 16.57,
-    "rank": 102.0,
-    "pos_rank": "RB102",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "at TB",
-    "owned": 3.6,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0036727": {
-   "gsis_id": "00-0036727",
-   "name": "Adam Prentice",
-   "pos": "RB",
-   "team": "DEN",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 96.6,
-    "sd": 6.65,
-    "rank": 106.0,
-    "pos_rank": "RB106",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "vs. LAR",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0040260": {
-   "gsis_id": "00-0040260",
-   "name": "Ahmani Marshall",
-   "pos": "RB",
-   "team": "CAR",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 98.67,
-    "sd": 8.73,
-    "rank": 109.0,
-    "pos_rank": "RB109",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "at CLE",
-    "owned": 0.0,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0039405": {
-   "gsis_id": "00-0039405",
-   "name": "Jawhar Jordan",
-   "pos": "RB",
-   "team": "HOU",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 99.67,
-    "sd": 6.55,
-    "rank": 110.0,
-    "pos_rank": "RB110",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "at IND",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0040718": {
-   "gsis_id": "00-0040718",
-   "name": "Travis Hunter",
-   "pos": "WR",
-   "team": "JAX",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 108.71,
-    "sd": 6.82,
-    "rank": 105.0,
-    "pos_rank": "WR105",
-    "grade": "F",
-    "proj": 3.7,
-    "opp": "vs. NE",
-    "owned": 51.4,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0037666": {
-   "gsis_id": "00-0037666",
-   "name": "Jalen Tolbert",
-   "pos": "WR",
-   "team": "MIA",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 111.7,
-    "sd": 9.51,
-    "rank": 113.0,
-    "pos_rank": "WR113",
-    "grade": "F",
-    "proj": 3.2,
-    "opp": "vs. KC",
-    "owned": 1.1,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0036427": {
-   "gsis_id": "00-0036427",
-   "name": "Tyler Johnson",
-   "pos": "WR",
-   "team": "NYJ",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 134.82,
-    "sd": 15.34,
-    "rank": 138.0,
-    "pos_rank": "WR138",
-    "grade": "F",
-    "proj": 0.5,
-    "opp": "at DET",
-    "owned": 1.1,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0039052": {
-   "gsis_id": "00-0039052",
-   "name": "Trey Palmer",
-   "pos": "WR",
-   "team": "NO",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 151.83,
-    "sd": 3.29,
-    "rank": 155.0,
-    "pos_rank": "WR155",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "vs. LV",
-    "owned": 1.8,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0036182": {
-   "gsis_id": "00-0036182",
-   "name": "Nick Westbrook-Ikhine",
-   "pos": "WR",
-   "team": "IND",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 147.0,
-    "sd": 11.14,
-    "rank": 157.0,
-    "pos_rank": "WR157",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "vs. HOU",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0035589": {
-   "gsis_id": "00-0035589",
-   "name": "Gary Jennings",
-   "pos": "WR",
-   "team": "LAC",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 174.0,
-    "sd": 4.24,
-    "rank": 173.0,
-    "pos_rank": "WR173",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "at BUF",
-    "owned": 0.0,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0031484": {
-   "gsis_id": "00-0031484",
-   "name": "Chris Manhertz",
-   "pos": "TE",
-   "team": "NYG",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 86.0,
-    "sd": 3.46,
-    "rank": 87.0,
-    "pos_rank": "TE87",
-    "grade": "F",
-    "proj": 1.1,
-    "opp": "vs. TEN",
-    "owned": 0.0,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0037304": {
-   "gsis_id": "00-0037304",
-   "name": "Connor Heyward",
-   "pos": "TE",
-   "team": "LV",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 84.83,
-    "sd": 2.41,
-    "rank": 91.0,
-    "pos_rank": "TE91",
-    "grade": "F",
-    "proj": 0.9,
-    "opp": "at NO",
-    "owned": 0.0,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0038589": {
-   "gsis_id": "00-0038589",
-   "name": "Josh Whyle",
-   "pos": "TE",
-   "team": "GB",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 72.75,
-    "sd": 23.47,
-    "rank": 92.0,
-    "pos_rank": "TE92",
-    "grade": "F",
-    "proj": 0.9,
-    "opp": "vs. ATL",
-    "owned": 1.1,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0039648": {
-   "gsis_id": "00-0039648",
-   "name": "David Martin-Robinson",
-   "pos": "TE",
-   "team": "TEN",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 95.63,
-    "sd": 3.0,
-    "rank": 94.0,
-    "pos_rank": "TE94",
-    "grade": "F",
-    "proj": 0.8,
-    "opp": "at NYG",
-    "owned": 0.0,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0041398": {
-   "gsis_id": "00-0041398",
-   "name": "Riley Nowakowski",
-   "pos": "TE",
-   "team": "PIT",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 94.4,
-    "sd": 2.94,
-    "rank": 101.0,
-    "pos_rank": "TE101",
-    "grade": "F",
-    "proj": 0.5,
-    "opp": "vs. CIN",
-    "owned": 0.6,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0041510": {
-   "gsis_id": "00-0041510",
-   "name": "Max Klare",
-   "pos": "TE",
-   "team": "LAR",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 101.75,
-    "sd": 7.63,
-    "rank": 102.0,
-    "pos_rank": "TE102",
-    "grade": "F",
-    "proj": 0.5,
-    "opp": "at DEN",
-    "owned": 2.0,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0040215": {
-   "gsis_id": "00-0040215",
-   "name": "Gavin Bartholomew",
-   "pos": "TE",
-   "team": "MIN",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 101.14,
-    "sd": 6.51,
-    "rank": 103.0,
-    "pos_rank": "TE103",
-    "grade": "F",
-    "proj": 0.4,
-    "opp": "at TB",
-    "owned": 0.0,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0041084": {
-   "gsis_id": "00-0041084",
-   "name": "Tanner Koziol",
-   "pos": "TE",
-   "team": "JAX",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 104.6,
-    "sd": 6.89,
-    "rank": 107.0,
-    "pos_rank": "TE107",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "vs. NE",
-    "owned": 1.4,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0041077": {
-   "gsis_id": "00-0041077",
-   "name": "Justin Joly",
-   "pos": "TE",
-   "team": "MIA",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 104.8,
-    "sd": 5.81,
-    "rank": 108.0,
-    "pos_rank": "TE108",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "vs. KC",
-    "owned": 2.5,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0040058": {
-   "gsis_id": "00-0040058",
-   "name": "Nick Kallerup",
-   "pos": "TE",
-   "team": "SEA",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 104.6,
-    "sd": 3.72,
-    "rank": 109.0,
-    "pos_rank": "TE109",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "at WAS",
-    "owned": 1.0,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
-  },
-  "00-0035345": {
-   "gsis_id": "00-0035345",
-   "name": "Chris Myarick",
-   "pos": "TE",
-   "team": "LV",
-   "weeks": {},
-   "form": {},
-   "injury": null,
-   "fp": {
-    "ecr": 107.0,
-    "sd": 1.41,
-    "rank": 111.0,
-    "pos_rank": "TE111",
-    "grade": "F",
-    "proj": 0.0,
-    "opp": "at NO",
-    "owned": 0.0,
-    "scrape_date": "2026-09-28"
-   },
-   "status": null
   }
  },
  "by_name": {
@@ -43223,15 +38274,12 @@
   "kameron johnson|WR": "00-0039589",
   "kenny pickett|QB": "00-0038102",
   "devin singletary|RB": "00-0035250",
-  "joshua dobbs|QB": "00-0033949",
   "trey lance|QB": "00-0037012",
   "jonathan mingo|WR": "00-0039062",
   "jaylin lane|WR": "00-0040164",
   "keshawn williams|WR": "00-0040534",
   "tommy devito|QB": "00-0038476",
   "hunter luepke|RB": "00-0038738",
-  "travis hunter|WR": "00-0040718",
-  "trey palmer|WR": "00-0039052",
   "kaden wetjen|WR": "00-0041397",
   "dohnte meyers|WR": "00-0040785",
   "kavontae turpin|WR": "00-0037801",
@@ -43246,23 +38294,19 @@
   "jacob saylors|RB": "00-0038896",
   "bo melton|WR": "00-0037091",
   "terry mclaurin|WR": "00-0035659",
-  "cade klubnik|QB": "00-0041056",
   "jonnu smith|TE": "00-0033858",
-  "connor heyward|RB": "00-0037304",
   "josh oliver|TE": "00-0035249",
   "brock wright|TE": "00-0036754",
   "jonah coleman|RB": "00-0041496",
   "marvin mims|WR": "00-0038976",
   "hunter henry|TE": "00-0033090",
   "kevin austin|WR": "00-0037231",
-  "jalen tolbert|WR": "00-0037666",
   "tyquan thornton|WR": "00-0038104",
   "xavier legette|WR": "00-0039342",
   "dezhaun stribling|WR": "00-0041035",
   "seydou traore|TE": "00-0041579",
   "jadarian price|RB": "00-0041512",
   "mike gesicki|TE": "00-0034829",
-  "gardner minshew|QB": "00-0035289",
   "myles price|WR": "00-0040506",
   "charlie woerner|TE": "00-0036429",
   "brady russell|RB": "00-0038488",
@@ -43273,7 +38317,6 @@
   "andrei iosivas|WR": "00-0038619",
   "will kacmarek|TE": "00-0041524",
   "jameis winston|QB": "00-0031503",
-  "sam howell|QB": "00-0037077",
   "dylan laube|RB": "00-0039407",
   "chris godwin|WR": "00-0033921",
   "jackson hawes|TE": "00-0040194",
@@ -43288,7 +38331,6 @@
   "cam skattebo|RB": "00-0040715",
   "dallas goedert|TE": "00-0034351",
   "tai felton|WR": "00-0040154",
-  "ahmani marshall|RB": "00-0040260",
   "tom kennedy|WR": "00-0035544",
   "rico dowdle|RB": "00-0036139",
   "chris brooks|RB": "00-0038685",
@@ -43311,7 +38353,6 @@
   "anthony tyus|RB": "00-0040394",
   "chris moore|WR": "00-0032398",
   "derrick henry|RB": "00-0032764",
-  "nick westbrook ikhine|WR": "00-0036182",
   "kayshon boutte|WR": "00-0038608",
   "payne durham|TE": "00-0039050",
   "kimani vidal|RB": "00-0039391",
@@ -43353,25 +38394,21 @@
   "hayden rucci|TE": "00-0039489",
   "breece hall|RB": "00-0038120",
   "courtland sutton|WR": "00-0034348",
-  "michael burton|RB": "00-0031595",
   "troy franklin|WR": "00-0039868",
   "charlie kolar|TE": "00-0038046",
   "seth mcgowan|RB": "00-0041125",
   "sione vaki|RB": "00-0039364",
-  "tyler johnson|WR": "00-0036427",
   "jakobi lane|WR": "00-0040870",
   "evan engram|TE": "00-0033881",
   "jayden reed|WR": "00-0039146",
   "drew sample|TE": "00-0035631",
   "david montgomery|RB": "00-0035685",
   "elijah arroyo|TE": "00-0040739",
-  "chris manhertz|TE": "00-0031484",
   "tommy tremble|TE": "00-0037005",
   "zay flowers|WR": "00-0039064",
   "christian watson|WR": "00-0038124",
   "travis homer|RB": "00-0035594",
   "audric estime|RB": "00-0039373",
-  "adam prentice|RB": "00-0036727",
   "brayden willis|TE": "00-0038643",
   "nick muse|TE": "00-0037317",
   "lan larison|RB": "00-0040568",
@@ -43441,7 +38478,6 @@
   "james cook|RB": "00-0037248",
   "matthew hibner|TE": "00-0040879",
   "pat freiermuth|TE": "00-0036894",
-  "gavin bartholomew|TE": "00-0040215",
   "brian robinson|RB": "00-0037746",
   "tyson bagent|QB": "00-0038416",
   "jamaal pritchett|WR": "00-0040405",
@@ -43449,15 +38485,11 @@
   "kenyon sadiq|TE": "00-0041032",
   "nico collins|WR": "00-0036554",
   "tutu atwell|WR": "00-0036849",
-  "jerome ford|RB": "00-0037267",
   "liljordan humphrey|WR": "00-0035406",
   "tj hockenson|TE": "00-0035229",
-  "justin fields|QB": "00-0036945",
   "demond claiborne|RB": "00-0041104",
   "jacoby brissett|QB": "00-0033119",
   "germie bernard|WR": "00-0041489",
-  "riley nowakowski|TE": "00-0041398",
-  "jawhar jordan|RB": "00-0039405",
   "bryce lance|WR": "00-0041067",
   "braxton berrios|WR": "00-0034419",
   "eli heidenreich|RB": "00-0041490",
@@ -43471,7 +38503,6 @@
   "cj donaldson|RB": "00-0041326",
   "aj barner|TE": "00-0039793",
   "cade otton|TE": "00-0038129",
-  "fernando mendoza|QB": "00-0041562",
   "tucker kraft|TE": "00-0038996",
   "bryce young|QB": "00-0039150",
   "devonta smith|WR": "00-0036912",
@@ -43479,11 +38510,9 @@
   "robert tonyan|TE": "00-0033757",
   "sam darnold|QB": "00-0034869",
   "rashee rice|WR": "00-0039067",
-  "jimmy garoppolo|QB": "00-0031345",
   "jordan love|QB": "00-0036264",
   "oscar delp|TE": "00-0041041",
   "lamar jackson|QB": "00-0034796",
-  "justin joly|TE": "00-0041077",
   "travis etienne|RB": "00-0036973",
   "bhayshul tuten|RB": "00-0040719",
   "deejay dallas|RB": "00-0036425",
@@ -43494,12 +38523,9 @@
   "kyle monangai|RB": "00-0040236",
   "mark andrews|TE": "00-0034753",
   "roman wilson|WR": "00-0039739",
-  "tyrod taylor|QB": "00-0028118",
   "max bredeson|RB": "00-0041081",
-  "max klare|TE": "00-0041510",
   "darren waller|TE": "00-0031610",
   "stetson bennett|QB": "00-0039107",
-  "davis mills|QB": "00-0036898",
   "eli raridon|TE": "00-0041395",
   "british brooks|RB": "00-0039603",
   "xavier worthy|WR": "00-0039894",
@@ -43509,17 +38535,14 @@
   "luke farrell|TE": "00-0036887",
   "samaje perine|RB": "00-0033526",
   "emeka egbuka|WR": "00-0040129",
-  "chris myarick|TE": "00-0035345",
   "jordan whittington|WR": "00-0039751",
   "denzel boston|WR": "00-0041037",
   "jordan mason|RB": "00-0037525",
   "kyren williams|RB": "00-0037840",
   "saquon barkley|RB": "00-0034844",
   "george kittle|TE": "00-0033288",
-  "mitchell trubisky|QB": "00-0033869",
   "tank bigsby|RB": "00-0038555",
   "josh cameron|WR": "00-0041100",
-  "tanner mckee|QB": "00-0038400",
   "dk metcalf|WR": "00-0035640",
   "barion brown|WR": "00-0041099",
   "tay martin|WR": "00-0037524",
@@ -43547,10 +38570,8 @@
   "wandale robinson|WR": "00-0038117",
   "ty johnson|RB": "00-0035537",
   "michael wilson|WR": "00-0038559",
-  "nick kallerup|TE": "00-0040058",
   "bauer sharp|TE": "00-0041094",
   "skyy moore|WR": "00-0038090",
-  "david martin robinson|TE": "00-0039648",
   "britain covey|WR": "00-0037132",
   "durham smythe|TE": "00-0034798",
   "cam ward|QB": "00-0040676",
@@ -43578,7 +38599,6 @@
   "jalen coker|WR": "00-0039491",
   "emmett johnson|RB": "00-0041013",
   "malik davis|RB": "00-0037563",
-  "jarrett stidham|QB": "00-0035264",
   "carnell tate|WR": "00-0041438",
   "marvin harrison|WR": "00-0039849",
   "lew nichols|RB": "00-0038409",
@@ -43607,12 +38627,10 @@
   "bucky irving|RB": "00-0039361",
   "efton chism|WR": "00-0040563",
   "jordan addison|WR": "00-0038994",
-  "andrew beck|RB": "00-0034959",
   "alvin kamara|RB": "00-0033906",
   "ronnie rivers|RB": "00-0037557",
   "parker washington|WR": "00-0038606",
   "darnell washington|TE": "00-0038558",
-  "will howard|QB": "00-0040203",
   "david moore|WR": "00-0033589",
   "jaylen warren|RB": "00-0037228",
   "tahj brooks|RB": "00-0040208",
@@ -43628,9 +38646,7 @@
   "treyton welch|TE": "00-0039518",
   "deebo samuel|WR": "00-0035719",
   "tre harris|WR": "00-0040727",
-  "josh whyle|TE": "00-0038589",
   "olamide zaccheaus|WR": "00-0035208",
-  "tanner koziol|TE": "00-0041084",
   "tyler shough|QB": "00-0040743",
   "devaughn vele|WR": "00-0039424",
   "elijah higgins|TE": "00-0039041",
@@ -43672,7 +38688,6 @@
   "omar cooper|WR": "00-0041511",
   "cooper kupp|WR": "00-0033908",
   "tyler badie|RB": "00-0037085",
-  "joe flacco|QB": "00-0026158",
   "travis kelce|TE": "00-0030506",
   "matthew stafford|QB": "00-0026498",
   "george holani|RB": "00-0039299",
@@ -43705,16 +38720,12 @@
   "ladd mcconkey|WR": "00-0039915",
   "patrick mahomes|QB": "00-0033873",
   "jk dobbins|RB": "00-0036158",
-  "gary jennings|WR": "00-0035589",
   "jalen nailor|WR": "00-0037291",
   "jamarr chase|WR": "00-0036900",
   "feleipe franks|TE": "00-0036825",
   "daniel bellinger|TE": "00-0038115",
-  "kyle mccord|QB": "00-0040014",
-  "spencer rattler|QB": "00-0039376",
   "tory horton|WR": "00-0040648",
   "tez johnson|WR": "00-0040237",
-  "tyler huntley|QB": "00-0035993",
   "eli stowers|TE": "00-0041483",
   "rashid shaheed|WR": "00-0037545",
   "rhamondre stevenson|RB": "00-0036875",
@@ -43722,7 +38733,6 @@
   "kaleb johnson|RB": "00-0040142",
   "daniel jones|QB": "00-0035710",
   "christian mccaffrey|RB": "00-0033280",
-  "alec ingold|RB": "00-0035125",
   "jackson meeks|TE": "00-0040390",
   "tyler goodson|RB": "00-0037120",
   "kendre miller|RB": "00-0038551",
@@ -44058,820 +39068,17 @@
   "leo chenal|LB": "00-0037819",
   "percy butler|S": "00-0038100",
   "brandon coleman|T": "00-0039913",
-  "drew stevens|K": "00-0041182",
-  "connor heyward|TE": "00-0037304"
+  "drew stevens|K": "00-0041182"
  },
- "fp_dst": {
-  "SEA": {
-   "ecr": 1.19,
-   "sd": 0.39,
-   "rank": 1.0,
-   "pos_rank": "DST1",
-   "grade": "A+",
-   "proj": 8.2,
-   "opp": "at WAS",
-   "owned": 96.8,
-   "scrape_date": "2026-09-28",
-   "name": "Seattle Seahawks"
-  },
-  "KC": {
-   "ecr": 2.19,
-   "sd": 0.83,
-   "rank": 2.0,
-   "pos_rank": "DST2",
-   "grade": "A",
-   "proj": 7.6,
-   "opp": "at MIA",
-   "owned": 63.1,
-   "scrape_date": "2026-09-28",
-   "name": "Kansas City Chiefs"
-  },
-  "PHI": {
-   "ecr": 4.24,
-   "sd": 2.02,
-   "rank": 3.0,
-   "pos_rank": "DST3",
-   "grade": "A-",
-   "proj": 7.6,
-   "opp": "at CHI",
-   "owned": 86.1,
-   "scrape_date": "2026-09-28",
-   "name": "Philadelphia Eagles"
-  },
-  "HOU": {
-   "ecr": 4.57,
-   "sd": 2.22,
-   "rank": 4.0,
-   "pos_rank": "DST4",
-   "grade": "A-",
-   "proj": 7.6,
-   "opp": "at IND",
-   "owned": 92.3,
-   "scrape_date": "2026-09-28",
-   "name": "Houston Texans"
-  },
-  "MIN": {
-   "ecr": 5.76,
-   "sd": 1.81,
-   "rank": 5.0,
-   "pos_rank": "DST5",
-   "grade": "B+",
-   "proj": 7.3,
-   "opp": "at TB",
-   "owned": 65.0,
-   "scrape_date": "2026-09-28",
-   "name": "Minnesota Vikings"
-  },
-  "CAR": {
-   "ecr": 7.08,
-   "sd": 3.06,
-   "rank": 6.0,
-   "pos_rank": "DST6",
-   "grade": "B+",
-   "proj": 7.3,
-   "opp": "at CLE",
-   "owned": 24.5,
-   "scrape_date": "2026-09-28",
-   "name": "Carolina Panthers"
-  },
-  "SF": {
-   "ecr": 8.27,
-   "sd": 2.26,
-   "rank": 7.0,
-   "pos_rank": "DST7",
-   "grade": "B",
-   "proj": 7.2,
-   "opp": "vs. ARI",
-   "owned": 55.0,
-   "scrape_date": "2026-09-28",
-   "name": "San Francisco 49ers"
-  },
-  "GB": {
-   "ecr": 8.95,
-   "sd": 2.84,
-   "rank": 8.0,
-   "pos_rank": "DST8",
-   "grade": "B",
-   "proj": 7.2,
-   "opp": "vs. ATL",
-   "owned": 41.2,
-   "scrape_date": "2026-09-28",
-   "name": "Green Bay Packers"
-  },
-  "CIN": {
-   "ecr": 9.89,
-   "sd": 3.3,
-   "rank": 9.0,
-   "pos_rank": "DST9",
-   "grade": "B",
-   "proj": 7.2,
-   "opp": "at PIT",
-   "owned": 27.5,
-   "scrape_date": "2026-09-28",
-   "name": "Cincinnati Bengals"
-  },
-  "DET": {
-   "ecr": 11.16,
-   "sd": 3.54,
-   "rank": 10.0,
-   "pos_rank": "DST10",
-   "grade": "B-",
-   "proj": 7.1,
-   "opp": "vs. NYJ",
-   "owned": 51.4,
-   "scrape_date": "2026-09-28",
-   "name": "Detroit Lions"
-  },
-  "LAR": {
-   "ecr": 11.81,
-   "sd": 3.38,
-   "rank": 11.0,
-   "pos_rank": "DST11",
-   "grade": "B-",
-   "proj": 7.0,
-   "opp": "at DEN",
-   "owned": 85.0,
-   "scrape_date": "2026-09-28",
-   "name": "Los Angeles Rams"
-  },
-  "NYG": {
-   "ecr": 11.84,
-   "sd": 4.74,
-   "rank": 12.0,
-   "pos_rank": "DST12",
-   "grade": "C+",
-   "proj": 6.9,
-   "opp": "vs. TEN",
-   "owned": 16.6,
-   "scrape_date": "2026-09-28",
-   "name": "New York Giants"
-  },
-  "BUF": {
-   "ecr": 13.05,
-   "sd": 2.36,
-   "rank": 13.0,
-   "pos_rank": "DST13",
-   "grade": "C",
-   "proj": 6.9,
-   "opp": "vs. LAC",
-   "owned": 32.9,
-   "scrape_date": "2026-09-28",
-   "name": "Buffalo Bills"
-  },
-  "JAX": {
-   "ecr": 13.68,
-   "sd": 3.05,
-   "rank": 14.0,
-   "pos_rank": "DST14",
-   "grade": "C",
-   "proj": 6.9,
-   "opp": "vs. NE",
-   "owned": 64.8,
-   "scrape_date": "2026-09-28",
-   "name": "Jacksonville Jaguars"
-  },
-  "NO": {
-   "ecr": 15.49,
-   "sd": 3.62,
-   "rank": 15.0,
-   "pos_rank": "DST15",
-   "grade": "C",
-   "proj": 6.7,
-   "opp": "vs. LV",
-   "owned": 22.2,
-   "scrape_date": "2026-09-28",
-   "name": "New Orleans Saints"
-  },
-  "NE": {
-   "ecr": 15.84,
-   "sd": 3.99,
-   "rank": 16.0,
-   "pos_rank": "DST16",
-   "grade": "C-",
-   "proj": 6.7,
-   "opp": "at JAC",
-   "owned": 74.7,
-   "scrape_date": "2026-09-28",
-   "name": "New England Patriots"
-  },
-  "TEN": {
-   "ecr": 16.62,
-   "sd": 5.49,
-   "rank": 17.0,
-   "pos_rank": "DST17",
-   "grade": "C-",
-   "proj": 6.5,
-   "opp": "at NYG",
-   "owned": 6.6,
-   "scrape_date": "2026-09-28",
-   "name": "Tennessee Titans"
-  },
-  "DEN": {
-   "ecr": 17.92,
-   "sd": 3.01,
-   "rank": 18.0,
-   "pos_rank": "DST18",
-   "grade": "D+",
-   "proj": 6.5,
-   "opp": "vs. LAR",
-   "owned": 85.3,
-   "scrape_date": "2026-09-28",
-   "name": "Denver Broncos"
-  },
-  "PIT": {
-   "ecr": 18.24,
-   "sd": 1.89,
-   "rank": 19.0,
-   "pos_rank": "DST19",
-   "grade": "D+",
-   "proj": 5.9,
-   "opp": "vs. CIN",
-   "owned": 69.5,
-   "scrape_date": "2026-09-28",
-   "name": "Pittsburgh Steelers"
-  },
-  "TB": {
-   "ecr": 19.16,
-   "sd": 2.79,
-   "rank": 20.0,
-   "pos_rank": "DST20",
-   "grade": "D",
-   "proj": 5.9,
-   "opp": "vs. MIN",
-   "owned": 22.2,
-   "scrape_date": "2026-09-28",
-   "name": "Tampa Bay Buccaneers"
-  },
-  "LV": {
-   "ecr": 19.71,
-   "sd": 3.26,
-   "rank": 21.0,
-   "pos_rank": "DST21",
-   "grade": "D",
-   "proj": 5.7,
-   "opp": "at NO",
-   "owned": 10.1,
-   "scrape_date": "2026-09-28",
-   "name": "Las Vegas Raiders"
-  },
-  "BAL": {
-   "ecr": 21.72,
-   "sd": 3.11,
-   "rank": 22.0,
-   "pos_rank": "DST22",
-   "grade": "D-",
-   "proj": 5.7,
-   "opp": "at DAL",
-   "owned": 63.3,
-   "scrape_date": "2026-09-28",
-   "name": "Baltimore Ravens"
-  },
-  "CLE": {
-   "ecr": 21.6,
-   "sd": 2.71,
-   "rank": 23.0,
-   "pos_rank": "DST23",
-   "grade": "D-",
-   "proj": 5.6,
-   "opp": "vs. CAR",
-   "owned": 18.1,
-   "scrape_date": "2026-09-28",
-   "name": "Cleveland Browns"
-  },
-  "IND": {
-   "ecr": 23.26,
-   "sd": 2.4,
-   "rank": 24.0,
-   "pos_rank": "DST24",
-   "grade": "F",
-   "proj": 5.6,
-   "opp": "vs. HOU",
-   "owned": 14.4,
-   "scrape_date": "2026-09-28",
-   "name": "Indianapolis Colts"
-  },
-  "CHI": {
-   "ecr": 25.12,
-   "sd": 1.94,
-   "rank": 25.0,
-   "pos_rank": "DST25",
-   "grade": "F",
-   "proj": 5.5,
-   "opp": "vs. PHI",
-   "owned": 11.5,
-   "scrape_date": "2026-09-28",
-   "name": "Chicago Bears"
-  },
-  "ATL": {
-   "ecr": 25.46,
-   "sd": 1.73,
-   "rank": 26.0,
-   "pos_rank": "DST26",
-   "grade": "F",
-   "proj": 5.5,
-   "opp": "at GB",
-   "owned": 8.5,
-   "scrape_date": "2026-09-28",
-   "name": "Atlanta Falcons"
-  },
-  "DAL": {
-   "ecr": 27.53,
-   "sd": 1.56,
-   "rank": 27.0,
-   "pos_rank": "DST27",
-   "grade": "F",
-   "proj": 5.3,
-   "opp": "vs. BAL",
-   "owned": 18.6,
-   "scrape_date": "2026-09-28",
-   "name": "Dallas Cowboys"
-  },
-  "WAS": {
-   "ecr": 27.32,
-   "sd": 2.04,
-   "rank": 28.0,
-   "pos_rank": "DST28",
-   "grade": "F",
-   "proj": 5.3,
-   "opp": "vs. SEA",
-   "owned": 5.4,
-   "scrape_date": "2026-09-28",
-   "name": "Washington Commanders"
-  },
-  "LAC": {
-   "ecr": 28.63,
-   "sd": 1.37,
-   "rank": 29.0,
-   "pos_rank": "DST29",
-   "grade": "F",
-   "proj": 5.3,
-   "opp": "at BUF",
-   "owned": 35.8,
-   "scrape_date": "2026-09-28",
-   "name": "Los Angeles Chargers"
-  },
-  "NYJ": {
-   "ecr": 29.82,
-   "sd": 2.09,
-   "rank": 30.0,
-   "pos_rank": "DST30",
-   "grade": "F",
-   "proj": 5.2,
-   "opp": "at DET",
-   "owned": 3.7,
-   "scrape_date": "2026-09-28",
-   "name": "New York Jets"
-  },
-  "ARI": {
-   "ecr": 30.68,
-   "sd": 1.04,
-   "rank": 31.0,
-   "pos_rank": "DST31",
-   "grade": "F",
-   "proj": 5.1,
-   "opp": "at SF",
-   "owned": 4.6,
-   "scrape_date": "2026-09-28",
-   "name": "Arizona Cardinals"
-  },
-  "MIA": {
-   "ecr": 31.39,
-   "sd": 0.9,
-   "rank": 32.0,
-   "pos_rank": "DST32",
-   "grade": "F",
-   "proj": 5.0,
-   "opp": "vs. KC",
-   "owned": 8.0,
-   "scrape_date": "2026-09-28",
-   "name": "Miami Dolphins"
-  }
- },
- "fp_k": {
-  "brandon aubrey": {
-   "ecr": 2.14,
-   "sd": 1.72,
-   "rank": 1.0,
-   "pos_rank": "K1",
-   "grade": "A",
-   "proj": 9.1,
-   "opp": "vs. BAL",
-   "owned": 99.2,
-   "scrape_date": "2026-09-28",
-   "name": "Brandon Aubrey",
-   "team": "DAL"
-  },
-  "eddy pineiro": {
-   "ecr": 3.19,
-   "sd": 2.33,
-   "rank": 2.0,
-   "pos_rank": "K2",
-   "grade": "B+",
-   "proj": 9.1,
-   "opp": "vs. ARI",
-   "owned": 59.3,
-   "scrape_date": "2026-09-28",
-   "name": "Eddy Pineiro",
-   "team": "SF"
-  },
-  "harrison butker": {
-   "ecr": 3.89,
-   "sd": 2.11,
-   "rank": 3.0,
-   "pos_rank": "K3",
-   "grade": "B",
-   "proj": 8.8,
-   "opp": "at MIA",
-   "owned": 62.6,
-   "scrape_date": "2026-09-28",
-   "name": "Harrison Butker",
-   "team": "KC"
-  },
-  "tyler loop": {
-   "ecr": 4.53,
-   "sd": 1.91,
-   "rank": 4.0,
-   "pos_rank": "K4",
-   "grade": "B",
-   "proj": 8.8,
-   "opp": "at DAL",
-   "owned": 62.5,
-   "scrape_date": "2026-09-28",
-   "name": "Tyler Loop",
-   "team": "BAL"
-  },
-  "kaimi fairbairn": {
-   "ecr": 6.33,
-   "sd": 2.9,
-   "rank": 5.0,
-   "pos_rank": "K5",
-   "grade": "B-",
-   "proj": 8.6,
-   "opp": "at IND",
-   "owned": 94.3,
-   "scrape_date": "2026-09-28",
-   "name": "Kaimi Fairbairn",
-   "team": "HOU"
-  },
-  "jake bates": {
-   "ecr": 8.11,
-   "sd": 3.71,
-   "rank": 6.0,
-   "pos_rank": "K6",
-   "grade": "C+",
-   "proj": 8.6,
-   "opp": "vs. NYJ",
-   "owned": 64.8,
-   "scrape_date": "2026-09-28",
-   "name": "Jake Bates",
-   "team": "DET"
-  },
-  "evan mcpherson": {
-   "ecr": 8.22,
-   "sd": 3.02,
-   "rank": 7.0,
-   "pos_rank": "K7",
-   "grade": "C+",
-   "proj": 8.4,
-   "opp": "at PIT",
-   "owned": 58.5,
-   "scrape_date": "2026-09-28",
-   "name": "Evan McPherson",
-   "team": "CIN"
-  },
-  "jason myers": {
-   "ecr": 8.39,
-   "sd": 2.86,
-   "rank": 8.0,
-   "pos_rank": "K8",
-   "grade": "C+",
-   "proj": 8.4,
-   "opp": "at WAS",
-   "owned": 92.1,
-   "scrape_date": "2026-09-28",
-   "name": "Jason Myers",
-   "team": "SEA"
-  },
-  "trey smack": {
-   "ecr": 8.53,
-   "sd": 2.24,
-   "rank": 9.0,
-   "pos_rank": "K9",
-   "grade": "C",
-   "proj": 8.2,
-   "opp": "vs. ATL",
-   "owned": 22.1,
-   "scrape_date": "2026-09-28",
-   "name": "Trey Smack",
-   "team": "GB"
-  },
-  "cam little": {
-   "ecr": 8.56,
-   "sd": 2.11,
-   "rank": 10.0,
-   "pos_rank": "K10",
-   "grade": "C+",
-   "proj": 7.9,
-   "opp": "vs. NE",
-   "owned": 89.9,
-   "scrape_date": "2026-09-28",
-   "name": "Cam Little",
-   "team": "JAX"
-  },
-  "tyler bass": {
-   "ecr": 8.86,
-   "sd": 3.61,
-   "rank": 11.0,
-   "pos_rank": "K11",
-   "grade": "C+",
-   "proj": 7.8,
-   "opp": "vs. LAC",
-   "owned": 14.7,
-   "scrape_date": "2026-09-28",
-   "name": "Tyler Bass",
-   "team": "BUF"
-  },
-  "daniel carlson": {
-   "ecr": 13.86,
-   "sd": 4.69,
-   "rank": 12.0,
-   "pos_rank": "K12",
-   "grade": "C",
-   "proj": 7.8,
-   "opp": "vs. LV",
-   "owned": 4.4,
-   "scrape_date": "2026-09-28",
-   "name": "Daniel Carlson",
-   "team": "NO"
-  },
-  "cameron dicker": {
-   "ecr": 14.47,
-   "sd": 3.52,
-   "rank": 13.0,
-   "pos_rank": "K13",
-   "grade": "C",
-   "proj": 7.6,
-   "opp": "at BUF",
-   "owned": 86.0,
-   "scrape_date": "2026-09-28",
-   "name": "Cameron Dicker",
-   "team": "LAC"
-  },
-  "harrison mevis": {
-   "ecr": 14.56,
-   "sd": 3.21,
-   "rank": 14.0,
-   "pos_rank": "K14",
-   "grade": "C",
-   "proj": 7.5,
-   "opp": "at DEN",
-   "owned": 67.1,
-   "scrape_date": "2026-09-28",
-   "name": "Harrison Mevis",
-   "team": "LAR"
-  },
-  "jake elliott": {
-   "ecr": 16.03,
-   "sd": 3.24,
-   "rank": 15.0,
-   "pos_rank": "K15",
-   "grade": "C",
-   "proj": 7.3,
-   "opp": "at CHI",
-   "owned": 7.6,
-   "scrape_date": "2026-09-28",
-   "name": "Jake Elliott",
-   "team": "PHI"
-  },
-  "chase mclaughlin": {
-   "ecr": 16.14,
-   "sd": 3.95,
-   "rank": 16.0,
-   "pos_rank": "K16",
-   "grade": "C",
-   "proj": 7.2,
-   "opp": "vs. MIN",
-   "owned": 22.5,
-   "scrape_date": "2026-09-28",
-   "name": "Chase McLaughlin",
-   "team": "TB"
-  },
-  "will reichard": {
-   "ecr": 16.31,
-   "sd": 3.22,
-   "rank": 17.0,
-   "pos_rank": "K17",
-   "grade": "C-",
-   "proj": 7.2,
-   "opp": "at TB",
-   "owned": 43.9,
-   "scrape_date": "2026-09-28",
-   "name": "Will Reichard",
-   "team": "MIN"
-  },
-  "chris boswell": {
-   "ecr": 18.0,
-   "sd": 4.04,
-   "rank": 18.0,
-   "pos_rank": "K18",
-   "grade": "C-",
-   "proj": 7.1,
-   "opp": "vs. CIN",
-   "owned": 34.7,
-   "scrape_date": "2026-09-28",
-   "name": "Chris Boswell",
-   "team": "PIT"
-  },
-  "ryan fitzgerald": {
-   "ecr": 18.17,
-   "sd": 2.5,
-   "rank": 19.0,
-   "pos_rank": "K19",
-   "grade": "C-",
-   "proj": 7.1,
-   "opp": "at CLE",
-   "owned": 1.1,
-   "scrape_date": "2026-09-28",
-   "name": "Ryan Fitzgerald",
-   "team": "CAR"
-  },
-  "andy borregales": {
-   "ecr": 19.69,
-   "sd": 2.17,
-   "rank": 20.0,
-   "pos_rank": "K20",
-   "grade": "D+",
-   "proj": 7.1,
-   "opp": "at JAC",
-   "owned": 8.6,
-   "scrape_date": "2026-09-28",
-   "name": "Andy Borregales",
-   "team": "NE"
-  },
-  "jason sanders": {
-   "ecr": 20.53,
-   "sd": 4.07,
-   "rank": 21.0,
-   "pos_rank": "K21",
-   "grade": "D+",
-   "proj": 7.1,
-   "opp": "at DET",
-   "owned": 0.7,
-   "scrape_date": "2026-09-28",
-   "name": "Jason Sanders",
-   "team": "NYJ"
-  },
-  "spencer shrader": {
-   "ecr": 20.94,
-   "sd": 3.47,
-   "rank": 22.0,
-   "pos_rank": "K22",
-   "grade": "D+",
-   "proj": 6.9,
-   "opp": "vs. HOU",
-   "owned": 7.9,
-   "scrape_date": "2026-09-28",
-   "name": "Spencer Shrader",
-   "team": "IND"
-  },
-  "wil lutz": {
-   "ecr": 21.97,
-   "sd": 2.98,
-   "rank": 23.0,
-   "pos_rank": "K23",
-   "grade": "D+",
-   "proj": 6.8,
-   "opp": "vs. LAR",
-   "owned": 9.3,
-   "scrape_date": "2026-09-28",
-   "name": "Wil Lutz",
-   "team": "DEN"
-  },
-  "matt gay": {
-   "ecr": 24.61,
-   "sd": 2.62,
-   "rank": 24.0,
-   "pos_rank": "K24",
-   "grade": "D",
-   "proj": 6.7,
-   "opp": "at NO",
-   "owned": 9.3,
-   "scrape_date": "2026-09-28",
-   "name": "Matt Gay",
-   "team": "LV"
-  },
-  "chad ryland": {
-   "ecr": 25.39,
-   "sd": 2.09,
-   "rank": 25.0,
-   "pos_rank": "K25",
-   "grade": "D",
-   "proj": 6.6,
-   "opp": "at SF",
-   "owned": 1.3,
-   "scrape_date": "2026-09-28",
-   "name": "Chad Ryland",
-   "team": "ARI"
-  },
-  "nick folk": {
-   "ecr": 25.76,
-   "sd": 3.1,
-   "rank": 26.0,
-   "pos_rank": "K26",
-   "grade": "D",
-   "proj": 6.5,
-   "opp": "at GB",
-   "owned": 2.3,
-   "scrape_date": "2026-09-28",
-   "name": "Nick Folk",
-   "team": "ATL"
-  },
-  "cairo santos": {
-   "ecr": 26.81,
-   "sd": 2.86,
-   "rank": 27.0,
-   "pos_rank": "K27",
-   "grade": "D-",
-   "proj": 6.5,
-   "opp": "vs. PHI",
-   "owned": 25.3,
-   "scrape_date": "2026-09-28",
-   "name": "Cairo Santos",
-   "team": "CHI"
-  },
-  "joey slye": {
-   "ecr": 27.0,
-   "sd": 2.81,
-   "rank": 28.0,
-   "pos_rank": "K28",
-   "grade": "D-",
-   "proj": 6.5,
-   "opp": "at NYG",
-   "owned": 0.9,
-   "scrape_date": "2026-09-28",
-   "name": "Joey Slye",
-   "team": "TEN"
-  },
-  "dominic zvada": {
-   "ecr": 26.88,
-   "sd": 2.75,
-   "rank": 29.0,
-   "pos_rank": "K29",
-   "grade": "D-",
-   "proj": 6.4,
-   "opp": "vs. TEN",
-   "owned": 1.5,
-   "scrape_date": "2026-09-28",
-   "name": "Dominic Zvada",
-   "team": "NYG"
-  },
-  "andre szmyt": {
-   "ecr": 27.25,
-   "sd": 3.24,
-   "rank": 30.0,
-   "pos_rank": "K30",
-   "grade": "D-",
-   "proj": 6.3,
-   "opp": "vs. CAR",
-   "owned": 0.8,
-   "scrape_date": "2026-09-28",
-   "name": "Andre Szmyt",
-   "team": "CLE"
-  },
-  "riley patterson": {
-   "ecr": 30.63,
-   "sd": 1.73,
-   "rank": 31.0,
-   "pos_rank": "K31",
-   "grade": "F",
-   "proj": 6.2,
-   "opp": "vs. KC",
-   "owned": 0.9,
-   "scrape_date": "2026-09-28",
-   "name": "Riley Patterson",
-   "team": "MIA"
-  },
-  "drew stevens": {
-   "ecr": 31.83,
-   "sd": 0.47,
-   "rank": 32.0,
-   "pos_rank": "K32",
-   "grade": "F",
-   "proj": 5.8,
-   "opp": "vs. SEA",
-   "owned": 0.8,
-   "scrape_date": "2026-09-28",
-   "name": "Drew Stevens",
-   "team": "WAS"
-  }
- },
+ "fp_dst": {},
+ "fp_k": {},
  "coverage": {
-  "players": 840,
+  "players": 799,
   "with_snaps": 452,
-  "with_fp": 450,
+  "with_fp": 0,
   "with_injury": 477,
   "snap_rows_unmatched": 169,
-  "fp_rows_unmatched": 7,
-  "by_name": 844
+  "fp_rows_unmatched": 0,
+  "by_name": 802
  }
 }

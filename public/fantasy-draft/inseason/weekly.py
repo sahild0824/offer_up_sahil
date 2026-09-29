@@ -19,6 +19,18 @@ converged on; see research/open_source_survey.md):
   spread   = lognormal with a position CV (QB .32, RB .52, WR .58, TE .62); floor and ceiling
              are the 20th and 80th percentiles; boom = P(> 1.5 x mean), bust = P(< 0.6 x mean).
 
+News (optional --news news.json) covers what the box scores cannot see yet: a player ruled
+out for N weeks or the season. He projects to zero for those weeks, and NEWS_KEEP (0.7) of his
+per-game role is handed to his healthy same-position teammates in proportion to their recent
+snap share, capped at NEWS_CAP (0.9) of his role - the vacated-opportunity rule, so a handcuff
+is valued as the starter he is about to be rather than the backup the data still shows.
+
+    {"out": [{"name": "Breece Hall", "pos": "RB", "weeks": 1, "note": "quad, week-to-week"},
+             {"name": "De'Von Achane", "pos": "RB", "weeks": "season", "note": "torn ACL"},
+             {"name": "Travis Etienne", "pos": "RB", "weeks": 3, "heirs": {"Alvin Kamara": 0.65, "Kendre Miller": 0.35}}]}
+
+"heirs" overrides the snap-share split when the reporting names who takes the work.
+
 The lineup maximizes the sum of means - "start your studs"; variance-seeking did not hold up
 out of sample. Every starter is compared with the best bench alternative at that slot with
 confidence Phi(gap / hypot(sd_a, sd_b)): under 55% is a coin flip, under 65% a lean.
@@ -42,6 +54,8 @@ SLOTS = [("QB", 1), ("RB", 2), ("WR", 2), ("TE", 1)]
 FLEX_POS = ("RB", "WR", "TE")
 CV = {"QB": 0.32, "RB": 0.52, "WR": 0.58, "TE": 0.62}
 FORM_PRIOR_N = 3.0
+NEWS_KEEP = 0.7         # share of a missing player's role that stays inside his position group
+NEWS_CAP = 0.9          # an heir's role tops out at this fraction of the missing player's role
 LAST_WEEK = 17          # value rest-of-season through the fantasy playoffs
 DST_NICK = {"cardinals": "ARI", "falcons": "ATL", "ravens": "BAL", "bills": "BUF", "panthers": "CAR", "bears": "CHI",
             "bengals": "CIN", "browns": "CLE", "cowboys": "DAL", "broncos": "DEN", "lions": "DET", "packers": "GB",
@@ -68,7 +82,7 @@ def clamp(x, lo, hi):
 
 # ---------------------------------------------------------------------------------------------
 class Engine:
-    def __init__(self, week):
+    def __init__(self, week, news=None):
         self.week = week
         self.W = json.load(open(DATA / "weekly_2026.json"))
         if self.W["week"] != week:
@@ -80,6 +94,60 @@ class Engine:
         imp = [t["implied"] for t in self.teams.values() if t.get("implied")]
         self.avg_implied = sum(imp) / len(imp) if imp else 22.0
         self.weeks_left = max(1, LAST_WEEK - week + 1)
+        self.out, self.heirs = {}, {}
+        self._apply_news(news or {})
+
+    # ---- news: players ruled out, and who inherits their role ----------------------------
+    def _role_value(self, wp, pos):
+        """Per-game role worth, before matchup: the same prior-plus-form blend project() uses."""
+        base_p = self.P_by_name.get(norm_name(wp["name"]) + "|" + pos)
+        base = (base_p["proj"] / 17.0) if base_p and base_p.get("proj") else None
+        form = wp.get("form") or {}
+        n = form.get("games") or 0
+        ewma, ep = form.get("ewma_pts"), form.get("ewma_ep")
+        target = 0.5 * ewma + 0.5 * ep if (ewma is not None and ep) else ewma
+        if base is not None and target is not None and n:
+            w = n / (n + FORM_PRIOR_N)
+            return (1 - w) * base + w * target
+        return target if target is not None else (base or 0.0)
+
+    def _apply_news(self, news):
+        for o in news.get("out", []):
+            pos, g = o.get("pos"), None
+            for cand in ([pos] if pos else ["RB", "WR", "TE", "QB"]):
+                g = self.gsis_for(o["name"], cand)
+                if g:
+                    pos = cand
+                    break
+            if not g or g not in self.W["players"]:
+                print(f"!! news: no 2026 player matches {o['name']!r}", file=sys.stderr)
+                continue
+            wk = o.get("weeks", 1)
+            weeks = self.weeks_left if wk == "season" else min(int(wk), self.weeks_left)
+            self.out[g] = {"weeks": weeks, "note": o.get("note") or "out", "pos": pos, "season": wk == "season",
+                           "heirs": o.get("heirs")}
+        for g, o in self.out.items():
+            wp = self.W["players"][g]
+            vac = self._role_value(wp, o["pos"])
+            if o["heirs"]:
+                # the beat reporters know the depth chart better than last month's snap shares
+                named = {self.gsis_for(n, o["pos"]): float(w) for n, w in o["heirs"].items()}
+                mates = [(h, self.W["players"][h]) for h in named if h in self.W["players"]]
+                wts = {h: named[h] for h, _ in mates}
+            else:
+                mates = [(h, q) for h, q in self.W["players"].items()
+                         if h != g and h not in self.out and q.get("team") == wp.get("team") and q.get("pos") == o["pos"]
+                         and (q.get("form") or {}).get("games") and q.get("status") in (None, "ACT", "A01")]
+                wts = {h: max((q.get("form") or {}).get("ewma_snap_pct") or 0.0, 0.05) for h, q in mates}
+            tot = sum(wts.values()) or 1.0
+            for h, q in mates:
+                own = self._role_value(q, o["pos"])
+                extra = min(own + NEWS_KEEP * vac * wts[h] / tot, max(own, NEWS_CAP * vac)) - own
+                if extra >= 0.5:
+                    hr = self.heirs.setdefault(h, {"extra": 0.0, "weeks": 0, "from": []})
+                    hr["extra"] += extra
+                    hr["weeks"] = max(hr["weeks"], o["weeks"])
+                    hr["from"].append(wp["name"])
 
     # ---- projection ---------------------------------------------------------------------
     def gsis_for(self, name, pos):
@@ -130,6 +198,13 @@ class Engine:
             usage = target
         else:
             usage = base
+        # An heir's preseason number and his box scores both describe the backup job, so the
+        # inherited work is added on top of whatever we believed about him, not blended in.
+        heir = self.heirs.get(g) if g else None
+        extra = heir["extra"] if heir and usage is not None else 0.0
+        if extra:
+            usage += extra
+            notes.append(f"INHERITS +{extra:.1f}/gm while {', '.join(heir['from'])} out")
         if usage is not None and n:
             notes.append((f"wk1: {form.get('last_pts', 0):.1f} pts" if n == 1
                           else f"wk1-{self.week - 1} avg {form.get('mean_pts', 0):.1f}, last {form.get('last_pts', 0):.1f}"))
@@ -171,6 +246,10 @@ class Engine:
             notes.append(f"roster status {status}")
             if status in ("RES", "IR", "PUP", "INA"):
                 avail = 0.0
+        out = self.out.get(g) if g else None
+        if out:
+            avail = 0.0
+            notes.append(f"OUT ({out['note']}) - " + ("season" if out["season"] else f"{out['weeks']} wk"))
         mean = mean_if_plays * avail
 
         cv = CV.get(pos, 0.55)
@@ -206,7 +285,16 @@ class Engine:
                 "boom": boom, "bust": bust, "avail": avail, "team": team, "opp": opp, "bye": False, "notes": notes,
                 "parts": {"base": base, "ewma": ewma, "n": n, "usage_adj": usage_adj, "expert": expert,
                           "matchup": matchup, "implied": tm.get("implied"), "dvp": dvp_f},
-                "ros": (self._ros(base, target, w_form) * avail_ros(avail)) if (base or target) else None}
+                "ros": self._ros_news(g, base, target, w_form, avail) if (base or target) else None}
+
+    def _ros_news(self, g, base, target, w_form, avail):
+        out, heir = self.out.get(g), self.heirs.get(g)
+        if out:
+            return self._ros(base, target, w_form) * max(0, self.weeks_left - out["weeks"]) / self.weeks_left
+        ros = self._ros(base, target, w_form) * avail_ros(avail)
+        if heir:
+            ros += heir["extra"] * min(heir["weeks"], self.weeks_left)
+        return ros
 
     def _ros(self, base, target, w_form):
         if base is not None and target is not None and w_form:
@@ -257,7 +345,11 @@ def report(week, roster, waivers, E):
     W = E.W
     say = out.append
     say(f"# Week {week} - start/sit and waivers")
-    say(f"_Built {W['generated']} from nflverse through week {W['weeks_done'][-1] if W['weeks_done'] else 0}, FantasyPros consensus scraped {W.get('fp_scrape_date')}, Vegas lines from nflverse games.csv._\n")
+    fp_note = f"FantasyPros consensus scraped {W.get('fp_scrape_date')}"
+    if W.get("fp_rows_stale") and not W.get("fp_rows_this_week"):
+        fp_note = (f"**no FantasyPros consensus** - the {W.get('fp_scrape_date')} scrape is for another week, "
+                   f"so projections are usage and matchup only")
+    say(f"_Built {W['generated']} from nflverse through week {W['weeks_done'][-1] if W['weeks_done'] else 0}, {fp_note}, Vegas lines from nflverse games.csv._\n")
 
     # ---- score the roster ----------------------------------------------------------------
     scored = []
@@ -392,11 +484,16 @@ def report(week, roster, waivers, E):
     say("|---|---|---|---|---|")
     for e in my_dst:
         t = DST_NICK.get(norm_name(e["name"]).split()[0], None) or next((k for k in DST_NICK.values() if k.lower() in norm_name(e["name"])), None)
-        if t and t in fp_dst:
-            say("**mine** " + dst_row(t, fp_dst[t]))
+        if t and (t in fp_dst or not fp_dst):
+            say("**mine** " + dst_row(t, fp_dst.get(t, {"name": e["name"]})))
         else:
             say(f"| {e['name']} (mine) | not found in FP | | | |")
-    streams = sorted(((t, d) for t, d in fp_dst.items() if d.get("ecr") is not None), key=lambda x: x[1]["ecr"])[:6]
+    if fp_dst:
+        streams = sorted(((t, d) for t, d in fp_dst.items() if d.get("ecr") is not None), key=lambda x: x[1]["ecr"])[:6]
+    else:
+        # no current consensus: rank by the signal that carries D/ST scoring, the opponent's implied total
+        streams = sorted(((t, {"name": t}) for t, tm in E.teams.items() if tm.get("opp_implied") is not None),
+                         key=lambda x: E.teams[x[0]]["opp_implied"])[:8]
     for t, d in streams:
         say(dst_row(t, d))
     say("\n_D/ST scoring is mostly the opponent and the line: a low opponent implied total is the signal. Kickers are not streamable - the week-to-week spread is noise - so keep yours unless he loses his job._\n")
@@ -435,10 +532,11 @@ def main():
     ap.add_argument("--week", type=int, required=True)
     ap.add_argument("roster")
     ap.add_argument("waivers", nargs="?")
+    ap.add_argument("--news", help="JSON of players ruled out (see the module docstring)")
     a = ap.parse_args()
     roster = json.load(open(a.roster))
     waivers = json.load(open(a.waivers)) if a.waivers else {"players": []}
-    E = Engine(a.week)
+    E = Engine(a.week, json.load(open(a.news)) if a.news else None)
     print(report(a.week, roster, waivers, E))
 
 

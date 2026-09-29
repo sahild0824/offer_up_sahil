@@ -39,7 +39,7 @@ import time
 import unicodedata
 import urllib.request
 from collections import defaultdict
-from datetime import date
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -317,12 +317,27 @@ def build(week, fetch_first):
             P(g, r.get("full_name"), r.get("position"), r.get("team"))["injury"] = entry
 
     # ---- FantasyPros weekly ECR / grade / projection --------------------------------------
-    fp_miss = 0
+    # The mirror can lag the schedule: the 2026-09-28 scrape still held Week 3 rankings on the
+    # Tuesday of Week 4. A row whose game is not this week's game describes some other week, so
+    # it is dropped rather than blended in - the engine falls back to usage alone for that player.
+    def fp_row_is_this_week(r):
+        tm = teams.get(team(r.get("team")), {})
+        ts = fnum(r.get("player_game_kickoff_ts"))
+        if ts and tm.get("gameday"):
+            kick = datetime.fromtimestamp(ts, timezone.utc).date()
+            return abs((kick - date.fromisoformat(tm["gameday"])).days) <= 1
+        row_opp = team(r.get("player_opponent_id"))
+        return not row_opp or row_opp in ("NA", "BYE") or row_opp == tm.get("opp")
+
+    fp_miss = fp_stale = 0
     page_pos = {"qb": "QB", "ppr-rb": "RB", "ppr-wr": "WR", "ppr-te": "TE", "k": "K", "dst": "DST"}
     fp_dst, fp_k = {}, {}
     for r in fp:
         pos = page_pos.get(r.get("page"))
         if not pos:
+            continue
+        if not fp_row_is_this_week(r):
+            fp_stale += 1
             continue
         entry = {"ecr": fnum(r.get("ecr")), "sd": fnum(r.get("sd")), "rank": fnum(r.get("rank")),
                  "pos_rank": r.get("pos_rank"), "grade": r.get("start_sit_grade") or None,
@@ -352,11 +367,16 @@ def build(week, fetch_first):
         "generated": date.today().isoformat(), "season": SEASON, "week": week, "weeks_done": weeks_done,
         "ewma_half_life": EWMA_HALF_LIFE, "dvp_prior_n": DVP_PRIOR_N, "dvp_clamp": DVP_CLAMP,
         "fp_scrape_date": (fp[0].get("scrape_date") if fp else None),
+        "fp_rows_this_week": sum(1 for p in players.values() if p["fp"]) + len(fp_dst) + len(fp_k),
+        "fp_rows_stale": fp_stale,
         "teams": teams, "players": players, "by_name": by_name, "fp_dst": fp_dst, "fp_k": fp_k,
         "coverage": {"players": len(players), "with_snaps": sum(1 for p in players.values() if any(w.get("snap_pct") is not None for w in p["weeks"].values())),
                      "with_fp": sum(1 for p in players.values() if p["fp"]), "with_injury": sum(1 for p in players.values() if p["injury"]),
                      "snap_rows_unmatched": snap_miss, "fp_rows_unmatched": fp_miss, "by_name": len(by_name)},
     }
+    if fp_stale:
+        print(f"  FantasyPros: dropped {fp_stale} rows that describe another week's game "
+              f"(scrape {out['fp_scrape_date']}); kept {out['fp_rows_this_week']}", file=sys.stderr)
     OUT.write_text(json.dumps(out, indent=1))
     print(f"wrote {OUT}  week {week}  weeks_done={weeks_done}  coverage={json.dumps(out['coverage'])}", file=sys.stderr)
     return out

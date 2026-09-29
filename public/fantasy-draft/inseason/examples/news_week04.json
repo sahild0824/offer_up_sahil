@@ -1,0 +1,6 @@
+{"out": [
+  {"name": "Breece Hall", "pos": "RB", "weeks": 1, "note": "quad, week-to-week; MRI better than feared"},
+  {"name": "De'Von Achane", "pos": "RB", "weeks": "season", "note": "torn ACL"},
+  {"name": "Travis Etienne", "pos": "RB", "weeks": 3, "note": "hamstring, extended absence", "heirs": {"Alvin Kamara": 0.65, "Kendre Miller": 0.35}},
+  {"name": "Justin Jefferson", "pos": "WR", "weeks": 1, "note": "ankle"}
+]}

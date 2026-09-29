@@ -24,6 +24,29 @@ waivers.txt  ->  python3 intake.py waivers < waivers.txt > waivers.json
                  python3 weekly.py --week N roster.json waivers.json > week_N.md
 ```
 
+Two optional inputs cover what the data files cannot see yet:
+
+```
+python3 weekly.py --week N roster.json waivers.json --news news.json > week_N.md
+```
+
+- **`news.json`** - players ruled out by news that has not reached the official injury file
+  (Tuesday's MRI, a season-ending IR move). Each one projects to zero for the stated weeks, and
+  70% of his per-game role passes to his healthy same-position teammates by recent snap share,
+  or by the split you name in `heirs` when the beat reporting is clearer than the snap counts:
+
+  ```json
+  {"out": [{"name": "Breece Hall", "pos": "RB", "weeks": 1, "note": "quad"},
+           {"name": "De'Von Achane", "pos": "RB", "weeks": "season", "note": "torn ACL"},
+           {"name": "Travis Etienne", "pos": "RB", "weeks": 3,
+            "heirs": {"Alvin Kamara": 0.65, "Kendre Miller": 0.35}}]}
+  ```
+
+- **FantasyPros freshness** - `ingest.py` drops any FantasyPros row whose game is not this
+  week's game. The mirror can lag: the 2026-09-28 scrape still held Week 3 rankings on the
+  Tuesday of Week 4. When every row is stale the report says so in its header, projections run
+  on usage and matchup alone, and the D/ST table ranks by opponent implied total instead.
+
 `intake.py` resolves every name against the 253-player model with the same forgiving matcher
 the draft app used, and **refuses to run if any name fails to match** — a transcription slip
 is shown, never silently scored. Ambiguous matches are echoed with the alternatives so you can
