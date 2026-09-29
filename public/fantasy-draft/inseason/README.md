@@ -51,6 +51,15 @@ python3 weekly.py --week N roster.json waivers.json --news news.json > week_N.md
   Tuesday of Week 4. When every row is stale the report says so in its header, projections run
   on usage and matchup alone, and the D/ST table ranks by opponent implied total instead.
 
+**Trades.** `trades.py` scores every 1-for-1, 2-for-1 and 2-for-2 swap with every other team:
+your season-lineup gain, theirs, and whether the offer is fair on FantasyPros rest-of-season
+trade-chart values (`data/ros_overall.csv`). Only trades that help you, don't hurt them, and
+don't read as a lowball survive. Rosters come from a league file you keep current:
+
+```
+python3 trades.py --week N league.json --news news.json --waivers waivers.json
+```
+
 `intake.py` resolves every name against the 253-player model with the same forgiving matcher
 the draft app used, and **refuses to run if any name fails to match** — a transcription slip
 is shown, never silently scored. Ambiguous matches are echoed with the alternatives so you can
