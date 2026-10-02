@@ -216,3 +216,47 @@ Five fixes, each found while building this report:
    13.0 to 14.1.
 5. **Players with no preseason projection** now start from a replacement-level baseline instead
    of taking their form at face value. Raymond went from 14.3 to 10.4 (ESPN: 10.1).
+
+## Friday update (2026-10-02)
+
+**DeVonta Smith is out.** He has a hamstring injury, missed all three practices, and the Eagles
+ruled him out for the Rams game. Reports say it could last 2-3 weeks.
+
+**Jaylen Waddle is on the wire. Claim him.**
+
+- **Why Hakuna Mailata dropped him:** fans saw him leave Sunday's game in a walking boot. The
+  Denver Post says he is "fine". He practised in full all week with only a foot tag, and plays
+  @SF at 4:25 PM ET.
+- **What he is worth:** FantasyPros WR20 this week (A-), about 28th overall rest of season
+  before Week 3. Odunze is WR43.
+- **What the model says:**
+  - He beats Montgomery for your FLEX this week while Smith is out.
+  - He covers Ja'Marr Chase's Week 6 bye and any lingering Smith absence.
+  - He is a far better trade chip than the player he replaces.
+
+**What to drop:**
+
+- **Odunze**, if he is still on your roster. It is the only drop that gains (+2.7 over the
+  season, +0.6 this week); every other drop loses points.
+- **If Odunze is already gone** (claimed away for the D/ST): the model prefers dropping
+  Montgomery (+4.1) to Braelon Allen (+2.9). If the Kyren offer to Hakuna is still open, drop
+  Allen instead, because Montgomery is part of that offer.
+- **Keep the Vikings D/ST through Sunday** if you got them.
+
+**Week 4 lineup now:**
+
+| Slot | Player |
+|---|---|
+| QB | Goff |
+| RB | Chase Brown, Hubbard |
+| WR | Ja'Marr Chase, Pickens |
+| TE | Warren |
+| FLEX | Waddle if he is on your roster by 4:25 PM Sunday; otherwise Montgomery (11.9, 1 PM) |
+| Bench | Smith (out), Hall (out, no practice all week) |
+
+**Trades:** Amon-Ra St. Brown, Kyren Williams and Chris Olave are not on this week's injury
+report, so the health check on the trade offers passes. Hakuna dropping Waddle may mean they
+also changed their TE situation, so check their roster before sending the Kyren offer.
+
+**Opponent:** Justin Jefferson did not practise (ankle), which favours you. Davante Adams'
+missed practice was a rest day.
