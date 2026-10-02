@@ -260,3 +260,31 @@ also changed their TE situation, so check their roster before sending the Kyren 
 
 **Opponent:** Justin Jefferson did not practise (ankle), which favours you. Davante Adams'
 missed practice was a rest day.
+
+## Saturday check (screenshots 2026-10-03)
+
+**Moves made:** Waddle added and Odunze dropped. Braelon Allen and Juwan Johnson have been
+claimed by other teams.
+
+**Lineup:**
+
+| Slot | Player |
+|---|---|
+| QB | Goff |
+| RB | Chase Brown, Hubbard |
+| WR | Ja'Marr Chase, Pickens (moved from FLEX) |
+| TE | Warren |
+| FLEX | Waddle (12.5) |
+| Bench | Smith (out), Hall (doubtful) |
+
+**FLEX:** Waddle over Montgomery (11.9) is a 52/48 coin flip.
+- For Waddle: the engine and FantasyPros (WR20 A- vs RB22 B-).
+- For Montgomery: ESPN (13.5 vs 11.9).
+- Waddle practised in full all week.
+
+**The rest of this wire does not beat the bench:**
+- **Ollie Gordon II:** Jaylen Wright practised in full, so Miami's backfield is a committee.
+- **Sadiq:** limited with a back injury, and his Week 13 bye matches Warren's.
+- **Bryce Young for Herbert:** +2.4, and all of it is the Week 6 bye. Better done in two steps:
+  - **Week 5:** Herbert out, kicker in.
+  - **Week 6:** kicker out, Young or Love in.
