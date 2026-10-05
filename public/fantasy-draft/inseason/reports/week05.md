@@ -125,3 +125,33 @@ That is a stronger Week 6 than the one you have now.
 - **Breece Hall's practice reports.** A full practice Friday makes him the RB2 or FLEX play.
 - **Kyle Monangai's thumb.** He is a better back than Wilson if healthy, but not for Week 5.
 - **Your Week 5 opponent's lineup.** Send the matchup screen and I will run the head-to-head.
+
+## Update: Liza George (Hurts so Good) turned down Hubbard + Warren for Jonathan Taylor
+
+Her reason: "I can't accept two bench players."
+
+- **On lineups, the offer helped her.** The model has her +22 (and you +43). Her TE Kyle Pitts has
+  4.0 points in four games, while Warren has 48.5. Hubbard has 79.0 points to Taylor's 86.2.
+- **On trade charts it read as a lowball:** 17 offered for 69. Taylor ranks 6th overall rest of
+  season; Hubbard about 95th and Warren about 71st. She is reading names, not production.
+- Jayden Daniels is practising and aiming for Week 5, so she does not need a QB.
+
+**Counter with Chase Brown + Tyler Warren for Jonathan Taylor.**
+- +33 for you and +33 for her, and fair on charts (63 for 69).
+- She gets a top-15 RB to replace Taylor plus a starting TE for her empty slot.
+- Suggested message: "Fair - how about Chase Brown + Warren for Taylor? You get a top-15 RB to
+  replace him, and Warren starts at TE for you (Pitts has 4 points all season; Warren has 48)."
+
+**It stacks with the other two offers.** Taylor (Brown + Warren), Kyren (Hubbard + Montgomery) and
+Nacua (Pickens + Hall) use six different players.
+
+| If these land | Gain over Weeks 6-17 |
+|---|---|
+| Kyren + Nacua | +102 |
+| All three | +136 |
+
+**Revised Week 5 waiver move:** while the Warren counter is out, **keep Kraft.** He becomes your TE
+if Warren goes, so skip the Wilson claim this week.
+- Each accepted 2-for-1 opens a roster spot, and you can add a back then.
+- Montgomery starts at RB2 until a trade lands.
+- The kicker swap (Bass for Herbert) still happens.
