@@ -290,8 +290,17 @@ def build(week, fetch_first):
     # first game half the weight after three weeks - more than the latest week - so a 28.9-point
     # opener outweighed the two games since.
     decay = 0.5 ** (1 / EWMA_HALF_LIFE)
+    # Injury-shaped weeks say nothing about a player's role, so they are skipped rather than
+    # averaged in: a week he missed while on that week's injury report (zeroing it priced Hall
+    # and DeVonta Smith as if benched), and a game he left early - under 40% of snaps when his
+    # earlier games ran 60%+ (Ja'Marr Chase's Week 4 concussion: 20% of snaps, 5.7 points).
+    hurt = {(r.get("gsis_id"), int(r["week"])) for r in injuries
+            if r.get("gsis_id") and ((r.get("report_status") or "").lower() in ("out", "doubtful")
+                                     or (r.get("practice_status") or "").startswith("Did Not"))}
     for g, p in players.items():
         n = 0
+        snaps_before = lambda w: sorted(wk.get("snap_pct") for k, wk in p["weeks"].items()
+                                        if int(k) < w and wk.get("snap_pct") and not wk.get("partial"))
         acc = {k: [0.0, 0.0] for k in ("pts", "snap", "tgt", "car", "ep")}   # [weighted sum, weight]
         ew_pts = ew_snap = ew_tgt = ew_car = ew_ep = None
         pts_list = []
@@ -300,10 +309,20 @@ def build(week, fetch_first):
             if wk is None:
                 if p["team"] not in played_in[w]:
                     continue                                   # bye: skip
+                if (g, w) in hurt:
+                    p["weeks"][str(w)] = {"absent": True, "injured": True, "pts": 0.0, "snap_pct": 0.0,
+                                          "targets": 0.0, "carries": 0.0}
+                    continue                                   # missed hurt: skip
                 pts, snap, tgt, car, epv = 0.0, 0.0, 0.0, 0.0, 0.0   # absent: zero
                 p["weeks"][str(w)] = {"absent": True, "pts": 0.0, "snap_pct": 0.0, "targets": 0.0, "carries": 0.0}
             else:
                 pts, snap, tgt, car, epv = wk["pts"], wk.get("snap_pct") or 0.0, wk.get("targets") or 0.0, wk.get("carries") or 0.0, wk.get("ep") or 0.0
+                # judged against the games BEFORE it, so a backup's low-snap weeks ahead of a
+                # promotion (Ollie Gordon: 19% in Week 2, then the starter) are not mistaken for it
+                before = snaps_before(w)
+                if wk.get("snap_pct") is not None and wk["snap_pct"] < 0.4 and before and before[len(before) // 2] >= 0.6:
+                    wk["partial"] = True
+                    continue                                   # left early: skip
             pts_list.append(pts)
             for k, x in (("pts", pts), ("snap", snap), ("tgt", tgt), ("car", car), ("ep", epv)):
                 acc[k][0] = decay * acc[k][0] + x
@@ -343,7 +362,11 @@ def build(week, fetch_first):
             kick = datetime.fromtimestamp(ts, timezone.utc).date()
             return abs((kick - date.fromisoformat(tm["gameday"])).days) <= 1
         row_opp = team(r.get("player_opponent_id"))
-        return not row_opp or row_opp in ("NA", "BYE") or row_opp == tm.get("opp")
+        if row_opp in ("", "NA"):
+            return False                     # no game listed: nothing says which week it is
+        if row_opp == "BYE":
+            return bool(tm.get("bye"))
+        return row_opp == tm.get("opp")
 
     fp_miss = fp_stale = 0
     page_pos = {"qb": "QB", "ppr-rb": "RB", "ppr-wr": "WR", "ppr-te": "TE", "k": "K", "dst": "DST"}

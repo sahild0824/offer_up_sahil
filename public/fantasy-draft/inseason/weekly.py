@@ -139,14 +139,18 @@ class Engine:
             if not g or g not in self.W["players"]:
                 print(f"!! news: no 2026 player matches {o['name']!r}", file=sys.stderr)
                 continue
-            # "weeks" is a count, "season", or a spread of outcomes {"1": 0.5, "2": 0.3, "5": 0.2}
+            # "weeks" is a count, "season", or a spread of outcomes {"1": 0.5, "2": 0.3, "5": 0.2}.
+            # "0" in a spread means he plays this week - a questionable tag or a concussion that
+            # may clear - so {"0": 0.45, "1": 0.55} is a coin flip for this week only.
             wk = o.get("weeks", 1)
             spread = wk if isinstance(wk, dict) else {wk: 1.0}
             tot = sum(float(v) for v in spread.values()) or 1.0
-            dist = [(self.weeks_left if k == "season" else max(1, min(int(k), self.weeks_left)), float(v) / tot)
+            floor_k = 0 if isinstance(wk, dict) else 1
+            dist = [(self.weeks_left if k == "season" else max(floor_k, min(int(k), self.weeks_left)), float(v) / tot)
                     for k, v in spread.items()]
             self.out[g] = {"dist": dist, "weeks": max(k for k, _ in dist), "note": o.get("note") or "out",
-                           "pos": pos, "season": all(k >= self.weeks_left for k, _ in dist), "heirs": o.get("heirs")}
+                           "pos": pos, "season": all(k >= self.weeks_left for k, _ in dist), "heirs": o.get("heirs"),
+                           "p_play": sum(q for k, q in dist if k == 0)}
         for g, o in self.out.items():
             wp = self.W["players"][g]
             vac = self._role_value(wp, o["pos"])
@@ -253,7 +257,8 @@ class Engine:
         # inherited work is added on top of whatever we believed about him, not blended in.
         rate = usage
         heir = self.heirs.get(g) if g else None
-        extra = heir["extra"] if heir and usage is not None else 0.0
+        extra = (sum(e * (1 - self.out[src]["p_play"]) for src, e in heir["parts"])
+                 if heir and usage is not None else 0.0)
         if extra:
             usage += extra
             notes.append(f"INHERITS +{extra:.1f}/gm while {', '.join(heir['from'])} out")
@@ -305,10 +310,11 @@ class Engine:
                 avail = 0.0
         out = self.out.get(g) if g else None
         if out:
-            avail = 0.0
+            # news is fresher than last week's report or roster status, so it decides
+            avail = out["p_play"]
             span = ("season" if out["season"] else f"{out['weeks']} wk" if len(out["dist"]) == 1
-                    else "/".join(f"{k} wk {q:.0%}" for k, q in sorted(out["dist"])))
-            notes.append(f"OUT ({out['note']}) - {span}")
+                    else "/".join(("plays" if k == 0 else f"{k} wk") + f" {q:.0%}" for k, q in sorted(out["dist"])))
+            notes.append(f"{'OUT' if not avail else 'QUESTIONABLE'} ({out['note']}) - {span}")
         mean = mean_if_plays * avail
 
         cv = CV.get(pos, 0.55)
@@ -359,12 +365,15 @@ class Engine:
         while news has him out, plus whatever role he inherits while the player ahead is out."""
         if p is None:
             return 0.0
+        sc = sc or {}
+        g = p.get("g")
         if w == self.week:
+            # a player who may or may not play this week is all or nothing in each scenario
+            if g in sc and g in self.out and self.out[g]["p_play"] and not p.get("bye"):
+                return p.get("mean_if_plays", 0.0) if sc[g] == 0 else 0.0
             return p["mean"]
         if self.byes.get(p.get("team")) == w:
             return 0.0
-        sc = sc or {}
-        g = p.get("g")
         if g in self.out and w < self.week + self.out_weeks(g, sc):
             return 0.0
         r = (p.get("rate") or 0.0) * p.get("avail_future", 1.0)
