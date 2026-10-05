@@ -1,0 +1,90 @@
+{
+ "out": [
+  {
+   "name": "Ja'Marr Chase",
+   "pos": "WR",
+   "weeks": {
+    "0": 0.4,
+    "1": 0.6
+   },
+   "note": "concussion, Week 4"
+  },
+  {
+   "name": "Breece Hall",
+   "pos": "RB",
+   "weeks": {
+    "0": 0.35,
+    "1": 0.35,
+    "2": 0.3
+   },
+   "note": "right quad"
+  },
+  {
+   "name": "DeVonta Smith",
+   "pos": "WR",
+   "weeks": {
+    "0": 0.2,
+    "1": 0.4,
+    "2": 0.4
+   },
+   "note": "hamstring"
+  },
+  {
+   "name": "De'Von Achane",
+   "pos": "RB",
+   "weeks": "season",
+   "note": "torn ACL",
+   "heirs": {
+    "Ollie Gordon II": 0.6,
+    "Jaylen Wright": 0.4
+   }
+  },
+  {
+   "name": "Jaxson Dart",
+   "pos": "QB",
+   "weeks": "season",
+   "note": "knee"
+  },
+  {
+   "name": "Caleb Williams",
+   "pos": "QB",
+   "weeks": 1,
+   "note": "hamstring"
+  },
+  {
+   "name": "A.J. Brown",
+   "pos": "WR",
+   "weeks": 3,
+   "note": "high ankle"
+  },
+  {
+   "name": "Travis Etienne",
+   "pos": "RB",
+   "weeks": 2,
+   "note": "hamstring",
+   "heirs": {
+    "Alvin Kamara": 0.65,
+    "Kendre Miller": 0.35
+   }
+  },
+  {
+   "name": "Alec Pierce",
+   "pos": "WR",
+   "weeks": 3,
+   "note": "heel IR",
+   "heirs": {
+    "Keenan Allen": 0.6,
+    "Josh Downs": 0.4
+   }
+  },
+  {
+   "name": "Jadarian Price",
+   "pos": "RB",
+   "weeks": 3,
+   "note": "chest, IR",
+   "heirs": {
+    "Emanuel Wilson": 1.0
+   }
+  }
+ ]
+}
