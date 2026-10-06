@@ -124,6 +124,117 @@
     "Will Shipley": 0.6,
     "Tank Bigsby": 0.4
    }
+  },
+  {
+   "name": "Jayden Daniels",
+   "pos": "QB",
+   "weeks": {
+    "0": 0.75,
+    "1": 0.25
+   },
+   "note": "elbow"
+  },
+  {
+   "name": "Caleb Williams",
+   "pos": "QB",
+   "weeks": 1,
+   "note": "hamstring"
+  },
+  {
+   "name": "A.J. Brown",
+   "pos": "WR",
+   "weeks": 3,
+   "note": "high ankle"
+  },
+  {
+   "name": "Alec Pierce",
+   "pos": "WR",
+   "weeks": 3,
+   "note": "heel IR",
+   "heirs": {
+    "Keenan Allen": 0.6,
+    "Josh Downs": 0.4
+   }
+  },
+  {
+   "name": "Terry McLaurin",
+   "pos": "WR",
+   "weeks": {
+    "1": 0.6,
+    "2": 0.4
+   },
+   "note": "ESPN tag after Week 4"
+  },
+  {
+   "name": "Rashee Rice",
+   "pos": "WR",
+   "weeks": {
+    "1": 0.5,
+    "2": 0.5
+   },
+   "note": "ESPN tag after Week 4"
+  },
+  {
+   "name": "Tee Higgins",
+   "pos": "WR",
+   "weeks": {
+    "0": 0.5,
+    "1": 0.5
+   },
+   "note": "ESPN tag after Week 4"
+  },
+  {
+   "name": "Justin Jefferson",
+   "pos": "WR",
+   "weeks": {
+    "0": 0.5,
+    "1": 0.5
+   },
+   "note": "ESPN tag after Week 4"
+  },
+  {
+   "name": "Lamar Jackson",
+   "pos": "QB",
+   "weeks": {
+    "0": 0.8,
+    "1": 0.2
+   },
+   "note": "ESPN tag after Week 4"
+  },
+  {
+   "name": "Jeremiyah Love",
+   "pos": "RB",
+   "weeks": {
+    "0": 0.7,
+    "1": 0.3
+   },
+   "note": "ESPN tag after Week 4"
+  },
+  {
+   "name": "Dallas Goedert",
+   "pos": "TE",
+   "weeks": {
+    "1": 0.5,
+    "2": 0.5
+   },
+   "note": "ESPN tag after Week 4"
+  },
+  {
+   "name": "Josh Jacobs",
+   "pos": "RB",
+   "weeks": {
+    "0": 0.7,
+    "1": 0.3
+   },
+   "note": "ESPN tag after Week 4"
+  },
+  {
+   "name": "Jalen Coker",
+   "pos": "WR",
+   "weeks": {
+    "1": 1.0
+   },
+   "note": "ESPN tag after Week 4"
   }
  ]
 }

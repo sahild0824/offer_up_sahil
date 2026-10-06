@@ -198,3 +198,32 @@ Worth +2.9 this week and +5.1 over the season.
 
 The Taylor counter (Chase Brown + Warren) is now worth only +25 to you, because Chase Brown is
 FantasyPros' RB6 this week. Keep it only if Liza comes back to you.
+
+## Trades on the real rosters (screenshots, 2026-10-07)
+
+You won Week 4, 115.28 to 108.68, so you are 3-1. The Week 4 recap screens show eight of the ten
+rosters. They change the picture:
+- Soaring Wings added Kamara and Braelon Allen.
+- Hakuna added Dalton Kincaid at TE and has Corum and Lloyd behind Kyren.
+- Hurts so Good still starts Kyle Pitts at TE.
+
+**1. CeeDee Lamb for Ja'Marr Chase + Tyler Warren (Hurts so Good). +34 for you.**
+- Lamb has been the better receiver this year: 41.3 points last week and a 30.7 form average.
+- Chase is in concussion protocol with a Week 6 bye.
+- Liza gets the bigger name plus a starting TE, and comes out ahead on value (78 for 64), so
+  she is likely to say yes.
+- Kraft becomes your TE.
+
+**2. Puka Nacua for DeVonta Smith + Breece Hall (Soaring Wings). +50 for you.**
+- Both of the players you send are hurt now but are starters when healthy.
+- About even on value (58 for 61).
+
+**Both together: +86.** Fill the open spots with Carnell Tate and Colston Loveland or Mark
+Andrews.
+
+**Backup:** Kyren Williams for Hubbard + Hall (Hakuna), +40. It uses Hall, so offer it only if
+Soaring Wings says no.
+
+**Unverified:** Derrick Henry for Hubbard + Pickens (Audubon) scores +40, and +125 alongside the
+other two. Audubon's roster was not in the screenshots, so check it before offering. The Taylor
+counter is now the weakest use of Warren (+25).
