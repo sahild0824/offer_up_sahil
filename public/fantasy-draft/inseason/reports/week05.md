@@ -181,3 +181,20 @@ Worth +2.9 this week and +5.1 over the season.
   Montgomery.
 - Emanuel Wilson (RB19, 12.5) is the backup claim.
 - Every other add on this wire is worth less than a point.
+
+## Trades, re-run Tuesday (after the Monangai pickup)
+
+1. **Puka Nacua for George Pickens + Breece Hall (Soaring Wings).**
+   - +67 for you and +32 for them; fair on value (65 for 61).
+   - They have no RB with Etienne out; Hall is an RB1 once healthy.
+2. **Kyren Williams for Chuba Hubbard + Tucker Kraft (Hakuna Mailata).**
+   - +50 for you and +34 for them. Goedert is out, so Kraft starts at TE for them.
+   - It reads light on the September trade chart, which predates Hubbard's season: 79 points
+     in 4 games, against Kyren's 90.
+   - Pitch it on production.
+   - Do not offer Montgomery: he is being dropped for Monangai.
+3. **Both together: +116.** Fill the two open spots from the wire with Carnell Tate and a TE
+   (Loveland or Andrews).
+
+The Taylor counter (Chase Brown + Warren) is now worth only +25 to you, because Chase Brown is
+FantasyPros' RB6 this week. Keep it only if Liza comes back to you.
