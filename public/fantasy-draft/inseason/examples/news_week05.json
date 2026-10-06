@@ -4,8 +4,8 @@
    "name": "Ja'Marr Chase",
    "pos": "WR",
    "weeks": {
-    "0": 0.4,
-    "1": 0.6
+    "0": 0.45,
+    "1": 0.55
    },
    "note": "concussion, Week 4"
   },
@@ -80,10 +80,49 @@
   {
    "name": "Jadarian Price",
    "pos": "RB",
-   "weeks": 3,
-   "note": "chest, IR",
+   "weeks": 4,
+   "note": "chest, IR (at least 4 games)",
    "heirs": {
-    "Emanuel Wilson": 1.0
+    "Emanuel Wilson": 0.85,
+    "George Holani": 0.15
+   }
+  },
+  {
+   "name": "Tyquan Thornton",
+   "pos": "WR",
+   "weeks": "season",
+   "note": "dislocated ankle"
+  },
+  {
+   "name": "Tank Bigsby",
+   "pos": "RB",
+   "weeks": 1,
+   "note": "ESPN OUT"
+  },
+  {
+   "name": "Adonai Mitchell",
+   "pos": "WR",
+   "weeks": 1,
+   "note": "ESPN OUT"
+  },
+  {
+   "name": "Keenan Allen",
+   "pos": "WR",
+   "weeks": 1,
+   "note": "ESPN OUT"
+  },
+  {
+   "name": "Saquon Barkley",
+   "pos": "RB",
+   "weeks": {
+    "1": 0.5,
+    "2": 0.3,
+    "3": 0.2
+   },
+   "note": "hamstring",
+   "heirs": {
+    "Will Shipley": 0.6,
+    "Tank Bigsby": 0.4
    }
   }
  ]

@@ -155,3 +155,29 @@ if Warren goes, so skip the Wilson claim this week.
 - Each accepted 2-for-1 opens a roster spot, and you can add a back then.
 - Montgomery starts at RB2 until a trade lands.
 - The kicker swap (Bass for Herbert) still happens.
+
+## Tuesday re-run (2026-10-06): who to pick up
+
+This run uses the new FantasyPros Week 5 rankings, Tuesday's waiver screenshot and Monday's
+news:
+- **Chase:** "day to day" in protocol; more on Wednesday.
+- **Monangai:** his thumb is "not serious".
+- **Price:** on IR (at least 4 games), and Charbonnet will not debut in Week 5.
+- **Barkley:** hamstring.
+- **Bigsby, Adonai Mitchell and Keenan Allen:** tagged OUT.
+
+**1. Kicker: drop Herbert.** Add Tyler Bass (BUF @LAR, Monday, dome), or Aubrey or Bates if
+either is free. Swap the kicker for Kirk Cousins (vs BUF) or Jordan Love (vs DAL) in Week 6.
+
+**2. Running back: claim Kyle Monangai and drop David Montgomery** (bid about 10%).
+
+| | FantasyPros Week 5 | Engine |
+|---|---|---|
+| Kyle Monangai | RB17, 13.8 | 13.7 |
+| David Montgomery | RB25, 10.8 | 10.1 |
+
+Worth +2.9 this week and +5.1 over the season.
+- If the Kyren offer (Hubbard + Montgomery) is still pending, drop Kraft instead and keep
+  Montgomery.
+- Emanuel Wilson (RB19, 12.5) is the backup claim.
+- Every other add on this wire is worth less than a point.
