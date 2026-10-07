@@ -227,3 +227,30 @@ Soaring Wings says no.
 **Unverified:** Derrick Henry for Hubbard + Pickens (Audubon) scores +40, and +125 alongside the
 other two. Audubon's roster was not in the screenshots, so check it before offering. The Taylor
 counter is now the weakest use of Warren (+25).
+
+## Trade accepted (2026-10-07): CeeDee Lamb for Ja'Marr Chase + Tyler Warren
+
+The trade processes Thursday 10/8 at about 7:35 AM.
+
+**Lamb plays Thursday night** (DAL vs TB, 8:15 PM ET), so set him at WR as soon as the trade
+processes.
+
+**Week 5 lineup** - skill positions 110.7, about 125 with K and D/ST:
+
+| Slot | Player |
+|---|---|
+| QB | Goff |
+| RB | Chase Brown, Monangai (or Montgomery if the claim missed) |
+| WR | Lamb, Pickens |
+| TE | Kraft |
+| FLEX | Waddle |
+| D/ST | Steelers |
+| K | Bass |
+
+**Open roster spot (2-for-1):** add the Week 6 QB now, Kirk Cousins vs BUF (+18) or Jordan Love vs
+DAL (+16). Goff is on bye in Week 6.
+
+**Next week:** in Week 6, drop the streaming kicker (Butker is back) for a backup TE, Loveland or
+Andrews (+10). That covers Kraft's Week 11 bye.
+
+**Still worth sending:** Nacua for Smith + Hall.
