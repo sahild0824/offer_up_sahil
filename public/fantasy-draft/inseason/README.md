@@ -57,8 +57,12 @@ trade-chart values (`data/ros_overall.csv`). Only trades that help you, don't hu
 don't read as a lowball survive. Rosters come from a league file you keep current:
 
 ```
-python3 trades.py --week N league.json --news news.json --waivers waivers.json
+python3 trades.py --week N league.json --news news.json --waivers waivers.json \
+    [--exclude "Puka Nacua"] [--keep "Chase Brown"]
 ```
+
+`--exclude` drops targets their manager won't move; `--keep` protects your own players. Wire
+fills skip anyone on any roster in the league file.
 
 `intake.py` resolves every name against the 253-player model with the same forgiving matcher
 the draft app used, and **refuses to run if any name fails to match** — a transcription slip

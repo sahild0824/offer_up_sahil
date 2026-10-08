@@ -134,7 +134,8 @@ def main():
     rosters = {t: resolve(ns, players) for t, ns in league["teams"].items()}
     fa = []
     if a.waivers:
-        fa = [(e["name"], e["pos"]) for e in json.load(open(a.waivers))["players"] if e["pos"] in ("QB", "RB", "WR", "TE")]
+        rostered = {k for r in rosters.values() for k in r}
+        fa = [k for k in resolve([e["name"] for e in json.load(open(a.waivers))["players"]], players) if k not in rostered]
 
     def market(k):
         v = mv.get(weekly.norm_name(k[0]) + "|" + k[1], 1.0)

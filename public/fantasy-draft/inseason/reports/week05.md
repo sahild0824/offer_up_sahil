@@ -321,3 +321,16 @@ below.
 - If Smith returns, he starts and Waddle sits.
 - Expect about 105 points, or about 103 if Smith and Hall both stay out.
 - Caleb Williams (hamstring) is a long shot, so expect Bagent at QB for Chicago again.
+
+## Trades without Nacua (Thursday 10/8)
+
+Full report: `reports/week05_trades_no_nacua.md`.
+
+1. **Send now:** Kyren Williams + Blake Corum for Hubbard + Hall (Hakuna Mailata). +38 to +49,
+   and the most likely yes, since every chart values your side higher. They can accept after
+   Monday night.
+2. **Check Oh Saquon's roster:** if they have no TE, offer Kenneth Walker III for Chase Brown +
+   Kraft after Sunday's games, and add Loveland. +59 for you.
+3. **If Hakuna says no:** Olave for Hubbard + Pickens (Oh Saquon, +51), or Henry for Hubbard +
+   Pickens (Audubon, +38).
+4. **Cancel the Smith + Hall for Nacua offer first** if it is still pending.
