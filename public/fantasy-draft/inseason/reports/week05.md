@@ -254,3 +254,70 @@ DAL (+16). Goff is on bye in Week 6.
 Andrews (+10). That covers Kraft's Week 11 bye.
 
 **Still worth sending:** Nacua for Smith + Hall.
+
+## Final plan (Thursday 10/8, after the final news sweep)
+
+This plan comes from the last web sweep (`research/week05_final_sweep.md`), the engine re-run
+with that news (`reports/week05_engine.md`, news file `examples/news_week05.json`), and three
+reviewer passes:
+- **News accuracy:** checked the facts against sources.
+- **Lineup math:** an exact re-run over 96 injury scenarios.
+- **Move timing:** an exact re-run over 48 scenarios.
+
+The core lineup passed all three reviews. Their corrections to the moves are built into the plan
+below.
+
+**Lineup - 106.8 projected, already the best lineup.** The experts agree on every slot.
+
+| Slot | Player | Proj | Note |
+|---|---|---|---|
+| QB | Goff | 20.8 | DET @ARI, implied 30 points |
+| RB | Chase Brown | 17.2 | @MIA, a soft run defense |
+| RB | Monangai | 10.6 | 13.3 if he plays (about 80%) |
+| WR | Lamb | 21.5 | Tonight vs TB, full practices all week |
+| WR | Pickens | 13.8 | Tonight vs TB |
+| TE | Kraft | 10.5 | FantasyPros TE8 |
+| FLEX | Waddle | 12.5 | Beats Montgomery 61% of the time |
+| D/ST | Steelers | 8.1 | Daniel Jones has 7 turnovers; PIT @TB in Week 6 |
+| K | Mevis | 7.5 | Monday night, highest total on the slate |
+
+**Moves:**
+
+1. **Today, after the trade processes (about 7:35 AM PT).**
+   - Lamb into WR and Kraft into TE.
+   - Add **Kirk Cousins** into the open spot, with no drop. He is the Week 6 QB while Goff is on
+     bye: +18 over Weeks 6-17.
+   - He is on the ESPN free-agent list, 32% rostered. If he is gone, take Love, then Rodgers.
+2. **Friday's injury reports.**
+   - **Monangai:** if he is active at the inactive list (about 8:30 AM PT Sunday), he starts.
+     If he is inactive, Montgomery starts.
+   - **Monangai inactive and Hall active:** Hall versus Montgomery is a coin flip.
+   - **Waddle:** watch for a foot designation (he wore a walking boot after Week 3). If he gets
+     one, settle FLEX before the 10 AM PT lock. Montgomery is the hedge while Monangai plays.
+3. **Smith or Hall active.** Bench them anyway.
+   - **Smith:** a coin flip with Waddle on the numbers. Benching him is a judgment call for his
+     first game back from the hamstring.
+   - **Hall:** stays on the bench unless the Monangai branch in move 2 applies.
+4. **Montgomery.** Keep him for now.
+   - He is the Monangai insurance this week.
+   - He is the RB2 if the Nacua fallback below happens.
+   - **Colston Loveland's** value is almost all cover for Kraft's Week 11 bye, so there is no
+     rush. Add the best TE available after Week 6 by dropping Cousins.
+   - If the league has an IR slot and Friday lists Smith or Hall OUT, move him to IR and add
+     Loveland now.
+5. **Nacua offer (Smith + Hall).**
+   - **Keep it open.** The engine has it near +70 for you. On 9/25 FantasyPros values with the
+     injury discount it is about even. On today's news it may look lopsided to them.
+   - Reconsider only if Nacua has a Friday or Saturday DNP, or a Questionable-or-worse
+     designation for Monday. A limited Thursday is his normal load management.
+   - An accepted trade cannot be pulled back.
+   - **If they decline,** offer Hubbard + Pickens for Nacua after tonight's game (+79 with
+     Montgomery kept).
+6. **No streams.**
+   - Keep the Steelers and Mevis; no wire D/ST or kicker beats them by more than noise.
+   - Shipley, Odunze, Brissett and the rest of the wire do not improve the lineup in any week.
+
+**Week 6 preview.** Cousins starts at QB and Hubbard is back.
+- If Smith returns, he starts and Waddle sits.
+- Expect about 105 points, or about 103 if Smith and Hall both stay out.
+- Caleb Williams (hamstring) is a long shot, so expect Bagent at QB for Chicago again.

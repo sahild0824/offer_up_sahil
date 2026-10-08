@@ -1,35 +1,6 @@
 {
  "out": [
   {
-   "name": "Ja'Marr Chase",
-   "pos": "WR",
-   "weeks": {
-    "0": 0.45,
-    "1": 0.55
-   },
-   "note": "concussion, Week 4"
-  },
-  {
-   "name": "Breece Hall",
-   "pos": "RB",
-   "weeks": {
-    "0": 0.35,
-    "1": 0.35,
-    "2": 0.3
-   },
-   "note": "right quad"
-  },
-  {
-   "name": "DeVonta Smith",
-   "pos": "WR",
-   "weeks": {
-    "0": 0.2,
-    "1": 0.4,
-    "2": 0.4
-   },
-   "note": "hamstring"
-  },
-  {
    "name": "De'Von Achane",
    "pos": "RB",
    "weeks": "season",
@@ -44,12 +15,6 @@
    "pos": "QB",
    "weeks": "season",
    "note": "knee"
-  },
-  {
-   "name": "Caleb Williams",
-   "pos": "QB",
-   "weeks": 1,
-   "note": "hamstring"
   },
   {
    "name": "A.J. Brown",
@@ -94,36 +59,10 @@
    "note": "dislocated ankle"
   },
   {
-   "name": "Tank Bigsby",
-   "pos": "RB",
-   "weeks": 1,
-   "note": "ESPN OUT"
-  },
-  {
    "name": "Adonai Mitchell",
    "pos": "WR",
    "weeks": 1,
    "note": "ESPN OUT"
-  },
-  {
-   "name": "Keenan Allen",
-   "pos": "WR",
-   "weeks": 1,
-   "note": "ESPN OUT"
-  },
-  {
-   "name": "Saquon Barkley",
-   "pos": "RB",
-   "weeks": {
-    "1": 0.5,
-    "2": 0.3,
-    "3": 0.2
-   },
-   "note": "hamstring",
-   "heirs": {
-    "Will Shipley": 0.6,
-    "Tank Bigsby": 0.4
-   }
   },
   {
    "name": "Jayden Daniels",
@@ -133,28 +72,6 @@
     "1": 0.25
    },
    "note": "elbow"
-  },
-  {
-   "name": "Caleb Williams",
-   "pos": "QB",
-   "weeks": 1,
-   "note": "hamstring"
-  },
-  {
-   "name": "A.J. Brown",
-   "pos": "WR",
-   "weeks": 3,
-   "note": "high ankle"
-  },
-  {
-   "name": "Alec Pierce",
-   "pos": "WR",
-   "weeks": 3,
-   "note": "heel IR",
-   "heirs": {
-    "Keenan Allen": 0.6,
-    "Josh Downs": 0.4
-   }
   },
   {
    "name": "Terry McLaurin",
@@ -193,15 +110,6 @@
    "note": "ESPN tag after Week 4"
   },
   {
-   "name": "Lamar Jackson",
-   "pos": "QB",
-   "weeks": {
-    "0": 0.8,
-    "1": 0.2
-   },
-   "note": "ESPN tag after Week 4"
-  },
-  {
    "name": "Jeremiyah Love",
    "pos": "RB",
    "weeks": {
@@ -220,21 +128,158 @@
    "note": "ESPN tag after Week 4"
   },
   {
-   "name": "Josh Jacobs",
-   "pos": "RB",
-   "weeks": {
-    "0": 0.7,
-    "1": 0.3
-   },
-   "note": "ESPN tag after Week 4"
-  },
-  {
    "name": "Jalen Coker",
    "pos": "WR",
    "weeks": {
     "1": 1.0
    },
    "note": "ESPN tag after Week 4"
+  },
+  {
+   "name": "Kyle Monangai",
+   "pos": "RB",
+   "weeks": {
+    "0": 0.8,
+    "1": 0.2
+   },
+   "note": "thumb/toe, DNP Wed 10/7; Ben Johnson: thumb not a concern, body sore after 30 carries, day-to-day, workload managed (research 0.78 / 0.85 / 0.85)"
+  },
+  {
+   "name": "D'Andre Swift",
+   "pos": "RB",
+   "weeks": {
+    "0": 0.7,
+    "1": 0.3
+   },
+   "note": "hip/knee, DNP Wed 10/7; lost fumble Wk4 and did not return (research 0.65 / 0.75)",
+   "heirs": {
+    "Kyle Monangai": 0.75,
+    "Roschon Johnson": 0.25
+   }
+  },
+  {
+   "name": "Breece Hall",
+   "pos": "RB",
+   "weeks": {
+    "0": 0.1,
+    "1": 0.5,
+    "2": 0.4
+   },
+   "note": "quad, DNP Wed 10/7; Glenn: week to week; ESPN Doubtful; PFN: no chance Wk5 (research 0.07 / 0.10 / 0.15)",
+   "heirs": {
+    "Braelon Allen": 0.75,
+    "Isaiah Davis": 0.25
+   }
+  },
+  {
+   "name": "DeVonta Smith",
+   "pos": "WR",
+   "weeks": {
+    "0": 0.12,
+    "1": 0.4,
+    "2": 0.33,
+    "3": 0.15
+   },
+   "note": "hamstring, DNP Wed 10/7, missed Wk4; Garafolo 'at very best questionable'; Reiner 2-3 games; McLane back Wk6 or 7 (research 0.12 / 0.20 / 0.08)",
+   "heirs": {
+    "Dontayvion Wicks": 0.4,
+    "Makai Lemon": 0.35,
+    "Darius Cooper": 0.25
+   }
+  },
+  {
+   "name": "Keenan Allen",
+   "pos": "WR",
+   "weeks": {
+    "0": 0.75,
+    "1": 0.25
+   },
+   "note": "groin, LIMITED Wed 10/7 (returned to practice), trending toward playing; replaces baseline OUT"
+  },
+  {
+   "name": "Saquon Barkley",
+   "pos": "RB",
+   "weeks": {
+    "0": 0.15,
+    "1": 0.45,
+    "2": 0.25,
+    "3": 0.15
+   },
+   "note": "hamstring, DNP Wed 10/7, week to week, likely out in London; not IR",
+   "heirs": {
+    "Will Shipley": 1.0
+   }
+  },
+  {
+   "name": "Tank Bigsby",
+   "pos": "RB",
+   "weeks": 4,
+   "note": "core-muscle surgery, IR"
+  },
+  {
+   "name": "Caleb Williams",
+   "pos": "QB",
+   "weeks": {
+    "1": 0.4,
+    "2": 0.35,
+    "3": 0.25
+   },
+   "note": "Grade 2 hamstring, ruled out Wk5, Bagent starts; possible Wk6 return, 3-4 wk timeline reported"
+  },
+  {
+   "name": "Lamar Jackson",
+   "pos": "QB",
+   "weeks": {
+    "0": 0.35,
+    "1": 0.45,
+    "2": 0.2
+   },
+   "note": "ankle; FP consensus 5.6 implies likely out; Rotowire expects Huntley"
+  },
+  {
+   "name": "Baker Mayfield",
+   "pos": "QB",
+   "weeks": {
+    "4": 0.6,
+    "6": 0.4
+   },
+   "note": "right thumb, OFFICIALLY OUT Thu vs DAL; Jalon Daniels starts; 3-8 wk timelines"
+  },
+  {
+   "name": "Pat Bryant",
+   "pos": "WR",
+   "weeks": {
+    "1": 0.6,
+    "2": 0.4
+   },
+   "note": "ankle, carted off Wk4, expected to miss time",
+   "heirs": {
+    "Jaylen Waddle": 0.4,
+    "Courtland Sutton": 0.4,
+    "Evan Engram": 0.2
+   }
+  },
+  {
+   "name": "Ja'Marr Chase",
+   "pos": "WR",
+   "weeks": {
+    "0": 0.35,
+    "1": 0.55,
+    "2": 0.1
+   },
+   "note": "concussion protocol, day to day; FP WR71 6.6 implies likely out"
+  },
+  {
+   "name": "Josh Jacobs",
+   "pos": "RB",
+   "weeks": {
+    "2": 0.5,
+    "4": 0.5
+   },
+   "note": "commissioner's exempt list; no 2026 games, so GB's backfield data already reflects his absence (no heirs)",
+   "heirs": {
+    "Chris Brooks": 0.0
+   }
   }
  ]
 }
