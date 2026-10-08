@@ -149,3 +149,43 @@ _Season lineup points over Weeks 6-17; market values from FantasyPros ROS overal
 | Hurts so Good | Kyle Monangai, Kirk Cousins | Jayden Daniels | +10.1 | +5.2 | 4 / 4 | you add Colston Loveland from the wire |
 | Hurts so Good | Kyle Monangai, David Montgomery | Rashee Rice | +10.3 | +2.9 | 22 / 24 | you add Colston Loveland from the wire |
 | Hurts so Good | Kyle Monangai, David Montgomery | Jameson Williams | +10.3 | +2.9 | 22 / 18 | you add Colston Loveland from the wire |
+
+## Follow-up: Chase Brown + George Pickens for Kenneth Walker III + Chris Olave (Oh Saquon)
+
+These numbers come from the exact-scenario engine. A follow-up research pass and an adversarial
+verifier checked them.
+
+**The 2-for-2 as asked.**
+- **For you:** +116 over Weeks 6-17, about +10 a week, and +12.7 in Week 6.
+- **It is a lowball.** CBS has their side at 55 vs 89 (62%), RotoStreetJournal at about 61%, and
+  FantasyPros ranks at 85%.
+- **Their lineup loses 123-133** whatever TE or waiver back you assume they added. Walker and
+  Olave simply outscore Brown and Pickens by about 11 a week.
+- **No 2-for-2 from your roster reaches the 90% fairness floor.**
+
+**Walker health.** He is clean: no 2026 injury designation.
+- He is a bellcow: 18-24 carries and 68-82% of snaps, with 27.5 PPR a game.
+- His KC bye was Week 5, so there is none left.
+- Playoff schedule: NE, SF, @LAC.
+
+**Olave health.** He was limited Thursday 10/8 with a foot injury (Wednesday was a rest day).
+Check Friday's designation.
+
+**Counter that keeps the Kyren offer alive.** Hubbard and Hall are both in the Hakuna offer.
+
+| Offer to Oh Saquon | You | Them | Market | With Kyren deal too |
+|---|---|---|---|---|
+| Brown + Pickens + DeVonta Smith | +112 | -103 | 105% FP-rank weighting; CBS 77 v 89 | +150 total |
+| Brown + Pickens + Monangai + Smith (if they counter) | +98 after Kyren | -72 | 107% | +136 total |
+| Brown + Pickens + Hubbard (only if no Kyren deal) | +114 | -75 | 94%; CBS 80 v 89 | conflicts |
+
+**Corrections to earlier advice.**
+- **The Brown + Pickens + Hall version is not fair** on raw chart sums: CBS 87%, RSJ 81%. The
+  finder's "97%" counts the extra players at half value.
+- **Kenneth Walker for Chase Brown + Kraft (offer #2 above) only helps them if they have no TE.**
+  With any TE it is about -45 for them, so check their roster first.
+
+**Timing.** Send after Sunday's games.
+- Pickens plays tonight and Brown plays Sunday, but Walker is on bye.
+- An accepted trade that clears before Sunday costs you about 8.6 in Week 5.
+- A 3-for-2 needs an open spot on their roster, for example Achane to IR.
