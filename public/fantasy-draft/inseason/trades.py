@@ -2,6 +2,7 @@
 """Find trades that improve your season lineup AND look fair to the other manager.
 
     python3 trades.py --week 4 league.json [--news news.json] [--waivers waivers.json]
+                      [--exclude "Puka Nacua" ...] [--keep "Chase Brown" ...]
 
 league.json: {"me": "<your team>", "teams": {"<team>": ["Player Name", ...], ...}} - skill players
 only (QB/RB/WR/TE); names resolve with the intake matcher.
@@ -120,6 +121,8 @@ def main():
     ap.add_argument("--first-week", type=int, help="first week the trade counts (default: next week)")
     ap.add_argument("--top", type=int, default=3)
     ap.add_argument("--json", help="also write every surviving trade to this file")
+    ap.add_argument("--exclude", nargs="*", default=[], help="players you cannot get (their manager won't move them)")
+    ap.add_argument("--keep", nargs="*", default=[], help="your players you will not trade away")
     a = ap.parse_args()
 
     E = weekly.Engine(a.week, json.load(open(a.news)) if a.news else None)
@@ -147,6 +150,9 @@ def main():
         return vs[0] + 0.5 * sum(vs[1:]) if len(ks) > 1 else (vs[0] if vs else 0.0)
 
     mine = rosters[me]
+    excluded = {k for k in resolve(a.exclude, players)}
+    kept = {k for k in resolve(a.keep, players)}
+    tradable = [k for k in mine if k not in kept]
     my_base = V.season(mine)
     base = {t: V.season(r) for t, r in rosters.items() if t != me}
 
@@ -176,8 +182,8 @@ def main():
         if t == me:
             continue
         for ng, nr in ((1, 1), (2, 1), (1, 2), (2, 2)):
-            for give in itertools.combinations(mine, ng):
-                for get in itertools.combinations(theirs, nr):
+            for give in itertools.combinations(tradable, ng):
+                for get in itertools.combinations([k for k in theirs if k not in excluded], nr):
                     # market: they must get at least 90% of what they give, and I should not
                     # pay more than 150% (a lopsided offer is a signal to the room, not a trade)
                     they_get, they_give = received(give), received(get)
