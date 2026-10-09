@@ -1,0 +1,363 @@
+{
+ "out": [
+  {
+   "name": "De'Von Achane",
+   "pos": "RB",
+   "weeks": "season",
+   "heirs": {
+    "Ollie Gordon II": 0.62,
+    "Jaylen Wright": 0.38
+   },
+   "note": "torn right ACL (Wk3 vs KC), out for 2026; Gordon out-snapped Wright 22-12 in Wk4, Wright LIMITED (foot) Wk5 (thefantasyfootballers.com/news/640776/ollie-gordon-ii-stakes-strong-claim-to-starting-job/)"
+  },
+  {
+   "name": "Jaxson Dart",
+   "pos": "QB",
+   "weeks": "season",
+   "note": "knee"
+  },
+  {
+   "name": "A.J. Brown",
+   "pos": "WR",
+   "weeks": {
+    "1": 0.35,
+    "2": 0.35,
+    "3": 0.3
+   },
+   "note": "high ankle, IR since Wk2, first eligible Wk6; Pelissero 'pushing hard' for Wk6, Schefter quicker side of 6-8 wk (ksl.com/article/51622408; https://www.rotoballer.com/buy-sell-trade-advice-week-5-buy-low-sell-high-picks-2026/1958633); average of the two research spreads, replaces flat 3"
+  },
+  {
+   "name": "Travis Etienne",
+   "pos": "RB",
+   "weeks": 2,
+   "note": "hamstring",
+   "heirs": {
+    "Alvin Kamara": 0.65,
+    "Kendre Miller": 0.35
+   }
+  },
+  {
+   "name": "Alec Pierce",
+   "pos": "WR",
+   "weeks": 3,
+   "note": "heel IR",
+   "heirs": {
+    "Keenan Allen": 0.6,
+    "Josh Downs": 0.4
+   }
+  },
+  {
+   "name": "Jadarian Price",
+   "pos": "RB",
+   "weeks": 4,
+   "note": "chest, IR (at least 4 games)",
+   "heirs": {
+    "Emanuel Wilson": 0.85,
+    "George Holani": 0.15
+   }
+  },
+  {
+   "name": "Tyquan Thornton",
+   "pos": "WR",
+   "weeks": "season",
+   "note": "dislocated ankle"
+  },
+  {
+   "name": "Adonai Mitchell",
+   "pos": "WR",
+   "weeks": 1,
+   "note": "ESPN OUT"
+  },
+  {
+   "name": "Jayden Daniels",
+   "pos": "QB",
+   "weeks": {
+    "0": 0.75,
+    "1": 0.25
+   },
+   "note": "elbow"
+  },
+  {
+   "name": "Terry McLaurin",
+   "pos": "WR",
+   "weeks": {
+    "0": 0.2,
+    "1": 0.55,
+    "2": 0.25
+   },
+   "note": "hamstring, inactive Wk4; Quinn: evaluating, WaPo via RotoBaller: day-to-day, not long term (https://www.rotoballer.com/?p=1959070); but DNP Wed 10/7 on the official WAS report (nflverse injuries_2026.csv), so only a partial move off the old ESPN-tag entry {1:.6,2:.4}"
+  },
+  {
+   "name": "Rashee Rice",
+   "pos": "WR",
+   "weeks": {
+    "1": 0.5,
+    "2": 0.5
+   },
+   "note": "ESPN tag after Week 4"
+  },
+  {
+   "name": "Tee Higgins",
+   "pos": "WR",
+   "weeks": {
+    "0": 0.75,
+    "1": 0.25
+   },
+   "note": "QUESTIONABLE on CIN Friday report (nfl.com/news/nfl-news-roundup-latest-league-updates-from-friday-oct-9); engine's standard Q availability"
+  },
+  {
+   "name": "Justin Jefferson",
+   "pos": "WR",
+   "weeks": {
+    "0": 0.5,
+    "1": 0.5
+   },
+   "note": "mild L ankle sprain Wk3, missed Wk4, LIMITED Wed 10/7 (first practice); O'Connell 'great progress', MIN bye Wk6 (https://www.nbcsports.com/fantasy/football/player-news/2026-10-07/justin-jefferson-ankle-will-be-limited-on-wed); spread unchanged"
+  },
+  {
+   "name": "Jeremiyah Love",
+   "pos": "RB",
+   "weeks": {
+    "0": 0.9,
+    "1": 0.1
+   },
+   "heirs": {
+    "Tyler Allgeier": 0.85,
+    "Bam Knight": 0.15
+   },
+   "note": "ankle (tweaked Wk4), LIMITED Wed/Thu; LaFleur: shouldn't impact Wk5; Friday designation not found (nbcsports.com/fantasy/football/player-news/2026-10-07/lafleur-love-shouldnt-be-impacted-by-ankle-issue)"
+  },
+  {
+   "name": "Jalen Coker",
+   "pos": "WR",
+   "weeks": {
+    "1": 1.0
+   },
+   "note": "ESPN tag after Week 4"
+  },
+  {
+   "name": "Kyle Monangai",
+   "pos": "RB",
+   "weeks": {
+    "1": 0.45,
+    "2": 0.35,
+    "3": 0.2
+   },
+   "heirs": {
+    "D'Andre Swift": 0.7,
+    "Roschon Johnson": 0.3
+   },
+   "note": "thumb + turf toe, OFFICIALLY OUT Wk5 (Fri 10/9; DNP Wed/Thu/Fri), walking boot, week-to-week (Cronin); Ben Johnson: IR not an option now; spread = average of research {1:.3,2:.4,3:.3} and {1:.6,2:.3,3:.1} (windycitygridiron.com/chicago-bears-injuries/124869; shawlocal.com/bears/2026/10/09)"
+  },
+  {
+   "name": "Breece Hall",
+   "pos": "RB",
+   "weeks": {
+    "1": 0.45,
+    "2": 0.35,
+    "3": 0.2
+   },
+   "heirs": {
+    "Braelon Allen": 0.75,
+    "Isaiah Davis": 0.25
+   },
+   "note": "quad, OFFICIALLY OUT Wk5 (Glenn, Fri 10/9), 2nd straight miss, DNP all week, week-to-week (upi.com/Sports_News/NFL/2026/10/09/Jets-Breece-Hall-Adonai-Mitchell-out-Browns/9591791565053)"
+  },
+  {
+   "name": "DeVonta Smith",
+   "pos": "WR",
+   "weeks": {
+    "1": 0.45,
+    "2": 0.35,
+    "3": 0.2
+   },
+   "heirs": {
+    "Makai Lemon": 0.4,
+    "Darius Cooper": 0.35,
+    "Dontayvion Wicks": 0.25
+   },
+   "note": "hamstring (lingering since camp), OFFICIALLY OUT Wk5 London (Fri 10/9), 2nd straight miss; McLane Wk6-7, Reiner 2-3 games (inquirer.com/eagles/saquon-barkley-devonta-smith-injury-report-nfl-week-5-jaguars-20261009.html)"
+  },
+  {
+   "name": "Keenan Allen",
+   "pos": "WR",
+   "weeks": {
+    "0": 0.75,
+    "1": 0.25
+   },
+   "note": "groin, LIMITED Wed 10/7 (returned to practice), trending toward playing; replaces baseline OUT"
+  },
+  {
+   "name": "Saquon Barkley",
+   "pos": "RB",
+   "weeks": {
+    "1": 0.5,
+    "2": 0.3,
+    "3": 0.2
+   },
+   "heirs": {
+    "Will Shipley": 0.8,
+    "Dameon Pierce": 0.2
+   },
+   "note": "hamstring, OFFICIALLY OUT Wk5 (Fri 10/9 final report, London @JAX); week-to-week, not IR; Bigsby on IR so Shipley leads with Pierce elevated (philadelphiaeagles.com/news/eagles-at-jaguars-injury-report-2026-nfl-week-5-london-international-game-saquon-barkley-devonta-smith)"
+  },
+  {
+   "name": "Tank Bigsby",
+   "pos": "RB",
+   "weeks": 4,
+   "note": "core-muscle surgery, IR"
+  },
+  {
+   "name": "Caleb Williams",
+   "pos": "QB",
+   "weeks": {
+    "1": 0.4,
+    "2": 0.35,
+    "3": 0.25
+   },
+   "note": "Grade 2 hamstring; QUESTIONABLE on final Friday report (LIMITED Fri), Bagent still expected to start (si.com final Wk5 report); spread kept"
+  },
+  {
+   "name": "Lamar Jackson",
+   "pos": "QB",
+   "weeks": {
+    "0": 0.35,
+    "1": 0.45,
+    "2": 0.2
+   },
+   "note": "ankle; FP consensus 5.6 implies likely out; Rotowire expects Huntley"
+  },
+  {
+   "name": "Baker Mayfield",
+   "pos": "QB",
+   "weeks": {
+    "4": 0.6,
+    "6": 0.4
+   },
+   "note": "right thumb, OFFICIALLY OUT Thu vs DAL; Jalon Daniels starts; 3-8 wk timelines"
+  },
+  {
+   "name": "Pat Bryant",
+   "pos": "WR",
+   "weeks": {
+    "4": 0.65,
+    "5": 0.2,
+    "6": 0.15
+   },
+   "heirs": {
+    "Jaylen Waddle": 0.4,
+    "Courtland Sutton": 0.4,
+    "Evan Engram": 0.2
+   },
+   "note": "ankle, placed on IR Fri 10/9 (min 4 games), eligible Wk9 vs CAR (nbcsports.com/fantasy/football/player-news/2026-10-09/broncos-place-bryant-ankle-on-injured-reserve)"
+  },
+  {
+   "name": "Ja'Marr Chase",
+   "pos": "WR",
+   "weeks": {
+    "0": 0.35,
+    "1": 0.55,
+    "2": 0.1
+   },
+   "note": "concussion protocol, TBD per NFL.com Friday roundup; spread kept"
+  },
+  {
+   "name": "Josh Jacobs",
+   "pos": "RB",
+   "weeks": {
+    "2": 0.5,
+    "4": 0.5
+   },
+   "note": "commissioner's exempt list; no 2026 games, so GB's backfield data already reflects his absence (no heirs)",
+   "heirs": {
+    "Chris Brooks": 0.0
+   }
+  },
+  {
+   "name": "DJ Moore",
+   "pos": "WR",
+   "weeks": {
+    "0": 0.45,
+    "1": 0.4,
+    "2": 0.15
+   },
+   "note": "shoulder AC sprain re-aggravated Wk4 (39% snaps); Schefter: not long-term; BUF plays Mon (thefantasyfootballers.com/news/640775; tsn.ca n1-50101817). New entry"
+  },
+  {
+   "name": "Stefon Diggs",
+   "pos": "WR",
+   "weeks": {
+    "0": 0.55,
+    "1": 0.3,
+    "2": 0.15
+   },
+   "note": "hamstring, DNP Wed 10/7 on official WAS report (https://github.com/nflverse/nflverse-data/releases/download/injuries/injuries_2026.csv). New entry (Teemo WR)"
+  },
+  {
+   "name": "Jordan Addison",
+   "pos": "WR",
+   "weeks": {
+    "0": 0.45,
+    "1": 0.55
+   },
+   "note": "hamstring, DNP Wed 10/7 (https://www.vikings.com/news/saints-injury-report-week-5-2026-nfl-season); MIN bye Wk6. New entry"
+  },
+  {
+   "name": "Alvin Kamara",
+   "pos": "RB",
+   "weeks": {
+    "0": 0.8,
+    "1": 0.2
+   },
+   "heirs": {
+    "Kendre Miller": 0.55,
+    "CJ Donaldson": 0.45
+   },
+   "note": "back (new) + knee re-aggravated Wk4; DNP Wed, LP Thu, QUESTIONABLE Fri; NBC expects him to lead committee (nbcsports.com/fantasy/football/player-news/2026-10-09/alvin-kamara-back-questionable-for-week-5)"
+  },
+  {
+   "name": "Isaiah Likely",
+   "pos": "TE",
+   "weeks": {
+    "0": 0.85,
+    "1": 0.15
+   },
+   "note": "knee, LIMITED Wed 10/7 (official NYG report via nflverse injuries_2026.csv); expected to play. New entry (incoming in Teemo offers)"
+  },
+  {
+   "name": "Jonathon Brooks",
+   "pos": "RB",
+   "weeks": {
+    "4": 0.45,
+    "5": 0.3,
+    "6": 0.25
+   },
+   "heirs": {
+    "Chuba Hubbard": 0
+   },
+   "note": "core-muscle surgery, IR since 9/23, out at least 6 wk (AP via local10.com 2026/09/23; https://www.rotoballer.com/?p=1949796 6-8 wk); return Wk9-11; replaces generic RES handling; Hubbard's data already reflects Brooks out so heirs weight 0"
+  },
+  {
+   "name": "Marquise Brown",
+   "pos": "WR",
+   "weeks": 1,
+   "note": "ankle, OUT Wk5 London on PHI Friday final report (inquirer.com 20261009; philadelphiaeagles.com Wk5 report). New entry"
+  }
+ ],
+ "_changes": [
+  "Kyle Monangai: weeks {'0': 0.8, '1': 0.2} heirs None -> weeks {'1': 0.45, '2': 0.35, '3': 0.2} heirs {\"D'Andre Swift\": 0.7, 'Roschon Johnson': 0.3}",
+  "Breece Hall: weeks {'0': 0.1, '1': 0.5, '2': 0.4} heirs {'Braelon Allen': 0.75, 'Isaiah Davis': 0.25} -> weeks {'1': 0.45, '2': 0.35, '3': 0.2} heirs {'Braelon Allen': 0.75, 'Isaiah Davis': 0.25}",
+  "DeVonta Smith: weeks {'0': 0.12, '1': 0.4, '2': 0.33, '3': 0.15} heirs {'Dontayvion Wicks': 0.4, 'Makai Lemon': 0.35, 'Darius Cooper': 0.25} -> weeks {'1': 0.45, '2': 0.35, '3': 0.2} heirs {'Makai Lemon': 0.4, 'Darius Cooper': 0.35, 'Dontayvion Wicks': 0.25}",
+  "Saquon Barkley: weeks {'0': 0.15, '1': 0.45, '2': 0.25, '3': 0.15} heirs {'Will Shipley': 1.0} -> weeks {'1': 0.5, '2': 0.3, '3': 0.2} heirs {'Will Shipley': 0.8, 'Dameon Pierce': 0.2}",
+  "Pat Bryant: weeks {'1': 0.6, '2': 0.4} heirs {'Jaylen Waddle': 0.4, 'Courtland Sutton': 0.4, 'Evan Engram': 0.2} -> weeks {'4': 0.65, '5': 0.2, '6': 0.15} heirs {'Jaylen Waddle': 0.4, 'Courtland Sutton': 0.4, 'Evan Engram': 0.2}",
+  "Alvin Kamara: weeks {'0': 0.5, '1': 0.5} heirs {'Kendre Miller': 1} -> weeks {'0': 0.8, '1': 0.2} heirs {'Kendre Miller': 0.55, 'CJ Donaldson': 0.45}",
+  "Jeremiyah Love: weeks {'0': 0.7, '1': 0.3} heirs None -> weeks {'0': 0.9, '1': 0.1} heirs {'Tyler Allgeier': 0.85, 'Bam Knight': 0.15}",
+  "De'Von Achane: weeks season heirs {'Ollie Gordon II': 0.6, 'Jaylen Wright': 0.4} -> weeks season heirs {'Ollie Gordon II': 0.62, 'Jaylen Wright': 0.38}",
+  "Tee Higgins: weeks {'0': 0.5, '1': 0.5} heirs None -> weeks {'0': 0.75, '1': 0.25} heirs None",
+  "Marquise Brown: NEW weeks 1 heirs None",
+  "D'Andre Swift: REMOVED (FULL practice Fri, no designation, starts at GB (si.com/nfl/bears/onsi/caleb-williams-d-andre-swift-progress-bears-final-week-5-injury-report); his heirs pointed at the now-out Monangai)",
+  "Dallas Goedert: REMOVED (returns Wk5 per Friday PHI reporting (phillyvoice.com Wk5 injury report analysis); old {1:.5,2:.5} ESPN-tag entry is stale)",
+  "Caleb Williams: note only, weeks {'1': 0.4, '2': 0.35, '3': 0.25} kept",
+  "Ja'Marr Chase: note only, weeks {'0': 0.35, '1': 0.55, '2': 0.1} kept"
+ ]
+}

@@ -334,3 +334,69 @@ Full report: `reports/week05_trades_no_nacua.md`.
 3. **If Hakuna says no:** Olave for Hubbard + Pickens (Oh Saquon, +51), or Henry for Hubbard +
    Pickens (Audubon, +38).
 4. **Cancel the Smith + Hall for Nacua offer first** if it is still pending.
+
+## Friday 10/9: final injury report and waivers
+
+This section draws on:
+- ESPN's RB waiver screenshot;
+- the official Friday designations, checked by two research agents;
+- the engine re-run with that news (`examples/news_week05_fri.json`, `reports/week05_engine_fri.md`),
+  using exact enumeration of Monangai, Hall, Smith and Barkley;
+- an adversarial verifier.
+
+**Friday designations**
+
+- **Monangai: OUT.** Thumb and turf toe; he is in a walking boot and is week-to-week, and the Bears say IR is not an option. Swift was full on Friday and leads the backfield.
+- **Hall: OUT.** Second straight miss; Braelon Allen leads the backfield.
+- **DeVonta Smith: OUT.** Second straight miss.
+- **Saquon Barkley: OUT.** Will Shipley leads the PHI backfield in London.
+- **Pat Bryant (DEN): on IR** for at least 4 games.
+- **Waddle, Kraft, Goff, Chase Brown and Montgomery:** no designation.
+- **Thursday night (Week 5 points already scored):**
+  - Pickens: 9 catches, 130 yards, 1 TD (28.0).
+  - Lamb: 2 catches, 9 yards (2.9). He had a quad bruise; Rapoport says it is not serious.
+
+**Lineup.** Montgomery replaces Monangai at RB2. The engine projects about 102 points through
+FLEX, including Lamb's and Pickens' 30.9; about 118 with D/ST and K.
+
+| Slot | Player |
+|---|---|
+| QB | Goff |
+| RB | Chase Brown, Montgomery |
+| WR | Lamb, Pickens (both already played) |
+| TE | Kraft |
+| FLEX | Waddle |
+| D/ST | Steelers |
+| K | Mevis |
+
+**Waivers: no must-add.** FantasyPros (10/9) ranks Montgomery RB22 at 11.3, ahead of every
+waiver back:
+
+| Player | FP rank | FP proj | Notes |
+|---|---|---|---|
+| RJ Harvey | RB23 | 11.2 | |
+| Will Shipley | RB25 | 10.3 | |
+| Ollie Gordon II | RB27 | | MIA bye in Week 6 |
+| Tyler Allgeier | RB32 | | |
+
+- **Shipley:** the engine's +0.9 for him over Montgomery is a double count. Fixed, it is about
+  0 this week and -0.9 for Weeks 6-17.
+- **Kendre Miller and Roschon Johnson:** relevant only if Kamara or Swift sits.
+- **Rachaad White:** cleared ("good to go"), but he is the No. 2.
+
+**If the league has an IR slot** (check League > Settings > Roster):
+- Move **Monangai** (O) to IR and add a back with no drop.
+  - Best is **RJ Harvey** if he is still a free agent (he was not in the screenshot): a steady
+    role and a 1:05 PM PT kickoff, so he can cover a surprise 8:30 AM inactive.
+  - Otherwise **Tyler Allgeier** (1:25 PM PT kickoff).
+  - **Shipley** locks at 6:30 AM PT, before the inactive lists, so he cannot cover a scratch.
+- Do **not** IR Hall: he is in the pending Kyren 2-for-2, and a trade out of IR leaves the roster
+  one over the limit.
+
+**If there is no IR slot:** make no move.
+- Do not drop Monangai. If the Kyren trade happens, losing him costs 8.5 points over Weeks 6-17.
+- Do not drop Hall, Hubbard or Smith (the Kyren trade, and drop costs of 12-30 points).
+- Keep Cousins for Week 6.
+
+**Later.** The TE adds (Loveland, Andrews, Strange) only cover Kraft's Week 11 bye, so leave them
+until Week 10.
