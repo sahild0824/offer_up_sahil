@@ -1,0 +1,16 @@
+{
+ "_note": "Actual rosters from the Week 7 matchup screenshots (Thu 2026-10-22, during CHI-NE TNF), all ten teams, starters + bench + IR. Skill players only.",
+ "me": "Kai and his Guy",
+ "teams": {
+  "Kai and his Guy": ["Jordan Love", "Jared Goff", "Lamar Jackson", "Chase Brown", "Chuba Hubbard", "Breece Hall", "CeeDee Lamb", "George Pickens", "DeVonta Smith", "Jaylen Waddle", "Marvin Harrison Jr.", "Tucker Kraft", "Kyle Monangai"],
+  "Hakuna Mailata": ["Bo Nix", "Josh Allen", "James Cook", "Kyren Williams", "Roschon Johnson", "Blake Corum", "Drake London", "Courtland Sutton", "Terry McLaurin", "Dallas Goedert", "Dalton Kincaid"],
+  "Oh Saquon You See": ["C.J. Stroud", "Kenneth Walker III", "Tyler Allgeier", "Amon-Ra St. Brown", "Chris Olave", "Dalton Schultz", "Luther Burden III", "TreVeyon Henderson", "Rico Dowdle", "Alec Pierce", "Brian Thomas Jr."],
+  "Rowan's Rowdy Team": ["Dak Prescott", "Bijan Robinson", "Bucky Irving", "Nico Collins", "Garrett Wilson", "Brock Bowers", "D'Andre Swift", "Emeka Egbuka", "Mike Evans", "Parker Washington", "Michael Mayer"],
+  "Soaring Wings": ["Aaron Rodgers", "Braelon Allen", "Jordan Mason", "Carnell Tate", "Jalen Coker", "Trey McBride", "Puka Nacua", "Dontayvion Wicks", "Bryce Young", "Emanuel Wilson", "David Montgomery"],
+  "NW BIRDIES": ["Drake Maye", "Jahmyr Gibbs", "Ashton Jeanty", "Tetairoa McMillan", "Zay Flowers", "Sam LaPorta", "Josh Jacobs", "Omarion Hampton", "Harold Fannin Jr.", "Bhayshul Tuten", "Patrick Mahomes", "Jadarian Price"],
+  "Hurts so Good": ["Kyler Murray", "Jonathan Taylor", "Javonte Williams", "DK Metcalf", "Ja'Marr Chase", "Tyler Warren", "Tee Higgins", "Jayden Daniels", "Jameson Williams", "Tony Pollard", "Michael Wilson", "Aaron Jones"],
+  "Audubon Condors": ["Brock Purdy", "Derrick Henry", "Rhamondre Stevenson", "A.J. Brown", "Matthew Golden", "Travis Kelce", "Colston Loveland", "Ladd McConkey", "DJ Moore", "Deebo Samuel", "Jordan Addison", "Kyle Pitts"],
+  "Quinshon Chud-Wins": ["Joe Burrow", "Christian McCaffrey", "Jaylen Warren", "Jaxon Smith-Njigba", "Malik Nabers", "George Kittle", "Christian Watson", "Quinshon Judkins", "Matthew Stafford", "Denzel Boston", "Germie Bernard", "Jeremiyah Love"],
+  "Teemo": ["Caleb Williams", "Cam Skattebo", "J.K. Dobbins", "Justin Jefferson", "Xavier Worthy", "Isaiah Likely", "Saquon Barkley", "Stefon Diggs", "T.J. Hockenson", "RJ Harvey", "Woody Marks", "Davante Adams"]
+ }
+}
