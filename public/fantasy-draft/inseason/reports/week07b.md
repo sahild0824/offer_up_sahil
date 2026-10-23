@@ -108,3 +108,45 @@ total holds for the Love + Waddle and Hubbard + Harrison Jr. pairing).
      Keenan Allen) before Week 14.
 4. **Revisit Lamar after his first healthy game.** He is a strong trade chip for a QB-needy
    team (Audubon after Hurts; Oh Saquon for Stroud's Week 8 bye).
+
+## Verification pass (Friday evening)
+
+### What the research covered
+- **Searches:** about 40 web searches across the two agents, plus 6 targeted checks afterwards. All results
+  are search-engine summaries. Sources include FantasyPros, CBS, Yahoo (Boone), RotoStreetJournal,
+  RotoBaller, Rotowire, NBC, ESPN, SI, Pro Football Network, Footballguys and team sites.
+- **Full pages could not be read.** Direct fetches fail on DNS here, and Reddit is blocked by the
+  environment's network policy.
+- **The engine runs on full downloaded data,** not snippets: nflverse stats, snaps and injuries, and
+  the FantasyPros consensus via the DynastyProcess mirror.
+
+### Isaiah Likely
+- **Week 7 rank:** TE3-4.
+- **Production:** No. 1 TE in half-PPR through six games
+  ([Yahoo](https://sports.yahoo.com/articles/week-7-fantasy-football-tight-204050302.html),
+  [Rotowire](https://www.rotowire.com/football/article/week-7-fantasy-football-te-rankings-tiers-happy-national-tight-ends-day-142840)).
+- **Trade charts put him level with Kraft.**
+  - [FantasyPros](https://www.fantasypros.com/2026/10/fantasy-football-trade-value-chart-week-7-2026/):
+    Likely 15.2, Kraft 15.2.
+  - [Yahoo/Boone](https://sports.yahoo.com/fantasy/article/2026-trade-value-charts--justin-boones-fantasy-football-tight-end-breakdown-for-week-7-150018094.html)
+    (full PPR): Likely 32, Kraft 28.
+  - So Love + Waddle is a fair or slightly generous price. That is fine, because both are surplus
+    to us.
+- **Risk:** the NYG QB situation. J.J. McCarthy was acquired after Jaxson Dart's injury, and Harbaugh
+  has not named a starter between McCarthy and Winston
+  ([news4jax](https://www.news4jax.com/sports/2026/10/18/john-harbaugh-says-no-giants-qb-decision-yet-after-jj-mccarthy-replaces-jameis-winston/)).
+
+### Other checks
+- **Ollie Gordon II is confirmed as an add.**
+  - FantasyPros calls him a buy
+    ([waiver advice](https://www.fantasypros.com/2026/10/fantasy-football-waiver-wire-advice-players-to-add-stash-drop-week-7-2026/)).
+  - [RotoBaller](https://www.rotoballer.com/player-news/ollie-gordon-ii-looks-to-continue-ascending/1972509)
+    ranks him RB24.
+  - [Rotowire](https://www.rotowire.com/football/article/week-7-fantasy-football-running-back-rankings-ollie-gordon-rb15-in-this-economy-142580)
+    ranks him RB15.
+- **Kyren Williams: hold or buy.** He is a high-end RB2, and Corum is a secondary threat (Rotowire).
+- **Where the research and the engine disagreed:**
+  - The research agent's top idea was Kraft + Waddle for LaPorta. The engine has NW BIRDIES losing
+    31 points, so it was not recommended.
+  - The pending Hubbard + Hall offer is generous on CBS. It is kept because it is already in
+    Hakuna's inbox and helps them, which makes a yes more likely.
