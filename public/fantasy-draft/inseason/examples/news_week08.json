@@ -244,42 +244,6 @@
    "note": "shoulder, Q/inactive Wk6; BUF bye Wk7 so '1' = back Wk8 (nflverse injuries)"
   },
   {
-   "name": "Tyler Warren",
-   "pos": "TE",
-   "weeks": {
-    "0": 0.85,
-    "1": 0.15
-   },
-   "note": "groin, Q/LP Wk6 and inactive; Hurts so Good's only TE (nflverse injuries)"
-  },
-  {
-   "name": "Breece Hall",
-   "pos": "RB",
-   "weeks": {
-    "0": 0.35,
-    "1": 0.35,
-    "2": 0.3
-   },
-   "note": "quad, inactive Wk7 (4th straight), week to week (NBC 10/25)",
-   "heirs": {
-    "Braelon Allen": 0.8,
-    "Isaiah Davis": 0.2
-   }
-  },
-  {
-   "name": "Kyle Monangai",
-   "pos": "RB",
-   "weeks": {
-    "0": 0.55,
-    "1": 0.45
-   },
-   "note": "turf toe/thumb, missed Wk7, hope for Wk8 (Yahoo)",
-   "heirs": {
-    "D'Andre Swift": 0.7,
-    "Roschon Johnson": 0.3
-   }
-  },
-  {
    "name": "Aaron Jones",
    "pos": "RB",
    "weeks": {
@@ -293,14 +257,104 @@
    }
   },
   {
-   "name": "Lamar Jackson",
-   "pos": "QB",
+   "name": "DeVonta Smith",
+   "pos": "WR",
+   "weeks": {
+    "0": 0.4,
+    "1": 0.3,
+    "2": 0.3
+   },
+   "note": "hamstring re-aggravated, OUT Wk7 MNF; lingering since camp; Sirianni did not rule out a longer shutdown (Rotowire/RotoBaller 10/26)",
+   "heirs": {
+    "Makai Lemon": 0.6,
+    "Darius Cooper": 0.4
+   }
+  },
+  {
+   "name": "Jaylen Waddle",
+   "pos": "WR",
    "weeks": {
     "0": 0.6,
     "1": 0.4
    },
-   "note": "ankle, out Wk5-7, limited practice Wk7"
+   "note": "chest/shoulder, left Wk7 4th qtr, no diagnosis (CBS 10/26)"
+  },
+  {
+   "name": "Lamar Jackson",
+   "pos": "QB",
+   "weeks": {
+    "0": 0.65,
+    "1": 0.35
+   },
+   "note": "high-ankle sprain, Rapoport: likely back Wk8 vs BUF"
+  },
+  {
+   "name": "Breece Hall",
+   "pos": "RB",
+   "weeks": {
+    "0": 0.55,
+    "1": 0.3,
+    "2": 0.15
+   },
+   "note": "quad, limited practice late Wk7; Wk8 return 'appears likely' (Yahoo)",
+   "heirs": {
+    "Braelon Allen": 0.8,
+    "Isaiah Davis": 0.2
+   }
+  },
+  {
+   "name": "Kyle Monangai",
+   "pos": "RB",
+   "weeks": {
+    "0": 0.45,
+    "1": 0.35,
+    "2": 0.2
+   },
+   "note": "turf toe/thumb, no practice yet; possible Wk8 MNF",
+   "heirs": {
+    "D'Andre Swift": 0.7,
+    "Roschon Johnson": 0.3
+   }
+  },
+  {
+   "name": "Jaylen Wright",
+   "pos": "RB",
+   "weeks": {
+    "0": 0.5,
+    "1": 0.5
+   },
+   "note": "quad, left Wk7",
+   "heirs": {
+    "Ollie Gordon II": 0.8
+   }
+  },
+  {
+   "name": "Mike Evans",
+   "pos": "WR",
+   "weeks": {
+    "0": 0.5,
+    "1": 0.5
+   },
+   "note": "OUT Wk7"
+  },
+  {
+   "name": "Emeka Egbuka",
+   "pos": "WR",
+   "weeks": {
+    "0": 0.5,
+    "1": 0.5
+   },
+   "note": "concussion protocol, OUT Wk7"
+  },
+  {
+   "name": "Tyler Warren",
+   "pos": "TE",
+   "weeks": {
+    "0": 0.5,
+    "1": 0.5
+   },
+   "note": "OUT Wk7"
   }
  ],
- "_note": "Week 8 news: Week 7 file shifted + 10/27 RB research"
+ "_note": "Week 8 news (10/27 evening): Week 7 file shifted + RB research + roster/targets research"
 }
