@@ -81,3 +81,49 @@
 - ESPN's default is usually around Week 13 (late November).
 - The review period is 1-2 days, and 4 of 10 managers can veto.
 - Send the Bijan and Likely offers **this week.**
+
+## Week 8 waivers (Wednesday 10/28)
+
+**Sources**
+- The engine ran with the FantasyPros Week 8 consensus (scraped 10/28) and the 10/27 news. Output:
+  `reports/week08_engine.md`.
+- The free-agent list is every player on none of the ten rosters, plus Tuesday's consensus adds:
+  - **RB:** Jonah Coleman, Seth McGowan, Dylan Sampson, Kimani Vidal.
+  - **WR:** Omar Cooper Jr., Antonio Williams, Caleb Douglas.
+  - **TE:** Mason Taylor, Brenton Strange.
+- No Wednesday practice news on Smith or Waddle was indexed yet.
+
+**Do now**
+- **Kicker: drop Harrison Butker (FantasyPros K18, 7.4) and add Evan McPherson** (CIN vs TEN; K3,
+  9.1; 40% rostered nationally, on no roster here). CIN's bye is done.
+- If McPherson is gone: Spencer Shrader (IND @JAX; K5, 8.9) or Chase McLaughlin (TB; K7, 8.8).
+
+**Hold until the trades resolve.** The Bijan and Likely deals are both 2-for-1, so each opens a
+roster spot.
+
+| Spot opens because | Add | Engine gain (Weeks 9-17) |
+|---|---|---|
+| Lamb trade | **Tre Tucker** (WR, LV, 82% snaps) | +4.7 |
+| Second spot | **KC Concepcion** (WR, CLE; 23.2 last week) | |
+| Likely trade fails | **Brenton Strange** (TE2 for Kraft's Week 11 bye) | +9.3 |
+
+- **Do not drop Waddle, Lamar or Love** while they are in pending offers.
+- **Hall** is the engine's cheapest drop (0.7), but he is about to return, so keep him.
+
+**Not worth a spot on this roster:**
+- Omar Cooper Jr., Jonah Coleman, Keenan Allen, Josh Downs: they are consensus adds, but they would
+  not start for you.
+- Kamara and every other wire RB.
+
+**D/ST**
+- **Week 8:** start the Steelers (DST3 vs CLE).
+- **Week 9:** PIT is on bye, so stream. Pick next Tuesday from that week's rankings; this week's top
+  free options are JAX, LAR and CIN.
+
+**Week 8 lineup update.** With FantasyPros' Week 8 numbers the engine starts:
+- QB: Love (19.1) over Goff, a coin flip.
+- RB: Hubbard and Brown.
+- WR: Lamb and Pickens.
+- TE: Kraft (FP TE3).
+- FLEX: Gordon (11.5).
+- If the Love trade processes before Sunday, start Goff.
